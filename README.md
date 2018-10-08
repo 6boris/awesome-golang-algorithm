@@ -94,8 +94,8 @@ LeetCode of algorithms with golang solution(updating).
 [companies]: https://github.com/Blankj/awesome-java-leetcode/blob/master/Companies.md
 
 [001]: https://github.com/Blankj/awesome-java-leetcode/blob/master/note/001/README.md
-[0007]: https://github.com/Blankj/awesome-java-leetcode/blob/master/note/007/README.md
-[0009]: https://github.com/Blankj/awesome-java-leetcode/blob/master/note/009/README.md
+[0007]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0007.Reverse-Integer
+[0009]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0009.Palindrome-Number
 [013]: https://github.com/Blankj/awesome-java-leetcode/blob/master/note/013/README.md
 [014]: https://github.com/Blankj/awesome-java-leetcode/blob/master/note/014/README.md
 [020]: https://github.com/Blankj/awesome-java-leetcode/blob/master/note/020/README.md
