@@ -2,8 +2,8 @@
 LeetCode of algorithms with golang solution(updating).
 
 
-<img width="237" height=“76” src="https://github.com/kylesliu/awesome-golang-leetcode/blob/master/assets/images/go_pic.jpg"></img>
 <img width="237" height=“76” src="https://github.com/kylesliu/awesome-golang-leetcode/blob/master/assets/images/leetcode.png"></img>
+<img width="237" height=“76” src="https://github.com/kylesliu/awesome-golang-leetcode/blob/master/assets/images/go_pic.jpg"></img>
 
 
 
@@ -12,8 +12,8 @@ LeetCode of algorithms with golang solution(updating).
 | #    | Title                                    | Tag                                      |
 | :--- | :--------------------------------------- | :--------------------------------------- |
 | 1    | [Two Sum][001]                           | Array, Hash Table                        |
-| 7    | [Reverse Integer][007]                   | Math                                     |
-| 9    | [Palindrome Number][009]                 | Math                                     |
+| 7    | [Reverse Integer][0007]                   | Math                                     |
+| 9    | [Palindrome Number][0009]                 | Math                                     |
 | 13   | [Roman to Integer][013]                  | Math, String                             |
 | 14   | [Longest Common Prefix][014]             | String                                   |
 | 20   | [Valid Parentheses][020]                 | Stack, String                            |
@@ -94,8 +94,8 @@ LeetCode of algorithms with golang solution(updating).
 [companies]: https://github.com/Blankj/awesome-java-leetcode/blob/master/Companies.md
 
 [001]: https://github.com/Blankj/awesome-java-leetcode/blob/master/note/001/README.md
-[007]: https://github.com/Blankj/awesome-java-leetcode/blob/master/note/007/README.md
-[009]: https://github.com/Blankj/awesome-java-leetcode/blob/master/note/009/README.md
+[0007]: https://github.com/Blankj/awesome-java-leetcode/blob/master/note/007/README.md
+[0009]: https://github.com/Blankj/awesome-java-leetcode/blob/master/note/009/README.md
 [013]: https://github.com/Blankj/awesome-java-leetcode/blob/master/note/013/README.md
 [014]: https://github.com/Blankj/awesome-java-leetcode/blob/master/note/014/README.md
 [020]: https://github.com/Blankj/awesome-java-leetcode/blob/master/note/020/README.md
