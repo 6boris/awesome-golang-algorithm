@@ -1,12 +1,9 @@
 # 👑awesome-golang-leetcode
-👑 LeetCode of algorithms with golang solution(updating).
+LeetCode of algorithms with golang solution(updating).
 
 
-<img width="173" height=“274” src="https://github.com/youlookwhat/CloudReader/blob/master/file/page_book_01.png"></img>
-<img width="173" height=“274” src="https://github.com/youlookwhat/CloudReader/blob/master/file/page_gank_00.png"></img>
-<img width="173" height=“274” src="https://github.com/youlookwhat/CloudReader/blob/master/file/page_movie_01.png"></img>
-<img width="173" height=“274” src="https://github.com/youlookwhat/CloudReader/blob/master/file/page_menu_01.png"></img>
-<img width="173" height=“274” src="https://github.com/youlookwhat/CloudReader/blob/master/file/page_movie_03.png"></img>
+<img width="237" height=“76” src="https://github.com/kylesliu/awesome-golang-leetcode/blob/master/assets/images/go_pic.jpg"></img>
+<img width="237" height=“76” src="https://github.com/kylesliu/awesome-golang-leetcode/blob/master/assets/images/leetcode.png"></img>
 
 
 
