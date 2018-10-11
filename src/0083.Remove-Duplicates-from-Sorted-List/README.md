@@ -1,26 +1,24 @@
-# [1. Add Sum][title]
+# [83. Remove Duplicates from Sorted List][title]
 
 ## Description
 
-Given two binary strings, return their sum (also a binary string).
-
-The input strings are both **non-empty** and contains only characters `1` or `0`.
+Given a sorted linked list, delete all duplicates such that each element appear only *once*.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: 1->1->2
+Output: 1->2
 ```
 
 **Example 2:**
 
 ```
-Input: a = "1010", b = "1011"
-Output: "10101"
+Input: 1->1->2->3->3
+Output: 1->2->3
 ```
 
-**Tags:** Math, String
+**Tags:** Linked List
 
 ## 题意
 >给你两个二进制串，求其和的二进制串。
@@ -29,9 +27,24 @@ Output: "10101"
 
 ### 思路1
 > 按照小学算数那么来做，用 `carry` 表示进位，从后往前算，依次往前，每算出一位就插入到最前面即可，直到把两个二进制串都遍历完即可。
-
 ```go
+func deleteDuplicates(head *ListNode) *ListNode {
+	if head == nil || head.Next == nil {
+		return head
+	}
 
+	curr := head
+
+	for curr.Next != nil {
+		if curr.Next.Val == curr.Val {
+			curr.Next = curr.Next.Next
+		} else {
+			curr = curr.Next
+		}
+	}
+
+	return head
+}
 ```
 
 ### 思路2
@@ -44,5 +57,5 @@ Output: "10101"
 
 如果你同我一样热爱数据结构、算法、LeetCode，可以关注我 GitHub 上的 LeetCode 题解：[awesome-golang-leetcode][me]
 
-[title]: https://leetcode.com/problems/two-sum/description/
+[title]: https://leetcode.com/problems/remove-duplicates-from-sorted-list/description/
 [me]: https://github.com/kylesliu/awesome-golang-leetcode

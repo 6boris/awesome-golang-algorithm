@@ -1,4 +1,4 @@
-# [1. Add Sum][title]
+# [69. Sqrt(x)][title]
 
 ## Description
 
@@ -23,15 +23,23 @@ Output: "10101"
 **Tags:** Math, String
 
 ## 题意
->给你两个二进制串，求其和的二进制串。
+>题意是求平方根。
 
 ## 题解
 
 ### 思路1
-> 按照小学算数那么来做，用 `carry` 表示进位，从后往前算，依次往前，每算出一位就插入到最前面即可，直到把两个二进制串都遍历完即可。
+> 参考 [牛顿迭代法求平方根](https://wenku.baidu.com/view/6b74c622bcd126fff7050bfe.html)，
+然后再参考维基百科的 [Integer square root](https://en.wikipedia.org/wiki/Integer_square_root#Using_only_integer_division) 即可,
+[leetcode](https://leetcode.com/problems/sqrtx/discuss/25057/3-4-short-lines-Integer-Newton-Every-Language) 上面也有人讲了。
 
 ```go
-
+func mySqrt(x int) int {
+	r := x
+	for r*r > x {
+		r = (r + x/r) >> 1
+	}
+	return r
+}
 ```
 
 ### 思路2
@@ -44,5 +52,5 @@ Output: "10101"
 
 如果你同我一样热爱数据结构、算法、LeetCode，可以关注我 GitHub 上的 LeetCode 题解：[awesome-golang-leetcode][me]
 
-[title]: https://leetcode.com/problems/two-sum/description/
+[title]: https://leetcode.com/problems/sqrtx/description/
 [me]: https://github.com/kylesliu/awesome-golang-leetcode
