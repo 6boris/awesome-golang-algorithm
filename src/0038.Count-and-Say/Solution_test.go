@@ -1,6 +1,8 @@
 package Solution
 
-import "testing"
+import (
+	"testing"
+)
 
 func TestSolution(t *testing.T) {
 	t.Run("Test-1", func(t *testing.T) {
@@ -18,4 +20,5 @@ func TestSolution(t *testing.T) {
 			t.Error("GOT:", got, "WANT:", want)
 		}
 	})
+
 }
