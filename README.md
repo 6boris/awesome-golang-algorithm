@@ -90,43 +90,34 @@ LeetCode of algorithms with golang solution(updating).
 
 
 
-[src]: https://github.com/Blankj/awesome-java-leetcode/tree/master/src
-[note]: https://github.com/Blankj/awesome-java-leetcode/tree/master/note
-[companies]: https://github.com/Blankj/awesome-java-leetcode/blob/master/Companies.md
+[src]: https://github.com/kylesliu/awesome-golang-leetcode
+[companies]: https://github.com/kylesliu/awesome-golang-leetcode/blob/master/Companies.md
 
-[001]: https://github.com/Blankj/awesome-java-leetcode/blob/master/note/001/README.md
+[0001]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0001.Two-Sum
 [0007]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0007.Reverse-Integer
 [0009]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0009.Palindrome-Number
-[013]: https://github.com/Blankj/awesome-java-leetcode/blob/master/note/013/README.md
-[014]: https://github.com/Blankj/awesome-java-leetcode/blob/master/note/014/README.md
-[020]: https://github.com/Blankj/awesome-java-leetcode/blob/master/note/020/README.md
-[021]: https://github.com/Blankj/awesome-java-leetcode/blob/master/note/021/README.md
-[026]: https://github.com/Blankj/awesome-java-leetcode/blob/master/note/026/README.md
-[027]: https://github.com/Blankj/awesome-java-leetcode/blob/master/note/027/README.md
-[028]: https://github.com/Blankj/awesome-java-leetcode/blob/master/note/028/README.md
-[035]: https://github.com/Blankj/awesome-java-leetcode/blob/master/note/035/README.md
-[038]: https://github.com/Blankj/awesome-java-leetcode/blob/master/note/038/README.md
-[053]: https://github.com/Blankj/awesome-java-leetcode/blob/master/note/053/README.md
-[058]: https://github.com/Blankj/awesome-java-leetcode/blob/master/note/058/README.md
-[066]: https://github.com/Blankj/awesome-java-leetcode/blob/master/note/066/README.md
-[067]: https://github.com/Blankj/awesome-java-leetcode/blob/master/note/067/README.md
-[069]: https://github.com/Blankj/awesome-java-leetcode/blob/master/note/069/README.md
-[070]: https://github.com/Blankj/awesome-java-leetcode/blob/master/note/070/README.md
-[083]: https://github.com/Blankj/awesome-java-leetcode/blob/master/note/083/README.md
-[088]: https://github.com/Blankj/awesome-java-leetcode/blob/master/note/088/README.md
-[100]: https://github.com/Blankj/awesome-java-leetcode/blob/master/note/100/README.md
-[101]: https://github.com/Blankj/awesome-java-leetcode/blob/master/note/101/README.md
-[104]: https://github.com/Blankj/awesome-java-leetcode/blob/master/note/104/README.md
-[107]: https://github.com/Blankj/awesome-java-leetcode/blob/master/note/107/README.md
-[108]: https://github.com/Blankj/awesome-java-leetcode/blob/master/note/108/README.md
-[110]: https://github.com/Blankj/awesome-java-leetcode/blob/master/note/110/README.md
-[111]: https://github.com/Blankj/awesome-java-leetcode/blob/master/note/111/README.md
-[112]: https://github.com/Blankj/awesome-java-leetcode/blob/master/note/112/README.md
-[118]: https://github.com/Blankj/awesome-java-leetcode/blob/master/note/118/README.md
-[119]: https://github.com/Blankj/awesome-java-leetcode/blob/master/note/119/README.md
-[121]: https://github.com/Blankj/awesome-java-leetcode/blob/master/note/121/README.md
-[122]: https://github.com/Blankj/awesome-java-leetcode/blob/master/note/122/README.md
-[543]: https://github.com/Blankj/awesome-java-leetcode/blob/master/note/543/README.md
+[0013]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0013.Roman-to-Integer
+[0014]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0014.Longest-Common-Prefix
+[0020]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0020.Valid-Parentheses
+[0021]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0021.Merge-Two-Sorted-Lists
+[0026]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0026.Remove-Duplicates-from-Sorted-Array
+[0027]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0027.Remove-Element
+[0028]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0028.Implement-strStr
+[0035]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0035.Search-Insert-Position
+[0038]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0038.Count-and-Say
+[0053]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0053.Maximum-Subarray
+[0058]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0058.Length-of-Last-Word
+[0066]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0066.Plus-One
+[0067]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0067.Add-Binary
+[0069]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0069.Sqrt-x
+[0070]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0070.Climbing-Stairs
+[0083]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0083.Remove-Duplicates-from-Sorted-List
+[0088]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0088.Merge-Sorted-Array
+[0100]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0100.Same-Tree
+[0101]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0101.Symmetric-Tree
+[0104]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0104.Maximum-Depth-of-Binary-Tree
+[0107]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0107.Binary-Tree-Level-Order-Traversal-II
+
 
 [002]: https://github.com/Blankj/awesome-java-leetcode/blob/master/note/002/README.md
 [003]: https://github.com/Blankj/awesome-java-leetcode/blob/master/note/003/README.md
