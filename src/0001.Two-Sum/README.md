@@ -66,6 +66,11 @@ func twoSum(nums []int, target int) []int {
 }
 ```
 
+## 测试
+```go
+go test -bench=. -benchmem -run=none
+```
+
 
 ## 结语
 

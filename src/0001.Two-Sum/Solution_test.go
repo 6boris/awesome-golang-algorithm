@@ -1,76 +1,85 @@
 package Solution
 
 import (
-	"fmt"
+	"math/rand"
+	"reflect"
 	"testing"
 )
 
-func IsEqualForSlice(a, b []int) bool {
-	if len(a) != len(b) {
-		fmt.Println("a")
-		return false
-	}
-	//	为了和reflect.DeepEqual的结果保持一致：
-	// 	[]int{} != []int(nil)
-	if (a == nil) != (b == nil) {
-		fmt.Println("a")
-
-		return false
-	}
-
-	// 	此处的处的bounds check能够明确保证v != b[i]中的b[i]
-	//	会出现越界错误，从而避免了b[i]中的越界检查从而提高效率
-	//	https://go101.org/article/bounds-check-elimination.html
-	b = b[:len(a)]
-
-	//	循环检测每个元素是否相等
-	for i, v := range a {
-		if v != a[i] {
-			return false
-		}
-	}
-	return true
-}
-
-func TestTwoSum(t *testing.T) {
-
-	t.Run("Test-1", func(t *testing.T) {
-		data := []int{3, 2, 4}
-		target := 6
-		want := []int{1, 2}
-
-		got := twoSum(data, target)
-		if !IsEqualForSlice(got, want) {
-			t.Error("GOT:", got, " WANT:", want)
-		}
-	})
-
-	t.Run("Test-2", func(t *testing.T) {
-		data := []int{2, 7, 11, 15}
-		target := 9
-		want := []int{0, 1}
-
-		got := twoSum(data, target)
-		if !IsEqualForSlice(got, want) {
-			t.Error("GOT:", got, " WANT:", want)
-		}
-	})
-
-	t.Run("Test-3", func(t *testing.T) {
-		data := []int{7, 6, 5, 3, 2, 1, 4, 9, 10}
-		target := 17
-		want := []int{0, 8}
-
-		got := twoSum(data, target)
-		if !IsEqualForSlice(got, want) {
-			t.Error("GOT:", got, " WANT:", want)
-		}
-	})
-
-}
-
 func TestTwoSum1(t *testing.T) {
-	data := []int{7, 6, 5, 3, 2, 1, 4, 9, 10}
-	target := 17
-	fmt.Println(twoSum1(data, target))
+	//	测试用例
+	cases := []struct {
+		name   string
+		inputs [][]int
+		expect []int
+	}{
+		{"1 test 1", [][]int{{2, 7, 11, 15}, {9}}, []int{0, 1}},
+		{"2 test 2", [][]int{{3, 2, 4}, {6}}, []int{1, 2}},
+		{"3 test 3", [][]int{{2, 7, 11, 15}, {9}}, []int{0, 1}},
+		{"4 test 4", [][]int{{7, 6, 5, 3, 2, 1, 4, 9, 10}, {17}}, []int{0, 8}},
+	}
+
+	//	开始测试
+	for _, c := range cases {
+		t.Run(c.name, func(t *testing.T) {
+			ret := TwoSum1(c.inputs[0], c.inputs[1][0])
+			if !reflect.DeepEqual(ret, c.expect) {
+				t.Fatalf("expected: %v, but got: %v, with inputs: %v",
+					c.expect, ret, c.inputs)
+			}
+		})
+	}
+}
+
+func TestTwoSum2(t *testing.T) {
+	//	测试用例
+	cases := []struct {
+		name   string
+		inputs [][]int
+		expect []int
+	}{
+		{"1 test 1", [][]int{{2, 7, 11, 15}, {9}}, []int{0, 1}},
+		{"2 test 2", [][]int{{3, 2, 4}, {6}}, []int{1, 2}},
+		{"3 test 3", [][]int{{2, 7, 11, 15}, {9}}, []int{0, 1}},
+		{"4 test 4", [][]int{{7, 6, 5, 3, 2, 1, 4, 9, 10}, {17}}, []int{0, 8}},
+	}
+
+	//	开始测试
+	for _, c := range cases {
+		t.Run(c.name, func(t *testing.T) {
+			ret := TwoSum2(c.inputs[0], c.inputs[1][0])
+			if !reflect.DeepEqual(ret, c.expect) {
+				t.Fatalf("expected: %v, but got: %v, with inputs: %v",
+					c.expect, ret, c.inputs)
+			}
+		})
+	}
+}
+
+const N = 100000
+
+func BenchmarkTwoSum1(b *testing.B) {
+	nums := []int{}
+	for i := 0; i < N; i++ {
+		nums = append(nums, rand.Int())
+	}
+	nums = append(nums, 7, 2)
+
+	b.ResetTimer()
+	for i := 0; i < b.N; i++ {
+		TwoSum1(nums, 9)
+	}
+}
+
+func BenchmarkTwoSum2(b *testing.B) {
+	nums := []int{}
+	for i := 0; i < N; i++ {
+		nums = append(nums, rand.Int())
+	}
+	nums = append(nums, 7, 2)
+
+	b.ResetTimer()
+	for i := 0; i < b.N; i++ {
+		TwoSum2(nums, 9)
+	}
 }
