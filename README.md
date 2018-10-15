@@ -18,7 +18,7 @@ LeetCode of algorithms with golang solution(updating).
 | 13   | [Roman to Integer][0013]                  | Math, String                             |
 | 14   | [Longest Common Prefix][0014]             | String                                   |
 | 20   | [Valid Parentheses][0020]                 | Stack, String                            |
-| 21   | [Merge Two Sorted Lists][021]            | Linked List                              |
+| 21   | [Merge Two Sorted Lists][0021]            | Linked List                              |
 | 26   | [Remove Duplicates from Sorted Array][0026] | Array, Two Pointers                      |
 | 27   | [Remove Element][0027]                    | Array, Two Pointers                      |
 | 28   | [Implement strStr()][0028]                | Two Pointers, String                     |
@@ -29,10 +29,10 @@ LeetCode of algorithms with golang solution(updating).
 | 66   | [Plus One][0066]                          | Array, Math                              |
 | 67   | [Add Binary][0067]                        | Math, String                             |
 | 69   | [Sqrt(x)][0069]                           | Binary Search, Math                      |
-| 70   | [Climbing Stairs][070]                   | Dynamic Programming                      |
+| 70   | [Climbing Stairs][0070]                   | Dynamic Programming                      |
 | 83   | [Remove Duplicates from Sorted List][0083] | Linked List                              |
 | 88   | [Merge Sorted Array][0088]                | Array, Two Pointers                      |
-| 100  | [Same Tree][1000]                         | Tree, Depth-first Search                 |
+| 100  | [Same Tree][0100]                         | Tree, Depth-first Search                 |
 | 101  | [Symmetric Tree][0101]                    | Tree, Depth-first Search, Breadth-first Search |
 | 104  | [Maximum Depth of Binary Tree][0104]      | Tree, Depth-first Search                 |
 | 107  | [Binary Tree Level Order Traversal II][0107] | Tree, Breadth-first Search               |
