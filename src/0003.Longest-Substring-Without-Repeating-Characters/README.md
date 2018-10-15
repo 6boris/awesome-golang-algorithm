@@ -93,7 +93,9 @@ func Max(x, y int) int {
 ```
 
 ## Benchmark
-[BenchMark][Benchmark]
+<div align=center>
+<img src="https://github.com/kylesliu/awesome-golang-leetcode/blob/master/assets/images/0003-BenchMark.png"></img>
+</div>
 
 ## 结语
 
