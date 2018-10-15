@@ -102,4 +102,4 @@ func Max(x, y int) int {
 [title]: https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
 [me]: https://github.com/kylesliu/awesome-golang-leetcode
 
-[Benchmark]: https://github.com/kylesliu/awesome-golang-leetcode
+[Benchmark]: https://github.com/kylesliu/awesome-golang-leetcode/blob/master/assets/images/0003-BenchMark.png
