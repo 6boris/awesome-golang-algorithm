@@ -93,6 +93,7 @@ func Max(x, y int) int {
 ```
 
 ## Benchmark
+> 测试了一下2中方法基本上有10000倍的时间差距
 <div align=center>
 <img src="https://github.com/kylesliu/awesome-golang-leetcode/blob/master/assets/images/0003-BenchMark.png"></img>
 </div>
