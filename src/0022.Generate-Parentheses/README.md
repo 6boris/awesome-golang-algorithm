@@ -1,0 +1,65 @@
+# [1. Add Sum][title]
+
+## Description
+
+Given two binary strings, return their sum (also a binary string).
+
+The input strings are both **non-empty** and contains only characters `1` or `0`.
+
+**Example 1:**
+
+```
+Input: a = "11", b = "1"
+Output: "100"
+```
+
+**Example 2:**
+
+```
+Input: a = "1010", b = "1011"
+Output: "10101"
+```
+
+**Tags:** Math, String
+
+## 题意
+>题意是给你 `n` 值，让你找到所有格式正确的圆括号匹配组
+
+## 题解
+
+### 思路1
+> 按照小学算数那么来做，用 `carry` 表示进位，从后往前算，依次往前，每算出一位就插入到最前面即可，直到把两个二进制串都遍历完即可。
+
+```go
+func generateParenthesis(n int) []string {
+	return dp("", 0, n * 2)
+}
+
+func dp(prefix string, depth int, n int) []string {
+	if depth == 0 && n == 0 {
+		return []string{prefix}
+	}
+	var output []string
+	if depth < n {
+		output = append(output, dp(prefix + "(", depth + 1, n - 1)...)
+	}
+	if depth > 0 {
+		output = append(output, dp(prefix + ")", depth - 1, n - 1)...)
+	}
+	return output
+}
+
+```
+
+### 思路2
+> 思路2
+```go
+
+```
+
+## 结语
+
+如果你同我一样热爱数据结构、算法、LeetCode，可以关注我 GitHub 上的 LeetCode 题解：[awesome-golang-leetcode][me]
+
+[title]: https://leetcode.com/problems/two-sum/description/
+[me]: https://github.com/kylesliu/awesome-golang-leetcode
