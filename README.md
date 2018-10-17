@@ -9,7 +9,78 @@ LeetCode of algorithms with golang solution(updating).
 
 | #    | Title            |   Solution     |   Acceptance   |    Difficulty  |  Star          |
 | :--- | :--------------- | :------------- | :------------- | :------------- | :------------- |
-| 1    | [Two Sum][0001]  | [Golang][0001] | 39.0%          |Array, Hash Table |:sparkling_heart:   | 
+| 1    | [Two Sum][0001-url]  | [Golang][0001-golang] | 39.0%  |Array, Hash Table |:sparkling_heart:|
+| 2    | [Add Two Numbers][0002-url]  | [Golang][0002-golang] | 29.2%  |Array, Hash Table |:sparkling_heart:|
+| 3    | [Longest Substring Without Repeating Characters][0003-url]  | [Golang][0003-golang] | 25.1%  |Array, Hash Table |:sparkling_heart:|
+| 4    | [Median of Two Sorted Arrays    ][0004-url]  | [Golang][0004-golang] | 24.1%  |Array, Hash Table |:sparkling_heart:|
+| 5    | [Longest Palindromic Substring ][0005-url]  | [Golang][0005-golang] | 	25.6%  |Array, Hash Table |:sparkling_heart:|
+| 6    | [ZigZag Conversion][0006-url]  | [Golang][0006-golang] |	28.8%  |Array, Hash Table |:sparkling_heart:|
+| 7    | [Reverse Integer][0007-url]  | [Golang][0007-golang] | 	24.5%  |Array, Hash Table |:sparkling_heart:|
+| 8    | [String to Integer (atoi)][0008-url]  | [Golang][0008-golang] | 	14.2%  |Array, Hash Table |:sparkling_heart:|
+| 9    | [Palindrome Number][0009-url]  | [Golang][0009-golang] | 38.9%  |Array, Hash Table |:sparkling_heart:|
+| 10   | [Regular Expression Matching][0010-url]  | [Golang][0010-golang] | 24.4%  |Array, Hash Table |:sparkling_heart:|
+
+
+
+[src]: https://github.com/kylesliu/awesome-golang-leetcode
+[companies]: https://github.com/kylesliu/awesome-golang-leetcode/blob/master/Companies.md
+
+[0001-url]: https://leetcode.com/problems/add-two-numbers
+[0001-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0001.Two-Sum
+
+[0002-url]: https://leetcode.com/problems/longest-substring-without-repeating-characters
+[0002-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0001.Two-Sum
+
+[0003-url]: https://leetcode.com/problems/longest-substring-without-repeating-characters
+[0003-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0001.Two-Sum
+
+[0004-url]: https://leetcode.com/problems/median-of-two-sorted-arrays
+[0004-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0001.Two-Sum
+
+[0005-url]: https://leetcode.com/problems/longest-palindromic-substring
+[0005-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0001.Two-Sum
+
+[0006-url]: https://leetcode.com/problems/zigzag-conversion
+[0006-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0001.Two-Sum
+
+[0007-url]: https://leetcode.com/problems/reverse-integer
+[0007-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0001.Two-Sum
+
+[0008-url]: https://leetcode.com/problems/string-to-integer-atoi
+[0008-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0001.Two-Sum
+
+[0009-url]: https://leetcode.com/problems/palindrome-number
+[0009-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0001.Two-Sum
+
+[0010-url]: https://leetcode.com/problems/regular-expression-matching
+[0010-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0001.Two-Sum
+
+
+
+[0007]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0007.Reverse-Integer
+[0009]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0009.Palindrome-Number
+[0013]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0013.Roman-to-Integer
+[0014]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0014.Longest-Common-Prefix
+[0020]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0020.Valid-Parentheses
+[0021]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0021.Merge-Two-Sorted-Lists
+[0026]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0026.Remove-Duplicates-from-Sorted-Array
+[0027]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0027.Remove-Element
+[0028]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0028.Implement-strStr
+[0035]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0035.Search-Insert-Position
+[0038]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0038.Count-and-Say
+[0053]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0053.Maximum-Subarray
+[0058]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0058.Length-of-Last-Word
+[0066]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0066.Plus-One
+[0067]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0067.Add-Binary
+[0069]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0069.Sqrt-x
+[0070]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0070.Climbing-Stairs
+[0083]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0083.Remove-Duplicates-from-Sorted-List
+[0088]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0088.Merge-Sorted-Array
+[0100]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0100.Same-Tree
+[0101]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0101.Symmetric-Tree
+[0104]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0104.Maximum-Depth-of-Binary-Tree
+[0107]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0107.Binary-Tree-Level-Order-Traversal-II
+
 
 
 ## Easy
