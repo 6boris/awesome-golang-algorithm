@@ -1,9 +1,9 @@
 # 📝 awesome-golang-leetcode
 
-LeetCode of algorithms with golang solution(updating).
+LeetCode of algorithms with golang solution(updating:smiley:).
 
 <div align=center>
-<img width="237" height=“76” src="https://github.com/kylesliu/awesome-golang-leetcode/blob/master/assets/images/leetcode.png"></img>
+<img width="237" height=“76” src="https://leetcode.com/static/webpack_bundles/images/LeetCode_nav.4d940ca7.png"></img>
 </div>
 
 
