@@ -1,6 +1,8 @@
 package Solution
 
-import "sort"
+import (
+	"sort"
+)
 
 // Interval Definition for an interval.
 type Interval struct {
@@ -8,14 +10,18 @@ type Interval struct {
 	End   int
 }
 
-func merge(intervals []Interval) []Interval {
+//	自定义排序规则
+type SortByInt []Interval
 
-	sort.Sort()
-
-	return []Interval{}
-
+func (p SortByInt) Len() int {
+	return len(p)
 }
-
+func (p SortByInt) Swap(i, j int) {
+	p[i], p[j] = p[j], p[i]
+}
+func (p SortByInt) Less(i, j int) bool {
+	return p[i].Start < p[j].Start
+}
 func Max(x, y int) int {
 	if x > y {
 		return x
@@ -23,17 +29,28 @@ func Max(x, y int) int {
 	return y
 }
 
-func Sort(intervals []Interval) []Interval {
-	i, j, tmp := 0, 0, Interval{Start: 0, End: 0}
+//
+func merge(intervals []Interval) []Interval {
+	if intervals == nil || len(intervals) <= 1 {
+		return intervals
+	}
+	//	先将结构体排序
+	sort.Sort(SortByInt(intervals))
 
-	for i := 1; i < len(intervals); i++ {
-		tmp = intervals[i]
-		for j = i; j > 0 && Less(intervals[j],tmp); j--{
-			intervals =
+	start := intervals[0].Start
+	end := intervals[0].End
+
+	ans := make([]Interval, 0)
+
+	for _, v := range intervals {
+		if v.Start <= end {
+			end = Max(end, v.End)
+		} else {
+			ans = append(ans, Interval{Start: start, End: end})
+			start = v.Start
+			end = v.End
 		}
 	}
-}
-
-func Less(i, j Interval) bool {
-	return false
+	ans = append(ans, Interval{Start: start, End: end})
+	return ans
 }

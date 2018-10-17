@@ -7,6 +7,10 @@ LeetCode of algorithms with golang solution(updating).
 </div>
 
 
+| #    | Title            |   Solution     |   Acceptance   |    Difficulty  |  Star          |
+| :--- | :--------------- | :------------- | :------------- | :------------- | :------------- |
+| 1    | [Two Sum][0001]  | [Golang][0001] | 39.0%          |Array, Hash Table |:sparkling_heart:   | 
+
 
 ## Easy
 

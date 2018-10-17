@@ -13,17 +13,25 @@ func TestSolution(t *testing.T) {
 		expect []Interval
 	}{
 		{"1 test 1",
-		[]Interval{
-			Interval{Start:1,End:3},
-			Interval{Start:2,End:6},
-			Interval{Start:8,End:10},
-			Interval{Start:15,End:18},
-		},
-		[]Interval{
-			Interval{Start:1,End:6},
-			Interval{Start:8,End:10},
-			Interval{Start:15,End:18},
-		}},
+			[]Interval{
+				Interval{Start: 1, End: 3},
+				Interval{Start: 15, End: 18},
+				Interval{Start: 2, End: 6},
+				Interval{Start: 8, End: 10},
+			},
+			[]Interval{
+				Interval{Start: 1, End: 6},
+				Interval{Start: 8, End: 10},
+				Interval{Start: 15, End: 18},
+			}},
+		{"2 test 2",
+			[]Interval{
+				Interval{Start: 1, End: 4},
+				Interval{Start: 4, End: 5},
+			},
+			[]Interval{
+				Interval{Start: 1, End: 5},
+			}},
 	}
 
 	//	开始测试
