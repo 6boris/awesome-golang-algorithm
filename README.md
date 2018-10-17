@@ -2,7 +2,7 @@
 
 LeetCode of algorithms with golang solution(updating:smiley:).
 
-<div align=center>
+<div align=center style="backgroud-color:#333">
 <img  src="https://github.com/kylesliu/awesome-golang-leetcode/tree/master/assets/images/LeetCode_nav.png"></img>
 </div>
 
