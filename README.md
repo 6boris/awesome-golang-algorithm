@@ -3,7 +3,7 @@
 LeetCode of algorithms with golang solution(updating:smiley:).
 
 <div align=center>
-<img  src="https://leetcode.com/static/webpack_bundles/images/LeetCode_nav.4d940ca7.png"></img>
+<img  src="https://github.com/kylesliu/awesome-golang-leetcode/tree/master/assets/images/LeetCode_nav.png"></img>
 </div>
 
 
