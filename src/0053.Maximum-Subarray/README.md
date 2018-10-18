@@ -1,4 +1,4 @@
-# [1. Add Sum][title]
+# [53. Maximum Subarray][title]
 
 ## Description
 
@@ -48,6 +48,6 @@ func maxSubArray(nums []int) int {
 
 如果你同我一样热爱数据结构、算法、LeetCode，可以关注我 GitHub 上的 LeetCode 题解：[awesome-golang-leetcode][me]
 
-[title]: https://leetcode.com/problems/maximum-subarray/
+[title]: https://leetcode.com/problems/maximum-subarray/description/
 [me]: https://github.com/kylesliu/awesome-golang-leetcode
 
