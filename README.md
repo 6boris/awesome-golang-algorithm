@@ -8,18 +8,28 @@ LeetCode of algorithms with golang solution(updating:smiley:).
 </div>
 
 
-| #    | Title            |   Solution     |   Acceptance   |    Difficulty  |  Star          |
+| #    | Title            |   Solution     |   Acceptance   |    Difficulty  |  Tag          |
 | :--- | :--------------- | :------------- | :------------- | :------------- | :------------- |
-| 1    | [Two Sum][0001-url]  | [Golang][0001-golang] | 39.0%  |Array, Hash Table |:sparkling_heart:|
-| 2    | [Add Two Numbers][0002-url]  | [Golang][0002-golang] | 29.2%  |Array, Hash Table |:sparkling_heart:|
-| 3    | [Longest Substring Without Repeating Characters][0003-url]  | [Golang][0003-golang] | 25.1%  |Array, Hash Table |:sparkling_heart:|
-| 4    | [Median of Two Sorted Arrays    ][0004-url]  | [Golang][0004-golang] | 24.1%  |Array, Hash Table | |
-| 5    | [Longest Palindromic Substring ][0005-url]  | [Golang][0005-golang] | 	25.6%  |Array, Hash Table | |
-| 6    | [ZigZag Conversion][0006-url]  | [Golang][0006-golang] |	28.8%  |Array, Hash Table | |
-| 7    | [Reverse Integer][0007-url]  | [Golang][0007-golang] | 	24.5%  |Array, Hash Table | |
-| 8    | [String to Integer (atoi)][0008-url]  | [Golang][0008-golang] | 	14.2%  |Array, Hash Table | |
-| 9    | [Palindrome Number][0009-url]  | [Golang][0009-golang] | 38.9%  |Array, Hash Table | |
-| 10   | [Regular Expression Matching][0010-url]  | [Golang][nil] | 24.4%  |Array, Hash Table | |
+| 1    | [Two Sum][0001-url]  | [Golang][0001-golang] | 39.0%  |:purple_heart: |:eyes:|
+| 2    | [Add Two Numbers][0002-url]  | [Golang][0002-golang] | 29.2%  |:purple_heart:  |:star:|
+| 3    | [Longest Substring Without Repeating Characters][0003-url]  | [Golang][0003-golang] | 25.1%  |:purple_heart:  |:eyes:|
+| 4    | [Median of Two Sorted Arrays    ][0004-url]  | [Golang][0004-golang] | 24.1%  |:purple_heart:  |:eyes: |
+| 5    | [Longest Palindromic Substring ][0005-url]  | [Golang][0005-golang] | 	25.6%  |:purple_heart:  |:eyes: |
+| 6    | [ZigZag Conversion][0006-url]  | [Golang][0006-golang] |	28.8%  |:purple_heart: |:eyes: |
+| 7    | [Reverse Integer][0007-url]  | [Golang][0007-golang] | 	24.5%  |:purple_heart: |:eyes: |
+| 8    | [String to Integer (atoi)][0008-url]  | [Golang][0008-golang] | 	14.2%  |:purple_heart:  |:eyes: |
+| 9    | [Palindrome Number][0009-url]  | [Golang][0009-golang] | 38.9%  |:purple_heart:  |:eyes: |
+| 10   | [Regular Expression Matching][0010-url]  | [Golang][nil] | 24.4%  |:purple_heart:  | :eyes:|
+| 11   | [Container With Most Water][0011-url]  | [Golang][nil] | 24.4%  |:purple_heart:  |:eyes: |
+| 12   | [Integer to Roman][0012-url]  | [Golang][nil] | 24.4%  |:purple_heart:  |:eyes: |
+| 13   | [Roman to Integer][0013-url]  | [Golang][nil] | 24.4%  |:purple_heart:  | :eyes:|
+| 14   | [Longest Common Prefix][0014-url]  | [Golang][nil] | 24.4%  |:purple_heart:  | :eyes:|
+| 15   | [3Sum][0015-url]  | [Golang][nil] | 24.4%  |:purple_heart:  |:eyes: |
+| 16   | [3Sum Closest][0016-url]  | [Golang][nil] | 24.4%  |:purple_heart:  |:eyes: |
+| 17   | [Letter Combinations of a Phone Number][0017-url]  | [Golang][nil] | 24.4%  |:purple_heart:  |:eyes: |
+| 18   | [4Sum][0018-url]  | [Golang][nil] | 24.4%  |:purple_heart:  |:eyes: |
+| 19   | [Remove Nth Node From End of List][0018-url]  | [Golang][nil] | 24.4%  |:purple_heart:  | :eyes:|
+| 20   | [Valid Parentheses ][0020-url]  | [Golang][nil] | 24.4%  |:trollface: | :eyes:|
 
 
 
@@ -55,3 +65,33 @@ LeetCode of algorithms with golang solution(updating:smiley:).
 
 [0010-url]: https://leetcode.com/problems/regular-expression-matching
 [0010-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0001.Two-Sum
+
+[0011-url]: https://leetcode.com/problems/container-with-most-water
+[0011-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0001.Two-Sum
+
+[0012-url]: https://leetcode.com/problems/integer-to-roman
+[0012-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0001.Two-Sum
+
+[0013-url]: https://leetcode.com/problems/roman-to-integer
+[0013-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0001.Two-Sum
+
+[0014-url]: https://leetcode.com/problems/longest-common-prefix
+[0014-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0001.Two-Sum
+
+[0015-url]: https://leetcode.com/problems/3sum
+[0015-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0001.Two-Sum
+
+[0016-url]: https://leetcode.com/problems/3sum-closest
+[0016-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0001.Two-Sum
+
+[0017-url]: https://leetcode.com/problems/letter-combinations-of-a-phone-number
+[0017-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0001.Two-Sum
+
+[0018-url]: https://leetcode.com/problems/4sum
+[0018-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0001.Two-Sum
+
+[0019-url]: https://leetcode.com/problems/remove-nth-node-from-end-of-list
+[0019-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0001.Two-Sum
+
+[0020-url]: https://leetcode.com/problems/valid-parentheses
+[0020-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0001.Two-Sum
