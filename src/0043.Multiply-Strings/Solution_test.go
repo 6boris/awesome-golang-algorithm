@@ -29,3 +29,38 @@ func TestSolution(t *testing.T) {
 		})
 	}
 }
+
+func BenchmarkSolution(b *testing.B) {
+	b.Run("test1", func(b *testing.B) {
+		b.ResetTimer()
+		got := multiply("0", "0")
+		want := "0"
+		if got != want {
+			b.Error("test fail")
+		}
+	})
+	b.Run("test2", func(b *testing.B) {
+		b.ResetTimer()
+		got := multiply("2", "3")
+		want := "6"
+		if got != want {
+			b.Error("test fail")
+		}
+	})
+	b.Run("test3", func(b *testing.B) {
+		b.ResetTimer()
+		got := multiply("123", "456")
+		want := "56088"
+		if got != want {
+			b.Error("test fail")
+		}
+	})
+	b.Run("test4", func(b *testing.B) {
+		b.ResetTimer()
+		got := multiply("498828660196", "840477629533")
+		want := "419254329864656431168468"
+		if got != want {
+			b.Error("test fail")
+		}
+	})
+}
