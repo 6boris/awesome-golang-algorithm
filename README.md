@@ -3,8 +3,10 @@
 LeetCode of algorithms with golang solution(updating:smiley:).
 
 
-![image](https://github.com/kylesliu/awesome-golang-leetcode/tree/master/assets/images/leetcode.png)
-
+<div align="center">
+    <img src="https://xpnet-public.oss-cn-hangzhou.aliyuncs.com/leetcode/leetcode.png" alt="">
+    <img style="background-color: black;"src="https://xpnet-public.oss-cn-hangzhou.aliyuncs.com/leetcode/LeetCode_nav.png" alt="">
+</div>
 
 
 | #    | Title            |   Solution     |   Acceptance   |    Difficulty  |  Star          |
