@@ -1,4 +1,4 @@
-# [1. Add Sum][title]
+# [1. Two Sum][title]
 
 ## Problem
 

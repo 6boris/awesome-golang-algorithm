@@ -1,4 +1,4 @@
-# [1. Add Sum][title]
+# [22. Generate Parentheses][title]
 
 ## Description
 
@@ -61,5 +61,5 @@ func dp(prefix string, depth int, n int) []string {
 
 如果你同我一样热爱数据结构、算法、LeetCode，可以关注我 GitHub 上的 LeetCode 题解：[awesome-golang-leetcode][me]
 
-[title]: https://leetcode.com/problems/two-sum/description/
+[title]: https://leetcode.com/problems/generate-parentheses/description/
 [me]: https://github.com/kylesliu/awesome-golang-leetcode

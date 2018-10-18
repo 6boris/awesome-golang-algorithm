@@ -1,3 +1,5 @@
+# [7. Reverse Integer][title]
+
 # Description
 
 ## Problem
@@ -28,7 +30,21 @@ Output: 21
 ### 思路1
 > 题意是给你一个整型数，求它的逆序整型数，而且有个小坑点，当它的逆序整型数溢出的话，那么就返回 0，用我们代码表示的话可以求得结果保存在 long 中，最后把结果和整型的两个范围比较即可。
 ### 思路1
+```go
+func reverse(x int) int {
+	ans := 0
+	for ; x != 0; x /= 10 {
+		ans = ans*10 + x%10
+	}
 
+	if ans < math.MinInt32 || ans > math.MaxInt32 {
+		return 0
+	}
+
+	return ans
+}
+
+```
 
 ## 结语
 

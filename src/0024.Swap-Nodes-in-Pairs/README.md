@@ -1,4 +1,4 @@
-# [1. Add Sum][title]
+# [24. Swap Nodes in Pairs][title]
 
 ## Description
 
@@ -63,5 +63,5 @@ func swapPairs(head *ListNode) *ListNode {
 
 如果你同我一样热爱数据结构、算法、LeetCode，可以关注我 GitHub 上的 LeetCode 题解：[awesome-golang-leetcode][me]
 
-[title]: https://leetcode.com/problems/two-sum/description/
+[title]: https://leetcode.com/problems/swap-nodes-in-pairs/description/
 [me]: https://github.com/kylesliu/awesome-golang-leetcode
