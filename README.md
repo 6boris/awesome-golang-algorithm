@@ -2,9 +2,9 @@
 
 LeetCode of algorithms with golang solution(updating:smiley:).
 
-<div align=center>
-<img  src="https://github.com/kylesliu/awesome-golang-leetcode/tree/master/assets/images/leetcode.png></img>
-</div>
+
+![image](https://github.com/kylesliu/awesome-golang-leetcode/tree/master/assets/images/leetcode.png)
+
 
 
 | #    | Title            |   Solution     |   Acceptance   |    Difficulty  |  Star          |
