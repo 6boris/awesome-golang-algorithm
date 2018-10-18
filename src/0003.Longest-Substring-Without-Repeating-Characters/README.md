@@ -51,6 +51,13 @@ func lengthOfLongestSubstring(s string) int {
 
 	return Max(maxLength, substringLen)
 }
+func Max(x, y int) int {
+	if x > y {
+		return x
+	}
+	return y
+}
+
 ```
 
 ### 思路2

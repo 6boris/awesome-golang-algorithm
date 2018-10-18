@@ -58,7 +58,36 @@ n-1                         3n-3                        5n-5
 > 那么我们可以根据上面找规律，可以看到波峰和波谷是单顶点的，它们周期是 2 * (n - 1)，单独处理即可；中间的部分每个周期会出现两次，规律很好找，留给读者自己想象，不懂的可以结合以下代码。
 
 ```go
+func convert(s string, numRows int) string {
+	if numRows == 1 || numRows <= 0 || numRows > len(s) {
+		return s
+	}
+	strArr := make([][]byte, numRows)
+	j := 0
+	increasing := true
 
+	for i := 0; i < len(s); i++ {
+		strArr[j] = append(strArr[j], s[i])
+
+		if increasing {
+			j++
+			if j == numRows - 1 {
+				increasing = false
+			}
+		} else {
+			j--
+			if j == 0 {
+				increasing = true
+			}
+		}
+	}
+	res := make([]byte, 0)
+
+	for _, str := range strArr {
+		res = append(res, str...)
+	}
+	return string(res)
+}
 ```
 
 ### 思路2

@@ -2,36 +2,108 @@
 
 ## Description
 
-Given two binary strings, return their sum (also a binary string).
+Given an input string (s) and a pattern (p), implement regular expression matching with support for '.' and '*'.
+```go
+'.' Matches any single character.
+'*' Matches zero or more of the preceding element.
+```
+The matching should cover the entire input string (not partial).
 
-The input strings are both **non-empty** and contains only characters `1` or `0`.
+**Note:**
+- s could be empty and contains only lowercase letters a-z.
+- p could be empty and contains only lowercase letters a-z, and characters like . or *.
+
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input:
+s = "aa"
+p = "a"
+Output: false
+Explanation: "a" does not match the entire string "aa".
+
 ```
 
 **Example 2:**
 
 ```
-Input: a = "1010", b = "1011"
-Output: "10101"
+Input:
+s = "aa"
+p = "a*"
+Output: true
+Explanation: '*' means zero or more of the precedeng element, 'a'. Therefore, by repeating 'a' once, it becomes "aa".
 ```
+**Example 3:**
+
+```
+Input:
+s = "aa"
+p = "a*"
+Output: true
+Explanation: '*' means zero or more of the precedeng element, 'a'. Therefore, by repeating 'a' once, it becomes "aa".
+```
+
+**Example 4:**
+
+```
+Input:
+s = "aa"
+p = "a*"
+Output: true
+Explanation: '*' means zero or more of the precedeng element, 'a'. Therefore, by repeating 'a' once, it becomes "aa".
+```
+**Example 5:**
+
+```
+Input:
+s = "aa"
+p = "a*"
+Output: true
+Explanation: '*' means zero or more of the precedeng element, 'a'. Therefore, by repeating 'a' once, it becomes "aa".
+```
+
 
 **Tags:** Math, String
 
 ## 题意
->给你两个二进制串，求其和的二进制串。
+>根据要求匹配字符
 
 ## 题解
 
 ### 思路1
-> 按照小学算数那么来做，用 `carry` 表示进位，从后往前算，依次往前，每算出一位就插入到最前面即可，直到把两个二进制串都遍历完即可。
-
+> 用dp,
 ```go
+func isMatch(s string, p string) bool {
+	// DP解法
+	dp := make([][]bool, len(s)+1)
+	for i:=0; i<len(s)+1; i++ {
+		dp[i] = make([]bool, len(p)+1)
+	}
+	dp[len(s)][len(p)] = true
 
+	for i:=len(s); i>=0; i--{
+		for j:=len(p)-1; j>=0; j--{
+			// 检查每个匹配的第一个字母是否匹配
+			fm := false
+			if i<len(s) && (s[i]==p[j] || p[j]=='.') {
+				fm = true
+			}
+
+			// 当第二个字符模式中有*时
+			if (j+1)<len(p) && p[j+1]=='*' {
+				// 考虑*为0并且重合
+				// 如果不匹配，检查第一个匹配是否与[i + 1，j]匹配
+				dp[i][j] = dp[i][j+2] || (fm && dp[i+1][j])
+				//fmt.Println("a",i,j,dp[i][j])
+			}else{
+				dp[i][j] = fm && dp[i+1][j+1]
+				//fmt.Println("b",i,j,dp[i][j])
+			}
+		}
+	}
+	return dp[0][0]
+}
 ```
 
 ### 思路2
