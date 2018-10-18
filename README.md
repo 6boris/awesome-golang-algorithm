@@ -5,7 +5,6 @@ LeetCode of algorithms with golang solution(updating:smiley:).
 
 <div align="center">
     <img src="https://xpnet-public.oss-cn-hangzhou.aliyuncs.com/leetcode/leetcode.png" alt="">
-    <img style="background-color: black;"src="https://xpnet-public.oss-cn-hangzhou.aliyuncs.com/leetcode/LeetCode_nav.png" alt="">
 </div>
 
 
@@ -20,7 +19,7 @@ LeetCode of algorithms with golang solution(updating:smiley:).
 | 7    | [Reverse Integer][0007-url]  | [Golang][0007-golang] | 	24.5%  |Array, Hash Table | |
 | 8    | [String to Integer (atoi)][0008-url]  | [Golang][0008-golang] | 	14.2%  |Array, Hash Table | |
 | 9    | [Palindrome Number][0009-url]  | [Golang][0009-golang] | 38.9%  |Array, Hash Table | |
-| 10   | [Regular Expression Matching][0010-url]  | [Golang][companies] | 24.4%  |Array, Hash Table | |
+| 10   | [Regular Expression Matching][0010-url]  | [Golang][nil] | 24.4%  |Array, Hash Table | |
 
 
 
