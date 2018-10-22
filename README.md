@@ -25,7 +25,7 @@ LeetCode of algorithms with golang solution(updating:smiley:).
 | 13   | [Roman to Integer][0013-url]  | [Golang][0013-golang] | 49.7%  |:purple_heart:  | :eyes:|
 | 14   | [Longest Common Prefix][0014-url]  | [Golang][0014-golang] | 	32.0%  |:purple_heart:  | :eyes:|
 | 15   | [3Sum][0015-url]  | [Golang][0015-golang] | 22.2%  |:purple_heart: :purple_heart: |:eyes: |
-| 16   | [3Sum Closest][0016-url]  | [Golang][0016-golang] | 32.8%  |:p]() urple_heart:  :purple_heart:|:eyes: |
+| 16   | [3Sum Closest][0016-url]  | [Golang][0016-golang] | 32.8%  |:purple_heart:  :purple_heart:|:eyes: |
 | 17   | [Letter Combinations of a Phone Number][0017-url]  | [Golang][0017-golang] | 38.4%  |:purple_heart: :purple_heart: |:eyes: |
 | 18   | [4Sum][0018-url]  | [Golang][0018-golang] | 28.5% |:purple_heart::purple_heart:  |:eyes: |
 | 19   | [Remove Nth Node From End of List][0018-url]  | [Golang][0019-golang] | 33.6% |:purple_heart: :purple_heart: | :eyes:|
