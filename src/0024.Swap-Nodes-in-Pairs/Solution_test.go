@@ -29,3 +29,7 @@ func TestSolution(t *testing.T) {
 		})
 	}
 }
+
+func BenchMarkSolution(b *testing.BenchmarkResult) {
+
+}

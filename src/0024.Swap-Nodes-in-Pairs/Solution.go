@@ -17,7 +17,6 @@ func swapPairs(head *ListNode) *ListNode {
 		cur.Next = tmp
 		cur = cur.Next.Next
 	}
-
 	return preHead.Next
 }
 

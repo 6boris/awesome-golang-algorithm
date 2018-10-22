@@ -1,5 +1,10 @@
 package Solution
 
-func Solution(x bool) bool {
-	return x
+type ListNode struct {
+	Val  int
+	Next *ListNode
+}
+
+func reverseList(head *ListNode) *ListNode {
+
 }
