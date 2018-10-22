@@ -101,7 +101,6 @@ LeetCode of algorithms with golang solution(updating:smiley:).
 [0020-url]: https://leetcode.com/problems/valid-parentheses
 [0020-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0020.Valid-Parentheses
 
-
 [0024-url]: https://leetcode.com/problems/two-sum
 [0024-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0001.Two-Sum
 
