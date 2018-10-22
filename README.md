@@ -30,6 +30,11 @@ LeetCode of algorithms with golang solution(updating:smiley:).
 | 18   | [4Sum][0018-url]  | [Golang][0018-golang] | 28.5% |:purple_heart::purple_heart:  |:eyes: |
 | 19   | [Remove Nth Node From End of List][0018-url]  | [Golang][0019-golang] | 33.6% |:purple_heart: :purple_heart: | :eyes:|
 | 20   | [Valid Parentheses ][0020-url]  | [Golang][0020-golang] | 34.7%  |:purple_heart: | :eyes:|
+| 24   | [Swap Nodes in Pairs ][0020-url]  | Golang | 41.2%  |:purple_heart: :purple_heart: | :eyes:|
+| 25   | [Reverse Nodes in k-Group ][0020-url]  | Golang | 33.6%  |:purple_heart::purple_heart::purple_heart: | :eyes:|
+| 141  | [Linked List Cycle ][0020-url]  | Golang | 34.6%  |:purple_heart: | :eyes:|
+| 142  | [Linked List Cycle II ][0020-url]  | Golang | 	29.9% |:purple_heart: | :eyes:|
+| 206  | [Reverse Linked List ][0020-url]  | Golang | 50.0%  |:purple_heart: | :eyes:|
 
 
 
@@ -95,3 +100,20 @@ LeetCode of algorithms with golang solution(updating:smiley:).
 
 [0020-url]: https://leetcode.com/problems/valid-parentheses
 [0020-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0020.Valid-Parentheses
+
+
+[0024-url]: https://leetcode.com/problems/two-sum
+[0024-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0001.Two-Sum
+
+[0025-url]: https://leetcode.com/problems/two-sum
+[0025-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0001.Two-Sum
+
+[0141-url]: https://leetcode.com/problems/two-sum
+[0141-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0001.Two-Sum
+
+[0142-url]: https://leetcode.com/problems/two-sum
+[0142-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0001.Two-Sum
+
+[0206-url]: https://leetcode.com/problems/two-sum
+[0206-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0001.Two-Sum
+
