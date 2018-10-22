@@ -19,7 +19,7 @@ LeetCode of algorithms with golang solution(updating:smiley:).
 | 7    | [Reverse Integer][0007-url]  | [Golang][0007-golang] | 	24.5%  |:purple_heart: |:eyes: |
 | 8    | [String to Integer (atoi)][0008-url]  | [Golang][0008-golang] | 	14.2%  |:purple_heart: :purple_heart: |:eyes: |
 | 9    | [Palindrome Number][0009-url]  | [Golang][0009-golang] | 38.9%  |:purple_heart:  |:eyes: |
-| 10   | [Regular Expression Matching][0010-url]  | [Golang][0010-golan [g] | 24.4%  |:purple_heart::purple_heart::purple_heart:  | :eyes:|
+| 10   | [Regular Expression Matching][0010-url]  | [Golang][0010-golang]  | 24.4%  |:purple_heart::purple_heart::purple_heart:  | :eyes:|
 | 11   | [Container With Most Water][0011-url]  | [Golang][0011-golang] | 	39.3%  |:purple_heart: :purple_heart:  |:eyes: |
 | 12   | [Integer to Roman][0012-url]  | [Golang][0012-golang] | 48.0%  |:purple_heart::purple_heart:  |:eyes: |
 | 13   | [Roman to Integer][0013-url]  | [Golang][0013-golang] | 49.7%  |:purple_heart:  | :eyes:|
@@ -101,18 +101,18 @@ LeetCode of algorithms with golang solution(updating:smiley:).
 [0020-url]: https://leetcode.com/problems/valid-parentheses
 [0020-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0020.Valid-Parentheses
 
-[0024-url]: https://leetcode.com/problems/two-sum
-[0024-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0001.Two-Sum
+[0024-url]: https://leetcode.com/problems/swap-nodes-in-pairs/
+[0024-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0024.Swap-Nodes-in-Pairs
 
-[0025-url]: https://leetcode.com/problems/two-sum
-[0025-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0001.Two-Sum
+[0025-url]: https://leetcode.com/problems/reverse-nodes-in-k-group/
+[0025-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0025.Reverse-Nodes-in-k-Group
 
-[0141-url]: https://leetcode.com/problems/two-sum
-[0141-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0001.Two-Sum
+[0141-url]: https://leetcode.com/problems/linked-list-cycle/
+[0141-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0141.Linked-List-Cycle
 
-[0142-url]: https://leetcode.com/problems/two-sum
-[0142-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0001.Two-Sum
+[0142-url]: https://leetcode.com/problems/linked-list-cycle-ii/
+[0142-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0142.Linked-List-Cycle-II
 
-[0206-url]: https://leetcode.com/problems/two-sum
-[0206-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0001.Two-Sum
+[0206-url]: https://leetcode.com/problems/reverse-linked-list/
+[0206-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0206.Reverse-Linked-List
 
