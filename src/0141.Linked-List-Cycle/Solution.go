@@ -28,20 +28,18 @@ func hasCycle1(head *ListNode) bool {
 //	HashMap
 func hasCycle2(head *ListNode) bool {
 
-	listMap := make(map[string]int)
+	//listMap := make(map[string]int)
 
 	//fmt.Println(listMap[fmt.Sprintf("%s",&head)])
 
 	for head != nil {
 		//fmt.Sprintf("%s",&head)
-		listMap[fmt.Sprintf("%s", &head)] += 1
-		fmt.Println(listMap)
 
-		if listMap[fmt.Sprintf("%s", &head)] > 1 {
-			fmt.Println(listMap[fmt.Sprintf("%s", &head)])
-			fmt.Println(listMap)
-			return true
-		}
+		//if listMap[fmt.Sprintf("%s", &head)] > 1 {
+		//	//fmt.Println(listMap[fmt.Sprintf("%s", &head)])
+		//	//fmt.Println(listMap)
+		//	return true
+		//}
 
 		head = head.Next
 	}

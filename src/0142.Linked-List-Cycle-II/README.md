@@ -1,4 +1,4 @@
-# [1. Add Sum][title]
+# [142. Linked List Cycle II][title]
 
 ## Description
 
@@ -23,7 +23,7 @@ Output: "10101"
 **Tags:** Math, String
 
 ## 题意
->给你两个二进制串，求其和的二进制串。
+>给定一个链表，返回链表开始入环的第一个节点。 如果链表无环，则返回 null。 说明：不允许修改给定的链表。
 
 ## 题解
 
@@ -44,5 +44,5 @@ Output: "10101"
 
 如果你同我一样热爱数据结构、算法、LeetCode，可以关注我 GitHub 上的 LeetCode 题解：[awesome-golang-leetcode][me]
 
-[title]: https://leetcode.com/problems/two-sum/description/
+[title]: https://leetcode.com/problems/linked-list-cycle-ii/
 [me]: https://github.com/kylesliu/awesome-golang-leetcode

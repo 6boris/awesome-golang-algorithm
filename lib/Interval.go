@@ -1,4 +1,4 @@
-package lib
+package Solution
 
 type Interval struct {
 	Start int

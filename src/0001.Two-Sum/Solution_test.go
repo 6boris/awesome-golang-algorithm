@@ -56,7 +56,7 @@ func TestTwoSum2(t *testing.T) {
 	}
 }
 
-const N = 100000
+const N = 100
 
 func BenchmarkTwoSum1(b *testing.B) {
 	nums := []int{}

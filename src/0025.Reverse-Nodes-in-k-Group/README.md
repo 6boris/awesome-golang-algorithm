@@ -1,4 +1,4 @@
-# [1. Add Sum][title]
+# [25. Reverse Nodes in k-Group][title]
 
 ## Description
 
@@ -23,7 +23,8 @@ Output: "10101"
 **Tags:** Math, String
 
 ## 题意
->给你两个二进制串，求其和的二进制串。
+>给出一个链表，每 k 个节点一组进行翻转，并返回翻转后的链表。
+
 
 ## 题解
 

@@ -1,48 +1,73 @@
-# [1. Add Sum][title]
+# [1. Reverse Linked List][title]
 
 ## Description
 
-Given two binary strings, return their sum (also a binary string).
-
-The input strings are both **non-empty** and contains only characters `1` or `0`.
+Reverse a singly linked list.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: 1->2->3->4->5->NULL
+Output: 5->4->3->2->1->NULL
 ```
 
 **Example 2:**
 
 ```
-Input: a = "1010", b = "1011"
-Output: "10101"
 ```
+
+**Follow up:**
+A linked list can be reversed either iteratively or recursively. Could you implement both?
+
 
 **Tags:** Math, String
 
+
 ## 题意
->给你两个二进制串，求其和的二进制串。
+>翻转链表
 
 ## 题解
 
 ### 思路1
-> 按照小学算数那么来做，用 `carry` 表示进位，从后往前算，依次往前，每算出一位就插入到最前面即可，直到把两个二进制串都遍历完即可。
+> 正常循环翻转
 
 ```go
-
+func reverseList1(head *ListNode) *ListNode {
+	var prev *ListNode
+	for head != nil {
+		head.Next, prev, head = prev, head, head.Next
+	}
+	return prev
+}
 ```
 
 ### 思路2
-> 思路2
+> 递归翻转
 ```go
-
+func reverseList2(head *ListNode) *ListNode {
+	if head == nil || head.Next == nil {
+		return head
+	}
+	p := reverseList2(head.Next)
+	head.Next.Next = head
+	head.Next = p
+	return p
+}
 ```
+
+## 测试
+```go
+go test -run=Solution_test.go -bench=BenchmarkSolution1 -benchmem -cpuprofile=bench-1.prof
+go test -run=Solution_test.go -bench=BenchmarkSolution2 -benchmem -cpuprofile=bench-2.prof
+
+go tool pprof bench-1.prof
+web
+```
+
 
 ## 结语
 
 如果你同我一样热爱数据结构、算法、LeetCode，可以关注我 GitHub 上的 LeetCode 题解：[awesome-golang-leetcode][me]
 
-[title]: https://leetcode.com/problems/two-sum/description/
+[title]: https://leetcode.com/problems/reverse-linked-list/
 [me]: https://github.com/kylesliu/awesome-golang-leetcode
