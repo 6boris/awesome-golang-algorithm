@@ -2,11 +2,9 @@
 
 LeetCode of algorithms with golang solution(updating).
 
-<div align=center>
-<img width="237" height=“76” src="https://github.com/kylesliu/awesome-golang-leetcode/blob/master/assets/images/leetcode.png"></img>
-<img width="237" height=“76” src="https://github.com/kylesliu/awesome-golang-leetcode/blob/master/assets/images/go_pic.jpg"></img>
+<div align="center">
+    <img src="https://xpnet-public.oss-cn-hangzhou.aliyuncs.com/leetcode/leetcode.png" alt="">
 </div>
-
 
 ## List
 
