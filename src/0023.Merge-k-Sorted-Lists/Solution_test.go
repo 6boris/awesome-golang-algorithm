@@ -1,29 +1,34 @@
 package Solution
 
 import (
-	"reflect"
 	"testing"
 )
 
 func TestSolution(t *testing.T) {
+
 	//	测试用例
 	cases := []struct {
 		name   string
-		inputs bool
-		expect bool
+		inputs []*ListNode
+		expect *ListNode
 	}{
-		{"TestCacse 1", true, true},
-		{"TestCacse 1", true, true},
-		{"TestCacse 1", false, true},
+		{"TestCacse 1",
+			[]*ListNode{
+				UnmarshalListBySlice([]int{1, 4, 5}),
+				UnmarshalListBySlice([]int{1, 3, 4}),
+				UnmarshalListBySlice([]int{2, 6}),
+			},
+			UnmarshalListBySlice([]int{1, 1, 2, 3, 4, 4, 5, 6})},
 	}
-
 	//	开始测试
 	for _, c := range cases {
 		t.Run(c.name, func(t *testing.T) {
-			ret := Solution(c.inputs)
-			if !reflect.DeepEqual(ret, c.expect) {
+			got := mergeKLists1(c.inputs)
+			if !isEqual(got, c.expect) {
+				PrintList(got)
+				PrintList(c.expect)
 				t.Fatalf("expected: %v, but got: %v, with inputs: %v",
-					c.expect, ret, c.inputs)
+					c.expect, got, c.inputs)
 			}
 		})
 	}
