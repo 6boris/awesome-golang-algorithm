@@ -9,21 +9,29 @@ func TestSolution(t *testing.T) {
 	//	测试用例
 	cases := []struct {
 		name   string
-		inputs bool
-		expect bool
+		input1 string
+		input2 []string
+		expect []int
 	}{
-		{"TestCacse 1", true, true},
-		{"TestCacse 1", true, true},
-		{"TestCacse 1", false, true},
+		{"TestCacse 1",
+			"barfoothefoobarman",
+			[]string{"foo", "bar"},
+			[]int{0, 9},
+		},
+		{"TestCacse 2",
+			"wordgoodstudentgoodword",
+			[]string{"word", "student"},
+			[]int{},
+		},
 	}
 
 	//	开始测试
 	for _, c := range cases {
 		t.Run(c.name, func(t *testing.T) {
-			ret := Solution(c.inputs)
+			ret := findSubstring(c.input1, c.input2)
 			if !reflect.DeepEqual(ret, c.expect) {
 				t.Fatalf("expected: %v, but got: %v, with inputs: %v",
-					c.expect, ret, c.inputs)
+					c.expect, ret, c.input1)
 			}
 		})
 	}

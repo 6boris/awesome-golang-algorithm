@@ -1,5 +1,10 @@
 package Solution
 
+type ListNode struct {
+	Val  int
+	Next *ListNode
+}
+
 func mergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
 	head := &ListNode{}
 	tmp := head
@@ -21,9 +26,4 @@ func mergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
 	}
 
 	return head.Next
-}
-
-type ListNode struct {
-	Val  int
-	Next *ListNode
 }

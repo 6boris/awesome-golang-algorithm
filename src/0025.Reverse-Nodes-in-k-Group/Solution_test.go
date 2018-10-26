@@ -12,8 +12,17 @@ func TestSolution(t *testing.T) {
 		input2 int
 		expect *ListNode
 	}{
-		{"TestCacse 1", UnmarshalListBySlice([]int{1, 2, 3, 4, 5}), 2, UnmarshalListBySlice([]int{2, 1, 4, 3, 5})},
-		{"TestCacse 2", UnmarshalListBySlice([]int{1, 2, 3, 4, 5}), 3, UnmarshalListBySlice([]int{3, 2, 1, 4, 5})},
+		{
+			"TestCacse 1",
+			UnmarshalListBySlice([]int{1, 2, 3, 4, 5}),
+			2,
+			UnmarshalListBySlice([]int{2, 1, 4, 3, 5})},
+		{
+			"TestCacse 2",
+			UnmarshalListBySlice([]int{1, 2, 3, 4, 5}),
+			3,
+			UnmarshalListBySlice([]int{3, 2, 1, 4, 5}),
+		},
 	}
 
 	//	开始测试
