@@ -4,7 +4,7 @@ import (
 	"testing"
 )
 
-func TestSolution(t *testing.T) {
+func TestSolution4(t *testing.T) {
 
 	//	测试用例
 	cases := []struct {
@@ -23,7 +23,7 @@ func TestSolution(t *testing.T) {
 	//	开始测试
 	for _, c := range cases {
 		t.Run(c.name, func(t *testing.T) {
-			got := mergeKLists3(c.inputs)
+			got := mergeKLists4(c.inputs)
 			if !isEqual(got, c.expect) {
 				PrintList(got)
 				PrintList(c.expect)
@@ -32,14 +32,4 @@ func TestSolution(t *testing.T) {
 			}
 		})
 	}
-}
-
-//	压力测试
-func BenchmarkSolution(b *testing.B) {
-
-}
-
-//	使用案列
-func ExampleSolution() {
-
 }

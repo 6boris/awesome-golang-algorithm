@@ -10,15 +10,6 @@ type ListNode struct {
 	Next *ListNode
 }
 
-//	正确解
-func Solution(head *ListNode) *ListNode {
-	var prev *ListNode
-	for head != nil {
-		head.Next, prev, head = prev, head, head.Next
-	}
-	return prev
-}
-
 //	比较结果
 func isEqual(l1 *ListNode, l2 *ListNode) bool {
 
