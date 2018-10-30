@@ -1,4 +1,4 @@
-# [1. Add Sum][title]
+# [98. Validate Binary Search Tree][title]
 
 ## Description
 
@@ -28,7 +28,7 @@ Output: "10101"
 ## 题解
 
 ### 思路1
-> 按照小学算数那么来做，用 `carry` 表示进位，从后往前算，依次往前，每算出一位就插入到最前面即可，直到把两个二进制串都遍历完即可。
+> 验证二叉搜索树
 
 ```go
 
@@ -44,5 +44,5 @@ Output: "10101"
 
 如果你同我一样热爱数据结构、算法、LeetCode，可以关注我 GitHub 上的 LeetCode 题解：[awesome-golang-leetcode][me]
 
-[title]: https://leetcode.com/problems/two-sum/description/
+[title]: https://leetcode.com/problems/validate-binary-search-tree/
 [me]: https://github.com/kylesliu/awesome-golang-leetcode

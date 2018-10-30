@@ -1,4 +1,4 @@
-# [32. Longest Valid Parentheses][title]
+# [31. Next Permutation][title]
 
 ## Description
 
@@ -23,20 +23,48 @@ Output: "10101"
 **Tags:** Math, String
 
 ## 题意
->给你两个二进制串，求其和的二进制串。
+>判断下一个是否有满足要求的排列
 
 ## 题解
 
 ### 思路1
-> 按照小学算数那么来做，用 `carry` 表示进位，从后往前算，依次往前，每算出一位就插入到最前面即可，直到把两个二进制串都遍历完即可。
+>  暴力全部扫描 时间复杂度可以飙到 O(N!),代码都不想写了
 
 ```go
 
 ```
 
 ### 思路2
-> 思路2
+> 官方解答
+<div align="center">
+    <img src="https://leetcode-cn.com/media/original_images/31/31_Next_Permutation.gif" alt="">
+</div>
+
 ```go
+func nextPermutation(nums []int) {
+	i := len(nums) - 2
+
+	for i >= 0 && nums[i+1] <= nums[i] {
+		i--
+	}
+	if i >= 0 {
+		j := len(nums) - 1
+		for j >= 0 && nums[j] <= nums[i] {
+			j--
+		}
+		nums[i], nums[j] = nums[j], nums[i]
+	}
+	reverse(nums, i+1)
+}
+
+func reverse(nums []int, start int) {
+	i, j := start, len(nums)-1
+	for i < j {
+		nums[i], nums[j] = nums[j], nums[i]
+		i++
+		j--
+	}
+}
 
 ```
 
@@ -44,5 +72,5 @@ Output: "10101"
 
 如果你同我一样热爱数据结构、算法、LeetCode，可以关注我 GitHub 上的 LeetCode 题解：[awesome-golang-leetcode][me]
 
-[title]: https://leetcode.com/problems/longest-valid-parentheses/description/
-[me]: https://github.com/kylesliu/awesome-golang-leetcode
+[title]: https://leetcode.com/problems/next-permutation/
+[me]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0031.Next-Permutation
