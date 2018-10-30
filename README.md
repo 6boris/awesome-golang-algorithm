@@ -101,11 +101,35 @@ LeetCode of algorithms with golang solution(updating:smiley:).
 [0020-url]: https://leetcode.com/problems/valid-parentheses
 [0020-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0020.Valid-Parentheses
 
-[0024-url]: https://leetcode.com/problems/swap-nodes-in-pairs/
+[0021-url]: https://leetcode.com/problems/merge-two-sorted-lists/description/
+[0021-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0021.Merge-Two-Sorted-Lists
+
+[0022-url]: https://leetcode.com/problems/generate-parentheses/description/
+[0022-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0022.Generate-Parentheses
+
+[0023-url]: https://leetcode.com/problems/merge-k-sorted-lists/description/
+[0023-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0023.Merge-k-Sorted-Lists
+
+[0024-url]: https://leetcode.com/problems/swap-nodes-in-pairs/description/
 [0024-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0024.Swap-Nodes-in-Pairs
 
 [0025-url]: https://leetcode.com/problems/reverse-nodes-in-k-group/
 [0025-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0025.Reverse-Nodes-in-k-Group
+
+[0026-url]: https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/
+[0026-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0026.Remove-Duplicates-from-Sorted-Array
+
+[0027-url]: https://leetcode.com/problems/remove-element/description/
+[0027-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0027.Remove-Element
+
+[0028-url]: https://leetcode.com/problems/implement-strstr/description/
+[0028-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0028.Implement-strStr
+
+[0029-url]: https://leetcode.com/problems/divide-two-integers/description/
+[0029-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0029.Divide-Two-Integers
+
+[0030-url]: https://leetcode.com/problems/substring-with-concatenation-of-all-words/description/
+[0030-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0030.Substring-with-Concatenation-of-All-Words
 
 [0141-url]: https://leetcode.com/problems/linked-list-cycle/
 [0141-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0141.Linked-List-Cycle
