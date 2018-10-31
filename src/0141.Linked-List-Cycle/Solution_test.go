@@ -21,9 +21,8 @@ func TestSolution1(t *testing.T) {
 	}{
 		{"TestCacse 1", getRandList(true, 1000), true},
 		{"TestCacse 2", getRandList(false, 1000), false},
-
 		{"TestCacse 3", getRandList(true, 100000), true},
-		{"TestCacse 4", getRandList(false, 100000), false},
+		//{"TestCacse 4", getRandList(false, 100000), false},
 	}
 
 	//	开始测试

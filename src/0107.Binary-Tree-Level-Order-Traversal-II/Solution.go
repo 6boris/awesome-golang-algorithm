@@ -11,5 +11,5 @@ func levelOrderBottom(root *TreeNode) [][]int {
 }
 
 func Solution(x bool) bool {
-	return false
+	return x
 }

@@ -1,31 +1,29 @@
 package Solution
 
-import "fmt"
+func longestCommonPrefix(strs []string) string {
+	var result string
 
-//	解法1：水平暴力扫描
-func longestCommonPrefix1(strs []string) string {
-	if len(strs) == 0 {
-		return ""
-	}
+	maxIndex := 0
+	for i, str := range strs {
+		strLen := len(str)
+		if i == 0 {
+			maxIndex = strLen - 1
+			result = str
+			continue
+		}
 
-	minLen := 999999
-	for i := 0; i < len(strs); i++ {
-		if len(strs[i]) < minLen {
-			minLen = len(strs[i])
+		if strLen-1 < maxIndex {
+			maxIndex = strLen - 1
+			result = result[:strLen]
+		}
 
+		for j := 0; j <= maxIndex && j < strLen; j++ {
+			if str[j] != result[j] {
+				maxIndex = j - 1
+				result = str[:j]
+			}
 		}
 	}
 
-	tmp := strs[0]
-	for i := 1; i < minLen; i++ {
-		j := 0
-		for j <= minLen && tmp[j] == strs[i][j] {
-			j++
-		}
-		fmt.Println(tmp)
-		fmt.Println(j)
-		tmp = tmp[:j]
-	}
-
-	return tmp
+	return result
 }

@@ -19,3 +19,6 @@ func Max(x, y int) int {
 	}
 	return y
 }
+func Solution(x bool) bool {
+	return x
+}

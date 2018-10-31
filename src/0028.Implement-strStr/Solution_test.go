@@ -18,12 +18,4 @@ func TestSolution(t *testing.T) {
 			t.Error("GOT:", got, "WANT:", want)
 		}
 	})
-
-	t.Run("Test-3", func(t *testing.T) {
-		got := strStr("a", "a")
-		want := 1
-		if got != want {
-			t.Error("GOT:", got, "WANT:", want)
-		}
-	})
 }

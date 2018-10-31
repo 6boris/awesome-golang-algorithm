@@ -33,3 +33,6 @@ func detectCycle(head *ListNode) *ListNode {
 	return frist
 
 }
+func Solution(x bool) bool {
+	return x
+}

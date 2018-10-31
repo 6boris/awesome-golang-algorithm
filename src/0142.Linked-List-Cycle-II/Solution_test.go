@@ -14,7 +14,7 @@ func TestSolution(t *testing.T) {
 	}{
 		{"TestCacse 1", true, true},
 		{"TestCacse 1", true, true},
-		{"TestCacse 1", false, true},
+		{"TestCacse 1", false, false},
 	}
 
 	//	开始测试

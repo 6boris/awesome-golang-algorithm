@@ -13,7 +13,7 @@ func TestSolution(t *testing.T) {
 		got := mergeTwoLists(MakeListNote(data1), MakeListNote(data2))
 		want := MakeListNote([]int{1, 1, 2, 3, 4, 4})
 
-		if Equal(got, want) {
+		if !Equal(got, want) {
 			fmt.Print("GOT:")
 			PrintList(got)
 			fmt.Print("WANT:")
@@ -27,9 +27,9 @@ func TestSolution(t *testing.T) {
 		data2 := []int{1, 3, 4, 9, 10}
 
 		got := mergeTwoLists(MakeListNote(data1), MakeListNote(data2))
-		want := MakeListNote([]int{1, 1, 2, 3, 4, 4})
+		want := MakeListNote([]int{1, 1, 2, 3, 4, 4, 5, 6, 7, 9, 10})
 
-		if Equal(got, want) {
+		if !Equal(got, want) {
 			fmt.Print("GOT:")
 			PrintList(got)
 			fmt.Print("WANT:")

@@ -1,8 +1,6 @@
 package Solution
 
 import (
-	"fmt"
-	"reflect"
 	"testing"
 )
 
@@ -22,16 +20,10 @@ func TestSolution(t *testing.T) {
 	//	开始测试
 	for _, c := range cases {
 		t.Run(c.name, func(t *testing.T) {
-			ret := addTwoNumbers(&ListNode{}, &ListNode{})
-
-			for ret != nil {
-				fmt.Println(ret.Val)
-				ret = ret.Next
-			}
-
-			if !reflect.DeepEqual(ret, c.expect) {
+			got := addTwoNumbers(c.input1, c.input2)
+			if !isEqual(got, c.expect) {
 				t.Fatalf("expected: %v, but got: %v, with inputs: %v",
-					c.expect, ret, c.input1)
+					c.expect, got, c.input1)
 			}
 		})
 	}

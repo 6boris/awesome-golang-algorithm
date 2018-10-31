@@ -9,7 +9,7 @@ func TestSolution1(t *testing.T) {
 			"flow",
 			"flight",
 		}
-		got := longestCommonPrefix1(data)
+		got := longestCommonPrefix(data)
 		want := "fl"
 		if got != want {
 			t.Error("GOT:", got, "WANT:", want)
@@ -22,7 +22,7 @@ func TestSolution1(t *testing.T) {
 			"racecar",
 			"car",
 		}
-		got := longestCommonPrefix1(data)
+		got := longestCommonPrefix(data)
 		want := ""
 		if got != want {
 			t.Error("GOT:", got, "WANT:", want)

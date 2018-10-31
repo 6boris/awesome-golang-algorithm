@@ -14,7 +14,7 @@ func TestSolution(t *testing.T) {
 	}{
 		{"1 test 1", true, true},
 		{"2 test 2", true, true},
-		{"3 test 3", false, true},
+		{"3 test 3", false, false},
 	}
 
 	//	开始测试

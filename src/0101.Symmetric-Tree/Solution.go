@@ -6,6 +6,10 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
+func Solution(x bool) bool {
+	return x
+}
+
 func isSymmetric(root *TreeNode) bool {
 	return root == nil || isSymmetricHelper(root.Left, root.Right)
 }

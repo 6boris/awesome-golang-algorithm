@@ -1,7 +1,6 @@
 package Solution
 
 import (
-	"fmt"
 	"time"
 )
 
@@ -18,7 +17,7 @@ func hasCycle1(head *ListNode) bool {
 		if head == nil {
 			return false
 		}
-		fmt.Println(head)
+		//fmt.Println(head)
 
 		head = head.Next
 	}
