@@ -1,0 +1,18 @@
+language: go
+
+go:
+- 1.11.x
+
+# whitelist
+branches:
+  only:
+  - master
+  - stable
+
+script:
+- go get -t -v ./...
+- go vet ./...
+- bash ./test.sh
+
+after_success:
+- bash <(curl -s https://codecov.io/bash)
