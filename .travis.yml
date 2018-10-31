@@ -7,11 +7,11 @@ go:
 branches:
   only:
   - master
-  - stable
+#  - stable
 
 script:
 - go get -t -v ./...
-- go vet ./...
+#- go vet ./...
 - bash ./test.sh
 
 after_success:
