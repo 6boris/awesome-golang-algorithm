@@ -1,10 +1,5 @@
 package Solution
 
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
-
 // 循环
 func swapPairs(head *ListNode) *ListNode {
 	preHead := &ListNode{Val: 0, Next: nil}

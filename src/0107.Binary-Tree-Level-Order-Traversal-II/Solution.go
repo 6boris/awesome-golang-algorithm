@@ -1,7 +1,5 @@
 package Solution
 
-import "container/list"
-
 type TreeNode struct {
 	Val   int
 	Left  *TreeNode
@@ -9,5 +7,9 @@ type TreeNode struct {
 }
 
 func levelOrderBottom(root *TreeNode) [][]int {
+	return [][]int{}
+}
 
+func Solution(x bool) bool {
+	return false
 }
