@@ -12,57 +12,57 @@ type Case struct {
 	expect bool
 }
 
-func TestSolution1(t *testing.T) {
-	//	测试用例
-	cases := []struct {
-		name   string
-		inputs *ListNode
-		expect bool
-	}{
-		{"TestCacse 1", getRandList(true, 1000), true},
-		{"TestCacse 2", getRandList(false, 1000), false},
-		{"TestCacse 3", getRandList(true, 100000), true},
-		//{"TestCacse 4", getRandList(false, 100000), false},
-	}
+//func TestSolution1(t *testing.T) {
+//	//	测试用例
+//	cases := []struct {
+//		name   string
+//		inputs *ListNode
+//		expect bool
+//	}{
+//		{"TestCacse 1", getRandList(true, 1000), true},
+//		{"TestCacse 2", getRandList(false, 1000), false},
+//		{"TestCacse 3", getRandList(true, 100000), true},
+//		//{"TestCacse 4", getRandList(false, 100000), false},
+//	}
+//
+//	//	开始测试
+//	for _, c := range cases {
+//		t.Run(c.name, func(t *testing.T) {
+//			ret := hasCycle1(c.inputs)
+//			if !reflect.DeepEqual(ret, c.expect) {
+//				t.Fatalf("expected: %v, but got: %v, with inputs: %v",
+//					c.expect, ret, c.inputs)
+//			}
+//		})
+//	}
+//
+//}
 
-	//	开始测试
-	for _, c := range cases {
-		t.Run(c.name, func(t *testing.T) {
-			ret := hasCycle1(c.inputs)
-			if !reflect.DeepEqual(ret, c.expect) {
-				t.Fatalf("expected: %v, but got: %v, with inputs: %v",
-					c.expect, ret, c.inputs)
-			}
-		})
-	}
-
-}
-
-func TestSolution2(t *testing.T) {
-	//	测试用例
-	cases := []struct {
-		name   string
-		inputs *ListNode
-		expect bool
-	}{
-		{"TestCacse 1", getRandList(false, 10), false},
-		//{"TestCacse 2", getRandList(false, 1000), false},
-		//{"TestCacse 3", getRandList(true, 100000), true},
-		//{"TestCacse 4", getRandList(false, 100000), false},
-	}
-
-	//	开始测试
-	for _, c := range cases {
-		t.Run(c.name, func(t *testing.T) {
-			ret := hasCycle2(c.inputs)
-			if !reflect.DeepEqual(ret, c.expect) {
-				t.Fatalf("expected: %v, but got: %v, with inputs: %v",
-					c.expect, ret, c.inputs)
-			}
-		})
-	}
-
-}
+//func TestSolution2(t *testing.T) {
+//	//	测试用例
+//	cases := []struct {
+//		name   string
+//		inputs *ListNode
+//		expect bool
+//	}{
+//		{"TestCacse 1", getRandList(false, 10), false},
+//		//{"TestCacse 2", getRandList(false, 1000), false},
+//		//{"TestCacse 3", getRandList(true, 100000), true},
+//		//{"TestCacse 4", getRandList(false, 100000), false},
+//	}
+//
+//	//	开始测试
+//	for _, c := range cases {
+//		t.Run(c.name, func(t *testing.T) {
+//			ret := hasCycle2(c.inputs)
+//			if !reflect.DeepEqual(ret, c.expect) {
+//				t.Fatalf("expected: %v, but got: %v, with inputs: %v",
+//					c.expect, ret, c.inputs)
+//			}
+//		})
+//	}
+//
+//}
 
 func BenchmarkSoution1(b *testing.B) {
 	//	测试用例
