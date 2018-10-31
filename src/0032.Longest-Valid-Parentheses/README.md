@@ -1,4 +1,4 @@
-# [31. Next Permutation][title]
+# [32.Longest Valid Parentheses   ][title]
 
 ## Description
 
@@ -28,7 +28,7 @@ Output: "10101"
 ## 题解
 
 ### 思路1
->  暴力全部扫描 时间复杂度可以飙到 O(N!),代码都不想写了
+>
 
 ```go
 
@@ -36,35 +36,9 @@ Output: "10101"
 
 ### 思路2
 > 官方解答
-<div align="center">
-    <img src="https://leetcode-cn.com/media/original_images/31/31_Next_Permutation.gif" alt="">
-</div>
+<
 
 ```go
-func nextPermutation(nums []int) {
-	i := len(nums) - 2
-
-	for i >= 0 && nums[i+1] <= nums[i] {
-		i--
-	}
-	if i >= 0 {
-		j := len(nums) - 1
-		for j >= 0 && nums[j] <= nums[i] {
-			j--
-		}
-		nums[i], nums[j] = nums[j], nums[i]
-	}
-	reverse(nums, i+1)
-}
-
-func reverse(nums []int, start int) {
-	i, j := start, len(nums)-1
-	for i < j {
-		nums[i], nums[j] = nums[j], nums[i]
-		i++
-		j--
-	}
-}
 
 ```
 

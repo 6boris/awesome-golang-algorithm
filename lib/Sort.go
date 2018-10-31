@@ -1,4 +1,4 @@
-package Sort
+package Solution
 
 import "math/rand"
 
