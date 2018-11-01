@@ -55,7 +55,38 @@ Output: true
 
 ```
 ### 思路2
+先将左括号对应的右括号押入栈中，枚举字符串中的数据，如果不是左括号，则直接判断元素是否和出栈元素相同。
+```go
+func isValid(s string) bool {
+    stack := make([]rune, len(s))
+    top := 0
 
+    for _, c := range s {
+        switch (c) {
+            case '(' :
+                stack[top] = ')'
+                top+=1
+                break
+            case '{' :
+                stack[top] = '}'
+                top+=1
+                break
+            case '[' :
+                stack[top] = ']'
+                top+=1
+                break
+            default:
+                if top == 0 || stack[top-1] != c {
+                    return false
+                }
+                top -=1
+                break
+        }
+    }
+
+    return top == 0
+}
+```
 
 ## 结语
 
