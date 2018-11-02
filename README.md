@@ -12,7 +12,7 @@ LeetCode of algorithms with golang solution(updating:smiley:).
         <img src="https://codecov.io/gh/kylesliu/awesome-golang-leetcode/branch/master/graph/badge.svg" />
     </a>
     <a href="https://goreportcard.com/report/github.com/kylesliu/awesome-golang-leetcode">
-        <img src="https://goreportcard.com/badge/github.com/kylesliu/awesome-golang-leetcode.svg" />
+        <img src="https://goreportcard.com/badge/github.com/kylesliu/awesome-golang-leetcode" />
     </a>
 </p>
 
