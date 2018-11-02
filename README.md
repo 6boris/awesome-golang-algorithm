@@ -2,19 +2,14 @@
 
 LeetCode of algorithms with golang solution(updating:smiley:).
 
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 <p align="center"><img src="https://xpnet-public.oss-cn-hangzhou.aliyuncs.com/leetcode/leetcode.png"></p>
 
 <p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
+<a href="https://www.travis-ci.org/kylesliu/awesome-golang-leetcode"><img src="https://www.travis-ci.org/kylesliu/awesome-golang-leetcode.svg?branch=master" alt="Build Status"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-<div align="center">
-    <img src="https://xpnet-public.oss-cn-hangzhou.aliyuncs.com/leetcode/leetcode.png" alt="">
-</div>
 
 
 | #    | Title            |   Solution     |   Acceptance   |    Difficulty  |  Tag          |
