@@ -2,7 +2,10 @@
 
 LeetCode of algorithms with golang solution(updating:smiley:).
 
-<p align="center"><img src="https://xpnet-public.oss-cn-hangzhou.aliyuncs.com/leetcode/leetcode.png"></p>
+<p align="center">
+    <img src="https://xpnet-public.oss-cn-hangzhou.aliyuncs.com/leetcode/Go-Logo_Aqua.png" style="width: 300px; height: 300px;">
+    <img src="https://xpnet-public.oss-cn-hangzhou.aliyuncs.com/leetcode/leetcode.png">
+</p>
 
 <p align="center">
     <a href="https://www.travis-ci.org/kylesliu/awesome-golang-leetcode">
