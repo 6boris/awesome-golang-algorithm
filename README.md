@@ -9,9 +9,11 @@ LeetCode of algorithms with golang solution(updating:smiley:).
         <img src="https://www.travis-ci.org/kylesliu/awesome-golang-leetcode.svg?branch=master" alt="Build Status">
     </a>
     <a href="https://codecov.io/gh/kylesliu/awesome-golang-leetcode">
-      <img src="https://codecov.io/gh/kylesliu/awesome-golang-leetcode/branch/master/graph/badge.svg" />
+        <img src="https://codecov.io/gh/kylesliu/awesome-golang-leetcode/branch/master/graph/badge.svg" />
     </a>
-    [![Go Report Card](https://goreportcard.com/badge/github.com/kylesliu/awesome-golang-leetcode)](https://goreportcard.com/report/github.com/kylesliu/awesome-golang-leetcode)
+    <a href="https://goreportcard.com/report/github.com/kylesliu/awesome-golang-leetcode">
+        <img src="https://goreportcard.com/badge/github.com/kylesliu/awesome-golang-leetcode.svg" />
+    </a>
 </p>
 
 
