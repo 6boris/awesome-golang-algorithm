@@ -5,9 +5,15 @@ LeetCode of algorithms with golang solution(updating:smiley:).
 <p align="center"><img src="https://xpnet-public.oss-cn-hangzhou.aliyuncs.com/leetcode/leetcode.png"></p>
 
 <p align="center">
-<a href="https://www.travis-ci.org/kylesliu/awesome-golang-leetcode"><img src="https://www.travis-ci.org/kylesliu/awesome-golang-leetcode.svg?branch=master" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
+    <a href="https://www.travis-ci.org/kylesliu/awesome-golang-leetcode">
+        <img src="https://www.travis-ci.org/kylesliu/awesome-golang-leetcode.svg?branch=master" alt="Build Status">
+    </a>
+    <a href="https://codecov.io/gh/kylesliu/awesome-golang-leetcode">
+      <img src="https://codecov.io/gh/kylesliu/awesome-golang-leetcode/branch/master/graph/badge.svg" />
+    </a>
+    <a href="https://packagist.org/packages/laravel/framework">
+        <img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version">
+    </a>
 </p>
 
 
