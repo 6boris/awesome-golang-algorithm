@@ -5,32 +5,28 @@ import (
 )
 
 func TestSolution(t *testing.T) {
-	stack := &MyQueue{
-		array: []int{12, 2, 3, 5, 6},
+	queue := &MyQueue{}
+	for ix := 0; ix < 5; ix++ {
+		queue.Push(ix)
 	}
-	cloned := &MyQueue{}
-	for ix := 1; ix < len(stack.array); ix++ {
-		cloned.array = append(cloned.array, stack.array[ix])
+	pv := queue.Peek()
+	if pv != 0 {
+		t.Fatalf("Peek: expected to be %v, but got %v", 0, pv)
 	}
-	t.Run("Peek Test", func(t *testing.T) {
-		pk := stack.Peek()
-		if pk != 12 {
-			t.Fatalf("expected: %v, but got: %v", 12, pk)
-		}
-	})
-
-	t.Run("Pop Test", func(t *testing.T) {
-		pk := stack.Pop()
-		// 值判断
-		if pk != 12 {
-			t.Fatalf("expected: %v, but got: %v", 12, pk)
-		}
-		// 校验队列
-		for ix := 0; ix < len(stack.array); ix++ {
-			if stack.array[ix] != cloned.array[ix] {
-				t.Fatalf("The sequence is somewhat errors")
-				break
-			}
-		}
-	})
+	pv = queue.Pop()
+	if pv != 0 {
+		t.Fatalf("Pop: expected to be %v, but got %v", 0, pv)
+	}
+	queue.Push(5)
+	pv = queue.Pop()
+	if pv != 1 {
+		t.Fatalf("Pop: expected to be %v, but got %v", 1, pv)
+	}
+	queue.Pop()
+	queue.Pop()
+	queue.Pop()
+	// queue.Pop()
+	if !queue.Empty() {
+		t.Fatalf("Empty: expected to be %v, but got %v", true, false)
+	}
 }

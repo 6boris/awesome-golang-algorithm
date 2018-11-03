@@ -8,46 +8,46 @@ func Constructor() MyQueue {
 	return MyQueue{}
 }
 
-func (stack *MyQueue) delet() int {
-	temp := stack.array[len(stack.array)-1]
-	stack.array = stack.array[:len(stack.array)-1]
+func (queue *MyQueue) delet() int {
+	temp := queue.array[len(queue.array)-1]
+	queue.array = queue.array[:len(queue.array)-1]
 	return temp
 }
 
-func (stack *MyQueue) Peek() int {
-	if len(stack.array) == 0 {
+func (queue *MyQueue) Peek() int {
+	if len(queue.array) == 0 {
 		return 0
 	}
 	copied := MyQueue{}
-	for len(stack.array) != 0 {
-		copied.array = append(copied.array, stack.delet())
+	for len(queue.array) != 0 {
+		copied.array = append(copied.array, queue.delet())
 	}
 	temp := copied.array[len(copied.array)-1]
 	for len(copied.array) != 0 {
-		stack.array = append(stack.array, copied.delet())
+		queue.array = append(queue.array, copied.delet())
 	}
 	return temp
 }
 
-func (stack *MyQueue) Push(val int) {
-	stack.array = append(stack.array, val)
+func (queue *MyQueue) Push(val int) {
+	queue.array = append(queue.array, val)
 }
 
-func (stack *MyQueue) Pop() int {
-	if len(stack.array) == 0 {
+func (queue *MyQueue) Pop() int {
+	if len(queue.array) == 0 {
 		return 0
 	}
 	copied := MyQueue{}
-	for len(stack.array) != 1 {
-		copied.array = append(copied.array, stack.delet())
+	for len(queue.array) != 1 {
+		copied.array = append(copied.array, queue.delet())
 	}
-	temp := stack.delet()
+	temp := queue.delet()
 	for len(copied.array) != 0 {
-		stack.array = append(stack.array, copied.delet())
+		queue.array = append(queue.array, copied.delet())
 	}
 	return temp
 }
 
-func (stack *MyQueue) Empty() bool {
-	return len(stack.array) == 0
+func (queue *MyQueue) Empty() bool {
+	return len(queue.array) == 0
 }

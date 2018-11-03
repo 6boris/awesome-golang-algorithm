@@ -1,4 +1,4 @@
-# [242. Implement Queue using Stacks][title]
+# [232. Implement Queue using Stacks][title]
 
 ## Description
 
@@ -12,7 +12,7 @@ peek() -- Get the front element.
 
 empty() -- Return whether the queue is empty.
 
-Example:
+**Example:**
 
 ```
 MyQueue queue = new MyQueue();
