@@ -2,10 +2,23 @@
 
 LeetCode of algorithms with golang solution(updating:smiley:).
 
+<p align="center">
+    <img src="https://github.com/kylesliu/awesome-golang-leetcode/blob/master/assets/images/Go-Logo_Aqua.png">
+    <img src="https://github.com/kylesliu/awesome-golang-leetcode/blob/master/assets/images/leetcode.png">
+</p>
 
-<div align="center">
-    <img src="https://xpnet-public.oss-cn-hangzhou.aliyuncs.com/leetcode/leetcode.png" alt="">
-</div>
+<p align="center">
+    <a href="https://www.travis-ci.org/kylesliu/awesome-golang-leetcode">
+        <img src="https://www.travis-ci.org/kylesliu/awesome-golang-leetcode.svg?branch=master" alt="Build Status">
+    </a>
+    <a href="https://codecov.io/gh/kylesliu/awesome-golang-leetcode">
+        <img src="https://codecov.io/gh/kylesliu/awesome-golang-leetcode/branch/master/graph/badge.svg" />
+    </a>
+    <a href="https://goreportcard.com/report/github.com/kylesliu/awesome-golang-leetcode">
+        <img src="https://goreportcard.com/badge/github.com/kylesliu/awesome-golang-leetcode" />
+    </a>
+</p>
+
 
 
 | #    | Title            |   Solution     |   Acceptance   |    Difficulty  |  Tag          |
