@@ -25,7 +25,7 @@ func TestSolution(t *testing.T) {
 	queue.Pop()
 	queue.Pop()
 	queue.Pop()
-	// queue.Pop()
+	queue.Pop()
 	if !queue.Empty() {
 		t.Fatalf("Empty: expected to be %v, but got %v", true, false)
 	}

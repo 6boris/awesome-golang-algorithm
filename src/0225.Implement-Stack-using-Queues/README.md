@@ -1,4 +1,4 @@
-# [025.Implement Stack using Queues][title]
+# [0225.Implement Stack using Queues][title]
 
 ## Description
 
@@ -54,5 +54,5 @@ type MyStack struct {
 
 如果你同我一样热爱数据结构、算法、LeetCode，可以关注我 GitHub 上的 LeetCode 题解：[awesome-golang-letcode][me]
 
-[title]: https://leetcode.com/problems/valid-anagram/description/
+[title]: https://leetcode.com/problems/implement-stack-using-queues/
 [me]: https://github.com/kylesliu/awesome-golang-leetcode

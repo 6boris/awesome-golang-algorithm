@@ -112,8 +112,14 @@ func InsertSort(arr []int) []int {
 ```
 
 ### 思路4
-> 利用分治分方法，借鉴了LeetCode某个大佬的分治解法，设计的非常精妙。
+> 利用分治分方法，借鉴了LeetCode某个大佬[@jinlibao][solution-jinlibao-url]的分治解法，设计的非常精妙。
 
+流程：
+- 1. 如果数组长度是奇数，找出与末尾数相等的总个数，个数大于n/2直接return;
+- 2. 去掉末尾数，两两比较相等则放入新数组;
+- 3. 递归调用，传入新数组;
+
+这个算法妙就妙在抓住了4个数中必然有3个数相同，两两比较相等只会留下1个数就是结果，所以只要用分治思路将数组分到4个长度就能得到结果。
 
 ```go
 func majorityElement(nums []int) int {
@@ -153,3 +159,4 @@ func majorityElement(nums []int) int {
 
 [title]: hthttps://leetcode.com/problems/majority-element/
 [me]: https://github.com/kylesliu/awesome-golang-leetcode
+[solution-jinlibao-url]:https://leetcode.com/problems/majority-element/discuss/177183/C++-Divide-and-conquer-O(N)-solution-(4-ms-beats-100)
