@@ -21,24 +21,19 @@ If you have figured out the O(*n*) solution, try coding another solution using t
 
 ## 题解
 ### 思路1
-在遍历数组时用 Stack 把数组中的数存起来，如果当前遍历的数比栈顶元素来的大，说明栈顶元素的下一个比它大的数就是当前元素。
+> 普通DP 找到公式就好了
+
 ```go
 func maxSubArray(nums []int) int {
-	dp := nums[0]
-	max := dp
+	dp, ans := make([]int, len(nums)), nums[0]
+	dp[0] = nums[0]
 
-	for i:=1; i<len(nums); i++ {
-		if dp >0 {
-			dp = nums[i] + dp
-		} else {
-			dp = nums[i]
-		}
-		if dp > max {
-			max = dp
-		}
+	for i := 1; i < len(nums); i++ {
+		dp[i] = Max(nums[i], nums[i]+dp[i-1])
+		ans = Max(ans, dp[i])
 	}
 
-	return max
+	return ans
 }
 ```
 ### 思路2
