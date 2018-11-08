@@ -9,18 +9,41 @@ func TestSolution(t *testing.T) {
 	//	测试用例
 	cases := []struct {
 		name   string
-		inputs bool
+		inputs []int
 		expect bool
 	}{
-		{"TestCacse 1", true, true},
-		{"TestCacse 1", true, true},
-		{"TestCacse 1", false, false},
+		{"TestCacse 1", []int{2, 3, 1, 1, 4}, true},
+		{"TestCacse 2", []int{3, 2, 1, 0, 4}, false},
+		{"TestCacse 2", []int{0, 2, 3}, false},
 	}
 
 	//	开始测试
 	for _, c := range cases {
 		t.Run(c.name, func(t *testing.T) {
-			ret := Solution(c.inputs)
+			ret := canJump(c.inputs)
+			if !reflect.DeepEqual(ret, c.expect) {
+				t.Fatalf("expected: %v, but got: %v, with inputs: %v",
+					c.expect, ret, c.inputs)
+			}
+		})
+	}
+}
+func TestSolution2(t *testing.T) {
+	//	测试用例
+	cases := []struct {
+		name   string
+		inputs []int
+		expect bool
+	}{
+		{"TestCacse 1", []int{2, 3, 1, 1, 4}, true},
+		{"TestCacse 2", []int{3, 2, 1, 0, 4}, false},
+		{"TestCacse 2", []int{0, 2, 3}, false},
+	}
+
+	//	开始测试
+	for _, c := range cases {
+		t.Run(c.name, func(t *testing.T) {
+			ret := canJump2(c.inputs)
 			if !reflect.DeepEqual(ret, c.expect) {
 				t.Fatalf("expected: %v, but got: %v, with inputs: %v",
 					c.expect, ret, c.inputs)

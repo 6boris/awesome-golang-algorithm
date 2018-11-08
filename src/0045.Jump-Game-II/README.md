@@ -2,42 +2,89 @@
 
 ## Description
 
-Given two binary strings, return their sum (also a binary string).
+Given an array of non-negative integers, you are initially positioned at the first index of the array.
 
-The input strings are both **non-empty** and contains only characters `1` or `0`.
+Each element in the array represents your maximum jump length at that position.
 
+Your goal is to reach the last index in the minimum number of jumps.
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: [2,3,1,1,4]
+Output: 2
+Explanation: The minimum number of jumps to reach the last index is 2.
+    Jump 1 step from index 0 to 1, then 3 steps to the last index.
 ```
 
-**Example 2:**
 
-```
-Input: a = "1010", b = "1011"
-Output: "10101"
-```
+> Note:You can assume that you can always reach the last index.
 
 **Tags:** Math, String
 
 ## 题意
->给你两个二进制串，求其和的二进制串。
-
+>给定一个非负整数数组，你最初位于数组的第一个位置。
+ 数组中的每个元素代表你在该位置可以跳跃的最大长度。
+ 你的目标是使用最少的跳跃次数到达数组的最后一个位置。
 ## 题解
 
 ### 思路1
-> 按照小学算数那么来做，用 `carry` 表示进位，从后往前算，依次往前，每算出一位就插入到最前面即可，直到把两个二进制串都遍历完即可。
+> DP 基本上会超时
 
 ```go
+func jump(nums []int) int {
+	n := len(nums)
+	if n < 1 {
+		return 0
+	}
 
+	dp := make([]int, n)
+	for i := 0; i < len(nums); i++ {
+		dp[i] = math.MaxInt32
+	}
+	dp[0] = 0
+
+	for i := 0; i < n-1; i++ {
+		for j := 1; j <= nums[i]; j++ {
+			if i+j < n {
+				dp[i+j] = Min(dp[i+j], dp[i]+1)
+			}
+		}
+	}
+	return dp[n-1]
+}
 ```
 
 ### 思路2
-> 思路2
-```go
+> 滑动窗口
 
+```go
+func jump(nums []int) int {
+	//特殊情况判断
+	if len(nums)==1{
+		return 0
+	}else if nums[0] >= len(nums){
+		return 1
+	}
+	left, right, res := 0, nums[0], 0
+	for right < len(nums)-1 {
+		max := 0
+		for i := left; i <= right; i++ {
+			//寻找最大跨度
+			if nums[i]-(right-i) >= max{
+				max = nums[i]-(right - i)
+			}
+		}
+		//窗口滑动右滑
+		left = right
+		right += max
+		res++
+	}
+	//判断最后一步是不是踏在最后一个格子。循环条件结束只能确定能到达边界，left指针才是每次跳的格子。
+	if left<len(nums)-1{
+		res++
+	}
+	return res
+}
 ```
 
 ## 结语

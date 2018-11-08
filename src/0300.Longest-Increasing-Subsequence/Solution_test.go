@@ -12,18 +12,16 @@ func TestSolution(t *testing.T) {
 		inputs []int
 		expect int
 	}{
-		{"TestCacse 1", []int{2, 3, 1, 1, 4}, 2},
-		{"TestCacse 1", []int{2}, 0},
-		{"TestCacse 1", []int{10, 3, 4}, 1},
+		{"TestCacse 1", []int{10, 9, 2, 5, 3, 7, 101, 18}, 4},
 	}
 
 	//	开始测试
 	for _, c := range cases {
 		t.Run(c.name, func(t *testing.T) {
-			ret := jump(c.inputs)
-			if !reflect.DeepEqual(ret, c.expect) {
+			got := lengthOfLIS(c.inputs)
+			if !reflect.DeepEqual(got, c.expect) {
 				t.Fatalf("expected: %v, but got: %v, with inputs: %v",
-					c.expect, ret, c.inputs)
+					c.expect, got, c.inputs)
 			}
 		})
 	}
@@ -36,18 +34,16 @@ func TestSolution2(t *testing.T) {
 		inputs []int
 		expect int
 	}{
-		{"TestCacse 1", []int{2, 3, 1, 1, 4}, 2},
-		{"TestCacse 1", []int{2}, 0},
-		{"TestCacse 1", []int{10, 3, 4}, 1},
+		{"TestCacse 1", []int{10, 9, 2, 5, 3, 7, 101, 18}, 4},
 	}
 
 	//	开始测试
 	for _, c := range cases {
 		t.Run(c.name, func(t *testing.T) {
-			ret := jump2(c.inputs)
-			if !reflect.DeepEqual(ret, c.expect) {
+			got := lengthOfLIS2(c.inputs)
+			if !reflect.DeepEqual(got, c.expect) {
 				t.Fatalf("expected: %v, but got: %v, with inputs: %v",
-					c.expect, ret, c.inputs)
+					c.expect, got, c.inputs)
 			}
 		})
 	}

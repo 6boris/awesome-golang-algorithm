@@ -1,37 +1,77 @@
-# [1. Add Sum][title]
+# [62. Unique Paths][title]
 
 ## Description
 
-Given two binary strings, return their sum (also a binary string).
+A robot is located at the top-left corner of a m x n grid (marked 'Start' in the diagram below).
 
-The input strings are both **non-empty** and contains only characters `1` or `0`.
+The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked 'Finish' in the diagram below).
+
+How many possible unique paths are there?
+<p align="center">
+    <img src="https://assets.leetcode.com/uploads/2018/10/22/robot_maze.png">
+</p>
+Above is a 7 x 3 grid. How many possible unique paths are there?
+> Note: m and n will be at most 100.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: m = 3, n = 2
+Output: 3
+Explanation:
+From the top-left corner, there are a total of 3 ways to reach the bottom-right corner:
+1. Right -> Right -> Down
+2. Right -> Down -> Right
+3. Down -> Right -> Right
 ```
 
 **Example 2:**
 
 ```
-Input: a = "1010", b = "1011"
-Output: "10101"
+Input: m = 7, n = 3
+Output: 28
 ```
 
 **Tags:** Math, String
 
 ## 题意
->给你两个二进制串，求其和的二进制串。
+>一个机器人位于一个 m x n 网格的左上角 （起始点在下图中标记为“Start” ）。
+
+ 机器人每次只能向下或者向右移动一步。机器人试图达到网格的右下角（在下图中标记为“Finish”）。
+
+ 问总共有多少条不同的路径？
 
 ## 题解
 
 ### 思路1
-> 按照小学算数那么来做，用 `carry` 表示进位，从后往前算，依次往前，每算出一位就插入到最前面即可，直到把两个二进制串都遍历完即可。
-
+> 利用DP和 Problem 64类似 状态转移方程：f[x][y] = f[x-1][y] + f[x][y-1]
 ```go
+func uniquePaths(m int, n int) int {
+	//	Init DP
+	dp := make([][]int, m)
+	for i := 0; i < m; i++ {
+		dp[i] = make([]int, n)
+	}
 
+	//	Calculate first row
+	for i := 0; i < n; i++ {
+		dp[0][i] = 1
+	}
+
+	//	Calculate first col
+	for i := 0; i < m; i++ {
+		dp[i][0] = 1
+	}
+
+	//	Calculate first other
+	for i := 1; i < m; i++ {
+		for j := 1; j < n; j++ {
+			dp[i][j] = dp[i-1][j] + dp[i][j-1]
+		}
+	}
+
+	return dp[m-1][n-1]
+}
 ```
 
 ### 思路2
@@ -44,5 +84,5 @@ Output: "10101"
 
 如果你同我一样热爱数据结构、算法、LeetCode，可以关注我 GitHub 上的 LeetCode 题解：[awesome-golang-leetcode][me]
 
-[title]: https://leetcode.com/problems/two-sum/description/
+[title]: https://leetcode.com/problems/unique-paths/
 [me]: https://github.com/kylesliu/awesome-golang-leetcode
