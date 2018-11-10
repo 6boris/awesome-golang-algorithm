@@ -1,0 +1,46 @@
+# [144. Binary Tree Preorder Traversal][title]
+
+## Description
+
+Given a binary tree, return the preorder traversal of its nodes' values.
+
+**Example 1:**
+
+```
+Input: [1,null,2,3]
+   1
+    \
+     2
+    /
+   3
+
+Output: [1,2,3]
+```
+Follow up: Recursive solution is trivial, could you do it iteratively?
+
+**Tags:** Tree
+
+## 题意
+> 
+
+## 题解
+
+### 思路1
+> 借助栈的方式，将二叉树的节点以右节点，左节点的方式入栈
+
+### 思路2
+> 使用top计数和数组存储数据，定义临时的数据接口
+```go
+type seqStack struct {
+	data [100]*Node
+	tag [100]int // 后续遍历准备
+	top int // 数组下标
+}
+```
+
+## 结语
+
+如果你同我一样热爱数据结构、算法、LeetCode，可以关注我 GitHub 上的 LeetCode 题解：[awesome-golang-leetcode][me]
+
+[title]: https://leetcode.com/problems/linked-list-cycle-ii/
+[me]: https://github.com/kylesliu/awesome-golang-leetcode
