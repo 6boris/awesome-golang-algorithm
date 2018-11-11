@@ -12,6 +12,7 @@ func postorderTraversal2(root *TreeNode) []int {
 	result := []int{}
 	if root != nil {
 		for root != nil || s.top != -1 {
+			// 左节点遍历到底
 			for root != nil {
 				s.top++
 				s.data = append(s.data, root)
@@ -19,22 +20,26 @@ func postorderTraversal2(root *TreeNode) []int {
 				root = root.Left
 			}
 
+			// 标记节点
 			if s.tag[s.top] == 0 {
 				root = s.data[s.top]
 				s.tag[s.top] = 1
 				root = root.Right
-			} else {
-				for s.tag[s.top] == 1 {
-					root = s.data[s.top]
-					s.data = s.data[:len(s.data)-1]
-					result = append(result, root.Val)
-					s.top--
-					if s.top < 0 {
-						break
-					}
-				}
-				root = nil
+				continue
 			}
+
+			// 获取标记的节点
+			for s.tag[s.top] == 1 {
+				root = s.data[s.top]
+				s.data = s.data[:len(s.data)-1]
+				result = append(result, root.Val)
+				s.top--
+				if s.top < 0 {
+					break
+				}
+			}
+
+			root = nil
 		}
 	}
 	return result
