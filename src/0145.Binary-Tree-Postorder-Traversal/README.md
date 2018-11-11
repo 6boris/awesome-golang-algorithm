@@ -21,7 +21,7 @@ Follow up: Recursive solution is trivial, could you do it iteratively?
 **Tags:** Tree Stack
 
 ## 题意
-> 
+>
 
 ## 题解
 
@@ -29,11 +29,11 @@ Follow up: Recursive solution is trivial, could you do it iteratively?
 > 使用两个栈，实现数据顺序处理，代码直接引用`leetcode`
 
 ### 思路2
-> 使用top计数和数组存储数据，定义临时的数据接口
+> 使用top计数和切片存储数据，定义临时的数据接口
 ```go
 type seqStack struct {
-	data [100]*Node
-	tag [100]int // 后续遍历准备
+	data []*Node
+	tag []int // 后续遍历准备
 	top int // 数组下标
 }
 ```

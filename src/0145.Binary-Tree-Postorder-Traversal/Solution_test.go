@@ -15,8 +15,9 @@ func TestSolution(t *testing.T) {
 	nodeA := TreeNode{Val: 7, Left: &nodeB, Right: &nodeC}
 
 	result := postorderTraversal(&nodeA)
+	result2 := postorderTraversal2(&nodeA)
 	expected := []int{3, 4, 1, 2, 6, 5, 7}
-	if !reflect.DeepEqual(result, expected) {
+	if !reflect.DeepEqual(result, expected) && !reflect.DeepEqual(result2, expected) {
 		t.Fatalf("expected: %v, but got: %v",
 			expected, result)
 	}
