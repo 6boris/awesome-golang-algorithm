@@ -1,43 +1,74 @@
-# [1. Add Sum][title]
+# [1. Binary Tree Inorder Traversal][title]
 
 ## Description
 
-Given two binary strings, return their sum (also a binary string).
+Given a binary tree, return the inorder traversal of its nodes' values.
 
-The input strings are both **non-empty** and contains only characters `1` or `0`.
+**Example:**
 
-**Example 1:**
+Input: [1,null,2,3]
+   1
+    \
+     2
+    /
+   3
 
-```
-Input: a = "11", b = "1"
-Output: "100"
-```
+Output: [1,3,2]
 
-**Example 2:**
-
-```
-Input: a = "1010", b = "1011"
-Output: "10101"
-```
-
-**Tags:** Math, String
+**Tags:** Tree
 
 ## 题意
->给你两个二进制串，求其和的二进制串。
+> 中序遍历
 
 ## 题解
 
 ### 思路1
-> 按照小学算数那么来做，用 `carry` 表示进位，从后往前算，依次往前，每算出一位就插入到最前面即可，直到把两个二进制串都遍历完即可。
+> 直接使用递归的方式
 
 ```go
+func inorderTraversal(root *TreeNode) []int {
+	x := []int{}
+	if root != nil {
+    // 在这里前序
+    x = append(x, root.Val)
+		x = append(x, inorderTraversal(root.Left)...)
+		x = append(x, inorderTraversal(root.Right)...)
+	}
+	return x
+}
+
+func inorderTraversal(root *TreeNode) []int {
+	x := []int{}
+	if root != nil {
+		x = append(x, inorderTraversal(root.Left)...)
+    // 在这里中序
+    x = append(x, root.Val)
+		x = append(x, inorderTraversal(root.Right)...)
+	}
+	return x
+}
+
+func inorderTraversal(root *TreeNode) []int {
+	x := []int{}
+	if root != nil {
+		x = append(x, inorderTraversal(root.Left)...)
+    x = append(x, inorderTraversal(root.Right)...)
+    // 在这里后序
+    x = append(x, root.Val)
+	}
+	return x
+}
 
 ```
 
 ### 思路2
-> 思路2
+> 使用top计数和数组存储数据，定义临时的数据接口
 ```go
-
+type seqStack struct {
+	data [100]*Node
+	tag [100]int // 后续遍历准备
+	top int // 数组下标
+}
 ```
 
 ## 结语
