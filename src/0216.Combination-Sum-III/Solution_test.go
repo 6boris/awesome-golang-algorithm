@@ -13,19 +13,19 @@ func TestSolution(t *testing.T) {
 		expect [][]int
 	}{
 		{"TestCacse 1",
-			[][]int{{2, 3, 6, 7}, {7}},
-			[][]int{{7}, {2, 2, 3}},
+			[][]int{{3}, {7}},
+			[][]int{{1, 2, 4}},
 		},
 		{"TestCacse 2",
-			[][]int{{2, 3, 5}, {8}},
-			[][]int{{2, 2, 2, 2}, {2, 3, 3}, {3, 5}},
+			[][]int{{3}, {9}},
+			[][]int{{1, 2, 6}, {1, 3, 5}, {2, 3, 4}},
 		},
 	}
 
 	//	开始测试
 	for _, c := range cases {
 		t.Run(c.name, func(t *testing.T) {
-			got := combinationSum(c.inputs[0], c.inputs[1][0])
+			got := combinationSum3(c.inputs[0][0], c.inputs[1][0])
 
 			if !IsEuqual(got, c.expect) {
 				t.Fatalf("expected: %v, but got: %v, with inputs: %v",
