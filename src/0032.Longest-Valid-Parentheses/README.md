@@ -2,49 +2,93 @@
 
 ## Description
 
-Given two binary strings, return their sum (also a binary string).
-
-The input strings are both **non-empty** and contains only characters `1` or `0`.
+Given a string containing just the characters '(' and ')', find the length of the longest valid (well-formed) parentheses substring.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: "(()"
+Output: 2
+Explanation: The longest valid parentheses substring is "()"
 ```
 
 **Example 2:**
 
 ```
-Input: a = "1010", b = "1011"
-Output: "10101"
+Input: ")()())"
+Output: 4
+Explanation: The longest valid parentheses substring is "()()"
 ```
 
 **Tags:** Math, String
 
 ## 题意
->判断下一个是否有满足要求的排列
+>给定一个只包含 '(' 和 ')' 的字符串，找出最长的包含有效括号的子串的长度。
 
 ## 题解
 
 ### 思路1
->
+> DP【官方解法】，哈哈，反正这个DP我是推不出来的
 
 ```go
+//	动态规划
+func longestValidParentheses(s string) int {
+	maxans := 0
+	dp := make([]int, len(s))
+
+	for i := 1; i < len(s); i++ {
+		if s[i] == ')' {
+			if s[i-1] == '(' {
+				if i >= 2 {
+					dp[i] = dp[i-2] + 2
+				} else {
+					dp[i] = 2
+				}
+			} else if i-dp[i-1] > 0 && s[i-dp[i-1]-1] == '(' {
+				if i-dp[i-1] >= 2 {
+					dp[i] = dp[i-1] + dp[i-dp[i-1]-2] + 2
+				} else {
+					dp[i] = dp[i-1] + 2
+				}
+			}
+		}
+		maxans = Max(maxans, dp[i])
+	}
+	return maxans
+}
 
 ```
 
 ### 思路2
-> 官方解答
-<
+> Stack
 
 ```go
+//	Stack
+func longestValidParentheses2(s string) int {
+	maxans := 0
+	stk := Stack{}
 
+	stk.Push(-1)
+
+	for i := 0; i < len(s); i++ {
+		if s[i] == '(' {
+			stk.Push(i)
+		} else {
+			stk.Pop()
+			if stk.IsEmpty() {
+				stk.Push(i)
+			} else {
+				maxans = Max(maxans, i-stk.Top().(int))
+			}
+		}
+	}
+	return maxans
+}
 ```
 
 ## 结语
 
 如果你同我一样热爱数据结构、算法、LeetCode，可以关注我 GitHub 上的 LeetCode 题解：[awesome-golang-leetcode][me]
 
-[title]: https://leetcode.com/problems/next-permutation/
+[title]: https://leetcode.com/problems/longest-valid-parentheses/
 [me]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0031.Next-Permutation

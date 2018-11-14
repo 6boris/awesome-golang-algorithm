@@ -2,22 +2,27 @@
 
 ## Description
 
-Given two binary strings, return their sum (also a binary string).
+Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
 
-The input strings are both **non-empty** and contains only characters `1` or `0`.
+(i.e., [0,1,2,4,5,6,7] might become [4,5,6,7,0,1,2]).
 
+You are given a target value to search. If found in the array return its index, otherwise return -1.
+
+You may assume no duplicate exists in the array.
+
+Your algorithm's runtime complexity must be in the order of O(log n).
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: nums = [4,5,6,7,0,1,2], target = 0
+Output: 4
 ```
 
 **Example 2:**
 
 ```
-Input: a = "1010", b = "1011"
-Output: "10101"
+Input: nums = [4,5,6,7,0,1,2], target = 3
+Output: -1
 ```
 
 **Tags:** Math, String
@@ -28,7 +33,7 @@ Output: "10101"
 ## 题解
 
 ### 思路1
-> 按照小学算数那么来做，用 `carry` 表示进位，从后往前算，依次往前，每算出一位就插入到最前面即可，直到把两个二进制串都遍历完即可。
+> 数组中寻找一个数，二分查找是最方便的
 
 ```go
 func search(nums []int, target int) int {

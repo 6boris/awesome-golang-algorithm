@@ -12,14 +12,17 @@ func TestSolution(t *testing.T) {
 		inputs [][]int
 		expect int
 	}{
-		{"TestCacse 1", [][]int{{4, 5, 6, 7, 0, 1, 2}, {0}}, 4},
-		{"TestCacse 1", [][]int{{4, 5, 6, 7, 0, 1, 2}, {3}}, -1},
+		{"TestCacse 1",
+			[][]int{{1, 2, 3}, {4}},
+			7,
+		},
 	}
 
 	//	开始测试
 	for _, c := range cases {
 		t.Run(c.name, func(t *testing.T) {
-			got := search(c.inputs[0], c.inputs[1][0])
+			got := combinationSum4(c.inputs[0], c.inputs[1][0])
+
 			if !reflect.DeepEqual(got, c.expect) {
 				t.Fatalf("expected: %v, but got: %v, with inputs: %v",
 					c.expect, got, c.inputs)

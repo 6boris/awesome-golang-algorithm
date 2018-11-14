@@ -2,41 +2,91 @@
 
 ## Description
 
-Given two binary strings, return their sum (also a binary string).
+Given an array of integers nums sorted in ascending order, find the starting and ending position of a given target value.
 
-The input strings are both **non-empty** and contains only characters `1` or `0`.
+Your algorithm's runtime complexity must be in the order of O(log n).
+
+If the target is not found in the array, return [-1, -1].
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: nums = [5,7,7,8,8,10], target = 8
+Output: [3,4]
 ```
 
 **Example 2:**
 
 ```
-Input: a = "1010", b = "1011"
-Output: "10101"
+Input: nums = [5,7,7,8,8,10], target = 6
+Output: [-1,-1]
 ```
 
 **Tags:** Math, String
 
 ## 题意
->给你两个二进制串，求其和的二进制串。
-
+>给定一个按照升序排列的整数数组 nums，和一个目标值 target。找出给定目标值在数组中的开始位置和结束位置
+你的算法时间复杂度必须是 O(log n) 级别。
+如果数组中不存在目标值，返回 [-1, -1]。
 ## 题解
 
 ### 思路1
-> 按照小学算数那么来做，用 `carry` 表示进位，从后往前算，依次往前，每算出一位就插入到最前面即可，直到把两个二进制串都遍历完即可。
+>直线查找
 
 ```go
+unc searchRange(nums []int, target int) []int {
+	targetRange := []int{-1, -1}
 
+	for i := 0; i < len(nums); i++ {
+		if nums[i] == target {
+			targetRange[0] = i
+			break
+		}
+	}
+	if targetRange[0] == -1 {
+		return targetRange
+	}
+
+	for j := len(nums) - 1; j >= 0; j-- {
+		if nums[j] == target {
+			targetRange[1] = j
+			break
+		}
+	}
+	return targetRange
+}
 ```
 
 ### 思路2
-> 思路2
+> 二分查找
 ```go
+func searchRange2(nums []int, target int) []int {
+	targetRange := []int{-1, -1}
+	leftIndex := extremeInsertionIndex(nums, target, true)
+
+	if leftIndex == len(nums) || nums[leftIndex] != target {
+		return targetRange
+	}
+
+	targetRange[0] = leftIndex
+	targetRange[1] = extremeInsertionIndex(nums, target, false) - 1
+
+	return targetRange
+
+}
+func extremeInsertionIndex(nums []int, target int, left bool) int {
+	lo := 0
+	hi := len(nums)
+	for lo < hi {
+		mid := (lo + hi) / 2
+		if nums[mid] > target || left && target == nums[mid] {
+			hi = mid
+		} else {
+			lo = mid + 1
+		}
+	}
+	return lo
+}
 
 ```
 

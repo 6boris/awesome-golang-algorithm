@@ -2,29 +2,43 @@
 
 ## Description
 
-Given two binary strings, return their sum (also a binary string).
+Given a collection of candidate numbers (candidates) and a target number (target), find all unique combinations in candidates where the candidate numbers sums to target.
 
-The input strings are both **non-empty** and contains only characters `1` or `0`.
+Each number in candidates may only be used once in the combination.
+
+Note:
+- All numbers (including target) will be positive integers.
+- The solution set must not contain duplicate combinations.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: candidates = [10,1,2,7,6,1,5], target = 8,
+A solution set is:
+[
+  [1, 7],
+  [1, 2, 5],
+  [2, 6],
+  [1, 1, 6]
+]
 ```
 
 **Example 2:**
 
 ```
-Input: a = "1010", b = "1011"
-Output: "10101"
+Input: candidates = [2,5,2,1,2], target = 5,
+A solution set is:
+[
+  [1,2,2],
+  [5]
+]
 ```
 
 **Tags:** Math, String
 
 ## 题意
->给你两个二进制串，求其和的二进制串。
-
+>给定一个数组 candidates 和一个目标数 target ，找出 candidates 中所有可以使数字和为 target 的组合。
+ candidates 中的每个数字在每个组合中只能使用一次。
 ## 题解
 
 ### 思路1
