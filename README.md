@@ -53,19 +53,19 @@ LeetCode of algorithms with golang solution(updating:smiley:).
 | 28   | [Implement strStr][0028-url]  | [Golang][0028-golang] | 34.7%  |:purple_heart: | :eyes:|
 | 29   | [Divide Two Integers ][0029-url]  | [Golang][0029-golang] | 34.7%  |:purple_heart::purple_heart: | :eyes:|
 | 30   | [Substring with Concatenation of All Words ][0030-url]  | [Golang][0030-golang] | 34.7%  |:purple_heart: :purple_heart::purple_heart:| :eyes:|
-| 31   | [Next Permutation ][0028-url]  | [Golang][0031-golang] | 29.4%  |:purple_heart: :purple_heart:| :eyes:|
-| 32   | [Longest Valid Parentheses ][0028-url]  | [Golang][0032-golang] | 	24.2%  |:purple_heart: :purple_heart::purple_heart:| :eyes:|
-| 33   | [Search in Rotated Sorted Array ][0028-url]  | [Golang][0033-golang] | 32.2%  |:purple_heart::purple_heart: | :eyes:|
+| 31   | [Next Permutation ][0031-url]  | [Golang][0031-golang] | 29.4%  |:purple_heart: :purple_heart:| :eyes:|
+| 32   | [Longest Valid Parentheses ][0032-url]  | [Golang][0032-golang] | 	24.2%  |:purple_heart: :purple_heart::purple_heart:| :eyes:|
+| 33   | [Search in Rotated Sorted Array ][0033-url]  | [Golang][0033-golang] | 32.2%  |:purple_heart::purple_heart: | :eyes:|
 | 34   | [Find First and Last Position of Element in Sorted Array ][0034-url]  | [Golang][0034-golang] | 32.3% |:purple_heart::purple_heart: | :eyes:|
-| 35   | [Search Insert Position][0028-url]  | [Golang][0035-golang] | 	40.0%  |:purple_heart: | :eyes:|
-| 36   | [Valid Sudoku ][0028-url]  | [Golang][0036-golang] | 40.2%  |:purple_heart: :purple_heart:| :eyes:|
-| 37   | [Sudoku Solver  ][0028-url]  | [Golang][0037-golang] | 34.2%  |:purple_heart: :purple_heart:| :eyes:|
-| 38   | [Count and Say][0028-url]  | [Golang][0038-golang] | 38.3%  |:purple_heart::purple_heart: | :eyes:|
-| 39   | [Combination Sum ][0028-url]  | [Golang][0039-golang] | 44.6% |:purple_heart: :purple_heart:| :eyes:|
-| 40   | [Combination Sum II ][0028-url]  | [Golang][0040-golang] | 38.6%  |:purple_heart: :purple_heart:| :eyes:|
-| 141  | [Linked List Cycle ][0020-url]  | [Golang][0141-golang] | 34.6%  |:purple_heart: | :eyes:|
-| 142  | [Linked List Cycle II ][0020-url]  | [Golang][0142-golang] | 	29.9% |:purple_heart: | :eyes:|
-| 206  | [Reverse Linked List ][0020-url]  | [Golang][0206-golang] | 50.0%  |:purple_heart: | :eyes:|
+| 35   | [Search Insert Position][0035-url]  | [Golang][0035-golang] | 	40.0%  |:purple_heart: | :eyes:|
+| 36   | [Valid Sudoku ][0036-url]  | [Golang][0036-golang] | 40.2%  |:purple_heart: :purple_heart:| :eyes:|
+| 37   | [Sudoku Solver  ][0037-url]  | [Golang][0037-golang] | 34.2%  |:purple_heart: :purple_heart:| :eyes:|
+| 38   | [Count and Say][0038-url]  | [Golang][0038-golang] | 38.3%  |:purple_heart::purple_heart: | :eyes:|
+| 39   | [Combination Sum ][0039-url]  | [Golang][0039-golang] | 44.6% |:purple_heart: :purple_heart:| :eyes:|
+| 40   | [Combination Sum II ][0040-url]  | [Golang][0040-golang] | 38.6%  |:purple_heart: :purple_heart:| :eyes:|
+| 141  | [Linked List Cycle ][0141-url]  | [Golang][0141-golang] | 34.6%  |:purple_heart: | :eyes:|
+| 142  | [Linked List Cycle II ][0142-url]  | [Golang][0142-golang] | 	29.9% |:purple_heart: | :eyes:|
+| 206  | [Reverse Linked List ][0206-url]  | [Golang][0206-golang] | 50.0%  |:purple_heart: | :eyes:|
 
 
 
