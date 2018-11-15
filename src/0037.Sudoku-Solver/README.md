@@ -2,28 +2,33 @@
 
 ## Description
 
-Given two binary strings, return their sum (also a binary string).
+Write a program to solve a Sudoku puzzle by filling the empty cells.
 
-The input strings are both **non-empty** and contains only characters `1` or `0`.
+A sudoku solution must satisfy all of the following rules:
 
-**Example 1:**
+Each of the digits 1-9 must occur exactly once in each row.
+Each of the digits 1-9 must occur exactly once in each column.
+Each of the the digits 1-9 must occur exactly once in each of the 9 3x3 sub-boxes of the grid.
+Empty cells are indicated by the character '.'.
 
-```
-Input: a = "11", b = "1"
-Output: "100"
-```
 
-**Example 2:**
+<p align="center">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Sudoku-by-L2G-20050714.svg/250px-Sudoku-by-L2G-20050714.svg.png">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Sudoku-by-L2G-20050714_solution.svg/250px-Sudoku-by-L2G-20050714_solution.svg.png">
+</p>
 
-```
-Input: a = "1010", b = "1011"
-Output: "10101"
-```
 
 **Tags:** Math, String
 
 ## 题意
->给你两个二进制串，求其和的二进制串。
+>编写一个程序，通过已填充的空格来解决数独问题。
+
+ 一个数独的解法需遵循如下规则：
+
+ 数字 1-9 在每一行只能出现一次。
+ 数字 1-9 在每一列只能出现一次。
+ 数字 1-9 在每一个以粗实线分隔的 3x3 宫内只能出现一次。
+ 空白格用 '.' 表示。
 
 ## 题解
 
