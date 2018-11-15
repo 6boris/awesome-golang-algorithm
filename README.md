@@ -53,6 +53,16 @@ LeetCode of algorithms with golang solution(updating:smiley:).
 | 28   | [Implement strStr][0028-url]  | [Golang][0028-golang] | 34.7%  |:purple_heart: | :eyes:|
 | 29   | [Divide Two Integers ][0029-url]  | [Golang][0029-golang] | 34.7%  |:purple_heart::purple_heart: | :eyes:|
 | 30   | [Substring with Concatenation of All Words ][0030-url]  | [Golang][0030-golang] | 34.7%  |:purple_heart: :purple_heart::purple_heart:| :eyes:|
+| 31   | [Next Permutation ][0028-url]  | [Golang][0031-golang] | 29.4%  |:purple_heart: :purple_heart:| :eyes:|
+| 32   | [Longest Valid Parentheses ][0028-url]  | [Golang][0032-golang] | 	24.2%  |:purple_heart: :purple_heart::purple_heart:| :eyes:|
+| 33   | [Search in Rotated Sorted Array ][0028-url]  | [Golang][0033-golang] | 32.2%  |:purple_heart::purple_heart: | :eyes:|
+| 34   | [Find First and Last Position of Element in Sorted Array ][0034-url]  | [Golang][0034-golang] | 32.3% |:purple_heart::purple_heart: | :eyes:|
+| 35   | [Search Insert Position][0028-url]  | [Golang][0035-golang] | 	40.0%  |:purple_heart: | :eyes:|
+| 36   | [Valid Sudoku ][0028-url]  | [Golang][0036-golang] | 40.2%  |:purple_heart: :purple_heart:| :eyes:|
+| 37   | [Sudoku Solver  ][0028-url]  | [Golang][0037-golang] | 34.2%  |:purple_heart: :purple_heart:| :eyes:|
+| 38   | [Count and Say][0028-url]  | [Golang][0038-golang] | 38.3%  |:purple_heart::purple_heart: | :eyes:|
+| 39   | [Combination Sum ][0028-url]  | [Golang][0039-golang] | 44.6% |:purple_heart: :purple_heart:| :eyes:|
+| 40   | [Combination Sum II ][0028-url]  | [Golang][0040-golang] | 38.6%  |:purple_heart: :purple_heart:| :eyes:|
 | 141  | [Linked List Cycle ][0020-url]  | [Golang][0141-golang] | 34.6%  |:purple_heart: | :eyes:|
 | 142  | [Linked List Cycle II ][0020-url]  | [Golang][0142-golang] | 	29.9% |:purple_heart: | :eyes:|
 | 206  | [Reverse Linked List ][0020-url]  | [Golang][0206-golang] | 50.0%  |:purple_heart: | :eyes:|
@@ -151,6 +161,36 @@ LeetCode of algorithms with golang solution(updating:smiley:).
 
 [0030-url]: https://leetcode.com/problems/substring-with-concatenation-of-all-words/description/
 [0030-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0030.Substring-with-Concatenation-of-All-Words
+
+[0031-url]: https://leetcode.com/problems/next-permutation
+[0031-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0031.Next-Permutation
+
+[0032-url]: https://leetcode.com/problems/longest-valid-parentheses
+[0032-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0032.Longest-Valid-Parentheses
+
+[0033-url]: https://leetcode.com/problems/search-in-rotated-sorted-array
+[0033-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0033.Search-in-Rotated-Sorted-Array
+
+[0034-url]: https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array
+[0034-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0034.Find-First-and-Last-Position-of-Element-in-Sorted-Array
+
+[0035-url]: https://leetcode.com/problems/search-insert-position
+[0035-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0035.Search-Insert-Position
+
+[0036-url]: https://leetcode.com/problems/valid-sudoku
+[0036-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0036.Valid-Sudoku
+
+[0037-url]: https://leetcode.com/problems/sudoku-solver
+[0037-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0037.Sudoku-Solver
+
+[0038-url]: https://leetcode.com/problems/count-and-say
+[0038-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0038.Count-and-Say
+
+[0039-url]: https://leetcode.com/problems/combination-sum
+[0039-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0039.Combination-Sum
+
+[0040-url]: https://leetcode.com/problems/combination-sum-ii
+[0040-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0040.Combination-Sum-II
 
 [0141-url]: https://leetcode.com/problems/linked-list-cycle/
 [0141-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0141.Linked-List-Cycle
