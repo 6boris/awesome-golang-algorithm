@@ -35,6 +35,7 @@ func TwoSum3(nums []int, target int) []int {
 	if nums == nil || len(nums) < 2 {
 		return []int{-1, -1}
 	}
+
 	res := []int{-1, -1}
 
 	//	MAP的KEY表示值，MAP的VAL表示nums的下标
