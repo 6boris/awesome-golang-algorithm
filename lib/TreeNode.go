@@ -1,11 +1,35 @@
 package Solution
 
-import "strconv"
+import (
+	"fmt"
+	"strconv"
+)
 
 type TreeNode struct {
 	Val   int
 	Left  *TreeNode
 	Right *TreeNode
+}
+
+func GenTree(x []int) *TreeNode {
+	index := 0
+	return GenTreeHelp(x, &index)
+}
+
+func GenTreeHelp(x []int, index *int) *TreeNode {
+	if len(x) == *index {
+		return nil
+	}
+	fmt.Println(x, x[*index])
+	if x[*index] == -1 {
+		*index = *index + 1
+		return nil
+	}
+	//fmt.Print(*index, x[*index])
+	(*index) = *index + 1
+	node := &TreeNode{Val: x[*index]}
+	node.Left = GenTreeHelp(x, index)
+	return node
 }
 
 //	序列化

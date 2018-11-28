@@ -1,5 +1,5 @@
-package solution
+package Solution
 
-func solution(x bool) bool {
+func Solution(x bool) bool {
 	return x
 }
