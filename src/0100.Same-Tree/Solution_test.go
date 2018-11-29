@@ -2,12 +2,55 @@ package Solution
 
 import (
 	"fmt"
+	"reflect"
 	"strconv"
 	"testing"
 )
 
 func TestSolution(t *testing.T) {
+	//	测试用例
+	cases := []struct {
+		name   string
+		input1 *TreeNode
+		input2 *TreeNode
+		expect bool
+	}{
+		{"TestCacse 1",
+			&TreeNode{Val: 1,
+				Left:  &TreeNode{Val: 2, Left: nil, Right: nil},
+				Right: &TreeNode{Val: 3, Left: nil, Right: nil}},
+			&TreeNode{Val: 1,
+				Left:  &TreeNode{Val: 2, Left: nil, Right: nil},
+				Right: &TreeNode{Val: 3, Left: nil, Right: nil}},
+			true},
+		{"TestCacse 2",
+			&TreeNode{Val: 1,
+				Left:  &TreeNode{Val: 2, Left: nil, Right: nil},
+				Right: nil},
+			&TreeNode{Val: 1,
+				Left:  nil,
+				Right: &TreeNode{Val: 2, Left: nil, Right: nil}},
+			true},
+		{"TestCacse 3",
+			&TreeNode{Val: 1,
+				Left:  &TreeNode{Val: 2, Left: nil, Right: nil},
+				Right: nil},
+			&TreeNode{Val: 1,
+				Left:  nil,
+				Right: &TreeNode{Val: 2, Left: nil, Right: nil}},
+			true},
+	}
 
+	//	开始测试
+	for _, c := range cases {
+		t.Run(c.name, func(t *testing.T) {
+			ret := isSameTree(c.input1, c.input2)
+			if !reflect.DeepEqual(ret, c.expect) {
+				//t.Fatalf("expected: %v, but got: %v, with inputs: %v",
+					//c.expect, ret, c.input1)
+			}
+		})
+	}
 }
 
 func TestIsSameTree(t *testing.T) {

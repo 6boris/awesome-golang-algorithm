@@ -1,9 +1,13 @@
 package Solution
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
 
 func TestQueue_Swap(t *testing.T) {
-	//que := Queue{}
-	//que.Push(ListNode{Val: 1})
+	que := Queue{}
+	que.Push(&ListNode{Val: 1})
+	fmt.Println(que.Pop().(*ListNode).Val)
 
 }
