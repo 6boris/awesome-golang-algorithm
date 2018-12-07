@@ -85,7 +85,7 @@ LeetCode of algorithms with golang solution(updating:smiley:).
 [0004-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0001.Two-Sum
 
 [0005-url]: https://leetcode.com/problems/longest-palindromic-substring
-[0005-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0001.Two-Sum
+[0005-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0005.Longest-Palindromic-Substring
 
 [0006-url]: https://leetcode.com/problems/zigzag-conversion
 [0006-golang]: https://github.com/kylesliu/awesome-golang-leetcode/tree/master/src/0006.ZigZag-Conversion
