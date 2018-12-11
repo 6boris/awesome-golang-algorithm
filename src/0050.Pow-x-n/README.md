@@ -39,34 +39,58 @@ Explanation: 2^-2 = 1/2^2 = 1/4 = 0.25
 ## 题解
 
 ### 思路1
-> 如果直接计算肯定会超时，那么我们可以想到可以使用二分法来降低时间复杂度。
+
+```go
+    X^27
+    = X * X ^26
+    = X * (X^2)^13
+    = X * (X^2) * (X^2)^12
+    = X * (X^2) * (X^4)^6
+    = X * (X^2) * (X^8)^3
+    = X * (X^2) * (X^8) * (X^8)^2
+    = X * (X^2) * (X^8) * (X^16)
+    3.n:    偶 y = x ^ n/2  ans = y * y
+            奇 y = x ^ n/2  ans = y * y * x
+```
+> 利用递归或者分治的方法求解
 
 ```go
 func myPow(x float64, n int) float64 {
-	if n < 0 {
-		return 1.0 / pow(x, -n)
-	}
-	return pow(x, n)
-}
-
-func pow(x float64, n int) float64 {
-	if x == 0 {
-		return 0
-	}
+	//	判断递归结束
 	if n == 0 {
 		return 1
 	}
-	ans := pow(x, n>>1)
-	if n&1 == 0 {
-		return ans * ans
+	//	负数:直接求导
+	if n < 0 {
+		return 1 / myPow(x, -n)
 	}
-	return ans * ans * x
+	//	奇数
+	if n%2 == 1 {
+		return x * myPow(x, n-1)
+	}
+	//	偶数
+	return myPow(x*x, n/2)
 }
 ```
 
 ### 思路2
 > 思路2
 ```go
+func myPow2(x float64, n int) float64 {
+	if n < 0 {
+		x = 1 / x
+		n = -n
+	}
+	pow := 1.0
+	for n != 0 {
+		if n&1 != 0 {
+			pow *= x
+		}
+		x *= x
+		n >>= 1
+	}
+	return pow
+}
 
 ```
 
