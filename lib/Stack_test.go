@@ -18,4 +18,8 @@ func TestNewStack(t *testing.T) {
 	fmt.Println(stk.Pop())
 	fmt.Println(stk.Pop())
 	fmt.Println(stk.Empty())
+
+	for !stk.Empty() {
+		fmt.Println(stk.Pop())
+	}
 }

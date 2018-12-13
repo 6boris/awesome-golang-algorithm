@@ -7,12 +7,12 @@ func (q Queue) Len() int {
 }
 
 func (q Queue) Less(i, j int) bool {
-	if q[i] == nil {
-		return false
-	}
-	if q[j] == nil {
-		return true
-	}
+		if q[i] == nil {
+			return false
+		}
+		if q[j] == nil {
+			return true
+		}
 	return q[i].Val < q[j].Val
 }
 
