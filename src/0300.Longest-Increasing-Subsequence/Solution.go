@@ -5,10 +5,10 @@ import "sort"
 func lengthOfLIS(nums []int) int {
 	tails := make([]int, len(nums)) // 长度为i的子数组最小的末尾数组
 	var result int
-	for x:=0;x<len(nums);x++ {
+	for x := 0; x < len(nums); x++ {
 		var i, j int = 0, result
 		for i != j {
-			m := (i + j) / 2;
+			m := (i + j) / 2
 			if tails[m] < nums[x] {
 				i = m + 1
 			} else {
