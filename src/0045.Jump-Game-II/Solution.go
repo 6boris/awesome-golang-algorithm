@@ -28,9 +28,9 @@ func jump(nums []int) int {
 
 func jump2(nums []int) int {
 	//特殊情况判断
-	if len(nums)==1{
+	if len(nums) == 1 {
 		return 0
-	}else if nums[0] >= len(nums){
+	} else if nums[0] >= len(nums) {
 		return 1
 	}
 	left, right, res := 0, nums[0], 0
@@ -38,8 +38,8 @@ func jump2(nums []int) int {
 		max := 0
 		for i := left; i <= right; i++ {
 			//寻找最大跨度
-			if nums[i]-(right-i) >= max{
-				max = nums[i]-(right - i)
+			if nums[i]-(right-i) >= max {
+				max = nums[i] - (right - i)
 			}
 		}
 		//窗口滑动右滑
@@ -48,7 +48,7 @@ func jump2(nums []int) int {
 		res++
 	}
 	//判断最后一步是不是踏在最后一个格子。循环条件结束只能确定能到达边界，left指针才是每次跳的格子。
-	if left<len(nums)-1{
+	if left < len(nums)-1 {
 		res++
 	}
 	return res
