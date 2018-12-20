@@ -20,8 +20,10 @@ LeetCode of algorithms with golang solution(updating:smiley:).
     <a href="https://img.shields.io/github/license/kylesliu/awesome-golang-leetcode.svg">
         <img src="https://img.shields.io/github/license/kylesliu/awesome-golang-leetcode.svg" />
     </a>
-    
-    
+    <a href="https://img.shields.io/github/stars/kylesliu/awesome-golang-leetcode.svg?label=Stars&style=social">
+        <img src="https://img.shields.io/github/stars/kylesliu/awesome-golang-leetcode.svg?label=Stars&style=social" />
+    </a>
+
 </p>
 
 
