@@ -1,5 +1,8 @@
 # 📝 awesome-golang-leetcode
 
+> Warning: This Repoistory will be great rebuild. don't send pull request
+
+
 LeetCode of algorithms with golang solution(updating:smiley:).
 
 <p align="center">
