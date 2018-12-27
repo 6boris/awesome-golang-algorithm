@@ -12,5 +12,6 @@
 *.out
 
 .idea/
+.vscode/
 .orig/
 coverage.txt
