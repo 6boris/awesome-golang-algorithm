@@ -1,0 +1,13 @@
+kind: pipeline
+name: default
+
+workspace:
+  base: /go
+  path: src/github.com/kylesliu/awesome-golang-leetcode
+
+steps:
+  - name: test
+    image: golang
+    commands:
+      - go get
+      - go test
