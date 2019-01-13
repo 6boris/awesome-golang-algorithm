@@ -40,7 +40,7 @@ The median is (2 + 3)/2 = 2.5
 ```go
 // O(log(min(m, n))) Solution
 //
-// Reference: https://leetcode.com/problems/median-of-two-sorted-arrays/discuss/2481/Share-my-O(log(min(mn))-solution-with-explanation
+solutions
 //
 // nums1: A1, A2, A3, ..., Am
 // nums2: B1, B2, B3, ..., Bn

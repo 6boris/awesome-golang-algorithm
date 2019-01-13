@@ -1,23 +1,20 @@
 package main
 
 import (
-	"fmt"
-	"strconv"
+	"github.com/kylesliu/awesome-golang-leetcode/cmd/leetcode"
 )
 
 func main() {
-	//problems := leetcode.GetProblemsInstance()
-	//
+	problems := leetcode.GetSotedproblemsInstance()
+
 	//for _, v := range problems {
-	//	if v.PaidOnly {
-	//
-	//		fmt.Println(v)
-	//	}
+	//	fmt.Println(v.PathName)
 	//}
+
 	//	生成Problem 目录
 	//leetcode.MakeDir(problems)
 
 	//leetcode.GetReadmeTemplateBuffer()
-	fmt.Println(strconv.Itoa("a"))
 
+	leetcode.MakeGitbookSummary(problems)
 }

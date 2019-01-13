@@ -25,6 +25,7 @@ func MakeDir(problems []Problem) {
 
 		if problems[i].PaidOnly {
 			log.Printf("%d 号题需要付费。如果已经订阅，请注释掉本代码。", problems[i].Stat.FrontendQuestionID)
+			continue
 		}
 
 		if is_DirExists, _ := PathExists(SOLUTIONS_APTH + problems[i].PathName); is_DirExists {
