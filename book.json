@@ -16,7 +16,8 @@
     }
   },
   "plugins": [
-    "github"
+    "github",
+    "advanced-emoji"
   ],
 
   "pluginsConfig": {
