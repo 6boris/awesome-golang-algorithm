@@ -6,8 +6,8 @@
 LeetCode of algorithms with golang solution(updating:smiley:).
 
 <p align="center">
-    <img src="https://github.com/kylesliu/awesome-golang-leetcode/blob/master/assets/images/Go-Logo_Aqua.png">
-    <img src="https://github.com/kylesliu/awesome-golang-leetcode/blob/master/assets/images/leetcode.png">
+    <img src="https://xpnet-public.oss-cn-hangzhou.aliyuncs.com/color_admin_v4.2/frontend/template/assets/img/leetcode/Go-Logo_Aqua.png">
+    <img src="https://xpnet-public.oss-cn-hangzhou.aliyuncs.com/color_admin_v4.2/frontend/template/assets/img/leetcode/leetcode.png">
 </p>
 
 <p align="center">
@@ -28,6 +28,4 @@ LeetCode of algorithms with golang solution(updating:smiley:).
     </a>
 </p>
 
-| #    | Title            |   Solution     |   Acceptance   | 
-| :--- | :--------------- | :------------- | :------------- |
-| 1    | [Two Sum][0001-url]  | [Golang][0001-golang] | 39.0% |
+
