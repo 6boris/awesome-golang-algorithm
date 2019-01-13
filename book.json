@@ -3,7 +3,7 @@
   "title": "awesome-golang-leetcode",
   "author": "Kyle Liu",
   "description": "记录Gitbook的配置和一些插件的使用",
-  "language": "zh-hans",
+  "language": "en",
   "gitbook" : "3.2.3",
   "structure.readme": "README.md",
   "structure.summary": "SUMMARY.md",
@@ -12,7 +12,7 @@
 
   "links": {
     "sidebar": {
-      "Home": "https://kyle.link"
+      "Home": "https://github.com/kylesliu/awesome-golang-leetcode"
     }
   },
   "plugins": [
