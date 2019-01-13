@@ -16,4 +16,4 @@
 .orig/
 coverage.txt
 node_modules/
-docs/
+/gitbook

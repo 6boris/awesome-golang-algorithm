@@ -11,7 +11,3 @@ steps:
     commands:
       - go get
       - go test
-      -
-
-
-
