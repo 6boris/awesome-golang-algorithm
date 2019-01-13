@@ -12,5 +12,8 @@
 *.out
 
 .idea/
+.vscode/
 .orig/
 coverage.txt
+node_modules/
+/gitbook
