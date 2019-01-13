@@ -80,6 +80,28 @@ func GetProblemsInstance() []Problem {
 	return leetcode.StatStatusPairs
 }
 
+func GetSotedproblemsInstance() []Problem {
+	problems := GetProblemsInstance()
+	//	插入排序
+	problems = sortProblems(problems)
+	return problems
+}
+
+func sortProblems(problems []Problem) []Problem {
+	var i, j int
+	var tmp Problem
+
+	for i = 1; i < len(problems); i++ {
+		tmp = problems[i]
+		for j = i; j > 0 && problems[j-1].Stat.QuestionID > tmp.Stat.QuestionID; j-- {
+			problems[j] = problems[j-1]
+		}
+		problems[j] = tmp
+	}
+
+	return problems
+}
+
 func GetProblemsJosn() string {
 	problems := GetProblemsInstance()
 	problem_string, err := json.MarshalIndent(problems, " ", " ")
