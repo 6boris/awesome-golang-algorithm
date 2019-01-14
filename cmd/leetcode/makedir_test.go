@@ -14,5 +14,5 @@ func TestMakeDir(t *testing.T) {
 			fmt.Println(v)
 		}
 	}
-	MakeDir(problems)
+	//MakeDir(problems)
 }
