@@ -1,6 +1,7 @@
 # Summary
       
-  * [Summary](SUMMARY-LIST.md)    
+  * [Summary](SUMMARY-LIST.md)
+  * [Contributor](CONTRIBUTOR.md)
   * Soutions(1-976)
       * [0001.Two-Sum](./src/0001.Two-Sum/README.md)
       * [0002.Add-Two-Numbers](./src/0002.Add-Two-Numbers/README.md)
