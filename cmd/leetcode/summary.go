@@ -26,12 +26,12 @@ func MakeGitbookSummary(problems []Problem) {
 	file, err := os.OpenFile(SOURCE_SOLUTION_SUMMARY_FILE_PATH, os.O_RDONLY, 0600)
 	defer file.Close()
 	if err != nil {
-		log.Panicln("README 模板读取失败1：%s", err.Error())
+		log.Panicf("README 模板读取失败1：%s", err.Error())
 	}
 
 	buffer, err := ioutil.ReadAll(file)
 	if err != nil {
-		log.Panicln("README 模板读取失败2：%s", err.Error())
+		log.Panicf("README 模板读取失败2：%s", err.Error())
 	}
 
 	var tmpRes bytes.Buffer

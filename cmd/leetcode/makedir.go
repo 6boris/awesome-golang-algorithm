@@ -33,7 +33,7 @@ func MakeDir(problems []Problem) {
 		} else {
 			err := os.Mkdir(SOLUTIONS_APTH+problems[i].PathName, os.ModePerm)
 			if err != nil {
-				log.Printf("目录创建失败", err.Error())
+				log.Printf("目录创建失败:%s", err.Error())
 			} else {
 				//	复制文件
 				log.Println("开始复制文件：")
