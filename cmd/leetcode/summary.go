@@ -8,6 +8,8 @@ import (
 	"os"
 )
 
+const SOURCE_SOLUTION_SUMMARY_FILE_PATH = "cmd/template/gitbook/SUMMARY.md"
+
 type Todo struct {
 	Title string
 	Done  bool
@@ -21,7 +23,7 @@ type TodoPageData struct {
 //	Auto make the Gitbook SUMMARY
 func MakeGitbookSummary(problems []Problem) {
 
-	file, err := os.OpenFile(SOURCE_SOLUTION_README_FILE_PATH, os.O_RDONLY, 0600)
+	file, err := os.OpenFile(SOURCE_SOLUTION_SUMMARY_FILE_PATH, os.O_RDONLY, 0600)
 	defer file.Close()
 	if err != nil {
 		log.Panicln("README 模板读取失败1：%s", err.Error())
