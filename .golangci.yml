@@ -1,0 +1,6 @@
+service:
+  project-path: mysite.com/goproject # vanity import path if needed
+  golangci-lint-version: 1.12.x
+  prepare:
+    - make deps
+    - make generate

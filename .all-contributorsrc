@@ -1,0 +1,71 @@
+{
+  "projectName": "awesome-golang-leetcode",
+  "projectOwner": "kylesliu",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "contributors": [
+    {
+      "login": "kylesliu",
+      "name": "Kyle Liu ",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/26195433?v=4",
+      "profile": "https://kyle.link",
+      "contributions": [
+        "code",
+        "blog",
+        "design",
+        "doc"
+      ]
+    },
+    {
+      "login": "hapiman2",
+      "name": "hapiman2",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/34671440?v=4",
+      "profile": "https://github.com/hapiman2",
+      "contributions": [
+        "code"
+      ]
+    },
+
+    {
+      "login": "hapiman",
+      "name": "hapiman",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/7567048?v=4",
+      "profile": "https://github.com/hapiman",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "sihgyu",
+      "name": "sihg yu",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/26058740?v=4",
+      "profile": "https://github.com/sihgyu",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "plusweiwei",
+      "name": "plusweiwei",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/38197795?v=4",
+      "profile": "https://github.com/plusweiwei",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "openset",
+      "name": "Sandy",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6274967?v=4",
+      "profile": "https://openset.github.com",
+      "contributions": [
+        "code"
+      ]
+    }
+  ]
+}

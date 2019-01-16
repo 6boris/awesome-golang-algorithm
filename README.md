@@ -1,4 +1,5 @@
 # 📝 awesome-golang-leetcode
+[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors)
 
 > Warning: This Repoistory will be great rebuild. don't send pull request
 
@@ -29,3 +30,15 @@ LeetCode of algorithms with golang solution(updating:smiley:).
 </p>
 
 
+
+## Contributors
+
+Thanks goes to these wonderful people ([emoji key](https://github.com/all-contributors/all-contributors#emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+| [<img src="https://avatars0.githubusercontent.com/u/26195433?v=4" width="100px;" alt="Kyle Liu "/><br /><sub><b>Kyle Liu </b></sub>](https://kyle.link)<br />[💻](https://github.com/kylesliu/awesome-golang-leetcode/commits?author=kylesliu "Code") [📝](#blog-kylesliu "Blogposts") [🎨](#design-kylesliu "Design") [📖](https://github.com/kylesliu/awesome-golang-leetcode/commits?author=kylesliu "Documentation") | [<img src="https://avatars3.githubusercontent.com/u/34671440?v=4" width="100px;" alt="hapiman2"/><br /><sub><b>hapiman2</b></sub>](https://github.com/hapiman2)<br />[💻](https://github.com/kylesliu/awesome-golang-leetcode/commits?author=hapiman2 "Code") | [<img src="https://avatars0.githubusercontent.com/u/7567048?v=4" width="100px;" alt="hapiman"/><br /><sub><b>hapiman</b></sub>](https://github.com/hapiman)<br />[💻](https://github.com/kylesliu/awesome-golang-leetcode/commits?author=hapiman "Code") | [<img src="https://avatars2.githubusercontent.com/u/26058740?v=4" width="100px;" alt="sihg yu"/><br /><sub><b>sihg yu</b></sub>](https://github.com/sihgyu)<br />[💻](https://github.com/kylesliu/awesome-golang-leetcode/commits?author=sihgyu "Code") | [<img src="https://avatars3.githubusercontent.com/u/38197795?v=4" width="100px;" alt="plusweiwei"/><br /><sub><b>plusweiwei</b></sub>](https://github.com/plusweiwei)<br />[💻](https://github.com/kylesliu/awesome-golang-leetcode/commits?author=plusweiwei "Code") | [<img src="https://avatars0.githubusercontent.com/u/6274967?v=4" width="100px;" alt="Sandy"/><br /><sub><b>Sandy</b></sub>](https://openset.github.com)<br />[💻](https://github.com/kylesliu/awesome-golang-leetcode/commits?author=openset "Code") |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
