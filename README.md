@@ -1,4 +1,5 @@
 # 📝 awesome-golang-leetcode
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 
 > Warning: This Repoistory will be great rebuild. don't send pull request
 
@@ -29,3 +30,15 @@ LeetCode of algorithms with golang solution(updating:smiley:).
 </p>
 
 
+
+## Contributors
+
+Thanks goes to these wonderful people ([emoji key](https://github.com/all-contributors/all-contributors#emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+| [<img src="https://avatars0.githubusercontent.com/u/26195433?v=4" width="100px;" alt="Kyle Liu "/><br /><sub><b>Kyle Liu </b></sub>](https://kyle.link)<br />[📝](#blog-kylesliu "Blogposts") [💻](https://github.com/kylesliu/awesome-golang-leetcode/commits?author=kylesliu "Code") [🎨](#design-kylesliu "Design") [📖](https://github.com/kylesliu/awesome-golang-leetcode/commits?author=kylesliu "Documentation") |
+| :---: |
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
