@@ -30,15 +30,7 @@
         "code"
       ]
     },
-    {
-      "login": "openset",
-      "name": "Sandy",
-      "avatar_url": "https://avatars0.githubusercontent.com/u/6274967?v=4",
-      "profile": "https://openset.github.com",
-      "contributions": [
-        "code"
-      ]
-    },
+
     {
       "login": "hapiman",
       "name": "hapiman",
@@ -62,6 +54,15 @@
       "name": "plusweiwei",
       "avatar_url": "https://avatars3.githubusercontent.com/u/38197795?v=4",
       "profile": "https://github.com/plusweiwei",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "openset",
+      "name": "Sandy",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6274967?v=4",
+      "profile": "https://openset.github.com",
       "contributions": [
         "code"
       ]

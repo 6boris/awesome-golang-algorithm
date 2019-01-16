@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "contributors:add": "all-contributors add",
+    "contributors:generate": "all-contributors generate"
+  },
+  "devDependencies": {
+    "all-contributors-cli": "^5.9.1"
+  }
+}
