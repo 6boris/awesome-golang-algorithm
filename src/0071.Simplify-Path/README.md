@@ -1,48 +1,96 @@
-# [1. Add Sum][title]
+# [71. Simplify Path][title]
 
 ## Description
 
-Given two binary strings, return their sum (also a binary string).
+Given an absolute path for a file (Unix-style), simplify it. Or in other words, convert it to the canonical path.
 
-The input strings are both **non-empty** and contains only characters `1` or `0`.
+In a UNIX-style file system, a period . refers to the current directory. Furthermore, a double period .. moves the directory up a level. For more information, see: Absolute path vs relative path in Linux/Unix
 
+Note that the returned canonical path must always begin with a slash /, and there must be only a single slash / between two directory names. The last directory name (if it exists) must not end with a trailing /. Also, the canonical path must be the shortest string representing the absolute path.
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: "/home/"
+Output: "/home"
+Explanation: Note that there is no trailing slash after the last directory name.
 ```
 
 **Example 2:**
 
 ```
-Input: a = "1010", b = "1011"
-Output: "10101"
+Input: "/../"
+Output: "/"
+Explanation: Going one level up from the root directory is a no-op, as the root level is the highest level you can go.
+```
+
+**Example 3:**
+
+```
+Input: "/home//foo/"
+Output: "/home/foo"
+Explanation: In the canonical path, multiple consecutive slashes are replaced by a single one.
+```
+
+**Example 4:**
+
+```
+Input: "/a/./b/../../c/"
+Output: "/c"
+```
+
+**Example 5:**
+
+```
+Input: "/a/../../b/../c//.//"
+Output: "/c"
+```
+**Example 5:**
+
+```
+Input: "/a//b////c/d//././/.."
+Output: "/a/b/c"
 ```
 
 **Tags:** Math, String
 
 ## 题意
->给你两个二进制串，求其和的二进制串。
+>大概意思就是讲输入的绝对路径简化
 
 ## 题解
 
 ### 思路1
-> 按照小学算数那么来做，用 `carry` 表示进位，从后往前算，依次往前，每算出一位就插入到最前面即可，直到把两个二进制串都遍历完即可。
-
+> 利用golang自带的函数解决。
+> 注意：此方法会根据平台变换 【/】【\】
 ```go
-
+func simplifyPath(path string) string {
+	return filepath.Clean(path)
+}
 ```
 
 ### 思路2
-> 思路2
+> 
 ```go
-
+func simplifyPath(path string) string {
+	var stack []string
+	for _, component := range strings.Split(path, "/") {
+		if component == "" || component == "." {
+			continue
+		}
+		if component == ".." {
+			if len(stack) > 0 {
+				stack = stack[:len(stack)-1]
+			}
+		} else {
+			stack = append(stack, component)
+		}
+	}
+	return "/" + strings.Join(stack, "/")
+}
 ```
 
 ## 结语
 
 如果你同我一样热爱数据结构、算法、LeetCode，可以关注我 GitHub 上的 LeetCode 题解：[awesome-golang-leetcode][me]
 
-[title]: https://leetcode.com/problems/two-sum/description/
+[title]: hhttps://leetcode.com/problems/simplify-path/
 [me]: https://github.com/kylesliu/awesome-golang-leetcode
