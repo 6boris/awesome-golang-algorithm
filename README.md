@@ -27,7 +27,7 @@ LeetCode of algorithms with golang solution(updating:smiley:).
         <img src="https://golangci.com/badges/github.com/kylesliu/awesome-golang-leetcode.svg" />
     </a>
     <a href="https://img.shields.io/github/stars/kylesliu/awesome-golang-leetcode.svg?label=Stars&style=social">
-        <img src="https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square" />
+        <img src="https://img.shields.io/badge/All_Contributors-6-blue.svg" />
     </a>
 </p>
 
