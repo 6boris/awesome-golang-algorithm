@@ -1,5 +1,4 @@
 # 📝 awesome-golang-leetcode
-[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors)
 
 > Warning: This Repoistory will be great rebuild. don't send pull request
 
@@ -26,6 +25,9 @@ LeetCode of algorithms with golang solution(updating:smiley:).
     </a>
     <a href="https://img.shields.io/github/stars/kylesliu/awesome-golang-leetcode.svg?label=Stars&style=social">
         <img src="https://golangci.com/badges/github.com/kylesliu/awesome-golang-leetcode.svg" />
+    </a>
+    <a href="https://img.shields.io/github/stars/kylesliu/awesome-golang-leetcode.svg?label=Stars&style=social">
+        <img src="https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square" />
     </a>
 </p>
 
