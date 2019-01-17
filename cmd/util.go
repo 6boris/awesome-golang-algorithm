@@ -33,7 +33,7 @@ func Request(method, url string, data interface{}) []byte {
 	if method == "GET" {
 		client := &http.Client{}
 		request, err := http.NewRequest(method, url, nil)
-		request.Header.Add("User-Agent", "Awesome-Octocat-App")
+		request.Header.Add("User-Agent", "Mozilla/5.0 (Windows; U; Windows NT 6.0; en-US) AppleWebKit/534.7 (KHTML, like Gecko) Chrome/7.0.517.41 Safari/534.7")
 
 		response, err := client.Do(request)
 		if err != nil || response.StatusCode != 200 {
