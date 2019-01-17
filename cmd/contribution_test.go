@@ -23,3 +23,9 @@ func TestGetContributorInstance(t *testing.T) {
 func TestGenerateContributorTemplete(t *testing.T) {
 	GenerateContributorTemplete()
 }
+
+func BenchmarkGetContributorInstance(b *testing.B) {
+	b.N = 2000000
+	contributors := GetContributorInstance()
+	fmt.Println(contributors)
+}
