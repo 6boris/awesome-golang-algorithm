@@ -28,13 +28,18 @@ func WriteFile(path, content string) {
 	}
 }
 
+//	Coustom request for api
 func Request(method, url string, data interface{}) []byte {
 	if method == "GET" {
-		resp, err := http.Get(url)
-		if err != nil || resp.StatusCode != 200 {
-			log.Printf("HTTP Request Get Fail URL: %s, Status: %d, Data: %s", url, resp.StatusCode, ReadRequest(resp.Body))
+		client := &http.Client{}
+		request, err := http.NewRequest(method, url, nil)
+		request.Header.Add("User-Agent", "Awesome-Octocat-App")
+
+		response, err := client.Do(request)
+		if err != nil || response.StatusCode != 200 {
+			log.Printf("HTTP Request Get Fail URL: %s, Status: %d, Data: %s", url, response.StatusCode, ReadRequest(response.Body))
 		}
-		resp_data, err := ioutil.ReadAll(resp.Body)
+		resp_data, err := ioutil.ReadAll(response.Body)
 		if err != nil {
 			log.Fatalln(err.Error())
 		}
