@@ -2,10 +2,14 @@ package Solution
 
 import (
 	"reflect"
+	"runtime"
 	"testing"
 )
 
 func TestSolution(t *testing.T) {
+	if runtime.GOOS == "windows" {
+		return
+	}
 	//	测试用例
 	cases := []struct {
 		name   string
@@ -32,6 +36,10 @@ func TestSolution(t *testing.T) {
 	}
 }
 func TestSolution2(t *testing.T) {
+	if runtime.GOOS == "windows" {
+		return
+	}
+
 	//	测试用例
 	cases := []struct {
 		name   string
