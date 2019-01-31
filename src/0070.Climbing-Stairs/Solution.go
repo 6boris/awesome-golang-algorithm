@@ -25,3 +25,11 @@ func climbStairs1(n int) int {
 	}
 	return aux[n]
 }
+
+func climbStairs2(n int) int {
+	x, y := 1, 1
+	for i := 1; i < n; i++ {
+		x, y = y, x+y
+	}
+	return y
+}

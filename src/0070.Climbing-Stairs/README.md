@@ -46,8 +46,15 @@ func climbStairs1(n int) int {
 ```
 
 ### 思路2
-> 思路2
+> 优化后： 只有2个变量
 ```go
+func climbStairs(n int) int {
+	x, y := 1, 1
+	for i := 1; i < n; i++ {
+		x, y = y, x+y
+	}
+	return y
+}
 
 ```
 

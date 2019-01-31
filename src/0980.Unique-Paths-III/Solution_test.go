@@ -13,19 +13,19 @@ func TestSolution(t *testing.T) {
 		expect int
 	}{
 		{"TestCacse 1", [][]int{
-			{0, 0, 0},
-			{0, 1, 0},
-			{0, 0, 0},
+			{1, 0, 0, 0},
+			{0, 0, 0, 0},
+			{0, 0, 2, -1},
 		}, 2},
 	}
 
 	//	开始测试
 	for _, c := range cases {
 		t.Run(c.name, func(t *testing.T) {
-			ret := uniquePathsWithObstacles(c.inputs)
-			if !reflect.DeepEqual(ret, c.expect) {
+			got := uniquePathsIII(c.inputs)
+			if !reflect.DeepEqual(got, c.expect) {
 				t.Fatalf("expected: %v, but got: %v, with inputs: %v",
-					c.expect, ret, c.inputs)
+					c.expect, got, c.inputs)
 			}
 		})
 	}
