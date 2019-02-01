@@ -5,5 +5,8 @@
   },
   "devDependencies": {
     "all-contributors-cli": "^5.9.1"
+  },
+  "dependencies": {
+    "gitbook-plugin-advanced-emoji": "^0.2.2"
   }
 }

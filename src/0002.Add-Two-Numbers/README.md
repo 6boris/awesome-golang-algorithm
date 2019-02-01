@@ -24,7 +24,7 @@ Explanation: 342 + 465 = 807.
 ### 思路1
 > 直接模拟计算就好
 
-```go
+```golang
 func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 	node := &ListNode{Val: 0, Next: nil}
 	n1, n2, tmp := l1, l2, node

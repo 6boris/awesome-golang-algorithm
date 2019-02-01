@@ -17,7 +17,8 @@
   },
   "plugins": [
     "github",
-    "advanced-emoji"
+    "advanced-emoji",
+    "flexible-alerts"
   ],
 
   "pluginsConfig": {
@@ -34,6 +35,20 @@
       "all": [
         "facebook", "google", "twitter","weibo", "instapaper"
       ]
+    },
+    "flexible-alerts": {
+      "note": {
+        "label": "Hinweis"
+      },
+      "tip": {
+        "label": "Tip"
+      },
+      "warning": {
+        "label": "Warnung"
+      },
+      "danger": {
+        "label": "Achtung"
+      }
     }
   }
 }
