@@ -57,6 +57,21 @@ func minimumTotal1(triangle [][]int) int {
 	}
 	return triangle[0][0]
 }
+
+//	dp solution
+func minimumTotal2(triangle [][]int) int {
+	if len(triangle) == 0 || len(triangle[0]) == 0 {
+		return 0
+	}
+
+	for i := len(triangle) - 2; i >= 0; i-- {
+		for j := len(triangle[i]) - 1; j >= 0; j-- {
+			triangle[i][j] += min(triangle[i+1][j], triangle[i+1][j+1])
+		}
+	}
+	return triangle[0][0]
+}
+
 func min(x, y int) int {
 	if x > y {
 		return y

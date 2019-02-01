@@ -21,6 +21,20 @@ Output: "10101"
 ```
 
 **Tags:** Math, String
+> [!NOTE|style:flat]
+> An alert of type 'note' using global style 'callout'.
+
+* 1
+> [!TIP|style:flat]
+> An alert of type 'note' using global style 'callout'.
+
+* 2
+
+> [!WARNING|style:flat]
+> An alert of type 'note' using global style 'callout'.
+
+
+
 
 ## 题意
 >给你两个二进制串，求其和的二进制串。
