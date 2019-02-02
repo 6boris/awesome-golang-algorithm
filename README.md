@@ -3,8 +3,6 @@
 
 LeetCode of algorithms with golang solution(updating:smiley:).
 
->:white_check_mark:
-
 <p align="center">
     <img src="https://xpnet-public.oss-cn-hangzhou.aliyuncs.com/color_admin_v4.2/frontend/template/assets/img/leetcode/Go-Logo_Aqua.png">
     <img src="https://xpnet-public.oss-cn-hangzhou.aliyuncs.com/color_admin_v4.2/frontend/template/assets/img/leetcode/leetcode.png">
