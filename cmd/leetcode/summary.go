@@ -2,6 +2,7 @@ package leetcode
 
 import (
 	"bytes"
+	"fmt"
 	"html/template"
 	"io/ioutil"
 	"log"
@@ -22,6 +23,7 @@ type TodoPageData struct {
 
 //	Auto make the Gitbook SUMMARY
 func MakeGitbookSummary(problems []Problem) {
+	problems = CheckProblemExists(problems)
 
 	file, err := os.OpenFile(SOURCE_SOLUTION_SUMMARY_FILE_PATH, os.O_RDONLY, 0600)
 	defer file.Close()
@@ -39,6 +41,19 @@ func MakeGitbookSummary(problems []Problem) {
 	tmpl, err := template.New("SUMMARY: ").Parse(string(buffer))
 	err = tmpl.Execute(&tmpRes, problems)
 	write("SUMMARY.md", string(tmpRes.Bytes()))
+}
+func CheckProblemExists(problems []Problem) []Problem {
+	tmp := []Problem{}
+
+	for i := 0; i < len(problems); i++ {
+		isExist, _ := PathExists("src/" + problems[i].PathName)
+		if isExist {
+			tmp = append(tmp, problems[i])
+		} else {
+			fmt.Println(problems[i].PathName)
+		}
+	}
+	return tmp
 }
 
 func write(path, content string) {
