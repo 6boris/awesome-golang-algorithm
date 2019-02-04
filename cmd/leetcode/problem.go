@@ -148,15 +148,30 @@ func formatId(id int) string {
 //	格式化提名称
 func formatName(name string) string {
 	str := ""
-	for _, v := range name {
+	for i, v := range name {
 		if v == ' ' {
 			str = str + "-"
 			continue
 		}
-		if v == '(' || v == ')' {
+		if v == '(' {
+			str = str + "-"
+			continue
+		}
+
+		if v == ')' {
+			continue
+		}
+		if v == ',' {
+			continue
+		}
+		if i > 0 && name[i-1] == '-' {
+			str = str + string(v)
 			continue
 		}
 		str = str + string(v)
+	}
+	if name[len(name)-1:] == "-" {
+		name = name[:len(name)-1]
 	}
 	return str
 }

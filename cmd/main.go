@@ -6,8 +6,11 @@ import (
 
 func main() {
 	problems := leetcode.GetSotedproblemsInstance()
+	//problems := leetcode.GetProblemsJosn()
 
 	//for _, v := range problems {
+	//	fmt.Println(v.Stat.QuestionID)
+	//	fmt.Println(v.Stat.QuestionTitle)
 	//	fmt.Println(v.PathName)
 	//}
 
