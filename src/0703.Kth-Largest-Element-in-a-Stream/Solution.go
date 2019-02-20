@@ -51,6 +51,5 @@ func (this *KthLargest) Add(val int) int {
 		heap.Push(this.Nums, val)
 		heap.Pop(this.Nums)
 	}
-	h.
 	return (*this.Nums)[0]
 }
