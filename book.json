@@ -18,10 +18,14 @@
   "plugins": [
     "github",
     "advanced-emoji",
-    "flexible-alerts"
+    "flexible-alerts",
+    "favicon-plus"
   ],
 
   "pluginsConfig": {
+    "favicon": "assets/images/favicon.ico",
+    "appleTouchIconPrecomposed152": "path to appleTouchIconPrecomposed152.png",
+    "output": "book output path",
     "github": {
       "url": "https://github.com/kylesliu/awesome-golang-leetcode"
     },
