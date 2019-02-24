@@ -2,8 +2,7 @@ package Solution
 
 import "container/heap"
 
-// copied from golang doc
-// mininum setup of integer min heap
+//	根据golang只带的container类型自定义一个堆
 type IntHeap []int
 
 func (h IntHeap) Len() int           { return len(h) }
@@ -24,20 +23,21 @@ func (h *IntHeap) Pop() interface{} {
 	return x
 }
 
-// real thing starts here
+//	基本结构体
 type KthLargest struct {
 	Nums *IntHeap
 	K    int
 }
 
+//	根据所给的数据初始化heap
 func Constructor(k int, nums []int) KthLargest {
 	h := &IntHeap{}
 	heap.Init(h)
-	// push all elements to the heap
+	// 将所有元素推送到heap
 	for i := 0; i < len(nums); i++ {
 		heap.Push(h, nums[i])
 	}
-	// remove the smaller elements from the heap such that only the k largest elements are in the heap
+	// 弹出不必要的小元素，只要留K个最大的
 	for len(*h) > k {
 		heap.Pop(h)
 	}
