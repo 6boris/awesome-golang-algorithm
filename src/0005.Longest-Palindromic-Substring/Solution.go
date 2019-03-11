@@ -1,5 +1,7 @@
 package Solution
 
+import "fmt"
+
 //	暴力查找
 func longestPalindrome1(s string) string {
 	if len(s) == 1 {
@@ -146,4 +148,68 @@ func extractLongest(s string, P []int) string {
 	}
 	offset := (longestCenter - longestLength) / 2
 	return s[offset : offset+longestLength]
+}
+
+//	DP
+func longestPalindrome4(s string) string {
+	n := len(s)
+	dp := [][]bool{}
+	for i := 0; i < n; i++ {
+		dp = append(dp, make([]bool, n+1))
+	}
+
+	for i := 0; i < n; i++ {
+		dp[i][i] = true
+		if i == n-1 {
+			break
+		}
+		dp[i][i+1] = s[i] == s[i+1]
+	}
+
+	for i := n - 3; i >= 0; i-- {
+		for j := i + 2; j < n; j++ {
+			dp[i][j] = dp[i+1][j-1] && s[i] == s[j]
+		}
+	}
+	max := 0
+	maxStr := ""
+	for i := 0; i < n; i++ {
+		for j := 0; j < n; j++ {
+			if dp[i][j] == true && j-i+1 > max {
+				max = j - i + 1
+				maxStr = s[i : j+1]
+			}
+		}
+	}
+
+	return maxStr
+}
+
+func longestPalindrome5(s string) string {
+	dp := make([][]bool, 0)
+	left, right := 0, 0
+	for i := 0; i <= len(s); i++ {
+		dp = append(dp, make([]bool, len(s)))
+	}
+
+	for i := len(s) - 1; i >= 0; i-- {
+		dp[i][i] = true
+		for j := i; j < len(s); j++ {
+			dp[j][i] = s[i] == s[j] && (i-j < 2 || dp[j+1][i-1])
+			if dp[j][i] && j-i > right-left {
+				left = i
+				right = j
+			}
+			fmt.Println(i,j)
+			Print(dp)
+
+		}
+	}
+	return s[left : right+1]
+}
+func Print(x [][]bool) {
+	for i := 0; i < len(x); i++ {
+		fmt.Println(x[i])
+	}
+	fmt.Println()
 }
