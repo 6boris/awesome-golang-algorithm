@@ -22,6 +22,10 @@ If you have figured out the O(*n*) solution, try coding another solution using t
 ## 题解
 ### 思路1
 > 普通DP 找到公式就好了
+```$xslt
+如果nums[0]>=0，则sum = sum + nums[1]
+如果nums[0]<0，则sum = nums[1]，
+```
 
 ```go
 func maxSubArray(nums []int) int {

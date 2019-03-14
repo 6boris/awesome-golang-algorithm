@@ -31,3 +31,14 @@ func Max(x, y int) int {
 	}
 	return y
 }
+func rob3(nums []int) int {
+	robEven, robOdd := 0, 0
+	for i := 0; i < len(nums); i++ {
+		if i % 2 ==0 {
+			robEven = Max(robEven + nums[i] , robOdd)
+		} else {
+			robOdd = Max(robEven , nums[i] + robOdd)
+		}
+	}
+	return Max(robEven,robOdd)
+}

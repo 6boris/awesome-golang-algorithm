@@ -1,34 +1,30 @@
-# [1. Add Sum][title]
+# [85. Maximal Rectangle][title]
 
 ## Description
 
-Given two binary strings, return their sum (also a binary string).
-
-The input strings are both **non-empty** and contains only characters `1` or `0`.
-
+Given a 2D binary matrix filled with 0's and 1's, find the largest rectangle containing only 1's and return its area.
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
-```
-
-**Example 2:**
-
-```
-Input: a = "1010", b = "1011"
-Output: "10101"
+Input:
+[
+  ["1","0","1","0","0"],
+  ["1","0","1","1","1"],
+  ["1","1","1","1","1"],
+  ["1","0","0","1","0"]
+]
+Output: 6
 ```
 
 **Tags:** Math, String
 
 ## 题意
->给你两个二进制串，求其和的二进制串。
+>返回三角形最小面积
 
 ## 题解
 
 ### 思路1
-> 按照小学算数那么来做，用 `carry` 表示进位，从后往前算，依次往前，每算出一位就插入到最前面即可，直到把两个二进制串都遍历完即可。
+> DP
 
 ```go
 
