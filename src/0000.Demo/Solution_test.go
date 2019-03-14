@@ -12,9 +12,9 @@ func TestSolution(t *testing.T) {
 		inputs bool
 		expect bool
 	}{
-		{"TestCacse 1", true, true},
-		{"TestCacse 1", true, true},
-		{"TestCacse 1", false, false},
+		{"TestCase 1", true, true},
+		{"TestCase 2", true, true},
+		{"TestCase 3", false, false},
 	}
 
 	//	开始测试
