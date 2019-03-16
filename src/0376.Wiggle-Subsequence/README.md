@@ -42,9 +42,7 @@ Output: 2
 ### 思路1
 > 分别定义上升下降2个状态，分别做判断
 
-<p align="center" style="transform:rotate(90deg); margin: 150px 0px;">
-	<img src="../../assets/images/376_Wiggle_Subsequence.jpg">
-</p>
+![376_Wiggle_Subsequence](../../assets/images/376_Wiggle_Subsequence.jpg)
 
 ```go
 func wiggleMaxLength(nums []int) int {
