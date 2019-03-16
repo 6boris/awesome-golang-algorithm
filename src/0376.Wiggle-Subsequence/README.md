@@ -36,7 +36,7 @@ Output: 2
 ## 题意
 >求摇摆序列最长序列，可以转化为数组【上升】【下降】状态的转换
 
-<p align="center"><img src="https://github.com/kylesliu/awesome-golang-leetcode/tree/master/assets/images/376_Wiggle_Subsequence.jpg"></p>
+<p align="center"><img src="../../assets/images/376_Wiggle_Subsequence.jpg"></p>
 
 ## 题解
 
