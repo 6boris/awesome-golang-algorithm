@@ -36,14 +36,13 @@ Output: 2
 ## 题意
 >求摇摆序列最长序列，可以转化为数组【上升】【下降】状态的转换
 
-<a href="https://github.com/kylesliu/awesome-golang-leetcode/tree/master/assets/images/376_Wiggle_Subsequence.jpg">
-    <img src="https://github.com/kylesliu/awesome-golang-leetcode/tree/master/assets/images/376_Wiggle_Subsequence.jpg" />
-</a>
 
 ## 题解
 
 ### 思路1
-> 按照小学算数那么来做，用 `carry` 表示进位，从后往前算，依次往前，每算出一位就插入到最前面即可，直到把两个二进制串都遍历完即可。
+> 分别定义上升下降2个状态，分别做判断
+
+![376_Wiggle_Subsequence](../../assets/images/376_Wiggle_Subsequence.jpg)
 
 ```go
 func wiggleMaxLength(nums []int) int {
@@ -80,12 +79,6 @@ func wiggleMaxLength(nums []int) int {
 	}
 	return maxLength
 }
-
-```
-
-### 思路2
-> 思路2
-```go
 
 ```
 
