@@ -4,7 +4,7 @@
     "contributors:generate": "all-contributors generate"
   },
   "devDependencies": {
-    "all-contributors-cli": "^5.9.1"
+    "all-contributors-cli": "^5.11.0"
   },
   "dependencies": {
     "gitbook-plugin-advanced-emoji": "^0.2.2"
