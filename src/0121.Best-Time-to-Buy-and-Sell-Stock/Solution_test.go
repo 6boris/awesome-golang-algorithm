@@ -6,14 +6,14 @@ import (
 	"testing"
 )
 
-func TestSolution(t *testing.T) {
+func TestSolution1(t *testing.T) {
 	//	测试用例
 	cases := []struct {
 		name   string
 		inputs []int
 		expect int
 	}{
-		{"TestCase", []int{7, 1, 5, 3, 6, 4}, 7},
+		{"TestCase", []int{7, 1, 5, 3, 6, 4}, 5},
 		{"TestCase", []int{1, 2, 3, 4, 5}, 4},
 		{"TestCase", []int{7, 6, 4, 3, 1}, 0},
 	}
@@ -21,7 +21,7 @@ func TestSolution(t *testing.T) {
 	//	开始测试
 	for i, c := range cases {
 		t.Run(c.name+strconv.Itoa(i), func(t *testing.T) {
-			got := maxProfit(c.inputs)
+			got := maxProfit1(c.inputs)
 			if !reflect.DeepEqual(got, c.expect) {
 				t.Fatalf("expected: %v, but got: %v, with inputs: %v",
 					c.expect, got, c.inputs)
@@ -29,7 +29,6 @@ func TestSolution(t *testing.T) {
 		})
 	}
 }
-
 func TestSolution2(t *testing.T) {
 	//	测试用例
 	cases := []struct {
@@ -37,7 +36,7 @@ func TestSolution2(t *testing.T) {
 		inputs []int
 		expect int
 	}{
-		{"TestCase", []int{7, 1, 5, 3, 6, 4}, 7},
+		{"TestCase", []int{7, 1, 5, 3, 6, 4}, 5},
 		{"TestCase", []int{1, 2, 3, 4, 5}, 4},
 		{"TestCase", []int{7, 6, 4, 3, 1}, 0},
 	}
@@ -53,8 +52,6 @@ func TestSolution2(t *testing.T) {
 		})
 	}
 }
-
-
 //	压力测试
 func BenchmarkSolution(b *testing.B) {
 

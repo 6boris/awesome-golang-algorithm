@@ -1,4 +1,4 @@
-# [122. Best Time to Buy and Sell Stock II][title]
+# [188. Best Time to Buy and Sell Stock IV][title]
 
 ## Description
 
@@ -44,5 +44,5 @@ Output: "10101"
 
 如果你同我一样热爱数据结构、算法、LeetCode，可以关注我 GitHub 上的 LeetCode 题解：[awesome-golang-leetcode][me]
 
-[title]: https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/
+[title]: https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/
 [me]: https://github.com/kylesliu/awesome-golang-leetcode
