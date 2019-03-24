@@ -28,6 +28,10 @@ LeetCode of algorithms with golang solution(updating:smiley:).
     </a>
 </p>
 
+## Stargazers over time
+
+[![Stargazers over time](https://starcharts.herokuapp.com/kylesliu/awesome-golang-leetcode.svg)](https://starcharts.herokuapp.com/kylesliu/awesome-golang-leetcode)
+
 ## Contributors
 
 Thanks goes to these wonderful people ([emoji key](https://github.com/all-contributors/all-contributors#emoji-key)):
