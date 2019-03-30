@@ -2,6 +2,7 @@ package Solution
 
 import (
 	"reflect"
+	"strconv"
 	"testing"
 )
 
@@ -9,18 +10,17 @@ func TestSolution(t *testing.T) {
 	//	测试用例
 	cases := []struct {
 		name   string
-		inputs []int
+		inputs [][]int
 		expect int
 	}{
-		{"TestCacse 1", []int{1, 2, 3, 1}, 4},
-		{"TestCacse 1", []int{2, 7, 9, 3, 1}, 12},
-		{"TestCacse 1", []int{5, 2, 6, 7, 3, 1}, 14},
+		{"TestCase", [][]int{{3, 2, 1, 5, 6, 4}, {2}}, 5},
+		{"TestCase", [][]int{{3, 2, 3, 1, 2, 4, 5, 5, 6}, {4}}, 4},
 	}
 
 	//	开始测试
-	for _, c := range cases {
-		t.Run(c.name, func(t *testing.T) {
-			got := rob(c.inputs)
+	for i, c := range cases {
+		t.Run(c.name+" "+strconv.Itoa(i), func(t *testing.T) {
+			got := findKthLargest(c.inputs[0], c.inputs[1][0])
 			if !reflect.DeepEqual(got, c.expect) {
 				t.Fatalf("expected: %v, but got: %v, with inputs: %v",
 					c.expect, got, c.inputs)
@@ -33,17 +33,17 @@ func TestSolution2(t *testing.T) {
 	//	测试用例
 	cases := []struct {
 		name   string
-		inputs []int
+		inputs [][]int
 		expect int
 	}{
-		{"TestCacse 1", []int{1, 2, 3, 1}, 4},
-		{"TestCacse 1", []int{2, 7, 9, 3, 1}, 12},
+		{"TestCase", [][]int{{3, 2, 1, 5, 6, 4}, {2}}, 5},
+		{"TestCase", [][]int{{3, 2, 3, 1, 2, 4, 5, 5, 6}, {4}}, 4},
 	}
 
 	//	开始测试
-	for _, c := range cases {
-		t.Run(c.name, func(t *testing.T) {
-			got := rob2(c.inputs)
+	for i, c := range cases {
+		t.Run(c.name+" "+strconv.Itoa(i), func(t *testing.T) {
+			got := findKthLargest2(c.inputs[0], c.inputs[1][0])
 			if !reflect.DeepEqual(got, c.expect) {
 				t.Fatalf("expected: %v, but got: %v, with inputs: %v",
 					c.expect, got, c.inputs)

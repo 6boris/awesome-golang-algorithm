@@ -41,6 +41,20 @@ Explanation: Rob house 1 (money = 2), rob house 3 (money = 9) and rob house 5 (m
     .
     .
     f(n) = max(nums[n] + f(n-2), f(n-1))
+    
+    [5,2,6,3,7,1]
+    
+    dp[1] = 5
+    dp[2] = 5
+    dp[3] = max(dp[1] + nums[3], dp[dp[2]])
+          = max(5 + 6, 5) = 11
+    dp[4] = max(dp[2]+dp[4], dp[3])
+          = max(5 + 3, 11) =1
+    dp[5] = max(dp[3] + nums[5], dp[4])
+          = max(11 + 1, 11) = 12
+    dp[6] = max(dp[4] + nums[6], dp[5])
+          = max(11 + 7, 12) = 18         
+    
 ```
 
 
