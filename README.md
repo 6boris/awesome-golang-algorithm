@@ -11,6 +11,9 @@ LeetCode of algorithms with golang solution(updating:smiley:).
     <a href="https://996.icu">
         <img src="https://img.shields.io/badge/link-996.icu-red.svg">
     </a>
+    <a href="https://github.com/996icu/996.ICU/blob/master/LICENSE">
+        <img src="https://img.shields.io/badge/license-Anti%20996-blue.svg">
+    </a>
     <a href="https://www.travis-ci.org/kylesliu/awesome-golang-leetcode">
         <img src="https://www.travis-ci.org/kylesliu/awesome-golang-leetcode.svg?branch=master" alt="Build Status">
     </a>
