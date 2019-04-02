@@ -23,9 +23,6 @@ LeetCode of algorithms with golang solution(updating:smiley:).
     <a href="https://goreportcard.com/report/github.com/kylesliu/awesome-golang-leetcode">
         <img src="https://goreportcard.com/badge/github.com/kylesliu/awesome-golang-leetcode" />
     </a>
-    <a href="https://img.shields.io/github/license/kylesliu/awesome-golang-leetcode.svg">
-        <img src="https://img.shields.io/github/license/kylesliu/awesome-golang-leetcode.svg" />
-    </a>
     <a href="https://img.shields.io/github/stars/kylesliu/awesome-golang-leetcode.svg?label=Stars&style=social">
         <img src="https://golangci.com/badges/github.com/kylesliu/awesome-golang-leetcode.svg" />
     </a>
