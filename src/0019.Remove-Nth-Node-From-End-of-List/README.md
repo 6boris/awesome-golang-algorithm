@@ -31,7 +31,26 @@ Could you do this in one pass?
 > 我的解法是利用双指针，这两个指针相差 n 个元素，当后面的指针扫到链表末尾的时候，自然它前面的那个指针所指向的下一个元素就是要删除的元素，即 pre.next = pre.next.next;，但是如果一开始后面的指针指向的为空，此时代表的意思就是要删除第一个元素，即 head = head.next;。
 
 ```go
+func removeNthFromEnd(head *ListNode, n int) *ListNode {
+	fastNode := head
+	slowNode := head
+	for n > 0 {
+		fastNode = fastNode.Next
+		n--
+	}
 
+	if fastNode != nil {
+		for fastNode.Next != nil {
+			fastNode = fastNode.Next
+			slowNode = slowNode.Next
+		}
+		slowNode.Next = slowNode.Next.Next
+
+	} else {
+		head = head.Next
+	}
+	return head
+}
 ```
 
 ### 思路2
