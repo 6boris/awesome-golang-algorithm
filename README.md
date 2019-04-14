@@ -20,14 +20,14 @@ LeetCode of algorithms with golang solution(updating:smiley:).
     <a href="https://codecov.io/gh/kylesliu/awesome-golang-leetcode">
         <img src="https://codecov.io/gh/kylesliu/awesome-golang-leetcode/branch/master/graph/badge.svg" />
     </a>
-    <a href="https://goreportcard.com/report/github.com/kylesliu/awesome-golang-leetcode">
-        <img src="https://goreportcard.com/badge/github.com/kylesliu/awesome-golang-leetcode" />
-    </a>
     <a href="https://img.shields.io/github/stars/kylesliu/awesome-golang-leetcode.svg?label=Stars&style=social">
         <img src="https://golangci.com/badges/github.com/kylesliu/awesome-golang-leetcode.svg" />
     </a>
     <a href="https://img.shields.io/github/stars/kylesliu/awesome-golang-leetcode.svg?label=Stars&style=social">
         <img src="https://img.shields.io/badge/All_Contributors-8-blue.svg" />
+    </a>
+    <a href="http://hits.dwyl.io/kylesliu/awesome-golang-leetcode">
+        <img src="http://hits.dwyl.io/kylesliu/awesome-golang-leetcode.svg" />
     </a>
 </p>
 
