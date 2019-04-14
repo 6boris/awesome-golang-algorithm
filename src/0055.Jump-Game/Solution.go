@@ -26,6 +26,25 @@ func canJump2(nums []int) bool {
 	return true
 }
 
+func canJump3(nums []int) bool {
+	index := make([]int, len(nums))
+	for i := 0; i < len(nums); i++ {
+		index[i] = nums[i] + i
+	}
+	jump, max_index := 0, index[0]
+	for jump < len(index) && jump <= max_index {
+		if max_index < index[jump] {
+			max_index = index[jump]
+		}
+		jump++
+	}
+
+	if jump == len(index) {
+		return true
+	}
+	return false
+}
+
 func Max(x, y int) int {
 	if x > y {
 		return x
