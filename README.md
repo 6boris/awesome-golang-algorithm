@@ -35,6 +35,11 @@ LeetCode of algorithms with golang solution(updating:smiley:).
 
 [![Stargazers over time](https://starcharts.herokuapp.com/kylesliu/awesome-golang-leetcode.svg)](https://starcharts.herokuapp.com/kylesliu/awesome-golang-leetcode)
 
+## Community
+
+* [leetbook](https://github.com/hk029/leetbook) 某位大佬写的Leetcode题解，不过已经不更新了
+* [LeetCode-in-Go](https://github.com/aQuaYi/LeetCode-in-Go) 某位算法大佬的Golang题解
+
 ## Contributors
 
 Thanks goes to these wonderful people ([emoji key](https://github.com/all-contributors/all-contributors#emoji-key)):
