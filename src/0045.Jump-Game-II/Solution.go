@@ -1,6 +1,7 @@
 package Solution
 
 import (
+	"fmt"
 	"math"
 )
 
@@ -52,6 +53,34 @@ func jump2(nums []int) int {
 		res++
 	}
 	return res
+}
+
+/**
+1
+
+*/
+func jump3(nums []int) int {
+	//	如果数组小于2，则说明不用跳跃返回0
+	if len(nums) < 2 {
+		return 0
+	}
+	//	当前可达到的最远位置，遍历过程中可达到最远位置，最小步数
+	current_max_index, pre_max_max_index, jump_min := nums[0], nums[0], 1
+
+	for i := 1; i < len(nums); i++ {
+		//	如果无法向前移动才进行跳跃
+		if i > current_max_index {
+			jump_min++
+			//	更新当前可以到达的最远位置
+			current_max_index = pre_max_max_index
+		}
+		if pre_max_max_index < nums[i]+i {
+			//	跟新最远位置
+			pre_max_max_index = nums[i] + i
+		}
+		fmt.Println("i:", i, current_max_index, pre_max_max_index, jump_min)
+	}
+	return jump_min
 }
 
 func Min(x, y int) int {
