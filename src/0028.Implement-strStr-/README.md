@@ -57,8 +57,49 @@ func strStr(haystack string, needle string) int {
 	return -1
 }
 ```
-### 思路2
 
+### 思路 2
+KMP 算法
+```go
+func strStr(haystack string, needle string) int {
+    prefixTable := calcPrefixTable(needle)
+    
+    i, j := 0, 0
+    for i < len(haystack) && j < len(needle) {
+        if -1 == j || haystack[i] == needle[j] {
+            i++
+            j++
+        } else {
+            if j == 0 {
+                i++
+            } else {
+            	j = prefixTable[j]
+            }
+        }
+    }
+    if j == len(needle) {
+        return i - j
+    }
+    return -1
+}
+
+func calcPrefixTable(str string) []int {
+    next := make([]int, len(str)+1)
+    length := 0
+    
+    for i := 2; i <= len(str); i++ {
+        for length > 0 && str[length] != str[i-1] {
+            length = next[length]
+        }
+        if str[length] == str[i-1] {
+            length++
+        }
+        next[i] = length;
+    }
+    
+    return next
+}
+```
 
 ## 结语
 
