@@ -1,48 +1,87 @@
-# [1. Add Sum][title]
+# [61. Rotate List][title]
 
 ## Description
 
-Given two binary strings, return their sum (also a binary string).
-
-The input strings are both **non-empty** and contains only characters `1` or `0`.
+Given a linked list, rotate the list to the right by k places, where k is non-negative.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: 1->2->3->4->5->NULL, k = 2
+Output: 4->5->1->2->3->NULL
+Explanation:
+rotate 1 steps to the right: 5->1->2->3->4->NULL
+rotate 2 steps to the right: 4->5->1->2->3->NULL
 ```
 
 **Example 2:**
 
 ```
-Input: a = "1010", b = "1011"
-Output: "10101"
+Input: 0->1->2->NULL, k = 4
+Output: 2->0->1->NULL
+Explanation:
+rotate 1 steps to the right: 2->0->1->NULL
+rotate 2 steps to the right: 1->2->0->NULL
+rotate 3 steps to the right: 0->1->2->NULL
+rotate 4 steps to the right: 2->0->1->NULL
 ```
 
-**Tags:** Math, String
+**Tags:** Linked List
 
 ## 题意
->给你两个二进制串，求其和的二进制串。
+> 给定一个链表和一个数字，将单链表向右移动 k 位。
 
 ## 题解
 
 ### 思路1
-> 按照小学算数那么来做，用 `carry` 表示进位，从后往前算，依次往前，每算出一位就插入到最前面即可，直到把两个二进制串都遍历完即可。
+1. 先计算出链表的长度，判断 k 是否大于链表的长度。
+1. 如果 k 大于链表的长度，取 k = k % len(LinkedList)
+1. 将链表变为环形链表。
+1. 移动 length - k - 1 位，然后断开链表。
 
 ```go
+/*
+ * @lc app=leetcode id=61 lang=golang
+ *
+ * [61] Rotate List
+ */
+/**
+ * Definition for singly-linked list.
+ * type ListNode struct {
+ *     Val int
+ *     Next *ListNode
+ * }
+ */
+func rotateRight(head *ListNode, k int) *ListNode {
+    if nil == head || 0 == k {
+		return head
+	}
+	head, length := cycleList(head)
+	if k >= length {
+		k = k % length
+	}
+	for i := 0; i < length - k - 1; i++ {
+		head = head.Next
+	}
+	p := head.Next
+	head.Next = nil
+	return p
+}
 
-```
-
-### 思路2
-> 思路2
-```go
-
+func cycleList(l *ListNode) (*ListNode, int) {
+	head, length := l, 1
+	for l.Next != nil {
+		l = l.Next
+		length++
+	}
+	l.Next = head
+	return head, length
+}
 ```
 
 ## 结语
 
 如果你同我一样热爱数据结构、算法、LeetCode，可以关注我 GitHub 上的 LeetCode 题解：[awesome-golang-leetcode][me]
 
-[title]: https://leetcode.com/problems/two-sum/description/
+[title]: https://leetcode.com/problems/rotate-list/description/
 [me]: https://github.com/kylesliu/awesome-golang-leetcode
