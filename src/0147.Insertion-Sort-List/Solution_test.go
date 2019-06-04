@@ -1,30 +1,33 @@
 package Solution
 
-import (
-	"strconv"
-	"testing"
-)
+import "testing"
 
 func TestSolution(t *testing.T) {
-	//	测试用例
-	cases := []struct {
+	TestCases := []struct {
 		name   string
-		inputs bool
-		expect bool
+		inputs []int
+		expect []int
 	}{
-		{"TestCase", true, true},
-		{"TestCase", true, true},
-		{"TestCase", false, false},
+		{
+			"TestCase 1",
+			[]int{4, 2, 1, 3},
+			[]int{1, 2, 3, 4},
+		},
+		{
+			"TestCase 2",
+			[]int{-1, 5, 3, 4, 0},
+			[]int{-1, 0, 3, 4, 5},
+		},
 	}
 
-	//	开始测试
-	for i, c := range cases {
-		t.Run(c.name+" "+strconv.Itoa(i), func(t *testing.T) {
-			//got := Solution(c.inputs)
-			//if !reflect.DeepEqual(got, c.expect) {
-			//	t.Fatalf("expected: %v, but got: %v, with inputs: %v",
-			//		c.expect, got, c.inputs)
-			//}
+	for _, c := range TestCases {
+		t.Run(c.name, func(t *testing.T) {
+			ret := Solution(UnmarshalListBySlice(c.inputs))
+			if !isEqual(ret, UnmarshalListBySlice(c.expect)) {
+				PrintList(ret)
+				PrintList(UnmarshalListBySlice(c.expect))
+				t.Fatalf("expected: %v, but got: %v, with inputs: %v", c.expect, ret, c.inputs)
+			}
 		})
 	}
 }

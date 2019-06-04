@@ -10,14 +10,14 @@ type ListNode struct {
 	Next *ListNode
 }
 
-//	正确解
-func Solution(head *ListNode) *ListNode {
-	var prev *ListNode
-	for head != nil {
-		head.Next, prev, head = prev, head, head.Next
-	}
-	return prev
-}
+////	正确解
+//func Solution(head *ListNode) *ListNode {
+//	var prev *ListNode
+//	for head != nil {
+//		head.Next, prev, head = prev, head, head.Next
+//	}
+//	return prev
+//}
 
 //	比较结果
 func isEqual(l1 *ListNode, l2 *ListNode) bool {
@@ -46,6 +46,7 @@ func PrintList(head *ListNode) {
 	fmt.Println()
 }
 
+
 //	更具数组反序列化链表
 func UnmarshalListBySlice(nums []int) *ListNode {
 	head := &ListNode{Val: -1, Next: nil}
@@ -68,3 +69,4 @@ func UnmarshalListByRand(max_num int, len int) *ListNode {
 	}
 	return head.Next
 }
+
