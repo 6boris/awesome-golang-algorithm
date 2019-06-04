@@ -1,6 +1,6 @@
 package Solution
 
-func Solution1(head *ListNode, m, n int) *ListNode {
+func Solution(head *ListNode, m, n int) *ListNode {
 	newHead := new(ListNode)
 	newHead.Next = head
 	current := newHead
