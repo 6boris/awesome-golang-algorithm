@@ -3,20 +3,20 @@ package Solution
 import "testing"
 
 func TestSolution(t *testing.T) {
-	TestCases := []struct{
-		name string
+	TestCases := []struct {
+		name   string
 		inputs []int
 		expect []int
 	}{
 		{
 			"TestCase 1",
-			[]int{4,2,1,3},
-			[]int{1,2,3,4},
+			[]int{4, 2, 1, 3},
+			[]int{1, 2, 3, 4},
 		},
 		{
 			"TestCase 2",
-			[]int{-1,5,3,4,0},
-			[]int{-1,0,3,4,5},
+			[]int{-1, 5, 3, 4, 0},
+			[]int{-1, 0, 3, 4, 5},
 		},
 	}
 
@@ -30,4 +30,14 @@ func TestSolution(t *testing.T) {
 			}
 		})
 	}
+}
+
+//	压力测试
+func BenchmarkSolution(b *testing.B) {
+
+}
+
+//	使用案列
+func ExampleSolution() {
+
 }

@@ -1,6 +1,7 @@
 # [147. Insertion Sort List][title]
 
 ## Description
+
 Sort a linked list using insertion sort.
 
 ### Algorithm of Insertion Sort:
@@ -55,6 +56,30 @@ func insertionSortList(head *ListNode) *ListNode {
     }
     return newHead.Next
 }
+
+
+Sort a linked list using insertion sort.
+
+![Sort](https://upload.wikimedia.org/wikipedia/commons/0/0f/Insertion-sort-example-300px.gif)
+
+**Tags:** Math, String
+
+## 题意
+> 使用插入排序对一个链表排序。
+
+## 题解
+
+### 思路1
+> 。。。。
+
+```go
+
+```
+
+### 思路2
+> 思路2
+```go
+
 ```
 
 ## 结语

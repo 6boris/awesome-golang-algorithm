@@ -4,7 +4,9 @@
 
 Reverse a linked list from position m to n. Do it in one-pass.
 
-**Note:**  1 ≤ m ≤ n ≤ length of list.
+**Note:**  1 ≤ m ≤ n ≤ length of list.\
+Note: 1 ≤ m ≤ n ≤ length of list.
+**Example 1:**
 
 ```
 Input: 1->2->3->4->5->NULL, m = 2, n = 4
@@ -15,6 +17,8 @@ Output: 1->4->3->2->5->NULL
 
 ## 题意
 > 给定一个单链表和两个数字 m 和 n，反转链表 m 到 n 的部分。
+>请将链表中第 nn 个节点和第 mm 个节点之间的部分翻转。
+ 链表最多只能遍历一遍。
 
 ## 题解
 
