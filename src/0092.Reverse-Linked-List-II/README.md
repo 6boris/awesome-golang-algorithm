@@ -1,37 +1,46 @@
-# [1. Add Sum][title]
+# [92. Reverse Linked List II][title]
 
 ## Description
 
-Given two binary strings, return their sum (also a binary string).
+Reverse a linked list from position m to n. Do it in one-pass.
 
-The input strings are both **non-empty** and contains only characters `1` or `0`.
-
-**Example 1:**
+**Note:**  1 ≤ m ≤ n ≤ length of list.
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: 1->2->3->4->5->NULL, m = 2, n = 4
+Output: 1->4->3->2->5->NULL
 ```
 
-**Example 2:**
-
-```
-Input: a = "1010", b = "1011"
-Output: "10101"
-```
-
-**Tags:** Math, String
+**Tags:** Linked List
 
 ## 题意
->给你两个二进制串，求其和的二进制串。
+> 给定一个单链表和两个数字 m 和 n，反转链表 m 到 n 的部分。
 
 ## 题解
 
 ### 思路1
-> 按照小学算数那么来做，用 `carry` 表示进位，从后往前算，依次往前，每算出一位就插入到最前面即可，直到把两个二进制串都遍历完即可。
+1. 链表先走 m 步，到达开始反转的起点，并记录下前一个节点和反转开始的节点。
+1. 开始反转链表，反转的长度位 n - m。
+1. 把链表连起来。
 
 ```go
+func reverseBetween(head *ListNode, m int, n int) *ListNode {
+    newHead := new(ListNode)
+    newHead.Next = head
+    current := newHead 
+    for i := 0; i < m - 1; i++ {
+       current = current.Next
+    }
 
+    prev := current
+    current = current.Next
+    for i := 0; i < n - m; i++ {
+       node := &ListNode{current.Next.Val, prev.Next}
+       prev.Next = node
+       current.Next = current.Next.Next
+    }
+    return newHead.Next
+}
 ```
 
 ### 思路2
@@ -44,5 +53,5 @@ Output: "10101"
 
 如果你同我一样热爱数据结构、算法、LeetCode，可以关注我 GitHub 上的 LeetCode 题解：[awesome-golang-leetcode][me]
 
-[title]: https://leetcode.com/problems/two-sum/description/
+[title]: https://leetcode.com/problems/reverse-linked-list-ii/description/
 [me]: https://github.com/kylesliu/awesome-golang-leetcode
