@@ -1,9 +1,7 @@
 package main
 
-import "github.com/kylesliu/awesome-golang-leetcode/cmd/leetcode"
-
 func main() {
-	problems := leetcode.GetSotedproblemsInstance()
+	//problems := leetcode.GetSotedproblemsInstance()
 	//problems := leetcode.GetProblemsJosn()
 
 	//for _, v := range problems {
