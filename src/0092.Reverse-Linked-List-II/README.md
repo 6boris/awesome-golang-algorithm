@@ -1,36 +1,52 @@
-# [1. Add Sum][title]
+# [92. Reverse Linked List II][title]
 
 ## Description
 
-Given two binary strings, return their sum (also a binary string).
+Reverse a linked list from position m to n. Do it in one-pass.
 
-The input strings are both **non-empty** and contains only characters `1` or `0`.
+Note: 1 ≤ m ≤ n ≤ length of list.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
-```
-
-**Example 2:**
-
-```
-Input: a = "1010", b = "1011"
-Output: "10101"
+Input: 1->2->3->4->5->NULL, m = 2, n = 4
+Output: 1->4->3->2->5->NULL
 ```
 
 **Tags:** Math, String
 
 ## 题意
->给你两个二进制串，求其和的二进制串。
+>请将链表中第 nn 个节点和第 mm 个节点之间的部分翻转。
+ 链表最多只能遍历一遍。
 
 ## 题解
 
 ### 思路1
-> 按照小学算数那么来做，用 `carry` 表示进位，从后往前算，依次往前，每算出一位就插入到最前面即可，直到把两个二进制串都遍历完即可。
+> 和problem 206类似
 
 ```go
+func reverseBetween(head *ListNode, m int, n int) *ListNode {
+	if m == n {
+		return head
+	}
+	dummy := new(ListNode)
+	head, dummy.Next = dummy, head
+
+	for i := 0; i < m-1; i++ {
+		head = head.Next
+	}
+	var curr, prev *ListNode = head.Next, nil
+	for i := 0; i < n-m+1; i++ {
+		next := curr.Next
+		curr.Next = prev
+		prev = curr
+		curr = next
+	}
+	head.Next.Next = curr
+	head.Next = prev
+
+	return dummy.Next
+}
 
 ```
 

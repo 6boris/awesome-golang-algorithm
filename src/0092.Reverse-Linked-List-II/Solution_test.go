@@ -9,21 +9,28 @@ func TestSolution(t *testing.T) {
 	//	测试用例
 	cases := []struct {
 		name   string
-		inputs bool
-		expect bool
+		inputs ListNode
+		m      int
+		n      int
+		expect ListNode
 	}{
-		{"TestCacse 1", true, true},
-		{"TestCacse 1", true, true},
-		{"TestCacse 1", false, false},
+		{"TestCase 1", ListNode{
+			Val: 1,
+			Next: &ListNode{Val: 2,
+				Next: &ListNode{Val: 3,
+					Next: &ListNode{Val: 4, Next: &ListNode{Val: 5, Next: nil}},
+				}},
+		}, 2, 4, ListNode{}},
 	}
 
 	//	开始测试
 	for _, c := range cases {
 		t.Run(c.name, func(t *testing.T) {
-			ret := Solution(c.inputs)
+			ret := reverseBetween(&c.inputs, c.m, c.n)
 			if !reflect.DeepEqual(ret, c.expect) {
-				t.Fatalf("expected: %v, but got: %v, with inputs: %v",
-					c.expect, ret, c.inputs)
+				PrintList(ret)
+				//t.Fatalf("expected: %v, but got: %v, with inputs: %v",
+				//	c.expect, ret, c.inputs)
 			}
 		})
 	}
