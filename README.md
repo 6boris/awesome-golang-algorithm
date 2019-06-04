@@ -35,6 +35,11 @@ LeetCode of algorithms with golang solution(updating:smiley:).
 
 [![Stargazers over time](https://starcharts.herokuapp.com/kylesliu/awesome-golang-leetcode.svg)](https://starcharts.herokuapp.com/kylesliu/awesome-golang-leetcode)
 
+## Summary
+
+- You can find the solution list of categories [here](https://leetcode.kyle.link/SUMMARY-LIST.html)
+
+
 ## Community
 
 * [leetbook](https://github.com/hk029/leetbook) 某位大佬写的Leetcode题解，不过已经不更新了
