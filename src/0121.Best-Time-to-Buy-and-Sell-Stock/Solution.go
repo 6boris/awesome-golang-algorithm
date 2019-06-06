@@ -1,7 +1,5 @@
 package Solution
 
-import "math"
-
 /**
 持有一股
 买卖一次
@@ -28,16 +26,24 @@ func maxProfit1(prices []int) int {
 //	Greedy
 //	扫描一遍
 func maxProfit2(prices []int) int {
-	min := math.MaxInt32
-	max := 0
-
+	profit, low := 0, prices[0]
 	for i := 0; i < len(prices); i++ {
-		if prices[i] < min {
-			min = prices[i]
-		} else if max < prices[i]-min {
-			max = prices[i] - min
-		}
+		profit = max(profit, prices[i]-low)
+		low = min(low, prices[i])
 	}
+	return profit
+}
 
-	return max
+func min(x, y int) int {
+	if x > y {
+		return y
+	}
+	return x
+}
+
+func max(x, y int) int {
+	if x > y {
+		return x
+	}
+	return y
 }

@@ -24,10 +24,39 @@ Explanation: The longest increasing subsequence is [2,3,7,101], therefore the le
 ## 题解
 
 ### 思路1
-> 按照小学算数那么来做，用 `carry` 表示进位，从后往前算，依次往前，每算出一位就插入到最前面即可，直到把两个二进制串都遍历完即可。
+> （动态规划）O(n2)
 
+- 用数组`dp[i]`记录以`nums[i]`结尾（即`nums[i]`为最后一个数字）的最长递增子序列的长度，则递推方程为`dp[i]=max(dp[j]+1)`，其中要求`1≤j<i`且`nums[j]<nums[i]`。
+
+> 时间复杂度分析：
+
+- 对每个i(1≤i≤n)，都需要从1遍历到i，则时间复杂度为O(n2)，空间复杂度的话需要一个额外的dp数组，空间复杂度为O(n2)。
+
+> Code
 ```go
+func lengthOfLIS(nums []int) int {
+	if len(nums) == 0 {
+		return 0
+	}
+	dp, ans := make([]int, len(nums)), 1
 
+	for i := 0; i < len(nums); i++ {
+		dp[i] = 1
+	}
+
+	for i := 1; i < len(nums); i++ {
+		for j := 0; j < i; j++ {
+			if nums[i] > nums[j] {
+				dp[i] = max(dp[i], dp[j]+1)
+			}
+			//fmt.Println(i, j, ans, dp, nums)
+		}
+		if dp[i] > ans {
+			ans = dp[i]
+		}
+	}
+	return ans
+}
 ```
 
 ### 思路2
