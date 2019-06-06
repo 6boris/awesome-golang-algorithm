@@ -11,13 +11,13 @@ import (
 
 //	Greedy
 func maxProfit(prices []int) int {
-	maxprofix := 0
+	profit := 0
 	for i := 1; i < len(prices); i++ {
 		if prices[i] > prices[i-1] {
-			maxprofix += prices[i] - prices[i-1]
+			profit += prices[i] - prices[i-1]
 		}
 	}
-	return maxprofix
+	return profit
 }
 
 //	DP
@@ -26,6 +26,7 @@ func maxProfit(prices []int) int {
 //dp[i][0] = max(dp[i-1][1]+price[i],dp[i-1][0]) --> Sell on day i or do nothing
 //dp[i][1] = max(dp[i-1][0])-price[i],dp[i-1][1]) --> Buy on day i or do nothing
 //dp[0][0]=0,dp[0][1]=INT_MIN
+
 func maxProfit2(prices []int) int {
 	// 初始化DP
 	n := len(prices)

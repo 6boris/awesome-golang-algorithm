@@ -18,14 +18,20 @@ If you have figured out the O(*n*) solution, try coding another solution using t
 
 **Tags:** Array, Divide and Conquer, Dynamic Programming
 
+## 题意
+> 给定一个整数数组 `nums` ，找到`和`最大的连续子序列（至少包含一个数字），返回该子序列的和 
 
 ## 题解
 ### 思路1
-> 普通DP 找到公式就好了
-```$xslt
-如果nums[0]>=0，则sum = sum + nums[1]
-如果nums[0]<0，则sum = nums[1]，
-```
+> (动态规划) O(n)
+
+- 1.设 dp(i)dp(i) 表示以第`i`y个数字为结尾的最大连续子序列的`和`是多少。
+- 2.初始化 dp(0)=nums[0]dp(0)=nums[0]。
+- 3.转移方程 dp(i)=max(dp(i−1)+nums[i],nums[i])dp(i)=max(dp(i−1)+nums[i],nums[i])。可以理解为当前有两种决策，一种是将第`i`个数字和前边的数字拼接起来；另一种是第`i`个数字单独作为一个新的子序列的开始。
+- 4.最终答案为ans=max(dp(k)),0≤k<n。
+
+> 时间复杂度
+- 状态数为 O(n)，决策数为 O(1)，故总时间复杂度为 O(n)。
 
 ```go
 func maxSubArray(nums []int) int {
@@ -33,14 +39,54 @@ func maxSubArray(nums []int) int {
 	dp[0] = nums[0]
 
 	for i := 1; i < len(nums); i++ {
-		dp[i] = Max(nums[i], nums[i]+dp[i-1])
-		ans = Max(ans, dp[i])
+		dp[i] = max(nums[i], nums[i]+dp[i-1])
+		ans = max(dp[i], ans)
 	}
-
 	return ans
 }
 ```
 ### 思路2
+> (分治) O(nlogn)
+
+- 考虑区间 `[l, r]` 内的答案如何计算，令 `mid = (l + r) / 2`，则该区间的答案由三部分取最大值，分别是：
+    - (1). 区间 `[l, mid]` 内的答案（递归计算）。
+    - (2). 区间 `[mid + 1, r]` 内的答案（递归计算）。
+    - (3). 跨越 mid和mid+1 的连续子序列。
+- 其中，第(3)部分只需要从 `mid` 开始向 `l` 找连续的最大值，以及从 `mid+1` 开始向 `r` 找最大值即可，在线性时间内可以完成。
+- 递归终止条件显然是 l==r ，此时直接返回` nums[l]`。
+
+> 时间复杂度
+
+- 由递归主定理 S(n)=2S(n/2)+O(n)，解出总时间复杂度为 O(nlogn)。
+- 或者每一层时间复杂度是 O(n)，总共有 O(logn) 层，故总时间复杂度是 O(nlogn)。
+
+> Code
+```go
+func maxSubArray(nums []int) int {
+	return calc(0, len(nums)-1, nums)
+}
+
+func calc(l, r int, nums []int) int {
+	if l == r {
+		return nums[l]
+	}
+	mid := (l + r) >> 1
+	lmax, lsum, rmax, rsum := nums[mid], 0, nums[mid+1], 0
+
+	for i := mid; i >= 1; i-- {
+		lsum += nums[i]
+		lmax = max(lmax, lsum)
+	}
+
+	for i := mid + 1; i <= r; i++ {
+		rsum += nums[i]
+		rmax = max(rmax, rsum)
+	}
+
+	return max(max(calc(l, mid, nums), calc(mid+1, r, nums)), lmax+rmax)
+}
+
+```
 
 
 ## 结语

@@ -23,15 +23,40 @@ Output: "10101"
 **Tags:** Math, String
 
 ## 题意
->只允许买卖一次
+>假设你有一个数组，其中第i个元素表示第i天某个股票的价格。
+ 如果您只允许完成至多一笔交易（即买入一只股票并卖出一只股票），则设计一种算法以找到最大利润。
+ 必须先购买股票再出售股票。
 
 ## 题解
 
 ### 思路1
-> 按照小学算数那么来做，用 `carry` 表示进位，从后往前算，依次往前，每算出一位就插入到最前面即可，直到把两个二进制串都遍历完即可。
+> 贪心
+
+- 遍历一次即可得出结果
 
 ```go
+func maxProfit2(prices []int) int {
+	profit, low := 0, prices[0]
+	for i := 0; i < len(prices); i++ {
+		profit = max(profit, prices[i]-low)
+		low = min(low, prices[i])
+	}
+	return profit
+}
 
+func min(x, y int) int {
+	if x > y {
+		return y
+	}
+	return x
+}
+
+func max(x, y int) int {
+	if x > y {
+		return x
+	}
+	return y
+}
 ```
 
 ### 思路2
