@@ -1,24 +1,40 @@
 package Solution
 
 import (
+	"reflect"
+	"strconv"
 	"testing"
 )
 
 func TestSolution(t *testing.T) {
-	t.Run("Test-1", func(t *testing.T) {
-		got := countAndSay(1)
-		want := "1"
-		if got != want {
-			t.Error("GOT:", got, "WANT:", want)
-		}
-	})
+	//	测试用例
+	cases := []struct {
+		name   string
+		inputs int
+		expect string
+	}{
+		{"TestCase", 1, "1"},
+		{"TestCase", 4, "1211"},
+	}
 
-	t.Run("Test-2", func(t *testing.T) {
-		got := countAndSay(4)
-		want := "1211"
-		if got != want {
-			t.Error("GOT:", got, "WANT:", want)
-		}
-	})
+	//	开始测试
+	for i, c := range cases {
+		t.Run(c.name+" "+strconv.Itoa(i), func(t *testing.T) {
+			got := countAndSay(c.inputs)
+			if !reflect.DeepEqual(got, c.expect) {
+				t.Fatalf("expected: %v, but got: %v, with inputs: %v",
+					c.expect, got, c.inputs)
+			}
+		})
+	}
+}
+
+//	压力测试
+func BenchmarkSolution(b *testing.B) {
+
+}
+
+//	使用案列
+func ExampleSolution() {
 
 }
