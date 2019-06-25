@@ -1,5 +1,7 @@
 package Solution
 
+import "fmt"
+
 func countAndSay(n int) string {
 	if n < 1 {
 		return ""
@@ -13,6 +15,7 @@ func countAndSay(n int) string {
 			cnt++
 			if j == len(say)-1 || say[j] != say[j+1] {
 				nextSay = append(nextSay, 48+cnt, say[j]) // 48 - the ASCII code point of "0"
+				fmt.Println(string(nextSay), string(48+cnt), string( say[j]))
 				cnt = 0
 			}
 		}

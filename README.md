@@ -42,9 +42,10 @@ LeetCode of algorithms with golang solution(updating:smiley:).
 
 ## Community
 
-* [ACWING](https://www.acwing.com/) 一些算法竞赛大佬创建的平台，挺适合入门的。
-* [leetbook](https://github.com/hk029/leetbook) 某位大佬写的Leetcode题解，不过已经不更新了
-* [LeetCode-in-Go](https://github.com/aQuaYi/LeetCode-in-Go) 某位算法大佬的Golang题解
+- [ACWING](https://www.acwing.com/) 一些算法竞赛大佬创建的平台，挺适合入门的。
+- [leetbook](https://github.com/hk029/leetbook) 某位大佬写的Leetcode题解，不过已经不更新了
+- [WANG leetcode](https://github.com/wind-liang/leetcode) 某位朋友的Leetcode题解。经常更新，解释到位。
+- [LeetCode-in-Go](https://github.com/aQuaYi/LeetCode-in-Go) 某位算法大佬的Golang题解
 
 ## Contributors
 
