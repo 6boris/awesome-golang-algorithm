@@ -1,43 +1,38 @@
-# [1. Add Sum][title]
+# [76. Minimum Window Substring][title]
 
 ## Description
 
-Given two binary strings, return their sum (also a binary string).
-
-The input strings are both **non-empty** and contains only characters `1` or `0`.
-
+Given a string S and a string T, find the minimum window in S which will contain all the characters in T in complexity O(n).
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: S = "ADOBECODEBANC", T = "ABC"
+Output: "BANC"
 ```
 
-**Example 2:**
-
-```
-Input: a = "1010", b = "1011"
-Output: "10101"
-```
 
 **Tags:** Math, String
 
 ## 题意
->给你两个二进制串，求其和的二进制串。
+>给定两个字符串：SS 和 TT，请找到 SS 中最短的一段，包含 TT 中所有字符。
+
+- 注意
+如果 SS 中不存在这样的方案，则返回 ""；
+如果 SS 中存在这样的方案，则数据保证答案一定唯一；
 
 ## 题解
 
 ### 思路1
-> 按照小学算数那么来做，用 `carry` 表示进位，从后往前算，依次往前，每算出一位就插入到最前面即可，直到把两个二进制串都遍历完即可。
-
-```go
+> (滑动窗口) O(n)
 
 ```
-
-### 思路2
-> 思路2
-```go
-
+首先用哈希表统计出 TT 中所有字符出现的次数，哈希表可以用C++中的 unordered_map，不了解用法的同学可以点这里。
+  然后我们用两个指针 i,j(i≥j)i,j(i≥j)来扫描整个字符串，同时用一个哈希表统计 i,ji,j 之间每种字符出现的次数，每次遍历需要的操作如下：
+  
+加入 s[i]s[i]，同时更新哈希表；
+检查 s[j]s[j] 是否多余，如果是，则移除 s[j]s[j]；
+检查当前窗口是否已经满足 TT 中所有字符，如果是，则更新答案；
+时间复杂度分析：两个指针都严格递增，最多移动 nn 次，所以总时间复杂度是 O(n)O(n)。
 ```
 
 ## 结语
