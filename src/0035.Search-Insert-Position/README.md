@@ -39,23 +39,29 @@ Output: 0
 
 ## 题解
 ### 思路1
-题意是让你从一个没有重复元素的已排序数组中找到插入位置的索引。因为数组已排序，所以我们可以想到二分查找法，因为查找到的条件是找到第一个等于或者大于 `target` 的元素的位置，所以二分法略作变动即可。
+
+- 直接二分查找小于等于目标值的第一个位置。
+- 如果nums[l] >= target，说明找到了target或者数组中所有元素都比target小，则返回l
+- 否则说明数组所有元素都比target大，此时l一定是0，故返回l。
+时间复杂度
+
 ```go
 func searchInsert(nums []int, target int) int {
-	left := 0
-	right := len(nums) - 1
-	mid := (right + left) >> 1
-	for left <= right {
-		if target <= nums[mid] {
-			right = mid - 1
-		} else {
+	left, right := 0, len(nums)-1
+	for left < right {
+		mid := left + (right-left)/2
+		if nums[mid] < target {
 			left = mid + 1
+		} else {
+			right = mid
 		}
-		mid = (right + left) >> 1
-
+	}
+	if target > nums[left] {
+		left++
 	}
 	return left
 }
+
 ```
 ### 思路2
 
