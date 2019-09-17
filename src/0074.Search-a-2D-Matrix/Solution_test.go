@@ -2,6 +2,7 @@ package Solution
 
 import (
 	"reflect"
+	"strconv"
 	"testing"
 )
 
@@ -9,21 +10,29 @@ func TestSolution(t *testing.T) {
 	//	测试用例
 	cases := []struct {
 		name   string
-		inputs bool
+		matrix [][]int
+		target int
 		expect bool
 	}{
-		{"TestCacse 1", true, true},
-		{"TestCacse 1", true, true},
-		{"TestCacse 1", false, false},
+		{"TestCase", [][]int{
+			{1, 3, 5, 7},
+			{10, 11, 16, 20},
+			{23, 30, 34, 50},
+		}, 3, true},
+		{"TestCase", [][]int{
+			{1, 3, 5, 7},
+			{10, 13, 16, 20},
+			{23, 30, 34, 50},
+		}, 13, true},
 	}
 
 	//	开始测试
-	for _, c := range cases {
-		t.Run(c.name, func(t *testing.T) {
-			ret := Solution(c.inputs)
-			if !reflect.DeepEqual(ret, c.expect) {
+	for i, c := range cases {
+		t.Run(c.name+" "+strconv.Itoa(i), func(t *testing.T) {
+			got := searchMatrix(c.matrix, c.target)
+			if !reflect.DeepEqual(got, c.expect) {
 				t.Fatalf("expected: %v, but got: %v, with inputs: %v",
-					c.expect, ret, c.inputs)
+					c.expect, got, c.matrix)
 			}
 		})
 	}
