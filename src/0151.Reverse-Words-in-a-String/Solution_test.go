@@ -16,7 +16,6 @@ func TestSolution(t *testing.T) {
 		{"TestCase", "the sky is blue", "blue is sky the"},
 		{"TestCase", "  hello world!  ", "world! hello"},
 		{"TestCase", "a good   example", "example good a"},
-		{"TestCase", "eht yks si eulb", "blue is sky the"},
 	}
 
 	//	开始测试

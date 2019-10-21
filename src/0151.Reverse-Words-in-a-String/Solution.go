@@ -20,3 +20,17 @@ func reverseWords(s string) string {
 
 	return strings.Join(words, " ")
 }
+
+func reverseWords2(s string) string {
+	words := strings.Fields(s)
+	return strings.Join(reverseSlice(words), " ")
+}
+
+// Helper func that reverses the elements of a string slice.
+func reverseSlice(s []string) []string {
+	size := len(s)
+	for i := range(s[:size/2]) {
+		s[i], s[size-1-i] = s[size-1-i], s[i]
+	}
+	return s
+}
