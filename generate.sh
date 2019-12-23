@@ -8,6 +8,7 @@ git reset --hard origin/master
 git pull
 
 #   GitBook
+#npm install gitbook-cli -g
 #gitbook serve --config book.json . gitbook
 gitbook build --config book.json . gitbook
 
