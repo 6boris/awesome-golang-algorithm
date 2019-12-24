@@ -39,6 +39,7 @@ LeetCode of algorithms with golang solution(updating:smiley:).
 
 ## Community
 
+- [leetcode](https://github.com/wind-liang/leetcode) leetcode 顺序刷题，详细通俗题解 
 - [LeetCode-Go](https://github.com/halfrost/LeetCode-Go) 同样是用Golang刷 Leetcode 但是人家写的比我好 :laughing: 
 - [leetbook](https://github.com/hk029/leetbook) 某位大佬写的Leetcode题解，不过已经不更新了
 - [WANG leetcode](https://github.com/wind-liang/leetcode) 某位朋友的Leetcode题解。经常更新，解释到位。
