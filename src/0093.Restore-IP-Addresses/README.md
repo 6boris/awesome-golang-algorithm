@@ -1,48 +1,66 @@
-# [1. Add Sum][title]
+# [93. Restore IP Addresses][title]
 
 ## Description
 
-Given two binary strings, return their sum (also a binary string).
-
-The input strings are both **non-empty** and contains only characters `1` or `0`.
+Given a string containing only digits, restore it by returning all possible valid IP address combinations.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
-```
-
-**Example 2:**
-
-```
-Input: a = "1010", b = "1011"
-Output: "10101"
+Input: "25525511135"
+Output: ["255.255.11.135", "255.255.111.35"]
 ```
 
 **Tags:** Math, String
 
 ## 题意
->给你两个二进制串，求其和的二进制串。
+> 求2数之和
 
 ## 题解
 
 ### 思路1
-> 按照小学算数那么来做，用 `carry` 表示进位，从后往前算，依次往前，每算出一位就插入到最前面即可，直到把两个二进制串都遍历完即可。
+> 直接暴力搜索出所有合法方案。
+  合法的IP地址由四个0到255的整数组成。我们直接枚举四个整数的位数，然后判断每个数的范围是否在0到255。
+  时间复杂度分析：一共 nn 个数字，n−1n−1 个数字间隔，相当于从 n−1n−1 个数字间隔中挑3个断点，所以计算量是 O(C3n−1)O(Cn−13)。
 
 ```go
+func restoreIpAddresses(s string) []string {
+	var result []string
+	dfs(s, []string{}, &result)
+	return result
+}
+
+func dfs(s string, temp []string, result *[]string) {
+	if len(temp) == 4 && len(s) == 0 {
+		*result = append(*result, strings.Join(temp, "."))
+		return
+	}
+
+	if len(temp) == 4 || len(s) > 3*(4-len(temp)) || len(s) < (4-len(temp)) {
+		return
+	}
+
+	for i := 1; i <= 3; i++ {
+		if i > len(s) {
+			continue
+		}
+		num, _ := strconv.Atoi(s[:i])
+		if s[:i] != strconv.Itoa(num) || num > 255 {
+			continue
+		}
+
+		temp = append(temp, s[:i])
+		dfs(s[i:], temp, result)
+		temp = temp[:len(temp)-1]
+	}
+}
 
 ```
 
-### 思路2
-> 思路2
-```go
-
-```
 
 ## 结语
 
 如果你同我一样热爱数据结构、算法、LeetCode，可以关注我 GitHub 上的 LeetCode 题解：[awesome-golang-leetcode][me]
 
-[title]: https://leetcode.com/problems/two-sum/description/
+[title]: https://leetcode.com/problems/restore-ip-addresses/
 [me]: https://github.com/kylesliu/awesome-golang-leetcode
