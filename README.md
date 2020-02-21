@@ -3,8 +3,8 @@
 LeetCode of algorithms with golang solution(updating:smiley:).
 
 <p align="center">
-    <img src="http://s.gin.sh/logo/golang-3.png">
-    <img src="http://s.gin.sh/logo/leetcode-2.png">
+    <img src="https://s.gin.sh/logo/go/PNG/Go-Logo_Aqua.png" width="160" height="130">
+    <img src="http://s.gin.sh/logo/leetcode.png" width="250" height="130">
 </p>
 
 <p align="center">
