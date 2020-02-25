@@ -1,7 +1,6 @@
 package Solution
 
 import (
-	"reflect"
 	"strconv"
 	"testing"
 )
@@ -21,9 +20,17 @@ func TestSolution(t *testing.T) {
 	for i, c := range cases {
 		t.Run(c.name+" "+strconv.Itoa(i), func(t *testing.T) {
 			got := diffWaysToCompute(c.inputs)
-			if !reflect.DeepEqual(got, c.expect) {
-				t.Fatalf("expected: %v, but got: %v, with inputs: %v",
-					c.expect, got, c.inputs)
+			if len(got) != len(c.expect) {
+				t.Fatalf("expected: %v, but got: %v, with inputs: %v", c.expect, got, c.inputs)
+			}
+			m := make(map[int]int)
+			for v := range got {
+				m[v]++
+			}
+			for v := range c.expect {
+				if _, ok := m[v]; !ok {
+					t.Fatalf("expected: %v, but got: %v, with inputs: %v", c.expect, got, c.inputs)
+				}
 			}
 		})
 	}
