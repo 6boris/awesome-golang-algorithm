@@ -19,3 +19,4 @@ node_modules/
 /gitbook
 .env.yml
 /python
+go.sum
