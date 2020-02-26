@@ -4,7 +4,7 @@ LeetCode of algorithms with golang solution(updating:smiley:).
 
 <p align="center">
     <img src="https://s.gin.sh/logo/go/PNG/Go-Logo_Aqua.png"  height="90">
-    <img src="httpss://s.gin.sh/logo/leetcode.png" height="90">
+    <img src="https://s.gin.sh/logo/leetcode.png" height="90">
 </p>
 
 <p align="center">
