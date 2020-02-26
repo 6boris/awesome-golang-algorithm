@@ -2,7 +2,7 @@
   "root": "",
   "title": "awesome-golang-leetcode",
   "author": "Kyle Liu",
-  "description": "记录Gitbook的配置和一些插件的使用",
+  "description": "LeetCode 的 golang 题解",
   "language": "en",
   "gitbook" : "3.2.3",
   "structure.readme": "README.md",
@@ -19,7 +19,8 @@
     "github",
     "advanced-emoji",
     "flexible-alerts",
-    "favicon-plus"
+    "favicon-plus",
+    "disqus"
   ],
 
   "pluginsConfig": {
@@ -28,6 +29,9 @@
     "output": "book output path",
     "github": {
       "url": "https://github.com/kylesliu/awesome-golang-leetcode"
+    },
+    "disqus": {
+      "shortName": "awesome-golang-leetcode"
     },
     "sharing": {
       "weibo": true,
