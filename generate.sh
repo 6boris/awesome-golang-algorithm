@@ -5,7 +5,7 @@
 #git reset --hard
 #git fetch --all
 #git reset --hard origin/master
-#git pull
+git pull
 
 #   GitBook
 #npm install gitbook-cli -g
