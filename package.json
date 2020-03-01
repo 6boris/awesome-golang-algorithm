@@ -7,6 +7,8 @@
     "all-contributors-cli": "^5.11.0"
   },
   "dependencies": {
-    "gitbook-plugin-advanced-emoji": "^0.2.2"
+    "gitbook-plugin-advanced-emoji": "^0.2.2",
+    "gitbook-plugin-baidu": "^0.1.0",
+    "gitbook-plugin-sitemap": "^1.2.0"
   }
 }

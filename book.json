@@ -20,7 +20,8 @@
     "advanced-emoji",
     "flexible-alerts",
     "favicon-plus",
-    "disqus"
+    "disqus",
+    "sitemap"
   ],
 
   "pluginsConfig": {
@@ -31,7 +32,10 @@
       "url": "https://github.com/kylesliu/awesome-golang-leetcode"
     },
     "disqus": {
-      "shortName": "awesome-golang-leetcode"
+      "shortName": "go-leetcode"
+    },
+    "sitemap": {
+      "hostname": "https://leetcode.gin.sh/"
     },
     "sharing": {
       "weibo": true,
