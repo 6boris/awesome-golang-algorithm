@@ -2,6 +2,8 @@ package leetcode
 
 import (
 	"encoding/json"
+	"errors"
+	"fmt"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -32,6 +34,7 @@ type Problem struct {
 	Frequency  int        `json:"frequency"`
 	Progress   int        `json:"progress"`
 	PathName   string     `json:"path_name"`
+	DirPath    string     `json:"dir_path"`
 }
 type Stat struct {
 	QuestionID          int    `json:"question_id"`
@@ -80,7 +83,7 @@ func GetProblemsInstance() []Problem {
 	return leetcode.StatStatusPairs
 }
 
-func GetSotedproblemsInstance() []Problem {
+func GetSortedProblemsInstance() []Problem {
 	problems := GetProblemsInstance()
 	//	插入排序
 	problems = sortProblems(problems)
@@ -102,7 +105,7 @@ func sortProblems(problems []Problem) []Problem {
 	return problems
 }
 
-func GetProblemsJosn() string {
+func GetProblemsJson() string {
 	problems := GetProblemsInstance()
 	problem_string, err := json.MarshalIndent(problems, " ", " ")
 	if err != nil {
@@ -149,11 +152,23 @@ func formatId(id int) string {
 func formatName(name string) string {
 	str := ""
 	for i, v := range name {
-		if v == ' ' {
+		if v == ' ' && name[i-1] != '-' {
 			str = str + "-"
 			continue
 		}
-		if v == '(' {
+		if v == ' ' {
+			continue
+		}
+		if v == '`' {
+			str = str + "-"
+			continue
+		}
+		if v == '%' {
+			str = str + "p"
+			continue
+		}
+
+		if v == '(' && name[i-1] != '-' {
 			str = str + "-"
 			continue
 		}
@@ -162,6 +177,13 @@ func formatName(name string) string {
 			continue
 		}
 		if v == ',' {
+			continue
+		}
+		// ' 过滤
+		if v == 39 {
+			continue
+		}
+		if v == '?' {
 			continue
 		}
 		if i > 0 && name[i-1] == '-' {
@@ -174,4 +196,19 @@ func formatName(name string) string {
 		name = name[:len(name)-1]
 	}
 	return str
+}
+
+func UrlPath(path string) error {
+	resp, err := http.Get(path)
+	if err != nil {
+		fmt.Println(err)
+		return errors.New(path + " " + err.Error())
+	}
+
+	if resp.StatusCode != 200 {
+		fmt.Println(resp.StatusCode)
+		return errors.New(string(resp.StatusCode))
+	}
+
+	return nil
 }
