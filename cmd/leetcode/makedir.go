@@ -7,7 +7,7 @@ import (
 	"os"
 )
 
-const SOLUTIONS_APTH = "solutions/"
+const SOLUTIONS_PATH = "src/"
 const SOURCE_SOLUTION_FILE_PATH = "cmd/template/solution/solution.go"
 const SOURCE_SOLUTION_TEST_FILE_PATH = "cmd/template/solution/solution_test.go"
 const SOURCE_SOLUTION_README_FILE_PATH = "cmd/template/solution/README.md"
@@ -28,17 +28,18 @@ func MakeDir(problems []Problem) {
 			continue
 		}
 
-		if is_DirExists, _ := PathExists(SOLUTIONS_APTH + problems[i].PathName); is_DirExists {
-			log.Println("目录已经存在：", SOLUTIONS_APTH+problems[i].PathName)
+		if is_DirExists, _ := PathExists(SOLUTIONS_PATH + problems[i].PathName); is_DirExists {
+			log.Println("目录已经存在：", SOLUTIONS_PATH+problems[i].PathName)
 		} else {
-			err := os.Mkdir(SOLUTIONS_APTH+problems[i].PathName, os.ModePerm)
+			err := os.Mkdir(SOLUTIONS_PATH+problems[i].PathName, os.ModePerm)
 			if err != nil {
 				log.Printf("目录创建失败:%s", err.Error())
 			} else {
 				//	复制文件
 				log.Println("开始复制文件：")
-				copy(SOURCE_SOLUTION_FILE_PATH, SOLUTIONS_APTH+problems[i].PathName+"/solution.go")
-				copy(SOURCE_SOLUTION_TEST_FILE_PATH, SOLUTIONS_APTH+problems[i].PathName+"/solution_test.go")
+				copy(SOURCE_SOLUTION_FILE_PATH, SOLUTIONS_PATH+problems[i].PathName+"/Solution.go")
+				copy(SOURCE_SOLUTION_TEST_FILE_PATH, SOLUTIONS_PATH+problems[i].PathName+"/Solution_test.go")
+				GenerateReadme(problems[i])
 			}
 		}
 
