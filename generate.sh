@@ -19,10 +19,10 @@ git pull
 #all-contributors add kylesliu code,blog,design,doc
 #all-contributors generate
 
-rm -rf public
+#rm -rf public
 rm -rf gitbook
 
-mkdir public
+#mkdir public
 mkdir gitbook
 
 cp -rfv src/* gitbook
@@ -33,3 +33,4 @@ cp CONTRIBUTOR.md gitbook
 gitbook build --config book.json gitbook public --timing --log debug
 #gitbook serve --config book.json gitbook public
 
+# nohup sh generate.sh >generate.log 2>&1 &
