@@ -17,6 +17,7 @@
 coverage.txt
 node_modules/
 /gitbook
+/public
 .env.yml
 /python
 go.sum

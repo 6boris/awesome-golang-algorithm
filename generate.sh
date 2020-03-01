@@ -1,11 +1,11 @@
 #!/usr/bin/env bash#!/usr/bin/env bash
 
 # Git
-git checkout master
-git reset --hard
-git fetch --all
-git reset --hard origin/master
-git pull
+#git checkout master
+#git reset --hard
+#git fetch --all
+#git reset --hard origin/master
+#git pull
 
 #   GitBook
 #npm install gitbook-cli -g
@@ -25,7 +25,7 @@ rm -rf gitbook
 mkdir public
 mkdir gitbook
 
-#cp -rfv src/* gitbook
+cp -rfv src/* gitbook
 cp README.md gitbook
 cp SUMMARY.md gitbook
 cp SUMMARY-LIST.md gitbook
