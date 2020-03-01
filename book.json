@@ -16,6 +16,7 @@
     }
   },
   "plugins": [
+    "-search",
     "github",
     "advanced-emoji",
     "flexible-alerts",
