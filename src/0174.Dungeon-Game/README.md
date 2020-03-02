@@ -13,16 +13,86 @@ Output: "100"
 ```
 
 ## 题意
-> ...
+> 给定一个整数数组，计算给定区间中所有数的和。
+
+> 注意： 
+- 你可以假设询问过程中数组不会被修改；
+- sumRange()会被调用多次；
 
 ## 题解
 
 ### 思路1
-> ...
-Dungeon Game
+> 暴力循环求解
+>时间复杂度 O(N^2)  空间复杂度 O(1)
 ```go
+package main
+
+type NumArray struct {
+	Sum []int
+}
+func Constructor(nums []int) NumArray {
+	var s NumArray
+	s.Sum = nums
+	return s
+}
+
+func (this *NumArray) SumRange(i int, j int) int {
+	ans := 0
+	for k := i; k <= j; k++ {
+		ans += this.Sum[k]
+	}
+	return ans
+}
+```
+### 思路2
+> 将结果全部缓存
+> 时间复杂度 O(N^2)  空间复杂度 O(N^2)
+```go
+package main
+
+type NumArray struct {
+	m   map[[2]int]int
+}
+func Constructor(nums []int) NumArray {
+	s := NumArray{m: map[[2]int]int{}}
+
+	for i := 0; i < len(nums); i++ {
+		sum := 0
+		for j := i; j < len(nums); j++ {
+			sum += nums[j]
+			s.m[[2]int{i, j}] = sum
+		}
+	}
+	return s
+}
+
+func (this *NumArray) SumRange(i int, j int) int {
+	return this.m[[2]int{i, j}]
+}
 ```
 
+### 思路3
+> 动态规划
+> 时间复杂度 O(N^2)  空间复杂度 O(N)
+```go
+package main
+
+type NumArray struct {
+	Sum []int
+}
+func Constructor(nums []int) NumArray {
+	var res NumArray
+	res.Sum = make([]int, len(nums)+1)
+	for k, v := range nums {
+		res.Sum[k+1] = res.Sum[k] + v
+	}
+	return res
+}
+
+func (this *NumArray) SumRange(i int, j int) int {
+	return this.Sum[j+1] - this.Sum[i]
+}
+```
 
 ## 结语
 
