@@ -35,4 +35,4 @@ gitbook build --config book.json gitbook public_new --timing --log debug
 
 # nohup sh generate.sh >generate.log 2>&1 &
 
-rm -rf public && mv public_new public
+cp -rfv  public_new public
