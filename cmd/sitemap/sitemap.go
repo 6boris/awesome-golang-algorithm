@@ -10,7 +10,7 @@ type Config struct {
 }
 
 type SiteMap struct {
-	Url []UrlSet
+	UrlSet []UrlSet `xml:"urlset"`
 }
 
 func New(problems []leetcode.Problem) SiteMap {
@@ -22,6 +22,10 @@ func New(problems []leetcode.Problem) SiteMap {
 }
 
 type UrlSet struct {
-	Loc     string
-	Lastmod string
+	Url []Url `xml:"url"`
+}
+
+type Url struct {
+	Loc     string `xml:"loc"`
+	Lastmod string `xml:"lastmod"`
 }

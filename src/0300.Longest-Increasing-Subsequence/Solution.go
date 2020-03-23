@@ -4,12 +4,15 @@ import (
 	"sort"
 )
 
+//	dp[i] = dp[i-1] + 1
+
 func lengthOfLIS(nums []int) int {
 	if len(nums) == 0 {
 		return 0
 	}
 	dp, ans := make([]int, len(nums)), 1
 
+	//	子序列最少要包含自己
 	for i := 0; i < len(nums); i++ {
 		dp[i] = 1
 	}
@@ -19,11 +22,8 @@ func lengthOfLIS(nums []int) int {
 			if nums[i] > nums[j] {
 				dp[i] = max(dp[i], dp[j]+1)
 			}
-			//fmt.Println(i, j, ans, dp, nums)
 		}
-		if dp[i] > ans {
-			ans = dp[i]
-		}
+		ans = max(dp[i], ans)
 	}
 	return ans
 }
