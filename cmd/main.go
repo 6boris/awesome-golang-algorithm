@@ -1,11 +1,16 @@
 package main
 
 import (
+	"fmt"
 	"github.com/kylesliu/awesome-golang-leetcode/cmd/leetcode"
+	"github.com/kylesliu/awesome-golang-leetcode/cmd/sitemap"
 )
 
 func main() {
 	problems := leetcode.GetSortedProblemsInstance()
+//	fmt.Println(v)
+//}	for _,v := range problems{
+
 	//problems := leetcode.GetProblemsJson()
 	//fmt.Println(problems)
 	//for _, v := range problems {
@@ -24,6 +29,10 @@ func main() {
 	//leetcode.GetReadmeTemplateBuffer()
 
 	//	GitBook
-	leetcode.MakeGitbookSummary(problems)
+	//leetcode.MakeGitbookSummary(problems)
+
+	//	sitemap
+	s := sitemap.New(problems)
+	fmt.Println(s)
 
 }
