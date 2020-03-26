@@ -2,15 +2,14 @@ package Solution
 
 //	普通的动态规划
 func rob(nums []int) int {
-	nLenghth := len(nums)
+	dp := make([][2]int, len(nums)+1)
 
-	dp := make([][2]int, nLenghth+1)
-	for i := 1; i <= nLenghth; i++ {
-		dp[i][0] = Max(dp[i-1][0], dp[i-1][1])
+	for i := 1; i <= len(nums); i++ {
+		dp[i][0] = max(dp[i-1][0], dp[i-1][1])
 		dp[i][1] = nums[i-1] + dp[i-1][0]
 	}
 	//fmt.Println(dp)
-	return Max(dp[nLenghth][0], dp[nLenghth][1])
+	return max(dp[len(nums)][0], dp[len(nums)][1])
 }
 
 //	优化空间
@@ -19,26 +18,27 @@ func rob2(nums []int) int {
 
 	for _, v := range nums {
 		tmp := prevNo
-		prevNo = Max(prevNo, prevYes)
+		prevNo = max(prevNo, prevYes)
 		prevYes = v + tmp
 	}
-	return Max(prevNo, prevYes)
+	return max(prevNo, prevYes)
 }
 
-func Max(x, y int) int {
+func rob3(nums []int) int {
+	robEven, robOdd := 0, 0
+	for i := 0; i < len(nums); i++ {
+		if i%2 == 0 {
+			robEven = max(robEven+nums[i], robOdd)
+		} else {
+			robOdd = max(robEven, nums[i]+robOdd)
+		}
+	}
+	return max(robEven, robOdd)
+}
+
+func max(x, y int) int {
 	if x > y {
 		return x
 	}
 	return y
-}
-func rob3(nums []int) int {
-	robEven, robOdd := 0, 0
-	for i := 0; i < len(nums); i++ {
-		if i % 2 ==0 {
-			robEven = Max(robEven + nums[i] , robOdd)
-		} else {
-			robOdd = Max(robEven , nums[i] + robOdd)
-		}
-	}
-	return Max(robEven,robOdd)
 }
