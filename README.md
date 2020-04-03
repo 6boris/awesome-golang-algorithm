@@ -26,13 +26,18 @@ LeetCode of algorithms with golang solution(updating:smiley:).
     <a href="https://img.shields.io/github/stars/kylesliu/awesome-golang-leetcode.svg?label=Stars&style=social">
         <img src="https://img.shields.io/badge/All_Contributors-12-blue.svg" />
     </a>
+    <a href="https://github.com/kylesliu/awesome-golang-leetcode/actions">
+        <img src="https://github.com/kylesliu/awesome-golang-leetcode/workflows/Go/badge.svg?branch=master" />
+    </a>
+
 </p>
 
 
 ## Summary
+![Go](https://github.com/kylesliu/awesome-golang-leetcode/workflows/Go/badge.svg?branch=master)
+
 
 - You can find the solution list of categories [here](https://leetcode.kyle.link/SUMMARY-LIST.html)
-
 
 ## Community
 
