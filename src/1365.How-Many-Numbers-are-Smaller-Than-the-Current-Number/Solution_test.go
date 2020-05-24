@@ -13,8 +13,9 @@ func TestSolution(t *testing.T) {
 		inputs []int
 		expect []int
 	}{
-		{"TestCase", []int{1, 2, 3, 4}, []int{2, 4, 4, 4}},
-		{"TestCase", []int{1, 1, 2, 3}, []int{1, 3, 3}},
+		{"TestCase", []int{8, 1, 2, 2, 3}, []int{4, 0, 1, 1, 3}},
+		{"TestCase", []int{1, 2, 3, 4, 5}, []int{0, 1, 2, 3, 4}},
+		{"TestCase", []int{5, 4, 3, 2, 1}, []int{4, 3, 2, 1, 0}},
 		{"TestCase", []int{}, []int{}},
 	}
 
