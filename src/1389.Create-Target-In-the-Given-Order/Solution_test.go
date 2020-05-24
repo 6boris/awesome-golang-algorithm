@@ -10,21 +10,22 @@ func TestSolution(t *testing.T) {
 	//	测试用例
 	cases := []struct {
 		name   string
-		inputs []int
+		nums   []int
+		index  []int
 		expect []int
 	}{
-		{"TestCase", []int{1, 2, 3, 4}, []int{2, 4, 4, 4}},
-		{"TestCase", []int{1, 1, 2, 3}, []int{1, 3, 3}},
-		{"TestCase", []int{}, []int{}},
+		{"TestCase", []int{0,1,2,3,4}, []int{0,1,2,2,1}, []int{0,4,1,3,2}},
+		{"TestCase", []int{1,2,3,4,0}, []int{0,1,2,3,0}, []int{0,1,2,3,4}},
+		{"TestCase", []int{1}, []int{0}, []int{1}},
 	}
 
 	//	开始测试
 	for i, c := range cases {
 		t.Run(c.name+" "+strconv.Itoa(i), func(t *testing.T) {
-			got := Solution(c.inputs)
+			got := Solution(c.nums, c.index)
 			if !reflect.DeepEqual(got, c.expect) {
-				t.Fatalf("expected: %v, but got: %v, with inputs: %v",
-					c.expect, got, c.inputs)
+				t.Fatalf("expected: %v, but got: %v, with inputs: %v %v",
+					c.expect, got, c.nums, c.index)
 			}
 		})
 	}

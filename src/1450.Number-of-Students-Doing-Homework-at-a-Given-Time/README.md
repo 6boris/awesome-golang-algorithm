@@ -1,4 +1,4 @@
-# [1266.Minimum Time Visiting All Points][title]
+# [1362.Closest Divisors][title]
 
 > [!WARNING|style:flat]
 > This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-leetcode)
@@ -8,8 +8,8 @@
 **Example 1:**
 
 ```
-Input: points = [[1,1],[3,4],[-1,0]]
-Output: 7
+Input: startTime = [1,2,3], endTime = [3,2,7], queryTime = 4
+Output: 1
 ```
 
 ## 题意
@@ -19,7 +19,7 @@ Output: 7
 
 ### 思路1
 > ...
-Minimum Time Visiting All Points
+Closest Divisors
 ```go
 ```
 
@@ -28,5 +28,5 @@ Minimum Time Visiting All Points
 
 如果你同我一样热爱数据结构、算法、LeetCode，可以关注我 GitHub 上的 LeetCode 题解：[awesome-golang-leetcode][me]
 
-[title]: https://leetcode.com/problems/minimum-time-visiting-all-points/
+[title]: https://leetcode.com/problems/closest-divisors/
 [me]: https://github.com/kylesliu/awesome-golang-leetcode

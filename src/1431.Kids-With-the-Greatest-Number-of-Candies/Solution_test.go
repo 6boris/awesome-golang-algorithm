@@ -9,21 +9,23 @@ import (
 func TestSolution(t *testing.T) {
 	//	测试用例
 	cases := []struct {
-		name   string
-		head   *ListNode
-		G      []int
-		expect int
+		name         string
+		candies      []int
+		extraCandies int
+		expect       []bool
 	}{
-		{"TestCase", MakeListNode([]int{0, 1, 2, 3}), []int{0, 1, 3}, 2},
-		{"TestCase", MakeListNode([]int{0, 1, 2, 3, 4}), []int{0, 3, 1, 4}, 2},
+		{"TestCase", []int{2, 3, 5, 1, 3}, 3, []bool{true, true, true, false, true}},
+		{"TestCase", []int{10, 100}, 50, []bool{false, true}},
+		{"TestCase", []int{1, 1}, 1, []bool{true, true}},
 	}
 
+	//	开始测试
 	for i, c := range cases {
 		t.Run(c.name+" "+strconv.Itoa(i), func(t *testing.T) {
-			got := Solution(c.head, c.G)
+			got := Solution(c.candies, c.extraCandies)
 			if !reflect.DeepEqual(got, c.expect) {
 				t.Fatalf("expected: %v, but got: %v, with inputs: %v %v",
-					c.expect, got, c.head, c.G)
+					c.expect, got, c.candies, c.extraCandies)
 			}
 		})
 	}
