@@ -8,8 +8,8 @@
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: points = [[1,1],[3,4],[-1,0]]
+Output: 7
 ```
 
 ## 题意
