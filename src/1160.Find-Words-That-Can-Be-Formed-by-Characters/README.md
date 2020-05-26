@@ -8,8 +8,8 @@
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: words = ["cat","bt","hat","tree"], chars = "atach"
+Output: 6
 ```
 
 ## 题意
