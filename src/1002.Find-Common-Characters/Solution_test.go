@@ -15,7 +15,6 @@ func TestSolution(t *testing.T) {
 	}{
 		{"TestCase", []string{"bella", "label", "roller"}, []string{"e", "l", "l"}},
 		{"TestCase", []string{"cool", "lock", "cook"}, []string{"c", "o"}},
-		{"TestCase", []string{"sathish", "babu"}, []string{"a"}},
 		{"TestCase", []string{}, []string{}},
 	}
 

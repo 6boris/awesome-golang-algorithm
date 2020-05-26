@@ -4,6 +4,9 @@ import "math"
 
 func Solution(A []string) []string {
 	commonChars := make([]string, 0)
+	if len(A) == 0 {
+		return commonChars
+	}
 	minFrequencies := [26]int{}
 	for i := range minFrequencies {
 		minFrequencies[i] = math.MaxInt32
