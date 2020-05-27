@@ -8,8 +8,8 @@
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: arr = [1,2,2,6,6,6,6,7,10]
+Output: 6
 ```
 
 ## 题意
