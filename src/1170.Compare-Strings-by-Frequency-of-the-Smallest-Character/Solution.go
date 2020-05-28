@@ -7,18 +7,13 @@ func Solution(queries []string, words []string) []int {
 	for _, word := range words {
 		wordsFreq = append(wordsFreq, calculateFrequency(word))
 	}
-	sort.Sort(sort.Reverse(sort.IntSlice(wordsFreq)))
-	res := make([]int, 0)
+	sort.Ints(wordsFreq)
+	res, n := make([]int, 0), len(wordsFreq)
 	for _, query := range queries {
-		queryFreq, c := calculateFrequency(query), 0
-		for _, val := range wordsFreq {
-			if queryFreq < val {
-				c++
-			} else {
-				break
-			}
-		}
-		res = append(res, c)
+		queryFreq := calculateFrequency(query)
+		res = append(res, n-sort.Search(n, func(i int) bool {
+			return wordsFreq[i] > queryFreq
+		}))
 	}
 	return res
 }
