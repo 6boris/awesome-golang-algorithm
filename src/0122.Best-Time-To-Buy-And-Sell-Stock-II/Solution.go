@@ -24,7 +24,7 @@ func maxProfit(prices []int) int {
 //dp[i][0] means the maximum profit after sunset of day i with no stock in hand
 //dp[i][1] means the maximum profit after sunset of day i with stock in hand
 //dp[i][0] = max(dp[i-1][1]+price[i],dp[i-1][0]) --> Sell on day i or do nothing
-//dp[i][1] = max(dp[i-1][0])-price[i],dp[i-1][1]) --> Buy on day i or do nothing
+//dp[i][1] = max(dp[i-1][0]-price[i],dp[i-1][1]) --> Buy on day i or do nothing
 //dp[0][0]=0,dp[0][1]=INT_MIN
 
 func maxProfit2(prices []int) int {
