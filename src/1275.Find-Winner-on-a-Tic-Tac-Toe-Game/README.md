@@ -8,8 +8,8 @@
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: moves = [[0,0],[2,0],[1,1],[2,1],[2,2]]
+Output: "A"
 ```
 
 ## 题意

@@ -8,8 +8,8 @@
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: distance = [1,2,3,4], start = 0, destination = 1
+Output: 1
 ```
 
 ## 题意

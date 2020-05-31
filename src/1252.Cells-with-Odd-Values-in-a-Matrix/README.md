@@ -8,8 +8,8 @@
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: n = 2, m = 3, indices = [[0,1],[1,1]]
+Output: 6
 ```
 
 ## 题意
