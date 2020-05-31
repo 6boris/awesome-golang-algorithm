@@ -8,8 +8,8 @@
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: numbers = [2,7,11,15], target = 9
+Output: [1,2]
 ```
 
 ## 题意
