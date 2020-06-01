@@ -10,21 +10,45 @@ func TestSolution(t *testing.T) {
 	//	测试用例
 	cases := []struct {
 		name   string
-		inputs bool
-		expect bool
+		input1 string
+		input2 string
+		expect int
 	}{
-		{"TestCase", true, true},
-		{"TestCase", true, true},
-		{"TestCase", false, false},
+		{"TestCase", "aA", "aAAbbbb", 3},
+		{"TestCase", "z", "ZZ", 0},
 	}
 
 	//	开始测试
 	for i, c := range cases {
 		t.Run(c.name+" "+strconv.Itoa(i), func(t *testing.T) {
-			got := Solution(c.inputs)
+			got := numJewelsInStones(c.input1, c.input2)
 			if !reflect.DeepEqual(got, c.expect) {
-				t.Fatalf("expected: %v, but got: %v, with inputs: %v",
-					c.expect, got, c.inputs)
+				t.Fatalf("expected: %v, but got: %v, with input1: %v input2: %v",
+					c.expect, got, c.input1, c.input1)
+			}
+		})
+	}
+}
+
+func TestSolution2(t *testing.T) {
+	//	测试用例
+	cases := []struct {
+		name   string
+		input1 string
+		input2 string
+		expect int
+	}{
+		{"TestCase", "aA", "aAAbbbb", 3},
+		{"TestCase", "z", "ZZ", 0},
+	}
+
+	//	开始测试
+	for i, c := range cases {
+		t.Run(c.name+" "+strconv.Itoa(i), func(t *testing.T) {
+			got := numJewelsInStones2(c.input1, c.input2)
+			if !reflect.DeepEqual(got, c.expect) {
+				t.Fatalf("expected: %v, but got: %v, with input1: %v input2: %v",
+					c.expect, got, c.input1, c.input1)
 			}
 		})
 	}
