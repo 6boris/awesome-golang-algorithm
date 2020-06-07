@@ -19,3 +19,20 @@ func plusOne(digits []int) []int {
 	}
 	return digits
 }
+
+func Solution(digits []int) []int {
+	n := len(digits)
+	if n < 1 {
+		return []int{1}
+	}
+	digits[n-1] += 1
+	carry := 0
+	for i := n - 1; i >= 0; i-- {
+		n := digits[i] + carry
+		digits[i], carry = n%10, n/10
+	}
+	if carry > 0 {
+		digits = append([]int{carry}, digits...)
+	}
+	return digits
+}
