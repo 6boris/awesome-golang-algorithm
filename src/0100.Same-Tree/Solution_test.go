@@ -15,7 +15,7 @@ func TestSolution(t *testing.T) {
 		input2 *TreeNode
 		expect bool
 	}{
-		{"TestCacse 1",
+		{"TestCase 1",
 			&TreeNode{Val: 1,
 				Left:  &TreeNode{Val: 2, Left: nil, Right: nil},
 				Right: &TreeNode{Val: 3, Left: nil, Right: nil}},
@@ -23,7 +23,7 @@ func TestSolution(t *testing.T) {
 				Left:  &TreeNode{Val: 2, Left: nil, Right: nil},
 				Right: &TreeNode{Val: 3, Left: nil, Right: nil}},
 			true},
-		{"TestCacse 2",
+		{"TestCase 2",
 			&TreeNode{Val: 1,
 				Left:  &TreeNode{Val: 2, Left: nil, Right: nil},
 				Right: nil},
@@ -31,7 +31,7 @@ func TestSolution(t *testing.T) {
 				Left:  nil,
 				Right: &TreeNode{Val: 2, Left: nil, Right: nil}},
 			true},
-		{"TestCacse 3",
+		{"TestCase 3",
 			&TreeNode{Val: 1,
 				Left:  &TreeNode{Val: 2, Left: nil, Right: nil},
 				Right: nil},

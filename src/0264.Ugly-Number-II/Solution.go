@@ -1,5 +1,5 @@
 package Solution
 
-func Solution(x bool) bool {
-	return x
+func nthUglyNumber(n int) int {
+	return n
 }

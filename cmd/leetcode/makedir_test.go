@@ -6,7 +6,7 @@ import (
 )
 
 func TestMakeDir(t *testing.T) {
-	problems := GetSotedproblemsInstance()
+	problems := GetSortedProblemsInstance()
 	fmt.Println(len(problems))
 
 	for _, v := range problems {
