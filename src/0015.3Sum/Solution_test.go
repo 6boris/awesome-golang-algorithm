@@ -2,6 +2,7 @@ package Solution
 
 import (
 	"reflect"
+	"strconv"
 	"testing"
 )
 
@@ -12,18 +13,28 @@ func TestSolution(t *testing.T) {
 		inputs []int
 		expect [][]int
 	}{
-		{"1 test 1", []int{-1, 0, 1, 2, -1, -4}, [][]int{{-1, -1, 2}, {-1, 0, 1}}},
-		{"1 test 1", []int{-2, 0, 0, 2, 2}, [][]int{{-2, 0, 2}}},
+		{"TestCase", []int{-1, 0, 1, 2, -1, -4}, [][]int{{-1, -1, 2}, {-1, 0, 1}}},
+		{"TestCase", []int{-2, 0, 0, 2, 2}, [][]int{{-2, 0, 2}}},
 	}
 
 	//	开始测试
-	for _, c := range cases {
-		t.Run(c.name, func(t *testing.T) {
-			ret := threeSum(c.inputs)
-			if !reflect.DeepEqual(ret, c.expect) {
+	for i, c := range cases {
+		t.Run(c.name+" "+strconv.Itoa(i), func(t *testing.T) {
+			got := threeSum(c.inputs)
+			if !reflect.DeepEqual(got, c.expect) {
 				t.Fatalf("expected: %v, but got: %v, with inputs: %v",
-					c.expect, ret, c.inputs)
+					c.expect, got, c.inputs)
 			}
 		})
 	}
+}
+
+//	压力测试
+func BenchmarkSolution(b *testing.B) {
+
+}
+
+//	使用案列
+func ExampleSolution() {
+
 }

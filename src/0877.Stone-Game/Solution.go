@@ -1,5 +1,5 @@
 package Solution
 
-func Solution(x bool) bool {
-	return x
+func stoneGame(piles []int) bool {
+	return true
 }
