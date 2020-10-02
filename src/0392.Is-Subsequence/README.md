@@ -1,15 +1,12 @@
 # [392.Is Subsequence][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-leetcode)
-
 ## Description
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: sub = "abc", start = "ahbgdc"
+Output: true
 ```
 
 ## 题意
