@@ -5,11 +5,13 @@
 
 ## Description
 
+Some items were changed in this to better suit running test cases. On leetcode, do not return a slice of string, but rather just modify the input. 
+
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: ["h","e","l","l","o"]
+Output: ["o","l","l","e","h"]
 ```
 
 ## 题意
