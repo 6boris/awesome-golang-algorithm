@@ -1,13 +1,15 @@
 package Solution
 
 import (
-	"reflect"
+	"github.com/stretchr/testify/assert"
 	"strconv"
 	"testing"
 )
 
+// TestSolution Example for solution test cases
 func TestSolution(t *testing.T) {
-	//	测试用例
+	ast := assert.New(t)
+	//	test cases
 	cases := []struct {
 		name   string
 		inputs bool
@@ -18,24 +20,22 @@ func TestSolution(t *testing.T) {
 		{"TestCase", false, false},
 	}
 
-	//	开始测试
+	//	Start test
 	for i, c := range cases {
 		t.Run(c.name+" "+strconv.Itoa(i), func(t *testing.T) {
 			got := Solution(c.inputs)
-			if !reflect.DeepEqual(got, c.expect) {
-				t.Fatalf("expected: %v, but got: %v, with inputs: %v",
-					c.expect, got, c.inputs)
-			}
+			ast.Equal(got, c.expect, "expected: %v, but got: %v, with inputs: %v",
+				c.expect, got, c.inputs)
 		})
 	}
 }
 
-//	压力测试
+//	Benchmark Test
 func BenchmarkSolution(b *testing.B) {
 
 }
 
-//	使用案列
+//	Example Test
 func ExampleSolution() {
 
 }
