@@ -1,0 +1,110 @@
+# [36. Valid Sudoku][title]
+
+## Description
+Determine if a 9x9 Sudoku board is valid. Only the filled cells need to be validated according to the following rules:
+
+- Each row must contain the digits 1-9 without repetition.
+- Each column must contain the digits 1-9 without repetition.
+- Each of the 9 3x3 sub-boxes of the grid must contain the digits 1-9 without repetition.
+
+<p align="center">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Sudoku-by-L2G-20050714.svg/250px-Sudoku-by-L2G-20050714.svg">
+</p>
+
+**Example 1:**
+
+```
+Input:
+[
+  ["5","3",".",".","7",".",".",".","."],
+  ["6",".",".","1","9","5",".",".","."],
+  [".","9","8",".",".",".",".","6","."],
+  ["8",".",".",".","6",".",".",".","3"],
+  ["4",".",".","8",".","3",".",".","1"],
+  ["7",".",".",".","2",".",".",".","6"],
+  [".","6",".",".",".",".","2","8","."],
+  [".",".",".","4","1","9",".",".","5"],
+  [".",".",".",".","8",".",".","7","9"]
+]
+Output: true
+```
+
+**Example 2:**
+
+```
+[
+  ["8","3",".",".","7",".",".",".","."],
+  ["6",".",".","1","9","5",".",".","."],
+  [".","9","8",".",".",".",".","6","."],
+  ["8",".",".",".","6",".",".",".","3"],
+  ["4",".",".","8",".","3",".",".","1"],
+  ["7",".",".",".","2",".",".",".","6"],
+  [".","6",".",".",".",".","2","8","."],
+  [".",".",".","4","1","9",".",".","5"],
+  [".",".",".",".","8",".",".","7","9"]
+]
+```
+
+**Tags:** Math, String
+
+## 题意
+>判断一个 9x9 的数独是否有效。只需要根据以下规则，验证已经填入的数字是否有效即可。
+>数字 1-9 在每一行只能出现一次。
+ 数字 1-9 在每一列只能出现一次。
+ 数字 1-9 在每一个以粗实线分隔的 3x3 宫内只能出现一次。
+
+
+## 题解
+
+### 思路1
+>  遍历挨个找 这里摘抄的某位大佬写的代码 [@upvas][0036-solution]
+```go
+func isValidSudoku(board [][]byte) bool {
+	n := len(board)
+	rectSets := make([]int16, n*n/9) // sets for inner rectangles
+	for i := 0; i < n; i++ {
+		rowSet, colSet := int16(0), int16(0) // sets for a row and a column
+		for j := 0; j < n; j++ {
+			// checking a column and an inner rectangle
+			if num := board[i][j]; num != '.' {
+				numBit := int16(1 << (num - '0')) // calc a #num bit
+				if rowSet&numBit > 0 {
+					return false
+				}
+				rowSet |= numBit // set the bit
+
+				// set the bit for a inner rectangle: ((n/3)*(i/3), j/3) - its coordinates
+				if rectSets[(n/3)*(i/3)+j/3]&numBit > 0 {
+					return false
+				}
+				rectSets[(n/3)*(i/3)+j/3] |= numBit
+			}
+
+			// checking column
+			if num := board[j][i]; num != '.' {
+				numBit := int16(1 << (num - '0'))
+				if colSet&numBit > 0 {
+					return false
+				}
+				colSet ^= numBit
+			}
+		}
+	}
+	return true
+}
+
+```
+
+### 思路2
+> 思路2
+```go
+
+```
+
+## 结语
+
+如果你同我一样热爱数据结构、算法、LeetCode，可以关注我 GitHub 上的 LeetCode 题解：[awesome-golang-leetcode][me]
+
+[title]: https://leetcode.com/problems/valid-sudoku/description/
+[me]: https://github.com/kylesliu/awesome-golang-algorithm
+[0036-solution]: https://leetcode.com/problems/valid-sudoku/discuss/163303/One-pass-GoLang-solution-with-1x9-memory-(one-slice-with-9-items)

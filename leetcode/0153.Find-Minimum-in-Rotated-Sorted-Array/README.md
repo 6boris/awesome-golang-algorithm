@@ -1,0 +1,76 @@
+# [153. Find Minimum in Rotated Sorted Array][title]
+
+## Description
+
+Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
+
+(i.e.,  [0,1,2,4,5,6,7] might become  [4,5,6,7,0,1,2]).
+
+Find the minimum element.
+
+You may assume no duplicate exists in the array.
+**Example 1:**
+
+```
+Input: [3,4,5,1,2] 
+Output: 1
+```
+
+**Example 2:**
+
+```
+Input: [4,5,6,7,0,1,2]
+Output: 0
+```
+
+**Tags:** Math, String
+
+## 题意
+> 现有一个有序数组，假设从某个数开始将它后面的数按顺序放到了数组前面。
+  (即 [0,1,2,4,5,6,7] 可能变成 [4,5,6,7,0,1,2])。
+  请找出数组中的最小元素。
+  数组中不包含重复元素。
+>
+>
+## 题解
+
+### 思路1
+> (二分) O(logn)
+
+处理这种问题有个常用技巧：如果不想处理边界情况，比如当数组只有两三个数的时候，代码会出问题。我们可以在数组长度太短(这道题中我们判断数组长度小于5)时，直接暴力循环做；数组有一定长度时再用二分做。
+这样做并不会影响算法的时间复杂度，但会缩短写代码的时间。
+为了便于理解，我们将数组中的数画在二维坐标系中，横坐标表示数组下标，纵坐标表示数值，如下所示：
+
+![](https://oss.kyle.link/leetcode/leetcode-153.png)
+
+我们会发现数组中最小值前面的数 nums[i]nums[i] 都满足：nums[i]≥nums[0]nums[i]≥nums[0]，其中 nums[n−1]nums[n−1] 是数组最后一个元素；而数组中最小值后面的数（包括最小值）都不满足这个条件。
+所以我们可以二分出最小值的位置。
+另外，不要忘记处理数组完全单调的特殊情况。
+时间复杂度分析：二分查找，所以时间复杂度是 O(logn)O(logn)。
+
+```go
+func findMin(nums []int) int {
+	if nums[len(nums)-1] > nums[0] {
+		return nums[0]
+	}
+	l, r := 0, len(nums)-1
+	for l < r {
+		mid := l + (r-l)>>1
+		if nums[mid] >= nums[0] {
+			l = mid + 1
+		} else {
+			r = mid
+		}
+	}
+
+	return nums[l]
+}
+```
+
+
+## 结语
+
+如果你同我一样热爱数据结构、算法、LeetCode，可以关注我 GitHub 上的 LeetCode 题解：[awesome-golang-leetcode][me]
+
+[title]: https://leetcode.com/problems/two-sum/description/
+[me]: https://github.com/kylesliu/awesome-golang-algorithm

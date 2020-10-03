@@ -12,7 +12,7 @@
 
   "links": {
     "sidebar": {
-      "Home": "https://github.com/kylesliu/awesome-golang-leetcode"
+      "Home": "https://github.com/kylesliu/awesome-golang-algorithm"
     }
   },
   "plugins": [
@@ -30,7 +30,7 @@
     "appleTouchIconPrecomposed152": "path to appleTouchIconPrecomposed152.png",
     "output": "book output path",
     "github": {
-      "url": "https://github.com/kylesliu/awesome-golang-leetcode"
+      "url": "https://github.com/kylesliu/awesome-golang-algorithm"
     },
     "disqus": {
       "shortName": "go-leetcode"

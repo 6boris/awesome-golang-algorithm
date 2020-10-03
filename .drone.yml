@@ -3,7 +3,7 @@ name: default
 
 workspace:
   base: /go
-  path: src/github.com/kylesliu/awesome-golang-leetcode
+  path: leetcode/github.com/kylesliu/awesome-golang-algorithm
 
 steps:
   - name: test

@@ -1,0 +1,79 @@
+# [1. Binary Tree Inorder Traversal][title]
+
+## Description
+
+Given a binary tree, return the inorder traversal of its nodes' values.
+
+**Example:**
+
+Input: [1,null,2,3]
+   1
+    \
+     2
+    /
+   3
+
+Output: [1,3,2]
+
+**Tags:** Tree
+
+## 题意
+> 中序遍历
+
+## 题解
+
+### 思路1
+> 直接使用递归的方式
+
+```go
+func inorderTraversal(root *TreeNode) []int {
+	x := []int{}
+	if root != nil {
+    // 在这里前序
+    x = append(x, root.Val)
+		x = append(x, inorderTraversal(root.Left)...)
+		x = append(x, inorderTraversal(root.Right)...)
+	}
+	return x
+}
+
+func inorderTraversal(root *TreeNode) []int {
+	x := []int{}
+	if root != nil {
+		x = append(x, inorderTraversal(root.Left)...)
+    // 在这里中序
+    x = append(x, root.Val)
+		x = append(x, inorderTraversal(root.Right)...)
+	}
+	return x
+}
+
+func inorderTraversal(root *TreeNode) []int {
+	x := []int{}
+	if root != nil {
+		x = append(x, inorderTraversal(root.Left)...)
+    x = append(x, inorderTraversal(root.Right)...)
+    // 在这里后序
+    x = append(x, root.Val)
+	}
+	return x
+}
+
+```
+
+### 思路2
+> 使用top计数和数组存储数据，定义临时的数据接口
+```go
+type seqStack struct {
+	data [100]*Node
+	tag [100]int // 后续遍历准备
+	top int // 数组下标
+}
+```
+
+## 结语
+
+如果你同我一样热爱数据结构、算法、LeetCode，可以关注我 GitHub 上的 LeetCode 题解：[awesome-golang-leetcode][me]
+
+[title]: https://leetcode.com/problems/two-sum/description/
+[me]: https://github.com/kylesliu/awesome-golang-algorithm

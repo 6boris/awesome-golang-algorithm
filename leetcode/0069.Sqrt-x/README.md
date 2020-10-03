@@ -1,0 +1,56 @@
+# [69. Sqrt(x)][title]
+
+## Description
+
+Given two binary strings, return their sum (also a binary string).
+
+The input strings are both **non-empty** and contains only characters `1` or `0`.
+
+**Example 1:**
+
+```
+Input: a = "11", b = "1"
+Output: "100"
+```
+
+**Example 2:**
+
+```
+Input: a = "1010", b = "1011"
+Output: "10101"
+```
+
+**Tags:** Math, String
+
+## 题意
+>题意是求平方根。
+
+## 题解
+
+### 思路1
+> 参考 [牛顿迭代法求平方根](https://wenku.baidu.com/view/6b74c622bcd126fff7050bfe.html)，
+然后再参考维基百科的 [Integer square root](https://en.wikipedia.org/wiki/Integer_square_root#Using_only_integer_division) 即可,
+[leetcode](https://leetcode.com/problems/sqrtx/discuss/25057/3-4-short-lines-Integer-Newton-Every-Language) 上面也有人讲了。
+
+```go
+func mySqrt(x int) int {
+	r := x
+	for r*r > x {
+		r = (r + x/r) >> 1
+	}
+	return r
+}
+```
+
+### 思路2
+> 思路2
+```go
+
+```
+
+## 结语
+
+如果你同我一样热爱数据结构、算法、LeetCode，可以关注我 GitHub 上的 LeetCode 题解：[awesome-golang-leetcode][me]
+
+[title]: https://leetcode.com/problems/sqrtx/description/
+[me]: https://github.com/kylesliu/awesome-golang-algorithm

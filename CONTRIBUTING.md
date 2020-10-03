@@ -42,4 +42,4 @@ Also when filing an issue, make sure to answer these five questions:
 - What did you expect to see?
 - What did you see instead?
 
-[Repositories-URL]: https://github.com/kylesliu/awesome-golang-leetcode
+[Repositories-URL]: https://github.com/kylesliu/awesome-golang-algorithm
