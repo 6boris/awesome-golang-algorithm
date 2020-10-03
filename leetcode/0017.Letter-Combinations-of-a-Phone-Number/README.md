@@ -1,0 +1,68 @@
+# [17. Letter Combinations of a Phone Number][title]
+
+## Description
+
+Given a digit string, return all possible letter combinations that the number could represent.
+
+A mapping of digit to letters (just like on the telephone buttons) is given below.
+
+![img](https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Telephone-keypad2.svg/200px-Telephone-keypad2.svg.png)
+
+**Example:**
+
+```
+Input: "23"
+Output: ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].
+```
+
+**Note:**
+
+Although the above answer is in lexicographical order, your answer could be in any order you want.
+
+**Tags:** String, Backtracking
+
+## 题意
+>题意是给你按键，让你组合出所有不同结果
+
+## 题解
+
+### 思路1
+>首先想到的肯定是回溯了，对每个按键的所有情况进行回溯，回溯的终点就是结果字符串长度和按键长度相同。
+
+```go
+var maps = []string{"abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"}
+
+func letterCombinations(digits string) []string {
+	if len(digits) == 0 {
+		return nil
+	}
+	var res []string
+	var str string
+	dfs(digits, &res, str, 0)
+	return res
+}
+
+func dfs(digits string, res *[]string, str string, start int) {
+	if start == len(digits) {
+		*res = append(*res, str)
+		return
+	}
+	mapStr := maps[digits[start]-'2']
+	for i := 0; i < len(mapStr); i++ {
+		dfs(digits, res, str+string(mapStr[i]), start+1)
+	}
+}
+```
+
+### 思路2
+> 思路2
+```go
+
+```
+
+## 结语
+
+如果你同我一样热爱数据结构、算法、LeetCode，可以关注我 GitHub 上的 LeetCode 题解：[awesome-golang-leetcode][me]
+
+[title]: https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/
+[me]: https://github.com/kylesliu/awesome-golang-algorithm

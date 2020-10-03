@@ -7,7 +7,7 @@ import (
 	"os"
 )
 
-const SOLUTIONS_PATH = "src/"
+const SOLUTIONS_PATH = "leetcode/"
 const SOURCE_SOLUTION_FILE_PATH = "cmd/template/solution/solution.go"
 const SOURCE_SOLUTION_TEST_FILE_PATH = "cmd/template/solution/solution_test.go"
 const SOURCE_SOLUTION_README_FILE_PATH = "cmd/template/solution/README.md"

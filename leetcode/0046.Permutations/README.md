@@ -1,0 +1,51 @@
+# [46. Permutations][title]
+
+## Description
+
+Given two binary strings, return their sum (also a binary string).
+
+The input strings are both **non-empty** and contains only characters `1` or `0`.
+
+**Example 1:**
+
+```
+Input: a = "11", b = "1"
+Output: "100"
+```
+
+**Example 2:**
+
+```
+Input: a = "1010", b = "1011"
+Output: "10101"
+```
+
+**Tags:** Math, String
+
+## 题意
+>给出一列互不相同的整数，返回其全排列
+
+## 题解
+
+### 思路1
+> 我们从前往后，一位一位枚举，每次选择一个没有被使用过的数。
+  选好之后，将该数的状态改成“已被使用”，同时将该数记录在相应位置上，然后递归。
+  递归返回时，不要忘记将该数的状态改成“未被使用”，并将该数从相应位置上删除。
+  
+  时间复杂度分析：搜索树中最后一层共 n!n! 个节点，前面所有层加一块的节点数量相比于最后一层节点数是无穷小量，可以忽略。且最后一层节点记录方案的计算量是 O(n)O(n)，所以总时间复杂度是 O(n×n!)O(n×n!)。
+```go
+
+```
+
+### 思路2
+> 思路2
+```go
+
+```
+
+## 结语
+
+如果你同我一样热爱数据结构、算法、LeetCode，可以关注我 GitHub 上的 LeetCode 题解：[awesome-golang-leetcode][me]
+
+[title]: https://leetcode.com/problems/permutations/description/
+[me]: https://github.com/kylesliu/awesome-golang-algorithm

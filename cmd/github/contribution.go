@@ -12,7 +12,7 @@ type Contributor struct {
 	Url        string `json:"url"`
 }
 
-const GITHUB_CONTRIBUTOR_API_URL = "https://api.github.com/repos/kylesliu/awesome-golang-leetcode/contributors"
+const GITHUB_CONTRIBUTOR_API_URL = "https://api.github.com/repos/kylesliu/awesome-golang-algorithm/contributors"
 const GITHUB_CONTRIBUTOR_TMPL_PATH = "cmd/template/contributors/.all-contributorsrc"
 
 func getContributorBufer() []byte {

@@ -46,7 +46,7 @@ func CheckProblemExists(problems []Problem) []Problem {
 	tmp := []Problem{}
 
 	for i := 0; i < len(problems); i++ {
-		isExist, _ := PathExists("src/" + problems[i].PathName)
+		isExist, _ := PathExists("leetcode/" + problems[i].PathName)
 		if isExist {
 			tmp = append(tmp, problems[i])
 		} else {
