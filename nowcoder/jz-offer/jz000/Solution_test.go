@@ -24,7 +24,7 @@ func TestSolution(t *testing.T) {
 	for i, c := range cases {
 		t.Run(c.name+" "+strconv.Itoa(i), func(t *testing.T) {
 			actual := Solution(c.inputs)
-			ast.Equal(actual, c.expect, "expected: %v, but actual: %v, with inputs: %v",
+			ast.Equal(c.expect, actual, "expected: %v, but actual: %v, with inputs: %v",
 				c.expect, actual, c.inputs)
 		})
 	}
