@@ -23,8 +23,8 @@ jobs:
     - name: Get dependencies
       run:  go mod download
 
-    - name: Test nowcoder solution
-      run: make test-nowcoder
+    - name: Test lcof
+      run: make test-lcof
       
     - name: Test leetcode solution
       run: make test-leetcode
