@@ -46,6 +46,7 @@ LeetCode of algorithms with golang solution(updating:smiley:).
 - [LeetCode-in-Go](https://github.com/aQuaYi/LeetCode-in-Go) 某位算法大佬的Golang题解
 - [ACWING](https://www.acwing.com/) 一些算法竞赛大佬创建的平台，挺适合入门的。
 - [剑指Offer](https://www.nowcoder.com/ta/coding-interviews) 一些算法竞赛大佬创建的平台，挺适合入门的。
+- [剑指Offer](https://leetcode-cn.com/problemset/lcof/) 一些算法竞赛大佬创建的平台，挺适合入门的。
 
 ## Contributors
 
