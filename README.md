@@ -8,22 +8,16 @@ LeetCode of algorithms with golang solution(updating:smiley:).
 </p>
 
 <p align="center">
-    <a href="https://996.icu">
-        <img src="https://img.shields.io/badge/link-996.icu-red.svg">
+    <a href="https://www.travis-ci.org/kylesliu/awesome-golang-algorithm">
+        <img src="https://www.travis-ci.org/kylesliu/awesome-golang-algorithm.svg?branch=master" alt="Build Status">
     </a>
-    <a href="https://github.com/996icu/996.ICU/blob/master/LICENSE">
-        <img src="https://img.shields.io/badge/license-Anti%20996-blue.svg">
+    <a href="https://codecov.io/gh/kylesliu/awesome-golang-algorithm">
+        <img src="https://codecov.io/gh/kylesliu/awesome-golang-algorithm/branch/master/graph/badge.svg" />
     </a>
-    <a href="https://www.travis-ci.org/kylesliu/awesome-golang-leetcode">
-        <img src="https://www.travis-ci.org/kylesliu/awesome-golang-leetcode.svg?branch=master" alt="Build Status">
+    <a href="https://img.shields.io/github/stars/kylesliu/awesome-golang-algorithm.svg?label=Stars&style=social">
+        <img src="https://golangci.com/badges/github.com/kylesliu/awesome-golang-algorithm.svg" />
     </a>
-    <a href="https://codecov.io/gh/kylesliu/awesome-golang-leetcode">
-        <img src="https://codecov.io/gh/kylesliu/awesome-golang-leetcode/branch/master/graph/badge.svg" />
-    </a>
-    <a href="https://img.shields.io/github/stars/kylesliu/awesome-golang-leetcode.svg?label=Stars&style=social">
-        <img src="https://golangci.com/badges/github.com/kylesliu/awesome-golang-leetcode.svg" />
-    </a>
-    <a href="https://img.shields.io/github/stars/kylesliu/awesome-golang-leetcode.svg?label=Stars&style=social">
+    <a href="https://img.shields.io/github/stars/kylesliu/awesome-golang-algorithm.svg?label=Stars&style=social">
         <img src="https://img.shields.io/badge/All_Contributors-12-blue.svg" />
     </a>
     <a href="https://github.com/kylesliu/awesome-golang-algorithm/actions">
