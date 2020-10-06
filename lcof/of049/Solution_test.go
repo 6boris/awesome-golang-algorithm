@@ -11,9 +11,7 @@ import (
 type SolutionFuncType func(int) int
 
 var SolutionFuncList = []SolutionFuncType{
-	fib,
-	fib2,
-	fib3,
+	nthUglyNumber,
 }
 
 //	test info struct
@@ -27,18 +25,8 @@ type Case struct {
 var cases = []Case{
 	{
 		name:   "TestCase 1",
-		inputs: 2,
-		expect: 1,
-	},
-	{
-		name:   "TestCase 2",
-		inputs: 5,
-		expect: 5,
-	},
-	{
-		name:   "TestCase 3",
-		inputs: 13,
-		expect: 233,
+		inputs: 10,
+		expect: 12,
 	},
 }
 
