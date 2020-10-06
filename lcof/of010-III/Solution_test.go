@@ -8,30 +8,38 @@ import (
 )
 
 //	solution func Info
-type SolutionFuncType func(bool) bool
+type SolutionFuncType func(int) int
 
 var SolutionFuncList = []SolutionFuncType{
-	Solution,
+	jumpFloor,
+	jumpFloor2,
+	jumpFloor3,
+	jumpFloor4,
 }
 
 //	test info struct
 type Case struct {
 	name   string
-	inputs bool
-	expect bool
+	inputs int
+	expect int
 }
 
 // 	test case
 var cases = []Case{
 	{
 		name:   "TestCase 1",
-		inputs: true,
-		expect: true,
+		inputs: 1,
+		expect: 1,
 	},
 	{
 		name:   "TestCase 2",
-		inputs: false,
-		expect: false,
+		inputs: 11,
+		expect: 144,
+	},
+	{
+		name:   "TestCase 3",
+		inputs: 27,
+		expect: 317811,
 	},
 }
 

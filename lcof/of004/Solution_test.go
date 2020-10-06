@@ -8,30 +8,40 @@ import (
 )
 
 //	solution func Info
-type SolutionFuncType func(bool) bool
+type SolutionFuncType func([][]int, int) bool
 
 var SolutionFuncList = []SolutionFuncType{
-	Solution,
+	findNumberIn2DArray,
 }
 
 //	test info struct
 type Case struct {
 	name   string
-	inputs bool
+	board  [][]int
+	target int
 	expect bool
 }
 
 // 	test case
 var cases = []Case{
 	{
-		name:   "TestCase 1",
-		inputs: true,
-		expect: true,
+		name: "TestCase 1",
+		board: [][]int{
+			[]int{1, 2, 8, 9},
+		},
+		target: 7,
+		expect: false,
 	},
 	{
-		name:   "TestCase 2",
-		inputs: false,
-		expect: false,
+		name: "TestCase 2",
+		board: [][]int{
+			[]int{1, 2, 8, 9},
+			[]int{2, 4, 9, 12},
+			[]int{4, 7, 10, 13},
+			[]int{6, 8, 11, 15},
+		},
+		target: 7,
+		expect: true,
 	},
 }
 
@@ -42,7 +52,7 @@ func TestSolution(t *testing.T) {
 	for _, f := range SolutionFuncList {
 		for _, c := range cases {
 			t.Run(c.name, func(t *testing.T) {
-				actual := f(c.inputs)
+				actual := f(c.board, c.target)
 				ast.Equal(c.expect, actual,
 					"func: %v case: %v ",
 					runtime.FuncForPC(reflect.ValueOf(f).Pointer()).Name(), c.name)

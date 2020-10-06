@@ -7,31 +7,38 @@ import (
 	"testing"
 )
 
-//	solution func Info
-type SolutionFuncType func(bool) bool
+type SolutionFuncType func([]int) int
 
+//	Solution func
 var SolutionFuncList = []SolutionFuncType{
-	Solution,
+	findRepeatNumber,
+	findRepeatNumber2,
+	findRepeatNumber3,
 }
 
-//	test info struct
+// test  info struct
 type Case struct {
 	name   string
-	inputs bool
-	expect bool
+	inputs []int
+	expect int
 }
 
-// 	test case
+// test case
 var cases = []Case{
 	{
 		name:   "TestCase 1",
-		inputs: true,
-		expect: true,
+		inputs: []int{},
+		expect: 0,
 	},
 	{
 		name:   "TestCase 2",
-		inputs: false,
-		expect: false,
+		inputs: []int{2, 1, 1, 0, 2, 5, 3},
+		expect: 1,
+	},
+	{
+		name:   "TestCase 2",
+		inputs: []int{1, 1, 0, 2, 5, 3},
+		expect: 1,
 	},
 }
 
@@ -49,4 +56,5 @@ func TestSolution(t *testing.T) {
 			})
 		}
 	}
+
 }
