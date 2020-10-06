@@ -22,12 +22,6 @@ func TestSolution(t *testing.T) {
 			[]int{4, 7, 10, 13},
 			[]int{6, 8, 11, 15},
 		}, 7, true},
-		{"TestCase", [][]int{
-			[]int{1, 2, 8, 9},
-			[]int{2, 4, 9, 12},
-			[]int{4, 6, 10, 13},
-			[]int{6, 8, 11, 15},
-		}, 7, false},
 	}
 
 	//	Start test
@@ -38,14 +32,4 @@ func TestSolution(t *testing.T) {
 				c.expect, actual, c.inputs)
 		})
 	}
-}
-
-//	Benchmark Test
-func BenchmarkSolution(b *testing.B) {
-
-}
-
-//	Example Test
-func ExampleSolution() {
-
 }

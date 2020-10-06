@@ -19,21 +19,20 @@ func printListFromTailToHead(head *NodeList) []int {
 
 //	反转琏表
 func printListFromTailToHead2(head *NodeList) []int {
-	pre, next := &NodeList{}, &NodeList{}
+	pre, cur, next, ans := &NodeList{}, head, head.Next, []int{}
 
-	for head != nil {
-		next = head.Next
-		head.Next = pre
-		pre = head
-		head = next
+	for cur != nil {
+		next = cur.Next
+		cur.Next = pre
+
+		pre = cur
+		cur = next
 	}
-
-	ans := []int{}
 
 	for pre.Next != nil {
 		ans = append(ans, pre.Val)
 		pre = pre.Next
 	}
-	return ans
 
+	return ans
 }

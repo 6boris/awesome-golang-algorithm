@@ -13,31 +13,19 @@ func TestSolution(t *testing.T) {
 	cases := []struct {
 		name   string
 		inputs []byte
-		length int
 		expect []byte
 	}{
 		{"TestCase",
-			[]byte{'a', ' ', 'b', ' ', 'c', 'x', 'x', 'x', 'x'},
-			5,
+			[]byte{'a', ' ', 'b', ' ', 'c'},
 			[]byte{'a', '%', '2', '0', 'b', '%', '2', '0', 'c'}},
 	}
 
 	//	Start test
 	for i, c := range cases {
 		t.Run(c.name+" "+strconv.Itoa(i), func(t *testing.T) {
-			actual := replaceSpace(c.inputs, c.length)
+			actual := replaceSpace(c.inputs)
 			ast.Equal(actual, c.expect, "expected: %v, but actual: %v, with inputs: %v",
 				c.expect, actual, c.inputs)
 		})
 	}
-}
-
-//	Benchmark Test
-func BenchmarkSolution(b *testing.B) {
-
-}
-
-//	Example Test
-func ExampleSolution() {
-
 }
