@@ -1,7 +1,6 @@
 package Solution
 
-//	二分查找
-func minNumberInRotateArray(arr []int) int {
+func minArray(arr []int) int {
 	if len(arr) == 0 {
 		return 0
 	}
