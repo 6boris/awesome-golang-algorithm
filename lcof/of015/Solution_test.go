@@ -8,18 +8,16 @@ import (
 )
 
 //	solution func Info
-type SolutionFuncType func(int) int
+type SolutionFuncType func(uint32) int
 
 var SolutionFuncList = []SolutionFuncType{
-	fib,
-	fib2,
-	fib3,
+	hammingWeight,
 }
 
 //	test info struct
 type Case struct {
 	name   string
-	inputs int
+	inputs uint32
 	expect int
 }
 
@@ -27,18 +25,13 @@ type Case struct {
 var cases = []Case{
 	{
 		name:   "TestCase 1",
-		inputs: 2,
-		expect: 1,
+		inputs: uint32(00000000000000000000000000001011),
+		expect: 3,
 	},
 	{
 		name:   "TestCase 2",
-		inputs: 5,
-		expect: 5,
-	},
-	{
-		name:   "TestCase 3",
-		inputs: 13,
-		expect: 233,
+		inputs: uint32(00000000000000000000000010000000),
+		expect: 1,
 	},
 }
 
