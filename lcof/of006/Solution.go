@@ -6,18 +6,21 @@ type ListNode struct {
 }
 
 //	递归写法
-func printListFromTailToHead(head *ListNode) []int {
+func reversePrint(head *ListNode) []int {
 	ans := make([]int, 0)
 	if head == nil {
 		return ans
 	}
-	ans = printListFromTailToHead(head.Next)
+	ans = reversePrint(head.Next)
 	ans = append(ans, head.Val)
 	return ans
 }
 
 //	反转琏表
-func printListFromTailToHead2(head *ListNode) []int {
+func reversePrint2(head *ListNode) []int {
+	if head == nil {
+		return []int{}
+	}
 	pre, cur, next, ans := &ListNode{}, head, head.Next, []int{}
 	for cur != nil {
 		next = cur.Next
