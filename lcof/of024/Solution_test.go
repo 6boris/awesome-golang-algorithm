@@ -8,32 +8,27 @@ import (
 )
 
 //	solution func Info
-type SolutionFuncType func(node *ListNode) []int
+type SolutionFuncType func(*ListNode) *ListNode
 
 var SolutionFuncList = []SolutionFuncType{
-	reversePrint,
-	reversePrint2,
+	reverseList,
 }
 
 //	test info struct
 type Case struct {
 	name   string
 	inputs *ListNode
-	expect []int
+	val    int
+	expect *ListNode
 }
 
 // 	test case
 var cases = []Case{
 	{
 		name:   "TestCase 1",
-		inputs: nil,
-		expect: []int{},
-	},
-	{
-		name: "TestCase 2",
-		inputs: &ListNode{Val: 1,
-			Next: &ListNode{Val: 2, Next: &ListNode{Val: 3}}},
-		expect: []int{3, 2, 1},
+		inputs: &ListNode{Val: 1, Next: &ListNode{Val: 2, Next: &ListNode{Val: 3, Next: &ListNode{Val: 4, Next: nil}}}},
+		val:    5,
+		expect: &ListNode{Val: 4, Next: &ListNode{Val: 3, Next: &ListNode{Val: 2, Next: &ListNode{Val: 1, Next: nil}}}},
 	},
 }
 
