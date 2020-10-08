@@ -5,6 +5,11 @@
 
 ## 文档 <a id="docs"></a>
 
+* [剑指 Offer](docs/jzof/README.md)
+  * [OF3.数组中重复的数字](docs/jzof/of003.md)
+  * [OF37.序列化二叉树](docs/jzof/of037.md)
+  * [OF14-I.剪绳子](docs/jzof/of014-i.md)
+  * [OF14-II.剪绳子](docs/jzof/of014-ii.md)
 * [LeetCode](docs/leetcode/README.md)
   * [1-100](docs/leetcode/1-100/README.md)
     * [1.Add Sum](docs/leetcode/1-100/1.add-sum.md)
@@ -185,9 +190,4 @@
     * [0198.House-Robber](docs/leetcode/101-200/0198.house-robber.md)
     * [0199.Binary-Tree-Right-Side-View](docs/leetcode/101-200/0199.binary-tree-right-side-view.md)
     * [0200.Number-of-Islands](docs/leetcode/101-200/0200.number-of-islands.md)
-* [剑指 Offer](docs/jzof/README.md)
-  * [OF3.数组中重复的数字](docs/jzof/of003.md)
-  * [OF37.序列化二叉树](docs/jzof/of037.md)
-  * [OF14-I.剪绳子](docs/jzof/of014-i.md)
-  * [OF14-II.剪绳子](docs/jzof/of014-ii.md)
 
