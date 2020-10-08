@@ -1,0 +1,43 @@
+# [76. Minimum Window Substring][title]
+
+## Description
+
+Given a string S and a string T, find the minimum window in S which will contain all the characters in T in complexity O(n).
+**Example 1:**
+
+```
+Input: S = "ADOBECODEBANC", T = "ABC"
+Output: "BANC"
+```
+
+
+**Tags:** Math, String
+
+## 题意
+>给定两个字符串：SS 和 TT，请找到 SS 中最短的一段，包含 TT 中所有字符。
+
+- 注意
+如果 SS 中不存在这样的方案，则返回 ""；
+如果 SS 中存在这样的方案，则数据保证答案一定唯一；
+
+## 题解
+
+### 思路1
+> (滑动窗口) O(n)
+
+```
+首先用哈希表统计出 TT 中所有字符出现的次数，哈希表可以用C++中的 unordered_map，不了解用法的同学可以点这里。
+  然后我们用两个指针 i,j(i≥j)i,j(i≥j)来扫描整个字符串，同时用一个哈希表统计 i,ji,j 之间每种字符出现的次数，每次遍历需要的操作如下：
+  
+加入 s[i]s[i]，同时更新哈希表；
+检查 s[j]s[j] 是否多余，如果是，则移除 s[j]s[j]；
+检查当前窗口是否已经满足 TT 中所有字符，如果是，则更新答案；
+时间复杂度分析：两个指针都严格递增，最多移动 nn 次，所以总时间复杂度是 O(n)O(n)。
+```
+
+## 结语
+
+如果你同我一样热爱数据结构、算法、LeetCode，可以关注我 GitHub 上的 LeetCode 题解：[awesome-golang-leetcode][me]
+
+[title]: https://leetcode.com/problems/two-sum/description/
+[me]: https://github.com/kylesliu/awesome-golang-algorithm
