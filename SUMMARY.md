@@ -1,6 +1,6 @@
 # Table of contents
 
-* [介绍](README.md)
+* [介绍](README-DOC.md)
 
 ## 剑指 Offer <a id="jzof"></a>
 

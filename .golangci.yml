@@ -1,6 +1,0 @@
-service:
-  project-path: github.com/kylesliu/awesome-golang-algorithm # vanity import path if needed
-  golangci-lint-version: 1.12.x
-  prepare:
-    - go get -t -v ./...
-    - bash ./test.sh
