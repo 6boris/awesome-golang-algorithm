@@ -3,7 +3,7 @@
 * [Introduction](README.md)
 * [介绍](readme-doc.md)
 
-## 剑指 Offer <a id="jzof"></a>
+## 剑指 Offer
 
 * [OF3.数组中重复的数字](lcof/of003/README.md)
 * [OF37.序列化二叉树](lcof/of037/README.md)
