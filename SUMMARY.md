@@ -3,12 +3,13 @@
 * [Introduction](README.md)
 * [介绍](readme-doc.md)
 
-## 剑指 Offer
+## 文档 <a id="docs"></a>
 
-* [OF3.数组中重复的数字](lcof/of003/README.md)
-* [OF37.序列化二叉树](lcof/of037/README.md)
-* [OF14-I.剪绳子](lcof/of014-I/README.md)
-* [OF14-II.剪绳子](lcof/of014-II/README.md)
+* [剑指 Offer](docs/jzof/README.md)
+  * [OF14-II.剪绳子](docs/jzof/of014-ii.md)
+  * [OF14-I.剪绳子](docs/jzof/of014-i.md)
+  * [OF37.序列化二叉树](docs/jzof/of037.md)
+  * [OF3.数组中重复的数字](docs/jzof/of003.md)
 
 ## LeetCode
 
