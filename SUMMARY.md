@@ -6,10 +6,10 @@
 ## 文档 <a id="docs"></a>
 
 * [剑指 Offer](docs/jzof/README.md)
-  * [OF14-II.剪绳子](docs/jzof/of014-ii.md)
-  * [OF14-I.剪绳子](docs/jzof/of014-i.md)
-  * [OF37.序列化二叉树](docs/jzof/of037.md)
   * [OF3.数组中重复的数字](docs/jzof/of003.md)
+  * [OF37.序列化二叉树](docs/jzof/of037.md)
+  * [OF14-I.剪绳子](docs/jzof/of014-i.md)
+  * [OF14-II.剪绳子](docs/jzof/of014-ii.md)
 
 ## LeetCode
 
