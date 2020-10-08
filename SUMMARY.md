@@ -5,8 +5,8 @@
 
 ## 剑指 Offer <a id="jzof"></a>
 
-* [OF3.数组中重复的数字](jzof/of003.md)
-* [OF37.序列化二叉树](jzof/of037.md)
+* [OF3.数组中重复的数字](lcof/of003/README.md)
+* [OF37.序列化二叉树](lcof/of037/README.md)
 
 ## LeetCode
 
