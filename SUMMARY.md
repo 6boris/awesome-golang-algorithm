@@ -9,6 +9,7 @@
   * [OF3.数组中重复的数字](docs/jzof/of003.md)
   * [OF4. 二维数组中的查找](docs/jzof/of004.md)
   * [OF5. 替换空格](docs/jzof/of005.md)
+  * [OF6.从尾到头打印链表](docs/jzof/of006.md)
   * [OF37.序列化二叉树](docs/jzof/of037.md)
   * [OF14-I.剪绳子](docs/jzof/of014-i.md)
   * [OF14-II.剪绳子](docs/jzof/of014-ii.md)
