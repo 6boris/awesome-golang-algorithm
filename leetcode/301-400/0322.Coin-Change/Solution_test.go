@@ -12,6 +12,8 @@ type SolutionFuncType func([]int, int) int
 
 var SolutionFuncList = []SolutionFuncType{
 	coinChange,
+	coinChange2,
+	coinChange3,
 }
 
 //	test info struct
