@@ -6,16 +6,63 @@ import (
 	"testing"
 )
 
+type TreeNode struct {
+	Val   int
+	Left  *TreeNode
+	Right *TreeNode
+}
+
+type BinaryTree struct {
+	root *TreeNode
+}
+
+func (t *BinaryTree) insert(data int) *BinaryTree {
+	if t.root == nil {
+		t.root = &TreeNode{Val: data, Left: nil, Right: nil}
+	} else {
+		t.root.insert(data)
+	}
+	return t
+}
+
+func (n *TreeNode) insert(data int) {
+	if n == nil {
+		return
+	} else if data <= n.Val {
+		if n.Left == nil {
+			n.Left = &TreeNode{Val: data, Left: nil, Right: nil}
+		} else {
+			n.Left.insert(data)
+		}
+	} else {
+		if n.Right == nil {
+			n.Right = &TreeNode{Val: data, Left: nil, Right: nil}
+		} else {
+			n.Right.insert(data)
+		}
+	}
+}
+
+func main() {
+
+}
+
 func TestSolution(t *testing.T) {
 	//	测试用例
+	// The original Problem requires the binary tree constructed from array. Please refer to test cases produced at Leetcode problem https://leetcode.com/problems/maximum-level-sum-of-a-binary-tree/
+	tree1 := &BinaryTree{}
+	tree1.insert(1).
+		insert(7).
+		insert(0).
+		insert(7).
+		insert(-8)
+
 	cases := []struct {
 		name   string
-		inputs bool
-		expect bool
+		inputs *BinaryTree
+		expect int
 	}{
-		{"TestCase", true, true},
-		{"TestCase", true, true},
-		{"TestCase", false, false},
+		{"TestCase1", tree1, 2},
 	}
 
 	//	开始测试
