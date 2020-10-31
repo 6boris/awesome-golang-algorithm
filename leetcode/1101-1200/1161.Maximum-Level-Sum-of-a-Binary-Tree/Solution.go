@@ -8,11 +8,6 @@ package Solution
  *     Right *TreeNode
  * }
  */
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-}
 
 func maxLevelSum(root *TreeNode) int {
 	tree := make(map[*TreeNode]int)
