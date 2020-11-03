@@ -1,6 +1,8 @@
 package Solution
 
-import "math"
+import (
+	"math"
+)
 
 func Solution(A []string) []string {
 	commonChars := make([]string, 0)
@@ -22,7 +24,7 @@ func Solution(A []string) []string {
 	}
 	for i := 0; i < 26; i++ {
 		for minFrequencies[i] > 0 {
-			commonChars = append(commonChars, string(i+'a'))
+			commonChars = append(commonChars, string(rune(i)+'a'))
 			minFrequencies[i]--
 		}
 	}
