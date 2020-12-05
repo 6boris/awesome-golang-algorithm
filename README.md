@@ -2,8 +2,6 @@
 
 LeetCode of algorithms with golang solution\(updating:smiley:\).
 
- ![](https://s.gin.sh/logo/go/PNG/Go-Logo_Aqua.png) ![](https://s.gin.sh/logo/leetcode.png)
-
  [![Build Status](https://www.travis-ci.org/kylesliu/awesome-golang-algorithm.svg?branch=master)](https://www.travis-ci.org/kylesliu/awesome-golang-algorithm) [![](https://codecov.io/gh/kylesliu/awesome-golang-algorithm/branch/master/graph/badge.svg)](https://codecov.io/gh/kylesliu/awesome-golang-algorithm) [![](https://golangci.com/badges/github.com/kylesliu/awesome-golang-algorithm.svg)](https://img.shields.io/github/stars/kylesliu/awesome-golang-algorithm.svg?label=Stars&style=social) [![](https://img.shields.io/badge/All_Contributors-12-blue.svg)](https://img.shields.io/github/stars/kylesliu/awesome-golang-algorithm.svg?label=Stars&style=social) [![](https://github.com/kylesliu/awesome-golang-algorithm/workflows/Go/badge.svg?branch=master&event=push)](https://github.com/kylesliu/awesome-golang-algorithm/actions)
 
 ## Summary
