@@ -21,7 +21,8 @@
         "doc",
         "infra",
         "test",
-        "tool"
+        "tool",
+        "eventOrganizing"
       ]
     },
     {
