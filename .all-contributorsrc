@@ -1,5 +1,5 @@
 {
-  "projectName": "awesome-golang-leetcode",
+  "projectName": "awesome-golang-algorithm",
   "projectOwner": "kylesliu",
   "repoType": "github",
   "repoHost": "https://github.com",
@@ -18,7 +18,10 @@
         "code",
         "blog",
         "design",
-        "doc"
+        "doc",
+        "infra",
+        "test",
+        "tool"
       ]
     },
     {
@@ -75,7 +78,7 @@
         "code"
       ]
     },
-     {
+    {
       "login": "hiepndd",
       "name": "Hiep Nguyen",
       "avatar_url": "https://avatars2.githubusercontent.com/u/23348270?s=400&v=4",
@@ -84,7 +87,7 @@
         "code"
       ]
     },
-   {
+    {
       "login": "dumingcode",
       "name": "mingdu",
       "avatar_url": "https://avatars3.githubusercontent.com/u/9403402?s=400&v=4",
@@ -129,5 +132,7 @@
         "code"
       ]
     }
-  ]
+  ],
+  "skipCi": true,
+  "contributorsPerLine": 7
 }
