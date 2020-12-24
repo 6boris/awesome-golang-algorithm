@@ -7,9 +7,10 @@
 
 * [剑指 Offer](docs/jzof/README.md)
   * [OF3.数组中重复的数字](docs/jzof/of003.md)
-  * [OF4. 二维数组中的查找](docs/jzof/of004.md)
-  * [OF5. 替换空格](docs/jzof/of005.md)
+  * [OF4.二维数组中的查找](docs/jzof/of004.md)
+  * [OF5.替换空格](docs/jzof/of005.md)
   * [OF6.从尾到头打印链表](docs/jzof/of006.md)
+  * [OF7.重建二叉树](docs/jzof/of007.md)
   * [OF12.矩阵中的路径](docs/jzof/of012.md)
   * [OF14-I.剪绳子](docs/jzof/of014-i.md)
   * [OF14-II.剪绳子](docs/jzof/of014-ii.md)
