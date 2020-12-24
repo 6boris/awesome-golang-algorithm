@@ -43,7 +43,7 @@ func TestSolution(t *testing.T) {
 		for _, c := range cases {
 			t.Run(c.name, func(t *testing.T) {
 				actual := f(c.inputs)
-				ast.Equal(c, actual,
+				ast.Equal(c.expect, actual,
 					"func: %v case: %v ",
 					runtime.FuncForPC(reflect.ValueOf(f).Pointer()).Name(), c.name)
 			})

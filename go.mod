@@ -1,4 +1,4 @@
-module github.com/kylesliu/awesome-golang-algorithm
+module awesome-golang-algorithm
 
 go 1.15
 
