@@ -1,13 +1,14 @@
 package Solution
 
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
+import (
+	"fmt"
+)
+
+type TreeNode struct {
+	Val   int
+	Left  *TreeNode
+	Right *TreeNode
+}
 
 func maxLevelSum(root *TreeNode) int {
 	tree := make(map[*TreeNode]int)
@@ -50,4 +51,28 @@ func maxLevelSum(root *TreeNode) int {
 		}
 	}
 	return l + 1
+}
+
+// DFS 递归的中序遍历
+func maxLevelSum2(root *TreeNode) int {
+	m, ans := make(map[int]int), -1
+	dfs(root, 1, m)
+	fmt.Println(m)
+	for _, v := range m {
+		if v > ans {
+			ans = v
+		}
+		print(v)
+	}
+	return ans
+}
+
+func dfs(root *TreeNode, level int, m map[int]int) {
+	if root == nil {
+		return
+	}
+	fmt.Println(level, root.Val)
+	dfs(root.Left, level+1, m)
+	m[level] += root.Val
+	dfs(root.Right, level+1, m)
 }
