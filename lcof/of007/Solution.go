@@ -11,6 +11,7 @@ func buildTree(pre []int, in []int) *TreeNode {
 	if len(pre) == 0 || len(in) == 0 {
 		return nil
 	}
+	//	找到跟节点位置
 	mid := search(in, pre[0])
 	return &TreeNode{
 		Val:   pre[0],
