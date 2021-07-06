@@ -9,21 +9,38 @@ func TestSolution(t *testing.T) {
 	//	测试用例
 	cases := []struct {
 		name   string
-		inputs bool
-		expect bool
+		words []string
+		k int
+		expect []string
 	}{
-		{"TestCacse 1", true, true},
-		{"TestCacse 1", true, true},
-		{"TestCacse 1", false, false},
+		{"TestCase", []string{"This", "is", "an", "example", "of", "text", "justification."}, 16, []string{
+			"This    is    an",
+			"example  of text",
+			"justification.  ",
+		}},
+		{"TestCase", []string{"What","must","be","acknowledgment","shall","be"}, 16, []string{
+			"What   must   be",
+			"acknowledgment  ",
+			"shall be        ",
+		}},
+		{"TestCase", []string{"Science","is","what","we","understand","well","enough","to","explain","to","a","computer.","Art","is","everything","else","we","do"}, 20, 
+		[]string{
+			"Science  is  what we",
+			"understand      well",
+			"enough to explain to",
+			"a  computer.  Art is",
+			"everything  else  we",
+			"do                  ",
+		}},
 	}
 
 	//	开始测试
 	for _, c := range cases {
 		t.Run(c.name, func(t *testing.T) {
-			ret := Solution(c.inputs)
+			ret := Solution(c.words, c.k)
 			if !reflect.DeepEqual(ret, c.expect) {
-				t.Fatalf("expected: %v, but got: %v, with inputs: %v",
-					c.expect, ret, c.inputs)
+				t.Fatalf("expected: %v, but got: %v, with inputs: %v %v",
+					c.expect, ret, c.words, c.k)
 			}
 		})
 	}
