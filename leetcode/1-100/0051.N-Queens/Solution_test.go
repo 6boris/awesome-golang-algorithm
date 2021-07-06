@@ -9,21 +9,20 @@ func TestSolution(t *testing.T) {
 	//	测试用例
 	cases := []struct {
 		name   string
-		inputs bool
-		expect bool
+		x int
+		expect [][]string
 	}{
-		{"TestCacse 1", true, true},
-		{"TestCacse 1", true, true},
-		{"TestCacse 1", false, false},
+		{"TestCase", 4, [][]string{{".Q..","...Q","Q...","..Q."},{"..Q.","Q...","...Q",".Q.."}}},
+		{"TestCase", 1, [][]string{{"Q"}}},
 	}
 
 	//	开始测试
 	for _, c := range cases {
 		t.Run(c.name, func(t *testing.T) {
-			ret := Solution(c.inputs)
+			ret := Solution(c.x)
 			if !reflect.DeepEqual(ret, c.expect) {
 				t.Fatalf("expected: %v, but got: %v, with inputs: %v",
-					c.expect, ret, c.inputs)
+					c.expect, ret, c.x)
 			}
 		})
 	}
