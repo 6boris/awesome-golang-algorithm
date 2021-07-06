@@ -10,21 +10,32 @@ func TestSolution(t *testing.T) {
 	//	测试用例
 	cases := []struct {
 		name   string
-		inputs bool
-		expect bool
+		root *TreeNode
+		expect int
 	}{
-		{"TestCase", true, true},
-		{"TestCase", true, true},
-		{"TestCase", false, false},
+		{"TestCase", &TreeNode{
+			Val: 1, 
+			Left: &TreeNode{Val: 2}, 
+			Right: &TreeNode{Val: 3},
+		}, 6},
+		{"TestCase", &TreeNode{
+			-10,
+			&TreeNode{Val: 9},
+			&TreeNode{
+				20,
+				&TreeNode{Val: 15},
+				&TreeNode{Val: 7},
+			},
+		}, 42},
 	}
 
 	//	开始测试
 	for i, c := range cases {
 		t.Run(c.name+" "+strconv.Itoa(i), func(t *testing.T) {
-			got := Solution(c.inputs)
+			got := Solution(c.root)
 			if !reflect.DeepEqual(got, c.expect) {
 				t.Fatalf("expected: %v, but got: %v, with inputs: %v",
-					c.expect, got, c.inputs)
+					c.expect, got, c.root)
 			}
 		})
 	}
