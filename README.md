@@ -1,9 +1,3 @@
-# Introduction
-
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-14-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
-
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
@@ -14,7 +8,7 @@
   <h3 align="center">Awesome Golang Algorithm</h3>
 
   <p align="center">
-    Solutions of algorithm problems on some platforms LeetCode`, `剑指Offer`.
+    Solutions of algorithm problems on some platforms LeetCode`, `Sword Finger Offer`.
     <br />
     <a href="https://a.gin.sh"><strong>Explore the docs »</strong></a>
     <br />
@@ -31,11 +25,7 @@
 [![Codecov][all-contributors-shield]][all-contributors-url]
 [![Codecov][go-badge-shield]][go-badge-url]
 
-<!-- [![Build Status](https://www.travis-ci.org/kylesliu/awesome-golang-algorithm.svg?branch=master)](https://www.travis-ci.org/kylesliu/awesome-golang-algorithm)
-[![](https://codecov.io/gh/kylesliu/awesome-golang-algorithm/branch/master/graph/badge.svg)](https://codecov.io/gh/kylesliu/awesome-golang-algorithm)
-[![](https://golangci.com/badges/github.com/kylesliu/awesome-golang-algorithm.svg)](https://img.shields.io/github/stars/kylesliu/awesome-golang-algorithm.svg?label=Stars&style=social)
-[![](https://img.shields.io/badge/All_Contributors-12-blue.svg)](https://img.shields.io/github/stars/kylesliu/awesome-golang-algorithm.svg?label=Stars&style=social)
-[![](https://github.com/kylesliu/awesome-golang-algorithm/workflows/Go/badge.svg?branch=master&event=push)](https://github.com/kylesliu/awesome-golang-algorithm/actions) -->
+# Introduction
 
 ## Content
 
