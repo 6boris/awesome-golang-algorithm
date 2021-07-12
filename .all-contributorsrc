@@ -57,6 +57,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "openset",
+      "name": "Shuo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6274967?v=4",
+      "profile": "https://openset.github.com/",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7
