@@ -1,6 +1,6 @@
 # Introduction
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-9-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <!-- PROJECT LOGO -->
@@ -66,6 +66,7 @@ Thanks goes to these wonderful people \([emoji key](https://github.com/all-contr
   </tr>
   <tr>
     <td align="center"><a href="https://stevenshuang.github.io/"><img src="https://avatars.githubusercontent.com/u/20641704?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Coco</b></sub></a><br /><a href="https://github.com/kylesliu/awesome-golang-algorithm/commits?author=0xff-dev" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/plusweiwei"><img src="https://avatars.githubusercontent.com/u/38197795?v=4?s=100" width="100px;" alt=""/><br /><sub><b>plusweiwei</b></sub></a><br /><a href="https://github.com/kylesliu/awesome-golang-algorithm/commits?author=plusweiwei" title="Code">💻</a></td>
   </tr>
 </table>
 
