@@ -2,7 +2,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/kylesliu/awesome-golang-algorithm">
-    <img src="https://s.gin.sh/logo/leetcode.png" alt="Logo" width="680" height="256">
+    <img src="./assets/images/leetcode.png" alt="Logo" width="680" height="256">
   </a>
 
   <h3 align="center">Awesome Golang Algorithm</h3>
