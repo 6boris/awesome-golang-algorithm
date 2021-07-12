@@ -1,6 +1,6 @@
 # Introduction
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <!-- PROJECT LOGO -->
@@ -59,6 +59,7 @@ Thanks goes to these wonderful people \([emoji key](https://github.com/all-contr
     <td align="center"><a href="https://gin.sh/"><img src="https://avatars.githubusercontent.com/u/26195433?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kyle Liu</b></sub></a><br /><a href="#mentoring-kylesliu" title="Mentoring">🧑‍🏫</a> <a href="https://github.com/kylesliu/awesome-golang-algorithm/commits?author=kylesliu" title="Code">💻</a> <a href="#design-kylesliu" title="Design">🎨</a> <a href="https://github.com/kylesliu/awesome-golang-algorithm/commits?author=kylesliu" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/hapiman2"><img src="https://avatars.githubusercontent.com/u/34671440?v=4?s=100" width="100px;" alt=""/><br /><sub><b>hapiman2</b></sub></a><br /><a href="https://github.com/kylesliu/awesome-golang-algorithm/commits?author=hapiman2" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/saenaii"><img src="https://avatars.githubusercontent.com/u/18567791?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Inori</b></sub></a><br /><a href="https://github.com/kylesliu/awesome-golang-algorithm/commits?author=saenaii" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/hiepndd"><img src="https://avatars.githubusercontent.com/u/23348270?v=4?s=100" width="100px;" alt=""/><br /><sub><b>hiepndd</b></sub></a><br /><a href="https://github.com/kylesliu/awesome-golang-algorithm/commits?author=hiepndd" title="Code">💻</a></td>
   </tr>
 </table>
 
