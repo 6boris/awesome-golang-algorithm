@@ -1,15 +1,21 @@
 # [718.Maximum Length of Repeated Subarray][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+
+Given two integer arrays `nums1` and `nums2`, return _the maximum length of a subarray that appears in **both** arrays_.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: nums1 = [1,2,3,2,1], nums2 = [3,2,1,4,7]
+Output: 3
+```
+
+**Example 2:**
+
+```
+Input: nums1 = [0,0,0,0,0], nums2 = [0,0,0,0,0]
+Output: 5
 ```
 
 ## 题意
