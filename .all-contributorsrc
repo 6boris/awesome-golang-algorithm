@@ -25,7 +25,19 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/26195433?v=4",
       "profile": "https://gin.sh/",
       "contributions": [
-        "mentoring"
+        "mentoring",
+        "code",
+        "design",
+        "doc"
+      ]
+    },
+    {
+      "login": "hapiman2",
+      "name": "hapiman2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34671440?v=4",
+      "profile": "https://github.com/hapiman2",
+      "contributions": [
+        "code"
       ]
     }
   ],
