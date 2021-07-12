@@ -11,15 +11,6 @@
   "commitConvention": "none",
   "contributors": [
     {
-      "login": "jfmengels",
-      "name": "Jeroen Engels",
-      "avatar_url": "https://avatars.githubusercontent.com/u/3869412?v=4",
-      "profile": "https://jfmengels.net/",
-      "contributions": [
-        "doc"
-      ]
-    },
-    {
       "login": "kylesliu",
       "name": "Kyle Liu",
       "avatar_url": "https://avatars.githubusercontent.com/u/26195433?v=4",
@@ -36,6 +27,15 @@
       "name": "hapiman2",
       "avatar_url": "https://avatars.githubusercontent.com/u/34671440?v=4",
       "profile": "https://github.com/hapiman2",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "saenaii",
+      "name": "Inori",
+      "avatar_url": "https://avatars.githubusercontent.com/u/18567791?v=4",
+      "profile": "https://github.com/saenaii",
       "contributions": [
         "code"
       ]
