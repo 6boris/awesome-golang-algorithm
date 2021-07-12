@@ -1,6 +1,7 @@
 # Introduction
+
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-13-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-14-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <!-- PROJECT LOGO -->
@@ -51,6 +52,7 @@
 ## Contributors
 
 Thanks goes to these wonderful people \([emoji key](https://github.com/all-contributors/all-contributors#emoji-key)\):
+
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
@@ -71,6 +73,7 @@ Thanks goes to these wonderful people \([emoji key](https://github.com/all-contr
     <td align="center"><a href="https://github.com/go-ky"><img src="https://avatars.githubusercontent.com/u/46020549?v=4?s=100" width="100px;" alt=""/><br /><sub><b>go-ky</b></sub></a><br /><a href="https://github.com/kylesliu/awesome-golang-algorithm/commits?author=go-ky" title="Code">💻</a></td>
     <td align="center"><a href="https://sathishbabu.co.in/"><img src="https://avatars.githubusercontent.com/u/66869647?v=4?s=100" width="100px;" alt=""/><br /><sub><b>bumblebee</b></sub></a><br /><a href="https://github.com/kylesliu/awesome-golang-algorithm/commits?author=bumblebee211196" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/jameschengds"><img src="https://avatars.githubusercontent.com/u/34215053?v=4?s=100" width="100px;" alt=""/><br /><sub><b>cheng qianxiang</b></sub></a><br /><a href="https://github.com/kylesliu/awesome-golang-algorithm/commits?author=jameschengds" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/vortex-17"><img src="https://avatars.githubusercontent.com/u/42715642?v=4?s=100" width="100px;" alt=""/><br /><sub><b>vortex-17</b></sub></a><br /><a href="https://github.com/kylesliu/awesome-golang-algorithm/commits?author=vortex-17" title="Code">💻</a></td>
   </tr>
 </table>
 
@@ -78,12 +81,6 @@ Thanks goes to these wonderful people \([emoji key](https://github.com/all-contr
 <!-- prettier-ignore-end -->
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
-
-| [![Kyle Liu ](https://avatars0.githubusercontent.com/u/26195433?v=4) **Kyle Liu**](https://kyle.link) [💻](https://github.com/kylesliu/awesome-golang-algorithm/commits?author=kylesliu) [📝](./#blog-kylesliu) [🎨](./#design-kylesliu) [📖](https://github.com/kylesliu/awesome-golang-algorithm/commits?author=kylesliu) |   [![hapiman2](https://avatars3.githubusercontent.com/u/34671440?v=4) **hapiman2**](https://github.com/hapiman2) [💻](https://github.com/kylesliu/awesome-golang-algorithm/commits?author=hapiman2)    |       [![yuechanghe](https://avatars0.githubusercontent.com/u/19406613?s=400&v=4) **yuechanghe**](https://github.com/2yuechanghe) [💻](https://github.com/kylesliu/awesome-golang-algorithm/commits?author=2yuechanghe)       |  [![hapiman](https://avatars0.githubusercontent.com/u/7567048?v=4) **hapiman**](https://github.com/hapiman) [💻](https://github.com/kylesliu/awesome-golang-algorithm/commits?author=hapiman)   |                  [![sihg yu](https://avatars2.githubusercontent.com/u/26058740?v=4) **sihg yu**](https://github.com/sihgyu) [💻](https://github.com/kylesliu/awesome-golang-algorithm/commits?author=sihgyu)                  | [![plusweiwei](https://avatars3.githubusercontent.com/u/38197795?v=4) **plusweiwei**](https://github.com/plusweiwei) [💻](https://github.com/kylesliu/awesome-golang-algorithm/commits?author=plusweiwei) | [![Sandy](https://avatars0.githubusercontent.com/u/6274967?v=4) **Sandy**](https://openset.github.com) [💻](https://github.com/kylesliu/awesome-golang-algorithm/commits?author=openset) |
-| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-|                                                         [![Hiep Nguyen](https://avatars2.githubusercontent.com/u/23348270?s=400&v=4) **Hiep Nguyen**](https://github.com/hiepndd) [💻](https://github.com/kylesliu/awesome-golang-algorithm/commits?author=hiepndd)                                                         | [![mingdu](https://avatars3.githubusercontent.com/u/9403402?s=400&v=4) **mingdu**](https://github.com/dumingcode) [💻](https://github.com/kylesliu/awesome-golang-algorithm/commits?author=dumingcode) | [![cheng qianxiang](https://avatars0.githubusercontent.com/u/34215053?s=400&v=4) **cheng qianxiang**](https://github.com/jameschengds) [💻](https://github.com/kylesliu/awesome-golang-algorithm/commits?author=jameschengds) | [![Inori](https://avatars0.githubusercontent.com/u/18567791?s=400&v=4) **Inori**](https://github.com/saenaii) [💻](https://github.com/kylesliu/awesome-golang-algorithm/commits?author=saenaii) | [![S Sathish Babu](https://avatars0.githubusercontent.com/u/22419483?s=400&v=4) **S Sathish Babu**](https://github.com/sathishbabu96) [💻](https://github.com/kylesliu/awesome-golang-algorithm/commits?author=sathishbabu96) | [![McKinnon](https://avatars0.githubusercontent.com/u/50089806?s=400&v=4) **McKinnon**](https://github.com/mckinnonn) [💻](https://github.com/kylesliu/awesome-golang-algorithm/commits?author=mckinnonn) |                                                                                                                                                                                          |
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
