@@ -102,6 +102,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "go-ky",
+      "name": "go-ky",
+      "avatar_url": "https://avatars.githubusercontent.com/u/46020549?v=4",
+      "profile": "https://github.com/go-ky",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7
