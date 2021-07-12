@@ -1,15 +1,13 @@
 # [504.Base 7][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given an integer `num`, return a string of its **base 7** representation.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: num = 100
+Output: "202"
 ```
 
 ## 题意
