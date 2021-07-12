@@ -18,6 +18,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "kylesliu",
+      "name": "Kyle Liu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26195433?v=4",
+      "profile": "https://gin.sh/",
+      "contributions": [
+        "mentoring"
+      ]
     }
   ],
   "contributorsPerLine": 7
