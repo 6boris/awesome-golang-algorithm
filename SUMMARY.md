@@ -20,7 +20,7 @@
     * [✅ 1.Add Sum](docs/leetcode/1-100/1.add-sum.md)
     * [0001.Two-Sum](docs/leetcode/1-100/0001.two-sum.md)
     * [0002.Add-Two-Numbers](docs/leetcode/1-100/0002.add-two-numbers.md)
-    * [0003.Longest-Substring-Without-Repeating-Characters](docs/leetcode/1-100/0003.longest-substring-without-repeating-characters.md)
+    * [✅ 0003.Longest-Substring-Without-Repeating-Characters](docs/leetcode/1-100/0003.longest-substring-without-repeating-characters.md)
     * [0004.Median-of-Two-Sorted-Arrays](docs/leetcode/1-100/0004.median-of-two-sorted-arrays.md)
     * [0005.Longest-Palindromic-Substring](docs/leetcode/1-100/0005.longest-palindromic-substring.md)
     * [0006.ZigZag-Conversion](docs/leetcode/1-100/0006.zigzag-conversion.md)
