@@ -2,6 +2,7 @@
 
 * [Introduction](README.md)
 * [介绍](readme-doc.md)
+* [Solutions](solutions.md)
 
 ## 文档 <a id="docs"></a>
 
