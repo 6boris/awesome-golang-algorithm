@@ -11,8 +11,8 @@ import (
 type SolutionFuncType func(*TreeNode) int
 
 var SolutionFuncList = []SolutionFuncType{
-	//maxLevelSum,
-	maxLevelSum2,
+	maxLevelSum,
+	//maxLevelSum2,
 }
 
 var DefaultValue int = -1024
