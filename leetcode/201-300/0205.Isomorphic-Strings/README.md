@@ -1,26 +1,32 @@
 # [205.Isomorphic Strings][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
 
 ## Description
+Given two strings `s` and `t`, determine if they are isomorphic.
+
+Two strings `s` and `t` are isomorphic if the characters in `s` can be replaced to get `t`.
+
+All occurrences of a character must be replaced with another character while preserving the order of characters. No two characters may map to the same character, but a character may map to itself.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: s = "egg", t = "add"
+Output: true
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
+```
+Input: s = "foo", t = "bar"
+Output: false
+```
 
-### 思路1
-> ...
-Isomorphic Strings
-```go
+**Example 3:**
+
+```
+Input: s = "paper", t = "title"
+Output: true
 ```
 
 
