@@ -1,15 +1,21 @@
 # [338.Counting Bits][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+
+Given an integer n, return an array ans of length n + 1 such that for each i (0 <= i <= n), ans[i] is the number of 1's in the binary representation of i.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: n = 2
+Output: [0,1,1]
+```
+
+**Example 2:**
+
+```
+Input: n = 5
+Output: [0,1,1,2,1,2]
 ```
 
 ## 题意
