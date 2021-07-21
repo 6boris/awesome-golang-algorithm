@@ -3,7 +3,7 @@ package Solution
 func Solution(matrix [][]int) int {
 	n, m := len(matrix), len(matrix[0])
     dp := make([][]int, n + 1)
-    for i, _ := range dp {
+    for i := range dp {
         dp[i] = make([]int, m + 1)
     }
     res := 0
