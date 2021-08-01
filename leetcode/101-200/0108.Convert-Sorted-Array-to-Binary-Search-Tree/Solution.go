@@ -1,16 +1,19 @@
 package Solution
 
-type TreeNode struct {
-	Val int
-	Left *TreeNode
-	Right *TreeNode
-}
-
 func Solution(nums []int) *TreeNode {
-    if len(nums) == 0 { return nil }
-    mid := len(nums) / 2
-    root := &TreeNode{Val: nums[mid]}
-    root.Left = Solution(nums[:mid])
-    root.Right = Solution(nums[mid + 1:])
-    return root
+	if len(nums) == 0 {
+		return nil
+	}
+
+	node := &TreeNode{}
+	mid := len(nums) / 2
+	node.Val = nums[mid]
+	if mid > 0 {
+		node.Left = Solution(nums[:mid])
+	}
+	if mid < len(nums)-1 {
+		node.Right = Solution(nums[mid+1:])
+	}
+
+	return node
 }
