@@ -1,15 +1,20 @@
 # [791.Custom Sort String][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+
+order and str are strings composed of lowercase letters. In order, no letter occurs more than once.
+
+order was sorted in some custom order previously. We want to permute the characters of str so that they match the order that order was sorted. More specifically, if x occurs before y in order, then x should occur before y in the returned string.
+
+Return any permutation of str (as a string) that satisfies this property.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: 
+order = "cba"
+str = "abcd"
+Output: "cbad"
 ```
 
 ## 题意

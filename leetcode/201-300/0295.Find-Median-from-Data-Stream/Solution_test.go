@@ -2,31 +2,52 @@ package Solution
 
 import (
 	"reflect"
-	"strconv"
 	"testing"
 )
 
 func TestSolution(t *testing.T) {
 	//	测试用例
-	cases := []struct {
-		name   string
-		inputs bool
-		expect bool
-	}{
-		{"TestCase", true, true},
-		{"TestCase", true, true},
-		{"TestCase", false, false},
+	var medianFinder MedianFinder
+	var median float64
+
+	// Test Case 1
+	medianFinder = Constructor()
+	medianFinder.AddNum(1)
+	medianFinder.AddNum(2)
+	median = medianFinder.FindMedian()
+	if !reflect.DeepEqual(median, 1.5) {
+		t.Fatalf("expected: %v, but got: %v", 1.5, median)
+	}
+	medianFinder.AddNum(3)
+	median = medianFinder.FindMedian()
+	if !reflect.DeepEqual(median, 2.0) {
+		t.Fatalf("expected: %v, but got: %v", 2.0, median)
 	}
 
-	//	开始测试
-	for i, c := range cases {
-		t.Run(c.name+" "+strconv.Itoa(i), func(t *testing.T) {
-			got := Solution(c.inputs)
-			if !reflect.DeepEqual(got, c.expect) {
-				t.Fatalf("expected: %v, but got: %v, with inputs: %v",
-					c.expect, got, c.inputs)
-			}
-		})
+	// Test Case 2
+	medianFinder = Constructor()
+	medianFinder.AddNum(2)
+	medianFinder.AddNum(1)
+	median = medianFinder.FindMedian()
+	if !reflect.DeepEqual(median, 1.5) {
+		t.Fatalf("expected: %v, but got: %v", 1.5, median)
+	}
+	medianFinder.AddNum(5)
+	median = medianFinder.FindMedian()
+	if !reflect.DeepEqual(median, 2.0) {
+		t.Fatalf("expected: %v, but got: %v", 2.0, median)
+	}
+	medianFinder.AddNum(7)
+	medianFinder.AddNum(2)
+	median = medianFinder.FindMedian()
+	if !reflect.DeepEqual(median, 2.0) {
+		t.Fatalf("expected: %v, but got: %v", 2.0, median)
+	}
+	medianFinder.AddNum(0)
+	medianFinder.AddNum(5)
+	median = medianFinder.FindMedian()
+	if !reflect.DeepEqual(median, 2.0) {
+		t.Fatalf("expected: %v, but got: %v", 2.0, median)
 	}
 }
 
