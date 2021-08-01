@@ -13,8 +13,19 @@ func TestSolution(t *testing.T) {
 		inputs []int
 		expect *TreeNode
 	}{
-		{"TestCase", []int{-10,-3,0,5,9}, &TreeNode{0, &TreeNode{Val: -3, Left: &TreeNode{Val: -10}}, &TreeNode{Val: 9, Left: &TreeNode{Val: 5}}}},
-		{"TestCase", []int{1,3}, &TreeNode{Val: 3, Left: &TreeNode{Val: 1}}},
+		{"TestCase1", []int{-10, -3, 0, 5, 9}, &TreeNode{
+			Val: 0,
+			Left: &TreeNode{
+				Val:  -3,
+				Left: &TreeNode{Val: -10},
+			},
+			Right: &TreeNode{
+				Val:  9,
+				Left: &TreeNode{Val: 5},
+			},
+		}},
+		{"TestCase2", []int{1, 3}, &TreeNode{Val: 3, Left: &TreeNode{Val: 1}, Right: nil}},
+		{"TestCase3", []int{1}, &TreeNode{Val: 1}},
 	}
 
 	//	开始测试

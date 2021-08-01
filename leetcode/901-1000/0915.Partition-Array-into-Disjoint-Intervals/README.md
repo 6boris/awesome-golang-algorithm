@@ -1,28 +1,30 @@
 # [915.Partition Array into Disjoint Intervals][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
 
 ## Description
+Given an array `nums`, partition it into two (contiguous) subarrays `left` and `right` so that:
+
+ - Every element in `left` is less than or equal to every element in `right`.
+ - `left` and `right` are non-empty.
+ - `left` has the smallest possible size.
+
+Return the `length` of `left` after such a partitioning. It is guaranteed that such a partitioning exists.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: nums = [5,0,3,8,6]
+Output: 3
+Explanation: left = [5,0,3], right = [8,6]
 ```
 
-## 题意
-> ...
+__Example 2:__
 
-## 题解
-
-### 思路1
-> ...
-Partition Array into Disjoint Intervals
-```go
 ```
-
+Input: nums = [1,1,1,0,6,12]
+Output: 4
+Explanation: left = [1,1,1,0], right = [6,12]
+```
 
 ## 结语
 

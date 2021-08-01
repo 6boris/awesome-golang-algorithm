@@ -1,28 +1,35 @@
 # [814.Binary Tree Pruning][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
 
 ## Description
+
+Given the `root` of a binary tree, return the same tree where every subtree (of the given tree) not containing a `1` has been removed.
+
+A subtree of a node `node` is `node` plus every node that is a descendant of `node`.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: root = [1,null,0,0,1]
+Output: [1,null,0,null,1]
+Explanation:
+Only the red nodes satisfy the property "every subtree not containing a 1".
+The diagram on the right represents the answer.
 ```
 
-## 题意
-> ...
+__Example 2:__
 
-## 题解
-
-### 思路1
-> ...
-Binary Tree Pruning
-```go
+```
+Input: root = [1,0,1,0,0,0,1]
+Output: [1,null,1,null,1]
 ```
 
+__Example 3:__
+
+```
+Input: root = [1,1,0,1,1,0,1,0]
+Output: [1,1,0,1,1,null,1]
+```
 
 ## 结语
 
