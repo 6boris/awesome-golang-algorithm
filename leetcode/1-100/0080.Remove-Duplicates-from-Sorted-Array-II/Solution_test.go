@@ -9,12 +9,13 @@ func TestSolution(t *testing.T) {
 	//	测试用例
 	cases := []struct {
 		name   string
-		inputs bool
-		expect bool
+		inputs []int
+		expect int
 	}{
-		{"TestCacse 1", true, true},
-		{"TestCacse 1", true, true},
-		{"TestCacse 1", false, false},
+		{"TestCase1", []int{1}, 1},
+		{"TestCase2", []int{1, 1, 1, 2, 2, 3}, 5},
+		{"TestCase3", []int{0, 0, 1, 1, 1, 1, 2, 3, 3}, 7},
+		{"TestCase4", []int{1, 2, 3, 4}, 4},
 	}
 
 	//	开始测试
@@ -25,6 +26,7 @@ func TestSolution(t *testing.T) {
 				t.Fatalf("expected: %v, but got: %v, with inputs: %v",
 					c.expect, ret, c.inputs)
 			}
+			t.Logf("%v", c.inputs[:c.expect])
 		})
 	}
 }
