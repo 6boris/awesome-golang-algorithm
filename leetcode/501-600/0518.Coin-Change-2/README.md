@@ -1,28 +1,41 @@
 # [518.Coin Change 2][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given an integer array `coins` representing coins of different denominations and an integer `amount` representing a total amount of money.
+
+Return the number of combinations that make up that amount. If that amount of money cannot be made up by any combination of the coins, return `0`.
+
+You may assume that you have an infinite number of each kind of coin.
+
+The answer is __guaranteed__ to fit into a signed __32-bit__ integer.
+
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: amount = 5, coins = [1,2,5]
+Output: 4
+Explanation: there are four ways to make up the amount:
+5=5
+5=2+2+1
+5=2+1+1+1
+5=1+1+1+1+1
 ```
 
-## 题意
-> ...
+__Example 2:__
 
-## 题解
-
-### 思路1
-> ...
-Coin Change 2
-```go
+```
+Input: amount = 3, coins = [2]
+Output: 0
+Explanation: the amount of 3 cannot be made up just with coins of 2.
 ```
 
+__Example 3:__
+
+```
+Input: amount = 10, coins = [10]
+Output: 1
+```
 
 ## 结语
 
