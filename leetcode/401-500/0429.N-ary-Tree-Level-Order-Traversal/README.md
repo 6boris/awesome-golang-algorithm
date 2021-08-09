@@ -1,26 +1,24 @@
 # [429.N-ary Tree Level Order Traversal][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given an n-ary tree, return the level order traversal of its nodes' values.
+
+Nary-Tree input serialization is represented in their level order traversal, each group of children is separated by the null value (See examples).
+
 
 **Example 1:**
-
+![example1](narytreeexample.png)
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: root = [1,null,3,2,4,null,5,6]
+Output: [[1],[3,2,4],[5,6]]
 ```
 
-## 题意
-> ...
 
-## 题解
-
-### 思路1
-> ...
-N-ary Tree Level Order Traversal
-```go
+__Example 2:__
+![example2](sample_4_964.png)
+```
+Input: root = [1,null,2,3,4,5,null,null,6,7,null,8,null,9,10,null,null,11,null,12,null,13,null,null,14]
+Output: [[1],[2,3,4,5],[6,7,8,9,10],[11,12,13],[14]]
 ```
 
 
