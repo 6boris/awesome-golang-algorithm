@@ -1,0 +1,14 @@
+output:
+  format: colored-line-number
+  print-issued-lines: true
+  print-linter-name: true
+  uniq-by-line: true
+  path-prefix: ""
+  sort-results: false
+
+linters:
+  disable-all: true
+  fast: false
+  enable:
+    - unused
+    - typecheck
