@@ -1,26 +1,22 @@
 # [214.Shortest Palindrome][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given a string `s`. You can convert `s` to a palindrome by adding characters in front of it.
+
+Return the shortest palindrome you can find by performing this transformation.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: s = "aacecaaa"
+Output: "aaacecaaa"
 ```
 
-## 题意
-> ...
+__Example 2:__
 
-## 题解
-
-### 思路1
-> ...
-Shortest Palindrome
-```go
+```
+Input: s = "abcd"
+Output: "dcbabcd"
 ```
 
 

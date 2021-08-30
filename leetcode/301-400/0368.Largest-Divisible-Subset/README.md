@@ -1,26 +1,25 @@
 # [368.Largest Divisible Subset][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given a set of __distinct__ positive integers nums, return the largest subset `answer` such that every pair `(answer[i], answer[j])` of elements in this subset satisfies:
+- `answer[i] % answer[j] == 0`, or
+- `answer[j] % answer[i] == 0`
+
+If there are multiple solutions, return any of them.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: nums = [1,2,3]
+Output: [1,2]
+Explanation: [1,3] is also accepted.
 ```
 
-## 题意
-> ...
+__Example 2:__
 
-## 题解
-
-### 思路1
-> ...
-Largest Divisible Subset
-```go
+```
+Input: nums = [1,2,4,8]
+Output: [1,2,4,8]
 ```
 
 
