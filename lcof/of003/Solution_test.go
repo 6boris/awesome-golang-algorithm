@@ -1,10 +1,11 @@
 package Solution
 
 import (
-	"github.com/stretchr/testify/assert"
 	"reflect"
 	"runtime"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 type SolutionFuncType func([]int) int
@@ -13,6 +14,7 @@ type SolutionFuncType func([]int) int
 var SolutionFuncList = []SolutionFuncType{
 	findRepeatNumber,
 	findRepeatNumber2,
+
 	findRepeatNumber3,
 }
 
