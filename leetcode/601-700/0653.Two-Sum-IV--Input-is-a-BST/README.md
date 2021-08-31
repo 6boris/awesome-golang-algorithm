@@ -1,28 +1,43 @@
 # [653.Two Sum IV - Input is a BST][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given the `root` of a Binary Search Tree and a target number `k`, return `true` if there exist two elements in the BST such that their sum is equal to the given target.
+
 
 **Example 1:**
-
+![example1](./sum_tree_1.jpg)
 ```
-Input: a = "11", b = "1"
-Output: "100"
-```
-
-## 题意
-> ...
-
-## 题解
-
-### 思路1
-> ...
-Two Sum IV - Input is a BST
-```go
+Input: root = [5,3,6,2,4,null,7], k = 9
+Output: true
 ```
 
+__Example 2:__
+![example2](./sum_tree_2.jpg)
+```
+Input: root = [5,3,6,2,4,null,7], k = 28
+Output: false
+```
+
+__Example 3:__
+
+```
+Input: root = [2,1,3], k = 4
+Output: true
+```
+
+__Example 4:__
+
+```
+Input: root = [2,1,3], k = 1
+Output: false
+```
+
+__Example 5:__
+
+```
+Input: root = [2,1,3], k = 3
+Output: true
+```
 
 ## 结语
 
