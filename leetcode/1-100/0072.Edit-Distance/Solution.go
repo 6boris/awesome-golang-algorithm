@@ -1,7 +1,5 @@
 package Solution
 
-import "fmt"
-
 /*
 	设状态为dp[i][j],表示A[0,i]与B[0,j]的最小编辑距离，对应形式分别为str1c,str2d
 	如果c==d,f[i][j]=f[i-1][j-1]
@@ -39,13 +37,6 @@ func minDistance(word1 string, word2 string) int {
 	//Print(dp)
 
 	return dp[m][n]
-}
-
-func Print(arr [][]int) {
-	for i := 0; i < len(arr); i++ {
-		fmt.Println(arr[i])
-	}
-	fmt.Println()
 }
 
 func min(x, y int) int {
