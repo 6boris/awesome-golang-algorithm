@@ -1,5 +1,9 @@
 package Solution
 
-func Solution(x bool) bool {
+func Solution_1(x bool) bool {
+	return x
+}
+
+func Solution_2(x bool) bool {
 	return x
 }

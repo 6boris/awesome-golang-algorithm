@@ -1,50 +1,69 @@
 package Solution
 
-import "testing"
+import (
+	"reflect"
+	"runtime"
+	"testing"
 
+	"github.com/stretchr/testify/assert"
+)
+
+// Solution func Info
+type SolutionFuncType func(x string) bool
+
+var SolutionFuncList = []SolutionFuncType{
+	isValid_1,
+	isValid_2,
+}
+
+// Test case info struct
+type Case struct {
+	name   string
+	input  string
+	expect bool
+}
+
+// Test case
+var cases = []Case{
+	{
+		name:   "TestCase 1",
+		input:  "()",
+		expect: true,
+	},
+	{
+		name:   "TestCase 2",
+		input:  "()[]{}",
+		expect: true,
+	},
+	{
+		name:   "TestCase 3",
+		input:  "(]",
+		expect: false,
+	},
+	{
+		name:   "TestCase 4",
+		input:  "([)]",
+		expect: false,
+	},
+	{
+		name:   "TestCase 5",
+		input:  "{[]}",
+		expect: true,
+	},
+}
+
+// TestSolution Run test case for all solutions
 func TestSolution(t *testing.T) {
-	t.Run("Test-1", func(t *testing.T) {
-		data := "()"
-		got := isValid(data)
-		want := true
-		if got != want {
-			t.Error("GOT:", got, "WANT:", want)
-		}
-	})
+	ast := assert.New(t)
 
-	t.Run("Test-2", func(t *testing.T) {
-		data := "()[]{}"
-		got := isValid(data)
-		want := true
-		if got != want {
-			t.Error("GOT:", got, "WANT:", want)
+	for _, f := range SolutionFuncList {
+		for _, c := range cases {
+			t.Run(c.name, func(t *testing.T) {
+				got := f(c.input)
+				ast.Equal(c.expect, got,
+					"func: %v case: %v ",
+					runtime.FuncForPC(reflect.ValueOf(f).Pointer()).Name(), c.name)
+			})
 		}
-	})
-
-	t.Run("Test-3", func(t *testing.T) {
-		data := "(]"
-		got := isValid(data)
-		want := false
-		if got != want {
-			t.Error("GOT:", got, "WANT:", want)
-		}
-	})
-
-	t.Run("Test-4", func(t *testing.T) {
-		data := "([)]"
-		got := isValid(data)
-		want := false
-		if got != want {
-			t.Error("GOT:", got, "WANT:", want)
-		}
-	})
-
-	t.Run("Test-5", func(t *testing.T) {
-		data := "{[]}"
-		got := isValid(data)
-		want := true
-		if got != want {
-			t.Error("GOT:", got, "WANT:", want)
-		}
-	})
+	}
 }

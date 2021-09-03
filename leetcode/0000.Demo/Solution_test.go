@@ -1,41 +1,54 @@
 package Solution
 
 import (
-	"github.com/stretchr/testify/assert"
-	"strconv"
+	"reflect"
+	"runtime"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
-// TestSolution Example for solution test cases
+// Solution func Info
+type SolutionFuncType func(x bool) bool
+
+var SolutionFuncList = []SolutionFuncType{
+	Solution_1,
+	Solution_2,
+}
+
+// Test case info struct
+type Case struct {
+	name   string
+	input  bool
+	expect bool
+}
+
+// Test case
+var cases = []Case{
+	{
+		name:   "TestCase 1",
+		input:  true,
+		expect: true,
+	},
+	{
+		name:   "TestCase 2",
+		input:  false,
+		expect: false,
+	},
+}
+
+// TestSolution Run test case for all solutions
 func TestSolution(t *testing.T) {
 	ast := assert.New(t)
-	//	test cases
-	cases := []struct {
-		name   string
-		inputs bool
-		expect bool
-	}{
-		{"TestCase", true, true},
-		{"TestCase", true, true},
-		{"TestCase", false, false},
+
+	for _, f := range SolutionFuncList {
+		for _, c := range cases {
+			t.Run(c.name, func(t *testing.T) {
+				got := f(c.input)
+				ast.Equal(c.expect, got,
+					"func: %v case: %v ",
+					runtime.FuncForPC(reflect.ValueOf(f).Pointer()).Name(), c.name)
+			})
+		}
 	}
-
-	//	Start test
-	for i, c := range cases {
-		t.Run(c.name+" "+strconv.Itoa(i), func(t *testing.T) {
-			actual := Solution(c.inputs)
-			ast.Equal(actual, c.expect, "expected: %v, but actual: %v, with inputs: %v",
-				c.expect, actual, c.inputs)
-		})
-	}
-}
-
-//	Benchmark Test
-func BenchmarkSolution(b *testing.B) {
-
-}
-
-//	Example Test
-func ExampleSolution() {
-
 }
