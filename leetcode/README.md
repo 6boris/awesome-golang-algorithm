@@ -10,7 +10,7 @@ Fork https://github.com/kylesliu/awesome-golang-algorithm
 * Clone 到本地
 
 ```shell
-git clone https://github.com/{username}}/awesome-golang-leetcode
+git clone https://github.com/{username}}/awesome-golang-algorithm
 
 ```
 * 切换到develop分支

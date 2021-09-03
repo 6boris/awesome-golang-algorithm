@@ -43,7 +43,7 @@ The only way to decode it is two-bit character and two-bit character. So the las
 
 ## 结语
 
-如果你同我一样热爱数据结构、算法、LeetCode，可以关注我 GitHub 上的 LeetCode 题解：[awesome-golang-leetcode][me]
+如果你同我一样热爱数据结构、算法、LeetCode，可以关注我 GitHub 上的 LeetCode 题解：[awesome-golang-algorithm][me]
 
 [title]: https://leetcode.com/problems/1-bit-and-2-bit-characters/
 [me]: https://github.com/kylesliu/awesome-golang-algorithm

@@ -28,7 +28,7 @@ Explanation: left = [1,1,1,0], right = [6,12]
 
 ## 结语
 
-如果你同我一样热爱数据结构、算法、LeetCode，可以关注我 GitHub 上的 LeetCode 题解：[awesome-golang-leetcode][me]
+如果你同我一样热爱数据结构、算法、LeetCode，可以关注我 GitHub 上的 LeetCode 题解：[awesome-golang-algorithm][me]
 
 [title]: https://leetcode.com/problems/partition-array-into-disjoint-intervals/
 [me]: https://github.com/kylesliu/awesome-golang-algorithm
