@@ -1,13 +1,13 @@
 # hugo server --minify --themesDir ... --baseURL=http://0.0.0.0:1313/theme/hugo-book/
 
-baseURL: https://example.com/
-title: Hugo Book
+baseURL: https://a.gin.sh
+title: Awesome Golang Algorithm
 theme: book
 
 # Book configuration
 disablePathToLower: true
 enableGitInfo: true
-
+defaultContentLanguage: "zh"
 # Needed for mermaid/katex shortcodes
 markup:
   goldmark:
@@ -36,9 +36,6 @@ menu:
     - name: "Github"
       url: "https://github.com/alex-shpak/hugo-book"
       weight: 10
-    - name: "Hugo Themes"
-      url: "https://themes.gohugo.io/hugo-book/"
-      weight: 20
 
 params:
   # (Optional, default light) Sets color theme: light, dark or auto.
@@ -65,7 +62,7 @@ params:
 
   # Set source repository location.
   # Used for 'Last Modified' and 'Edit this page' links.
-  BookRepo: https://github.com/alex-shpak/hugo-book
+  BookRepo: https://github.com/kylesliu/awesome-golang-algorithm
 
   # (Optional, default 'commit') Specifies commit portion of the link to the page's last modified
   # commit hash for 'doc' page type.
@@ -77,7 +74,7 @@ params:
   # Enable "Edit this page" links for 'doc' page type.
   # Disabled by default. Uncomment to enable. Requires 'BookRepo' param.
   # Edit path must point to root directory of repo.
-  BookEditPath: edit/main/exampleSite
+  BookEditPath: edit/master
 
   # Configure the date format used on the pages
   # - In git information

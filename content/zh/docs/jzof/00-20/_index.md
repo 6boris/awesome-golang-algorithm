@@ -1,5 +1,5 @@
 ---
-weight: 2
-bookFlatSection: true
-title: "剑指 Offer"
+weight: 1
+bookCollapseSection: true
+title: "00-20"
 ---
