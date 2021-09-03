@@ -1,5 +1,5 @@
-# Contributing to awesome-golang-leetcode
-awesome-golang-leetcode is an open source project.
+# Contributing to awesome-golang-algorithm
+awesome-golang-algorithm is an open source project.
 
 It is the work of hundreds of contributors. We appreciate your help!
 
@@ -10,17 +10,17 @@ Here are instructions to get you started. They are probably not perfect, please 
 ### Pull requests
 This repository Pull Request only support develop branch
 
-First of all. awesome-golang-leetcode follow the gitflow. So please send you pull request to develop branch. We will close the pull request to master branch.
+First of all. awesome-golang-algorithm follow the gitflow. So please send you pull request to develop branch. We will close the pull request to master branch.
 
 We are always happy to receive pull requests and do our best to review them as fast as possible. Not sure if that typo is worth a pull request? Do it! We will appreciate it.
 
 If your pull request is not accepted on the first try, don't be discouraged! Sometimes we can make a mistake, please do more explaining for us. We will appreciate it.
 
-We're trying very hard to keep awesome-golang-leetcode simple and fast. We don't want it to do everything for everybody. This means that we might decide against incorporating a new feature. But we will give you some advice on how to do it in another way.
+We're trying very hard to keep awesome-golang-algorithm simple and fast. We don't want it to do everything for everybody. This means that we might decide against incorporating a new feature. But we will give you some advice on how to do it in another way.
 
 #### Standard Process
 
-- 1.Fork the Repositories [awesome-golang-leetcode][Repositories-URL]
+- 1.Fork the Repositories [awesome-golang-algorithm][Repositories-URL]
 - 2.Check out the branch to develop
 - 3.Find the LeetCode problem directory. if the directory doesn't exist you can copy  [src/0000.Demo] and rename it to Standard
 - 4.Write your code int the Solution.go and copy the official test cases in the Solution_test.go

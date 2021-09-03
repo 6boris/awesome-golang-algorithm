@@ -20,5 +20,4 @@ node_modules/
 /public
 .env.yml
 /python
-go.sum
 package-lock.json

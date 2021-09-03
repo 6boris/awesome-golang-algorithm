@@ -26,7 +26,7 @@ Check If N and Its Double Exist
 
 ## 结语
 
-如果你同我一样热爱数据结构、算法、LeetCode，可以关注我 GitHub 上的 LeetCode 题解：[awesome-golang-leetcode][me]
+如果你同我一样热爱数据结构、算法、LeetCode，可以关注我 GitHub 上的 LeetCode 题解：[awesome-golang-algorithm][me]
 
 [title]: https://leetcode.com/problems/check-if-n-and-its-double-exist/
 [me]: https://github.com/kylesliu/awesome-golang-algorithm
