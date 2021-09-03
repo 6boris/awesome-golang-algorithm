@@ -16,5 +16,14 @@ test-leetcode:
 	@echo start test leetcode 
 	sh test.sh leetcode
 	@echo end  test leetcode 
-		
+hugo:
+	@echo start hugo
+	hugo server
+	@echo end  hugo
+deploy:
+	@echo start deploy
+	git submodule update --init --recursive 
+	git pull
+	hugo -D
+	@echo end  deploy 
 
