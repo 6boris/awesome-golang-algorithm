@@ -7,15 +7,11 @@ all: test-lcof test-leetcode
 	#make test-nowcoder
 	#make test-leetcode
 
-test-lcof:
-	@echo start test lcof 
-	sh test.sh lcof
-	@echo end  test lcof 
-
-test-leetcode:
-	@echo start test leetcode 
-	sh test.sh leetcode
-	@echo end  test leetcode 
+test:
+	@echo start test
+	sh test.sh
+	@echo end  test
+ 
 hugo:
 	@echo start hugo
 	hugo server
