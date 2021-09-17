@@ -29,7 +29,6 @@ type Case struct {
 
 // Test case
 var cases = []Case{
-	{"TestCase 1", nil, 9, nil},
 	{"TestCase 1", []int{2, 7, 11, 15}, 9, []int{0, 1}},
 	{"TestCase 2", []int{3, 2, 4}, 6, []int{1, 2}},
 	{"TestCase 3", []int{7, 6, 5, 3, 2, 1, 4, 9, 10}, 17, []int{0, 8}},
