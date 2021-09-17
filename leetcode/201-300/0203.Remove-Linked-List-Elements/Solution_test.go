@@ -26,7 +26,9 @@ func TestSolution(t *testing.T) {
 							},
 						},
 					},
-				}}}, 6, &ListNode{}},
+				},
+			},
+		}, 6, &ListNode{}},
 	}
 
 	//	开始测试
@@ -37,17 +39,14 @@ func TestSolution(t *testing.T) {
 				fmt.Print(got.Val, " ")
 				got = got.Next
 			}
-
 		})
 	}
 }
 
 //	压力测试
 func BenchmarkSolution(b *testing.B) {
-
 }
 
 //	使用案列
 func ExampleSolution() {
-
 }

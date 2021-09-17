@@ -11,8 +11,7 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
-type Codec struct {
-}
+type Codec struct{}
 
 func Constructor() Codec {
 	return Codec{}

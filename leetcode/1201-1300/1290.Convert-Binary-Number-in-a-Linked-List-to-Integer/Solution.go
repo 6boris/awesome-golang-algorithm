@@ -1,7 +1,9 @@
 package Solution
 
-import "strings"
-import "strconv"
+import (
+	"strconv"
+	"strings"
+)
 
 type ListNode struct {
 	Val  int

@@ -37,7 +37,6 @@ func maximalRectangle(matrix [][]byte) int {
 	return max
 }
 
-
 func largestRectangleArea(heights []int) int {
 	heights = append(heights, -1)
 	hLen := len(heights)

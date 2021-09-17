@@ -40,8 +40,10 @@ func movingCount1(m int, n int, k int) int {
 	return res
 }
 
-var n1, m1, k1 int
-var visited [][]bool
+var (
+	n1, m1, k1 int
+	visited    [][]bool
+)
 
 func movingCount2(m int, n int, k int) int {
 	m1 = m

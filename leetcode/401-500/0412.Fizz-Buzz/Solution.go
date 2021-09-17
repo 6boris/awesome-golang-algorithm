@@ -3,7 +3,6 @@ package Solution
 import "strconv"
 
 func fizzBuzz(n int) []string {
-
 	res := []string{}
 	for i := 1; i <= n; i++ {
 		if i%3 == 0 && i%15 == 0 {
@@ -15,13 +14,11 @@ func fizzBuzz(n int) []string {
 		} else {
 			res = append(res, strconv.Itoa(i))
 		}
-
 	}
 	return res
 }
 
 func fizzBuzz2(n int) []string {
-
 	res := []string{}
 	for i := 1; i <= n; i++ {
 		s := ""

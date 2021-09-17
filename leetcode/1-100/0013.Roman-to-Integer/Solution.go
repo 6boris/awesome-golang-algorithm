@@ -23,12 +23,11 @@ func romanToInt2(s string) int {
 	// 每次默认相加再检查和前面一位数的大小
 	// 前面 > 后面  ans = s[i-1] + s[i]
 	// 前面 < 后面  ans = - (2 * s[i-1]) + s[i] (因为默认加了一次所以需要减2次)
-	for i, _ := range s {
+	for i := range s {
 		ans += m[string(s[i])]
 		if i > 0 && m[string(s[i])] > m[string(s[i-1])] {
 			ans -= 2 * m[string(s[i-1])]
 		}
 	}
 	return ans
-
 }

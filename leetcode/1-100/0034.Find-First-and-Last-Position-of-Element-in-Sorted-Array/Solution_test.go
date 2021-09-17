@@ -27,6 +27,7 @@ func TestSolution(t *testing.T) {
 		})
 	}
 }
+
 func TestSolution2(t *testing.T) {
 	//	测试用例
 	cases := []struct {
@@ -52,10 +53,8 @@ func TestSolution2(t *testing.T) {
 
 //	压力测试
 func BenchmarkSolution(b *testing.B) {
-
 }
 
 //	使用案列
 func ExampleSolution() {
-
 }

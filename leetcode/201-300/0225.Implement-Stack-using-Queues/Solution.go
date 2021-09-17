@@ -14,7 +14,6 @@ func Constructor() MyStack {
 /** Push element x onto stack. */
 func (this *MyStack) Push(x int) {
 	this.enqueue = append(this.enqueue, x)
-
 }
 
 /** Removes the element on top of the stack and returns that element. */
@@ -27,7 +26,6 @@ func (this *MyStack) Pop() int {
 		// 交换队列中元素
 		for i, j := 0, len(this.dequeue)-1; i < len(this.dequeue) && j > i; i, j = i+1, j-1 {
 			this.dequeue[i], this.dequeue[j] = this.dequeue[j], this.dequeue[i]
-
 		}
 	}
 	if len(this.dequeue) > 0 {

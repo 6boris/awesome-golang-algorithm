@@ -13,14 +13,16 @@ func TestSolution(t *testing.T) {
 		input2 int
 		expect [][]int
 	}{
-		{"1 test 1",
+		{
+			"1 test 1",
 			[]int{1, 0, -1, 0, -2, 2},
 			0,
 			[][]int{
 				{-1, 0, 0, 1},
 				{-2, -1, 1, 2},
 				{-2, 0, 0, 2},
-			}},
+			},
+		},
 	}
 
 	//	开始测试
@@ -44,14 +46,16 @@ func TestSolution2(t *testing.T) {
 		input2 int
 		expect [][]int
 	}{
-		{"1 test 1",
+		{
+			"1 test 1",
 			[]int{1, 0, -1, 0, -2, 2},
 			0,
 			[][]int{
 				{-1, 0, 0, 1},
 				{-2, -1, 1, 2},
 				{-2, 0, 0, 2},
-			}},
+			},
+		},
 	}
 
 	//	开始测试

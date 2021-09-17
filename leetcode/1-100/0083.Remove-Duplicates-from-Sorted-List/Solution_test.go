@@ -12,13 +12,17 @@ func TestSolution(t *testing.T) {
 		inputs *ListNode
 		expect *ListNode
 	}{
-		{"1 test 1",
+		{
+			"1 test 1",
 			&ListNode{1, &ListNode{1, &ListNode{2, nil}}},
-			&ListNode{1, &ListNode{2, nil}}},
+			&ListNode{1, &ListNode{2, nil}},
+		},
 
-		{"2 test 2",
+		{
+			"2 test 2",
 			&ListNode{1, &ListNode{1, &ListNode{2, &ListNode{3, &ListNode{3, nil}}}}},
-			&ListNode{1, &ListNode{2, &ListNode{3, nil}}}},
+			&ListNode{1, &ListNode{2, &ListNode{3, nil}}},
+		},
 	}
 
 	//	开始测试
@@ -45,7 +49,6 @@ func PList(x *ListNode) {
 }
 
 func IsEqual(x, y *ListNode) bool {
-
 	for x != nil && y != nil {
 
 		if x.Val != y.Val {
@@ -61,5 +64,4 @@ func IsEqual(x, y *ListNode) bool {
 	}
 
 	return true
-
 }

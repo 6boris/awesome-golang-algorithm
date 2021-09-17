@@ -15,30 +15,48 @@ func TestSolution(t *testing.T) {
 		input2 *TreeNode
 		expect bool
 	}{
-		{"TestCase 1",
-			&TreeNode{Val: 1,
+		{
+			"TestCase 1",
+			&TreeNode{
+				Val:   1,
 				Left:  &TreeNode{Val: 2, Left: nil, Right: nil},
-				Right: &TreeNode{Val: 3, Left: nil, Right: nil}},
-			&TreeNode{Val: 1,
+				Right: &TreeNode{Val: 3, Left: nil, Right: nil},
+			},
+			&TreeNode{
+				Val:   1,
 				Left:  &TreeNode{Val: 2, Left: nil, Right: nil},
-				Right: &TreeNode{Val: 3, Left: nil, Right: nil}},
-			true},
-		{"TestCase 2",
-			&TreeNode{Val: 1,
+				Right: &TreeNode{Val: 3, Left: nil, Right: nil},
+			},
+			true,
+		},
+		{
+			"TestCase 2",
+			&TreeNode{
+				Val:   1,
 				Left:  &TreeNode{Val: 2, Left: nil, Right: nil},
-				Right: nil},
-			&TreeNode{Val: 1,
+				Right: nil,
+			},
+			&TreeNode{
+				Val:   1,
 				Left:  nil,
-				Right: &TreeNode{Val: 2, Left: nil, Right: nil}},
-			true},
-		{"TestCase 3",
-			&TreeNode{Val: 1,
+				Right: &TreeNode{Val: 2, Left: nil, Right: nil},
+			},
+			true,
+		},
+		{
+			"TestCase 3",
+			&TreeNode{
+				Val:   1,
 				Left:  &TreeNode{Val: 2, Left: nil, Right: nil},
-				Right: nil},
-			&TreeNode{Val: 1,
+				Right: nil,
+			},
+			&TreeNode{
+				Val:   1,
 				Left:  nil,
-				Right: &TreeNode{Val: 2, Left: nil, Right: nil}},
-			true},
+				Right: &TreeNode{Val: 2, Left: nil, Right: nil},
+			},
+			true,
+		},
 	}
 
 	//	开始测试
@@ -46,8 +64,8 @@ func TestSolution(t *testing.T) {
 		t.Run(c.name, func(t *testing.T) {
 			ret := isSameTree(c.input1, c.input2)
 			if !reflect.DeepEqual(ret, c.expect) {
-				//t.Fatalf("expected: %v, but got: %v, with inputs: %v",
-				//c.expect, ret, c.input1)
+				// t.Fatalf("expected: %v, but got: %v, with inputs: %v",
+				// c.expect, ret, c.input1)
 			}
 		})
 	}

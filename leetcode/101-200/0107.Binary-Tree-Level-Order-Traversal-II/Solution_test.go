@@ -12,7 +12,7 @@ func TestSolution(t *testing.T) {
 		inputs *TreeNode
 		expect [][]int
 	}{
-		{"1 test 1", &TreeNode{3, &TreeNode{Val: 9}, &TreeNode{20, &TreeNode{Val: 15}, &TreeNode{Val: 7}}}, [][]int{{15,7}, {9,20}, {3}}},
+		{"1 test 1", &TreeNode{3, &TreeNode{Val: 9}, &TreeNode{20, &TreeNode{Val: 15}, &TreeNode{Val: 7}}}, [][]int{{15, 7}, {9, 20}, {3}}},
 		{"2 test 2", &TreeNode{Val: 1}, [][]int{{1}}},
 		{"3 test 3", &TreeNode{}, [][]int{{0}}},
 	}

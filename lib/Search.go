@@ -28,7 +28,6 @@ func BinarySearchLeftBound(nums []int, target int) int {
 			right = mid - 1
 		} else if nums[mid] < target {
 			left = mid + 1
-
 		} else if nums[mid] > target {
 			right = mid - 1
 		}
@@ -49,7 +48,6 @@ func BinarySearchRightBound(nums []int, target int) int {
 			left = mid + 1
 		} else if nums[mid] < target {
 			left = mid + 1
-
 		} else if nums[mid] > target {
 			right = mid - 1
 		}

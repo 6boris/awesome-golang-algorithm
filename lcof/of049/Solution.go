@@ -19,6 +19,7 @@ func nthUglyNumber(n int) int {
 	}
 	return dp[n-1]
 }
+
 func min(x, y int) int {
 	if x > y {
 		return y

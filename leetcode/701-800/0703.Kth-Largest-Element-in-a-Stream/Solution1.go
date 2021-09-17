@@ -15,7 +15,7 @@ func Constructor1(k int, nums []int) KthLargest1 {
 	kthLargest := KthLargest1{heap: make([]int, k)}
 	kthLargest.k = k
 	//	需要将原head 总默认值设置最小
-	for i, _ := range kthLargest.heap {
+	for i := range kthLargest.heap {
 		kthLargest.heap[i] = math.MinInt32
 	}
 

@@ -14,6 +14,7 @@ func exist(borad [][]byte, word string) bool {
 	}
 	return false
 }
+
 func dfs(x, y int, board [][]byte, word []byte) bool {
 	if x < 0 || x >= len(board) {
 		return false

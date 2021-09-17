@@ -1,49 +1,53 @@
 package Solution
 
 import (
+	"fmt"
 	"reflect"
-	"strconv"
+	"runtime"
+	"strings"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
-func TestMoveZeroes(t *testing.T) {
-	cases := []struct {
-		name    string
-		inputs  []int
-		expects []int
-	}{
-		{"test case 1", []int{0, 1, 0, 3, 12}, []int{1, 3, 12, 0, 0}},
-	}
+// Solution func Info
+type SolutionFuncType func([]int) []int
 
-	for _, testcase := range cases {
-		t.Run(testcase.name, func(t *testing.T) {
-			result := moveZeroes(testcase.inputs)
-			if !reflect.DeepEqual(result, testcase.expects) {
-				t.Fatalf("expected: %v, but got: %v, with input: %v ", testcase.expects, result, testcase.inputs)
-			}
-
-		})
-	}
+var SolutionFuncList = []SolutionFuncType{
+	moveZeroes,
+	moveZeroes_2,
 }
 
-func TestMoveZeroes2(t *testing.T) {
-	cases := []struct {
-		name    string
-		inputs  []int
-		expects []int
-	}{
-		{"TestCase", []int{0, 1, 0, 3, 12}, []int{1, 3, 12, 0, 0}},
-		{"TestCase", []int{0}, []int{0}},
-		{"TestCase", []int{1}, []int{1}},
-	}
+// Test case info struct
+type Case struct {
+	name   string
+	input  []int
+	expect []int
+}
 
-	for i, testcase := range cases {
-		t.Run(testcase.name+" "+strconv.Itoa(i), func(t *testing.T) {
-			result := moveZeroes2(testcase.inputs)
-			if !reflect.DeepEqual(result, testcase.expects) {
-				t.Fatalf("expected: %v, but got: %v, with input: %v ", testcase.expects, result, testcase.inputs)
-			}
+// Test case
+var cases = []Case{
+	{"TestCase 1", []int{0, 1, 0, 3, 12}, []int{1, 3, 12, 0, 0}},
+	{"TestCase 2", []int{0}, []int{0}},
+	{"TestCase 3", []int{1}, []int{1}},
+}
 
-		})
+// TestSolution Run test case for all solutions
+func TestSolution(t *testing.T) {
+	ast := assert.New(t)
+
+	for _, f := range SolutionFuncList {
+		funcName := strings.Split(runtime.FuncForPC(reflect.ValueOf(f).Pointer()).Name(), ".")[1]
+		for _, c := range cases {
+			t.Run(fmt.Sprintf("%s %s", funcName, c.name), func(t *testing.T) {
+				i := make([]int, 0)
+				for _, v := range c.input {
+					i = append(i, v)
+				}
+				got := f(i)
+				ast.Equal(c.expect, got,
+					"func: %v case: %v ", funcName, c.name)
+			})
+		}
 	}
 }

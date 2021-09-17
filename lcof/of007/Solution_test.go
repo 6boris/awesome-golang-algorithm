@@ -1,10 +1,11 @@
 package Solution
 
 import (
-	"github.com/stretchr/testify/assert"
 	"reflect"
 	"runtime"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 //	solution func Info
@@ -34,7 +35,8 @@ var cases = []Case{
 			Right: &TreeNode{
 				Val:   20,
 				Left:  &TreeNode{Val: 15},
-				Right: &TreeNode{Val: 7}},
+				Right: &TreeNode{Val: 7},
+			},
 		},
 	},
 	{
@@ -58,7 +60,8 @@ var cases = []Case{
 				Right: &TreeNode{
 					Val:  6,
 					Left: &TreeNode{Val: 8},
-				}},
+				},
+			},
 		},
 	},
 }

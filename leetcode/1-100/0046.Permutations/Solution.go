@@ -1,10 +1,11 @@
 package Solution
 
-var ans [][]int
-var visit []bool
+var (
+	ans   [][]int
+	visit []bool
+)
 
 func permute(nums []int) [][]int {
-
 	ans = [][]int{}
 	visit = make([]bool, len(nums))
 	dfs(nums, []int{})

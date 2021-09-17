@@ -25,31 +25,11 @@ type Case struct {
 
 // Test case
 var cases = []Case{
-	{
-		name:   "TestCase 1",
-		input:  "()",
-		expect: true,
-	},
-	{
-		name:   "TestCase 2",
-		input:  "()[]{}",
-		expect: true,
-	},
-	{
-		name:   "TestCase 3",
-		input:  "(]",
-		expect: false,
-	},
-	{
-		name:   "TestCase 4",
-		input:  "([)]",
-		expect: false,
-	},
-	{
-		name:   "TestCase 5",
-		input:  "{[]}",
-		expect: true,
-	},
+	{name: "TestCase 1", input: "()", expect: true},
+	{name: "TestCase 2", input: "()[]{}", expect: true},
+	{name: "TestCase 3", input: "(]", expect: false},
+	{name: "TestCase  4", input: "([)]", expect: false},
+	{name: "TestCase 5", input: "{[]}", expect: true},
 }
 
 // TestSolution Run test case for all solutions

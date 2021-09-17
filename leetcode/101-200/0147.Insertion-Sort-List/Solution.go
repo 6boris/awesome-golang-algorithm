@@ -1,6 +1,5 @@
 package Solution
 
-
 func Solution(head *ListNode) *ListNode {
 	if nil == head {
 		return nil
@@ -41,4 +40,3 @@ func insertionSortList(head *ListNode) *ListNode {
 	}
 	return dummy.Next
 }
-

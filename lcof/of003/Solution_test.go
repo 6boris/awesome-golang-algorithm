@@ -14,7 +14,6 @@ type SolutionFuncType func([]int) int
 var SolutionFuncList = []SolutionFuncType{
 	findRepeatNumber,
 	findRepeatNumber2,
-
 	findRepeatNumber3,
 }
 
@@ -58,5 +57,4 @@ func TestSolution(t *testing.T) {
 			})
 		}
 	}
-
 }

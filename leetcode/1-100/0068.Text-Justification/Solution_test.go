@@ -9,8 +9,8 @@ func TestSolution(t *testing.T) {
 	//	测试用例
 	cases := []struct {
 		name   string
-		words []string
-		k int
+		words  []string
+		k      int
 		expect []string
 	}{
 		{"TestCase", []string{"This", "is", "an", "example", "of", "text", "justification."}, 16, []string{
@@ -18,20 +18,24 @@ func TestSolution(t *testing.T) {
 			"example  of text",
 			"justification.  ",
 		}},
-		{"TestCase", []string{"What","must","be","acknowledgment","shall","be"}, 16, []string{
+		{"TestCase", []string{"What", "must", "be", "acknowledgment", "shall", "be"}, 16, []string{
 			"What   must   be",
 			"acknowledgment  ",
 			"shall be        ",
 		}},
-		{"TestCase", []string{"Science","is","what","we","understand","well","enough","to","explain","to","a","computer.","Art","is","everything","else","we","do"}, 20, 
-		[]string{
-			"Science  is  what we",
-			"understand      well",
-			"enough to explain to",
-			"a  computer.  Art is",
-			"everything  else  we",
-			"do                  ",
-		}},
+		{
+			"TestCase",
+			[]string{"Science", "is", "what", "we", "understand", "well", "enough", "to", "explain", "to", "a", "computer.", "Art", "is", "everything", "else", "we", "do"},
+			20,
+			[]string{
+				"Science  is  what we",
+				"understand      well",
+				"enough to explain to",
+				"a  computer.  Art is",
+				"everything  else  we",
+				"do                  ",
+			},
+		},
 	}
 
 	//	开始测试
@@ -48,10 +52,8 @@ func TestSolution(t *testing.T) {
 
 //	压力测试
 func BenchmarkSolution(b *testing.B) {
-
 }
 
 //	使用案列
 func ExampleSolution() {
-
 }

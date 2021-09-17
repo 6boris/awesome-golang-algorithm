@@ -3,7 +3,7 @@ package Solution
 func checkRecord(s string) bool {
 	a, l := 0, 0
 
-	for i, _ := range s {
+	for i := range s {
 		if s[i] == 'A' {
 			a++
 		}

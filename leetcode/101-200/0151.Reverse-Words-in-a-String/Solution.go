@@ -29,7 +29,7 @@ func reverseWords2(s string) string {
 // Helper func that reverses the elements of a string slice.
 func reverseSlice(s []string) []string {
 	size := len(s)
-	for i := range(s[:size/2]) {
+	for i := range s[:size/2] {
 		s[i], s[size-1-i] = s[size-1-i], s[i]
 	}
 	return s

@@ -9,10 +9,10 @@ func TestSolution(t *testing.T) {
 	//	测试用例
 	cases := []struct {
 		name   string
-		x int
+		x      int
 		expect [][]string
 	}{
-		{"TestCase", 4, [][]string{{".Q..","...Q","Q...","..Q."},{"..Q.","Q...","...Q",".Q.."}}},
+		{"TestCase", 4, [][]string{{".Q..", "...Q", "Q...", "..Q."}, {"..Q.", "Q...", "...Q", ".Q.."}}},
 		{"TestCase", 1, [][]string{{"Q"}}},
 	}
 
@@ -30,10 +30,8 @@ func TestSolution(t *testing.T) {
 
 //	压力测试
 func BenchmarkSolution(b *testing.B) {
-
 }
 
 //	使用案列
 func ExampleSolution() {
-
 }

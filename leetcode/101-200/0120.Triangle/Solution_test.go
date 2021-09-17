@@ -12,20 +12,24 @@ func TestSolution(t *testing.T) {
 		inputs [][]int
 		expect int
 	}{
-		{"TestCacse 1",
+		{
+			"TestCacse 1",
 			[][]int{
 				{2},
 				{3, 4},
 				{6, 5, 7},
 				{4, 1, 8, 3},
 			},
-			11},
-		{"TestCacse 2",
+			11,
+		},
+		{
+			"TestCacse 2",
 			[][]int{
 				{1},
 				{2, 3},
 			},
-			3},
+			3,
+		},
 	}
 
 	//	开始测试
@@ -47,20 +51,24 @@ func TestSolution1(t *testing.T) {
 		inputs [][]int
 		expect int
 	}{
-		{"TestCacse 1",
+		{
+			"TestCacse 1",
 			[][]int{
 				{2},
 				{3, 4},
 				{6, 5, 7},
 				{4, 1, 8, 3},
 			},
-			11},
-		{"TestCacse 2",
+			11,
+		},
+		{
+			"TestCacse 2",
 			[][]int{
 				{1},
 				{2, 3},
 			},
-			3},
+			3,
+		},
 	}
 
 	//	开始测试
@@ -82,20 +90,24 @@ func TestSolution2(t *testing.T) {
 		inputs [][]int
 		expect int
 	}{
-		{"TestCacse 1",
+		{
+			"TestCacse 1",
 			[][]int{
 				{2},
 				{3, 4},
 				{6, 5, 7},
 				{4, 1, 8, 3},
 			},
-			11},
-		{"TestCacse 2",
+			11,
+		},
+		{
+			"TestCacse 2",
 			[][]int{
 				{1},
 				{2, 3},
 			},
-			3},
+			3,
+		},
 	}
 
 	//	开始测试
@@ -112,10 +124,8 @@ func TestSolution2(t *testing.T) {
 
 //	压力测试
 func BenchmarkSolution(b *testing.B) {
-
 }
 
 //	使用案列
 func ExampleSolution() {
-
 }

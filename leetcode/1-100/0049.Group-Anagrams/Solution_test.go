@@ -12,7 +12,9 @@ func TestSolution(t *testing.T) {
 		inputs []string
 		expect [][]string
 	}{
-		{"1 test 1", []string{"eat", "tea", "tan", "ate", "nat", "bat"},
+		{
+			"1 test 1",
+			[]string{"eat", "tea", "tan", "ate", "nat", "bat"},
 			[][]string{
 				{"eat", "tea", "ate"},
 				{"tan", "nat"},

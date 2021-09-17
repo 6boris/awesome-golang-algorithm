@@ -6,8 +6,8 @@ func addBinary(a, b string) string {
 	lenA := len(a)
 	lenB := len(b)
 	if lenB > lenA {
-		a, b = b, a             //swap
-		lenA, lenB = lenB, lenA //swap2
+		a, b = b, a             // swap
+		lenA, lenB = lenB, lenA // swap2
 	}
 	b = strings.Repeat("0", lenA-lenB) + b
 	lenB = len(b)

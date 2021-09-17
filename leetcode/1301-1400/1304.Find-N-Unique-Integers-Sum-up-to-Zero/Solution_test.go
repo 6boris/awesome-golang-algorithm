@@ -39,10 +39,8 @@ func checkResult(arr []int) int {
 
 //	压力测试
 func BenchmarkSolution(b *testing.B) {
-
 }
 
 //	使用案列
 func ExampleSolution() {
-
 }

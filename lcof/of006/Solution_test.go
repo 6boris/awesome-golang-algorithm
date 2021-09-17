@@ -32,8 +32,10 @@ var cases = []Case{
 	},
 	{
 		name: "TestCase 2",
-		inputs: &ListNode{Val: 1,
-			Next: &ListNode{Val: 2, Next: &ListNode{Val: 3}}},
+		inputs: &ListNode{
+			Val:  1,
+			Next: &ListNode{Val: 2, Next: &ListNode{Val: 3}},
+		},
 		expect: []int{3, 2, 1},
 	},
 }

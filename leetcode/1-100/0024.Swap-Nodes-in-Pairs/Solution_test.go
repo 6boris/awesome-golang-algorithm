@@ -12,7 +12,8 @@ func TestSolution(t *testing.T) {
 		inputs *ListNode
 		expect *ListNode
 	}{
-		{"1 test 1",
+		{
+			"1 test 1",
 			&ListNode{Val: 1, Next: &ListNode{Val: 2, Next: &ListNode{Val: 3, Next: &ListNode{Val: 4, Next: nil}}}},
 			&ListNode{Val: 2, Next: &ListNode{Val: 1, Next: &ListNode{Val: 4, Next: &ListNode{Val: 3, Next: nil}}}},
 		},
@@ -37,7 +38,8 @@ func TestSolution2(t *testing.T) {
 		inputs *ListNode
 		expect *ListNode
 	}{
-		{"1 test 1",
+		{
+			"1 test 1",
 			&ListNode{Val: 1, Next: &ListNode{Val: 2, Next: &ListNode{Val: 3, Next: &ListNode{Val: 4, Next: nil}}}},
 			&ListNode{Val: 2, Next: &ListNode{Val: 1, Next: &ListNode{Val: 4, Next: &ListNode{Val: 3, Next: nil}}}},
 		},
@@ -56,5 +58,4 @@ func TestSolution2(t *testing.T) {
 }
 
 func BenchMarkSolution(b *testing.BenchmarkResult) {
-
 }

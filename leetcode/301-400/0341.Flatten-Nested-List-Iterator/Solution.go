@@ -15,10 +15,9 @@ func (this NestedInteger) GetInteger() int {
 }
 
 func (this NestedInteger) SetInteger(value int) {
-
 }
-func (this NestedInteger) Add(ele NestedInteger) {
 
+func (this NestedInteger) Add(ele NestedInteger) {
 }
 
 func (this NestedInteger) GetList() []*NestedInteger {

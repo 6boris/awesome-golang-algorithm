@@ -16,7 +16,8 @@ func TestSolution(t *testing.T) {
 			"TestCacse 1",
 			UnmarshalListBySlice([]int{1, 2, 3, 4, 5}),
 			2,
-			UnmarshalListBySlice([]int{2, 1, 4, 3, 5})},
+			UnmarshalListBySlice([]int{2, 1, 4, 3, 5}),
+		},
 		{
 			"TestCacse 2",
 			UnmarshalListBySlice([]int{1, 2, 3, 4, 5}),
@@ -30,8 +31,8 @@ func TestSolution(t *testing.T) {
 		t.Run(c.name, func(t *testing.T) {
 			got := reverseKGroup(c.input1, c.input2)
 			if !isEqual(got, c.expect) {
-				//t.Fatalf("expected: %v, but got: %v, with inputs: %v",
-				//c.expect, got, c.input1)
+				// t.Fatalf("expected: %v, but got: %v, with inputs: %v",
+				// c.expect, got, c.input1)
 
 				PrintList(got)
 				PrintList(c.expect)

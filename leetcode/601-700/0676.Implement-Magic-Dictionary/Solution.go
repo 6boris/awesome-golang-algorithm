@@ -24,7 +24,6 @@ func (root *MagicDictionary) Insert(word string) {
 		}
 	}
 	start.End = true
-
 }
 
 /** Build a dictionary through a list of words */
@@ -34,17 +33,17 @@ func (root *MagicDictionary) BuildDict(dict []string) {
 	}
 }
 
-//the second parameter is mismatched character, the third one is word length, and the fourth is the word access index
+// the second parameter is mismatched character, the third one is word length, and the fourth is the word access index
 func (root *MagicDictionary) SearchHelper(word string, miss int, wl int, ind int) bool {
-	//if mismatch is more than 1
+	// if mismatch is more than 1
 	if miss > 1 {
 		return false
 	}
-	//if end of the word, then must have exact one mismatch
+	// if end of the word, then must have exact one mismatch
 	if wl == ind {
 		return root.End && miss == 1
 	}
-	//current access character of the word
+	// current access character of the word
 	ch := int(word[ind] - 'a')
 	for i, nc := range root.Children {
 		if nc != nil {

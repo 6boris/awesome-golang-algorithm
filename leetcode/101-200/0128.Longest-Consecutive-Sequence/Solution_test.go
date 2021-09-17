@@ -8,9 +8,9 @@ import (
 func TestSolution(t *testing.T) {
 	// 测试用例
 	cases := []struct {
-		name 	string
-		inputs	[]int
-		expect 	int
+		name   string
+		inputs []int
+		expect int
 	}{
 		{
 			"TestCases 1",
@@ -32,10 +32,8 @@ func TestSolution(t *testing.T) {
 
 //	压力测试
 func BenchmarkSolution(b *testing.B) {
-
 }
 
 //	使用案列
 func ExampleSolution() {
-
 }

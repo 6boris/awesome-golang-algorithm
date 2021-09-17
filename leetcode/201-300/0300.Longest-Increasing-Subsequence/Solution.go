@@ -22,7 +22,7 @@ func max(x, y int) int {
 	return y
 }
 
-//	贪心 + 动态规划	
+//	贪心 + 动态规划
 func lengthOfLIS2(nums []int) int {
 	dp, ans := make([]int, len(nums)), 0
 	for _, v := range nums {

@@ -1,6 +1,5 @@
 package Solution
 
-
 func pathSum(root *TreeNode, sum int) [][]int {
 	var slice [][]int
 	slice = pathSumHelper(root, sum, slice, []int(nil))

@@ -23,7 +23,6 @@ func dfs(s string, wordDict []string, dict map[string][]string) []string {
 					res = append(res, word+" "+str)
 				}
 			}
-
 		}
 	}
 	dict[s] = res

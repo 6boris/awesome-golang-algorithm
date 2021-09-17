@@ -1,4 +1,3 @@
 package main
 
-type GitHub struct {
-}
+type GitHub struct{}

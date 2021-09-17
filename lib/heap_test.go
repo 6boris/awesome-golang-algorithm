@@ -19,10 +19,9 @@ func TestIntHeap_Less(t *testing.T) {
 	heap.Push(h, 7)
 	fmt.Printf("minimum: %d\n", (*h))
 
-
 	for h.Len() > 0 {
 		fmt.Printf("%d ", heap.Pop(h))
 	}
-	//fmt.Printf("minimum: %d\n", (*h))
-	//fmt.Printf("minimum: %d\n", (*h)[2])
+	// fmt.Printf("minimum: %d\n", (*h))
+	// fmt.Printf("minimum: %d\n", (*h)[2])
 }

@@ -35,8 +35,8 @@ func searchRange2(nums []int, target int) []int {
 	targetRange[1] = extremeInsertionIndex(nums, target, false) - 1
 
 	return targetRange
-
 }
+
 func extremeInsertionIndex(nums []int, target int, left bool) int {
 	lo := 0
 	hi := len(nums)

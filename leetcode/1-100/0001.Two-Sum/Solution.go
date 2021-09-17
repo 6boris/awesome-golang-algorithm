@@ -1,7 +1,6 @@
 package Solution
 
-func TwoSum1(nums []int, target int) []int {
-
+func TwoSum_1(nums []int, target int) []int {
 	n := len(nums)
 
 	for i, v := range nums {
@@ -15,8 +14,7 @@ func TwoSum1(nums []int, target int) []int {
 	return nil
 }
 
-func TwoSum2(nums []int, target int) []int {
-
+func TwoSum_2(nums []int, target int) []int {
 	m := make(map[int]int, len(nums))
 
 	for i, v := range nums {
@@ -31,7 +29,7 @@ func TwoSum2(nums []int, target int) []int {
 	return nil
 }
 
-func TwoSum3(nums []int, target int) []int {
+func TwoSum_3(nums []int, target int) []int {
 	if nums == nil || len(nums) < 2 {
 		return []int{-1, -1}
 	}

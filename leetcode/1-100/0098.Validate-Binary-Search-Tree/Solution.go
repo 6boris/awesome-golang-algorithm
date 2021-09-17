@@ -2,7 +2,6 @@ package Solution
 
 //	验证二叉搜索树
 func isValidBST(root *TreeNode) bool {
-
 	INT_MAX := int(^uint(0) >> 1)
 	INT_MIN := ^INT_MAX
 
@@ -11,7 +10,6 @@ func isValidBST(root *TreeNode) bool {
 	}
 
 	return validate(root, INT_MAX, INT_MIN)
-
 }
 
 func validate(root *TreeNode, max, min int) bool {

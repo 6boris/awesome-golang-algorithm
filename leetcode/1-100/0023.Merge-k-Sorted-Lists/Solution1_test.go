@@ -5,20 +5,21 @@ import (
 )
 
 func TestSolution(t *testing.T) {
-
 	//	测试用例
 	cases := []struct {
 		name   string
 		inputs []*ListNode
 		expect *ListNode
 	}{
-		{"TestCacse 1",
+		{
+			"TestCacse 1",
 			[]*ListNode{
 				UnmarshalListBySlice([]int{1, 4, 5}),
 				UnmarshalListBySlice([]int{1, 3, 4}),
 				UnmarshalListBySlice([]int{2, 6}),
 			},
-			UnmarshalListBySlice([]int{1, 1, 2, 3, 4, 4, 5, 6})},
+			UnmarshalListBySlice([]int{1, 1, 2, 3, 4, 4, 5, 6}),
+		},
 	}
 	//	开始测试
 	for _, c := range cases {
@@ -36,10 +37,8 @@ func TestSolution(t *testing.T) {
 
 //	压力测试
 func BenchmarkSolution(b *testing.B) {
-
 }
 
 //	使用案列
 func ExampleSolution() {
-
 }

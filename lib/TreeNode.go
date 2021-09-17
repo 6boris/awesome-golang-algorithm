@@ -25,7 +25,7 @@ func GenTreeHelp(x []int, index *int) *TreeNode {
 		*index = *index + 1
 		return nil
 	}
-	//fmt.Print(*index, x[*index])
+	// fmt.Print(*index, x[*index])
 	(*index) = *index + 1
 	node := &TreeNode{Val: x[*index]}
 	node.Left = GenTreeHelp(x, index)

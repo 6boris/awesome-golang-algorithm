@@ -20,7 +20,7 @@ func GetReadmeTemplateBuffer() string {
 
 func GenerateReadme(problem Problem) {
 	log.Println("开始生成 README")
-	file, err := os.OpenFile(SOURCE_SOLUTION_README_FILE_PATH, os.O_RDONLY, 0600)
+	file, err := os.OpenFile(SOURCE_SOLUTION_README_FILE_PATH, os.O_RDONLY, 0o600)
 	defer file.Close()
 	if err != nil {
 		log.Panicf("README 模板读取失败1：%s", err.Error())

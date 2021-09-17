@@ -6,7 +6,6 @@ import (
 )
 
 func TestSolution(t *testing.T) {
-
 	kthLarges := Constructor(3, []int{4, 5, 8, 2})
 
 	fmt.Println(kthLarges.Add(3))
@@ -18,10 +17,8 @@ func TestSolution(t *testing.T) {
 
 //	压力测试
 func BenchmarkSolution(b *testing.B) {
-
 }
 
 //	使用案列
 func ExampleSolution() {
-
 }

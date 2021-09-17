@@ -21,7 +21,6 @@ type ListNode struct {
 
 //	比较结果
 func isEqual(l1 *ListNode, l2 *ListNode) bool {
-
 	for l1 != nil && l2 != nil {
 		if l1.Val != l2.Val {
 			return false

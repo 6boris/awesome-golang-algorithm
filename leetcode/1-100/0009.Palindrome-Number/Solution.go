@@ -8,7 +8,6 @@ func isPalindrome(x int) bool {
 	halfReverseX := 0
 	for ; x > halfReverseX; x /= 10 {
 		halfReverseX = halfReverseX*10 + x%10
-
 	}
 	//	需要排除数字个数为单数的时候
 	return x == halfReverseX || halfReverseX/10 == x

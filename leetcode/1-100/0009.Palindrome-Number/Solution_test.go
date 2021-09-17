@@ -28,5 +28,4 @@ func TestSolution(t *testing.T) {
 			t.Error("GOT:", got, "WANT:", want)
 		}
 	})
-
 }

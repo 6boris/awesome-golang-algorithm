@@ -1,10 +1,11 @@
 package Solution
 
 import (
-	"github.com/stretchr/testify/assert"
 	"reflect"
 	"runtime"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 //	solution func Info
@@ -27,7 +28,7 @@ var cases = []Case{
 	{
 		name: "TestCase 1",
 		board: [][]int{
-			[]int{1, 2, 8, 9},
+			{1, 2, 8, 9},
 		},
 		target: 7,
 		expect: false,
@@ -35,10 +36,10 @@ var cases = []Case{
 	{
 		name: "TestCase 2",
 		board: [][]int{
-			[]int{1, 2, 8, 9},
-			[]int{2, 4, 9, 12},
-			[]int{4, 7, 10, 13},
-			[]int{6, 8, 11, 15},
+			{1, 2, 8, 9},
+			{2, 4, 9, 12},
+			{4, 7, 10, 13},
+			{6, 8, 11, 15},
 		},
 		target: 7,
 		expect: true,

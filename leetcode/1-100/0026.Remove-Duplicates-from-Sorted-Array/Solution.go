@@ -1,7 +1,5 @@
 package Solution
 
-import "fmt"
-
 func removeDuplicates(nums []int) int {
 	if len(nums) <= 1 {
 		return len(nums)
@@ -13,6 +11,5 @@ func removeDuplicates(nums []int) int {
 			tail++
 		}
 	}
-	fmt.Println(nums)
 	return tail
 }

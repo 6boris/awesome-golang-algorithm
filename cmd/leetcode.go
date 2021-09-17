@@ -24,6 +24,7 @@ type Problem struct {
 	Progress   int        `json:"progress"`
 	PathName   string     `json:"path_name"`
 }
+
 type Stat struct {
 	QuestionID          int    `json:"question_id"`
 	QuestionArticleLive bool   `json:"question__article__live"`
@@ -42,5 +43,4 @@ type Difficulty struct {
 }
 
 func GetAllleetcodeInstance() {
-
 }

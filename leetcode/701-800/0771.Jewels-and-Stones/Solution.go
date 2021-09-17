@@ -21,7 +21,6 @@ func numJewelsInStones2(J string, S string) int {
 			if i == j {
 				ans++
 			}
-
 		}
 	}
 	return ans

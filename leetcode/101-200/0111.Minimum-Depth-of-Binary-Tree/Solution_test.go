@@ -13,15 +13,19 @@ func TestSolution(t *testing.T) {
 		inputs *TreeNode
 		expect int
 	}{
-		{"TestCase",
-			&TreeNode{Val: 3,
+		{
+			"TestCase",
+			&TreeNode{
+				Val:  3,
 				Left: &TreeNode{Val: 9, Left: nil, Right: nil},
-				Right: &TreeNode{Val: 20,
+				Right: &TreeNode{
+					Val:   20,
 					Left:  &TreeNode{Val: 15, Left: nil, Right: nil},
 					Right: &TreeNode{Val: 7, Left: nil, Right: nil},
 				},
 			},
-			2},
+			2,
+		},
 	}
 
 	//	开始测试
@@ -38,10 +42,8 @@ func TestSolution(t *testing.T) {
 
 //	压力测试
 func BenchmarkSolution(b *testing.B) {
-
 }
 
 //	使用案列
 func ExampleSolution() {
-
 }

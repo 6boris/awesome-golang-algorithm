@@ -17,5 +17,4 @@ func TestConstructor(t *testing.T) {
 
 	fmt.Println(lru.Get(1))
 	fmt.Println(lru.Get(2))
-
 }

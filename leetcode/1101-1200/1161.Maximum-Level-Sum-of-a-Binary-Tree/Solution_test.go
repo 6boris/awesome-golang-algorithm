@@ -12,7 +12,7 @@ type SolutionFuncType func(*TreeNode) int
 
 var SolutionFuncList = []SolutionFuncType{
 	maxLevelSum,
-	//maxLevelSum2,
+	// maxLevelSum2,
 }
 
 var DefaultValue int = -1024
@@ -53,20 +53,20 @@ func TestSolution(t *testing.T) {
 	ast := assert.New(t)
 
 	// The original Problem requires the binary tree constructed from array. Please refer to test cases produced at Leetcode problem https://leetcode.com/problems/maximum-level-sum-of-a-binary-tree/
-	//treeNode := InitTree(1, 7, 0, 7, -8)
+	// treeNode := InitTree(1, 7, 0, 7, -8)
 	treeNode := &TreeNode{
 		Val:   1,
 		Left:  &TreeNode{Val: 7, Left: &TreeNode{Val: 7, Right: &TreeNode{Val: -8}}},
 		Right: &TreeNode{Val: 0},
 	}
-	var cases = []struct {
+	cases := []struct {
 		name   string
 		inputs *TreeNode
 		expect int
 	}{
 		{"TestCase1", treeNode, 2},
 	}
-	//ast.Equal(treeNode, &TreeNode{})
+	// ast.Equal(treeNode, &TreeNode{})
 	for _, f := range SolutionFuncList {
 		for _, c := range cases {
 			t.Run(c.name, func(t *testing.T) {

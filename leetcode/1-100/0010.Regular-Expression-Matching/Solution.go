@@ -21,10 +21,10 @@ func isMatch(s string, p string) bool {
 				// 考虑*为0并且重合
 				// 如果不匹配，检查第一个匹配是否与[i + 1，j]匹配
 				dp[i][j] = dp[i][j+2] || (fm && dp[i+1][j])
-				//fmt.Println("a",i,j,dp[i][j])
+				// fmt.Println("a",i,j,dp[i][j])
 			} else {
 				dp[i][j] = fm && dp[i+1][j+1]
-				//fmt.Println("b",i,j,dp[i][j])
+				// fmt.Println("b",i,j,dp[i][j])
 			}
 		}
 	}

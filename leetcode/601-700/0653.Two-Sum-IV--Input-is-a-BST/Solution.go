@@ -26,6 +26,7 @@ func treeArray(root *TreeNode, nodes *[]int) {
 		treeArray(root.Right, nodes)
 	}
 }
+
 func binarySearch(nodes []int, target int) bool {
 	start, end := 0, len(nodes)-1
 	for start < end {

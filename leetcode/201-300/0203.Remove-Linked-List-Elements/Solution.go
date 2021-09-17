@@ -13,7 +13,6 @@ func removeElements(head *ListNode, val int) *ListNode {
 	for p := tmp; p != nil; {
 		if p.Next != nil && p.Next.Val == val {
 			p.Next = p.Next.Next
-
 		} else {
 			p = p.Next
 		}

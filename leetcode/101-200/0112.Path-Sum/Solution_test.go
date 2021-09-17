@@ -15,8 +15,10 @@ func TestSolution(t *testing.T) {
 		sum    int
 		expect bool
 	}{
-		{"TestCase",
-			&TreeNode{Val: 5,
+		{
+			"TestCase",
+			&TreeNode{
+				Val:   5,
 				Left:  &TreeNode{Val: 4, Left: nil, Right: nil},
 				Right: &TreeNode{Val: 8, Left: nil, Right: nil},
 			},
@@ -40,10 +42,8 @@ func TestSolution(t *testing.T) {
 
 //	压力测试
 func BenchmarkSolution(b *testing.B) {
-
 }
 
 //	使用案列
 func ExampleSolution() {
-
 }

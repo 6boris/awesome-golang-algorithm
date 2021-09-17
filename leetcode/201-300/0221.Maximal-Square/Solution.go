@@ -10,6 +10,7 @@ func max(x, y byte) byte {
 	}
 	return y
 }
+
 func min(x, y byte) byte {
 	if x > y {
 		return y

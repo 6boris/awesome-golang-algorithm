@@ -1,10 +1,11 @@
 package Solution
 
 import (
-	"github.com/stretchr/testify/assert"
 	"reflect"
 	"runtime"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 //	solution func Info
@@ -25,12 +26,12 @@ type Case struct {
 var cases = []Case{
 	{
 		name:   "TestCase 1",
-		inputs: uint32(00000000000000000000000000001011),
+		inputs: uint32(0o0000000000000000000000000001011),
 		expect: 3,
 	},
 	{
 		name:   "TestCase 2",
-		inputs: uint32(00000000000000000000000010000000),
+		inputs: uint32(0o0000000000000000000000010000000),
 		expect: 1,
 	},
 }

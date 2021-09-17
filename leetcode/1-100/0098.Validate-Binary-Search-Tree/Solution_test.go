@@ -12,18 +12,26 @@ func TestSolution(t *testing.T) {
 		inputs *TreeNode
 		expect bool
 	}{
-		{"TestCacse 1",
-			&TreeNode{2,
+		{
+			"TestCacse 1",
+			&TreeNode{
+				2,
 				&TreeNode{1, nil, nil},
-				&TreeNode{3, nil, nil}},
+				&TreeNode{3, nil, nil},
+			},
 			true,
 		},
-		{"TestCacse 2",
-			&TreeNode{5,
+		{
+			"TestCacse 2",
+			&TreeNode{
+				5,
 				&TreeNode{1, nil, nil},
-				&TreeNode{4,
+				&TreeNode{
+					4,
 					&TreeNode{3, nil, nil},
-					&TreeNode{6, nil, nil}}},
+					&TreeNode{6, nil, nil},
+				},
+			},
 			false,
 		},
 	}
@@ -42,10 +50,8 @@ func TestSolution(t *testing.T) {
 
 //	压力测试
 func BenchmarkSolution(b *testing.B) {
-
 }
 
 //	使用案列
 func ExampleSolution() {
-
 }

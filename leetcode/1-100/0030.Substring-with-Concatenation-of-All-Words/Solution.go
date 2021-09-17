@@ -1,15 +1,15 @@
 package Solution
 
 func findSubstring(s string, words []string) []int {
-	//init
+	// init
 	res := []int{}
 
 	sLen, wordsNum := len(s), len(words)
-	//special
+	// special
 	if sLen == 0 || wordsNum == 0 {
 		return res
 	}
-	//注意：words中所有单词长度相同，均为wordLen
+	// 注意：words中所有单词长度相同，均为wordLen
 	wordLen := len(words[0])
 	// remainNum 记录 words 中每个单词还能出现的次数
 	remainNum := make(map[string]int, wordsNum)
@@ -26,15 +26,15 @@ func findSubstring(s string, words []string) []int {
 			remainTimes, ok := remainNum[word]
 			switch {
 			case !ok:
-				//出现了不在words中的单词
-				//从word后面一个单词，重新开始统计
+				// 出现了不在words中的单词
+				// 从word后面一个单词，重新开始统计
 				index += wordLen * (count + 1)
 				if count != 0 {
 					count = initRecord(words, remainNum)
 				}
 			case remainTimes == 0:
-				//word的出现次数上次查询就用完了
-				//说明s[index:index+(count+1)*wordLen]中有单词多出现了
+				// word的出现次数上次查询就用完了
+				// 说明s[index:index+(count+1)*wordLen]中有单词多出现了
 				index, count = moveIndex(index, wordLen, count, s, remainNum)
 				// 这个case会连续出现
 				// 直到s[index:index+(count+1)*lenw]中所有单词的出现次数都不超标

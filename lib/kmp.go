@@ -1,5 +1,4 @@
 package Solution
 
 func main() {
-
 }

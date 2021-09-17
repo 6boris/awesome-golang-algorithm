@@ -18,7 +18,6 @@ func TestSolution1(t *testing.T) {
 			t.Error("GOT:", got, "WANT:", want)
 		}
 	})
-
 }
 
 func TestSolution2(t *testing.T) {
@@ -37,5 +36,4 @@ func TestSolution2(t *testing.T) {
 			t.Error("GOT:", got, "WANT:", want)
 		}
 	})
-
 }

@@ -7,7 +7,7 @@ func maxSubArray(nums []int) int {
 	for i := 1; i < len(nums); i++ {
 		dp[i] = max(nums[i], nums[i]+dp[i-1])
 		ans = max(dp[i], ans)
-		//fmt.Println(i, ans, dp, nums)
+		// fmt.Println(i, ans, dp, nums)
 	}
 	return ans
 }

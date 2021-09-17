@@ -12,11 +12,13 @@ func TestSolution(t *testing.T) {
 		inputs [][]int
 		expect [][]int
 	}{
-		{"TestCacse 1",
+		{
+			"TestCacse 1",
 			[][]int{{2, 3, 6, 7}, {7}},
 			[][]int{{7}, {2, 2, 3}},
 		},
-		{"TestCacse 2",
+		{
+			"TestCacse 2",
 			[][]int{{2, 3, 5}, {8}},
 			[][]int{{2, 2, 2, 2}, {2, 3, 3}, {3, 5}},
 		},
@@ -56,10 +58,8 @@ func IsEuqual(x, y [][]int) bool {
 
 //	压力测试
 func BenchmarkSolution(b *testing.B) {
-
 }
 
 //	使用案列
 func ExampleSolution() {
-
 }

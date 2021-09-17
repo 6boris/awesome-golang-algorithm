@@ -12,7 +12,8 @@ func TestSolution(t *testing.T) {
 		inputs [][]byte
 		expect bool
 	}{
-		{"TestCacse 1",
+		{
+			"TestCacse 1",
 			[][]byte{
 				[]byte("53..7...."),
 				[]byte("6..195..."),
@@ -23,7 +24,9 @@ func TestSolution(t *testing.T) {
 				[]byte(".6....28."),
 				[]byte("...419..5"),
 				[]byte("....8..79"),
-			}, true},
+			},
+			true,
+		},
 	}
 
 	//	开始测试
@@ -40,10 +43,8 @@ func TestSolution(t *testing.T) {
 
 //	压力测试
 func BenchmarkSolution(b *testing.B) {
-
 }
 
 //	使用案列
 func ExampleSolution() {
-
 }

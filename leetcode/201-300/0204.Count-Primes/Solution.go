@@ -1,7 +1,26 @@
 package Solution
 
-//	整合简化版
-func countPrimes(n int) int {
+func countPrimes_1(n int) int {
+	if n <= 1 {
+		return 0
+	}
+	var ans int
+	for i := 2; i < n; i++ {
+		isPrime := true
+		for j := 2; j < i; j++ {
+			if i%j == 0 {
+				isPrime = false
+			}
+		}
+		if isPrime {
+			ans++
+		}
+	}
+	return ans
+}
+
+// 整合简化版
+func countPrimes_2(n int) int {
 	var ans int
 	prime := make([]bool, n)
 	for i := 2; i < n; i++ {
@@ -11,35 +30,11 @@ func countPrimes(n int) int {
 				prime[j*i] = true
 			}
 		}
-
 	}
 	return ans
 }
 
-func countPrimes2(n int) int {
-	var ans int
-	for i := 2; i < n; i++ {
-		if isPrime(i) {
-			ans++
-		}
-
-	}
-	return ans
-}
-
-func isPrime(num int) bool {
-	if num <= 1 {
-		return false
-	}
-	for i := 2; i*i <= num; i++ {
-		if num%i == 0 {
-			return false
-		}
-	}
-	return true
-}
-
-func countPrimes3(num int) int {
+func countPrimes_3(num int) int {
 	isPrime := make([]bool, num)
 	//	初始化数组 true表示都是质数
 	for i := 0; i < num; i++ {

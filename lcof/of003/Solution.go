@@ -5,7 +5,7 @@ import "sort"
 //	排序 + 遍历
 func findRepeatNumber(nums []int) int {
 	sort.Ints(nums)
-	for idx, _ := range nums {
+	for idx := range nums {
 		if idx > 0 {
 			if nums[idx] == nums[idx-1] {
 				return nums[idx]

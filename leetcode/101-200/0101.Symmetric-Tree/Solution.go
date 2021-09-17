@@ -49,8 +49,8 @@ func isSymmetric_BFS(root *TreeNode) bool {
 	}
 	return true
 }
-func isSymmetric_DFS(root *TreeNode) bool {
 
+func isSymmetric_DFS(root *TreeNode) bool {
 	stack, left, right := []*TreeNode{root.Left, root.Right}, &TreeNode{}, &TreeNode{}
 	for len(stack) > 0 {
 		left, right = stack[len(stack)-1], stack[len(stack)-2]

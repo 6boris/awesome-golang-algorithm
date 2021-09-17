@@ -13,12 +13,14 @@ func maxProfit2(prices []int) int {
 	}
 	return t2_s
 }
+
 func max(a, b int) int {
 	if a < b {
 		return b
 	}
 	return a
 }
+
 func min(x, y int) int {
 	if x > y {
 		return y

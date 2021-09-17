@@ -12,12 +12,13 @@ type Contributor struct {
 	Url        string `json:"url"`
 }
 
-const GITHUB_CONTRIBUTOR_API_URL = "https://api.github.com/repos/kylesliu/awesome-golang-algorithm/contributors"
-const GITHUB_CONTRIBUTOR_TMPL_PATH = "cmd/template/contributors/.all-contributorsrc"
+const (
+	GITHUB_CONTRIBUTOR_API_URL   = "https://api.github.com/repos/kylesliu/awesome-golang-algorithm/contributors"
+	GITHUB_CONTRIBUTOR_TMPL_PATH = "cmd/template/contributors/.all-contributorsrc"
+)
 
 func getContributorBufer() []byte {
 	request, err := http.Get(GITHUB_CONTRIBUTOR_API_URL)
-
 	if err != nil {
 		log.Panicln("Lettcode Problem 接口获取失败：", err)
 	}

@@ -14,8 +14,11 @@ func TestSolution(t *testing.T) {
 		input2 []string
 		expect []string
 	}{
-		{"TestCase", "catsanddog",
-			[]string{"cat", "cats", "and", "sand", "dog"}, []string{"cat sand dog", "cats and dog"}},
+		{
+			"TestCase", "catsanddog",
+			[]string{"cat", "cats", "and", "sand", "dog"},
+			[]string{"cat sand dog", "cats and dog"},
+		},
 	}
 
 	//	开始测试
@@ -32,10 +35,8 @@ func TestSolution(t *testing.T) {
 
 //	压力测试
 func BenchmarkSolution(b *testing.B) {
-
 }
 
 //	使用案列
 func ExampleSolution() {
-
 }

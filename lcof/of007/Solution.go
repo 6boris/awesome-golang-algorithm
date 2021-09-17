@@ -18,6 +18,7 @@ func buildTree(pre []int, in []int) *TreeNode {
 		Right: buildTree(pre[mid+1:], in[mid+1:]),
 	}
 }
+
 func search(nodes []int, val int) int {
 	for p, v := range nodes {
 		if v == val {

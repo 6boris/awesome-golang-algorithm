@@ -15,6 +15,7 @@ func canConstruct(ransomNote string, magazine string) bool {
 	}
 	return true
 }
+
 func canConstruct2(ransomNote string, magazine string) bool {
 	m := make(map[rune]int)
 

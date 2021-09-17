@@ -41,6 +41,7 @@ func fourSum(nums []int, target2 int) [][]int {
 	}
 	return re
 }
+
 func fourSum1(nums []int, target int) [][]int {
 	sort.Ints(nums)
 	var res [][]int

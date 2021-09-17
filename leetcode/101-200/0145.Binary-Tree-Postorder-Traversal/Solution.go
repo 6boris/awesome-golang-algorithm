@@ -10,6 +10,7 @@ type TreeNode struct {
 	Left  *TreeNode
 	Right *TreeNode
 }
+
 type Stack struct {
 	lock  sync.Mutex
 	nodes []*TreeNode

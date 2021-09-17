@@ -51,7 +51,7 @@ func maxSlidingWindow3(nums []int, k int) []int {
 
 	for left, right := 1-k, 0; right < len(nums); left, right = left+1, right+1 {
 		if left > 0 && queue[0] == nums[left-1] {
-			queue = queue[1:len(queue)]
+			queue = queue[1:]
 		}
 		for len(queue) != 0 && queue[len(queue)-1] < nums[right] {
 			queue = queue[:len(queue)-1]

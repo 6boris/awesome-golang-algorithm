@@ -10,11 +10,9 @@ func uniquePathsIII(grid [][]int) int {
 			} else if grid[i][j] == 1 {
 				sx, sy = j, i
 			}
-
 		}
 	}
 	return dfs(grid, sx, sy, n)
-
 }
 
 func dfs(grid [][]int, x, y, n int) int {

@@ -12,7 +12,8 @@ func TestSolution(t *testing.T) {
 		inputs [][]int
 		expect int
 	}{
-		{"TestCacse 1",
+		{
+			"TestCacse 1",
 			[][]int{{1, 2, 3}, {4}},
 			7,
 		},
@@ -33,10 +34,8 @@ func TestSolution(t *testing.T) {
 
 //	压力测试
 func BenchmarkSolution(b *testing.B) {
-
 }
 
 //	使用案列
 func ExampleSolution() {
-
 }

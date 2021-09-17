@@ -13,13 +13,13 @@ func TestSolution(t *testing.T) {
 	}{
 		{
 			"TestCase 1",
-			[]int{1,2,3,3,4,4,5},
-			[]int{1,2,5},
+			[]int{1, 2, 3, 3, 4, 4, 5},
+			[]int{1, 2, 5},
 		},
 		{
 			"TestCase 2",
-			[]int{1,1,1,2,3},
-			[]int{2,3},
+			[]int{1, 1, 1, 2, 3},
+			[]int{2, 3},
 		},
 	}
 
@@ -38,10 +38,8 @@ func TestSolution(t *testing.T) {
 
 //	压力测试
 func BenchmarkSolution(b *testing.B) {
-
 }
 
 //	使用案列
 func ExampleSolution() {
-
 }

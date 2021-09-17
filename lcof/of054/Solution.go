@@ -16,7 +16,7 @@ func kthLargest(root *TreeNode, k int) int {
 	return nums[k-1]
 }
 
-//逆中序遍历（右中左 -- 递减序列）
+// 逆中序遍历（右中左 -- 递减序列）
 func dfs(nums *[]int, r *TreeNode) []int {
 	if r.Right != nil {
 		dfs(nums, r.Right)

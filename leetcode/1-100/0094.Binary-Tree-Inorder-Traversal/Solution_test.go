@@ -1,26 +1,64 @@
 package Solution
 
 import (
+	"fmt"
 	"reflect"
+	"runtime"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
-func TestSolution(t *testing.T) {
-	nodeG := TreeNode{Val: 1, Left: nil, Right: nil}
-	nodeF := TreeNode{Val: 2, Left: &nodeG, Right: nil}
-	nodeE := TreeNode{Val: 3, Left: nil, Right: nil}
-	nodeD := TreeNode{Val: 4, Left: &nodeE, Right: nil}
-	nodeC := TreeNode{Val: 5, Left: nil, Right: nil}
-	nodeB := TreeNode{Val: 6, Left: &nodeD, Right: &nodeF}
-	nodeA := TreeNode{Val: 7, Left: &nodeB, Right: &nodeC}
+// Solution func Info
+type SolutionFuncType func(root *TreeNode) []int
 
-	result := inorderTraversal(&nodeA)
-	result2 := inorderTraversal2(&nodeA)
-	t.Log(result)
-	t.Log(result2)
-	expected := []int{3, 4, 6, 1, 2, 7, 5}
-	if !reflect.DeepEqual(result, expected) && !reflect.DeepEqual(result2, expected) {
-		t.Fatalf("expected: %v, but got: %v",
-			expected, result)
+var SolutionFuncList = []SolutionFuncType{
+	inorderTraversal,
+	inorderTraversal_2,
+	inorderTraversal_3,
+}
+
+// Test case info struct
+type Case struct {
+	name   string
+	input  *TreeNode
+	expect []int
+}
+
+// Test case
+var cases = []Case{
+	{
+		name: "TestCase 1",
+		input: &TreeNode{
+			Val:  1,
+			Left: nil,
+			Right: &TreeNode{
+				Val: 2,
+				Left: &TreeNode{
+					Val: 3,
+				},
+				Right: nil,
+			},
+		},
+		expect: []int{1, 3, 2},
+	},
+	{name: "TestCase 2", input: &TreeNode{Val: 1}, expect: []int{1}},
+	{name: "TestCase 3", input: nil, expect: []int{}},
+}
+
+// TestSolution Run test case for all solutions
+func TestSolution(t *testing.T) {
+	ast := assert.New(t)
+	fmt.Println(2<<30 - 1)
+
+	for _, f := range SolutionFuncList {
+		for _, c := range cases {
+			t.Run(c.name, func(t *testing.T) {
+				got := f(c.input)
+				ast.Equal(c.expect, got,
+					"func: %v case: %v ",
+					runtime.FuncForPC(reflect.ValueOf(f).Pointer()).Name(), c.name)
+			})
+		}
 	}
 }

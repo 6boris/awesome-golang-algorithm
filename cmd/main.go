@@ -1,9 +1,8 @@
 package main
 
 import (
-	"fmt"
-
 	"awesome-golang-algorithm/cmd/leetcode"
+	"fmt"
 )
 
 func main() {
@@ -25,15 +24,14 @@ func main() {
 
 	//	生成Problem 目录
 
-	//leetcode.MakeDir(problems)
+	// leetcode.MakeDir(problems)
 
-	//leetcode.GetReadmeTemplateBuffer()
+	// leetcode.GetReadmeTemplateBuffer()
 
 	//	GitBook
-	//leetcode.MakeGitbookSummary(problems)
+	// leetcode.MakeGitbookSummary(problems)
 
 	//	sitemap
 	// s := sitemap.New(problems)
 	// fmt.Println(s)
-
 }

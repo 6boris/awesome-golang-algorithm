@@ -67,6 +67,7 @@ func PrintList(x *ListNode) {
 	}
 	fmt.Println()
 }
+
 func MakeListNote(x []int) *ListNode {
 	list := &ListNode{}
 	head := list

@@ -22,7 +22,7 @@ func ReadFile(path string) []byte {
 
 //	Write file
 func WriteFile(path, content string) {
-	err := ioutil.WriteFile(path, []byte(content), 0755)
+	err := ioutil.WriteFile(path, []byte(content), 0o755)
 	if err != nil {
 		log.Fatalln(err.Error())
 	}

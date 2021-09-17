@@ -14,9 +14,9 @@ func TestSolution(t *testing.T) {
 		nums2  []int
 		expect int
 	}{
-		{"TestCase", []int{1,2,3,2,1}, []int{3,2,1,4,7}, 3},
-		{"TestCase", []int{0,0,0,0,0}, []int{0,0,0,0,0}, 5},
-		{"TestCase", []int{0,0,0,0,1}, []int{1,0,0,0,0}, 4},
+		{"TestCase", []int{1, 2, 3, 2, 1}, []int{3, 2, 1, 4, 7}, 3},
+		{"TestCase", []int{0, 0, 0, 0, 0}, []int{0, 0, 0, 0, 0}, 5},
+		{"TestCase", []int{0, 0, 0, 0, 1}, []int{1, 0, 0, 0, 0}, 4},
 	}
 
 	//	开始测试
@@ -33,10 +33,8 @@ func TestSolution(t *testing.T) {
 
 //	压力测试
 func BenchmarkSolution(b *testing.B) {
-
 }
 
 //	使用案列
 func ExampleSolution() {
-
 }

@@ -1,6 +1,6 @@
 package Solution
 
-func singleNumber(nums []int) int {
+func singleNumber_1(nums []int) int {
 	m := make(map[int]int, len(nums))
 	for _, v := range nums {
 		m[v]++
@@ -15,7 +15,7 @@ func singleNumber(nums []int) int {
 
 //	只循环一次
 // 2∗(a+b+c)−(a+a+b+b+c) = c
-func singleNumber2(nums []int) int {
+func singleNumber_2(nums []int) int {
 	m := make(map[int]int, len(nums))
 	sum1, sum2 := 0, 0
 	for _, v := range nums {
@@ -34,7 +34,7 @@ func singleNumber2(nums []int) int {
 //　0^1 = 1，
 //　1^1 = 0
 
-func singleNumber3(nums []int) int {
+func singleNumber_3(nums []int) int {
 	ans := 0
 	for _, v := range nums {
 		ans ^= v

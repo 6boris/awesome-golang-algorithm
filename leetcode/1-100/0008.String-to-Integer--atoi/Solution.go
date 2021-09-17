@@ -20,7 +20,7 @@ func myAtoi(str string) int {
 		return 0
 	}
 
-	//判断符号
+	// 判断符号
 	//	+
 	if str[i] == 43 {
 		i++

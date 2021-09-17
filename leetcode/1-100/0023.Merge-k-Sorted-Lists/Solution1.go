@@ -32,7 +32,6 @@ func InertSort(arr []int) []int {
 
 // 快速排序(Qucik Sort)
 func QuickSort(arr []int) []int {
-
 	if len(arr) <= 1 {
 		return arr
 	}

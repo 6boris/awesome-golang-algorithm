@@ -2,7 +2,7 @@ package Solution
 
 func Solution(n int, m int, indices [][]int) int {
 	mat := make([][]int, n)
-	for i, _ := range mat {
+	for i := range mat {
 		mat[i] = make([]int, m)
 	}
 	for _, val := range indices {

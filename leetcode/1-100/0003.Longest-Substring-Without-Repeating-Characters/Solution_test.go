@@ -56,7 +56,7 @@ func TestSolution2(t *testing.T) {
 const N = 1000
 
 func BenchmarkMax1(b *testing.B) {
-	//b.N = 10000
+	// b.N = 10000
 	//	测试用例
 	cases := []struct {
 		name   string
@@ -76,7 +76,7 @@ func BenchmarkMax1(b *testing.B) {
 }
 
 func BenchmarkMax2(b *testing.B) {
-	//b.N = 10000
+	// b.N = 10000
 	//	测试用例
 	cases := []struct {
 		name   string

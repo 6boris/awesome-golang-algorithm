@@ -18,6 +18,7 @@ func Solution(head *ListNode, m, n int) *ListNode {
 	}
 	return newHead.Next
 }
+
 /**
  * Definition for singly-linked list.
  * type ListNode struct {

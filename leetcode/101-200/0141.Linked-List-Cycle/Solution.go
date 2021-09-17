@@ -17,7 +17,7 @@ func hasCycle1(head *ListNode) bool {
 		if head == nil {
 			return false
 		}
-		//fmt.Println(head)
+		// fmt.Println(head)
 
 		head = head.Next
 	}
@@ -26,13 +26,12 @@ func hasCycle1(head *ListNode) bool {
 
 //	HashMap
 func hasCycle2(head *ListNode) bool {
+	// listMap := make(map[string]int)
 
-	//listMap := make(map[string]int)
-
-	//fmt.Println(listMap[fmt.Sprintf("%s",&head)])
+	// fmt.Println(listMap[fmt.Sprintf("%s",&head)])
 
 	for head != nil {
-		//fmt.Sprintf("%s",&head)
+		// fmt.Sprintf("%s",&head)
 
 		//if listMap[fmt.Sprintf("%s", &head)] > 1 {
 		//	//fmt.Println(listMap[fmt.Sprintf("%s", &head)])
@@ -47,7 +46,6 @@ func hasCycle2(head *ListNode) bool {
 
 //	快慢指针
 func hasCycle3(head *ListNode) bool {
-
 	quick := head
 	slow := head
 

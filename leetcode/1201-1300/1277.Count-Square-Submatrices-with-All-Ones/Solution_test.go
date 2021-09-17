@@ -14,14 +14,14 @@ func TestSolution(t *testing.T) {
 		expect int
 	}{
 		{"TestCase", [][]int{
-			{0,1,1,1},
-			{1,1,1,1},
-			{0,1,1,1},
+			{0, 1, 1, 1},
+			{1, 1, 1, 1},
+			{0, 1, 1, 1},
 		}, 15},
 		{"TestCase", [][]int{
-			{1,0,1},
-			{1,1,0},
-			{1,1,0},
+			{1, 0, 1},
+			{1, 1, 0},
+			{1, 1, 0},
 		}, 7},
 	}
 
@@ -39,10 +39,8 @@ func TestSolution(t *testing.T) {
 
 //	压力测试
 func BenchmarkSolution(b *testing.B) {
-
 }
 
 //	使用案列
 func ExampleSolution() {
-
 }

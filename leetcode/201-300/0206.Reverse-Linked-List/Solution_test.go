@@ -77,6 +77,7 @@ func BenchmarkSolution1(b *testing.B) {
 		})
 	}
 }
+
 func BenchmarkSolution2(b *testing.B) {
 	//	测试用例
 	cases := []Case{}

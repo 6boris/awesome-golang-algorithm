@@ -20,7 +20,7 @@ func Solution(moves [][]int) string {
 }
 
 func winner(board [][]string) string {
-	var player = checkRow(board)
+	player := checkRow(board)
 	if player == "X" {
 		return "A"
 	} else if player == "O" {

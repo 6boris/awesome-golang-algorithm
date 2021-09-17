@@ -92,7 +92,6 @@ func BenchmarkSoution1(b *testing.B) {
 
 // 给list添加一个环
 func getRandList(hasCycle bool, len int) *ListNode {
-
 	//	生成没有环的链表
 	if !hasCycle {
 		return UnmarshalListByRand(100, len)

@@ -35,7 +35,6 @@ func levelOrder(root *TreeNode) [][]int {
 }
 
 func levelOrder2(root *TreeNode) [][]int {
-
 	var ll [][]int
 
 	if root != nil {
@@ -48,7 +47,6 @@ func levelOrder2(root *TreeNode) [][]int {
 }
 
 func recLevelOrder(head *TreeNode, depth int, llp *[][]int) {
-
 	if head == nil {
 		return
 	}

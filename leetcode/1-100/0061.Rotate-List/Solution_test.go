@@ -6,7 +6,7 @@ import (
 
 type InputCase struct {
 	element []int
-	k int
+	k       int
 }
 
 func TestSolution(t *testing.T) {
@@ -19,10 +19,10 @@ func TestSolution(t *testing.T) {
 		{
 			"TestCase 1",
 			InputCase{
-				[]int{1,2,3,4,5},
+				[]int{1, 2, 3, 4, 5},
 				2,
 			},
-			[]int{4,5,1,2,3},
+			[]int{4, 5, 1, 2, 3},
 		},
 		{
 			"TestCase 2",
@@ -50,10 +50,8 @@ func TestSolution(t *testing.T) {
 
 //	压力测试
 func BenchmarkSolution(b *testing.B) {
-
 }
 
 //	使用案列
 func ExampleSolution() {
-
 }

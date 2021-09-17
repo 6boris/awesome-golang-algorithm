@@ -14,8 +14,10 @@ func TestSolution(t *testing.T) {
 		input2 int
 		expect []*ListNode
 	}{
-		{"TestCase", MakeListNode([]int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}), 3,
-			[]*ListNode{MakeListNode([]int{1, 2, 3, 4}), MakeListNode([]int{5, 6, 7}), MakeListNode([]int{8, 9, 10})}},
+		{
+			"TestCase", MakeListNode([]int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}), 3,
+			[]*ListNode{MakeListNode([]int{1, 2, 3, 4}), MakeListNode([]int{5, 6, 7}), MakeListNode([]int{8, 9, 10})},
+		},
 	}
 
 	//	开始测试
@@ -32,10 +34,8 @@ func TestSolution(t *testing.T) {
 
 //	压力测试
 func BenchmarkSolution(b *testing.B) {
-
 }
 
 //	使用案列
 func ExampleSolution() {
-
 }

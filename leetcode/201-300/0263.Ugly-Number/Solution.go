@@ -14,5 +14,4 @@ func isUgly(num int) bool {
 		num /= 5
 	}
 	return num == 1
-
 }

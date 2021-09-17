@@ -8,7 +8,7 @@ func rob(nums []int) int {
 		dp[i][0] = max(dp[i-1][0], dp[i-1][1])
 		dp[i][1] = nums[i-1] + dp[i-1][0]
 	}
-	//fmt.Println(dp)
+	// fmt.Println(dp)
 	return max(dp[len(nums)][0], dp[len(nums)][1])
 }
 

@@ -10,12 +10,12 @@ func TestSolution(t *testing.T) {
 	//	测试用例
 	cases := []struct {
 		name   string
-		root *TreeNode
+		root   *TreeNode
 		expect int
 	}{
 		{"TestCase", &TreeNode{
-			Val: 1, 
-			Left: &TreeNode{Val: 2}, 
+			Val:   1,
+			Left:  &TreeNode{Val: 2},
 			Right: &TreeNode{Val: 3},
 		}, 6},
 		{"TestCase", &TreeNode{
@@ -43,10 +43,8 @@ func TestSolution(t *testing.T) {
 
 //	压力测试
 func BenchmarkSolution(b *testing.B) {
-
 }
 
 //	使用案列
 func ExampleSolution() {
-
 }

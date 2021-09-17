@@ -57,6 +57,7 @@ func isInterleave2(s1 string, s2 string, s3 string) bool {
 	}
 	return dp[len(s1)][len(s2)]
 }
+
 func p(x [][]bool) {
 	for i := 0; i < len(x); i++ {
 		fmt.Println(x[i])

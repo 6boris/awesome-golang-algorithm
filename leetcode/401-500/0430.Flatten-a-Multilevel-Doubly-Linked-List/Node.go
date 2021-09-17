@@ -29,7 +29,7 @@ func Check(headA, headB *Node) bool {
 		if curA.Val != curB.Val {
 			return false
 		}
-		//if curA.Child != nil || curB.Child != nil { return false }
+		// if curA.Child != nil || curB.Child != nil { return false }
 	}
 	return true
 }

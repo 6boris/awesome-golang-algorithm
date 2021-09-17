@@ -3,30 +3,23 @@ package Solution
 func isValid_1(s string) bool {
 	stack := make([]rune, len(s))
 	top := 0
-
-	for _, c := range s {
-		switch c {
-		case '(':
+	for _, v := range s {
+		if v == '(' {
 			stack[top] = ')'
-			top += 1
-			break
-		case '{':
+			top++
+		} else if v == '{' {
 			stack[top] = '}'
-			top += 1
-			break
-		case '[':
+			top++
+		} else if v == '[' {
 			stack[top] = ']'
-			top += 1
-			break
-		default:
-			if top == 0 || stack[top-1] != c {
+			top++
+		} else {
+			if top == 0 || stack[top-1] != v {
 				return false
 			}
-			top -= 1
-			break
+			top--
 		}
 	}
-
 	return top == 0
 }
 

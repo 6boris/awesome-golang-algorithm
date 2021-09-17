@@ -16,5 +16,4 @@ func TestQueue_Swap(t *testing.T) {
 	que.Push(&ListNode{Val: 4})
 
 	que.Swap(0, 1)
-
 }

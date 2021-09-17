@@ -31,8 +31,8 @@ func detectCycle(head *ListNode) *ListNode {
 		second = second.Next
 	}
 	return frist
-
 }
+
 func Solution(x bool) bool {
 	return x
 }

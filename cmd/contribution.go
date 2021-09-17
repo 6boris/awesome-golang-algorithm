@@ -18,11 +18,12 @@ type Contributor struct {
 	ContributionType []string `json:"contribution_type"`
 }
 
-const GITHUB_CONTRIBUTOR_API_URL = "https://api.github.com/repos/kylesliu/awesome-golang-algorithm/contributors"
-const GITHUB_CONTRIBUTOR_TMPL_PATH = "./tpl/.all-contributorsrc"
+const (
+	GITHUB_CONTRIBUTOR_API_URL   = "https://api.github.com/repos/kylesliu/awesome-golang-algorithm/contributors"
+	GITHUB_CONTRIBUTOR_TMPL_PATH = "./tpl/.all-contributorsrc"
+)
 
 func getContributorBufer() []byte {
-
 	contributor_buffer := Request("GET", GITHUB_CONTRIBUTOR_API_URL, nil)
 
 	return contributor_buffer
@@ -57,6 +58,7 @@ func GetContributorInstance() []Contributor {
 	}
 	return contributors
 }
+
 func getContributorTemplate() string {
 	buffer := ReadFile(GITHUB_CONTRIBUTOR_TMPL_PATH)
 	return string(buffer)
@@ -64,7 +66,7 @@ func getContributorTemplate() string {
 
 func GenerateContributorTemplete() {
 	tpl_str := getContributorTemplate()
-	//fmt.Println(tpl_str)
+	// fmt.Println(tpl_str)
 	contributors := GetContributorInstance()
 
 	fmt.Println(contributors)

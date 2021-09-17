@@ -14,7 +14,7 @@ func TestSolution(t *testing.T) {
 		expect [][]int
 	}{
 		{"TestCase", &TreeNode{3, &TreeNode{9, nil, nil}, &TreeNode{20, &TreeNode{15, nil, nil}, &TreeNode{7, nil, nil}}}, [][]int{
-			{3}, {20, 9}, {15,7},
+			{3}, {20, 9}, {15, 7},
 		}},
 		{"TestCase", &TreeNode{1, nil, nil}, [][]int{{1}}},
 		{"TestCase", nil, [][]int{}},
@@ -34,10 +34,8 @@ func TestSolution(t *testing.T) {
 
 //	压力测试
 func BenchmarkSolution(b *testing.B) {
-
 }
 
 //	使用案列
 func ExampleSolution() {
-
 }

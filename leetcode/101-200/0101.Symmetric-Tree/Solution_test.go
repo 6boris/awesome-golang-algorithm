@@ -14,7 +14,8 @@ func TestSolution_Recursive(t *testing.T) {
 	}{
 		{
 			"TestCase 1",
-			&TreeNode{Val: 1,
+			&TreeNode{
+				Val:   1,
 				Left:  &TreeNode{Val: 2, Right: &TreeNode{Val: 3}},
 				Right: &TreeNode{Val: 2, Right: &TreeNode{Val: 3}},
 			},
@@ -22,11 +23,15 @@ func TestSolution_Recursive(t *testing.T) {
 		},
 		{
 			"TestCase 2",
-			&TreeNode{Val: 1,
-				Left: &TreeNode{Val: 2,
+			&TreeNode{
+				Val: 1,
+				Left: &TreeNode{
+					Val:   2,
 					Left:  &TreeNode{Val: 3},
-					Right: &TreeNode{Val: 4}},
-				Right: &TreeNode{Val: 2,
+					Right: &TreeNode{Val: 4},
+				},
+				Right: &TreeNode{
+					Val:   2,
 					Left:  &TreeNode{Val: 4},
 					Right: &TreeNode{Val: 3},
 				},
@@ -56,7 +61,8 @@ func TestSolution_BFS(t *testing.T) {
 	}{
 		{
 			"TestCase 1",
-			&TreeNode{Val: 1,
+			&TreeNode{
+				Val:   1,
 				Left:  &TreeNode{Val: 2, Right: &TreeNode{Val: 3}},
 				Right: &TreeNode{Val: 2, Right: &TreeNode{Val: 3}},
 			},
@@ -64,11 +70,15 @@ func TestSolution_BFS(t *testing.T) {
 		},
 		{
 			"TestCase 2",
-			&TreeNode{Val: 1,
-				Left: &TreeNode{Val: 2,
+			&TreeNode{
+				Val: 1,
+				Left: &TreeNode{
+					Val:   2,
 					Left:  &TreeNode{Val: 3},
-					Right: &TreeNode{Val: 4}},
-				Right: &TreeNode{Val: 2,
+					Right: &TreeNode{Val: 4},
+				},
+				Right: &TreeNode{
+					Val:   2,
 					Left:  &TreeNode{Val: 4},
 					Right: &TreeNode{Val: 3},
 				},
@@ -88,6 +98,7 @@ func TestSolution_BFS(t *testing.T) {
 		})
 	}
 }
+
 func TestSolution_DFS(t *testing.T) {
 	//	测试用例
 	cases := []struct {
@@ -97,7 +108,8 @@ func TestSolution_DFS(t *testing.T) {
 	}{
 		{
 			"TestCase 1",
-			&TreeNode{Val: 1,
+			&TreeNode{
+				Val:   1,
 				Left:  &TreeNode{Val: 2, Right: &TreeNode{Val: 3}},
 				Right: &TreeNode{Val: 2, Right: &TreeNode{Val: 3}},
 			},
@@ -105,11 +117,15 @@ func TestSolution_DFS(t *testing.T) {
 		},
 		{
 			"TestCase 2",
-			&TreeNode{Val: 1,
-				Left: &TreeNode{Val: 2,
+			&TreeNode{
+				Val: 1,
+				Left: &TreeNode{
+					Val:   2,
 					Left:  &TreeNode{Val: 3},
-					Right: &TreeNode{Val: 4}},
-				Right: &TreeNode{Val: 2,
+					Right: &TreeNode{Val: 4},
+				},
+				Right: &TreeNode{
+					Val:   2,
 					Left:  &TreeNode{Val: 4},
 					Right: &TreeNode{Val: 3},
 				},

@@ -16,12 +16,15 @@ type SortByInt []Interval
 func (p SortByInt) Len() int {
 	return len(p)
 }
+
 func (p SortByInt) Swap(i, j int) {
 	p[i], p[j] = p[j], p[i]
 }
+
 func (p SortByInt) Less(i, j int) bool {
 	return p[i].Start < p[j].Start
 }
+
 func Max(x, y int) int {
 	if x > y {
 		return x

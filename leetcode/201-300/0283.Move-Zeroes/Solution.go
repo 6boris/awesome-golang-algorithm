@@ -1,29 +1,27 @@
 package Solution
 
 func moveZeroes(nums []int) []int {
-	count := 0
-	for _, i := range nums {
-		if i != 0 {
-			nums[count] = i
-			count++
+	c := 0
+	for _, v := range nums {
+		if v != 0 {
+			nums[c] = v
+			c++
 		}
 	}
-	for i := count; i < len(nums); i++ {
-		temp := i
-		nums[temp] = 0
+	for ; c < len(nums); c++ {
+		nums[c] = 0
 	}
 	return nums
 }
 
-func moveZeroes2(nums []int) []int {
-	n := len(nums)
-	if n > 1 {
-		for z, nz := 0, 0; nz < n; nz++ {
-			if nums[nz] != 0 {
-				nums[z], nums[nz] = nums[nz], nums[z]
-				z++
-			}
+func moveZeroes_2(nums []int) []int {
+	left, right := 0, 0
+	for right < len(nums) {
+		if nums[right] != 0 {
+			nums[left], nums[right] = nums[right], nums[left]
+			left++
 		}
+		right++
 	}
 	return nums
 }

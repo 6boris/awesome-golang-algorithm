@@ -22,7 +22,6 @@ func TestConTainsDuplicate(t *testing.T) {
 			if !reflect.DeepEqual(result, testcase.expects) {
 				t.Fatalf("expected: %v, but got: %v, with input: %v ", testcase.expects, result, testcase.inputs)
 			}
-
 		})
 	}
 }

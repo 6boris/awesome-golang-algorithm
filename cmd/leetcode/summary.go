@@ -25,7 +25,7 @@ type TodoPageData struct {
 func MakeGitbookSummary(problems []Problem) {
 	problems = CheckProblemExists(problems)
 
-	file, err := os.OpenFile(SOURCE_SOLUTION_SUMMARY_FILE_PATH, os.O_RDONLY, 0600)
+	file, err := os.OpenFile(SOURCE_SOLUTION_SUMMARY_FILE_PATH, os.O_RDONLY, 0o600)
 	defer file.Close()
 	if err != nil {
 		log.Panicf("README 模板读取失败1：%s", err.Error())
@@ -42,6 +42,7 @@ func MakeGitbookSummary(problems []Problem) {
 	err = tmpl.Execute(&tmpRes, problems)
 	write("SUMMARY.md", string(tmpRes.Bytes()))
 }
+
 func CheckProblemExists(problems []Problem) []Problem {
 	tmp := []Problem{}
 
@@ -57,7 +58,7 @@ func CheckProblemExists(problems []Problem) []Problem {
 }
 
 func write(path, content string) {
-	err := ioutil.WriteFile(path, []byte(content), 0755)
+	err := ioutil.WriteFile(path, []byte(content), 0o755)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -79,5 +80,4 @@ func readTMPL(path string) string {
 }
 
 func getSUMMARYBuffer(filepath string) {
-
 }

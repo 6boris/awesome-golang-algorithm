@@ -13,5 +13,4 @@ func WriteFile(path, s string) {
 	defer f.Close()
 
 	f.WriteString(s)
-
 }

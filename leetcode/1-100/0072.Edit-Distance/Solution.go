@@ -30,11 +30,10 @@ func minDistance(word1 string, word2 string) int {
 				dp[i][j] = dp[i-1][j-1]
 			} else {
 				dp[i][j] = min(dp[i-1][j-1], min(dp[i][j-1], dp[i-1][j])) + 1
-
 			}
 		}
 	}
-	//Print(dp)
+	// Print(dp)
 
 	return dp[m][n]
 }
@@ -45,6 +44,7 @@ func min(x, y int) int {
 	}
 	return x
 }
+
 func max(x, y int) int {
 	if x > y {
 		return x

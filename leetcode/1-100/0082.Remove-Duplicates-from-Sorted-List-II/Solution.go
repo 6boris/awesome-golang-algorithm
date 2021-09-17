@@ -33,4 +33,3 @@ func Solution(head *ListNode) *ListNode {
 	}
 	return p.Next
 }
-

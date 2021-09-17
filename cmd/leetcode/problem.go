@@ -36,6 +36,7 @@ type Problem struct {
 	PathName   string     `json:"path_name"`
 	DirPath    string     `json:"dir_path"`
 }
+
 type Stat struct {
 	QuestionID          int    `json:"question_id"`
 	QuestionArticleLive bool   `json:"question__article__live"`
@@ -59,15 +60,14 @@ func GetAllProblemsPath() []string {
 	res := []string{}
 	time.Sleep(time.Second)
 
-	for i, _ := range problems {
+	for i := range problems {
 		res = append(res, problems[i].PathName)
-		//fmt.Println(problems[i].Stat.QuestionTitle)
+		// fmt.Println(problems[i].Stat.QuestionTitle)
 	}
 	return res
 }
 
 func GetProblemsInstance() []Problem {
-
 	leetcode := new(LeetCode)
 	Problemsbuffer := getProblemsBuffer()
 
@@ -118,7 +118,6 @@ func GetProblemsJson() string {
 //	获取题目Buffer
 func getProblemsBuffer() []byte {
 	request, err := http.Get("https://leetcode.com/api/problems/Algorithms/")
-
 	if err != nil {
 		log.Panicln("Lettcode Problem 接口获取失败：", err)
 	}

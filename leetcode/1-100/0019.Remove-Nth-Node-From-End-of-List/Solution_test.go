@@ -13,7 +13,8 @@ func TestSolution(t *testing.T) {
 		inputs1 int
 		expect  *ListNode
 	}{
-		{"1 test 1",
+		{
+			"1 test 1",
 			&ListNode{Val: 1, Next: &ListNode{Val: 2, Next: &ListNode{Val: 3, Next: &ListNode{Val: 4, Next: &ListNode{Val: 5, Next: nil}}}}},
 			2,
 			&ListNode{Val: 1, Next: &ListNode{Val: 2, Next: &ListNode{Val: 3, Next: &ListNode{Val: 5, Next: nil}}}},

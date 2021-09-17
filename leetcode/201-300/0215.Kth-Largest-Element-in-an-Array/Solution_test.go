@@ -45,7 +45,7 @@ func TestSolution2(t *testing.T) {
 		t.Run(c.name+" "+strconv.Itoa(i), func(t *testing.T) {
 			got := findKthLargest2(c.inputs[0], c.inputs[1][0])
 			if !reflect.DeepEqual(got, c.expect) {
-				//t.Fatalf("expected: %v, but got: %v, with inputs: %v",
+				// t.Fatalf("expected: %v, but got: %v, with inputs: %v",
 				//	c.expect, got, c.inputs)
 			}
 		})
@@ -54,10 +54,8 @@ func TestSolution2(t *testing.T) {
 
 //	压力测试
 func BenchmarkSolution(b *testing.B) {
-
 }
 
 //	使用案列
 func ExampleSolution() {
-
 }

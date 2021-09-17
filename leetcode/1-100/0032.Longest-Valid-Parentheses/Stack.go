@@ -26,6 +26,7 @@ func (s *Stack) Top() interface{} {
 func (s *Stack) Len() int {
 	return s.data.Len()
 }
+
 func (s *Stack) IsEmpty() bool {
 	if s.data.Len() == 0 {
 		return true
@@ -34,5 +35,4 @@ func (s *Stack) IsEmpty() bool {
 }
 
 func NewStack() {
-
 }

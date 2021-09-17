@@ -55,6 +55,7 @@ func longestPalindrome2(s string) string {
 
 	return s[start : end+1]
 }
+
 func expandAroundCenter(s string, left, right int) int {
 	L, R := left, right
 	for L >= 0 && R < len(s) && s[L] == s[R] {
@@ -64,6 +65,7 @@ func expandAroundCenter(s string, left, right int) int {
 
 	return R - L - 1
 }
+
 func Max(x, y int) int {
 	if x > y {
 		return x
@@ -200,13 +202,14 @@ func longestPalindrome5(s string) string {
 				left = i
 				right = j
 			}
-			fmt.Println(i,j)
+			fmt.Println(i, j)
 			Print(dp)
 
 		}
 	}
 	return s[left : right+1]
 }
+
 func Print(x [][]bool) {
 	for i := 0; i < len(x); i++ {
 		fmt.Println(x[i])
