@@ -1,54 +1,67 @@
 package Solution
 
 import (
+	"fmt"
+	"reflect"
+	"runtime"
+	"strings"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
-// 测试样例 root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 1
+// Solution func Info
+type SolutionFuncType func(root, p, q *TreeNode) *TreeNode
+
+var SolutionFuncList = []SolutionFuncType{
+	lowestCommonAncestor_1,
+	lowestCommonAncestor_2,
+}
+
+// Test case info struct
+type Case struct {
+	name               string
+	root, q, p, expect *TreeNode
+}
+
+var baseTree = &TreeNode{
+	Val: 3,
+	Left: &TreeNode{
+		Val: 5,
+		Left: &TreeNode{
+			Val: 6,
+		},
+		Right: &TreeNode{
+			Val:   2,
+			Left:  &TreeNode{Val: 7},
+			Right: &TreeNode{Val: 4},
+		},
+	},
+	Right: &TreeNode{
+		Val:   1,
+		Left:  &TreeNode{Val: 0},
+		Right: &TreeNode{Val: 8},
+	},
+}
+
+// Test case
+var cases = []Case{
+	{name: "TestCase 1", root: baseTree, p: baseTree.Left, q: baseTree.Right, expect: baseTree},
+	{name: "TestCase 2", root: baseTree, p: baseTree.Left, q: baseTree.Left.Right.Right, expect: baseTree.Left},
+}
+
+// TestSolution Run test case for all solutions
 func TestSolution(t *testing.T) {
-	tNode := &TreeNode{}
-	tNode.val = 3
+	ast := assert.New(t)
 
-	tNode1 := &TreeNode{}
-	tNode1.val = 5
-
-	tNode2 := &TreeNode{}
-	tNode2.val = 1
-
-	tNode3 := &TreeNode{}
-	tNode3.val = 6
-
-	tNode4 := &TreeNode{}
-	tNode4.val = 2
-
-	tNode5 := &TreeNode{}
-	tNode5.val = 0
-
-	tNode6 := &TreeNode{}
-	tNode6.val = 8
-
-	tNode9 := &TreeNode{}
-	tNode9.val = 7
-
-	tNode10 := &TreeNode{}
-	tNode10.val = 4
-
-	// 第一层
-	tNode.left = tNode1
-	tNode.right = tNode2
-
-	// 第二层
-	tNode1.left = tNode3
-	tNode1.right = tNode4
-	tNode2.left = tNode5
-	tNode2.right = tNode6
-
-	// 第三层
-	tNode4.left = tNode9
-	tNode4.right = tNode10
-
-	luckyNode := Lowest(tNode, tNode1, tNode2)
-	if luckyNode != tNode {
-		t.Fatalf("Unlucky, false.")
+	for _, f := range SolutionFuncList {
+		funcName := strings.Split(runtime.FuncForPC(reflect.ValueOf(f).Pointer()).Name(), ".")[1]
+		for _, c := range cases {
+			t.Run(fmt.Sprintf("%s %s", funcName, c.name), func(t *testing.T) {
+				got := f(c.root, c.p, c.q)
+				ast.Equal(c.expect, got,
+					"func: %v case: %v ", funcName, c.name)
+			})
+		}
 	}
 }

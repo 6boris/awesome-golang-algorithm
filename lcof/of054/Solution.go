@@ -10,22 +10,24 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
-func kthLargest(root *TreeNode, k int) int {
-	var nums []int
-	nums = dfs(&nums, root)
-	return nums[k-1]
-}
+func kthLargest_1(root *TreeNode, k int) int {
+	ans := -1
+	var dfs func(node *TreeNode)
+	dfs = func(node *TreeNode) {
+		if node == nil {
+			return
+		}
+		dfs(node.Right)
+		if k == 0 {
+			return
+		}
+		k--
+		if k == 0 {
+			ans = node.Val
+		}
+		dfs(node.Left)
 
-// 逆中序遍历（右中左 -- 递减序列）
-func dfs(nums *[]int, r *TreeNode) []int {
-	if r.Right != nil {
-		dfs(nums, r.Right)
 	}
-	if r != nil {
-		*nums = append(*nums, r.Val)
-	}
-	if r.Left != nil {
-		dfs(nums, r.Left)
-	}
-	return *nums
+	dfs(root)
+	return ans
 }

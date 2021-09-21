@@ -1,19 +1,19 @@
 package Soluation
 
-func findLengthOfLCIS(nums []int) int {
-	if 0 == len(nums) {
-		return 0
-	}
-	ans, sum := 1, 1
-	for i := 1; i < len(nums); i++ {
-		if nums[i] > nums[i-1] {
-			sum++
-		} else {
-			sum = 1
+func findLengthOfLCIS_1(nums []int) int {
+	ans, start := 0, 0
+	for i, v := range nums {
+		if i > 0 && v <= nums[i-1] {
+			start = i
 		}
-		if sum > ans {
-			ans = sum
-		}
+		ans = max(ans, i-start+1)
 	}
 	return ans
+}
+
+func max(x, y int) int {
+	if x > y {
+		return x
+	}
+	return y
 }

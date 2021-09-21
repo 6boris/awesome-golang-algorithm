@@ -6,19 +6,33 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
-func Solution(root *TreeNode) bool {
-	res, _ := check(root)
-	return res
-}
-
-func check(root *TreeNode) (bool, int) {
+func isBalanced_1(root *TreeNode) bool {
 	if root == nil {
-		return true, 0
+		return true
 	}
-	lbh, lh := check(root.Left)
-	rbh, rh := check(root.Right)
-	ishb := lbh && rbh && abs(lh-rh) <= 1
-	return ishb, max(lh, rh) + 1
+	var dfs func(*TreeNode) int
+	dfs = func(node *TreeNode) int {
+		if node == nil {
+			return 0
+		}
+		return max(dfs(node.Left), dfs(node.Right)) + 1
+	}
+	return (abs(dfs(root.Left)-dfs(root.Right)) <= 1) && isBalanced_1(root.Left) && isBalanced_1(root.Right)
+}
+func isBalanced_2(root *TreeNode) bool {
+	var dfs func(*TreeNode) int
+	dfs = func(node *TreeNode) int {
+		if node == nil {
+			return 0
+		}
+		left := dfs(node.Left)
+		right := dfs(node.Right)
+		if abs(left-right) > 1 || left == -1 || right == -1 {
+			return -1
+		}
+		return max(left, right) + 1
+	}
+	return dfs(root) >= 0
 }
 
 func abs(a int) int {

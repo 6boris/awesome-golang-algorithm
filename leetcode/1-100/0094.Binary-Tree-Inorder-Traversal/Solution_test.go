@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"reflect"
 	"runtime"
+	"strings"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -13,7 +14,7 @@ import (
 type SolutionFuncType func(root *TreeNode) []int
 
 var SolutionFuncList = []SolutionFuncType{
-	inorderTraversal,
+	inorderTraversal_1,
 	inorderTraversal_2,
 	inorderTraversal_3,
 }
@@ -27,8 +28,10 @@ type Case struct {
 
 // Test case
 var cases = []Case{
+	{name: "TestCase 1", input: &TreeNode{Val: 1}, expect: []int{1}},
+	{name: "TestCase 2", input: nil, expect: []int{}},
 	{
-		name: "TestCase 1",
+		name: "TestCase 3",
 		input: &TreeNode{
 			Val:  1,
 			Left: nil,
@@ -42,22 +45,35 @@ var cases = []Case{
 		},
 		expect: []int{1, 3, 2},
 	},
-	{name: "TestCase 2", input: &TreeNode{Val: 1}, expect: []int{1}},
-	{name: "TestCase 3", input: nil, expect: []int{}},
+	{
+		name: "TestCase 4",
+		input: &TreeNode{Val: 4,
+			Left: &TreeNode{
+				Val:   2,
+				Left:  &TreeNode{Val: 1},
+				Right: &TreeNode{Val: 3},
+			},
+			Right: &TreeNode{
+				Val:   6,
+				Left:  &TreeNode{Val: 5},
+				Right: &TreeNode{Val: 7},
+			},
+		},
+		expect: []int{1, 2, 3, 4, 5, 6, 7},
+	},
 }
 
 // TestSolution Run test case for all solutions
 func TestSolution(t *testing.T) {
 	ast := assert.New(t)
-	fmt.Println(2<<30 - 1)
 
 	for _, f := range SolutionFuncList {
+		funcName := strings.Split(runtime.FuncForPC(reflect.ValueOf(f).Pointer()).Name(), ".")[1]
 		for _, c := range cases {
-			t.Run(c.name, func(t *testing.T) {
+			t.Run(fmt.Sprintf("%s %s", funcName, c.name), func(t *testing.T) {
 				got := f(c.input)
 				ast.Equal(c.expect, got,
-					"func: %v case: %v ",
-					runtime.FuncForPC(reflect.ValueOf(f).Pointer()).Name(), c.name)
+					"func: %v case: %v ", funcName, c.name)
 			})
 		}
 	}

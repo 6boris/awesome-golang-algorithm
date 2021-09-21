@@ -1,29 +1,42 @@
 package Solution
 
-//	验证二叉搜索树
-func isValidBST(root *TreeNode) bool {
-	INT_MAX := int(^uint(0) >> 1)
-	INT_MIN := ^INT_MAX
+import "math"
 
-	if root == nil {
-		return true
-	}
-
-	return validate(root, INT_MAX, INT_MIN)
+type TreeNode struct {
+	Val   int
+	Left  *TreeNode
+	Right *TreeNode
 }
 
-func validate(root *TreeNode, max, min int) bool {
-	if root == nil {
-		return true
+func isValidBST_1(root *TreeNode) bool {
+	var dfs func(*TreeNode, int, int) bool
+	dfs = func(node *TreeNode, low, high int) bool {
+		if node == nil {
+			return true
+		}
+		if node.Val <= low || node.Val >= high {
+			return false
+		}
+		return dfs(node.Left, low, node.Val) && dfs(node.Right, node.Val, high)
 	}
+	return dfs(root, math.MinInt64, math.MaxInt64)
+}
 
-	if root.Val <= min {
-		return false
+func isValidBST_2(root *TreeNode) bool {
+	tmp, stk := math.MinInt64, []*TreeNode{}
+	node := root
+	for node != nil || len(stk) > 0 {
+		for node != nil {
+			stk = append(stk, node)
+			node = node.Left
+		}
+		node = stk[len(stk)-1]
+		stk = stk[:len(stk)-1]
+		if node.Val <= tmp {
+			return false
+		}
+		tmp = node.Val
+		node = node.Right
 	}
-
-	if root.Val >= max {
-		return false
-	}
-
-	return validate(root.Left, root.Val, min) && validate(root.Right, max, root.Val)
+	return true
 }

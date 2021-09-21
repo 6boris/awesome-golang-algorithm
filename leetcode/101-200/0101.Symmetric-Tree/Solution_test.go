@@ -1,147 +1,72 @@
 package Solution
 
 import (
+	"fmt"
 	"reflect"
+	"runtime"
+	"strings"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
-func TestSolution_Recursive(t *testing.T) {
-	//	测试用例
-	cases := []struct {
-		name   string
-		inputs *TreeNode
-		expect bool
-	}{
-		{
-			"TestCase 1",
-			&TreeNode{
-				Val:   1,
-				Left:  &TreeNode{Val: 2, Right: &TreeNode{Val: 3}},
-				Right: &TreeNode{Val: 2, Right: &TreeNode{Val: 3}},
-			},
-			false,
-		},
-		{
-			"TestCase 2",
-			&TreeNode{
-				Val: 1,
-				Left: &TreeNode{
-					Val:   2,
-					Left:  &TreeNode{Val: 3},
-					Right: &TreeNode{Val: 4},
-				},
-				Right: &TreeNode{
-					Val:   2,
-					Left:  &TreeNode{Val: 4},
-					Right: &TreeNode{Val: 3},
-				},
-			},
-			true,
-		},
-	}
+// Solution func Info
+type SolutionFuncType func(root *TreeNode) bool
 
-	//	开始测试
-	for _, c := range cases {
-		t.Run(c.name, func(t *testing.T) {
-			ret := isSymmetric(c.inputs)
-			if !reflect.DeepEqual(ret, c.expect) {
-				t.Fatalf("expected: %v, but got: %v, with inputs: %v",
-					c.expect, ret, c.inputs)
-			}
-		})
-	}
+var SolutionFuncList = []SolutionFuncType{
+	isSymmetric_1,
+	isSymmetric_2,
 }
 
-func TestSolution_BFS(t *testing.T) {
-	//	测试用例
-	cases := []struct {
-		name   string
-		inputs *TreeNode
-		expect bool
-	}{
-		{
-			"TestCase 1",
-			&TreeNode{
-				Val:   1,
-				Left:  &TreeNode{Val: 2, Right: &TreeNode{Val: 3}},
-				Right: &TreeNode{Val: 2, Right: &TreeNode{Val: 3}},
-			},
-			false,
-		},
-		{
-			"TestCase 2",
-			&TreeNode{
-				Val: 1,
-				Left: &TreeNode{
-					Val:   2,
-					Left:  &TreeNode{Val: 3},
-					Right: &TreeNode{Val: 4},
-				},
-				Right: &TreeNode{
-					Val:   2,
-					Left:  &TreeNode{Val: 4},
-					Right: &TreeNode{Val: 3},
-				},
-			},
-			true,
-		},
-	}
-
-	//	开始测试
-	for _, c := range cases {
-		t.Run(c.name, func(t *testing.T) {
-			ret := isSymmetric_BFS(c.inputs)
-			if !reflect.DeepEqual(ret, c.expect) {
-				t.Fatalf("expected: %v, but got: %v, with inputs: %v",
-					c.expect, ret, c.inputs)
-			}
-		})
-	}
+// Test case info struct
+type Case struct {
+	name   string
+	input  *TreeNode
+	expect bool
 }
 
-func TestSolution_DFS(t *testing.T) {
-	//	测试用例
-	cases := []struct {
-		name   string
-		inputs *TreeNode
-		expect bool
-	}{
-		{
-			"TestCase 1",
-			&TreeNode{
-				Val:   1,
-				Left:  &TreeNode{Val: 2, Right: &TreeNode{Val: 3}},
-				Right: &TreeNode{Val: 2, Right: &TreeNode{Val: 3}},
-			},
-			false,
+// Test case
+var cases = []Case{
+	{
+		name: "TestCase 1",
+		input: &TreeNode{
+			Val:   1,
+			Left:  &TreeNode{Val: 2, Right: &TreeNode{Val: 3}},
+			Right: &TreeNode{Val: 2, Right: &TreeNode{Val: 3}},
 		},
-		{
-			"TestCase 2",
-			&TreeNode{
-				Val: 1,
-				Left: &TreeNode{
-					Val:   2,
-					Left:  &TreeNode{Val: 3},
-					Right: &TreeNode{Val: 4},
-				},
-				Right: &TreeNode{
-					Val:   2,
-					Left:  &TreeNode{Val: 4},
-					Right: &TreeNode{Val: 3},
-				},
+		expect: false,
+	},
+	{
+		name: "TestCase 2",
+		input: &TreeNode{
+			Val: 1,
+			Left: &TreeNode{
+				Val:   2,
+				Left:  &TreeNode{Val: 3},
+				Right: &TreeNode{Val: 4},
 			},
-			true,
+			Right: &TreeNode{
+				Val:   2,
+				Left:  &TreeNode{Val: 4},
+				Right: &TreeNode{Val: 3},
+			},
 		},
-	}
+		expect: true,
+	},
+}
 
-	//	开始测试
-	for _, c := range cases {
-		t.Run(c.name, func(t *testing.T) {
-			ret := isSymmetric_DFS(c.inputs)
-			if !reflect.DeepEqual(ret, c.expect) {
-				t.Fatalf("expected: %v, but got: %v, with inputs: %v",
-					c.expect, ret, c.inputs)
-			}
-		})
+// TestSolution Run test case for all solutions
+func TestSolution(t *testing.T) {
+	ast := assert.New(t)
+
+	for _, f := range SolutionFuncList {
+		funcName := strings.Split(runtime.FuncForPC(reflect.ValueOf(f).Pointer()).Name(), ".")[1]
+		for _, c := range cases {
+			t.Run(fmt.Sprintf("%s %s", funcName, c.name), func(t *testing.T) {
+				got := f(c.input)
+				ast.Equal(c.expect, got,
+					"func: %v case: %v ", funcName, c.name)
+			})
+		}
 	}
 }
