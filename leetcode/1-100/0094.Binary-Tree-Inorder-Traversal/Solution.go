@@ -6,27 +6,28 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
-func inorderTraversal(root *TreeNode) []int {
+func inorderTraversal_1(root *TreeNode) []int {
 	ans := make([]int, 0)
 	if root != nil {
-		ans = append(ans, inorderTraversal(root.Left)...)
+		ans = append(ans, inorderTraversal_1(root.Left)...)
 		ans = append(ans, root.Val)
-		ans = append(ans, inorderTraversal(root.Right)...)
+		ans = append(ans, inorderTraversal_1(root.Right)...)
 	}
 	return ans
 }
 
 func inorderTraversal_2(root *TreeNode) []int {
-	ans, stack := make([]int, 0), []*TreeNode{}
-	for root != nil || len(stack) > 0 {
-		for root != nil {
-			stack = append(stack, root)
-			root = root.Left
+	ans, stk := make([]int, 0), []*TreeNode{}
+	node := root
+	for node != nil || len(stk) > 0 {
+		for node != nil {
+			stk = append(stk, node)
+			node = node.Left
 		}
-		root = stack[len(stack)-1]
-		stack = stack[:len(stack)-1]
-		ans = append(ans, root.Val)
-		root = root.Right
+		node = stk[len(stk)-1]
+		stk = stk[:len(stk)-1]
+		ans = append(ans, node.Val)
+		node = node.Right
 	}
 	return ans
 }

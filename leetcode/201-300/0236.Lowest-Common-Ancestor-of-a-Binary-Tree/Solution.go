@@ -1,22 +1,58 @@
 package Solution
 
 type TreeNode struct {
-	val   int
-	left  *TreeNode
-	right *TreeNode
+	Val   int
+	Left  *TreeNode
+	Right *TreeNode
 }
 
-func Lowest(root *TreeNode, p *TreeNode, q *TreeNode) *TreeNode {
-	if root == nil || p == root || q == root {
+func lowestCommonAncestor_1(root, p, q *TreeNode) *TreeNode {
+	if root == nil {
+		return nil
+	}
+	if root.Val == p.Val || root.Val == q.Val {
 		return root
 	}
-	left := Lowest(root.left, p, q)
-	right := Lowest(root.right, p, q)
+	left := lowestCommonAncestor_1(root.Left, p, q)
+	right := lowestCommonAncestor_1(root.Right, p, q)
+	if left != nil && right != nil {
+		return root
+	}
 	if left == nil {
 		return right
 	}
-	if right == nil {
-		return left
+	return left
+}
+
+func lowestCommonAncestor_2(root, p, q *TreeNode) *TreeNode {
+	parent, visited := make(map[int]*TreeNode), make(map[int]bool)
+
+	var dfs func(*TreeNode)
+	dfs = func(r *TreeNode) {
+		if r == nil {
+			return
+		}
+		if r.Left != nil {
+			parent[r.Left.Val] = r
+			dfs(r.Left)
+		}
+		if r.Right != nil {
+			parent[r.Right.Val] = r
+			dfs(r.Right)
+		}
 	}
-	return root
+	dfs(root)
+
+	for p != nil {
+		visited[p.Val] = true
+		p = parent[p.Val]
+	}
+	for q != nil {
+		if visited[q.Val] {
+			return q
+		}
+		q = parent[q.Val]
+	}
+
+	return nil
 }

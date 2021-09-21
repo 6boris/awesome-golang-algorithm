@@ -1,82 +1,39 @@
 package Solution
 
-import (
-	"errors"
-	"sync"
-)
-
 type TreeNode struct {
 	Val   int
 	Left  *TreeNode
 	Right *TreeNode
 }
 
-type Stack struct {
-	lock  sync.Mutex
-	nodes []*TreeNode
+func postorderTraversal_1(root *TreeNode) []int {
+	ans := make([]int, 0)
+	if root != nil {
+		ans = append(ans, postorderTraversal_1(root.Left)...)
+		ans = append(ans, postorderTraversal_1(root.Right)...)
+		ans = append(ans, root.Val)
+	}
+	return ans
 }
 
-func NewStack() *Stack {
-	return &Stack{sync.Mutex{}, []*TreeNode{}}
-}
-
-func (s *Stack) Push(node *TreeNode) {
-	s.lock.Lock()
-	defer s.lock.Unlock()
-
-	s.nodes = append(s.nodes, node)
-}
-
-func (s *Stack) Pop() (*TreeNode, error) {
-	s.lock.Lock()
-	defer s.lock.Unlock()
-
-	l := len(s.nodes)
-	if l == 0 {
-		return nil, errors.New("Empty")
-	}
-
-	node := s.nodes[l-1]
-	s.nodes = s.nodes[:l-1]
-
-	return node, nil
-}
-
-func postorderTraversal(root *TreeNode) []int {
-	var result []int
-
-	if root == nil {
-		return result
-	}
-
-	stack1 := NewStack()
-	stack2 := NewStack()
-
-	stack1.Push(root)
-	for {
-		node, err := stack1.Pop()
-		if err != nil {
-			break
+func postorderTraversal_2(root *TreeNode) []int {
+	stk, ans := []*TreeNode{}, make([]int, 0)
+	var prev *TreeNode
+	for root != nil || len(stk) > 0 {
+		for root != nil {
+			stk = append(stk, root)
+			root = root.Left
 		}
-
-		stack2.Push(node)
-		if node.Left != nil {
-			stack1.Push(node.Left)
-		}
-
-		if node.Right != nil {
-			stack1.Push(node.Right)
+		root = stk[len(stk)-1]
+		stk = stk[:len(stk)-1]
+		if root.Right == nil || root.Right == prev {
+			ans = append(ans, root.Val)
+			prev = root
+			root = nil
+		} else {
+			stk = append(stk, root)
+			root = root.Right
 		}
 	}
-
-	for {
-		node, err := stack2.Pop()
-		if err != nil {
-			break
-		}
-
-		result = append(result, node.Val)
-	}
-
-	return result
+	return ans
 }

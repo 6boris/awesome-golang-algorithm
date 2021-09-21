@@ -6,50 +6,6 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
-//	递归
-func isSymmetric(root *TreeNode) bool {
-	return root == nil || isSymmetricHelper(root.Left, root.Right)
-}
-
-func isSymmetricHelper(left *TreeNode, right *TreeNode) bool {
-	if left == nil && right == nil {
-		return true
-	}
-	//	左右节点一个不存在
-	if left == nil || right == nil {
-		return left == right
-	}
-
-	//	检查节点的值
-	if left.Val != right.Val {
-		return false
-	}
-	return isSymmetricHelper(left.Left, right.Right) &&
-		isSymmetricHelper(left.Right, right.Left)
-}
-
-//	循环
-func isSymmetric_BFS(root *TreeNode) bool {
-	queue, left, right := []*TreeNode{root.Left, root.Right}, &TreeNode{}, &TreeNode{}
-
-	for len(queue) > 0 {
-		left, right, queue = queue[0], queue[1], []*TreeNode{}
-
-		if left == nil && right == nil {
-			continue
-		}
-		if left == nil || right == nil {
-			return false
-		}
-		if left.Val != right.Val {
-			return false
-		}
-
-		queue = append(queue, left.Left, right.Right, left.Right, right.Left)
-	}
-	return true
-}
-
 func isSymmetric_DFS(root *TreeNode) bool {
 	stack, left, right := []*TreeNode{root.Left, root.Right}, &TreeNode{}, &TreeNode{}
 	for len(stack) > 0 {
@@ -68,6 +24,39 @@ func isSymmetric_DFS(root *TreeNode) bool {
 		}
 
 		stack = append(stack, left.Left, right.Right, left.Right, right.Left)
+	}
+	return true
+}
+
+func isSymmetric_1(root *TreeNode) bool {
+	var dfs func(*TreeNode, *TreeNode) bool
+	dfs = func(p *TreeNode, q *TreeNode) bool {
+		if p == nil && q == nil {
+			return true
+		}
+		if p == nil || q == nil {
+			return false
+		}
+		return p.Val == q.Val && dfs(p.Left, q.Right) && dfs(p.Right, q.Left)
+	}
+	return dfs(root, root)
+}
+func isSymmetric_2(root *TreeNode) bool {
+	if root == nil || (root.Left == nil && root.Right == nil) {
+		return true
+	}
+	que := make([]*TreeNode, 0)
+	que = append(que, root.Left, root.Right)
+	for len(que) > 0 {
+		left, right := que[0], que[1]
+		que = que[2:]
+		if left == nil && right == nil {
+			continue
+		}
+		if left == nil || right == nil || left.Val != right.Val {
+			return false
+		}
+		que = append(que, left.Left, right.Right, right.Left, left.Right)
 	}
 	return true
 }

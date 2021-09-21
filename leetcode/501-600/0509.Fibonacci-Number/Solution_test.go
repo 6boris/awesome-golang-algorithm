@@ -1,40 +1,53 @@
 package Solution
 
 import (
+	"fmt"
 	"reflect"
-	"strconv"
+	"runtime"
+	"strings"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
+//	solution func Info
+type SolutionFuncType func(int) int
+
+var SolutionFuncList = []SolutionFuncType{
+	fib_1,
+	fib_2,
+	fib_3,
+	fib_4,
+}
+
+//	Test info struct
+type Case struct {
+	name   string
+	input  int
+	expect int
+}
+
+// 	test case
+var cases = []Case{
+	{"TestCase 1", 2, 1},
+	{"TestCase 2", 3, 2},
+	{"TestCase 3", 4, 3},
+	{"TestCase 4", 0, 0},
+	{"TestCase 5", 30, 832040},
+}
+
+// TestSolution Example for solution test cases
 func TestSolution(t *testing.T) {
-	//	测试用例
-	cases := []struct {
-		name   string
-		inputs int
-		expect int
-	}{
-		{"TestCase", 2, 1},
-		{"TestCase", 3, 2},
-		{"TestCase", 4, 3},
-		{"TestCase", 0, 0},
+	ast := assert.New(t)
+
+	for _, f := range SolutionFuncList {
+		funcName := strings.Split(runtime.FuncForPC(reflect.ValueOf(f).Pointer()).Name(), ".")[1]
+		for _, c := range cases {
+			t.Run(fmt.Sprintf("%s %s", funcName, c.name), func(t *testing.T) {
+				got := f(c.input)
+				ast.Equal(c.expect, got,
+					"func: %v case: %v ", funcName, c.name)
+			})
+		}
 	}
-
-	//	开始测试
-	for i, c := range cases {
-		t.Run(c.name+" "+strconv.Itoa(i), func(t *testing.T) {
-			got := Solution(c.inputs)
-			if !reflect.DeepEqual(got, c.expect) {
-				t.Fatalf("expected: %v, but got: %v, with inputs: %v",
-					c.expect, got, c.inputs)
-			}
-		})
-	}
-}
-
-//	压力测试
-func BenchmarkSolution(b *testing.B) {
-}
-
-//	使用案列
-func ExampleSolution() {
 }

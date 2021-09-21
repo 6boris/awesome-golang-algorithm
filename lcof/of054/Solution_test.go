@@ -12,7 +12,7 @@ import (
 type SolutionFuncType func(*TreeNode, int) int
 
 var SolutionFuncList = []SolutionFuncType{
-	kthLargest,
+	kthLargest_1,
 }
 
 //	test info struct

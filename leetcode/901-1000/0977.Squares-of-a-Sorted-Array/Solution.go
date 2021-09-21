@@ -1,24 +1,28 @@
 package Solution
 
-import "math"
+import "sort"
 
-func Solution(A []int) []int {
-	n := len(A)
-	if n == 0 {
-		return A
+func sortedSquares_1(nums []int) []int {
+	ans := make([]int, 0)
+	for _, v := range nums {
+		ans = append(ans, v*v)
 	}
-	abs := func(num int) int { return int(math.Abs(float64(num))) }
-	ans := make([]int, n)
-	i, j, k := 0, n-1, n-1
-	for i <= j {
-		if abs(A[i]) > abs(A[j]) {
-			ans[k] = A[i] * A[i]
-			i++
+	sort.Ints(ans)
+	return ans
+}
+
+func sortedSquares_2(nums []int) []int {
+	left, right, idx := 0, len(nums)-1, len(nums)-1
+	ans := make([]int, len(nums))
+	for left <= right && idx >= 0 {
+		if l, r := nums[left]*nums[left], nums[right]*nums[right]; l > r {
+			ans[idx] = l
+			left++
 		} else {
-			ans[k] = A[j] * A[j]
-			j--
+			ans[idx] = r
+			right--
 		}
-		k--
+		idx--
 	}
 	return ans
 }

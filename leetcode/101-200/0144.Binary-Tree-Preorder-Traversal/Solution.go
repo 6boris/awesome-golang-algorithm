@@ -6,28 +6,26 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
-func preorderTraversal(root *TreeNode) []int {
-	if root == nil {
-		return []int{}
+func preorderTraversal_1(root *TreeNode) []int {
+	ans := make([]int, 0)
+	if root != nil {
+		ans = append(ans, root.Val)
+		ans = append(ans, preorderTraversal_1(root.Left)...)
+		ans = append(ans, preorderTraversal_1(root.Right)...)
 	}
-
-	var stack []*TreeNode
-	var nodes []int
-
-	stack = append(stack, root)
-
-	for len(stack) != 0 {
-		lastNode := stack[len(stack)-1]
-		stack = stack[:len(stack)-1]
-		nodes = append(nodes, lastNode.Val)
-
-		if lastNode.Right != nil {
-			stack = append(stack, lastNode.Right)
+	return ans
+}
+func preorderTraversal_2(root *TreeNode) []int {
+	ans, stk := make([]int, 0), []*TreeNode{}
+	node := root
+	for node != nil || len(stk) > 0 {
+		for node != nil {
+			ans = append(ans, node.Val)
+			stk = append(stk, node)
+			node = node.Left
 		}
-		if lastNode.Left != nil {
-			stack = append(stack, lastNode.Left)
-		}
+		node = stk[len(stk)-1].Right
+		stk = stk[:len(stk)-1]
 	}
-
-	return nodes
+	return ans
 }
