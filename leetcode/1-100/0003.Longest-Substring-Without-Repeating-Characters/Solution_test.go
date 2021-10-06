@@ -1,96 +1,49 @@
 package Solution
 
 import (
+	"fmt"
 	"reflect"
+	"runtime"
+	"strings"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
+// Solution func Info
+type SolutionFuncType func(string) int
+
+var SolutionFuncList = []SolutionFuncType{
+	lengthOfLongestSubstring_1,
+	lengthOfLongestSubstring_2,
+}
+
+// Test case info struct
+type Case struct {
+	name   string
+	input  string
+	expect int
+}
+
+// Test case
+var cases = []Case{
+	{name: "TestCase 1", input: "abcabcbb", expect: 3},
+	{name: "TestCase 2", input: "bbbbb", expect: 1},
+	{name: "TestCase 3", input: "pwwkew", expect: 3},
+}
+
+// TestSolution Run test case for all solutions
 func TestSolution(t *testing.T) {
-	//	测试用例
-	cases := []struct {
-		name   string
-		inputs string
-		expect int
-	}{
-		{"1 test 1", "abcabcbb!", 3},
-		{"2 test 2", "bbbbb", 1},
-		{"3 test 3", "pwwkew", 3},
-	}
+	ast := assert.New(t)
 
-	//	开始测试
-	for _, c := range cases {
-		t.Run(c.name, func(t *testing.T) {
-			ret := lengthOfLongestSubstring(c.inputs)
-			if !reflect.DeepEqual(ret, c.expect) {
-				t.Fatalf("expected: %v, but got: %v, with inputs: %v",
-					c.expect, ret, c.inputs)
-			}
-		})
-	}
-}
-
-func TestSolution2(t *testing.T) {
-	//	测试用例
-	cases := []struct {
-		name   string
-		inputs string
-		expect int
-	}{
-		{"1 test 1", "abcabcbb!", 3},
-		{"2 test 2", "bbbbb", 1},
-		{"3 test 3", "pwwkew", 3},
-	}
-
-	//	开始测试
-	for _, c := range cases {
-		t.Run(c.name, func(t *testing.T) {
-			ret := lengthOfLongestSubstring2(c.inputs)
-			if !reflect.DeepEqual(ret, c.expect) {
-				t.Fatalf("expected: %v, but got: %v, with inputs: %v",
-					c.expect, ret, c.inputs)
-			}
-		})
-	}
-}
-
-const N = 1000
-
-func BenchmarkMax1(b *testing.B) {
-	// b.N = 10000
-	//	测试用例
-	cases := []struct {
-		name   string
-		inputs string
-		expect int
-	}{
-		{"1 test 1", "abcabcbb!", 3},
-		{"2 test 2", "bbbbb", 1},
-		{"3 test 3", "pwwkew", 3},
-	}
-	b.ResetTimer()
-	for i := 0; i < b.N; i++ {
-		lengthOfLongestSubstring(cases[0].inputs)
-		lengthOfLongestSubstring(cases[1].inputs)
-		lengthOfLongestSubstring(cases[2].inputs)
-	}
-}
-
-func BenchmarkMax2(b *testing.B) {
-	// b.N = 10000
-	//	测试用例
-	cases := []struct {
-		name   string
-		inputs string
-		expect int
-	}{
-		{"1 test 1", "abcabcbb!", 3},
-		{"2 test 2", "bbbbb", 1},
-		{"3 test 3", "pwwkew", 3},
-	}
-	b.ResetTimer()
-	for i := 0; i < b.N; i++ {
-		lengthOfLongestSubstring2(cases[0].inputs)
-		lengthOfLongestSubstring2(cases[1].inputs)
-		lengthOfLongestSubstring2(cases[2].inputs)
+	for _, f := range SolutionFuncList {
+		funcName := strings.Split(runtime.FuncForPC(reflect.ValueOf(f).Pointer()).Name(), ".")[1]
+		for _, c := range cases {
+			t.Run(fmt.Sprintf("%s %s", funcName, c.name), func(t *testing.T) {
+				got := f(c.input)
+				ast.Equal(c.expect, got,
+					"func: %v case: %v ", funcName, c.name)
+			})
+		}
 	}
 }

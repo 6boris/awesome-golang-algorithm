@@ -1,39 +1,44 @@
 package Solution
 
 import (
-	"reflect"
-	"strconv"
+	"fmt"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
-func TestSolution(t *testing.T) {
-	//	测试用例
-	cases := []struct {
-		name   string
-		inputs bool
-		expect bool
-	}{
-		{"TestCase", true, true},
-		{"TestCase", true, true},
-		{"TestCase", false, false},
-	}
+// Test case info struct
+type Case struct {
+	name string
+	s    string
+	root *TreeNode
+}
 
-	//	开始测试
-	for i, c := range cases {
-		t.Run(c.name+" "+strconv.Itoa(i), func(t *testing.T) {
-			got := Solution(c.inputs)
-			if !reflect.DeepEqual(got, c.expect) {
-				t.Fatalf("expected: %v, but got: %v, with inputs: %v",
-					c.expect, got, c.inputs)
-			}
+// Test case
+var cases = []Case{
+	{
+		name: "TestCase 1",
+		s:    "1,2,null,null,3,4,null,null,5,null,null",
+		root: &TreeNode{
+			Val:  1,
+			Left: &TreeNode{Val: 2},
+			Right: &TreeNode{Val: 3,
+				Left:  &TreeNode{Val: 4},
+				Right: &TreeNode{Val: 5}},
+		},
+	},
+}
+
+// TestSolution Run test case for all solutions
+func TestSolution(t *testing.T) {
+	ast := assert.New(t)
+	con := Constructor()
+	for _, c := range cases {
+		t.Run(fmt.Sprintf("%s %s", "", c.name), func(t *testing.T) {
+			ast.Equal(c.s, con.serialize(con.deserialize(c.s)),
+				"func: %v case: %v ", "serialize", c.name)
+			ast.Equal(c.root, con.deserialize(con.serialize(c.root)),
+				"func: %v case: %v ", "deserialize", c.name)
 		})
 	}
-}
-
-//	压力测试
-func BenchmarkSolution(b *testing.B) {
-}
-
-//	使用案列
-func ExampleSolution() {
 }

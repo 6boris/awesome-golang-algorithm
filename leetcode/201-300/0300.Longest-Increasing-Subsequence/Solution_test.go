@@ -1,8 +1,10 @@
 package Solution
 
 import (
+	"fmt"
 	"reflect"
 	"runtime"
+	"strings"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -25,24 +27,22 @@ type Case struct {
 
 // 	test case
 var cases = []Case{
-	{
-		name:   "TestCase 1",
-		inputs: []int{10, 9, 2, 5, 3, 7, 101, 18},
-		expect: 4,
-	},
+	{name: "TestCase 1", inputs: []int{10, 9, 2, 5, 3, 7, 101, 18}, expect: 4},
+	{name: "TestCase 2", inputs: []int{0, 1, 0, 3, 2, 3}, expect: 4},
+	{name: "TestCase 3", inputs: []int{7, 7, 7, 7, 7, 7, 7}, expect: 1},
 }
 
-// TestSolution Example for solution test cases
+// TestSolution Run test case for all solutions
 func TestSolution(t *testing.T) {
 	ast := assert.New(t)
 
 	for _, f := range SolutionFuncList {
+		funcName := strings.Split(runtime.FuncForPC(reflect.ValueOf(f).Pointer()).Name(), ".")[1]
 		for _, c := range cases {
-			t.Run(c.name, func(t *testing.T) {
-				actual := f(c.inputs)
-				ast.Equal(c.expect, actual,
-					"func: %v case: %v ",
-					runtime.FuncForPC(reflect.ValueOf(f).Pointer()).Name(), c.name)
+			t.Run(fmt.Sprintf("%s %s", funcName, c.name), func(t *testing.T) {
+				got := f(c.inputs)
+				ast.Equal(c.expect, got,
+					"func: %v case: %v ", funcName, c.name)
 			})
 		}
 	}

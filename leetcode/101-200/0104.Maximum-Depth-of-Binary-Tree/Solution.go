@@ -17,20 +17,20 @@ func maxDepth_1(root *TreeNode) int {
 }
 
 func maxDepth_2(root *TreeNode) int {
-	maxDep := 0
+	ans := 0
 	var dfs func(*TreeNode, int)
 	dfs = func(node *TreeNode, v int) {
 		if node == nil {
 			return
 		}
-		maxDep = max(maxDep, v)
+		if node.Left == nil || node.Right == nil {
+			ans = max(ans, v)
+		}
 		dfs(node.Left, v+1)
 		dfs(node.Right, v+1)
 	}
-	if root != nil {
-		dfs(root, 1)
-	}
-	return maxDep
+	dfs(root, 1)
+	return ans
 }
 
 func maxDepth_3(root *TreeNode) int {

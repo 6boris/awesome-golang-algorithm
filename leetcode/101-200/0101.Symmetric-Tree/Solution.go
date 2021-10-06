@@ -6,28 +6,6 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
-func isSymmetric_DFS(root *TreeNode) bool {
-	stack, left, right := []*TreeNode{root.Left, root.Right}, &TreeNode{}, &TreeNode{}
-	for len(stack) > 0 {
-		left, right = stack[len(stack)-1], stack[len(stack)-2]
-		stack = stack[:len(stack)-2]
-		if left == nil && right == nil {
-			continue
-		}
-
-		if left == nil || right == nil {
-			return false
-		}
-
-		if left.Val != right.Val {
-			return false
-		}
-
-		stack = append(stack, left.Left, right.Right, left.Right, right.Left)
-	}
-	return true
-}
-
 func isSymmetric_1(root *TreeNode) bool {
 	var dfs func(*TreeNode, *TreeNode) bool
 	dfs = func(p *TreeNode, q *TreeNode) bool {
@@ -37,7 +15,9 @@ func isSymmetric_1(root *TreeNode) bool {
 		if p == nil || q == nil {
 			return false
 		}
-		return p.Val == q.Val && dfs(p.Left, q.Right) && dfs(p.Right, q.Left)
+		return p.Val == q.Val &&
+			dfs(p.Left, q.Right) &&
+			dfs(p.Right, q.Left)
 	}
 	return dfs(root, root)
 }
