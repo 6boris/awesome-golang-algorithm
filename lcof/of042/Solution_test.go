@@ -16,7 +16,7 @@ type SolutionFuncType func([]int) int
 var SolutionFuncList = []SolutionFuncType{
 	maxSubArray_1,
 	maxSubArray_2,
-	maxSubArray_3,
+	//maxSubArray_3,
 }
 
 //	Test info struct

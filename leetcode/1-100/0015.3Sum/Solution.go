@@ -4,7 +4,7 @@ import (
 	"sort"
 )
 
-func threeSum(nums []int) [][]int {
+func threeSum_1(nums []int) [][]int {
 	ans := [][]int{}
 	if len(nums) <= 2 {
 		return ans

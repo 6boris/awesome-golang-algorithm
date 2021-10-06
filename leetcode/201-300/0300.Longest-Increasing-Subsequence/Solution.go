@@ -1,5 +1,12 @@
 package Solution
 
+func max(x, y int) int {
+	if x > y {
+		return x
+	}
+	return y
+}
+
 //	动态规划
 func lengthOfLIS(nums []int) int {
 	dp, ans := []int{}, 0
@@ -13,13 +20,6 @@ func lengthOfLIS(nums []int) int {
 		ans = max(dp[i], ans)
 	}
 	return ans
-}
-
-func max(x, y int) int {
-	if x > y {
-		return x
-	}
-	return y
 }
 
 //	贪心 + 动态规划

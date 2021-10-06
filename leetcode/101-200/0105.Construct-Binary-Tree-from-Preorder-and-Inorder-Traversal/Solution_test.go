@@ -1,39 +1,59 @@
 package Solution
 
 import (
+	"fmt"
 	"reflect"
-	"strconv"
+	"runtime"
+	"strings"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
+// Solution func Info
+type SolutionFuncType func([]int, []int) *TreeNode
+
+var SolutionFuncList = []SolutionFuncType{
+	buildTree_1,
+	buildTree_2,
+}
+
+// Test case info struct
+type Case struct {
+	name     string
+	preorder []int
+	inorder  []int
+	expect   *TreeNode
+}
+
+// Test case
+var cases = []Case{
+	{
+		name:     "TestCase 1",
+		preorder: []int{3, 9, 20, 15, 7},
+		inorder:  []int{9, 3, 15, 20, 7},
+		expect: &TreeNode{
+			Val:  3,
+			Left: &TreeNode{Val: 9},
+			Right: &TreeNode{Val: 20,
+				Left:  &TreeNode{Val: 15},
+				Right: &TreeNode{Val: 7}},
+		},
+	},
+}
+
+// TestSolution Run test case for all solutions
 func TestSolution(t *testing.T) {
-	//	测试用例
-	cases := []struct {
-		name     string
-		preorder []int
-		inorder  []int
-		expect   *TreeNode
-	}{
-		{"TestCase", []int{3, 9, 20, 15, 7}, []int{9, 3, 15, 20, 7}, &TreeNode{3, &TreeNode{Val: 9}, &TreeNode{20, &TreeNode{Val: 15}, &TreeNode{Val: 7}}}},
-		{"TestCase", []int{-1}, []int{-1}, &TreeNode{Val: -1}},
+	ast := assert.New(t)
+
+	for _, f := range SolutionFuncList {
+		funcName := strings.Split(runtime.FuncForPC(reflect.ValueOf(f).Pointer()).Name(), ".")[1]
+		for _, c := range cases {
+			t.Run(fmt.Sprintf("%s %s", funcName, c.name), func(t *testing.T) {
+				got := f(c.preorder, c.inorder)
+				ast.Equal(c.expect, got,
+					"func: %v case: %v ", funcName, c.name)
+			})
+		}
 	}
-
-	//	开始测试
-	for i, c := range cases {
-		t.Run(c.name+" "+strconv.Itoa(i), func(t *testing.T) {
-			got := Solution(c.preorder, c.inorder)
-			if !reflect.DeepEqual(got, c.expect) {
-				t.Fatalf("expected: %v, but got: %v, with inputs: %v %v",
-					c.expect, got, c.preorder, c.inorder)
-			}
-		})
-	}
-}
-
-//	压力测试
-func BenchmarkSolution(b *testing.B) {
-}
-
-//	使用案列
-func ExampleSolution() {
 }
