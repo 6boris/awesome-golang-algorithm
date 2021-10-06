@@ -1,33 +1,56 @@
 package Solution
 
 import (
+	"fmt"
 	"reflect"
-	"strconv"
+	"runtime"
+	"strings"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
-func TestSolution(t *testing.T) {
-	//	测试用例
-	cases := []struct {
-		name             string
-		inputs           [][]int
-		sr, sc, newColor int
-		expect           [][]int
-	}{
-		{"TestCase1", [][]int{{1, 1, 1}, {1, 1, 0}, {1, 0, 1}}, 1, 1, 2, [][]int{{2, 2, 2}, {2, 2, 0}, {2, 0, 1}}},
-		{"TestCase2", [][]int{{1}}, 0, 0, 2, [][]int{{2}}},
-		{"TestCase3", [][]int{{1, 1, 1}, {1, 0, 1}, {1, 1, 1}}, 1, 1, 2, [][]int{{1, 1, 1}, {1, 2, 1}, {1, 1, 1}}},
-		{"TestCase4", [][]int{{0, 0, 0}, {0, 0, 0}}, 0, 0, 2, [][]int{{2, 2, 2}, {2, 2, 2}}},
-	}
+// Solution func Info
+type SolutionFuncType func([][]int, int, int, int) [][]int
 
-	//	开始测试
-	for i, c := range cases {
-		t.Run(c.name+" "+strconv.Itoa(i), func(t *testing.T) {
-			got := Solution(c.inputs, c.sr, c.sc, c.newColor)
-			if !reflect.DeepEqual(got, c.expect) {
-				t.Fatalf("expected: %v, but got: %v, with inputs-image: %v, input-sr: %v, input-sc: %v",
-					c.expect, got, c.inputs, c.sr, c.sc)
-			}
-		})
+var SolutionFuncList = []SolutionFuncType{
+	Solution,
+	floodFill_dfs,
+	floodFill_bfs,
+}
+
+// Test case info struct
+type Case struct {
+	name             string
+	image            [][]int
+	sr, sc, newColor int
+	expect           [][]int
+}
+
+// Test case
+var cases = []Case{
+	{"TestCase 1", [][]int{{1, 1, 1}, {1, 1, 0}, {1, 0, 1}}, 1, 1, 2, [][]int{{2, 2, 2}, {2, 2, 0}, {2, 0, 1}}},
+	{"TestCase 2", [][]int{{1}}, 0, 0, 2, [][]int{{2}}},
+	{"TestCase 3", [][]int{{1, 1, 1}, {1, 0, 1}, {1, 1, 1}}, 1, 1, 2, [][]int{{1, 1, 1}, {1, 2, 1}, {1, 1, 1}}},
+	{"TestCase 4", [][]int{{0, 0, 0}, {0, 0, 0}}, 0, 0, 2, [][]int{{2, 2, 2}, {2, 2, 2}}},
+}
+
+// TestSolution Run test case for all solutions
+func TestSolution(t *testing.T) {
+	ast := assert.New(t)
+
+	for _, f := range SolutionFuncList {
+		funcName := strings.Split(runtime.FuncForPC(reflect.ValueOf(f).Pointer()).Name(), ".")[1]
+		for _, c := range cases {
+			t.Run(fmt.Sprintf("%s %s", funcName, c.name), func(t *testing.T) {
+				image := [][]int{}
+				for _, v := range c.image {
+					image = append(image, append([]int{}, v...))
+				}
+				got := f(image, c.sc, c.sc, c.newColor)
+				ast.Equal(c.expect, got,
+					"func: %v case: %v ", funcName, c.name)
+			})
+		}
 	}
 }
