@@ -13,6 +13,8 @@ type SolutionFuncType func(*ListNode) *ListNode
 
 var SolutionFuncList = []SolutionFuncType{
 	reverseList,
+	//reverseList_2,
+	//reverseList_3,
 }
 
 //	test info struct

@@ -15,19 +15,19 @@ func reverseList(head *ListNode) *ListNode {
 	return newHead
 }
 
-//func reverseList2(head *ListNode) *ListNode {
-//	var pre  *ListNode
-//	var next *ListNode
-//	for head != nil {
-//		next = head.Next
-//		head.Next = pre
-//		pre = head
-//		head = next
+//func reverseList_2(head *ListNode) *ListNode {
+//	var prev *ListNode
+//	curr := head
+//	for curr != nil {
+//		next := curr.Next
+//		curr.Next = prev
+//		prev = curr
+//		curr = next
 //	}
-//	return pre
+//	return prev
 //}
 
-//func reverseList3(head *ListNode) *ListNode {
+//func reverseList_3(head *ListNode) *ListNode {
 //	var prev *ListNode
 //
 //	for head != nil {
