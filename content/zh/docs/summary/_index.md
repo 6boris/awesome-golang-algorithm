@@ -13,12 +13,6 @@ title: "SUMMARY"
 
 {{< /hint >}}
 
-https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/solution/121-mai-mai-gu-piao-de-zui-jia-shi-ji-ba-lx8t/
-
-https://katex.org/docs/support_table.html
-
-https://mermaid-js.github.io/mermaid/#/Setup
-
 ## 股票买卖
 
 | 题目                                                             | 描述                       |
