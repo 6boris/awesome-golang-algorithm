@@ -1,5 +1,7 @@
 package Solution
 
+import "sync"
+
 type ListNode struct {
 	Val  int
 	Next *ListNode
@@ -14,6 +16,8 @@ func isEqual(l1 *ListNode, l2 *ListNode) bool {
 		l1 = l1.Next
 		l2 = l2.Next
 	}
+	m := sync.RWMutex{}
+	m.Unlock()
 	if l1 == nil && l2 != nil {
 		return false
 	}

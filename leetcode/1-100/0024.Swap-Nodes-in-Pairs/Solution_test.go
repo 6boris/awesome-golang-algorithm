@@ -1,61 +1,49 @@
 package Solution
 
 import (
+	"fmt"
 	"reflect"
+	"runtime"
+	"strings"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
+// Solution func Info
+type SolutionFuncType func(*ListNode) *ListNode
+
+var SolutionFuncList = []SolutionFuncType{
+	swapPairs_1,
+	swapPairs_2,
+}
+
+// Test case info struct
+type Case struct {
+	name   string
+	head   *ListNode
+	expect *ListNode
+}
+
+// Test case
+var cases = []Case{
+	{"TestCase 1",
+		&ListNode{Val: 1, Next: &ListNode{Val: 2, Next: &ListNode{Val: 3, Next: &ListNode{Val: 4, Next: nil}}}},
+		&ListNode{Val: 2, Next: &ListNode{Val: 1, Next: &ListNode{Val: 4, Next: &ListNode{Val: 3, Next: nil}}}}},
+}
+
+// TestSolution Run test case for all solutions
 func TestSolution(t *testing.T) {
-	//	测试用例
-	cases := []struct {
-		name   string
-		inputs *ListNode
-		expect *ListNode
-	}{
-		{
-			"1 test 1",
-			&ListNode{Val: 1, Next: &ListNode{Val: 2, Next: &ListNode{Val: 3, Next: &ListNode{Val: 4, Next: nil}}}},
-			&ListNode{Val: 2, Next: &ListNode{Val: 1, Next: &ListNode{Val: 4, Next: &ListNode{Val: 3, Next: nil}}}},
-		},
-	}
+	ast := assert.New(t)
 
-	//	开始测试
-	for _, c := range cases {
-		t.Run(c.name, func(t *testing.T) {
-			ret := swapPairs(c.inputs)
-			if !reflect.DeepEqual(ret, c.expect) {
-				t.Fatalf("expected: %v, but got: %v, with inputs: %v",
-					c.expect, ret, c.inputs)
-			}
-		})
+	for _, f := range SolutionFuncList {
+		funcName := strings.Split(runtime.FuncForPC(reflect.ValueOf(f).Pointer()).Name(), ".")[1]
+		for _, c := range cases {
+			t.Run(fmt.Sprintf("%s %s", funcName, c.name), func(t *testing.T) {
+				got := f(c.head)
+				ast.Equal(c.expect, got,
+					"func: %v case: %v ", funcName, c.name)
+			})
+		}
 	}
-}
-
-func TestSolution2(t *testing.T) {
-	//	测试用例
-	cases := []struct {
-		name   string
-		inputs *ListNode
-		expect *ListNode
-	}{
-		{
-			"1 test 1",
-			&ListNode{Val: 1, Next: &ListNode{Val: 2, Next: &ListNode{Val: 3, Next: &ListNode{Val: 4, Next: nil}}}},
-			&ListNode{Val: 2, Next: &ListNode{Val: 1, Next: &ListNode{Val: 4, Next: &ListNode{Val: 3, Next: nil}}}},
-		},
-	}
-
-	//	开始测试
-	for _, c := range cases {
-		t.Run(c.name, func(t *testing.T) {
-			ret := swapPairs1(c.inputs)
-			if !reflect.DeepEqual(ret, c.expect) {
-				t.Fatalf("expected: %v, but got: %v, with inputs: %v",
-					c.expect, ret, c.inputs)
-			}
-		})
-	}
-}
-
-func BenchMarkSolution(b *testing.BenchmarkResult) {
 }

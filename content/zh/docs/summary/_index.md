@@ -1,0 +1,39 @@
+---
+weight: 1
+bookFlatSection: true
+title: "SUMMARY"
+---
+
+# SUMMARY
+
+{{< hint info >}}
+**代码归类**
+
+本页面统计了 LeetCode 比较火的一类题目，方便总结。
+
+{{< /hint >}}
+
+https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/solution/121-mai-mai-gu-piao-de-zui-jia-shi-ji-ba-lx8t/
+
+https://katex.org/docs/support_table.html
+
+https://mermaid-js.github.io/mermaid/#/Setup
+
+## 股票买卖
+
+| 题目                                                             | 描述                       |
+| :--------------------------------------------------------------- | :------------------------- |
+| [121.买卖股票的最佳时机](/docs/leetcode/0101-0200/0121/)         | 只能卖一次                 |
+| [122.买卖股票的最佳时机 II](/docs/leetcode/0101-0200/0122/)      | 可以买卖多次               |
+| [123.买卖股票的最佳时机 III](/docs/leetcode/0101-0200/0123/)     | 最多卖 2 次                |
+| [188.买卖股票的最佳时机 IV](/docs/leetcode/0101-0200/0188/)      | 最多卖 K 次                |
+| [309.最佳买卖股票时机含冷冻期](/docs/leetcode/0301-0400/0309/)   | 买卖多次，卖出有一天冷却期 |
+| [714.买卖股票的最佳时机含手续费](/docs/leetcode/0701-0800/0714/) | 买卖多次，每次有手续费     |
+
+## 迷宫
+
+| 题目                                                           | 描述     |
+| :------------------------------------------------------------- | :------- |
+| [490.迷宫](/docs/leetcode/0401-0500/0490/)                     | 迷宫     |
+| [505.迷宫 II](/docs/leetcode/0501-0600/0490/)                  | 迷宫 II  |
+| [499.迷宫 III](https://leetcode-cn.com/problems/the-maze-iii/) | 迷宫 III |

@@ -1,63 +1,50 @@
 package Solution
 
 import (
+	"fmt"
 	"reflect"
-	"strconv"
+	"runtime"
+	"strings"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
-func TestSolution1(t *testing.T) {
-	//	测试用例
-	cases := []struct {
-		name   string
-		inputs []int
-		expect int
-	}{
-		{"TestCase", []int{7, 1, 5, 3, 6, 4}, 5},
-		{"TestCase", []int{1, 2, 3, 4, 5}, 4},
-		{"TestCase", []int{7, 6, 4, 3, 1}, 0},
-	}
+// Solution func Info
+type SolutionFuncType func([]int) int
 
-	//	开始测试
-	for i, c := range cases {
-		t.Run(c.name+strconv.Itoa(i), func(t *testing.T) {
-			got := maxProfit1(c.inputs)
-			if !reflect.DeepEqual(got, c.expect) {
-				t.Fatalf("expected: %v, but got: %v, with inputs: %v",
-					c.expect, got, c.inputs)
-			}
-		})
-	}
+var SolutionFuncList = []SolutionFuncType{
+	maxProfit_1,
+	maxProfit_2,
+	maxProfit_3,
 }
 
-func TestSolution2(t *testing.T) {
-	//	测试用例
-	cases := []struct {
-		name   string
-		inputs []int
-		expect int
-	}{
-		{"TestCase", []int{7, 1, 5, 3, 6, 4}, 5},
-		{"TestCase", []int{1, 2, 3, 4, 5}, 4},
-		{"TestCase", []int{7, 6, 4, 3, 1}, 0},
-	}
-
-	//	开始测试
-	for i, c := range cases {
-		t.Run(c.name+strconv.Itoa(i), func(t *testing.T) {
-			got := maxProfit2(c.inputs)
-			if !reflect.DeepEqual(got, c.expect) {
-				t.Fatalf("expected: %v, but got: %v, with inputs: %v",
-					c.expect, got, c.inputs)
-			}
-		})
-	}
+// Test case info struct
+type Case struct {
+	name   string
+	inputs []int
+	expect int
 }
 
-//	压力测试
-func BenchmarkSolution(b *testing.B) {
+// Test case
+var cases = []Case{
+	{"TestCase", []int{7, 1, 5, 3, 6, 4}, 5},
+	{"TestCase", []int{1, 2, 3, 4, 5}, 4},
+	{"TestCase", []int{7, 6, 4, 3, 1}, 0},
 }
 
-//	使用案列
-func ExampleSolution() {
+// TestSolution Run test case for all solutions
+func TestSolution(t *testing.T) {
+	ast := assert.New(t)
+
+	for _, f := range SolutionFuncList {
+		funcName := strings.Split(runtime.FuncForPC(reflect.ValueOf(f).Pointer()).Name(), ".")[1]
+		for _, c := range cases {
+			t.Run(fmt.Sprintf("%s %s", funcName, c.name), func(t *testing.T) {
+				got := f(c.inputs)
+				ast.Equal(c.expect, got,
+					"func: %v case: %v ", funcName, c.name)
+			})
+		}
+	}
 }

@@ -21,3 +21,4 @@ node_modules/
 .env.yml
 /python
 package-lock.json
+.hugo_build.lock
