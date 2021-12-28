@@ -27,6 +27,7 @@ func climbStairs_2(n int) int {
 var m = make(map[int]int)
 
 func climbStairs_3(n int) int {
+
 	if n <= 2 {
 		return n
 	}

@@ -1,37 +1,41 @@
 package Solution
 
-/**
-持有一股
-买卖一次
-*/
-
-/**
-Brute Force
-时间复杂度O(n^2)
-空间复杂度O(1)
-*/
-func maxProfit1(prices []int) int {
-	maxprofit := 0
+func maxProfit_1(prices []int) int {
+	ans := 0
 	for i := 0; i < len(prices); i++ {
 		for j := i + 1; j < len(prices); j++ {
-			profit := prices[j] - prices[i]
-			if profit > maxprofit {
-				maxprofit = profit
-			}
+			ans = max(ans, prices[j]-prices[i])
 		}
 	}
-	return maxprofit
+	return ans
 }
 
-//	Greedy
-//	扫描一遍
-func maxProfit2(prices []int) int {
-	profit, low := 0, prices[0]
+func maxProfit_2(prices []int) int {
+	ans, lowPrice := 0, prices[0]
 	for i := 0; i < len(prices); i++ {
-		profit = max(profit, prices[i]-low)
-		low = min(low, prices[i])
+		ans = max(ans, prices[i]-lowPrice)
+		lowPrice = min(lowPrice, prices[i])
 	}
-	return profit
+	return ans
+}
+
+/*
+当前有无股票
+    有
+        昨天有、今天不动
+        昨天无、今天买【第一次买】
+    无
+        昨天有、今天卖
+        昨天无、今天不动
+*/
+func maxProfit_3(prices []int) int {
+	dp, n := make([][2]int, len(prices)), len(prices)
+	dp[0][0], dp[0][1] = -prices[0], 0
+	for i := 1; i < n; i++ {
+		dp[i][0] = max(dp[i-1][0], -prices[i])
+		dp[i][1] = max(dp[i-1][1], dp[i-1][0]+prices[i])
+	}
+	return dp[n-1][1]
 }
 
 func min(x, y int) int {

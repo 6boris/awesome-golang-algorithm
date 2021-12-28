@@ -16,6 +16,7 @@ type SolutionFuncType func(string) int
 var SolutionFuncList = []SolutionFuncType{
 	lengthOfLongestSubstring_1,
 	lengthOfLongestSubstring_2,
+	lengthOfLongestSubstring_3,
 }
 
 // Test case info struct
@@ -30,6 +31,7 @@ var cases = []Case{
 	{name: "TestCase 1", input: "abcabcbb", expect: 3},
 	{name: "TestCase 2", input: "bbbbb", expect: 1},
 	{name: "TestCase 3", input: "pwwkew", expect: 3},
+	{name: "TestCase 4", input: "abba", expect: 2},
 }
 
 // TestSolution Run test case for all solutions

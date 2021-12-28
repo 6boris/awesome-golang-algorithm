@@ -11,7 +11,7 @@ import (
 )
 
 // Solution func Info
-type SolutionFuncType func(x bool) bool
+type SolutionFuncType func(bool) bool
 
 var SolutionFuncList = []SolutionFuncType{
 	Solution_1,

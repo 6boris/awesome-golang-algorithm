@@ -1,5 +1,5 @@
 ---
-weight: 2   
+weight: 20   
 bookFlatSection: true
 title: "LeetCode"
 ---

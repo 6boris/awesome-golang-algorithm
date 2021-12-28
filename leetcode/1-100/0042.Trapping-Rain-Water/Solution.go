@@ -1,7 +1,5 @@
 package Solution
 
-import "fmt"
-
 // 三次线性扫描
 func trap(height []int) int {
 	if len(height) == 0 {
@@ -23,7 +21,6 @@ func trap(height []int) int {
 	}
 
 	for i := 0; i < n; i++ {
-		fmt.Println(i, leftMax[i], rightMax[i], height[i])
 		ans += min(leftMax[i], rightMax[i]) - height[i]
 	}
 

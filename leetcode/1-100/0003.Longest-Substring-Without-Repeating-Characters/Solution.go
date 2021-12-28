@@ -1,5 +1,21 @@
 package Solution
 
+func lengthOfLongestSubstring_3(s string) int {
+	ans, left, m := 0, 0, map[rune]int{}
+	for right, v := range s {
+		if _, ok := m[v]; !ok {
+			m[v] = right
+		} else {
+			if m[v]+1 > left {
+				left = m[v] + 1
+			}
+			m[v] = right
+		}
+		ans = max(ans, right-left+1)
+	}
+	return ans
+}
+
 func lengthOfLongestSubstring_1(s string) int {
 	// 哈希集合，记录每个字符是否出现过
 	m := map[byte]int{}

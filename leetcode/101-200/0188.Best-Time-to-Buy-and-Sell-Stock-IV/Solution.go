@@ -1,46 +1,45 @@
 package Solution
 
-func maxProfit(k int, prices []int) int {
-	size := len(prices)
-	if size <= 1 {
-		return 0
-	}
+/*
+[天数][股票状态]
+股票状态: 奇数表示第 k 次交易持有/买入, 偶数表示第 k 次交易不持有/卖出, 0 表示没有操作
+*/
 
-	// 可允许交易次数大于size，可以获得每一次上涨的利润
-	if k >= size {
-		return profits(prices)
+func maxProfit_1(k int, prices []int) int {
+	n, dp := len(prices), [][]int{}
+	for i := 0; i < n; i++ {
+		dp = append(dp, make([]int, k*2+1))
 	}
-	// 另一个是当前到达第i天，最多可进行j次交易，并且最后一次交易在当天卖出的最好的利润是多少
-	local := make([]int, k+1)
-	// 当前到达第i天可以最多进行j次交易，最好的利润是多少
-	global := make([]int, k+1)
-
-	for i := 1; i < size; i++ {
-		diff := prices[i] - prices[i-1]
-		for j := k; j >= 1; j-- {
-			local[j] = max(global[j-1]+max(diff, 0), local[j]+diff)
-			global[j] = max(local[j], global[j])
+	for i := 1; i < k*2; i += 2 {
+		dp[0][i] = -prices[0]
+	}
+	for i := 1; i < n; i++ {
+		for j := 0; j < k*2; j += 2 {
+			dp[i][j+1] = max(dp[i-1][j+1], dp[i-1][j]-prices[i])
+			dp[i][j+2] = max(dp[i-1][j+2], dp[i-1][j+1]+prices[i])
 		}
 	}
-
-	return global[k]
+	return dp[n-1][k*2]
 }
 
-func max(a, b int) int {
-	if a > b {
-		return a
+func maxProfit_2(k int, prices []int) int {
+	n := len(prices)
+	dp := make([]int, k*2+1)
+	for i := 1; i < k*2; i += 2 {
+		dp[i] = -prices[0]
 	}
-	return b
-}
-
-func profits(prices []int) int {
-	res := 0
-	for i := 1; i < len(prices); i++ {
-		tmp := prices[i] - prices[i-1]
-		if tmp > 0 {
-			res += tmp
+	for i := 1; i < n; i++ {
+		for j := 0; j < k*2; j += 2 {
+			dp[j+1] = max(dp[j+1], dp[j]-prices[i])
+			dp[j+2] = max(dp[j+2], dp[j+1]+prices[i])
 		}
 	}
+	return dp[k+2]
+}
 
-	return res
+func max(x, y int) int {
+	if x > y {
+		return x
+	}
+	return y
 }
