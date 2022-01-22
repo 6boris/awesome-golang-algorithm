@@ -1,28 +1,21 @@
 # [557.Reverse Words in a String III][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given a string `s`, reverse the order of characters in each word within a sentence while still preserving whitespace and initial word order.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: s = "Let's take LeetCode contest"
+Output: "s'teL ekat edoCteeL tsetnoc"
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Reverse Words in a String III
-```go
 ```
-
+Input: s = "God Ding"
+Output: "doG gniD"
+```
 
 ## 结语
 
