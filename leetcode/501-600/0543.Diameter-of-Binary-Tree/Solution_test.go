@@ -15,7 +15,7 @@ type SolutionFuncType func(*TreeNode) int
 
 var SolutionFuncList = []SolutionFuncType{
 	diameterOfBinaryTree_1,
-	diameterOfBinaryTree_2,
+	//diameterOfBinaryTree_2,
 }
 
 // Test case info struct
