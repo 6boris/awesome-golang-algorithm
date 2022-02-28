@@ -17,6 +17,7 @@ var SolutionFuncList = []SolutionFuncType{
 	majorityElement_1,
 	majorityElement_2,
 	majorityElement_3,
+	majorityElement_4,
 }
 
 // Test case info struct
