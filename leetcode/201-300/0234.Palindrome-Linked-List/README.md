@@ -1,28 +1,23 @@
 # [234.Palindrome Linked List][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given the `head` of a singly linked list, return true if it is a palindrome.
 
-**Example 1:**
+**Example 1:**  
+![exampl1](pal1linked-list.jpg)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: head = [1,2,2,1]
+Output: true
 ```
 
-## 题意
-> ...
+**Example 2:**  
+![example2](pal2linked-list.jpg)
 
-## 题解
-
-### 思路1
-> ...
-Palindrome Linked List
-```go
 ```
-
+Input: head = [1,2]
+Output: false
+```
 
 ## 结语
 
