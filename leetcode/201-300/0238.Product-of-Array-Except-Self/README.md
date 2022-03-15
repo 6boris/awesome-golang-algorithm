@@ -1,28 +1,25 @@
 # [238.Product of Array Except Self][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given an integer array `nums`, return an array `answer` such that `answer[i]` is equal to the product of all the elements of `nums` except `nums[i]`.
+
+The product of any prefix or suffix of `nums` is **guaranteed** to fit in a **32-bit** integer.
+
+You must write an algorithm that runs in `O(n)` time and without using the division operation.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: nums = [1,2,3,4]
+Output: [24,12,8,6]
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Product of Array Except Self
-```go
 ```
-
+Input: nums = [-1,1,0,-3,3]
+Output: [0,0,9,0,0]
+```
 
 ## 结语
 
