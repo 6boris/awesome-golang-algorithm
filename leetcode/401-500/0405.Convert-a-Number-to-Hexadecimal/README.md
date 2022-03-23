@@ -1,28 +1,25 @@
 # [405.Convert a Number to Hexadecimal][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given an integer `num`, return a string representing its hexadecimal representation. For negative integers, `two’s complement` method is used.
+
+All the letters in the answer string should be lowercase characters, and there should not be any leading zeros in the answer except for the zero itself.
+
+**Note**: You are not allowed to use any built-in library method to directly solve this problem.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: num = 26
+Output: "1a"
 ```
 
-## 题意
-> ...
+**Example 2**
 
-## 题解
-
-### 思路1
-> ...
-Convert a Number to Hexadecimal
-```go
 ```
-
+Input: num = -1
+Output: "ffffffff"
+```
 
 ## 结语
 
