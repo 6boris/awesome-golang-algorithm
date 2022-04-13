@@ -9,8 +9,8 @@ import (
 
 const (
 	SOLUTIONS_PATH                   = "leetcode/"
-	SOURCE_SOLUTION_FILE_PATH        = "cmd/template/solution/solution.go"
-	SOURCE_SOLUTION_TEST_FILE_PATH   = "cmd/template/solution/solution_test.go"
+	SOURCE_SOLUTION_FILE_PATH        = "cmd/template/solution/Solution.go"
+	SOURCE_SOLUTION_TEST_FILE_PATH   = "cmd/template/solution/Solution_test.go"
 	SOURCE_SOLUTION_README_FILE_PATH = "cmd/template/solution/README.md"
 )
 
