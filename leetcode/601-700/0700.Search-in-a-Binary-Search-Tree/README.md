@@ -1,28 +1,25 @@
 # [700.Search in a Binary Search Tree][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given the `root` of a binary search tree (BST) and an integer `val`.
 
-**Example 1:**
+Find the node in the BST that the node's value equals `val` and return the subtree rooted with that node. If such a node does not exist, return `null`.
+
+**Example 1:**  
+![tree1](./tree1.jpg)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: root = [4,2,7,1,3], val = 2
+Output: [2,1,3]
 ```
 
-## 题意
-> ...
+**Example 2:**  
+![tree2](./tree2.jpg)
 
-## 题解
-
-### 思路1
-> ...
-Search in a Binary Search Tree
-```go
 ```
-
+Input: root = [4,2,7,1,3], val = 5
+Output: []
+```
 
 ## 结语
 
