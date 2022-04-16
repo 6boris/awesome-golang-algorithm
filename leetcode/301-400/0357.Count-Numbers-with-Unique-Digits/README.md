@@ -1,28 +1,23 @@
 # [357.Count Numbers with Unique Digits][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given an integer `n`, return the count of all numbers with unique digits, `x`, where 0 <= x < 10<sup>n</sup>.
+
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: n = 2
+Output: 91
+Explanation: The answer should be the total numbers in the range of 0 ≤ x < 100, excluding 11,22,33,44,55,66,77,88,99
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Count Numbers with Unique Digits
-```go
 ```
-
+Input: n = 0
+Output: 1
+```
 
 ## 结语
 
