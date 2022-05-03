@@ -1,28 +1,25 @@
 # [905.Sort Array By Parity][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given an integer array `nums`, move all the even integers at the beginning of the array followed by all the odd integers.
+
+Return **any array** that satisfies this condition.
+
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: nums = [3,1,2,4]
+Output: [2,4,3,1]
+Explanation: The outputs [4,2,3,1], [2,4,1,3], and [4,2,1,3] would also be accepted.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Sort Array By Parity
-```go
 ```
-
+Input: nums = [0]
+Output: [0]
+```
 
 ## 结语
 
