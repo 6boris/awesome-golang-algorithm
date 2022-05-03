@@ -1,28 +1,25 @@
 # [279.Perfect Squares][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given an integer `n`, return the least number of perfect square numbers that sum to `n`.
+
+A **perfect square** is an integer that is the square of an integer; in other words, it is the product of some integer with itself. For example, `1`, `4`, `9`, and `16` are perfect squares while `3` and `11` are not.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: n = 12
+Output: 3
+Explanation: 12 = 4 + 4 + 4.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Perfect Squares
-```go
 ```
-
+Input: n = 13
+Output: 2
+Explanation: 13 = 4 + 9.
+```
 
 ## 结语
 
