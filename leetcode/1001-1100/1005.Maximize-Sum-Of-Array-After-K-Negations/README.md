@@ -1,28 +1,37 @@
 # [1005.Maximize Sum Of Array After K Negations][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given an integer array `nums` and an integer `k`, modify the array in the following way:
+
+- choose an index `i` and replace `nums[i]` with `-nums[i]`.
+
+You should apply this process exactly `k` times. You may choose the same index `i` multiple times.
+
+Return the largest possible sum of the array after modifying it in this way.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: nums = [4,2,3], k = 1
+Output: 5
+Explanation: Choose index 1 and nums becomes [4,-2,3].
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Maximize Sum Of Array After K Negations
-```go
+```
+Input: nums = [3,-1,0,2], k = 3
+Output: 6
+Explanation: Choose indices (1, 2, 2) and nums becomes [3,1,0,2].
 ```
 
+**Example 3:**
+
+```
+Input: nums = [2,-3,-1,5,-4], k = 2
+Output: 13
+Explanation: Choose indices (1, 4) and nums becomes [2,3,-1,5,4].
+```
 
 ## 结语
 
