@@ -1,28 +1,22 @@
 # [1302.Deepest Leaves Sum][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given the `root` of a binary tree, return the sum of values of its deepest leaves.
+ 
 
-**Example 1:**
-
+**Example 1:**  
+![tree](./1483_ex1.png)
 ```
-Input: a = "11", b = "1"
-Output: "100"
-```
-
-## 题意
-> ...
-
-## 题解
-
-### 思路1
-> ...
-Deepest Leaves Sum
-```go
+Input: root = [1,2,3,4,5,null,6,7,null,null,null,null,8]
+Output: 15
 ```
 
+**Example 2:**
+
+```
+Input: root = [6,7,8,2,7,1,3,9,null,1,4,null,null,null,5]
+Output: 19
+```
 
 ## 结语
 
