@@ -1,28 +1,27 @@
 # [437.Path Sum III][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given the `root` of a binary tree and an integer `targetSum`, return the number of paths where the sum of the values along the path equals `targetSum`.
 
-**Example 1:**
+The path does not need to start or end at the root or a leaf, but it must go downwards (i.e., traveling only from parent nodes to child nodes).
+
+
+**Example 1:**  
+<!--![tree](https://assets.leetcode.com/uploads/2021/04/09/pathsum3-1-tree.jpg)-->
+![pathsum3-1](./pathsum3-1-tree.jpg)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: root = [10,5,-3,3,2,null,11,3,-2,null,1], targetSum = 8
+Output: 3
+Explanation: The paths that sum to 8 are shown.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Path Sum III
-```go
 ```
-
+Input: root = [5,4,8,11,null,13,4,7,2,null,null,5,1], targetSum = 22
+Output: 3
+```
 
 ## 结语
 
