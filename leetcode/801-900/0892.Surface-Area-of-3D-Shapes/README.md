@@ -1,28 +1,39 @@
 # [892.Surface Area of 3D Shapes][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given an `n x n` grid where you have placed some `1 x 1 x 1` cubes. Each value `v = grid[i][j]` represents a tower of `v` cubes placed on top of cell `(i, j)`.
 
-**Example 1:**
+After placing these cubes, you have decided to glue any directly adjacent cubes to each other, forming several irregular 3D shapes.
+
+Return the total surface area of the resulting shapes.
+
+**Note**: The bottom face of each shape counts toward its surface area.
+
+**Example 1:**  
+![tmp-grid2](./tmp-grid2.jpg)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: grid = [[1,2],[3,4]]
+Output: 34
 ```
 
-## 题意
-> ...
+**Example 2:**  
 
-## 题解
+![tmp-grid4](./tmp-grid4.jpg)
 
-### 思路1
-> ...
-Surface Area of 3D Shapes
-```go
+```
+Input: grid = [[1,1,1],[1,0,1],[1,1,1]]
+Output: 32
 ```
 
+**Example 3:**  
+
+![tmp-grid5](./tmp-grid5.jpg)
+
+```
+Input: grid = [[2,2,2],[2,1,2],[2,2,2]]
+Output: 46
+```
 
 ## 结语
 
