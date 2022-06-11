@@ -1,28 +1,31 @@
 # [209.Minimum Size Subarray Sum][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given an array of positive integers `nums` and a positive integer $target a_b$, 
+return the minimal length of a **contiguous subarray** __[nums<sub>l</sub>, nums<sub>l+1</sub>, ..., nums<sub>r-1</sub>, nums<sub>r</sub>]__ of which the 
+sum is greater than or equal to `target`. If there is no such subarray, return `0` instead.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: target = 7, nums = [2,3,1,2,4,3]
+Output: 2
+Explanation: The subarray [4,3] has the minimal length under the problem constraint.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Minimum Size Subarray Sum
-```go
+```
+Input: target = 4, nums = [1,4,4]
+Output: 1
 ```
 
+**Example 3:**
+
+```
+Input: target = 11, nums = [1,1,1,1,1,1,1,1]
+Output: 0
+```
 
 ## 结语
 
