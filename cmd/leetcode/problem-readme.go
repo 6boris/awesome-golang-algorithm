@@ -7,6 +7,7 @@ import (
 	"io/ioutil"
 	"log"
 	"os"
+	"strings"
 )
 
 func GetReadmeTemplateBuffer() string {
@@ -18,7 +19,7 @@ func GetReadmeTemplateBuffer() string {
 	return string(data)
 }
 
-func GenerateReadme(problem Problem) {
+func GenerateReadme(problem Problem, basePath ...string) {
 	log.Println("开始生成 README")
 	file, err := os.OpenFile(SOURCE_SOLUTION_README_FILE_PATH, os.O_RDONLY, 0o600)
 	defer file.Close()
@@ -35,5 +36,11 @@ func GenerateReadme(problem Problem) {
 
 	tmpl, err := template.New("README: ").Parse(string(buffer))
 	err = tmpl.Execute(&tmpRes, problem)
+	if len(basePath) > 0 {
+		dir := strings.Join(basePath, "/")
+		dir = strings.TrimSuffix(dir, "/")
+		write(dir+"/README.md", string(tmpRes.Bytes()))
+		return
+	}
 	write(SOLUTIONS_PATH+problem.PathName+"/README.md", string(tmpRes.Bytes()))
 }

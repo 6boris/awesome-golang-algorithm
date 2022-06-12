@@ -151,7 +151,8 @@ func formatId(id int) string {
 func formatName(name string) string {
 	str := ""
 	for i, v := range name {
-		if v == ' ' && name[i-1] != '-' {
+		// 2267 panic
+		if v == ' ' && i > 0 && name[i-1] != '-' {
 			str = str + "-"
 			continue
 		}
