@@ -1,28 +1,40 @@
 # [1048.Longest String Chain][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+ou are given an array of `words` where each word consists of lowercase English letters.
+
+**word<sub>A</sub>** is a **predecessor** of **word<sub>B</sub>** if and only if we can insert **exactly one** letter anywhere in **word<sub>A</sub>**  **without changing the order of the other characters** to make it equal to **word<sub>B</sub>**.
+
+- For example, `"abc"` is a **predecessor** of `"abac"`, while `"cba"` is not a **predecessor** of `"bcad"`.
+
+A **word chain** is a sequence of words `[word1, word2, ..., wordk]` with `k >= 1`, where **word<sub>1</sub>** is a **predecessor** of **word<sub>2</sub>**, **word<sub>2</sub>** is a **predecessor** of **word<sub>3</sub>**, and so on. A single word is trivially a **word chain** with `k == 1`.
+
+Return the **length** of the **longest possible word chain** with words chosen from the given list of `words`.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: words = ["a","b","ba","bca","bda","bdca"]
+Output: 4
+Explanation: One of the longest word chains is ["a","ba","bda","bdca"].
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Longest String Chain
-```go
+```
+Input: words = ["xbc","pcxbcf","xb","cxbc","pcxbc"]
+Output: 5
+Explanation: All the words can be put in a word chain ["xb", "xbc", "cxbc", "pcxbc", "pcxbcf"].
 ```
 
+**Example 3:**
+
+```
+Input: words = ["abcd","dbqca"]
+Output: 1
+Explanation: The trivial word chain ["abcd"] is one of the longest word chains.
+["abcd","dbqca"] is not a valid word chain because the ordering of the letters is changed.
+```
 
 ## 结语
 
