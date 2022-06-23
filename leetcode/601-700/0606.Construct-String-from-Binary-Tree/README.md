@@ -1,28 +1,28 @@
 # [606.Construct String from Binary Tree][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given the `root` of a binary tree, construct a string consisting of parenthesis and integers from a binary tree with the preorder traversal way, and return it.
 
-**Example 1:**
+Omit all the empty parenthesis pairs that do not affect the one-to-one mapping relationship between the string and the original binary tree.
+
+
+**Example 1:**  
+![cons1-tree](./cons1-tree.jpg)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: root = [1,2,3,4]
+Output: "1(2(4))(3)"
+Explanation: Originally, it needs to be "1(2(4)())(3()())", but you need to omit all the unnecessary empty parenthesis pairs. And it will be "1(2(4))(3)"
 ```
 
-## 题意
-> ...
+**Example 2:**  
+![cons2-tree](./cons2-tree.jpg)
 
-## 题解
-
-### 思路1
-> ...
-Construct String from Binary Tree
-```go
 ```
-
+Input: root = [1,2,3,null,4]
+Output: "1(2()(4))(3)"
+Explanation: Almost the same as the first example, except we cannot omit the first parenthesis pair to break the one-to-one mapping relationship between the input and the output.
+```
 
 ## 结语
 

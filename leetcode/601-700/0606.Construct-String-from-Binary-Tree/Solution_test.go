@@ -10,12 +10,27 @@ func TestSolution(t *testing.T) {
 	//	测试用例
 	cases := []struct {
 		name   string
-		inputs bool
-		expect bool
+		inputs *TreeNode
+		expect string
 	}{
-		{"TestCase", true, true},
-		{"TestCase", true, true},
-		{"TestCase", false, false},
+		{"TestCase1", &TreeNode{
+			Val: 1,
+			Left: &TreeNode{
+				Val:  2,
+				Left: &TreeNode{Val: 4},
+			},
+			Right: &TreeNode{Val: 3},
+		}, "1(2(4))(3)"},
+		{"TestCase2", &TreeNode{
+			Val: 1,
+			Left: &TreeNode{
+				Val:   2,
+				Right: &TreeNode{Val: 4},
+			},
+			Right: &TreeNode{Val: 3},
+		}, "1(2()(4))(3)"},
+		{"TestCase3", nil, ""},
+		{"TestCase4", &TreeNode{Val: 1}, "1"},
 	}
 
 	//	开始测试
