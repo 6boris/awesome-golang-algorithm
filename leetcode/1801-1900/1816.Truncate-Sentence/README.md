@@ -1,28 +1,41 @@
 # [1816.Truncate Sentence][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+A **sentence** is a list of words that are separated by a single space with no leading or trailing spaces. Each of the words consists of **only** uppercase and lowercase English letters (no punctuation).
+
+- For example, `"Hello World"`, `"HELLO"`, and `"hello world hello world"` are all sentences.
+
+You are given a sentence `s​`​​​​​ and an integer `k`​​​​​​. You want to **truncate** `s`​​​​​​ such that it contains only the **first** `k`​​​​​​ words. Return `s`​​​​​​ after **truncating** it.
+
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: s = "Hello how are you Contestant", k = 4
+Output: "Hello how are you"
+Explanation:
+The words in s are ["Hello", "how" "are", "you", "Contestant"].
+The first 4 words are ["Hello", "how", "are", "you"].
+Hence, you should return "Hello how are you".
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Truncate Sentence
-```go
+```
+Input: s = "What is the solution to this problem", k = 4
+Output: "What is the solution"
+Explanation:
+The words in s are ["What", "is" "the", "solution", "to", "this", "problem"].
+The first 4 words are ["What", "is", "the", "solution"].
+Hence, you should return "What is the solution".
 ```
 
+**Example 3:**
+
+```
+Input: s = "chopper is not a tanuki", k = 5
+Output: "chopper is not a tanuki"
+```
 
 ## 结语
 
