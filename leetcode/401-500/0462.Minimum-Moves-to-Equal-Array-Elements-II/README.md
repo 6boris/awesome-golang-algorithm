@@ -1,28 +1,28 @@
 # [462.Minimum Moves to Equal Array Elements II][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given an integer array `nums` of size `n`, return the minimum number of moves required to make all array elements equal.
+
+In one move, you can increment or decrement an element of the array by `1`.
+
+Test cases are designed so that the answer will fit in a **32-bit** integer.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: nums = [1,2,3]
+Output: 2
+Explanation:
+Only two moves are needed (remember each move increments or decrements one element):
+[1,2,3]  =>  [2,2,3]  =>  [2,2,2]
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Minimum Moves to Equal Array Elements II
-```go
 ```
-
+Input: nums = [1,10,2,9]
+Output: 16
+```
 
 ## 结语
 
