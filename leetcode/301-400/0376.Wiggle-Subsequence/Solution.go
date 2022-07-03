@@ -34,3 +34,25 @@ func wiggleMaxLength(nums []int) int {
 	}
 	return maxLength
 }
+
+func wiggleMaxLength1(nums []int) int {
+	length := len(nums)
+	if length == 0 {
+		return 0
+	}
+
+	a, b := 1, 1
+	for idx := 1; idx < length; idx++ {
+		if nums[idx] > nums[idx-1] {
+			a = b + 1
+		}
+		if nums[idx] < nums[idx-1] {
+			b = a + 1
+		}
+
+	}
+	if a > b {
+		return a
+	}
+	return b
+}
