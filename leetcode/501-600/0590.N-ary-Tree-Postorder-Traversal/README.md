@@ -1,28 +1,25 @@
 # [590.N-ary Tree Postorder Traversal][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given the `root` of an n-ary tree, return the postorder traversal of its nodes' values.
 
-**Example 1:**
+Nary-Tree input serialization is represented in their level order traversal. Each group of children is separated by the null value (See examples)
+
+**Example 1:**  
+![example1](./narytreeexample.png)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: root = [1,null,3,2,4,null,5,6]
+Output: [5,6,3,2,4,1]
 ```
 
-## 题意
-> ...
+**Example 2:**  
+![example2](./sample_4_964.png)
 
-## 题解
-
-### 思路1
-> ...
-N-ary Tree Postorder Traversal
-```go
 ```
-
+Input: root = [1,null,2,3,4,5,null,null,6,7,null,8,null,9,10,null,null,11,null,12,null,13,null,null,14]
+Output: [2,6,14,11,7,3,12,8,4,13,9,10,5,1]
+```
 
 ## 结语
 
