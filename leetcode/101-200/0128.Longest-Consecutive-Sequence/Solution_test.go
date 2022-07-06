@@ -26,6 +26,10 @@ func TestSolution(t *testing.T) {
 			if !reflect.DeepEqual(got, c.expect) {
 				t.Fatalf("expected: %v, but got: %v, with inputs: %v", c.expect, got, c.inputs)
 			}
+			got = longestConsecutive1(c.inputs)
+			if !reflect.DeepEqual(got, c.expect) {
+				t.Fatalf("expected: %v, but got: %v, with inputs: %v", c.expect, got, c.inputs)
+			}
 		})
 	}
 }
