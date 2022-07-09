@@ -1,28 +1,28 @@
 # [2236.Root Equals Sum of Children][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given the `root` of a **binary tree** that consists of exactly `3` nodes: the root, its left child, and its right child.
 
-**Example 1:**
+Return `true` if the value of the root is equal to the **sum** of the values of its two children, or `false` otherwise.
 
+**Example 1:**  
+
+![tree1](./graph3drawio.png)
 ```
-Input: a = "11", b = "1"
-Output: "100"
-```
-
-## 题意
-> ...
-
-## 题解
-
-### 思路1
-> ...
-Root Equals Sum of Children
-```go
+Input: root = [10,4,6]
+Output: true
+Explanation: The values of the root, its left child, and its right child are 10, 4, and 6, respectively.
+10 is equal to 4 + 6, so we return true.
 ```
 
+**Example 2:**  
+![tree2](./graph3drawio-1.png)
+```
+Input: root = [5,3,1]
+Output: false
+Explanation: The values of the root, its left child, and its right child are 5, 3, and 1, respectively.
+5 is not equal to 3 + 1, so we return false.
+```
 
 ## 结语
 
