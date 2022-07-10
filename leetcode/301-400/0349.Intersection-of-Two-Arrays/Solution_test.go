@@ -17,6 +17,7 @@ type SolutionFuncType func([]int, []int) []int
 var SolutionFuncList = []SolutionFuncType{
 	intersection_1,
 	intersection_2,
+	intersection_3,
 }
 
 //	test info struct
