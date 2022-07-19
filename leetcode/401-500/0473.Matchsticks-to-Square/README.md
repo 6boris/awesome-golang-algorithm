@@ -1,28 +1,26 @@
 # [473.Matchsticks to Square][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given an integer array `matchsticks` where `matchsticks[i]` is the length of the i<sup>th</sup> matchstick. You want to use **all the matchsticks** to make one square. You **should not break** any stick, but you can link them up, and each matchstick must be used **exactly one time**.
 
-**Example 1:**
+Return `true` if you can make this square and `false` otherwise.
+
+**Example 1:**  
+![ex1](./matchsticks1-grid.jpg)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: matchsticks = [1,1,2,2,2]
+Output: true
+Explanation: You can form a square with length 2, one side of the square came two sticks with length 1.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Matchsticks to Square
-```go
 ```
-
+Input: matchsticks = [3,3,3,3,4]
+Output: false
+Explanation: You cannot find a way to form a square with all the matchsticks.
+```
 
 ## 结语
 
