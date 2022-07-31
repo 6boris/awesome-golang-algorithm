@@ -1,28 +1,32 @@
 # [307.Range Sum Query - Mutable][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given an integer array `nums`, handle multiple queries of the following types:
+
+- **Update** the value of an element in `nums`.
+- Calculate the **sum** of the elements of `nums` between indices `left` and `right` **inclusive** where `left <= right`.
+
+Implement the `NumArray` class:
+
+- `NumArray(int[] nums)` Initializes the object with the integer array `nums`.
+- `void update(int index, int val)` **Updates** the value of `nums[index]` to be `val`.
+- `int sumRange(int left, int right)` Returns the **sum** of the elements of `nums` between indices `left` and `right` **inclusive** (i.e. `nums[left] + nums[left + 1] + ... + nums[right]`).
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input
+["NumArray", "sumRange", "update", "sumRange"]
+[[[1, 3, 5]], [0, 2], [1, 2], [0, 2]]
+Output
+[null, 9, null, 8]
+
+Explanation
+NumArray numArray = new NumArray([1, 3, 5]);
+numArray.sumRange(0, 2); // return 1 + 3 + 5 = 9
+numArray.update(1, 2);   // nums = [1, 2, 5]
+numArray.sumRange(0, 2); // return 1 + 2 + 5 = 8
 ```
-
-## 题意
-> ...
-
-## 题解
-
-### 思路1
-> ...
-Range Sum Query - Mutable
-```go
-```
-
 
 ## 结语
 
