@@ -9,19 +9,19 @@ import (
 func TestSolution(t *testing.T) {
 	//	测试用例
 	cases := []struct {
-		name   string
-		inputs bool
-		expect bool
+		name      string
+		inputs    [][]int
+		k, expect int
 	}{
-		{"TestCase", true, true},
-		{"TestCase", true, true},
-		{"TestCase", false, false},
+		{"TestCase1", [][]int{{1, 5, 9}, {10, 11, 13, 12, 13, 15}}, 8, 13},
+		{"TestCase2", [][]int{{-5}}, 1, -5},
+		{"TestCase3", [][]int{{1}, {2}, {3}}, 3, 3},
 	}
 
 	//	开始测试
 	for i, c := range cases {
 		t.Run(c.name+" "+strconv.Itoa(i), func(t *testing.T) {
-			got := Solution(c.inputs)
+			got := Solution(c.inputs, c.k)
 			if !reflect.DeepEqual(got, c.expect) {
 				t.Fatalf("expected: %v, but got: %v, with inputs: %v",
 					c.expect, got, c.inputs)
