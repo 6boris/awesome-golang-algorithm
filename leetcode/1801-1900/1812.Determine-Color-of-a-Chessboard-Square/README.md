@@ -1,28 +1,36 @@
 # [1812.Determine Color of a Chessboard Square][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given `coordinates`, a string that represents the coordinates of a square of the chessboard. Below is a chessboard for your reference.
+
+![chessboard](./screenshot-2021-02-20-at-22159-pm.png)  
+Return `true` if the square is white, and `false` if the square is black.
+
+The coordinate will always represent a valid chessboard square. The coordinate will always have the letter first, and the number second.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: coordinates = "a1"
+Output: false
+Explanation: From the chessboard above, the square with coordinates "a1" is black, so return false.
 ```
 
-## 题意
-> ...
 
-## 题解
+**Example 2:**
 
-### 思路1
-> ...
-Determine Color of a Chessboard Square
-```go
+```
+Input: coordinates = "h3"
+Output: true
+Explanation: From the chessboard above, the square with coordinates "h3" is white, so return true.
 ```
 
+**Example 3:**
+
+```
+Input: coordinates = "c7"
+Output: false
+```
 
 ## 结语
 
