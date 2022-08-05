@@ -1,28 +1,30 @@
 # [2239.Find Closest Number to Zero][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given an integer array `nums` of size n, return the number with the value **closest** to `0` in `nums`. If there are multiple answers, return the number with the `largest` value.
+
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: nums = [-4,-2,1,4,8]
+Output: 1
+Explanation:
+The distance from -4 to 0 is |-4| = 4.
+The distance from -2 to 0 is |-2| = 2.
+The distance from 1 to 0 is |1| = 1.
+The distance from 4 to 0 is |4| = 4.
+The distance from 8 to 0 is |8| = 8.
+Thus, the closest number to 0 in the array is 1.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Find Closest Number to Zero
-```go
 ```
-
+Input: nums = [2,-1,1]
+Output: 1
+Explanation: 1 and -1 are both the closest numbers to 0, so 1 being larger is returned.
+```
 
 ## 结语
 
