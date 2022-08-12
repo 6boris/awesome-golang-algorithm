@@ -1,28 +1,31 @@
 # [858.Mirror Reflection][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+There is a special square room with mirrors on each of the four walls. Except for the southwest corner, there are receptors on each of the remaining corners, numbered `0`, `1`, and `2`.
 
-**Example 1:**
+The square room has walls of length `p` and a laser ray from the southwest corner first meets the east wall at a distance q from the 0<sup>th</sup> receptor.
+
+Given the two integers `p` and `q`, return the number of the receptor that the ray meets first.
+
+The test cases are guaranteed so that the ray will meet a receptor eventually.
+
+
+**Example 1:**  
+
+![reflection](./reflection.png)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: p = 2, q = 1
+Output: 2
+Explanation: The ray meets receptor 2 the first time it gets reflected back to the left wall.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Mirror Reflection
-```go
 ```
-
+Input: p = 3, q = 1
+Output: 1
+```
 
 ## 结语
 
