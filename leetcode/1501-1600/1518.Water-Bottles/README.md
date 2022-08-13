@@ -1,28 +1,32 @@
 # [1518.Water Bottles][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
 
 ## Description
+There are `numBottles` water bottles that are initially full of water. You can exchange `numExchange` empty water bottles from the market with one full water bottle.
 
-**Example 1:**
+The operation of drinking a full water bottle turns it into an empty bottle.
+
+Given the two integers `numBottles` and `numExchange`, return the **maximum** number of water bottles you can drink.
+
+**Example 1:**  
+![exp1](./sample_1_1875.png)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: numBottles = 9, numExchange = 3
+Output: 13
+Explanation: You can exchange 3 empty bottles to get 1 full water bottle.
+Number of water bottles you can drink: 9 + 3 + 1 = 13.
 ```
 
-## 题意
-> ...
+**Example 2:**  
+![exp2](./sample_2_1875.png)
 
-## 题解
-
-### 思路1
-> ...
-Water Bottles
-```go
 ```
-
+Input: numBottles = 15, numExchange = 4
+Output: 19
+Explanation: You can exchange 4 empty bottles to get 1 full water bottle. 
+Number of water bottles you can drink: 15 + 3 + 1 = 19.
+```
 
 ## 结语
 
