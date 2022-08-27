@@ -1,28 +1,33 @@
 # [1736.Latest Time by Replacing Hidden Digits][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given a string `time` in the form of `hh:mm`, where some of the digits in the string are hidden (represented by `?`).
+
+The valid times are those inclusively between `00:00` and `23:59`.
+
+Return the latest valid time you can get from `time` by replacing the hidden digits.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: time = "2?:?0"
+Output: "23:50"
+Explanation: The latest hour beginning with the digit '2' is 23 and the latest minute ending with the digit '0' is 50.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Latest Time by Replacing Hidden Digits
-```go
+```
+Input: time = "0?:3?"
+Output: "09:39"
 ```
 
+**Example 3:**
+
+```
+Input: time = "1?:22"
+Output: "19:22"
+```
 
 ## 结语
 
