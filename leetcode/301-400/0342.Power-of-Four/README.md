@@ -1,28 +1,30 @@
 # [342.Power of Four][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given an integer `n`, return `true` if it is a power of four. Otherwise, return `false`.
+
+An integer `n` is a power of four, if there exists an integer `x` such that `n == 4^x`.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: n = 16
+Output: true
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Power of Four
-```go
+```
+Input: n = 5
+Output: false
 ```
 
+**Example 3:**
+
+```
+Input: n = 1
+Output: true
+```
 
 ## 结语
 
