@@ -1,28 +1,26 @@
 # [967.Numbers With Same Consecutive Differences][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Return all **non-negative** integers of length `n` such that the absolute difference between every two consecutive digits is `k`.
+
+Note that **every** number in the answer **must not** have leading zeros. For example, `01` has one leading zero and is invalid.
+
+You may return the answer in **any order**.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: n = 3, k = 7
+Output: [181,292,707,818,929]
+Explanation: Note that 070 is not a valid number, because it has leading zeroes.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Numbers With Same Consecutive Differences
-```go
 ```
-
+Input: n = 2, k = 1
+Output: [10,12,21,23,32,34,43,45,54,56,65,67,76,78,87,89,98]
+```
 
 ## 结语
 
