@@ -16,6 +16,7 @@ type SolutionFuncType func(int, []int) int
 var SolutionFuncList = []SolutionFuncType{
 	maxProfit_1,
 	maxProfit_2,
+	maxProfit_3,
 }
 
 // Test case info struct
@@ -30,6 +31,7 @@ type Case struct {
 var cases = []Case{
 	{"TestCase 1", []int{2, 4, 1}, 2, 2},
 	{"TestCase 2", []int{3, 2, 6, 5, 0, 3}, 2, 7},
+	{"TestCase 3", []int{1, 2, 4, 2, 5, 7, 2, 4, 9, 0}, 2, 13},
 }
 
 // TestSolution Run test case for all solutions
