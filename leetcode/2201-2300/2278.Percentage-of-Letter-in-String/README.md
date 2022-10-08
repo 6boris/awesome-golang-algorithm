@@ -1,28 +1,25 @@
 # [2278.Percentage of Letter in String][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given a string `s` and a character `letter`, return the **percentage** of characters in `s` that equal `letter` **rounded down** to the nearest whole percent.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: s = "foobar", letter = "o"
+Output: 33
+Explanation:
+The percentage of characters in s that equal the letter 'o' is 2 / 6 * 100% = 33% when rounded down, so we return 33.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Percentage of Letter in String
-```go
 ```
-
+Input: s = "jjjj", letter = "k"
+Output: 0
+Explanation:
+The percentage of characters in s that equal the letter 'k' is 0%, so we return 0.
+```
 
 ## 结语
 
