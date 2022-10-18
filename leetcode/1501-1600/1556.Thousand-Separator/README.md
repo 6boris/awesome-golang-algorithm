@@ -1,28 +1,22 @@
 # [1556.Thousand Separator][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given an integer `n`, add a dot (".") as the thousands separator and return it in string format.
+
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: n = 987
+Output: "987"
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Thousand Separator
-```go
 ```
-
+Input: n = 1234
+Output: "1.234"
+```
 
 ## 结语
 
