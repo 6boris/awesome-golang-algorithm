@@ -1,28 +1,33 @@
 # [1189.Maximum Number of Balloons][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given a string `text`, you want to use the characters of `text` to form as many instances of the word "**ballon**" as possible.
 
-**Example 1:**
+You can use each character in `text` **at most once**. Return the maximum number of instances that can be formed.
+
+**Example 1:**  
+![example1](./1536_ex1_upd.jpeg)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: text = "nlaebolko"
+Output: 1
 ```
 
-## 题意
-> ...
 
-## 题解
+**Example 2:**  
+![example2](./1536_ex2_upd.jpeg)
 
-### 思路1
-> ...
-Maximum Number of Balloons
-```go
+```
+Input: text = "loonbalxballpoon"
+Output: 2
 ```
 
+**Example 3:**
+
+```
+Input: text = "leetcode"
+Output: 0
+```
 
 ## 结语
 
