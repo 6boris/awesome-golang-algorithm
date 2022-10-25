@@ -1,28 +1,34 @@
 # [1662.Check If Two String Arrays are Equivalent][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given two string arrays `word1` and `word2`, return `true` if the two arrays **represent** the same string, and `false` otherwise.
+
+A string is **represented** by an array if the array elements concatenated **in order** forms the string.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: word1 = ["ab", "c"], word2 = ["a", "bc"]
+Output: true
+Explanation:
+word1 represents string "ab" + "c" -> "abc"
+word2 represents string "a" + "bc" -> "abc"
+The strings are the same, so return true.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Check If Two String Arrays are Equivalent
-```go
+```
+Input: word1 = ["a", "cb"], word2 = ["ab", "c"]
+Output: false
 ```
 
+**Example 3:**
+
+```
+Input: word1  = ["abc", "d", "defg"], word2 = ["abcddefg"]
+Output: true
+```
 
 ## 结语
 
