@@ -1,28 +1,27 @@
 # [687.Longest Univalue Path][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given the `root` of a binary tree, return the length of the longest path, where each node in the path has the same value. This path may or may not pass through the root.
 
-**Example 1:**
+**The length of the path** between two nodes is represented by the number of edges between them.
+
+**Example 1:**  
+![ex1](./ex1.jpg)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: root = [5,4,5,1,1,null,5]
+Output: 2
+Explanation: The shown image shows that the longest path of the same value (i.e. 5).
 ```
 
-## 题意
-> ...
+**Example 2:**  
+![ex2](./ex2.jpg)
 
-## 题解
-
-### 思路1
-> ...
-Longest Univalue Path
-```go
 ```
-
+Input: root = [1,4,5,4,4,null,5]
+Output: 2
+Explanation: The shown image shows that the longest path of the same value (i.e. 4).
+```
 
 ## 结语
 
