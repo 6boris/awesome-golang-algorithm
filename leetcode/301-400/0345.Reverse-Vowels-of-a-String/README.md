@@ -1,28 +1,24 @@
 # [345.Reverse Vowels of a String][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given a string `s`, reverse only all the vowels in the string and return it.
+
+The vowels are `'a'`, `'e'`, `'i'`, `'o'`, and `'u'`, and they can appear in both lower and upper cases, more than once.
+
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: s = "hello"
+Output: "holle"
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Reverse Vowels of a String
-```go
 ```
-
+Input: s = "leetcode"
+Output: "leotcede"
+```
 
 ## 结语
 
