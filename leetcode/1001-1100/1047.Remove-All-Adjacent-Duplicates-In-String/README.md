@@ -1,28 +1,30 @@
 # [1047.Remove All Adjacent Duplicates In String][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given a string `s` consisting of lowercase English letters. A **duplicate removal** consists of choosing two **adjacent** and **equal** letters and removing them.
+
+We repeatedly make **duplicate removals** on `s` until we no longer can.
+
+Return the final string after all such duplicate removals have been made. It can be proven that the answer is **unique**.
+
+
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: s = "abbaca"
+Output: "ca"
+Explanation: 
+For example, in "abbaca" we could remove "bb" since the letters are adjacent and equal, and this is the only possible move.  The result of this move is that the string is "aaca", of which only "aa" is possible, so the final string is "ca".
 ```
 
-## 题意
-> ...
 
-## 题解
+**Example 2:**
 
-### 思路1
-> ...
-Remove All Adjacent Duplicates In String
-```go
 ```
-
+Input: s = "azxxzy"
+Output: "ay"
+```
 
 ## 结语
 
