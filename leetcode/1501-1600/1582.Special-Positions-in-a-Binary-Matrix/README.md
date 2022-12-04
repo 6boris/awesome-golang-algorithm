@@ -1,28 +1,27 @@
 # [1582.Special Positions in a Binary Matrix][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given an `m x n` binary matrix `mat`, return the number of special positions in `mat`.
 
-**Example 1:**
+A position (`i, j`) is called **special** if `mat[i][j] == 1` and all other elements in row `i` and column `j` are `0` (rows and columns are **0-indexed**).
+
+**Example 1:**  
+![example1](./special1.jpg)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: mat = [[1,0,0],[0,0,1],[1,0,0]]
+Output: 1
+Explanation: (1, 2) is a special position because mat[1][2] == 1 and all other elements in row 1 and column 2 are 0.
 ```
 
-## 题意
-> ...
+**Example 2:**  
+![example2](./special-grid.jpg)
 
-## 题解
-
-### 思路1
-> ...
-Special Positions in a Binary Matrix
-```go
 ```
-
+Input: mat = [[1,0,0],[0,1,0],[0,0,1]]
+Output: 3
+Explanation: (0, 0), (1, 1) and (2, 2) are special positions.
+```
 
 ## 结语
 
