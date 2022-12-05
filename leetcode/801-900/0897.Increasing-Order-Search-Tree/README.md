@@ -1,28 +1,24 @@
 # [897.Increasing Order Search Tree][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given the `root` of a binary search tree, rearrange the tree in **in-order** so that the leftmost node in the tree is now the root of the tree, and every node has no left child and only one right child.
 
-**Example 1:**
+**Example 1:**  
+![example1](./ex1.jpg)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: root = [5,3,6,2,4,null,8,1,null,null,null,7,9]
+Output: [1,null,2,null,3,null,4,null,5,null,6,null,7,null,8,null,9]
 ```
 
-## 题意
-> ...
+**Example 2:**  
+![example2](./ex2.jpg)
 
-## 题解
 
-### 思路1
-> ...
-Increasing Order Search Tree
-```go
 ```
-
+Input: root = [5,1,7]
+Output: [1,null,5,null,7]
+```
 
 ## 结语
 
