@@ -1,28 +1,41 @@
 # [1003.Check If Word Is Valid After Substitutions][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given a string `s`, determine if it is **valid**.
+
+A string `s` is **valid** if, starting with an empty string `t = ""`, you can **transform** `s` **into** `s` after performing the following operation **any number of times**:
+
+- Insert string `"abc"` into any position in `t`. More formally, `t` becomes t<sub>left</sub> + `"abc"` + t<sub>right</sub>, where t == t<sub>left</sub> + t<sub>right</sub>. Note that t<sub>left</sub> and t<sub>right</sub> may be **empty**.
+
+Return `true` if `s` is a **valid** string, otherwise, return `false`.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: s = "aabcbc"
+Output: true
+Explanation:
+"" -> "abc" -> "aabcbc"
+Thus, "aabcbc" is valid.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Check If Word Is Valid After Substitutions
-```go
+```
+Input: s = "abcabcababcc"
+Output: true
+Explanation:
+"" -> "abc" -> "abcabc" -> "abcabcabc" -> "abcabcababcc"
+Thus, "abcabcababcc" is valid.
 ```
 
+**Example 3:**
+
+```
+Input: s = "abccba"
+Output: false
+Explanation: It is impossible to get "abccba" using the operation.
+```
 
 ## 结语
 
