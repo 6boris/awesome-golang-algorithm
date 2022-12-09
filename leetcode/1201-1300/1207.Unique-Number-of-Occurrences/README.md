@@ -1,28 +1,30 @@
 # [1207.Unique Number of Occurrences][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given an array of integers `arr`, return `true` if the number of occurrences of each value in the array is **unique**, or `false` otherwise.
+
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: arr = [1,2,2,1,1,3]
+Output: true
+Explanation: The value 1 has 3 occurrences, 2 has 2 and 3 has 1. No two values have the same number of occurrences.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Unique Number of Occurrences
-```go
+```
+Input: arr = [1,2]
+Output: false
 ```
 
+**Example 3:**
+
+```
+Input: arr = [-3,0,1,-3,1,1,1,-3,10,0]
+Output: true
+```
 
 ## 结语
 
