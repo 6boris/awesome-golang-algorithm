@@ -1,28 +1,31 @@
 # [1026.Maximum Difference Between Node and Ancestor][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given the `root` of a binary tree, find the maximum value `v` for which there exist **different** nodes `a` and `b` where `v = |a.val - b.val|` and `a` is an ancestor of `b`.
 
-**Example 1:**
+A node `a` is an ancestor of `b` if either: any child of `a` is equal to `b` any child of `a` is an ancestor of `b`.
+
+**Example 1:**  
+![example1](./tmp-tree.jpg)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: root = [8,3,10,1,6,null,14,null,null,4,7,13]
+Output: 7
+Explanation: We have various ancestor-node differences, some of which are given below :
+|8 - 3| = 5
+|3 - 7| = 4
+|8 - 1| = 7
+|10 - 13| = 3
+Among all possible differences, the maximum value of 7 is obtained by |8 - 1| = 7.
 ```
 
-## 题意
-> ...
+**Example 2:**  
+![example2](./tmp-tree-1.jpg)  
 
-## 题解
-
-### 思路1
-> ...
-Maximum Difference Between Node and Ancestor
-```go
 ```
-
+Input: root = [1,null,2,null,0,3]
+Output: 3
+```
 
 ## 结语
 
