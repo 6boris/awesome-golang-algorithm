@@ -1,28 +1,23 @@
 # [498.Diagonal Traverse][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given an `m x n` matrix `mat`, return an array of all the elements of the array in a diagonal order.
 
-**Example 1:**
+
+**Example 1:**  
+![example1](./diag1-grid.jpg)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: mat = [[1,2,3],[4,5,6],[7,8,9]]
+Output: [1,2,4,7,5,3,6,8,9]
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Diagonal Traverse
-```go
 ```
-
+Input: mat = [[1,2],[3,4]]
+Output: [1,2,3,4]
+```
 
 ## 结语
 
