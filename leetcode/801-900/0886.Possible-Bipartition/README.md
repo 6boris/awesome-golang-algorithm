@@ -1,28 +1,32 @@
 # [886.Possible Bipartition][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+We want to split a group of `n` people (labeled from `1` to `n`) into two groups of **any size**. Each person may dislike some other people, and they should not go into the same group.
+
+Given the integer `n` and the array `dislikes` where `dislikes[i] = [ai, bi]` indicates that the person labeled a<sub>i</sub> does not like the person labeled b<sub>i</sub>, return `true` if it is possible to split everyone into two groups in this way.
+
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: n = 4, dislikes = [[1,2],[1,3],[2,4]]
+Output: true
+Explanation: group1 [1,4] and group2 [2,3].
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Possible Bipartition
-```go
+```
+Input: n = 3, dislikes = [[1,2],[1,3],[2,3]]
+Output: false
 ```
 
+**Example 3:**
+
+```
+Input: n = 5, dislikes = [[1,2],[2,3],[3,4],[4,5],[1,5]]
+Output: false
+```
 
 ## 结语
 
