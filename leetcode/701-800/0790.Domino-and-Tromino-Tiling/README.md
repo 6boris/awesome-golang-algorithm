@@ -1,28 +1,31 @@
 # [790.Domino and Tromino Tiling][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You have two types of tiles: a 2 x 1 domino shape and a tromino shape. You may rotate these shapes.  
 
-**Example 1:**
+![shape](./lc-domino.jpg)
+
+Given an integer n, return the number of ways to tile an `2 x n` board. Since the answer may be very large, return it **modulo** 10<sup>9</sup> + 7.
+
+In a tiling, every square must be covered by a tile. Two tilings are different if and only if there are two 4-directionally adjacent cells on the board such that exactly one of the tilings has both squares occupied by a tile.
+
+**Example 1:**  
+
+![example1](./lc-domino1.jpg)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: n = 3
+Output: 5
+Explanation: The five different ways are show above.
 ```
 
-## 题意
-> ...
 
-## 题解
+**Example 2:**
 
-### 思路1
-> ...
-Domino and Tromino Tiling
-```go
 ```
-
+Input: n = 1
+Output: 1
+```
 
 ## 结语
 
