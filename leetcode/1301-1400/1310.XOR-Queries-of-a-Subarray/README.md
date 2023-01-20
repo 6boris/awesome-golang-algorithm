@@ -1,28 +1,36 @@
 # [1310.XOR Queries of a Subarray][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given an array `arr` of positive integers. You are also given the array `queries` where `queries[i] = [lefti, righti]`.
+
+For each query i compute the **XOR** of elements from left<sub>i</sub> to right<sub>i</sub> (that is, `arr[lefti] XOR arr[lefti + 1] XOR ... XOR arr[righti]` ).
+
+Return an array `answer` where `answer[i]` is the answer to the i<sup>th</sup> query.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: arr = [1,3,4,8], queries = [[0,1],[1,2],[0,3],[3,3]]
+Output: [2,7,14,8] 
+Explanation: 
+The binary representation of the elements in the array are:
+1 = 0001 
+3 = 0011 
+4 = 0100 
+8 = 1000 
+The XOR values for queries are:
+[0,1] = 1 xor 3 = 2 
+[1,2] = 3 xor 4 = 7 
+[0,3] = 1 xor 3 xor 4 xor 8 = 14 
+[3,3] = 8
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-XOR Queries of a Subarray
-```go
 ```
-
+Input: arr = [4,8,2,10], queries = [[2,3],[1,3],[0,0],[0,3]]
+Output: [8,0,4,4]
+```
 
 ## 结语
 
