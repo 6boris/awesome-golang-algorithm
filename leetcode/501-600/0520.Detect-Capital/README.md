@@ -1,28 +1,27 @@
 # [520.Detect Capital][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+We define the usage of capitals in a word to be right when one of the following cases holds:
+
+- All letters in this word are capitals, like `"USA"`.
+- All letters in this word are not capitals, like `"leetcode"`.
+- Only the first letter in this word is capital, like `"Google"`.
+
+Given a string `word`, return `true` if the usage of capitals in it is right.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: word = "USA"
+Output: true
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Detect Capital
-```go
 ```
-
+Input: word = "FlaG"
+Output: false
+```
 
 ## 结语
 
