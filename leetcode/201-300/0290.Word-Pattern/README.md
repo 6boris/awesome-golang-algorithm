@@ -1,28 +1,30 @@
 # [290.Word Pattern][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given a `pattern` and a string `s`, find if `s` follows the same pattern.
+
+Here **follow** means a full match, such that there is a bijection between a letter in `pattern` and a **non-empty** word in `s`.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: pattern = "abba", s = "dog cat cat dog"
+Output: true
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Word Pattern
-```go
+```
+Input: pattern = "abba", s = "dog cat cat fish"
+Output: false
 ```
 
+**Example 3:**
+
+```
+Input: pattern = "aaaa", s = "dog cat cat dog"
+Output: false
+```
 
 ## 结语
 
