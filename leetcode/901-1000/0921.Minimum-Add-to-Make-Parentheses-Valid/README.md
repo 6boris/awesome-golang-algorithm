@@ -1,28 +1,30 @@
 # [921.Minimum Add to Make Parentheses Valid][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+A parentheses string is valid if and only if:
+
+- It is the empty string,
+- It can be written as `AB` (`A` concatenated with `B`), where A and B are valid strings, or
+- It can be written as `(A)`, where `A` is a valid string.
+
+You are given a parentheses string `s`. In one move, you can insert a parenthesis at any position of the string.
+
+- For example, if `s = "()))"`, you can insert an opening parenthesis to be `"(()))"` or a closing parenthesis to be `"())))"`.
+Return the minimum number of moves required to make `s` valid.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: s = "())"
+Output: 1
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Minimum Add to Make Parentheses Valid
-```go
 ```
-
+Input: s = "((("
+Output: 3
+```
 
 ## 结语
 
