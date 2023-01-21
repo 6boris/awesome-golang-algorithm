@@ -15,6 +15,7 @@ type SolutionFuncType func(node *TreeNode) int
 
 var SolutionFuncList = []SolutionFuncType{
 	maxPathSum_1,
+	maxPathSum_2,
 }
 
 // Test case info struct
