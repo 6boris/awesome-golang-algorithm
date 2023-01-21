@@ -1,6 +1,7 @@
 package Solution
 
 import (
+	"fmt"
 	"strconv"
 	"strings"
 )
@@ -34,4 +35,42 @@ func dfs(s string, temp []string, result *[]string) {
 		dfs(s[i:], temp, result)
 		temp = temp[:len(temp)-1]
 	}
+}
+
+func Solution(s string) []string {
+	ans := make([]string, 0)
+	var dfs func(int, int, string)
+	dfs = func(start, dot int, prefix string) {
+		if start >= len(s) {
+			return
+		}
+		if dot == 0 {
+			diff := len(s) - start
+			if diff != 1 && s[start] == '0' {
+				return
+			}
+			now := s[start:]
+
+			now1, _ := strconv.Atoi(now)
+			if now1 >= 0 && now1 <= 255 {
+				ans = append(ans, prefix+now)
+			}
+			return
+		}
+		if s[start] == '0' {
+			dfs(start+1, dot-1, prefix+"0.")
+			return
+		}
+
+		for end := start; end <= start+2 && end < len(s); end++ {
+			now := s[start : end+1]
+			now1, _ := strconv.Atoi(s[start : end+1])
+			if now1 >= 0 && now1 <= 255 {
+				dfs(end+1, dot-1, prefix+fmt.Sprintf("%s.", now))
+			}
+		}
+	}
+
+	dfs(0, 3, "")
+	return ans
 }
