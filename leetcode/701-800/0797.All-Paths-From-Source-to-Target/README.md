@@ -1,28 +1,28 @@
 # [797.All Paths From Source to Target][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given a directed acyclic graph (**DAG**) of `n` nodes labeled from 0 to `n - 1`, find all possible paths from node `0` to node `n - 1` and return them in **any order**.
 
-**Example 1:**
+The graph is given as follows: `graph[i]` is a list of all nodes you can visit from node `i` (i.e., there is a directed edge from node i to node `graph[i][j]`).
+
+**Example 1:**  
+
+![example1](./all_1.jpg)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: graph = [[1,2],[3],[3],[]]
+Output: [[0,1,3],[0,2,3]]
+Explanation: There are two paths: 0 -> 1 -> 3 and 0 -> 2 -> 3.
 ```
 
-## 题意
-> ...
+**Example 2:**  
 
-## 题解
+![example2](./all_2.jpg)
 
-### 思路1
-> ...
-All Paths From Source to Target
-```go
 ```
-
+Input: graph = [[4,3,1],[3,2,4],[3],[4],[]]
+Output: [[0,4],[0,3,4],[0,1,3,4],[0,1,2,3,4],[0,1,4]]
+```
 
 ## 结语
 
