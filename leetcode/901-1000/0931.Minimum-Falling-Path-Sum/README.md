@@ -1,28 +1,29 @@
 # [931.Minimum Falling Path Sum][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given an `n x n` array of integers `matrix`, return the **minimum sum** of any **falling path** through `matrix`.
 
-**Example 1:**
+A **falling path** starts at any element in the first row and chooses the element in the next row that is either directly below or diagonally left/right. Specifically, the next element from position (`row, col`) will be (`row + 1, col - 1`), (`row + 1, col`), or (`row + 1, col + 1`).
+
+**Example 1:**  
+
+![example1](./failing1-grid.jpg)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: matrix = [[2,1,3],[6,5,4],[7,8,9]]
+Output: 13
+Explanation: There are two falling paths with a minimum sum as shown.
 ```
 
-## 题意
-> ...
+**Example 2:**  
 
-## 题解
+![example2](./failing2-grid.jpg)
 
-### 思路1
-> ...
-Minimum Falling Path Sum
-```go
 ```
-
+Input: matrix = [[-19,57],[-40,-5]]
+Output: -59
+Explanation: The falling path with a minimum sum is shown.
+```
 
 ## 结语
 
