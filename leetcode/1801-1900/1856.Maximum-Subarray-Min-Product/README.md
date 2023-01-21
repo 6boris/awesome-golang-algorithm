@@ -1,28 +1,42 @@
 # [1856.Maximum Subarray Min-Product][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+The **min-product** of an array is equal to the **minimum value** in the array **multiplied by** the array's **sum**.
+
+- For example, the array `[3,2,5]` (minimum value is `2`) has a min-product of `2 * (3+2+5) = 2 * 10 = 20`.
+
+Given an array of integers `nums`, return the **maximum min-product** of any **non-empty subarray** of `nums`. Since the answer may be large, return it **modulo** 10<sup>9</sup> + 7.
+
+Note that the min-product should be maximized **before** performing the modulo operation. Testcases are generated such that the maximum min-product **without** modulo will fit in a **64-bit signed integer**.
+
+A **subarray** is a **contiguous** part of an array.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: nums = [1,2,3,2]
+Output: 14
+Explanation: The maximum min-product is achieved with the subarray [2,3,2] (minimum value is 2).
+2 * (2+3+2) = 2 * 7 = 14.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Maximum Subarray Min-Product
-```go
+```
+Input: nums = [2,3,3,1,2]
+Output: 18
+Explanation: The maximum min-product is achieved with the subarray [3,3] (minimum value is 3).
+3 * (3+3) = 3 * 6 = 18.
 ```
 
+**Example 3:**
+
+```
+Input: nums = [3,1,5,6,4,2]
+Output: 60
+Explanation: The maximum min-product is achieved with the subarray [5,6,4] (minimum value is 4).
+4 * (5+6+4) = 4 * 15 = 60.
+```
 
 ## 结语
 
