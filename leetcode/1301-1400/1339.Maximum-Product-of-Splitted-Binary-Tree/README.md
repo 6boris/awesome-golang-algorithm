@@ -1,28 +1,29 @@
 # [1339.Maximum Product of Splitted Binary Tree][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given the `root` of a binary tree, split the binary tree into two subtrees by removing one edge such that the product of the sums of the subtrees is maximized.
 
-**Example 1:**
+Return the maximum product of the sums of the two subtrees. Since the answer may be too large, return it **modulo** 10<sup>9</sup> + 7.
+
+**Note** that you need to maximize the answer before taking the mod and not after taking it.
+
+**Example 1:**  
+![example1](./sample_1_1699.png)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: root = [1,2,3,4,5,6]
+Output: 110
+Explanation: Remove the red edge and get 2 binary trees with sum 11 and 10. Their product is 110 (11*10)
 ```
 
-## 题意
-> ...
+**Example 2:**  
+![example2](./sample_2_1699.png)
 
-## 题解
-
-### 思路1
-> ...
-Maximum Product of Splitted Binary Tree
-```go
 ```
-
+Input: root = [1,null,2,3,4,null,null,5,6]
+Output: 90
+Explanation: Remove the red edge and get 2 binary trees with sum 15 and 6.Their product is 90 (15*6)
+```
 
 ## 结语
 
