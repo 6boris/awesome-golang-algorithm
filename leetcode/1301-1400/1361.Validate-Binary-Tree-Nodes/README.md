@@ -1,28 +1,39 @@
 # [1361.Validate Binary Tree Nodes][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You have `n` binary tree nodes numbered from `0` to `n - 1` where node `i` has two children `leftChild[i]` and `rightChild[i]`, return `true` if and only if **all** the given nodes form **exactly one** valid binary tree.
 
-**Example 1:**
+If node `i` has no left child then `leftChild[i]` will equal `-1`, similarly for the right child.
+
+Note that the nodes have no values and that we only use the node numbers in this problem.
+
+**Example 1:**  
+
+![example1](./1503_ex1.png)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: n = 4, leftChild = [1,-1,3,-1], rightChild = [2,-1,-1,-1]
+Output: true
 ```
 
-## 题意
-> ...
+**Example 2:**  
 
-## 题解
+![example2](./1503_ex2.png)
 
-### 思路1
-> ...
-Validate Binary Tree Nodes
-```go
+```
+Input: n = 4, leftChild = [1,-1,3,-1], rightChild = [2,3,-1,-1]
+Output: false
 ```
 
+**Example 3:**  
+
+![example3](./1503_ex3.png)
+
+
+```
+Input: n = 2, leftChild = [1,0], rightChild = [-1,-1]
+Output: false
+```
 
 ## 结语
 
