@@ -1,28 +1,30 @@
 # [1071.Greatest Common Divisor of Strings][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+For two strings `s` and `t`, we say "`t` divides `s`" if and only if `s = t + ... + t` (i.e., `t` is concatenated with itself one or more times).
+
+Given two strings `str1` and `str2`, return the largest string `x` such that `x` divides both `str1` and `str2`.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: str1 = "ABCABC", str2 = "ABC"
+Output: "ABC"
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Greatest Common Divisor of Strings
-```go
+```
+Input: str1 = "ABABAB", str2 = "ABAB"
+Output: "AB"
 ```
 
+**Example 3:**
+
+```
+Input: str1 = "LEET", str2 = "CODE"
+Output: ""
+```
 
 ## 结语
 
