@@ -1,28 +1,28 @@
 # [1129.Shortest Path with Alternating Colors][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given an integer `n`, the number of nodes in a directed graph where the nodes are labeled from `n` to `n - 1`. Each edge is red or blue in this graph, and there could be self-edges and parallel edges.
+
+You are given two arrays `redEdges` and `blueEdges` where:
+
+- `redEdges[i] = [ai, bi]` indicates that there is a directed red edge from node a<sub>i</sub> to node b<sub>i</sub> in the graph, and
+- `blueEdges[j] = [uj, vj]` indicates that there is a directed blue edge from node u<sub>j</sub> to node v<sub>j</sub> in the graph.
+
+Return an array `answer` of length n, where each `answer[x]` is the length of the shortest path from node 0 to node x such that the edge colors alternate along the path, or `-1` if such a path does not exist.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: n = 3, redEdges = [[0,1],[1,2]], blueEdges = []
+Output: [0,1,-1]
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Shortest Path with Alternating Colors
-```go
 ```
-
+Input: n = 3, redEdges = [[0,1]], blueEdges = [[2,1]]
+Output: [0,1,-1]
+```
 
 ## 结语
 
