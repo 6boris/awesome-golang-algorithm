@@ -1,28 +1,29 @@
 # [1162.As Far from Land as Possible][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given an `n x n` grid containing only values `0` and `1`, where `0` represents water and `1` represents land, find a water cell such that its distance to the nearest land cell is maximized, and return the distance. If no land or water exists in the grid, return `-1`.
 
-**Example 1:**
+The distance used in this problem is the Manhattan distance: the distance between two cells (`x0, y0`) and (`x1, y1`) is `|x0 - x1| + |y0 - y1|`.
+
+**Example 1:**  
+
+![example1](./1336_ex1.jpeg)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: grid = [[1,0,1],[0,0,0],[1,0,1]]
+Output: 2
+Explanation: The cell (1, 1) is as far as possible from all the land with distance 2.
 ```
 
-## 题意
-> ...
+**Example 2:**  
 
-## 题解
+![example2](./1336_ex2.jpeg)
 
-### 思路1
-> ...
-As Far from Land as Possible
-```go
 ```
-
+Input: grid = [[1,0,0],[0,0,0],[0,0,0]]
+Output: 4
+Explanation: The cell (2, 2) is as far as possible from all the land with distance 4.
+```
 
 ## 结语
 
