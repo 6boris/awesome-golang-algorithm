@@ -1,28 +1,26 @@
 # [863.All Nodes Distance K in Binary Tree][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given the `root` of a binary tree, the value of a target node `target`, and an integer `k`, return an array of the values of all nodes that have a distance `k` from the target node.
 
-**Example 1:**
+You can return the answer in **any order**.
+
+**Example 1:**  
+
+![example1](./sketch0.png)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: root = [3,5,1,6,2,0,8,null,null,7,4], target = 5, k = 2
+Output: [7,4,1]
+Explanation: The nodes that are a distance 2 from the target node (with value 5) have values 7, 4, and 1.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-All Nodes Distance K in Binary Tree
-```go
 ```
-
+Input: root = [1], target = 1, k = 3
+Output: []
+```
 
 ## 结语
 
