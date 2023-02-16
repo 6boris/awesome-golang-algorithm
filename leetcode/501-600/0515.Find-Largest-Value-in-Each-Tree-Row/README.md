@@ -1,28 +1,23 @@
 # [515.Find Largest Value in Each Tree Row][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given the `root` of a binary tree, return an array of the largest value in each row of the tree (**0-indexed**).
 
-**Example 1:**
+**Example 1:**  
+
+![example2](./largest_e1.jpg)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: root = [1,3,2,5,3,null,9]
+Output: [1,3,9]
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Find Largest Value in Each Tree Row
-```go
 ```
-
+Input: root = [1,2,3]
+Output: [1,3]
+```
 
 ## 结语
 
