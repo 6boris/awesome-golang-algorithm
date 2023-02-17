@@ -1,28 +1,25 @@
 # [783.Minimum Distance Between BST Nodes][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given the `root` of a Binary Search Tree (BST), return the minimum difference between the values of any two different nodes in the tree.
 
-**Example 1:**
+**Example 1:**  
+
+![example1](./bst1.jpg)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: root = [4,2,6,1,3]
+Output: 1
 ```
 
-## 题意
-> ...
+**Example 2:**  
 
-## 题解
+![example2](./bst2.jpg)
 
-### 思路1
-> ...
-Minimum Distance Between BST Nodes
-```go
 ```
-
+Input: root = [1,0,48,null,null,12,49]
+Output: 1
+```
 
 ## 结语
 
