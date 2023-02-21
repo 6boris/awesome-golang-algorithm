@@ -1,28 +1,25 @@
 # [513.Find Bottom Left Tree Value][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given the `root` of a binary tree, return the leftmost value in the last row of the tree.
 
-**Example 1:**
+**Example 1:**  
+
+![example1](./tree1.jpg)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: root = [2,1,3]
+Output: 1
 ```
 
-## 题意
-> ...
+**Example 2:**  
 
-## 题解
+![example2](./tree2.jpg)
 
-### 思路1
-> ...
-Find Bottom Left Tree Value
-```go
 ```
-
+Input: root = [1,2,3,4,null,5,6,null,null,7]
+Output: 7
+```
 
 ## 结语
 
