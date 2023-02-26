@@ -1,28 +1,27 @@
 # [669.Trim a Binary Search Tree][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given the `root` of a binary search tree and the lowest and highest boundaries as `low` and `high`, trim the tree so that all its elements lies in `[low, high]`. Trimming the tree should **not** change the relative structure of the elements that will remain in the tree (i.e., any node's descendant should remain a descendant). It can be proven that there is a **unique answer**.
 
-**Example 1:**
+Return the root of the trimmed binary search tree. Note that the root may change depending on the given bounds.
+
+**Example 1:**  
+
+![example1](./trim1.jpg)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: root = [1,0,2], low = 1, high = 2
+Output: [1,null,2]
 ```
 
-## 题意
-> ...
+**Example 2:**  
 
-## 题解
+![example2](./trim2.jpg)
 
-### 思路1
-> ...
-Trim a Binary Search Tree
-```go
 ```
-
+Input: root = [3,0,4,null,2,null,null,1], low = 1, high = 3
+Output: [3,2,null,1]
+```
 
 ## 结语
 
