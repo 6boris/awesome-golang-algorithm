@@ -1,28 +1,39 @@
 # [652.Find Duplicate Subtrees][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given the `root` of a binary tree, return all **duplicate subtrees**.
 
-**Example 1:**
+For each kind of duplicate subtrees, you only need to return the root node of any **one** of them.
+
+Two trees are **duplicate** if they have the **same structure** with the **same node values**.
+
+**Example 1:**  
+
+![example1](./e1.jpg)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: root = [1,2,3,4,null,2,4,null,null,4]
+Output: [[2,4],[4]]
 ```
 
-## 题意
-> ...
+**Example 2:**  
 
-## 题解
+![example2](./e2.jpg)
 
-### 思路1
-> ...
-Find Duplicate Subtrees
-```go
+
+```
+Input: root = [2,1,1]
+Output: [[1]]
 ```
 
+**Example 3:**  
+
+![example3](./e33.jpg)
+
+```
+Input: root = [2,2,2,3,null,3,null]
+Output: [[2,3],[3]]
+```
 
 ## 结语
 
