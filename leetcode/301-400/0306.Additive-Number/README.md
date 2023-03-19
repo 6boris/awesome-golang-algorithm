@@ -1,28 +1,33 @@
 # [306.Additive Number][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+An **additive number** is a string whose digits can form an **additive sequence**.
+
+A valid **additive sequence** should contain **at least** three numbers. Except for the first two numbers, each subsequent number in the sequence must be the sum of the preceding two.
+
+Given a string containing only digits, return `true` if it is an **additive number** or `false` otherwise.
+
+**Note**: Numbers in the additive sequence **cannot** have leading zeros, so sequence `1, 2, 03` or `1, 02, 3` is invalid.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: "112358"
+Output: true
+Explanation: 
+The digits can form an additive sequence: 1, 1, 2, 3, 5, 8. 
+1 + 1 = 2, 1 + 2 = 3, 2 + 3 = 5, 3 + 5 = 8
 ```
 
-## 题意
-> ...
+**Except 2:**
 
-## 题解
-
-### 思路1
-> ...
-Additive Number
-```go
 ```
-
+Input: "199100199"
+Output: true
+Explanation: 
+The additive sequence is: 1, 99, 100, 199. 
+1 + 99 = 100, 99 + 100 = 199
+```
 
 ## 结语
 
