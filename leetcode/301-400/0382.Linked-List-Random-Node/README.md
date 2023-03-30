@@ -1,28 +1,33 @@
 # [382.Linked List Random Node][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given a singly linked list, return a random node's value from the linked list. Each node must have the **same probability** of being chosen.
 
-**Example 1:**
+Implement the `Solution` class:
+
+- `Solution(ListNode head)` Initializes the object with the head of the singly-linked list `head`.
+- `int getRandom()` Chooses a node randomly from the list and returns its value. All the nodes of the list should be equally likely to be chosen.
+
+**Example 1:**  
+
+![example1](./getrand-linked-list.jpg)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input
+["Solution", "getRandom", "getRandom", "getRandom", "getRandom", "getRandom"]
+[[[1, 2, 3]], [], [], [], [], []]
+Output
+[null, 1, 3, 2, 2, 3]
+
+Explanation
+Solution solution = new Solution([1, 2, 3]);
+solution.getRandom(); // return 1
+solution.getRandom(); // return 3
+solution.getRandom(); // return 2
+solution.getRandom(); // return 2
+solution.getRandom(); // return 3
+// getRandom() should return either 1, 2, or 3 randomly. Each element should have equal probability of returning.
 ```
-
-## 题意
-> ...
-
-## 题解
-
-### 思路1
-> ...
-Linked List Random Node
-```go
-```
-
 
 ## 结语
 
