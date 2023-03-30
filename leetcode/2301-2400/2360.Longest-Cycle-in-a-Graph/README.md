@@ -1,28 +1,35 @@
 # [2360.Longest Cycle in a Graph][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given a **directed** graph of `n` nodes numbered from `0` to `n - 1`, where each node has **at most one** outgoing edge.
 
-**Example 1:**
+The graph is represented with a given **0-indexed** array `edges` of size `n`, indicating that there is a directed edge from node `i` to node `edges[i]`. If there is no outgoing edge from node `i`, then `edges[i] == -1`.
+
+Return the length of the **longest** cycle in the graph. If no cycle exists, return `-1`.
+
+A cycle is a path that starts and ends at the **same** node.
+
+**Example 1:**  
+
+![example1](./graph4drawio-5.png)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: edges = [3,3,4,2,3]
+Output: 3
+Explanation: The longest cycle in the graph is the cycle: 2 -> 4 -> 3 -> 2.
+The length of this cycle is 3, so 3 is returned.
 ```
 
-## 题意
-> ...
+**Example 2:**  
 
-## 题解
+![example2](./graph4drawio-1.png)
 
-### 思路1
-> ...
-Longest Cycle in a Graph
-```go
+
 ```
-
+Input: edges = [2,-1,3,1]
+Output: -1
+Explanation: There are no cycles in this graph.
+```
 
 ## 结语
 
