@@ -1,28 +1,39 @@
 # [1325.Delete Leaves With a Given Value][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given a binary tree `root` and an integer `target`, delete all the **leaf nodes** with value `target`.
 
-**Example 1:**
+Note that once you delete a leaf node with value `target`, if its parent node becomes a leaf node and has the value target, it should also be deleted (you need to continue doing that until you cannot).
+
+**Example 1:**  
+
+![example1](./sample_1_1684.png)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: root = [1,2,3,2,null,2,4], target = 2
+Output: [1,null,3,null,4]
+Explanation: Leaf nodes in green with value (target = 2) are removed (Picture in left). 
+After removing, new nodes become leaf nodes with value (target = 2) (Picture in center).
 ```
 
-## 题意
-> ...
+**Example 2:**  
 
-## 题解
+![example2](./sample_2_1684.png)
 
-### 思路1
-> ...
-Delete Leaves With a Given Value
-```go
+```
+Input: root = [1,3,3,3,2], target = 3
+Output: [1,3,null,null,2]
 ```
 
+**Example 3:**  
+
+![example3](./sample_3_1684.png)
+
+```
+Input: root = [1,2,null,2,null,2], target = 2
+Output: [1]
+Explanation: Leaf nodes in green with value (target = 2) are removed at each step.
+```
 
 ## 结语
 
