@@ -1,28 +1,26 @@
 # [230.Kth Smallest Element in a BST][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given the `root` of a binary search tree, and an integer `k`, return the k<sup>th</sup> smallest value (**1-indexed**) of all the values of the nodes in the tree.
 
-**Example 1:**
+
+**Example 1:**  
+
+![example1](./kthtree1.jpg)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: root = [3,1,4,null,2], k = 1
+Output: 1
 ```
 
-## 题意
-> ...
+**Example 2:**  
 
-## 题解
+![example2](./kthtree2.jpg)
 
-### 思路1
-> ...
-Kth Smallest Element in a BST
-```go
 ```
-
+Input: root = [5,3,6,2,4,null,null,1], k = 3
+Output: 3
+```
 
 ## 结语
 
