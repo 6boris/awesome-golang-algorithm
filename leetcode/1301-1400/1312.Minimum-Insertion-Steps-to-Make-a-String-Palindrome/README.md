@@ -1,27 +1,40 @@
 # [1312.Minimum Insertion Steps to Make a String Palindrome][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given a string `s`. In one step you can insert any character at any index of the string.
+
+Return the minimum number of steps to make `s` palindrome.
+
+A **Palindrome String** is one that reads the same backward as well as forward.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: s = "zzazz"
+Output: 0
+Explanation: The string "zzazz" is already palindrome we do not need any insertions.
 ```
 
-## 题意
-> ...
 
-## 题解
+**Example 2:**
+
+```
+Input: s = "mbadm"
+Output: 2
+Explanation: String can be "mbdadbm" or "mdbabdm".
+```
+
+**Example 3:**
+
+```
+Input: s = "leetcode"
+Output: 5
+Explanation: Inserting 5 characters the string becomes "leetcodocteel".
+```
 
 ### 思路1
-> ...
-Minimum Insertion Steps to Make a String Palindrome
-```go
-```
+
+> 找出最长公共子序列，不同的地方，插入即可
 
 
 ## 结语
