@@ -1,28 +1,39 @@
 # [1822.Sign of the Product of an Array][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+There is a function `signFunc(x)` that returns:
+
+- `1` if `x` is positive.
+- `-1` if `x` is negative.
+- `0` if `x` is equal to `0`.
+
+You are given an integer array `nums`. Let `product` be the product of all values in the array `nums`.
+
+Return `signFunc(product)`.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: nums = [-1,-2,-3,-4,3,2,1]
+Output: 1
+Explanation: The product of all values in the array is 144, and signFunc(144) = 1
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Sign of the Product of an Array
-```go
+```
+Input: nums = [1,5,0,2,-3]
+Output: 0
+Explanation: The product of all values in the array is 0, and signFunc(0) = 0
 ```
 
+**Example 3:**
+
+```
+Input: nums = [-1,1,-1,1,-1]
+Output: -1
+Explanation: The product of all values in the array is -1, and signFunc(-1) = -1
+```
 
 ## 结语
 
