@@ -1,28 +1,39 @@
 # [1572.Matrix Diagonal Sum][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given a square matrix `mat`, return the sum of the matrix diagonals.
 
-**Example 1:**
+Only include the sum of all the elements on the primary diagonal and all the elements on the secondary diagonal that are not part of the primary diagonal.
+
+**Example 1:**  
+
+![example1](./sample_1911.png)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: mat = [[1,2,3],
+              [4,5,6],
+              [7,8,9]]
+Output: 25
+Explanation: Diagonals sum: 1 + 5 + 9 + 3 + 7 = 25
+Notice that element mat[1][1] = 5 is counted only once.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Matrix Diagonal Sum
-```go
+```
+Input: mat = [[1,1,1,1],
+              [1,1,1,1],
+              [1,1,1,1],
+              [1,1,1,1]]
+Output: 8
 ```
 
+**Example 3:**
+
+```
+Input: mat = [[5]]
+Output: 5
+```
 
 ## 结语
 
