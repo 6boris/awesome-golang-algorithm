@@ -1,28 +1,35 @@
 # [934.Shortest Bridge][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given an `n x n` binary matrix `grid` where `1` represents land and `0` represents water.
 
+An **island** is a 4-directionally connected group of `1`'s not connected to any other `1`'s. There are **exactly two islands** in `grid`.
+
+You may change `0`'s to `1`'s to connect the two islands to form **one island**.
+
+Return the smallest number of `0`'s you must flip to connect the two islands.
+
+ 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: grid = [[0,1],[1,0]]
+Output: 1
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Shortest Bridge
-```go
+```
+Input: grid = [[0,1,0],[0,0,0],[0,0,1]]
+Output: 2
 ```
 
+**Example 3:**
+
+```
+Input: grid = [[1,1,1,1,1],[1,0,0,0,1],[1,0,1,0,1],[1,0,0,0,1],[1,1,1,1,1]]
+Output: 1
+```
 
 ## 结语
 
