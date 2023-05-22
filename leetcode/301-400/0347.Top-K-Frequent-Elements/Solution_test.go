@@ -26,14 +26,19 @@ func TestSolution(t *testing.T) {
 				t.Fatalf("expected: %v, but got: %v, with input1: %v input2: %v",
 					c.expect, got, c.input1, c.input2)
 			}
+			got = topKFrequent1(c.input1, c.input2)
+			if !reflect.DeepEqual(got, c.expect) {
+				t.Fatalf("expected: %v, but got: %v, with input1: %v input2: %v",
+					c.expect, got, c.input1, c.input2)
+			}
 		})
 	}
 }
 
-//	压力测试
+// 压力测试
 func BenchmarkSolution(b *testing.B) {
 }
 
-//	使用案列
+// 使用案列
 func ExampleSolution() {
 }
