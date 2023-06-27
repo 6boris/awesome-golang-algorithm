@@ -1,28 +1,28 @@
 # [1315.Sum of Nodes with Even-Valued Grandparent][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given the `root` of a binary tree, return the sum of values of nodes with an **even-valued grandparent**. If there are no nodes with an **even-valued grandparent**, return `0`.
 
-**Example 1:**
+A **grandparent** of a node is the parent of its parent if it exists.
+
+**Example 1:**  
+
+![example1](./even1-tree.jpg)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: root = [6,7,8,2,7,1,3,9,null,1,4,null,null,null,5]
+Output: 18
+Explanation: The red nodes are the nodes with even-value grandparent while the blue nodes are the even-value grandparents.
 ```
 
-## 题意
-> ...
+**Example 2:**  
 
-## 题解
+![example2](./even2-tree.jpg)
 
-### 思路1
-> ...
-Sum of Nodes with Even-Valued Grandparent
-```go
 ```
-
+Input: root = [1]
+Output: 0
+```
 
 ## 结语
 
