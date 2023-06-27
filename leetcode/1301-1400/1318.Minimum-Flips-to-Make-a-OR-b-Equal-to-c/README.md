@@ -1,28 +1,32 @@
 # [1318.Minimum Flips to Make a OR b Equal to c][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given 3 positives numbers `a`, `b` and `c`. Return the minimum flips required in some bits of `a` and `b` to make ( `a` OR `b` == `c` ). (bitwise OR operation).
+Flip operation consists of change **any** single bit 1 to 0 or change the bit 0 to 1 in their binary representation.
 
-**Example 1:**
+**Example 1:**  
+
+![example1](./sample_3_1676.png)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: a = 2, b = 6, c = 5
+Output: 3
+Explanation: After flips a = 1 , b = 4 , c = 5 such that (a OR b == c)
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Minimum Flips to Make a OR b Equal to c
-```go
+```
+Input: a = 4, b = 2, c = 7
+Output: 1
 ```
 
+**Example 3:**
+
+```
+Input: a = 1, b = 2, c = 3
+Output: 0
+```
 
 ## 结语
 
