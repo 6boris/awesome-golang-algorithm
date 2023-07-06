@@ -1,28 +1,29 @@
 # [899.Orderly Queue][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given a string `s` and an integer `k`. You can choose one of the first `k` letters of `s` and append it at the end of the string..
+
+Return the lexicographically smallest string you could have after applying the mentioned step any number of moves.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: s = "cba", k = 1
+Output: "acb"
+Explanation: 
+In the first move, we move the 1st character 'c' to the end, obtaining the string "bac".
+In the second move, we move the 1st character 'b' to the end, obtaining the final result "acb".
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Orderly Queue
-```go
 ```
-
+Input: s = "baaca", k = 3
+Output: "aaabc"
+Explanation: 
+In the first move, we move the 1st character 'b' to the end, obtaining the string "aacab".
+In the second move, we move the 3rd character 'c' to the end, obtaining the final result "aaabc".
+```
 
 ## 结语
 
