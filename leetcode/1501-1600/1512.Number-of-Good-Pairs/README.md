@@ -1,28 +1,32 @@
 # [1512.Number of Good Pairs][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given an array of integers `nums`, return the number of **good pairs**.
+
+A pair `(i, j)` is called good if `nums[i] == nums[j]` and `i < j`.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: nums = [1,2,3,1,1,3]
+Output: 4
+Explanation: There are 4 good pairs (0,3), (0,4), (3,4), (2,5) 0-indexed.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Number of Good Pairs
-```go
+```
+Input: nums = [1,1,1,1]
+Output: 6
+Explanation: Each pair in the array are good.
 ```
 
+**Example 3:**
+
+```
+Input: nums = [1,2,3]
+Output: 0
+```
 
 ## 结语
 
