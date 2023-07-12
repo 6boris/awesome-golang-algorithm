@@ -39,8 +39,8 @@ func GenerateReadme(problem Problem, basePath ...string) {
 	if len(basePath) > 0 {
 		dir := strings.Join(basePath, "/")
 		dir = strings.TrimSuffix(dir, "/")
-		write(dir+"/README.md", string(tmpRes.Bytes()))
+		write(dir+"/README.md", tmpRes.String())
 		return
 	}
-	write(SOLUTIONS_PATH+problem.PathName+"/README.md", string(tmpRes.Bytes()))
+	write(SOLUTIONS_PATH+problem.PathName+"/README.md", tmpRes.String())
 }

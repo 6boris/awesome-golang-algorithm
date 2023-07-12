@@ -78,5 +78,5 @@ func GenerateContributorTemplete() {
 		log.Printf("%s", err)
 	}
 	err = tmpl.Execute(&tmpRes, contributors)
-	fmt.Println(string(tmpRes.Bytes()))
+	fmt.Println(tmpRes.String())
 }

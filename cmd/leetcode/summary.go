@@ -40,7 +40,7 @@ func MakeGitbookSummary(problems []Problem) {
 
 	tmpl, err := template.New("SUMMARY: ").Parse(string(buffer))
 	err = tmpl.Execute(&tmpRes, problems)
-	write("SUMMARY.md", string(tmpRes.Bytes()))
+	write("SUMMARY.md", tmpRes.String())
 }
 
 func CheckProblemExists(problems []Problem) []Problem {
