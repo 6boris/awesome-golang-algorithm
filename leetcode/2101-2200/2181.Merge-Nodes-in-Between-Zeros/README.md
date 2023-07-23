@@ -1,28 +1,38 @@
 # [2181.Merge Nodes in Between Zeros][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given the `head` of a linked list, which contains a series of integers **separated** by `0`'s. The **beginning** and **end** of the linked list will have `Node.val == 0`.
 
-**Example 1:**
+For **every** two consecutive `0`'s, **merge** all the nodes lying in between them into a single node whose value is the **sum** of all the merged nodes. The modified list should not contain any `0`'s.
+
+Return the `head` of the modified linked list.
+
+**Example 1:**  
+
+![example1](./ex1-1.png)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: head = [0,3,1,0,4,5,2,0]
+Output: [4,11]
+Explanation: 
+The above figure represents the given linked list. The modified list contains
+- The sum of the nodes marked in green: 3 + 1 = 4.
+- The sum of the nodes marked in red: 4 + 5 + 2 = 11.
 ```
 
-## 题意
-> ...
+**Example 2:**  
 
-## 题解
+![example1](./ex2-1.png)
 
-### 思路1
-> ...
-Merge Nodes in Between Zeros
-```go
 ```
-
+Input: head = [0,1,0,3,0,2,2,0]
+Output: [1,3,4]
+Explanation: 
+The above figure represents the given linked list. The modified list contains
+- The sum of the nodes marked in green: 1 = 1.
+- The sum of the nodes marked in red: 3 = 3.
+- The sum of the nodes marked in yellow: 2 + 2 = 4.
+```
 
 ## 结语
 
