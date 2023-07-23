@@ -1,28 +1,27 @@
 # [894.All Possible Full Binary Trees][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given an integer `n`, return a list of all possible **full binary trees** with `n` nodes. Each node of each tree in the answer must have `Node.val == 0`.
 
-**Example 1:**
+Each element of the answer is the root node of one possible tree. You may return the final list of trees in **any order**.
+
+A **full binary tree** is a binary tree where each node has exactly `0` or `2` children.
+
+**Example 1:**  
+
+![example1](./fivetrees.png)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: n = 7
+Output: [[0,0,0,null,null,0,0,null,null,0,0],[0,0,0,null,null,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,null,null,null,null,0,0],[0,0,0,0,0,null,null,0,0]]
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-All Possible Full Binary Trees
-```go
 ```
-
+Input: n = 3
+Output: [[0,0,0]]
+```
 
 ## 结语
 

@@ -10,12 +10,107 @@ func TestSolution(t *testing.T) {
 	//	测试用例
 	cases := []struct {
 		name   string
-		inputs bool
-		expect bool
+		inputs int
+		expect []*TreeNode
 	}{
-		{"TestCase", true, true},
-		{"TestCase", true, true},
-		{"TestCase", false, false},
+		{"TestCase1", 5, []*TreeNode{
+			&TreeNode{
+				Val: 0,
+				Left: &TreeNode{
+					Val: 0,
+				},
+				Right: &TreeNode{
+					Val:   0,
+					Right: &TreeNode{Val: 0},
+					Left:  &TreeNode{Val: 0},
+				},
+			},
+			&TreeNode{
+				Val: 0,
+				Left: &TreeNode{
+					Val:   0,
+					Right: &TreeNode{Val: 0},
+					Left:  &TreeNode{Val: 0},
+				},
+				Right: &TreeNode{
+					Val: 0,
+				},
+			},
+		}},
+		{"TestCase2", 7, []*TreeNode{
+			&TreeNode{
+				Val:  0,
+				Left: &TreeNode{Val: 0},
+				Right: &TreeNode{
+					Val: 0,
+					Left: &TreeNode{
+						Val: 0,
+					},
+					Right: &TreeNode{
+						Val:   0,
+						Left:  &TreeNode{Val: 0},
+						Right: &TreeNode{Val: 0},
+					},
+				},
+			},
+			&TreeNode{
+				Val: 0,
+				Left: &TreeNode{
+					Val: 0,
+				},
+				Right: &TreeNode{
+					Val: 0,
+					Left: &TreeNode{
+						Val:   0,
+						Left:  &TreeNode{Val: 0},
+						Right: &TreeNode{Val: 0},
+					},
+					Right: &TreeNode{Val: 0},
+				},
+			},
+			&TreeNode{
+				Val: 0,
+				Left: &TreeNode{
+					Val:   0,
+					Left:  &TreeNode{Val: 0},
+					Right: &TreeNode{Val: 0},
+				},
+				Right: &TreeNode{
+					Val:   0,
+					Left:  &TreeNode{Val: 0},
+					Right: &TreeNode{Val: 0},
+				},
+			},
+			&TreeNode{
+				Val: 0,
+				Right: &TreeNode{
+					Val: 0,
+				},
+				Left: &TreeNode{
+					Val:  0,
+					Left: &TreeNode{Val: 0},
+					Right: &TreeNode{
+						Val:   0,
+						Left:  &TreeNode{Val: 0},
+						Right: &TreeNode{Val: 0},
+					},
+				},
+			},
+			&TreeNode{
+				Val:   0,
+				Right: &TreeNode{Val: 0},
+				Left: &TreeNode{
+					Val:   0,
+					Right: &TreeNode{Val: 0},
+					Left: &TreeNode{
+						Val:   0,
+						Left:  &TreeNode{Val: 0},
+						Right: &TreeNode{Val: 0},
+					},
+				},
+			},
+		}},
+		{"TestCase3", 3, []*TreeNode{{Val: 0, Left: &TreeNode{Val: 0}, Right: &TreeNode{Val: 0}}}},
 	}
 
 	//	开始测试
@@ -30,10 +125,10 @@ func TestSolution(t *testing.T) {
 	}
 }
 
-//	压力测试
+// 压力测试
 func BenchmarkSolution(b *testing.B) {
 }
 
-//	使用案列
+// 使用案列
 func ExampleSolution() {
 }
