@@ -1,28 +1,39 @@
 # [852.Peak Index in a Mountain Array][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+An array `arr` a **mountain** if the following properties hold:
+
+- `arr.length >= 3`
+- There exists some `i` with `0 < i < arr.length - 1` such that:
+
+    - `arr[0] < arr[1] < ... < arr[i - 1] < arr[i]`
+    - `arr[i] > arr[i + 1] > ... > arr[arr.length - 1]`
+
+Given a mountain array `arr`, return the index `i` such that `arr[0] < arr[1] < ... < arr[i - 1] < arr[i] > arr[i + 1] > ... > arr[arr.length - 1]`.
+
+
+You must solve it in `O(log(arr.length))` time complexity.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: arr = [0,1,0]
+Output: 1
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Peak Index in a Mountain Array
-```go
+```
+Input: arr = [0,2,1,0]
+Output: 1
 ```
 
+**Example 3:**
+
+```
+Input: arr = [0,10,5,2]
+Output: 1
+```
 
 ## 结语
 
