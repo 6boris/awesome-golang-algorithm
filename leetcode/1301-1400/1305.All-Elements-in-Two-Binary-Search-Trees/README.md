@@ -1,28 +1,25 @@
 # [1305.All Elements in Two Binary Search Trees][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given two binary search trees `root1` and `root2`, return a list containing all the integers from both trees sorted in **ascending** order.
 
-**Example 1:**
+**Example 1:**  
+
+![example1](./q2-e1.png)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: root1 = [2,1,4], root2 = [1,0,3]
+Output: [0,1,1,2,3,4]
 ```
 
-## 题意
-> ...
+**Example 2:**  
 
-## 题解
+![example1](./q2-e5-.png)
 
-### 思路1
-> ...
-All Elements in Two Binary Search Trees
-```go
 ```
-
+Input: root1 = [1,null,8], root2 = [8,1]
+Output: [1,1,8,8]
+```
 
 ## 结语
 
