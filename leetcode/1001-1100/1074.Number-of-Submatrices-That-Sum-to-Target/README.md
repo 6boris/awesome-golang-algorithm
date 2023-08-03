@@ -1,28 +1,36 @@
 # [1074.Number of Submatrices That Sum to Target][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given a `matrix` and a `target`, return the number of non-empty submatrices that sum to target.
 
-**Example 1:**
+A submatrix `x1`, `y1`, `x2`, `y2` is the set of all cells `matrix[x][y]` with `x1 <= x <= x2` and `y1 <= y <= y2`.
+
+Two submatrices `(x1, y1, x2, y2)` and `(x1', y1', x2', y2')` are different if they have some coordinate that is different: for example, if `x1 != x1'`.
+
+**Example 1:**  
+
+![example1](./mate1.jpg)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: matrix = [[0,1,0],[1,1,1],[0,1,0]], target = 0
+Output: 4
+Explanation: The four 1x1 submatrices that only contain 0.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Number of Submatrices That Sum to Target
-```go
+```
+Input: matrix = [[1,-1],[-1,1]], target = 0
+Output: 5
+Explanation: The two 1x2 submatrices, plus the two 2x1 submatrices, plus the 2x2 submatrix.
 ```
 
+**Example 3:**
+
+```
+Input: matrix = [[904]], target = 0
+Output: 0
+```
 
 ## 结语
 
