@@ -1,28 +1,23 @@
 # [1108.Defanging an IP Address][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given a valid (IPv4) IP `address`, return a defanged version of that IP address.
+
+A defanged IP address replaces every period `"."` with `"[.]"`.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: address = "1.1.1.1"
+Output: "1[.]1[.]1[.]1"
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Defanging an IP Address
-```go
 ```
-
+Input: address = "255.100.50.0"
+Output: "255[.]100[.]50[.]0"
+```
 
 ## 结语
 
