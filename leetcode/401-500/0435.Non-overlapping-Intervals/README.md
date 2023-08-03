@@ -1,28 +1,31 @@
 # [435.Non-overlapping Intervals][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given an array of `intervals` intervals where `intervals[i] = [starti, endi]`, return the minimum number of intervals you need to remove to make the rest of the intervals non-overlapping.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: intervals = [[1,2],[2,3],[3,4],[1,3]]
+Output: 1
+Explanation: [1,3] can be removed and the rest of the intervals are non-overlapping.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Non-overlapping Intervals
-```go
+```
+Input: intervals = [[1,2],[1,2],[1,2]]
+Output: 2
+Explanation: You need to remove two [1,2] to make the rest of the intervals non-overlapping.
 ```
 
+**Example 3:**
+
+```
+Input: intervals = [[1,2],[2,3]]
+Output: 0
+Explanation: You don't need to remove any of the intervals since they're already non-overlapping.
+```
 
 ## 结语
 
