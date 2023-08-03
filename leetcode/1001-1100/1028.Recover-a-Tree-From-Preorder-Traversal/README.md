@@ -1,28 +1,40 @@
 # [1028.Recover a Tree From Preorder Traversal][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+We run a preorder depth-first search (DFS) on the `root` of a binary tree.
 
-**Example 1:**
+At each node in this traversal, we output D dashes (where `D` is the depth of this node), then we output the value of this node.  If the depth of a node is `D`, the depth of its immediate child is `D + 1`.  The depth of the `root` node is `0`.
+
+If a node has only one child, that child is guaranteed to be **the left child**.
+
+Given the output `traversal` of this traversal, recover the tree and return its `root`.
+
+**Example 1:**  
+
+![example1](./recover-a-tree-from-preorder-traversal.png)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: traversal = "1-2--3--4-5--6--7"
+Output: [1,2,5,3,4,6,7]
 ```
 
-## 题意
-> ...
+**Example 2:**  
 
-## 题解
+![example2](./screen-shot-2019-04-10-at-114101-pm.png)
 
-### 思路1
-> ...
-Recover a Tree From Preorder Traversal
-```go
+```
+Input: traversal = "1-2--3---4-5--6---7"
+Output: [1,2,5,3,null,6,null,4,null,7]
 ```
 
+**Example 3:**  
+
+![example3](./screen-shot-2019-04-10-at-114955-pm.png)
+
+```
+Input: traversal = "1-401--349---90--88"
+Output: [1,401,null,349,88,90]
+```
 
 ## 结语
 
