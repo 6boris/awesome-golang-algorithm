@@ -1,28 +1,29 @@
 # [1038.Binary Search Tree to Greater Sum Tree][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given the `root` of a Binary Search Tree (BST), convert it to a Greater Tree such that every key of the original BST is changed to the original key plus the sum of all keys greater than the original key in BST.
 
-**Example 1:**
+As a reminder, a binary search tree is a tree that satisfies these constraints:
+
+- The left subtree of a node contains only nodes with keys **less than** the node's key.
+- The right subtree of a node contains only nodes with keys **greater than** the node's key.
+- Both the left and right subtrees must also be binary search trees.
+
+**Example 1:**  
+
+![example1](./tree.png)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: root = [4,1,6,0,2,5,7,null,null,null,3,null,null,null,8]
+Output: [30,36,21,36,35,26,15,null,null,null,33,null,null,null,8]
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Binary Search Tree to Greater Sum Tree
-```go
 ```
-
+Input: root = [0,null,1]
+Output: [1,null,1]
+```
 
 ## 结语
 
