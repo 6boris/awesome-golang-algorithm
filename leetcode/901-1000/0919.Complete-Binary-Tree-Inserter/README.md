@@ -1,28 +1,33 @@
 # [919.Complete Binary Tree Inserter][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+A **complete binary tree** is a binary tree in which every level, except possibly the last, is completely filled, and all nodes are as far left as possible.
 
-**Example 1:**
+Design an algorithm to insert a new node to a complete binary tree keeping it complete after the insertion.
+
+Implement the `CBTInserter` class:
+
+- `CBTInserter(TreeNode root)` Initializes the data structure with the `root` of the complete binary tree.
+- `int insert(int v)` Inserts a `TreeNode` into the tree with value `Node.val == val` so that the tree remains complete, and returns the value of the parent of the inserted `TreeNode`.
+- `TreeNode get_root()` Returns the root node of the tree.
+
+**Example 1:**  
+
+![example1](./lc-treeinsert.jpg)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input
+["CBTInserter", "insert", "insert", "get_root"]
+[[[1, 2]], [3], [4], []]
+Output
+[null, 1, 2, [1, 2, 3, 4]]
+
+Explanation
+CBTInserter cBTInserter = new CBTInserter([1, 2]);
+cBTInserter.insert(3);  // return 1
+cBTInserter.insert(4);  // return 2
+cBTInserter.get_root(); // return [1, 2, 3, 4]
 ```
-
-## 题意
-> ...
-
-## 题解
-
-### 思路1
-> ...
-Complete Binary Tree Inserter
-```go
-```
-
 
 ## 结语
 
