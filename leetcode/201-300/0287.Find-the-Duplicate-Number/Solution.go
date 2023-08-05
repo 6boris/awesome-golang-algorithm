@@ -5,7 +5,7 @@ import (
 	"sort"
 )
 
-//	二分
+// 二分
 func findDuplicate(nums []int) int {
 	left, right := 0, len(nums)-1
 	for left < right {
@@ -25,7 +25,7 @@ func findDuplicate(nums []int) int {
 	return left
 }
 
-//	排序
+// 排序
 func findDuplicate2(nums []int) int {
 	sort.Ints(nums)
 	for i := 1; i < len(nums); i++ {
@@ -36,7 +36,7 @@ func findDuplicate2(nums []int) int {
 	return 0
 }
 
-//	map
+// map
 func findDuplicate3(nums []int) int {
 	found := -1
 	m := make(map[int]int)
@@ -50,7 +50,7 @@ func findDuplicate3(nums []int) int {
 	return found
 }
 
-//	排序
+// 排序
 func findDuplicate4(nums []int) int {
 	for i := range nums {
 		tmp := int(math.Abs(float64(nums[i])))
@@ -60,4 +60,28 @@ func findDuplicate4(nums []int) int {
 		nums[tmp-1] = -nums[tmp-1]
 	}
 	return -1
+}
+
+func findDuplicate5(nums []int) int {
+	ans := -1
+	for idx := range nums {
+		x := nums[idx]
+		if x < 0 {
+			x = -x
+		}
+		index := x - 1
+		r := nums[index]
+		if r < 0 {
+			ans = x
+			break
+		}
+
+		nums[index] = -nums[index]
+	}
+	for idx := range nums {
+		if nums[idx] < 0 {
+			nums[idx] = -nums[idx]
+		}
+	}
+	return ans
 }
