@@ -1,28 +1,32 @@
 # [1584.Min Cost to Connect All Points][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given an array `points` representing integer coordinates of some points on a 2D-plane, where `points[i] = [xi, yi]`.
 
-**Example 1:**
+The cost of connecting two points `[xi, yi]` and `[xj, yj]` is the **manhattan distance** between them: `|xi - xj| + |yi - yj|`, where `|val|` denotes the absolute value of `val`.
+
+Return the minimum cost to make all points connected. All points are connected if there is **exactly one** simple path between any two points.
+
+**Example 1:**  
+
+![example1](./d.png)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: points = [[0,0],[2,2],[3,10],[5,2],[7,0]]
+Output: 20
+Explanation:
+We can connect the points as shown above to get the minimum cost of 20.
+Notice that there is a unique path between every pair of points.
 ```
 
-## 题意
-> ...
+![explanation](./c.png)
 
-## 题解
+**Example 2:**
 
-### 思路1
-> ...
-Min Cost to Connect All Points
-```go
 ```
-
+Input: points = [[3,12],[-2,5],[-4,1]]
+Output: 18
+```
 
 ## 结语
 
