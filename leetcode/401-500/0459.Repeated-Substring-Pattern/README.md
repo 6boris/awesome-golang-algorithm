@@ -1,28 +1,30 @@
 # [459.Repeated Substring Pattern][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given a string `s`, check if it can be constructed by taking a substring of it and appending multiple copies of the substring together.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: s = "abab"
+Output: true
+Explanation: It is the substring "ab" twice.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Repeated Substring Pattern
-```go
+```
+Input: s = "aba"
+Output: false
 ```
 
+**Example 3:**
+
+```
+Input: s = "abcabcabcabc"
+Output: true
+Explanation: It is the substring "abc" four times or the substring "abcabc" twice.
+```
 
 ## 结语
 
