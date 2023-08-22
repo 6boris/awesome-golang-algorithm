@@ -46,7 +46,7 @@ func MakeDirFromTo(problems []Problem, from, to int) {
 	}
 }
 
-//	生成木目录Dir
+// 生成木目录Dir
 func MakeDir(problems []Problem) {
 	for i := 0; i < len(problems); i++ {
 		// fmt.Println(problems[i].PathName)
