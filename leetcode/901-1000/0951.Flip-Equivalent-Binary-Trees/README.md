@@ -1,28 +1,35 @@
 # [951.Flip Equivalent Binary Trees][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+For a binary tree **T**, we can define a **flip operation** as follows: choose any node, and swap the left and right child subtrees.
 
-**Example 1:**
+A binary tree **X** is flip equivalent to a binary tree **Y** if and only if we can make **X** equal to **Y** after some number of flip operations.
+
+Given the roots of two binary trees `root1` and `root2`, return `true` if the two trees are flip equivalent or `false` otherwise.
+
+**Example 1:**  
+
+![example1](./tree_ex.png)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: root1 = [1,2,3,4,5,6,null,null,null,7,8], root2 = [1,3,2,null,6,4,5,null,null,null,null,8,7]
+Output: true
+Explanation: We flipped at nodes with values 1, 3, and 5.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Flip Equivalent Binary Trees
-```go
+```
+Input: root1 = [], root2 = []
+Output: true
 ```
 
+**Example 3:**
+
+```
+Input: root1 = [], root2 = [1]
+Output: false
+```
 
 ## 结语
 
