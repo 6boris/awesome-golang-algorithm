@@ -2,8 +2,6 @@ package leetcode
 
 import (
 	"encoding/json"
-	"errors"
-	"fmt"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -24,7 +22,7 @@ type LeetCode struct {
 	CategorySlug    string    `json:"category_slug"`
 }
 
-//	问题
+// 问题
 type Problem struct {
 	Stat       Stat       `json:"stat"`
 	Status     bool       `json:"status"`
@@ -115,7 +113,7 @@ func GetProblemsJson() string {
 	return string(problem_string)
 }
 
-//	获取题目Buffer
+// 获取题目Buffer
 func getProblemsBuffer() []byte {
 	request, err := http.Get("https://leetcode.com/api/problems/Algorithms/")
 	if err != nil {
@@ -130,7 +128,7 @@ func getProblemsBuffer() []byte {
 	return body
 }
 
-//	格式化ID 补齐0
+// 格式化ID 补齐0
 func formatId(id int) string {
 	strId := strconv.Itoa(id)
 
@@ -147,7 +145,7 @@ func formatId(id int) string {
 	return strId
 }
 
-//	格式化提名称
+// 格式化提名称
 func formatName(name string) string {
 	str := ""
 	for i, v := range name {
@@ -196,19 +194,4 @@ func formatName(name string) string {
 		name = name[:len(name)-1]
 	}
 	return str
-}
-
-func UrlPath(path string) error {
-	resp, err := http.Get(path)
-	if err != nil {
-		fmt.Println(err)
-		return errors.New(path + " " + err.Error())
-	}
-
-	if resp.StatusCode != 200 {
-		fmt.Println(resp.StatusCode)
-		return errors.New(string(resp.StatusCode))
-	}
-
-	return nil
 }
