@@ -1,28 +1,37 @@
 # [1530.Number of Good Leaf Nodes Pairs][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given the `root` of a binary tree and an integer `distance`. A pair of two different **leaf** nodes of a binary tree is said to be good if the length of **the shortest path** between them is less than or equal to `distance`.
 
-**Example 1:**
+Return the number of good leaf node pairs in the tree.
+
+**Example 1:**  
+
+![example1](./e1.jpeg)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: root = [1,2,3,null,4], distance = 3
+Output: 1
+Explanation: The leaf nodes of the tree are 3 and 4 and the length of the shortest path between them is 3. This is the only good pair.
 ```
 
-## 题意
-> ...
+**Example 2:**  
 
-## 题解
+![example2](./e2.jpeg)
 
-### 思路1
-> ...
-Number of Good Leaf Nodes Pairs
-```go
+```
+Input: root = [1,2,3,4,5,6,7], distance = 3
+Output: 2
+Explanation: The good pairs are [4,5] and [6,7] with shortest path = 2. The pair [4,6] is not good because the length of ther shortest path between them is 4.
 ```
 
+**Example 3:**
+
+```
+Input: root = [7,1,4,6,null,5,3,null,null,null,null,null,2], distance = 3
+Output: 1
+Explanation: The only good pair is [2,5].
+```
 
 ## 结语
 
