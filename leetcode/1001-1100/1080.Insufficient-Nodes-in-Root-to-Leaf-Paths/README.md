@@ -1,28 +1,38 @@
 # [1080.Insufficient Nodes in Root to Leaf Paths][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given the `root` of a binary tree and an integer `limit`, delete all **insufficient nodes** in the tree simultaneously, and return the root of the resulting binary tree.
 
-**Example 1:**
+A node is **insufficient** if every root to **leaf** path intersecting this node has a sum strictly less than `limit`.
+
+A **leaf** is a node with no children.
+
+**Example 1:**  
+
+![example1](./insufficient-11.png)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: root = [1,2,3,4,-99,-99,7,8,9,-99,-99,12,13,-99,14], limit = 1
+Output: [1,2,3,4,null,null,7,8,9,null,14]
 ```
 
-## 题意
-> ...
+**Example 2:**  
 
-## 题解
+![example2](./insufficient-11.png)
 
-### 思路1
-> ...
-Insufficient Nodes in Root to Leaf Paths
-```go
+```
+Input: root = [5,4,8,11,null,17,4,7,1,null,null,5,3], limit = 22
+Output: [5,4,8,11,null,17,4,7,null,null,null,5]
 ```
 
+**Example 3:**  
+
+![example3](./screen-shot-2019-06-11-at-83301-pm.png)
+
+```
+Input: root = [1,2,-3,-5,null,4,null], limit = -1
+Output: [1,null,-3,4]
+```
 
 ## 结语
 
