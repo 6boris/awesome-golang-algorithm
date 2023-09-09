@@ -2,38 +2,31 @@
 
 ## Description
 
-Given a 2D binary matrix filled with 0's and 1's, find the largest square containing only 1's and return its area.
-**Example 1:**
+Given an `m x n` binary `matrix` filled with `0`'s and `1`'s, find the largest square containing only `1`'s and return its area.
+
+**Example 1:**  
+
+![example1](./max1grid.jpeg)
 
 ```
-Input: 
-
-1 0 1 0 0
-1 0 1 1 1
-1 1 1 1 1
-1 0 0 1 0
-
+Input: matrix = [["1","0","1","0","0"],["1","0","1","1","1"],["1","1","1","1","1"],["1","0","0","1","0"]]
 Output: 4
 ```
 
-**Tags:** Math, String
+**Example 2:**  
 
-## 题意
-> 求2数之和
-
-## 题解
-
-### 思路1
-> 。。。。
-
-```go
+![example2](./max2grid.jpeg)
 
 ```
+Input: matrix = [["0","1"],["1","0"]]
+Output: 1
+```
 
-### 思路2
-> 思路2
-```go
+**Example 3:**
 
+```
+Input: matrix = [["0"]]
+Output: 0
 ```
 
 ## 结语
