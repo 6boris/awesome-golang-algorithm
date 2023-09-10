@@ -1,28 +1,28 @@
 # [229.Majority Element II][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given an integer array of size n, find all elements that appear more than `⌊ n/3 ⌋` times.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: nums = [3,2,3]
+Output: [3]
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Majority Element II
-```go
+```
+Input: nums = [1]
+Output: [1]
 ```
 
+**Example 3:**
+
+```
+Input: nums = [1,2]
+Output: [1,2]
+```
 
 ## 结语
 
