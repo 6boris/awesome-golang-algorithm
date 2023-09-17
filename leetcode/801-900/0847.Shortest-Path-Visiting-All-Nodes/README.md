@@ -1,28 +1,29 @@
 # [847.Shortest Path Visiting All Nodes][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You have an undirected, connected graph of `n` nodes labeled from `0` to `n - 1`. You are given an array `graph` where `graph[i]` is a list of all the nodes connected with node `i` by an edge.
 
-**Example 1:**
+Return the length of the shortest path that visits every node. You may start and stop at any node, you may revisit nodes multiple times, and you may reuse edges.
+
+**Example 1:**  
+
+![example1](./shortest1-graph.jpeg)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: graph = [[1,2,3],[0],[0],[0]]
+Output: 4
+Explanation: One possible path is [1,0,2,0,3]
 ```
 
-## 题意
-> ...
+**Example 2:**  
 
-## 题解
+![example2](./shortest2-graph.jpeg)
 
-### 思路1
-> ...
-Shortest Path Visiting All Nodes
-```go
 ```
-
+Input: graph = [[1],[0,2,4],[1,3,4],[2],[1,2]]
+Output: 4
+Explanation: One possible path is [0,1,4,2,3]
+```
 
 ## 结语
 
