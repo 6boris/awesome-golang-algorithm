@@ -24,6 +24,11 @@ func TestSolution(t *testing.T) {
 				t.Fatalf("expected: %v, but got: %v, with inputs: %v",
 					c.expect, ret, c.inputs)
 			}
+			ret = findMedianSortedArrays1(c.inputs[0], c.inputs[1])
+			if !reflect.DeepEqual(ret, c.expect) {
+				t.Fatalf("expected: %v, but got: %v, with inputs: %v",
+					c.expect, ret, c.inputs)
+			}
 		})
 	}
 }
