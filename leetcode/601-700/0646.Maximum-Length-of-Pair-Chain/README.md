@@ -1,28 +1,29 @@
 # [646.Maximum Length of Pair Chain][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given an array of `n` pairs `pairs` where `pairs[i] = [lefti, righti]` and `lefti < righti`.
+
+A pair `p2 = [c, d]` **follows** a pair `p1 = [a, b]` if `b < c`. A **chain** of pairs can be formed in this fashion.
+
+Return the length longest chain which can be formed.
+
+You do not need to use up all the given intervals. You can select pairs in any order.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: pairs = [[1,2],[2,3],[3,4]]
+Output: 2
+Explanation: The longest chain is [1,2] -> [3,4].
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Maximum Length of Pair Chain
-```go
 ```
-
+Input: pairs = [[1,2],[7,8],[4,5]]
+Output: 3
+Explanation: The longest chain is [1,2] -> [4,5] -> [7,8].
+```
 
 ## 结语
 
