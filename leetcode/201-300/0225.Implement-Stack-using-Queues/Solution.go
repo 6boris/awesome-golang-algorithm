@@ -58,3 +58,36 @@ func (this *MyStack) Empty() bool {
 	}
 	return false
 }
+
+type MyStack1 struct {
+	q1 []int
+}
+
+func Constructor225() MyStack1 {
+	return MyStack1{
+		q1: make([]int, 0),
+	}
+}
+
+func (this *MyStack1) Push(x int) {
+	tmp := make([]int, len(this.q1))
+	// 先将queue清空，按顺序放到另一个queue中
+	copy(tmp, this.q1)
+	this.q1 = []int{x}
+	// 原有元素入队
+	this.q1 = append(this.q1, tmp...)
+}
+
+func (this *MyStack1) Pop() int {
+	x := this.q1[0]
+	this.q1 = this.q1[1:]
+	return x
+}
+
+func (this *MyStack1) Top() int {
+	return this.q1[0]
+}
+
+func (this *MyStack1) Empty() bool {
+	return len(this.q1) == 0
+}
