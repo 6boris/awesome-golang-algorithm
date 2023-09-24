@@ -1,28 +1,21 @@
 # [539.Minimum Time Difference][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
-
+Given a list of 24-hour clock time points in **"HH:MM"** format, return the minimum **minutes** difference between any two time-points in the list.
+ 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: timePoints = ["23:59","00:00"]
+Output: 1
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Minimum Time Difference
-```go
 ```
-
+Input: timePoints = ["00:00","23:59","00:00"]
+Output: 0
+```
 
 ## 结语
 
