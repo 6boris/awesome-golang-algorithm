@@ -1,28 +1,23 @@
 # [767.Reorganize String][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given a string `s` rearrange the characters of `s` so that any two adjacent characters are not the same.
+
+Return any possible rearrangement of `s` or return `""` if not possible.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: s = "aab"
+Output: "aba"
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Reorganize String
-```go
 ```
-
+Input: s = "aaab"
+Output: ""
+```
 
 ## 结语
 
