@@ -10,12 +10,16 @@ func TestSolution(t *testing.T) {
 	//	测试用例
 	cases := []struct {
 		name   string
-		inputs bool
-		expect bool
+		inputs string
+		expect int
 	}{
-		{"TestCase", true, true},
-		{"TestCase", true, true},
-		{"TestCase", false, false},
+		{"TestCase1", "dir\n\tsubdir1\n\tsubdir2\n\t\tfile.ext", 20},
+		{"TestCase2", "dir\n\tsubdir1\n\t\tfile1.ext\n\t\tsubsubdir1\n\tsubdir2\n\t\tsubsubdir2\n\t\t\tfile2.ext", 32},
+		{"TestCase3", "a", 0},
+		{"TestCase4", "a.txt", 5},
+		{"TestCase5", "file1.txt\nfile2.txt\tlongfile.txt", 22},
+		{"TestCase6", "a\n\tb.txt\na2\n\tb2.txt", 9},
+		{"TestCase7", "a\n\taa\n\t\taaa\n\t\t\tfile1.txt\naaaaaaaaaaaaaaaaaaaaa\n\tsth.png", 29},
 	}
 
 	//	开始测试
@@ -30,10 +34,10 @@ func TestSolution(t *testing.T) {
 	}
 }
 
-//	压力测试
+// 压力测试
 func BenchmarkSolution(b *testing.B) {
 }
 
-//	使用案列
+// 使用案列
 func ExampleSolution() {
 }
