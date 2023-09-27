@@ -1,28 +1,21 @@
 # [1081.Smallest Subsequence of Distinct Characters][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given a string `s`, return the lexicographically smallest subsequence of `s` that contains all the distinct characters of `s` exactly once.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: s = "bcabc"
+Output: "abc"
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Smallest Subsequence of Distinct Characters
-```go
 ```
-
+Input: s = "cbacdcbc"
+Output: "acdb"
+```
 
 ## 结语
 
