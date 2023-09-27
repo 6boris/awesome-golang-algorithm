@@ -1,28 +1,22 @@
 # [316.Remove Duplicate Letters][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given a string `s`, remove duplicate letters so that every letter appears once and only once. You must make sure your result is
+the smallest in lexicographical order among all possible results.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: s = "bcabc"
+Output: "abc"
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Remove Duplicate Letters
-```go
 ```
-
+Input: s = "cbacdcbc"
+Output: "acdb"
+```
 
 ## 结语
 
