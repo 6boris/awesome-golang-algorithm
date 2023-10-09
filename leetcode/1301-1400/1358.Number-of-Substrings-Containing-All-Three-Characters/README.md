@@ -1,28 +1,32 @@
 # [1358.Number of Substrings Containing All Three Characters][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given a string s consisting only of characters a, b and c.
+
+Return the number of substrings containing **at least** one occurrence of all these characters a, b and c.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: s = "abcabc"
+Output: 10
+Explanation: The substrings containing at least one occurrence of the characters a, b and c are "abc", "abca", "abcab", "abcabc", "bca", "bcab", "bcabc", "cab", "cabc" and "abc" (again).
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Number of Substrings Containing All Three Characters
-```go
+```
+Input: s = "aaacb"
+Output: 3
+Explanation: The substrings containing at least one occurrence of the characters a, b and c are "aaacb", "aacb" and "acb".
 ```
 
+**Example 3:**
+
+```
+Input: s = "abc"
+Output: 1
+```
 
 ## 结语
 

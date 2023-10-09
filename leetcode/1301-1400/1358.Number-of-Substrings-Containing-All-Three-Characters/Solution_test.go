@@ -10,12 +10,12 @@ func TestSolution(t *testing.T) {
 	//	测试用例
 	cases := []struct {
 		name   string
-		inputs bool
-		expect bool
+		inputs string
+		expect int
 	}{
-		{"TestCase", true, true},
-		{"TestCase", true, true},
-		{"TestCase", false, false},
+		{"TestCase1", "abcabc", 10},
+		{"TestCase2", "aaacb", 3},
+		{"TestCase3", "abc", 1},
 	}
 
 	//	开始测试
@@ -26,14 +26,19 @@ func TestSolution(t *testing.T) {
 				t.Fatalf("expected: %v, but got: %v, with inputs: %v",
 					c.expect, got, c.inputs)
 			}
+			got1 := Solution(c.inputs)
+			if !reflect.DeepEqual(got1, c.expect) {
+				t.Fatalf("expected: %v, but got: %v, with inputs: %v",
+					c.expect, got, c.inputs)
+			}
 		})
 	}
 }
 
-//	压力测试
+// 压力测试
 func BenchmarkSolution(b *testing.B) {
 }
 
-//	使用案列
+// 使用案列
 func ExampleSolution() {
 }
