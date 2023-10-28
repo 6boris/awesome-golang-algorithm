@@ -1,28 +1,35 @@
 # [1130.Minimum Cost Tree From Leaf Values][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given an array `arr` of positive integers, consider all binary trees such that:
 
-**Example 1:**
+- Each node has either `0` or `2` children;
+- The values of `arr` correspond to the values of each **leaf** in an in-order traversal of the tree.
+- The value of each non-leaf node is equal to the product of the largest leaf value in its left and right subtree, respectively.
+
+Among all possible binary trees considered, return the smallest possible sum of the values of each non-leaf node. It is guaranteed this sum fits into a **32-bit** integer.
+
+A node is a **leaf** if and only if it has zero children.
+
+**Example 1:**  
+
+![example1](./tree1.jpeg)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: arr = [6,2,4]
+Output: 32
+Explanation: There are two possible trees shown.
+The first has a non-leaf node sum 36, and the second has non-leaf node sum 32.
 ```
 
-## 题意
-> ...
+**Example 2:**  
 
-## 题解
+![example2](./tree2.jpeg)
 
-### 思路1
-> ...
-Minimum Cost Tree From Leaf Values
-```go
 ```
-
+Input: arr = [4,11]
+Output: 44
+```
 
 ## 结语
 
