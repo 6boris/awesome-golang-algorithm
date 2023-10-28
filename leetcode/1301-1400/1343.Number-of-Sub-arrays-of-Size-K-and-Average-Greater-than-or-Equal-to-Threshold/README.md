@@ -1,28 +1,23 @@
 # [1343.Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given an array of integers `arr` and two integers k and `threshold`, return the number of sub-arrays of size `k` and average greater than or equal to `threshold`.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: arr = [2,2,2,2,5,5,5,8], k = 3, threshold = 4
+Output: 3
+Explanation: Sub-arrays [2,5,5],[5,5,5] and [5,5,8] have averages 4, 5 and 6 respectively. All other sub-arrays of size 3 have averages less than 4 (the threshold).
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold
-```go
 ```
-
+Input: arr = [11,13,17,23,29,31,7,5,2,3], k = 3, threshold = 5
+Output: 6
+Explanation: The first 6 sub-arrays of size 3 have averages greater than 5. Note that averages are not integers.
+```
 
 ## 结语
 
