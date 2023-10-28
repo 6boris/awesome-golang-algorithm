@@ -1,28 +1,42 @@
 # [1239.Maximum Length of a Concatenated String with Unique Characters][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given an array of strings `arr`. A string s is formed by the **concatenation** of a **subsequence** of arr that has **unique characters**.
+
+Return the **maximum** possible length of `s`.
+
+A **subsequence** is an array that can be derived from another array by deleting some or no elements without changing the order of the remaining elements.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: arr = ["un","iq","ue"]
+Output: 4
+Explanation: All the valid concatenations are:
+- ""
+- "un"
+- "iq"
+- "ue"
+- "uniq" ("un" + "iq")
+- "ique" ("iq" + "ue")
+Maximum length is 4.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Maximum Length of a Concatenated String with Unique Characters
-```go
+```
+Input: arr = ["cha","r","act","ers"]
+Output: 6
+Explanation: Possible longest valid concatenations are "chaers" ("cha" + "ers") and "acters" ("act" + "ers").
 ```
 
+**Example 3:**
+
+```
+Input: arr = ["abcdefghijklmnopqrstuvwxyz"]
+Output: 26
+Explanation: The only string in arr has all 26 characters.
+```
 
 ## 结语
 
