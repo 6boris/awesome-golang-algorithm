@@ -1,28 +1,27 @@
 # [1793.Maximum Score of a Good Subarray][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given an array of integers nums (**0-indexed**) and an integer `k`.
+
+The **score** of a subarray `(i, j)` is defined as `min(nums[i], nums[i+1], ..., nums[j]) * (j - i + 1)`. A **good** subarray is a subarray where `i <= k <= j`.
+
+Return the maximum possible **score** of a **good** subarray.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: nums = [1,4,3,7,4,5], k = 3
+Output: 15
+Explanation: The optimal subarray is (1, 5) with a score of min(4,3,7,4,5) * (5-1+1) = 3 * 5 = 15.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Maximum Score of a Good Subarray
-```go
 ```
-
+Input: nums = [5,5,4,5,4,1,1,1], k = 0
+Output: 20
+Explanation: The optimal subarray is (0, 4) with a score of min(5,5,4,5,4) * (4-0+1) = 4 * 5 = 20.
+```
 
 ## 结语
 
