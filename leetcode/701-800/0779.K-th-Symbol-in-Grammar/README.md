@@ -1,28 +1,39 @@
 # [779.K-th Symbol in Grammar][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+We build a table of `n` rows (**1-indexed**). We start by writing `0` in the 1<sup>st</sup> row. Now in every subsequent row, we look at the previous row and replace each occurrence of `0` with `01`, and each occurrence of `1` with `10`.
+
+- For example, for `n = 3`, the 1<sup>st</sup> row is `0`, the 2<sup>nd</sup> row is `01`, and the 3<sup>rd</sup> row is `0110`.
+
+Given two integer `n` and `k`, return the k<sup>th<sup> (**1-indexed**) symbol in the n<sup>th</sup> row of a table of `n` rows.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: n = 1, k = 1
+Output: 0
+Explanation: row 1: 0
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-K-th Symbol in Grammar
-```go
+```
+Input: n = 2, k = 1
+Output: 0
+Explanation: 
+row 1: 0
+row 2: 01
 ```
 
+**Example 3:**
+
+```
+Input: n = 2, k = 2
+Output: 1
+Explanation: 
+row 1: 0
+row 2: 01
+```
 
 ## 结语
 
