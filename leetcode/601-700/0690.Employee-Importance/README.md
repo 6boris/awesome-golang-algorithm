@@ -1,28 +1,38 @@
 # [690.Employee Importance][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You have a data structure of employee information, including the employee's unique ID, importance value, and direct subordinates' IDs.
 
-**Example 1:**
+You are given an array of employees `employees` where:
+
+- `employees[i].id` is the ID of the i<sup>th</sup> employee.
+- `employees[i].importance` is the importance value of the i<sup>th</sup> employee.
+- `employees[i].subordinates` is a list of the IDs of the direct subordinates of the i<sup>th</sup> employee.
+
+Given an integer `id` that represents an employee's ID, return the **total** importance value of this employee and all their direct and indirect subordinates.
+
+**Example 1:**  
+
+![example1](./emp1-tree.jpeg)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: employees = [[1,5,[2,3]],[2,3,[]],[3,3,[]]], id = 1
+Output: 11
+Explanation: Employee 1 has an importance value of 5 and has two direct subordinates: employee 2 and employee 3.
+They both have an importance value of 3.
+Thus, the total importance value of employee 1 is 5 + 3 + 3 = 11.
 ```
 
-## 题意
-> ...
+**Example 2:**  
 
-## 题解
+![example2](./emp2-tree.jpeg)
 
-### 思路1
-> ...
-Employee Importance
-```go
 ```
-
+Input: employees = [[1,2,[5]],[5,-3,[]]], id = 5
+Output: -3
+Explanation: Employee 5 has an importance value of -3 and has no direct subordinates.
+Thus, the total importance value of employee 5 is -3.
+```
 
 ## 结语
 
