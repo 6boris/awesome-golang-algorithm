@@ -1,28 +1,31 @@
 # [501.Find Mode in Binary Search Tree][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given the `root` of a binary search tree (BST) with duplicates, return all the [mode(s)](https://en.wikipedia.org/wiki/Mode_(statistics)) (i.e., the most frequently occurred element) in it.
 
-**Example 1:**
+If the tree has more than one mode, return them in **any order**.
+
+Assume a BST is defined as follows:
+
+- The left subtree of a node contains only nodes with keys **less than or equal to** the node's key.
+- The right subtree of a node contains only nodes with keys **greater than or equal to** the node's key.
+Both the left and right subtrees must also be binary search trees.
+
+**Example 1:**  
+
+![example1](./mode-tree.jpeg)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: root = [1,null,2,2]
+Output: [2]
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Find Mode in Binary Search Tree
-```go
 ```
-
+Input: root = [0]
+Output: [0]
+```
 
 ## 结语
 
