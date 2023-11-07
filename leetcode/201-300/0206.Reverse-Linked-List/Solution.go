@@ -1,6 +1,6 @@
 package Solution
 
-//	普通循环
+// 普通循环
 func reverseList1(head *ListNode) *ListNode {
 	var prev *ListNode
 	for head != nil {
@@ -9,7 +9,7 @@ func reverseList1(head *ListNode) *ListNode {
 	return prev
 }
 
-//	递归
+// 递归
 func reverseList2(head *ListNode) *ListNode {
 	if head == nil || head.Next == nil {
 		return head
@@ -18,4 +18,11 @@ func reverseList2(head *ListNode) *ListNode {
 	head.Next.Next = head
 	head.Next = p
 	return p
+}
+
+func min[T ~int | ~float64](x, y T) T {
+	if x < y {
+		return x
+	}
+	return y
 }

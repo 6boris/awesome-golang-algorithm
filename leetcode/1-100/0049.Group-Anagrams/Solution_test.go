@@ -2,36 +2,45 @@ package Solution
 
 import (
 	"fmt"
+	"reflect"
+	"runtime"
+	"strings"
 	"testing"
 )
 
-func TestSolution(t *testing.T) {
-	//	测试用例
-	cases := []struct {
-		name   string
-		inputs []string
-		expect [][]string
-	}{
-		{
-			"1 test 1",
-			[]string{"eat", "tea", "tan", "ate", "nat", "bat"},
-			[][]string{
-				{"eat", "tea", "ate"},
-				{"tan", "nat"},
-				{"bat"},
-			},
-		},
-	}
+// Solution func Info
+type SolutionFuncType func([]string) [][]string
 
-	//	开始测试
-	for _, c := range cases {
-		t.Run(c.name, func(t *testing.T) {
-			got := groupAnagrams(c.inputs)
-			fmt.Println(got)
-			//if !reflect.DeepEqual(ret, c.expect) {
-			//	t.Fatalf("expected: %v, but got: %v, with inputs: %v",
-			//		c.expect, ret, c.inputs)
-			//}
-		})
+var SolutionFuncList = []SolutionFuncType{
+	groupAnagrams,
+}
+
+// Test case info struct
+type Case struct {
+	name   string
+	input  []string
+	expect [][]string
+}
+
+// Test case
+var cases = []Case{
+	{
+		name:   "TestCase 1",
+		input:  []string{"eat", "tea", "tan", "ate", "nat", "bat"},
+		expect: [][]string{{"bat"}, {"nat", "tan"}, {"ate", "eat", "tea"}},
+	},
+}
+
+// TestSolution Run test case for all solutions
+func TestSolution(t *testing.T) {
+	for _, f := range SolutionFuncList {
+		funcName := strings.Split(runtime.FuncForPC(reflect.ValueOf(f).Pointer()).Name(), ".")[1]
+		for _, c := range cases {
+			t.Run(fmt.Sprintf("%s %s", funcName, c.name), func(t *testing.T) {
+				got := f(c.input)
+				fmt.Println(fmt.Printf("want: %+v \n got: %+v", c.expect, got))
+				fmt.Println()
+			})
+		}
 	}
 }

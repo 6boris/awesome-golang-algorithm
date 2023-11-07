@@ -18,3 +18,18 @@ func getIntersectionNode(headA, headB *ListNode) *ListNode {
 	}
 	return p
 }
+
+func getIntersectionNode2(headA, headB *ListNode) *ListNode {
+	m := map[*ListNode]bool{}
+	for tmp := headA; tmp != nil; tmp = tmp.Next {
+		m[tmp] = true
+	}
+
+	for tmp := headB; tmp != nil; tmp = tmp.Next {
+		if _, ok := m[tmp]; ok {
+			return tmp
+		}
+	}
+
+	return nil
+}

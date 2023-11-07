@@ -1,38 +1,54 @@
 package Solution
 
 import (
+	"fmt"
 	"reflect"
+	"runtime"
+	"strings"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
+// Solution func Info
+type SolutionFuncType func([][]int)
+
+var SolutionFuncList = []SolutionFuncType{
+	setZeroes,
+}
+
+// Test case info struct
+type Case struct {
+	name   string
+	input  [][]int
+	expect [][]int
+}
+
+// Test case
+var cases = []Case{
+	{name: "TestCase 1", input: [][]int{
+		{1, 1, 1},
+		{1, 0, 1},
+		{1, 1, 1},
+	}, expect: [][]int{
+		{1, 0, 1},
+		{0, 0, 0},
+		{1, 0, 1},
+	}},
+}
+
+// TestSolution Run test case for all solutions
 func TestSolution(t *testing.T) {
-	//	测试用例
-	cases := []struct {
-		name   string
-		inputs bool
-		expect bool
-	}{
-		{"TestCacse 1", true, true},
-		{"TestCacse 1", true, true},
-		{"TestCacse 1", false, false},
+	ast := assert.New(t)
+
+	for _, f := range SolutionFuncList {
+		funcName := strings.Split(runtime.FuncForPC(reflect.ValueOf(f).Pointer()).Name(), ".")[1]
+		for _, c := range cases {
+			t.Run(fmt.Sprintf("%s %s", funcName, c.name), func(t *testing.T) {
+				f(c.input)
+				ast.Equal(c.expect, c.input,
+					"func: %v case: %v ", funcName, c.name)
+			})
+		}
 	}
-
-	//	开始测试
-	for _, c := range cases {
-		t.Run(c.name, func(t *testing.T) {
-			ret := Solution(c.inputs)
-			if !reflect.DeepEqual(ret, c.expect) {
-				t.Fatalf("expected: %v, but got: %v, with inputs: %v",
-					c.expect, ret, c.inputs)
-			}
-		})
-	}
-}
-
-//	压力测试
-func BenchmarkSolution(b *testing.B) {
-}
-
-//	使用案列
-func ExampleSolution() {
 }

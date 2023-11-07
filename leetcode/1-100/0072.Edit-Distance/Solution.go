@@ -11,7 +11,6 @@ package Solution
 
 func minDistance(word1 string, word2 string) int {
 	m, n := len(word1), len(word2)
-
 	dp := [][]int{}
 	for i := 0; i <= m; i++ {
 		dp = append(dp, make([]int, n+1))
@@ -33,8 +32,6 @@ func minDistance(word1 string, word2 string) int {
 			}
 		}
 	}
-	// Print(dp)
-
 	return dp[m][n]
 }
 
@@ -43,11 +40,4 @@ func min(x, y int) int {
 		return y
 	}
 	return x
-}
-
-func max(x, y int) int {
-	if x > y {
-		return x
-	}
-	return y
 }
