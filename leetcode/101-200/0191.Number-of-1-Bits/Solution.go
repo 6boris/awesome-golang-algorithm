@@ -1,5 +1,10 @@
 package Solution
 
-func Solution(x bool) bool {
-	return x
+func Solution(num uint32) int {
+	ans := 0
+	for num > 0 {
+		ans++
+		num = num & (num - 1)
+	}
+	return ans
 }
