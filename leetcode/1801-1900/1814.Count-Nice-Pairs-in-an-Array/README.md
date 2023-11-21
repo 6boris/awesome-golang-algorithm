@@ -1,28 +1,29 @@
 # [1814.Count Nice Pairs in an Array][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given an array `nums` consists of non-negative integers. Let us define `rev(x)` as the reverse of the non-negative integer `x`. For example, `rev(123) = 321`, and `rev(120) = 21`. A pair of indices (`i, j`) is **nice** if it satisfies all of the following conditions:
+
+- `0 <= i < j < nums.length`
+- `nums[i] + rev(nums[j]) == nums[j] + rev(nums[i])`
+
+Return the number of nice pairs of indices. Since that number can be too large, return it **modulo** `10^9 + 7`.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: nums = [42,11,1,97]
+Output: 2
+Explanation: The two pairs are:
+ - (0,3) : 42 + rev(97) = 42 + 79 = 121, 97 + rev(42) = 97 + 24 = 121.
+ - (1,2) : 11 + rev(1) = 11 + 1 = 12, 1 + rev(11) = 1 + 11 = 12.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Count Nice Pairs in an Array
-```go
 ```
-
+Input: nums = [13,10,35,24,76]
+Output: 4
+```
 
 ## 结语
 
