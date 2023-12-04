@@ -1,28 +1,42 @@
 # [2264.Largest 3-Same-Digit Number in String][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given a string `num` representing a large integer. An integer is **good** if it meets the following conditions:
+
+- It is a **substring** of `num` with length `3`.
+- It consists of only one unique digit.
+
+Return the **maximum good** integer as a **string** or an empty string `""` if no such integer exists.
+
+Note:
+
+- A **substring** is a contiguous sequence of characters within a string.
+- There may be **leading zeroes** in `num` or a good integer.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: num = "6777133339"
+Output: "777"
+Explanation: There are two distinct good integers: "777" and "333".
+"777" is the largest, so we return "777".
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Largest 3-Same-Digit Number in String
-```go
+```
+Input: num = "2300019"
+Output: "000"
+Explanation: "000" is the only good integer.
 ```
 
+**Example 3:**
+
+```
+Input: num = "42352338"
+Output: ""
+Explanation: No substring of length 3 consists of only one unique digit. Therefore, there are no good integers.
+```
 
 ## 结语
 
