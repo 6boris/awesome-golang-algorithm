@@ -1,5 +1,5 @@
 package Solution
 
-func Solution(x bool) bool {
-	return x
+func Solution(x int) int {
+	return x - 1
 }
