@@ -8,14 +8,41 @@ import (
 
 func TestSolution(t *testing.T) {
 	//	测试用例
+
+	nodes := [6]*Node1{
+		{Val: 1},
+		{Val: 2},
+		{Val: 3},
+		{Val: 4},
+		{Val: 5},
+		{Val: 7},
+	}
+	nodes[0].Left = nodes[1]
+	nodes[0].Right = nodes[2]
+	nodes[1].Left = nodes[3]
+	nodes[1].Right = nodes[4]
+	nodes[2].Right = nodes[5]
+	nodes[1].Next = nodes[2]
+	nodes[3].Next = nodes[4]
+	nodes[4].Next = nodes[5]
 	cases := []struct {
 		name   string
-		inputs bool
-		expect bool
+		inputs *Node1
+		expect *Node1
 	}{
-		{"TestCase", true, true},
-		{"TestCase", true, true},
-		{"TestCase", false, false},
+		{"TestCase1", &Node1{
+			Val: 1,
+			Left: &Node1{
+				Val:   2,
+				Left:  &Node1{Val: 4},
+				Right: &Node1{Val: 5},
+			},
+			Right: &Node1{
+				Val:   3,
+				Right: &Node1{Val: 7},
+			},
+		}, nodes[0]},
+		{"TestCase2", nil, nil},
 	}
 
 	//	开始测试
@@ -30,10 +57,10 @@ func TestSolution(t *testing.T) {
 	}
 }
 
-//	压力测试
+// 压力测试
 func BenchmarkSolution(b *testing.B) {
 }
 
-//	使用案列
+// 使用案列
 func ExampleSolution() {
 }
