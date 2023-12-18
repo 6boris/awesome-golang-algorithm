@@ -1,28 +1,31 @@
 # [979.Distribute Coins in Binary Tree][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given the `root` of a binary tree with `n` nodes where each `node` in the tree has `node.val` coins. There are `n` coins in total throughout the whole tree.
 
-**Example 1:**
+In one move, we may choose two adjacent nodes and move one coin from one node to another. A move may be from parent to child, or from child to parent.
+
+Return the **minimum** number of moves required to make every node have **exactly** one coin.
+
+**Example 1:**  
+
+![example1](./tree1.png)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: root = [3,0,0]
+Output: 2
+Explanation: From the root of the tree, we move one coin to its left child, and one coin to its right child.
 ```
 
-## 题意
-> ...
+**Example 2:**  
 
-## 题解
+![example2](./tree2.png)
 
-### 思路1
-> ...
-Distribute Coins in Binary Tree
-```go
 ```
-
+Input: root = [0,3,0]
+Output: 3
+Explanation: From the left child of the root, we move two coins to the root [taking two moves]. Then, we move one coin from the root of the tree to the right child.
+```
 
 ## 结语
 
