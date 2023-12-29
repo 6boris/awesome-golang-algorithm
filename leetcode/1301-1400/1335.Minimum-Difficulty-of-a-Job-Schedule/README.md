@@ -1,28 +1,41 @@
 # [1335.Minimum Difficulty of a Job Schedule][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You want to schedule a list of jobs in `d` days. Jobs are dependent (i.e To work on the i<sup>th</sup> job, you have to finish all the jobs j where `0 <= j < i`).
 
-**Example 1:**
+You have to finish **at least** one task every day. The difficulty of a job schedule is the sum of difficulties of each day of the d days. The difficulty of a day is the maximum difficulty of a job done on that day.
+
+You are given an integer array `jobDifficulty` and an integer `d`. The difficulty of the i<sup>th</sup> job is `jobDifficulty[i]`.
+
+Return the minimum difficulty of a job schedule. If you cannot find a schedule for the jobs return `-1`.
+
+**Example 1:**  
+
+![1](./untitled.png)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: jobDifficulty = [6,5,4,3,2,1], d = 2
+Output: 7
+Explanation: First day you can finish the first 5 jobs, total difficulty = 6.
+Second day you can finish the last job, total difficulty = 1.
+The difficulty of the schedule = 6 + 1 = 7
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Minimum Difficulty of a Job Schedule
-```go
+```
+Input: jobDifficulty = [9,9,9], d = 4
+Output: -1
+Explanation: If you finish a job per day you will still have a free day. you cannot find a schedule for the given jobs.
 ```
 
+**Example 3:**
+
+```
+Input: jobDifficulty = [1,1,1], d = 3
+Output: 3
+Explanation: The schedule is one job per day. total difficulty will be 3.
+```
 
 ## 结语
 
