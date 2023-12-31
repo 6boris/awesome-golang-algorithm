@@ -1,28 +1,33 @@
 # [1624.Largest Substring Between Two Equal Characters][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given a string `s`, return the length of the longest substring between two equal characters, excluding the two characters. If there is no such substring return `-1`.
+
+A **substring** is a contiguous sequence of characters within a string.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: s = "aa"
+Output: 0
+Explanation: The optimal substring here is an empty substring between the two 'a's.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Largest Substring Between Two Equal Characters
-```go
+```
+Input: s = "abca"
+Output: 2
+Explanation: The optimal substring here is "bc".
 ```
 
+**Example 3:**
+
+```
+Input: s = "cbzxy"
+Output: -1
+Explanation: There are no characters that appear twice in s.
+```
 
 ## 结语
 
