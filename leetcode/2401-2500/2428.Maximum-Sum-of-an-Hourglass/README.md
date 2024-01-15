@@ -1,28 +1,36 @@
 # [2428.Maximum Sum of an Hourglass][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given an `m x n` integer matrix `grid`.
 
-**Example 1:**
+We define an **hourglass** as a part of the matrix with the following form:
+
+![1](./img.jpeg)
+
+Return the **maximum** sum of the elements of an hourglass.
+
+**Note** that an hourglass cannot be rotated and must be entirely contained within the matrix.
+
+
+**Example 1:**  
+
+![1](./1.jpeg)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: grid = [[6,2,1,3],[4,2,1,5],[9,2,8,7],[4,1,2,9]]
+Output: 30
+Explanation: The cells shown above represent the hourglass with the maximum sum: 6 + 2 + 1 + 2 + 9 + 2 + 8 = 30.
 ```
 
-## 题意
-> ...
+**Example 2:**  
 
-## 题解
+![2](./2.jpeg)
 
-### 思路1
-> ...
-Maximum Sum of an Hourglass
-```go
 ```
-
+Input: grid = [[1,2,3],[4,5,6],[7,8,9]]
+Output: 35
+Explanation: There is only one hourglass in the matrix, with the sum: 1 + 2 + 3 + 5 + 7 + 8 + 9 = 35.
+```
 
 ## 结语
 
