@@ -1,28 +1,21 @@
 # [423.Reconstruct Original Digits from English][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given a string `s` containing an out-of-order English representation of digits `0-9`, return the digits in **ascending** order.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: s = "owoztneoer"
+Output: "012"
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Reconstruct Original Digits from English
-```go
 ```
-
+Input: s = "fviefuro"
+Output: "45"
+```
 
 ## 结语
 
