@@ -1,28 +1,23 @@
 # [556.Next Greater Element III][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given a positive integer `n`, find the smallest integer which has exactly the same digits existing in the integer n and is greater in value than `n`. If no such positive integer exists, return `-1`.
+
+**Note** that the returned integer should fit in **32-bit integer**, if there is a valid answer but it does not fit in **32-bit integer**, return `-1`.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: n = 12
+Output: 21
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Next Greater Element III
-```go
 ```
-
+Input: n = 21
+Output: -1
+```
 
 ## 结语
 
