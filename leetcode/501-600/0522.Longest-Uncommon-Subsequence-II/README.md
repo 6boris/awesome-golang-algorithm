@@ -1,28 +1,27 @@
 # [522.Longest Uncommon Subsequence II][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given an array of strings `strs`, return the length of the **longest uncommon subsequence** between them. If the longest uncommon subsequence does not exist, return `-1`.
+
+An **uncommon subsequence** between an array of strings is a string that is a **subsequence of one string but not the others**.
+
+A **subsequence** of a string `s` is a string that can be obtained after deleting any number of characters from `s`.
+
+- For example, `"abc"` is a subsequence of `"aebdc"` because you can delete the underlined characters in `"aebdc"` to get `"abc"`. Other subsequences of `"aebdc"` include `"aebdc"`, `"aeb"`, and `""` (empty string).
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: strs = ["aba","cdc","eae"]
+Output: 3
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Longest Uncommon Subsequence II
-```go
 ```
-
+Input: strs = ["aaa","aaa","aa"]
+Output: -1
+```
 
 ## 结语
 
