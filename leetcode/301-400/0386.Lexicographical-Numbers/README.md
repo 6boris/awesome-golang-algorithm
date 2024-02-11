@@ -1,28 +1,23 @@
 # [386.Lexicographical Numbers][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given an integer `n`, return all the numbers in the range `[1, n]` sorted in lexicographical order.
+
+You must write an algorithm that runs in `O(n)` time and uses `O(1)` extra space. 
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: n = 13
+Output: [1,10,11,12,13,2,3,4,5,6,7,8,9]
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Lexicographical Numbers
-```go
 ```
-
+Input: n = 2
+Output: [1,2]
+```
 
 ## 结语
 
