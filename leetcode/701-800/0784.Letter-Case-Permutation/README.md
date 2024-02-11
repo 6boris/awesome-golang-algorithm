@@ -1,28 +1,23 @@
 # [784.Letter Case Permutation][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given a string `s`, you can transform every letter individually to be lowercase or uppercase to create another string.
+
+Return a list of all possible strings we could create. Return the output in **any order**.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: s = "a1b2"
+Output: ["a1b2","a1B2","A1b2","A1B2"]
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Letter Case Permutation
-```go
 ```
-
+Input: s = "3z4"
+Output: ["3z4","3Z4"]
+```
 
 ## 结语
 

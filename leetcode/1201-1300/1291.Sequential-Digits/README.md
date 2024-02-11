@@ -1,28 +1,23 @@
 # [1291.Sequential Digits][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+An integer has sequential digits if and only if each digit in the number is one more than the previous digit.
+
+Return a **sorted** list of all the integers in the range `[low, high]` inclusive that have sequential digits.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: low = 100, high = 300
+Output: [123,234]
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Sequential Digits
-```go
 ```
-
+Input: low = 1000, high = 13000
+Output: [1234,2345,3456,4567,5678,6789,12345]
+```
 
 ## 结语
 

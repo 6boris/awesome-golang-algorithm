@@ -1,28 +1,29 @@
 # [1897.Redistribute Characters to Make All Strings Equal][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given an array of strings `words` (0-indexed).
+
+In one operation, pick two **distinct** indices `i` and `j`, where `words[i]` is a non-empty string, and move **any** character from `words[i]` to any position in `words[j]`.
+
+Return `true` if you can make **every** string in `wrods` **equal** using **any** number of operations, and `false` otherwise.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: words = ["abc","aabc","bc"]
+Output: true
+Explanation: Move the first 'a' in words[1] to the front of words[2],
+to make words[1] = "abc" and words[2] = "abc".
+All the strings are now equal to "abc", so return true.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Redistribute Characters to Make All Strings Equal
-```go
 ```
-
+Input: words = ["ab","a"]
+Output: false
+Explanation: It is impossible to make all the strings equal using the operation.
+```
 
 ## 结语
 

@@ -1,28 +1,26 @@
 # [503.Next Greater Element II][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given a circular integer array `nums` (i.e., the next element of `nums[nums.length - 1] is nums[0]`), return the **next greater number** for every element in `nums`.
+
+The **next greater number** of a number `x` is the first greater number to its traversing-order next in the array, which means you could search circularly to find its next greater number. If it doesn't exist, return `-1` for this number.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: nums = [1,2,1]
+Output: [2,-1,2]
+Explanation: The first 1's next greater number is 2; 
+The number 2 can't find next greater number. 
+The second 1's next greater number needs to search circularly, which is also 2.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Next Greater Element II
-```go
 ```
-
+Input: nums = [1,2,3,4,3]
+Output: [2,3,4,-1,4]
+```
 
 ## 结语
 
