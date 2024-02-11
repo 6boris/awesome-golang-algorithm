@@ -1,28 +1,27 @@
 # [313.Super Ugly Number][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+A **super ugly number** is a positive integer whose prime factors are in the array `primes`.
+
+Given an integer `n` and an array of integers `primes`, return the n<sup>th</sup> **super ugly number**.
+
+The n<sup>th</sup> **super ugly number** is **guaranteed** to fit in a **32-bit** signed integer.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: n = 12, primes = [2,7,13,19]
+Output: 32
+Explanation: [1,2,4,7,8,13,14,16,19,26,28,32] is the sequence of the first 12 super ugly numbers given primes = [2,7,13,19].
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Super Ugly Number
-```go
 ```
-
+Input: n = 1, primes = [2,3,5]
+Output: 1
+Explanation: 1 has no prime factors, therefore all of its prime factors are in the array primes = [2,3,5].
+```
 
 ## 结语
 
