@@ -1,28 +1,43 @@
 # [2350.Shortest Impossible Sequence of Rolls][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given an integer array `rolls` of length `n` and an integer `k`. You roll a `k` sided dice numbered from `1` to `k`, `n` times, where the result of the i<sup>th</sup> roll is `rolls[i]`.
+
+Return the length of the **shortest** sequence of rolls that **cannot** be taken from `rolls`.
+
+A **sequence of rolls** of length `len` is the result of rolling a `k` sided dice `len` times.
+
+**Note** that the sequence taken does not have to be consecutive as long as it is in order.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: rolls = [4,2,1,2,3,3,2,4,1], k = 4
+Output: 3
+Explanation: Every sequence of rolls of length 1, [1], [2], [3], [4], can be taken from rolls.
+Every sequence of rolls of length 2, [1, 1], [1, 2], ..., [4, 4], can be taken from rolls.
+The sequence [1, 4, 2] cannot be taken from rolls, so we return 3.
+Note that there are other sequences that cannot be taken from rolls.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Shortest Impossible Sequence of Rolls
-```go
+```
+Input: rolls = [1,1,2,2], k = 2
+Output: 2
+Explanation: Every sequence of rolls of length 1, [1], [2], can be taken from rolls.
+The sequence [2, 1] cannot be taken from rolls, so we return 2.
+Note that there are other sequences that cannot be taken from rolls but [2, 1] is the shortest.
 ```
 
+**Example 3:**
+
+```
+Input: rolls = [1,1,3,2,2,2,3,3], k = 4
+Output: 1
+Explanation: The sequence [4] cannot be taken from rolls, so we return 1.
+Note that there are other sequences that cannot be taken from rolls but [4] is the shortest.
+```
 
 ## 结语
 
