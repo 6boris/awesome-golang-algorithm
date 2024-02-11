@@ -1,28 +1,34 @@
 # [856.Score of Parentheses][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given a balanced parentheses string `s` return the **score** of the string.
+
+The **score** of a balanced parentheses string is based on the following rule:
+
+- `"()"` has score `1`.
+- `AB` has score `A + B`, where `A` and `B` are balanced parentheses strings.
+- `(A)` has score `2 * A`, where `A` is a balanced parentheses string.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: s = "()"
+Output: 1
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Score of Parentheses
-```go
+```
+Input: s = "(())"
+Output: 2
 ```
 
+**Example 3:**
+
+```
+Input: s = "()()"
+Output: 2
+```
 
 ## 结语
 
