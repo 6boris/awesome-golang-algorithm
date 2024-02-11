@@ -1,28 +1,25 @@
 # [648.Replace Words][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+In English, we have a concept called **root**, which can be followed by some other word to form another longer word - let's call this word **successor**. For example, when the **root** `"an"` is followed by the **successor** word `"other"`, we can form a new word `"another"`.
+
+Given a `dictionary` consisting of many **roots** and a `sentence` consisting of words separated by spaces, replace all the **successors** in the sentence with the **root** forming it. If a **successor** can be replaced by more than one **root**, replace it with the **root** that has **the shortest length**.
+
+Return the `sentence` after the replacement.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: dictionary = ["cat","bat","rat"], sentence = "the cattle was rattled by the battery"
+Output: "the cat was rat by the bat"
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Replace Words
-```go
 ```
-
+Input: dictionary = ["a","b","c"], sentence = "aadsfasf absbs bbab cadsfafs"
+Output: "a a b c"
+```
 
 ## 结语
 
