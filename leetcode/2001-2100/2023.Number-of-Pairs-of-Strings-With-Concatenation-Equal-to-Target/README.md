@@ -1,28 +1,43 @@
 # [2023.Number of Pairs of Strings With Concatenation Equal to Target][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given an array of **digit** strings nums and a **digit** string `target`, return the number of pairs of indices `(i, j)` (where `i != j`) such that the **concatenation** of `nums[i] + nums[j]` equals `target`.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: nums = ["777","7","77","77"], target = "7777"
+Output: 4
+Explanation: Valid pairs are:
+- (0, 1): "777" + "7"
+- (1, 0): "7" + "777"
+- (2, 3): "77" + "77"
+- (3, 2): "77" + "77"
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Number of Pairs of Strings With Concatenation Equal to Target
-```go
+```
+Input: nums = ["123","4","12","34"], target = "1234"
+Output: 2
+Explanation: Valid pairs are:
+- (0, 1): "123" + "4"
+- (2, 3): "12" + "34"
 ```
 
+**Example 3:**
+
+```
+Input: nums = ["1","1","1"], target = "11"
+Output: 6
+Explanation: Valid pairs are:
+- (0, 1): "1" + "1"
+- (1, 0): "1" + "1"
+- (0, 2): "1" + "1"
+- (2, 0): "1" + "1"
+- (1, 2): "1" + "1"
+- (2, 1): "1" + "1"
+```
 
 ## 结语
 
