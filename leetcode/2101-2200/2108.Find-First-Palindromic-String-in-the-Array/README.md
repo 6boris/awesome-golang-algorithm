@@ -1,28 +1,34 @@
 # [2108.Find First Palindromic String in the Array][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given an array of strings `words`, return the first **palindromic** string in the array. If there is no such string, return an **empty string** `""`.
+
+A string is **palindromic** if it reads the same forward and backward.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: words = ["abc","car","ada","racecar","cool"]
+Output: "ada"
+Explanation: The first string that is palindromic is "ada".
+Note that "racecar" is also palindromic, but it is not the first.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Find First Palindromic String in the Array
-```go
+```
+Input: words = ["notapalindrome","racecar"]
+Output: "racecar"
+Explanation: The first and only string that is palindromic is "racecar".
 ```
 
+**Example 3:**
+
+```
+Input: words = ["def","ghi"]
+Output: ""
+Explanation: There are no palindromic strings, so the empty string is returned.
+```
 
 ## 结语
 
