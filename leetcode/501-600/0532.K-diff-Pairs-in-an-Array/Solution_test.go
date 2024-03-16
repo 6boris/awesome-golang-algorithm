@@ -29,14 +29,19 @@ func TestSolution(t *testing.T) {
 				t.Fatalf("expected: %v, but got: %v, with inputs: %v %v",
 					c.expect, got, c.nums, c.k)
 			}
+			got = Solution1(c.nums, c.k)
+			if !reflect.DeepEqual(got, c.expect) {
+				t.Fatalf("expected: %v, but got: %v, with inputs: %v %v",
+					c.expect, got, c.nums, c.k)
+			}
 		})
 	}
 }
 
-//	压力测试
+// 压力测试
 func BenchmarkSolution(b *testing.B) {
 }
 
-//	使用案列
+// 使用案列
 func ExampleSolution() {
 }
