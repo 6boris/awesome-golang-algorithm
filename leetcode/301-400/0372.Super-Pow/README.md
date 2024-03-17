@@ -1,28 +1,28 @@
 # [372.Super Pow][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Your task is to calculate `a^b` mod `1337` where `a` is a positive integer and `b` is an extremely large positive integer given in the form of an array.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: a = 2, b = [3]
+Output: 8
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Super Pow
-```go
+```
+Input: a = 2, b = [1,0]
+Output: 1024
 ```
 
+**Example 3:**
+
+```
+Input: a = 1, b = [4,3,3,8,5,2]
+Output: 1
+```
 
 ## 结语
 
