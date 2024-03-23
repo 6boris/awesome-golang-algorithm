@@ -1,28 +1,28 @@
 # [786.K-th Smallest Prime Fraction][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given a sorted integer array `arr` containing 1 and **prime** numbers, where all the integers of `arr` are unique. You are also given an integer `k`.
+
+For every `i` and `j` where `0 <= i < j < arr.length`, we consider the fraction `arr[i] / arr[j]`.
+
+Return the k<sup>th</sup> smallest fraction considered. Return your answer as an array of integers of size `2`, where `answer[0] == arr[i]` and `answer[1] == arr[j]`.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: arr = [1,2,3,5], k = 3
+Output: [2,5]
+Explanation: The fractions to be considered in sorted order are:
+1/5, 1/3, 2/5, 1/2, 3/5, and 2/3.
+The third fraction is 2/5.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-K-th Smallest Prime Fraction
-```go
 ```
-
+Input: arr = [1,7], k = 1
+Output: [1,7]
+```
 
 ## 结语
 
