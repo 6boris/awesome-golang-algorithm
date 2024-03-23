@@ -1,28 +1,28 @@
 # [945.Minimum Increment to Make Array Unique][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given an integer array `nums`. In one move, you can pick an index `i` where `0 <= i < nums.length` and increment `nums[i]` by `1`.
+
+Return the minimum number of moves to make every value in `nums` **unique**.
+
+The test cases are generated so that the answer fits in a 32-bit integer.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: nums = [1,2,2]
+Output: 1
+Explanation: After 1 move, the array could be [1, 2, 3].
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Minimum Increment to Make Array Unique
-```go
 ```
-
+Input: nums = [3,2,1,2,1,7]
+Output: 6
+Explanation: After 6 moves, the array could be [3, 4, 1, 2, 5, 7].
+It can be shown with 5 or less moves that it is impossible for the array to have all unique values.
+```
 
 ## 结语
 
