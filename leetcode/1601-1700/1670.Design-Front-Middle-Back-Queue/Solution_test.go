@@ -10,12 +10,20 @@ func TestSolution(t *testing.T) {
 	//	测试用例
 	cases := []struct {
 		name   string
-		inputs bool
-		expect bool
+		inputs []opt
+		expect []int
 	}{
-		{"TestCase", true, true},
-		{"TestCase", true, true},
-		{"TestCase", false, false},
+		{"TestCase1", []opt{
+			{"pushFront", 1},
+			{"pushBack", 2},
+			{"pushMiddle", 3},
+			{"pushMiddle", 4},
+			{"popFront", 0},
+			{"popMiddle", 0},
+			{"popMiddle", 0},
+			{"popBack", 0},
+			{"popFront", 0},
+		}, []int{1, 3, 4, 2, -1}},
 	}
 
 	//	开始测试
@@ -30,10 +38,10 @@ func TestSolution(t *testing.T) {
 	}
 }
 
-//	压力测试
+// 压力测试
 func BenchmarkSolution(b *testing.B) {
 }
 
-//	使用案列
+// 使用案列
 func ExampleSolution() {
 }
