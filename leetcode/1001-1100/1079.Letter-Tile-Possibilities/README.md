@@ -1,28 +1,31 @@
 # [1079.Letter Tile Possibilities][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You have `n`  `tiles`, where each tile has one letter `tiles[i]` printed on it.
+
+Return the number of possible non-empty sequences of letters you can make using the letters printed on those `tiles`.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: tiles = "AAB"
+Output: 8
+Explanation: The possible sequences are "A", "B", "AA", "AB", "BA", "AAB", "ABA", "BAA".
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Letter Tile Possibilities
-```go
+```
+Input: tiles = "AAABBC"
+Output: 188
 ```
 
+**Example 3:**
+
+```
+Input: tiles = "V"
+Output: 1
+```
 
 ## 结语
 
