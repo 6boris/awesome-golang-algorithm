@@ -1,28 +1,21 @@
 # [371.Sum of Two Integers][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given two integers `a` and `b`, return the sum of the two integers without using the operators `+` and `-`.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: a = 1, b = 2
+Output: 3
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Sum of Two Integers
-```go
 ```
-
+Input: a = 2, b = 3
+Output: 5
+```
 
 ## 结语
 
