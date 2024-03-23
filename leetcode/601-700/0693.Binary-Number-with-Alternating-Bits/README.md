@@ -1,28 +1,31 @@
 # [693.Binary Number with Alternating Bits][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given a positive integer, check whether it has alternating bits: namely, if two adjacent bits will always have different values.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: n = 5
+Output: true
+Explanation: The binary representation of 5 is: 101
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Binary Number with Alternating Bits
-```go
+```
+Input: n = 7
+Output: false
+Explanation: The binary representation of 7 is: 111.
 ```
 
+**Example 3:**
+
+```
+Input: n = 11
+Output: false
+Explanation: The binary representation of 11 is: 1011.
+```
 
 ## 结语
 
