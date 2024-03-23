@@ -1,28 +1,23 @@
 # [869.Reordered Power of 2][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given an integer `n`. We reorder the digits in any order (including the original order) such that the leading digit is not zero.
+
+Return `true` if and only if we can do this so that the resulting number is a power of two.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: n = 1
+Output: true
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Reordered Power of 2
-```go
 ```
-
+Input: n = 10
+Output: false
+```
 
 ## 结语
 
