@@ -1,28 +1,25 @@
 # [419.Battleships in a Board][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given an `m x n` matrix board where each cell is a battleship `'X'` or empty `'.'`, return the number of the **battleships** on `board`.
 
-**Example 1:**
+**Battleships** can only be placed horizontally or vertically on `board`. In other words, they can only be made of the shape `1 x k` (`1` row, `k` columns) or `k x 1` (`k` rows, `1` column), where `k` can be of any size. At least one horizontal or vertical cell separates between two battleships (i.e., there are no adjacent battleships).
+
+**Example 1:**  
+
+![1](./battelship-grid.jpeg)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: board = [["X",".",".","X"],[".",".",".","X"],[".",".",".","X"]]
+Output: 2
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Battleships in a Board
-```go
 ```
-
+Input: board = [["."]]
+Output: 0
+```
 
 ## 结语
 
