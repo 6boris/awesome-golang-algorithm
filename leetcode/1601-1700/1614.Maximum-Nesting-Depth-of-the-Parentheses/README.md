@@ -1,28 +1,37 @@
 # [1614.Maximum Nesting Depth of the Parentheses][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+A string is a **valid parentheses string** (denoted **VPS**) if it meets one of the following:
+
+- It is an empty string `""`, or a single character not equal to `"("` or `")"`,
+- It can be written as `AB` (`A` concatenated with `B`), where `A` and `B` are **VPS**'s, or
+- It can be written as `(A)`, where `A` is a `VPS`.
+
+We can similarly define the **nesting depth** `depth(S)` of any VPS `S` as follows:
+
+- `depth("") = 0`
+- `depth(C) = 0`, where `C` is a string with a single character not equal to `"("` or `")"`.
+- `depth(A + B) = max(depth(A), depth(B))`, where `A` and `B` are **VPS**'s.
+- `depth("(" + A + ")") = 1 + depth(A)`, where `A` is a **VPS**.
+
+For example, `""`, `"()()"`, and `"()(()())"` are **VPS**'s (with nesting depths 0, 1, and 2), and `")("` and `"(()"` are not **VPS**'s.
+
+Given a **VPS** represented as string `s`, return the **nesting depth** of `s`.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: s = "(1+(2*3)+((8)/4))+1"
+Output: 3
+Explanation: Digit 8 is inside of 3 nested parentheses in the string.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Maximum Nesting Depth of the Parentheses
-```go
 ```
-
+Input: s = "(1)+((2))+(((3)))"
+Output: 3
+```
 
 ## 结语
 
