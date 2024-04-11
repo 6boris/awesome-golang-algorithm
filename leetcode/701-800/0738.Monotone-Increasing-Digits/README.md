@@ -1,28 +1,30 @@
 # [738.Monotone Increasing Digits][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+An integer has **monotone increasing digits** if and only if each pair of adjacent digits `x` and `y` satisfy `x <= y`.
+
+Given an integer `n`, return the largest number that is less than or equal to `n` with **monotone increasing digits**.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: n = 10
+Output: 9
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Monotone Increasing Digits
-```go
+```
+Input: n = 1234
+Output: 1234
 ```
 
+**Example 3:**
+
+```
+Input: n = 332
+Output: 299
+```
 
 ## 结语
 
