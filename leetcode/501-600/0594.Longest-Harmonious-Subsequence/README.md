@@ -1,28 +1,33 @@
 # [594.Longest Harmonious Subsequence][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+We define a harmonious array as an array where the difference between its maximum value and its minimum value is **exactly** `1`.
+
+Given an integer array `nums`, return the length of its longest harmonious subsequence among all its possible subsequences.
+
+A **subsequence** of array is a sequence that can be derived from the array by deleting some or no elements without changing the order of the remaining elements.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: nums = [1,3,2,2,5,2,3,7]
+Output: 5
+Explanation: The longest harmonious subsequence is [3,2,2,2,3].
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Longest Harmonious Subsequence
-```go
+```
+Input: nums = [1,2,3,4]
+Output: 2
 ```
 
+**Example 3:**
+
+```
+Input: nums = [1,1,1,1]
+Output: 0
+```
 
 ## 结语
 
