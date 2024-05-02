@@ -1,28 +1,33 @@
 # [2441.Largest Positive Integer That Exists With Its Negative][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given an integer array nums that **does not contain** any zeros, find **the largest positive** integer `k` such that `-k` also exists in the array.
+
+Return the positive integer `k`. If there is no such integer, return `-1`.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: nums = [-1,2,-3,3]
+Output: 3
+Explanation: 3 is the only valid k we can find in the array.
 ```
 
-## 题意
-> ...
+**Exists 2:**
 
-## 题解
-
-### 思路1
-> ...
-Largest Positive Integer That Exists With Its Negative
-```go
+```
+Input: nums = [-1,10,6,7,-7,1]
+Output: 7
+Explanation: Both 1 and 7 have their corresponding negative values in the array. 7 has a larger value.
 ```
 
+**Exists 3:**
+
+```
+Input: nums = [-10,8,6,7,-2,-3]
+Output: -1
+Explanation: There is no a single valid k, we return -1.
+```
 
 ## 结语
 
