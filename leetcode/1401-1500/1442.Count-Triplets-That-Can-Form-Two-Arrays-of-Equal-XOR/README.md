@@ -1,37 +1,32 @@
 # [1422.Maximum Score After Splitting a String][title]
 
 ## Description
-Given a string `s` of zeros and ones, return the maximum score after splitting the string into two **non-empty** substrings (i.e. **left** substring and **right** substring).
+Given an array of integers `arr`.
 
-The score after splitting a string is the number of **zeros** in the **left** substring plus the number of **ones** in the **right** substring.
+We want to select three indices `i`, `j` and k where `(0 <= i < j <= k < arr.length)`.
+
+Let's define a and b as follows:
+
+- `a = arr[i] ^ arr[i + 1] ^ ... ^ arr[j - 1]`
+- `b = arr[j] ^ arr[j + 1] ^ ... ^ arr[k]`
+
+Note that **^** denotes the **bitwise-xor** operation.
+
+Return the number of triplets (`i`, `j` and `k`) Where `a == b`.
 
 **Example 1:**
 
 ```
-Input: s = "011101"
-Output: 5 
-Explanation: 
-All possible ways of splitting s into two non-empty substrings are:
-left = "0" and right = "11101", score = 1 + 4 = 5 
-left = "01" and right = "1101", score = 1 + 3 = 4 
-left = "011" and right = "101", score = 1 + 2 = 3 
-left = "0111" and right = "01", score = 1 + 1 = 2 
-left = "01110" and right = "1", score = 2 + 1 = 3
+Input: arr = [2,3,1,6,7]
+Output: 4
+Explanation: The triplets are (0,1,2), (0,2,2), (2,3,4) and (2,4,4)
 ```
 
 **Example 2:**
 
 ```
-Input: s = "00111"
-Output: 5
-Explanation: When left = "00" and right = "111", we get the maximum score = 2 + 3 = 5
-```
-
-**Example 3:**
-
-```
-Input: s = "1111"
-Output: 3
+Input: arr = [1,1,1,1,1]
+Output: 10
 ```
 
 ## 结语
