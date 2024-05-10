@@ -1,28 +1,26 @@
 # [1288.Remove Covered Intervals][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given an array `intervals` where `intervals[i] = [li, ri]` represent the interval `[li, ri)`, remove all intervals that are covered by another interval in the list.
+
+The interval `[a, b)` is covered by the interval `[c, d)` if and only if `c <= a` and `b <= d`.
+
+Return the number of remaining intervals.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: intervals = [[1,4],[3,6],[2,8]]
+Output: 2
+Explanation: Interval [3,6] is covered by [2,8], therefore it is removed.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Remove Covered Intervals
-```go
 ```
-
+Input: intervals = [[1,4],[2,3]]
+Output: 1
+```
 
 ## 结语
 
