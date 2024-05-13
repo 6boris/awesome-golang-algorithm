@@ -1,28 +1,30 @@
 # [861.Score After Flipping Matrix][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given an `m x n` binary matrix `grid`.
 
-**Example 1:**
+A **move** consists of choosing any row or column and toggling each value in that row or column (i.e., changing all `0`'s to `1`'s, and all `1`'s to `0`'s).
+
+Every row of the matrix is interpreted as a binary number, and the **score** of the matrix is the sum of these numbers.
+
+Return the highest possible **score** after making any number of **moves** (including zero moves).
+
+**Example 1:**  
+
+![1](./lc-toogle1.jpeg)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: grid = [[0,0,1,1],[1,0,1,0],[1,1,0,0]]
+Output: 39
+Explanation: 0b1111 + 0b1001 + 0b1111 = 15 + 9 + 15 = 39
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Score After Flipping Matrix
-```go
 ```
-
+Input: grid = [[0]]
+Output: 1
+```
 
 ## 结语
 
