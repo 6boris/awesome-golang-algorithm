@@ -1,28 +1,26 @@
 # [1781.Sum of Beauty of All Substrings][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+The **beauty** of a string is the difference in frequencies between the most frequent and least frequent characters.
+
+- For example, the beauty of `"abaacc"` is `3 - 1 = 2`.
+
+Given a string `s`, return the sum of **beauty** of all of its substrings.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: s = "aabcb"
+Output: 5
+Explanation: The substrings with non-zero beauty are ["aab","aabc","aabcb","abcb","bcb"], each with beauty equal to 1.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Sum of Beauty of All Substrings
-```go
 ```
-
+Input: s = "aabcbaa"
+Output: 17
+```
 
 ## 结语
 
