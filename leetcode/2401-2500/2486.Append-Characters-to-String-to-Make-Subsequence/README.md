@@ -1,28 +1,39 @@
 # [2486.Append Characters to String to Make Subsequence][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given two strings `s` and `t` consisting of only lowercase English letters.
+
+Return the minimum number of characters that need to be appended to the end of `s` so that `t` becomes a **subsequence** of `s`.
+
+A **subsequence** is a string that can be derived from another string by deleting some or no characters without changing the order of the remaining characters.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: s = "coaching", t = "coding"
+Output: 4
+Explanation: Append the characters "ding" to the end of s so that s = "coachingding".
+Now, t is a subsequence of s ("coachingding").
+It can be shown that appending any 3 characters to the end of s will never make t a subsequence.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Append Characters to String to Make Subsequence
-```go
+```
+Input: s = "abcde", t = "a"
+Output: 0
+Explanation: t is already a subsequence of s ("abcde").
 ```
 
+**Example 3:**
+
+```
+Input: s = "z", t = "abcde"
+Output: 5
+Explanation: Append the characters "abcde" to the end of s so that s = "zabcde".
+Now, t is a subsequence of s ("zabcde").
+It can be shown that appending any 4 characters to the end of s will never make t a subsequence.
+```
 
 ## 结语
 
