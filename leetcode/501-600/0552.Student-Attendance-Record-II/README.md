@@ -2,43 +2,42 @@
 
 ## Description
 
-Given a positive integer n, return the number of all possible attendance records with length n, which will be regarded as rewardable. The answer may be very large, return it after mod 109 + 7.
+An attendance record for a student can be represented as a string where each character signifies whether the student was absent, late, or present on that day. The record only contains the following three characters:
 
-A student attendance record is a string that only contains the following three characters:
+- `'A'`: Absent.
+- `'L'`: Late.
+- `'P'`: Present.
 
-'A' : Absent.
-'L' : Late.
-'P' : Present.
-A record is regarded as rewardable if it doesn't contain more than one 'A' (absent) or more than two continuous 'L' (late).
+Any student is eligible for an attendance award if they meet **both** of the following criteria:
+
+- The student was absent (`'A'`) for **strictly** fewer than 2 days **total**.
+- The student was **never** late (`'L'`) for 3 or more **consecutive** days.
+
+Given an integer `n`, return the `number` of possible attendance records of length `n` that make a student eligible for an attendance award. The answer may be very large, so return it **modulo** `10^9 + 7`.
+
+
 **Example 1:**
 
 ```
 Input: n = 2
-Output: 8 
-Explanation:
-There are 8 records with length 2 will be regarded as rewardable:
-"PP" , "AP", "PA", "LP", "PL", "AL", "LA", "LL"
-Only "AA" won't be regarded as rewardable owing to more than one absent times. 
+Output: 8
+Explanation: There are 8 records with length 2 that are eligible for an award:
+"PP", "AP", "PA", "LP", "PL", "AL", "LA", "LL"
+Only "AA" is not eligible because there are 2 absences (there need to be fewer than 2).
 ```
 
-**Tags:** Math, String
-
-## 题意
-> 求2数之和
-
-## 题解
-
-### 思路1
-> 。。。。
-
-```go
+**Example 2:**
 
 ```
+Input: n = 1
+Output: 3
+```
 
-### 思路2
-> 思路2
-```go
+**Example 3:**
 
+```
+Input: n = 10101
+Output: 183236316
 ```
 
 ## 结语
