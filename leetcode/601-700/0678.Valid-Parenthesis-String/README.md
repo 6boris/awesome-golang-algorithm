@@ -1,28 +1,35 @@
 # [678.Valid Parenthesis String][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given a string `s` containing only three types of characters: `'('`, `')'` and `'*'`, return `true` if `s` is **valid**.
+
+The following rules define a **valid** string:
+
+- Any left parenthesis `'('` must have a corresponding right parenthesis `')'`.
+- Any right parenthesis `')'` must have a corresponding left parenthesis `'('`.
+- Left parenthesis `'('` must go before the corresponding right parenthesis `')'`.
+- `'*'` could be treated as a single right parenthesis `')'` or a single left parenthesis `'('` or an empty string `""`.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: s = "()"
+Output: true
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Valid Parenthesis String
-```go
+```
+Input: s = "(*)"
+Output: true
 ```
 
+**Example 3:**
+
+```
+Input: s = "(*))"
+Output: true
+```
 
 ## 结语
 
