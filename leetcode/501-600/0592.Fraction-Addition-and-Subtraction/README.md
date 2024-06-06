@@ -1,28 +1,30 @@
 # [592.Fraction Addition and Subtraction][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given a string `expression` representing an expression of fraction addition and subtraction, return the calculation result in string format.
+
+The final result should be an [irreducible fraction](https://en.wikipedia.org/wiki/Irreducible_fraction). If your final result is an integer, change it to the format of a fraction that has a denominator `1`. So in this case, `2` should be converted to `2/1`.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: expression = "-1/2+1/2"
+Output: "0/1"
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Fraction Addition and Subtraction
-```go
+```
+Input: expression = "-1/2+1/2+1/3"
+Output: "1/3"
 ```
 
+**Example 3:**
+
+```
+Input: expression = "1/3-1/2"
+Output: "-1/6"
+```
 
 ## 结语
 
