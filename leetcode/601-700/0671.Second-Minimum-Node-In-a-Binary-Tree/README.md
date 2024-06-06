@@ -1,28 +1,31 @@
 # [671.Second Minimum Node In a Binary Tree][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given a non-empty special binary tree consisting of nodes with the non-negative value, where each node in this tree has exactly `two` or `zero` sub-node. If the node has two sub-nodes, then this node's value is the smaller value among its two sub-nodes. More formally, the property `root.val = min(root.left.val, root.right.val)` always holds.
 
-**Example 1:**
+Given such a binary tree, you need to output the **second minimum** value in the set made of all the nodes' value in the whole tree.
+
+If no such second minimum value exists, output -1 instead.
+
+**Example 1:**  
+
+![1](./smbt1.jpeg)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: root = [2,2,5,null,null,5,7]
+Output: 5
+Explanation: The smallest value is 2, the second smallest value is 5.
 ```
 
-## 题意
-> ...
+**Example 2:**  
 
-## 题解
+![2](./smbt2.jpeg)
 
-### 思路1
-> ...
-Second Minimum Node In a Binary Tree
-```go
 ```
-
+Input: root = [2,2,2]
+Output: -1
+Explanation: The smallest value is 2, but there isn't any second smallest value.
+```
 
 ## 结语
 
