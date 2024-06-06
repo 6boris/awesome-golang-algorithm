@@ -1,28 +1,39 @@
 # [1249.Minimum Remove to Make Valid Parentheses][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given a string s of `'('` , `')'` and lowercase English characters.
+
+Your task is to remove the minimum number of parentheses ( `'('` or `')'`, in any positions ) so that the resulting parentheses string is valid and return **ans** valid string.
+
+Formally, a parentheses string is valid if and only if:
+
+- It is the empty string, contains only lowercase characters, or
+- It can be written as `AB` (`A` concatenated with `B`), where `A` and `B` are valid strings, or
+- It can be written as `(A)`, where `A` is a valid string.
+
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: s = "lee(t(c)o)de)"
+Output: "lee(t(c)o)de"
+Explanation: "lee(t(co)de)" , "lee(t(c)ode)" would also be accepted.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Minimum Remove to Make Valid Parentheses
-```go
+```
+Input: s = "a)b(c)d"
+Output: "ab(c)d"
 ```
 
+**Example 3:**
+
+```
+Input: s = "))(("
+Output: ""
+Explanation: An empty string is also valid.
+```
 
 ## 结语
 
