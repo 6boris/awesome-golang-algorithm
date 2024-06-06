@@ -1,28 +1,36 @@
 # [500.Keyboard Row][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given an array of strings `words`, return the words that can be typed using letters of the alphabet on only one row of American keyboard like the image below.
+
+In the **American keyboard**:
+
+- the first row consists of the characters `"qwertyuiop"`,
+- the second row consists of the characters `"asdfghjkl"`, and
+- the third row consists of the characters `"zxcvbnm"`.
+
+![1](./keyboard.png)
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: words = ["Hello","Alaska","Dad","Peace"]
+Output: ["Alaska","Dad"]
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Keyboard Row
-```go
+```
+Input: words = ["omk"]
+Output: []
 ```
 
+**Example 3:**
+
+```
+Input: words = ["adsdf","sfd"]
+Output: ["adsdf","sfd"]
+```
 
 ## 结语
 
