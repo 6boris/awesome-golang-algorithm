@@ -1,28 +1,22 @@
 # [633.Sum of Square Numbers][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given a non-negative integer `c`, decide whether there're two integers `a` and `b` such that a<sup>2</sup> + b<sup>2</sup> = c.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: c = 5
+Output: true
+Explanation: 1 * 1 + 2 * 2 = 5
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Sum of Square Numbers
-```go
 ```
-
+Input: c = 3
+Output: false
+```
 
 ## 结语
 
