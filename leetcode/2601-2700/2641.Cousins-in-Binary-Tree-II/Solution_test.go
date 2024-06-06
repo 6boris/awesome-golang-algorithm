@@ -10,12 +10,41 @@ func TestSolution(t *testing.T) {
 	//	测试用例
 	cases := []struct {
 		name   string
-		inputs bool
-		expect bool
+		inputs *TreeNode
+		expect *TreeNode
 	}{
-		{"TestCase", true, true},
-		{"TestCase", true, true},
-		{"TestCase", false, false},
+		{"TestCase1", &TreeNode{
+			Val: 5,
+			Left: &TreeNode{
+				Val:   4,
+				Left:  &TreeNode{Val: 1},
+				Right: &TreeNode{Val: 10},
+			},
+			Right: &TreeNode{
+				Val:   9,
+				Right: &TreeNode{Val: 7},
+			},
+		}, &TreeNode{
+			Val: 0,
+			Left: &TreeNode{
+				Val:   0,
+				Left:  &TreeNode{Val: 7},
+				Right: &TreeNode{Val: 7},
+			},
+			Right: &TreeNode{
+				Val:   0,
+				Right: &TreeNode{Val: 11},
+			},
+		}},
+		{"TestCase1", &TreeNode{
+			Val:   3,
+			Left:  &TreeNode{Val: 1},
+			Right: &TreeNode{Val: 2},
+		}, &TreeNode{
+			Val:   0,
+			Left:  &TreeNode{Val: 0},
+			Right: &TreeNode{Val: 0},
+		}},
 	}
 
 	//	开始测试
@@ -30,10 +59,10 @@ func TestSolution(t *testing.T) {
 	}
 }
 
-//	压力测试
+// 压力测试
 func BenchmarkSolution(b *testing.B) {
 }
 
-//	使用案列
+// 使用案列
 func ExampleSolution() {
 }
