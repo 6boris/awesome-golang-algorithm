@@ -1,28 +1,21 @@
 # [448.Find All Numbers Disappeared in an Array][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given an array `nums` of `n` integers where `nums[i]` is in the range `[1, n]`, return an array of all the integers in the range `[1, n]` that do not appear in `nums`.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: nums = [4,3,2,7,8,2,3,1]
+Output: [5,6]
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Find All Numbers Disappeared in an Array
-```go
 ```
-
+Input: nums = [1,1]
+Output: [2]
+```
 
 ## 结语
 
