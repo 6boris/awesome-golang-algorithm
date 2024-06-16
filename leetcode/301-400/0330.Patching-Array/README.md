@@ -1,28 +1,36 @@
 # [330.Patching Array][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given a sorted integer array `nums` and an integer `n`, add/patch elements to the array such that any number in the range `[1, n]` inclusive can be formed by the sum of some elements in the array.
+
+Return the minimum number of patches required.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: nums = [1,3], n = 6
+Output: 1
+Explanation:
+Combinations of nums are [1], [3], [1,3], which form possible sums of: 1, 3, 4.
+Now if we add/patch 2 to nums, the combinations are: [1], [2], [3], [1,3], [2,3], [1,2,3].
+Possible sums are 1, 2, 3, 4, 5, 6, which now covers the range [1, 6].
+So we only need 1 patch.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Patching Array
-```go
+```
+Input: nums = [1,5,10], n = 20
+Output: 2
+Explanation: The two patches can be [2, 4].
 ```
 
+**Example 3:**
+
+```
+Input: nums = [1,2,2], n = 5
+Output: 0
+```
 
 ## 结语
 
