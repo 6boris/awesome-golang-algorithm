@@ -1,28 +1,30 @@
 # [873.Length of Longest Fibonacci Subsequence][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+A sequence `x1, x2, ..., xn` is Fibonacci-like if:
+
+- `n >= 3`
+- `xi + xi+1 == xi+2` for all `i + 2 <= n`
+
+Given a **strictly increasing** array `arr` of positive integers forming a sequence, return the **length** of the longest Fibonacci-like subsequence of `arr`. If one does not exist, return `0`.
+
+A **subsequence** is derived from another sequence `arr` by deleting any number of elements (including none) from `arr`, without changing the order of the remaining elements. For example, `[3, 5, 8]` is a subsequence of `[3, 4, 5, 6, 7, 8]`.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: arr = [1,2,3,4,5,6,7,8]
+Output: 5
+Explanation: The longest subsequence that is fibonacci-like: [1,2,3,5,8].
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Length of Longest Fibonacci Subsequence
-```go
 ```
-
+Input: arr = [1,3,7,11,12,14,18]
+Output: 3
+Explanation: The longest subsequence that is fibonacci-like: [1,11,12], [3,11,14] or [7,11,18].
+```
 
 ## 结语
 
