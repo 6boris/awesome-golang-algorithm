@@ -1,28 +1,26 @@
 # [1791.Find Center of Star Graph][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+There is an undirected **star** graph consisting of `n` nodes labeled from `1` to `n`. A star graph is a graph where there is one **center** node and **exactly** `n - 1` edges that connect the center node with every other node.
 
-**Example 1:**
+You are given a 2D integer array `edges` where each `edges[i] = [ui, vi]` indicates that there is an edge between the nodes `ui` and `vi`. Return the center of the given star graph.
+
+**Example 1:**  
+
+![1](./star_graph.png)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: edges = [[1,2],[2,3],[4,2]]
+Output: 2
+Explanation: As shown in the figure above, node 2 is connected to every other node, so 2 is the center.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Find Center of Star Graph
-```go
 ```
-
+Input: edges = [[1,2],[5,1],[1,3],[1,4]]
+Output: 1
+```
 
 ## 结语
 
