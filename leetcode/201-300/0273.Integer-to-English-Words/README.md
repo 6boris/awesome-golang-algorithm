@@ -1,28 +1,28 @@
 # [273.Integer to English Words][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Convert a non-negative integer `num` to its English words representation.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: num = 123
+Output: "One Hundred Twenty Three"
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Integer to English Words
-```go
+```
+Input: num = 12345
+Output: "Twelve Thousand Three Hundred Forty Five"
 ```
 
+**Example 3:**
+
+```
+Input: num = 1234567
+Output: "One Million Two Hundred Thirty Four Thousand Five Hundred Sixty Seven"
+```
 
 ## 结语
 
