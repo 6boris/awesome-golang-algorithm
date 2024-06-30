@@ -1,28 +1,27 @@
 # [965.Univalued Binary Tree][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+A binary tree is **uni-valued** if every node in the tree has the same value.
 
-**Example 1:**
+Given the `root` of a binary tree, return `true` if the given tree is **uni-valued**, or `false` otherwise.
+
+**Example 1:**  
+
+![1](./unival_bst_1.png)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: root = [1,1,1,1,1,null,1]
+Output: true
 ```
 
-## 题意
-> ...
+**Example 2:**  
 
-## 题解
+![2](./unival_bst_2.png)
 
-### 思路1
-> ...
-Univalued Binary Tree
-```go
 ```
-
+Input: root = [2,2,2,5,2]
+Output: false
+```
 
 ## 结语
 
