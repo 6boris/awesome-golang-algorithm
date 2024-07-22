@@ -1,28 +1,23 @@
 # [541.Reverse String II][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given a string `s` and an integer `k`, reverse the first `k` characters for every `2k` characters counting from the start of the string.
+
+If there are fewer than `k` characters left, reverse all of them. If there are less than `2k` but greater than or equal to `k` characters, then reverse the first `k` characters and leave the other as original.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: s = "abcdefg", k = 2
+Output: "bacdfeg"
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Reverse String II
-```go
 ```
-
+Input: s = "abcd", k = 2
+Output: "bacd"
+```
 
 ## 结语
 
