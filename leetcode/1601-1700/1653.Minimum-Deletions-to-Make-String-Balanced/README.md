@@ -1,28 +1,29 @@
 # [1653.Minimum Deletions to Make String Balanced][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given a string `s` consisting only of characters `'a'` and `'b'`.
+
+You can delete any number of characters in `s` to make `s` **balanced**. `s` is **balanced** if there is no pair of indices `(i,j)` such that `i < j` and `s[i] = 'b'` and `s[j]= 'a'`.
+
+Return the **minimum** number of deletions needed to make `s` **balanced**.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: s = "aababbab"
+Output: 2
+Explanation: You can either:
+Delete the characters at 0-indexed positions 2 and 6 ("aababbab" -> "aaabbb"), or
+Delete the characters at 0-indexed positions 3 and 6 ("aababbab" -> "aabbbb").
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Minimum Deletions to Make String Balanced
-```go
 ```
-
+Input: s = "bbaaaaabb"
+Output: 2
+Explanation: The only solution is to delete the first two characters.
+```
 
 ## 结语
 
