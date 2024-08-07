@@ -1,28 +1,29 @@
 # [3070.Count Submatrices with Top-Left Element and Sum Less Than k][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given a **0-indexed** integer matrix `grid` and an integer `k`.
 
-**Example 1:**
+Return the **number** of submatrices that contain the top-left element of the `grid`, and have a sum less than or equal to `k`.
+
+**Example 1:**  
+
+![1](./1.png)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: grid = [[7,6,3],[6,6,1]], k = 18
+Output: 4
+Explanation: There are only 4 submatrices, shown in the image above, that contain the top-left element of grid, and have a sum less than or equal to 18.
 ```
 
-## 题意
-> ...
+**Example 2:**  
 
-## 题解
+![2](./2.png)
 
-### 思路1
-> ...
-Count Submatrices with Top-Left Element and Sum Less Than k
-```go
 ```
-
+Input: grid = [[7,2,9],[1,5,0],[2,6,6]], k = 20
+Output: 6
+Explanation: There are only 6 submatrices, shown in the image above, that contain the top-left element of grid, and have a sum less than or equal to 20.
+```
 
 ## 结语
 
