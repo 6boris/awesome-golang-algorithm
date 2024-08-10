@@ -1,28 +1,40 @@
 # [959.Regions Cut By Slashes][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+An `n x n` grid is composed of `1 x 1` squares where each `1 x 1` square consists of a `'/'`, `'\'`, or blank space `' '`. These characters divide the square into contiguous regions.
 
-**Example 1:**
+Given the `grid` grid represented as a string array, return the number of regions.
+
+Note that backslash characters are escaped, so a `'\'` is represented as `'\\'`.
+
+
+**Example 1:**  
+
+![1](./1.png)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: grid = [" /","/ "]
+Output: 2
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
+![2](./2.png)
 
-### 思路1
-> ...
-Regions Cut By Slashes
-```go
+```
+Input: grid = [" /","  "]
+Output: 1
 ```
 
+**Example 3:**
+
+![3](./4.png)
+
+```
+Input: grid = ["/\\","\\/"]
+Output: 5
+Explanation: Recall that because \ characters are escaped, "\\/" refers to \/, and "/\\" refers to /\.
+```
 
 ## 结语
 
