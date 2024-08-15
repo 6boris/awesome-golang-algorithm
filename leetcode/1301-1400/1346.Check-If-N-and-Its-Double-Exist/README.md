@@ -1,28 +1,27 @@
 # [1346.Check If N and Its Double Exist][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given an array `arr` of integers, check if there exist two indices `i` and `j` such that :
+
+- `i != j`
+- `0 <= i, j < arr.length`
+- `arr[i] == 2 * arr[j]`
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: arr = [10,2,5,3]
+Output: true
+Explanation: For i = 0 and j = 2, arr[i] == 10 == 2 * 5 == 2 * arr[j]
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Check If N and Its Double Exist
-```go
 ```
-
+Input: arr = [3,1,7,11]
+Output: false
+Explanation: There is no i and j that satisfy the conditions.
+```
 
 ## 结语
 
