@@ -1,28 +1,29 @@
 # [916.Word Subsets][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given two string arrays `words1` and `words2`.
+
+A string `b` is a **subset** of string `a` if every letter in `b` occurs in `a` including multiplicity.
+
+- For example, `"wrr"` is a subset of `"warrior"` but is not a subset of `"world"`.
+
+A string `a` from `words1` is **universal** if for every string `b` in `words2`, `b` is a subset of `a`.
+
+Return an array of all the **universal** strings in `words1`. You may return the answer in **any order**.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: words1 = ["amazon","apple","facebook","google","leetcode"], words2 = ["e","o"]
+Output: ["facebook","google","leetcode"]
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Word Subsets
-```go
 ```
-
+Input: words1 = ["amazon","apple","facebook","google","leetcode"], words2 = ["l","e"]
+Output: ["apple","google","leetcode"]
+```
 
 ## 结语
 
