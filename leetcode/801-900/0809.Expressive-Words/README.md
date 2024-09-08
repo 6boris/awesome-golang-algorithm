@@ -1,28 +1,35 @@
 # [809.Expressive Words][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Sometimes people repeat letters to represent extra feeling. For example:
+
+- `"hello" -> "heeellooo"`
+- `"hi" -> "hiiii"`
+
+In these strings like `"heeellooo"`, we have groups of adjacent letters that are all the same: `"h"`, `"eee"`, `"ll"`, `"ooo"`.
+
+You are given a string `s` and an array of query strings `words`. A query word is **strectchy** if it can be made to be equal to `s` by any number of applications of the following extension operation: choose a group consisting of characters `c`, and add some number of characters `c` to the group so that the size of the group is **three or more**.
+
+- For example, starting with `"hello"`, we could do an extension on the group `"o"` to get `"hellooo"`, but we cannot get `"helloo"` since the group `"oo"` has a size less than three. Also, we could do another extension like `"ll" -> "lllll"` to get `"helllllooo"`. If `s = "helllllooo"`, then the query word `"hello"` would be **strectchy** because of these two extension operations: `query = "hello" -> "hellooo" -> "helllllooo" = s`.
+
+Return the number of query strings that are **strectchy**.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: s = "heeellooo", words = ["hello", "hi", "helo"]
+Output: 1
+Explanation: 
+We can extend "e" and "o" in the word "hello" to get "heeellooo".
+We can't extend "helo" to get "heeellooo" because the group "ll" is not size 3 or more.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Expressive Words
-```go
 ```
-
+Input: s = "zzzzzyyyyy", words = ["zzyy","zy","zyy"]
+Output: 3
+```
 
 ## 结语
 
