@@ -1,28 +1,23 @@
 # [1078.Occurrences After Bigram][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given two strings `first` and `second`, consider occurrences in some text of the form `"first second third"`, where `second` comes immediately after `first`, and `third` comes immediately after `second`.
+
+Return an array of all the words `third` for each occurrence of `"first second third"`.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: text = "alice is a good girl she is a good student", first = "a", second = "good"
+Output: ["girl","student"]
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Occurrences After Bigram
-```go
 ```
-
+Input: text = "we will we will rock you", first = "we", second = "will"
+Output: ["we","rock"]
+```
 
 ## 结语
 
