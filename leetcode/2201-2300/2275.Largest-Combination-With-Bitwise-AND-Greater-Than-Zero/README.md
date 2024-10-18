@@ -1,28 +1,35 @@
 # [2275.Largest Combination With Bitwise AND Greater Than Zero][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+The **bitwise AND** of an array `nums` is the bitwise AND of all integers in `nums`.
+
+- For example, for `nums = [1, 5, 3]`, the bitwise AND is equal to `1 & 5 & 3 = 1`.
+- Also, for `nums = [7]`, the bitwise AND is `7`.
+
+You are given an array of positive integers `candidates`. Evaluate the **bitwise AND** of every **combination** of numbers of `candidates`. Each number in `candidates` may only be used **once** in each combination.
+
+Return the size of the **largest** combination of `candidats` with a bitwise AND **greater** than `0`.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: candidates = [16,17,71,62,12,24,14]
+Output: 4
+Explanation: The combination [16,17,62,24] has a bitwise AND of 16 & 17 & 62 & 24 = 16 > 0.
+The size of the combination is 4.
+It can be shown that no combination with a size greater than 4 has a bitwise AND greater than 0.
+Note that more than one combination may have the largest size.
+For example, the combination [62,12,24,14] has a bitwise AND of 62 & 12 & 24 & 14 = 8 > 0.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Largest Combination With Bitwise AND Greater Than Zero
-```go
 ```
-
+Input: candidates = [8,8]
+Output: 2
+Explanation: The largest combination [8,8] has a bitwise AND of 8 & 8 = 8 > 0.
+The size of the combination is 2, so we return 2.
+```
 
 ## 结语
 
