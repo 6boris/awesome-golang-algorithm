@@ -1,28 +1,35 @@
 # [1593.Split a String Into the Max Number of Unique Substrings][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given a string `s`, return the maximum number of unique substrings that the given string can be split into.
+
+You can split string `s` into any list of **non-empty substrings**, where the concatenation of the substrings forms the original string. However, you must split the substrings such that all of them are **unique**.
+
+A **substring** is a contiguous sequence of characters within a string.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: s = "ababccc"
+Output: 5
+Explanation: One way to split maximally is ['a', 'b', 'ab', 'c', 'cc']. Splitting like ['a', 'b', 'a', 'b', 'c', 'cc'] is not valid as you have 'a' and 'b' multiple times.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Split a String Into the Max Number of Unique Substrings
-```go
+```
+Input: s = "aba"
+Output: 2
+Explanation: One way to split maximally is ['a', 'ba'].
 ```
 
+**Example 3:**
+
+```
+Input: s = "aa"
+Output: 1
+Explanation: It is impossible to split the string any further.
+```
 
 ## 结语
 
