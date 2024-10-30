@@ -19,3 +19,32 @@ func Solution(skill []int) int64 {
 	}
 	return ans
 }
+
+func Solution1(skill []int) int64 {
+	l := len(skill) / 2
+	sum := 0
+	for _, n := range skill {
+		sum += n
+	}
+	if sum%l != 0 {
+		return -1
+	}
+	target := sum / l
+	count := make(map[int]int)
+	for _, n := range skill {
+		count[n]++
+	}
+
+	ans := int64(0)
+	for k, c := range count {
+		need := target - k
+		if need == k && c&1 == 1 {
+			return -1
+		}
+		if v, ok := count[need]; !ok || v != c {
+			return -1
+		}
+		ans += int64(k) * int64(need) * int64(c)
+	}
+	return ans / 2
+}
