@@ -1,28 +1,31 @@
 # [1222.Queens That Can Attack the King][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+On a **0-indexed** `8 x 8` chessboard, there can be multiple black queens and one white king.
 
-**Example 1:**
+You are given a 2D integer array `queens` where `queens[i] = [xQueeni, yQueeni]` represents the position of the `ith` black queen on the chessboard. You are also given an integer array `king` of length `2` where `king = [xKing, yKing]` represents the position of the white king.
+
+Return the coordinates of the black queens that can directly attack the king. You may return the answer in **any order**.
+
+**Example 1:**  
+
+![1](./1.jpg)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: queens = [[0,1],[1,0],[4,0],[0,4],[3,3],[2,4]], king = [0,0]
+Output: [[0,1],[1,0],[3,3]]
+Explanation: The diagram above shows the three queens that can directly attack the king and the three queens that cannot attack the king (i.e., marked with red dashes).
 ```
 
-## 题意
-> ...
+**Example 2:**  
 
-## 题解
+![2](./2.jpg)
 
-### 思路1
-> ...
-Queens That Can Attack the King
-```go
 ```
-
+Input: queens = [[0,0],[1,1],[2,2],[3,4],[3,5],[4,4],[4,5]], king = [3,3]
+Output: [[2,2],[3,4],[4,4]]
+Explanation: The diagram above shows the three queens that can directly attack the king and the three queens that cannot attack the king (i.e., marked with red dashes).
+```
 
 ## 结语
 
