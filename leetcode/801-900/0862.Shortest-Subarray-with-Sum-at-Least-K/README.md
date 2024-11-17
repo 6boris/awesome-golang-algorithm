@@ -1,28 +1,30 @@
 # [862.Shortest Subarray with Sum at Least K][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given an integer array `nums` and an integer `k`, return the length of the shortest non-empty **subarray** of `nums` with a sum of at least `k`. If there is no such **subarray**, return `-1`.
+
+A **subarray** is a **contiguous** part of an array.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: nums = [1], k = 1
+Output: 1
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Shortest Subarray with Sum at Least K
-```go
+```
+Input: nums = [1,2], k = 4
+Output: -1
 ```
 
+**Example 3:**
+
+```
+Input: nums = [2,-1,2], k = 3
+Output: 3
+```
 
 ## 结语
 
