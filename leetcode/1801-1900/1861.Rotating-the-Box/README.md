@@ -1,28 +1,57 @@
 # [1861.Rotating the Box][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given an `m x n` matrix of characters `box` representing a side-view of a box. Each cell of the box is one of the following:
 
-**Example 1:**
+- A stone `'#'`
+- A stationary obstacle `'*'`
+- Empty `'.'`
+
+The box is rotated **90 degrees clockwise**, causing some of the stones to fall due to gravity. Each stone falls down until it lands on an obstacle, another stone, or the bottom of the box. Gravity **does not** affect the obstacles' positions, and the inertia from the box's rotation **does not** affect the stones' horizontal positions.
+
+It is **guaranteed** that each stone in `box` rests on an obstacle, another stone, or the bottom of the box.
+
+Return an `n x m` matrix representing the box after the rotation described above.
+
+**Example 1:**  
+
+![1](./1.png)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: box = [["#",".","#"]]
+Output: [["."],
+         ["#"],
+         ["#"]]
 ```
 
-## 题意
-> ...
+**Example 2:**  
 
-## 题解
+![2](./2.png)
 
-### 思路1
-> ...
-Rotating the Box
-```go
+```
+Input: box = [["#",".","*","."],
+              ["#","#","*","."]]
+Output: [["#","."],
+         ["#","#"],
+         ["*","*"],
+         [".","."]]
 ```
 
+**Example 3:**  
+
+![3](./3.png)
+
+```
+Input: box = [["#","#","*",".","*","."],
+              ["#","#","#","*",".","."],
+              ["#","#","#",".","#","."]]
+Output: [[".","#","#"],
+         [".","#","#"],
+         ["#","#","*"],
+         ["#","*","."],
+         ["#",".","*"],
+         ["#",".","."]]
+```
 
 ## 结语
 
