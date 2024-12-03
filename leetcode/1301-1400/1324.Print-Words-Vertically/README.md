@@ -1,28 +1,38 @@
 # [1324.Print Words Vertically][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given a string `s`. Return all the words vertically in the same order in which they appear in `s`.
+Words are returned as a list of strings, complete with spaces when is necessary. (Trailing spaces are not allowed).
+Each word would be put on only one column and that in one column there will be only one word.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: s = "HOW ARE YOU"
+Output: ["HAY","ORO","WEU"]
+Explanation: Each word is printed vertically. 
+ "HAY"
+ "ORO"
+ "WEU"
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Print Words Vertically
-```go
+```
+Input: s = "TO BE OR NOT TO BE"
+Output: ["TBONTB","OEROOE","   T"]
+Explanation: Trailing spaces is not allowed. 
+"TBONTB"
+"OEROOE"
+"   T"
 ```
 
+**Example 3:**
+
+```
+Input: s = "CONTEST IS COMING"
+Output: ["CIC","OSO","N M","T I","E N","S G","T"]
+```
 
 ## 结语
 
