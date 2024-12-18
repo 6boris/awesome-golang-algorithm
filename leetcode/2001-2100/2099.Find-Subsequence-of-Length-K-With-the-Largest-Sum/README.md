@@ -1,28 +1,39 @@
 # [2099.Find Subsequence of Length K With the Largest Sum][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given an integer array `nums` and an integer `k`. You want to find a **subsequence** of `nums` of length `k` that has the **largest** sum.
+
+Return **any** such subsequence as an integer array of length `k`.
+
+A **subsequence** is an array that can be derived from another array by deleting some or no elements without changing the order of the remaining elements.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: nums = [2,1,3,3], k = 2
+Output: [3,3]
+Explanation:
+The subsequence has the largest sum of 3 + 3 = 6.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Find Subsequence of Length K With the Largest Sum
-```go
+```
+Input: nums = [-1,-2,3,4], k = 3
+Output: [-1,3,4]
+Explanation: 
+The subsequence has the largest sum of -1 + 3 + 4 = 6.
 ```
 
+**Example 3:**
+
+```
+Input: nums = [3,4,3,3], k = 2
+Output: [3,4]
+Explanation:
+The subsequence has the largest sum of 3 + 4 = 7. 
+Another possible subsequence is [4, 3].
+```
 
 ## 结语
 
