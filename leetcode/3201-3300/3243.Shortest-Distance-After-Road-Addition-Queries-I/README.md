@@ -1,28 +1,35 @@
 # [3243.Shortest Distance After Road Addition Queries I][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given an integer `n` and a 2D integer array `queries`.
 
-**Example 1:**
+There are `n` cities numbered from `0` to `n - 1`. Initially, there is a **unidirectional** road from city `i` to city `i + 1` for all `0 <= i < n - 1`.
+
+`queries[i] = [ui, vi]` represents the addition of a new **unidirectional** road from city `ui` to city `vi`. After each query, you need to find the **length** of the **shortest path** from city `0` to city `n - 1`.
+
+Return an array `answer` where for each `i` in the range `[0, queries.length - 1]`, `answer[i]` is the length of the shortest path from city `0` to city `n - 1` after processing the **first** `i + 1` queries.
+
+**Example 1:**  
+
+![1](./1.jpg)
+![2](./2.jpg)
+![3](./3.jpg)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: n = 5, queries = [[2,4],[0,2],[0,4]]
+Output: [3,2,1]
 ```
 
-## 题意
-> ...
+**Example 2:**  
 
-## 题解
+![4](./4.jpg)
+![5](./5.jpg)
 
-### 思路1
-> ...
-Shortest Distance After Road Addition Queries I
-```go
 ```
+Input: n = 4, queries = [[0,3],[0,2]]
 
+Output: [1,1]
+```
 
 ## 结语
 
