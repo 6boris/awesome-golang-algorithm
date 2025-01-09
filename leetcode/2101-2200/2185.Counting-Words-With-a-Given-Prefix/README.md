@@ -1,28 +1,27 @@
 # [2185.Counting Words With a Given Prefix][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given an array of strings `words` and a string `pref`.
+
+Return the number of strings in `words` that contain `pref` as a **prefix**.
+
+A **prefix** of a string `s` is any leading contiguous substring of `s`.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: words = ["pay","attention","practice","attend"], pref = "at"
+Output: 2
+Explanation: The 2 strings that contain "at" as a prefix are: "attention" and "attend".
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Counting Words With a Given Prefix
-```go
 ```
-
+Input: words = ["leetcode","win","loops","success"], pref = "code"
+Output: 0
+Explanation: There are no strings that contain "code" as a prefix.
+```
 
 ## 结语
 
