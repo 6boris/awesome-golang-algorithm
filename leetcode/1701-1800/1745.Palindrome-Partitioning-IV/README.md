@@ -1,28 +1,25 @@
 # [1745.Palindrome Partitioning IV][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given a string `s`, return `true` if it is possible to split the string `s` into three **non-empty** palindromic substrings. Otherwise, return `false`.
+
+A string is said to be palindrome if it the same string when reversed.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: s = "abcbdd"
+Output: true
+Explanation: "abcbdd" = "a" + "bcb" + "dd", and all three substrings are palindromes.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Palindrome Partitioning IV
-```go
 ```
-
+Input: s = "bcbddxy"
+Output: false
+Explanation: s cannot be split into 3 palindromes.
+```
 
 ## 结语
 
