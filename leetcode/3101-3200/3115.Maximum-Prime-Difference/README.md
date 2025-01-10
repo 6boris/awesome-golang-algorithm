@@ -1,28 +1,29 @@
 # [3115.Maximum Prime Difference][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given an integer array `nums`.
+
+Return an integer that is the **maximum** distance between the **indices** of two (not necessarily different) prime numbers in `nums`.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: nums = [4,2,9,5,3]
+
+Output: 3
+
+Explanation: nums[1], nums[3], and nums[4] are prime. So the answer is |4 - 1| = 3.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Maximum Prime Difference
-```go
 ```
+Input: nums = [4,8,2,8]
 
+Output: 0
+
+Explanation: nums[2] is prime. Because there is just one prime number, the answer is |2 - 2| = 0.
+```
 
 ## 结语
 
