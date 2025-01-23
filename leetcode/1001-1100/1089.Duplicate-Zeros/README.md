@@ -1,28 +1,25 @@
 # [1089.Duplicate Zeros][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given a fixed-length integer array `arr`, duplicate each occurrence of zero, shifting the remaining elements to the right.
+
+**Note** that elements beyond the length of the original array are not written. Do the above modifications to the input array in place and do not return anything.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: arr = [1,0,2,3,0,4,5,0]
+Output: [1,0,0,2,3,0,0,4]
+Explanation: After calling your function, the input array is modified to: [1,0,0,2,3,0,0,4]
 ```
 
-## 题意
-> ...
+**EXample 2:**
 
-## 题解
-
-### 思路1
-> ...
-Duplicate Zeros
-```go
 ```
-
+Input: arr = [1,2,3]
+Output: [1,2,3]
+Explanation: After calling your function, the input array is modified to: [1,2,3]
+```
 
 ## 结语
 
