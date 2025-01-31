@@ -1,28 +1,35 @@
 # [827.Making A Large Island][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given an `n x n` binary matrix `grid`. You are allowed to change **at most one** `0` to be `1`.
+
+Return the size of the largest **island** in `grid` after applying this operation.
+
+An **island** is a 4-directionally connected group of `1`s.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: grid = [[1,0],[0,1]]
+Output: 3
+Explanation: Change one 0 to 1 and connect two 1s, then we get an island with area = 3.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Making A Large Island
-```go
+```
+Input: grid = [[1,1],[1,0]]
+Output: 4
+Explanation: Change the 0 to 1 and make the island bigger, only one island with area = 4.
 ```
 
+**Example 3:**
+
+```
+Input: grid = [[1,1],[1,1]]
+Output: 4
+Explanation: Can't change any 0 to 1, only one island with area = 4.
+```
 
 ## 结语
 
