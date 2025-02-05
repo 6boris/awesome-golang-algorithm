@@ -1,28 +1,33 @@
 # [1790.Check if One String Swap Can Make Strings Equal][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given two strings `s1` and `s2` of equal length. A **string swap** is an operation where you choose two indices in a string (not necessarily different) and swap the characters at these indices.
+
+Return true if it is possible to make both strings equal by performing **at most one string swap** on **exactly one** of the strings. Otherwise, return `false`.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: s1 = "bank", s2 = "kanb"
+Output: true
+Explanation: For example, swap the first character with the last character of s2 to make "bank".
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Check if One String Swap Can Make Strings Equal
-```go
+```
+Input: s1 = "attack", s2 = "defend"
+Output: false
+Explanation: It is impossible to make them equal with one string swap.
 ```
 
+**Example 3:**
+
+```
+Input: s1 = "kelb", s2 = "kelb"
+Output: true
+Explanation: The two strings are already equal, so no string swap operation is required.
+```
 
 ## 结语
 
