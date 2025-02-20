@@ -1,28 +1,45 @@
 # [3151.Special Array I][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+An array is considered **special** if every pair of its adjacent elements contains two numbers with different parity.
+
+You are given an array of integers `nums`. Return `true` if `nums` is a **special** array, otherwise, return `false`.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: nums = [1]
+
+Output: true
+
+Explanation:
+
+There is only one element. So the answer is true.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
+```
+Input: nums = [2,1,4]
 
-### 思路1
-> ...
-Special Array I
-```go
+Output: true
+
+Explanation:
+
+There is only two pairs: (2,1) and (1,4), and both of them contain numbers with different parity. So the answer is true.
 ```
 
+**Example 3:**
+
+```
+Input: nums = [4,3,1,6]
+
+Output: false
+
+Explanation:
+
+nums[1] and nums[2] are both odd. So the answer is false.
+```
 
 ## 结语
 
