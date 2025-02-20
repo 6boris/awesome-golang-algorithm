@@ -1,28 +1,33 @@
 # [942.DI String Match][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+A permutation `perm` of `n + 1` integers of all the integers in the range `[0, n]` can be represented as a string `s` of length `n` where:
+
+- `s[i] == 'I'` if `perm[i] < perm[i + 1]`, and
+- `s[i] == 'D'` if `perm[i] > perm[i + 1]`.
+
+Given a string `s`, reconstruct the permutation `perm` and return it. If there are multiple valid permutations perm, return **any of them**.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: s = "IDID"
+Output: [0,4,1,3,2]
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-DI String Match
-```go
+```
+Input: s = "III"
+Output: [0,1,2,3]
 ```
 
+**Example 3:**
+
+```
+Input: s = "DDI"
+Output: [3,2,0,1]
+```
 
 ## 结语
 
