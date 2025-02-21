@@ -1,28 +1,32 @@
 # [1780.Check if Number is a Sum of Powers of Three][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given an integer `n`, return `true` if it is possible to represent `n` as the sum of distinct powers of three. Otherwise, return `false`.
+
+An integer `y` is a power of three if there exists an integer `x` such that `y == 3^x`.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: n = 12
+Output: true
+Explanation: 12 = 31 + 32
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Check if Number is a Sum of Powers of Three
-```go
+```
+Input: n = 91
+Output: true
+Explanation: 91 = 30 + 32 + 34
 ```
 
+**Example 3:**
+
+```
+Input: n = 21
+Output: false
+```
 
 ## 结语
 
