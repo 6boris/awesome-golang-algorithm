@@ -1,28 +1,35 @@
 # [1828.Queries on Number of Points Inside a Circle][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given an array `points` where `points[i] = [xi, yi]` is the coordinates of the `ith` point on a 2D plane. Multiple points can have the **same** coordinates.
 
-**Example 1:**
+You are also given an array `queries` where `queries[j] = [xj, yj, rj]` describes a circle centered at `(xj, yj)` with a radius of `rj`.
+
+For each query `queries[j]`, compute the number of points **inside** the `jth` circle. Points **on the border** of the circle are considered **inside**.
+
+Return an array `answer`, where `answer[j]` is the answer to the `jth` query.
+
+**Example 1:**  
+
+![1](./1.png)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: points = [[1,3],[3,3],[5,3],[2,2]], queries = [[2,3,1],[4,3,1],[1,1,2]]
+Output: [3,2,2]
+Explanation: The points and circles are shown above.
+queries[0] is the green circle, queries[1] is the red circle, and queries[2] is the blue circle.
 ```
 
-## 题意
-> ...
+**EXample 2:**  
 
-## 题解
+![2](./2.png)
 
-### 思路1
-> ...
-Queries on Number of Points Inside a Circle
-```go
 ```
-
+Input: points = [[1,1],[2,2],[3,3],[4,4],[5,5]], queries = [[1,2,2],[2,2,2],[4,3,2],[4,3,3]]
+Output: [2,3,2,4]
+Explanation: The points and circles are shown above.
+queries[0] is green, queries[1] is red, queries[2] is blue, and queries[3] is purple.
+```
 
 ## 结语
 
