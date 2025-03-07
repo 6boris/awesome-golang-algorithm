@@ -1,28 +1,25 @@
 # [889.Construct Binary Tree from Preorder and Postorder Traversal][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given two integer arrays, `preorder` and `postorder` where preorder is the preorder traversal of a binary tree of **distinct** values and `postorder` is the postorder traversal of the same tree, reconstruct and return the binary tree.
 
-**Example 1:**
+If there exist multiple answers, you can **return any** of them.
+
+**Example 1:**  
+
+![1](./1.jpg)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: preorder = [1,2,4,5,3,6,7], postorder = [4,5,2,6,7,3,1]
+Output: [1,2,3,4,5,6,7]
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Construct Binary Tree from Preorder and Postorder Traversal
-```go
 ```
-
+Input: preorder = [1], postorder = [1]
+Output: [1]
+```
 
 ## 结语
 
