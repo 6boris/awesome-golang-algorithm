@@ -1,28 +1,31 @@
 # [1362.Closest Divisors][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given an integer `num`, find the closest two integers in absolute difference whose product equals `num + 1` or `num + 2`.
+
+Return the two integers in any order.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: num = 8
+Output: [3,3]
+Explanation: For num + 1 = 9, the closest divisors are 3 & 3, for num + 2 = 10, the closest divisors are 2 & 5, hence 3 & 3 is chosen.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Closest Divisors
-```go
+```
+Input: num = 123
+Output: [5,25]
 ```
 
+**Example 3:**
+
+```
+Input: num = 999
+Output: [40,25]
+```
 
 ## 结语
 
