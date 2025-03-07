@@ -1,28 +1,33 @@
 # [917.Reverse Only Letters][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given a string `s`, reverse the string according to the following rules:
+
+- All the characters that are not English letters remain in the same position.
+- All the English letters (lowercase or uppercase) should be reversed.
+
+Return `s` after reversing it.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: s = "ab-cd"
+Output: "dc-ba"
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Reverse Only Letters
-```go
+```
+Input: s = "a-bC-dEf-ghIj"
+Output: "j-Ih-gfE-dCba"
 ```
 
+**Example 3:**
+
+```
+Input: s = "Test1ng-Leet=code-Q!"
+Output: "Qedo1ct-eeLg=ntse-T!"
+```
 
 ## 结语
 
