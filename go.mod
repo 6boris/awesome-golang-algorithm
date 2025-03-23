@@ -12,14 +12,14 @@ require (
 	github.com/cloudflare/circl v1.6.0 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/go-task/slim-sprig/v3 v3.0.0 // indirect
-	github.com/google/pprof v0.0.0-20250302191652-9094ed2288e7 // indirect
+	github.com/google/pprof v0.0.0-20250317173921-a4b03ec1a45e // indirect
 	github.com/hashicorp/errwrap v1.1.0 // indirect
 	github.com/hashicorp/go-multierror v1.1.1 // indirect
 	github.com/klauspost/compress v1.18.0 // indirect
-	github.com/onsi/ginkgo/v2 v2.23.0 // indirect
+	github.com/onsi/ginkgo/v2 v2.23.3 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/quic-go/qpack v0.5.1 // indirect
-	github.com/quic-go/quic-go v0.50.0 // indirect
+	github.com/quic-go/quic-go v0.50.1 // indirect
 	github.com/refraction-networking/utls v1.6.7 // indirect
 	go.uber.org/mock v0.5.0 // indirect
 	golang.org/x/crypto v0.36.0 // indirect
