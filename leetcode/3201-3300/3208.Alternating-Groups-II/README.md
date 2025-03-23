@@ -1,28 +1,64 @@
 # [3208.Alternating Groups II][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+There is a circle of red and blue tiles. You are given an array of integers `colors` and an integer `k`. The color of tile i is represented by `colors[i]`:
 
-**Example 1:**
+- `colors[i] == 0` means that tile `i` is **red**.
+- `colors[i] == 1` means that tile `i` is **blue**.
+
+An **alternating** group is every k contiguous tiles in the circle with **alternating** colors (each tile in the group except the first and last one has a different color from its **left** and **right** tiles).
+
+Return the number of **alternating** groups.
+
+**Note** that since `colors` represents a **circle**, the **first** and the **last** tiles are considered to be next to each other.
+
+**Example 1:**  
+
+![1](./1.png)
+
+
+![2](./2.png)
+
+
+![3](./3.png)
+
+
+![4](./4.png)
+
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: colors = [0,1,0,1,0], k = 3
+
+Output: 3
 ```
 
-## 题意
-> ...
+**Example 2:**  
 
-## 题解
+![5](./5.png)
 
-### 思路1
-> ...
-Alternating Groups II
-```go
+
+![6](./6.png)
+
+
+![7](./7.png)
+
+
+```
+Input: colors = [0,1,0,0,1,0,1], k = 6
+
+
+Output: 2
 ```
 
+**Example 3:**  
+
+![8](./8.png)
+
+```
+Input: colors = [1,1,0,1], k = 4
+
+Output: 0
+```
 
 ## 结语
 
