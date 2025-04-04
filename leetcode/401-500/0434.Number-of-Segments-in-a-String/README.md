@@ -1,28 +1,24 @@
 # [434.Number of Segments in a String][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given a string `s`, return the number of segments in the string.
+
+A **segment** is defined to be a contiguous sequence of **non-space characters**.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: s = "Hello, my name is John"
+Output: 5
+Explanation: The five segments are ["Hello,", "my", "name", "is", "John"]
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Number of Segments in a String
-```go
 ```
-
+Input: s = "Hello"
+Output: 1
+```
 
 ## 结语
 
