@@ -1,28 +1,35 @@
 # [775.Global and Local Inversions][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given an integer array `nums` of length `n` which represents a permutation of all the integers in the range `[0, n - 1]`.
+
+The number of **global inversions** is the number of the different pairs `(i, j)` where:
+
+- `0 <= i < j < n`
+- `nums[i] > nums[j]`
+
+The number of **local inversions** is the number of indices `i` where:
+
+- `0 <= i < n - 1`
+- `nums[i] > nums[i + 1]`
+
+Return `true` if the number of **global inversions** is equal to the number of **local inversions**.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: nums = [1,0,2]
+Output: true
+Explanation: There is 1 global inversion and 1 local inversion.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Global and Local Inversions
-```go
 ```
-
+Input: nums = [1,2,0]
+Output: false
+Explanation: There are 2 global inversions and 1 local inversion.
+```
 
 ## 结语
 
