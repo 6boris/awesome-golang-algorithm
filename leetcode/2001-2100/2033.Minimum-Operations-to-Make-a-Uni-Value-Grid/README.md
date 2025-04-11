@@ -1,28 +1,45 @@
 # [2033.Minimum Operations to Make a Uni-Value Grid][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given a 2D integer `grid` of size `m x n` and an integer `x`. In one operation, you can **add** `x` to or **subtract** `x` from any element in the `grid`.
 
-**Example 1:**
+A **uni-value** grid is a grid where all the elements of it are equal.
+
+Return the **minimum** number of operations to make the grid **uni-value**. If it is not possible, return `-1`.
+
+**Example 1:**  
+
+![1](./1.png)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: grid = [[2,4],[6,8]], x = 2
+Output: 4
+Explanation: We can make every element equal to 4 by doing the following: 
+- Add x to 2 once.
+- Subtract x from 6 once.
+- Subtract x from 8 twice.
+A total of 4 operations were used.
 ```
 
-## 题意
-> ...
+**Example 2:**  
 
-## 题解
+![2](./2.png)
 
-### 思路1
-> ...
-Minimum Operations to Make a Uni-Value Grid
-```go
+```
+Input: grid = [[1,5],[2,3]], x = 1
+Output: 5
+Explanation: We can make every element equal to 3.
 ```
 
+**Example 3:**  
+
+![3](./3.png)
+
+```
+Input: grid = [[1,2],[3,4]], x = 2
+Output: -1
+Explanation: It is impossible to make every element equal.
+```
 
 ## 结语
 
