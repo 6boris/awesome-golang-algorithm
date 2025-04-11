@@ -1,28 +1,37 @@
 # [1209.Remove All Adjacent Duplicates in String II][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given a string `s` and an integer `k`, a `k` **duplicate removal** consists of choosing `k` adjacent and equal letters from `s` and removing them, causing the left and the right side of the deleted substring to concatenate together.
+
+We repeatedly make `k` **duplicate removals** on `s` until we no longer can.
+
+Return the final string after all such duplicate removals have been made. It is guaranteed that the answer is **unique**.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: s = "abcd", k = 2
+Output: "abcd"
+Explanation: There's nothing to delete.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Remove All Adjacent Duplicates in String II
-```go
+```
+Input: s = "deeedbbcccbdaa", k = 3
+Output: "aa"
+Explanation: 
+First delete "eee" and "ccc", get "ddbbbdaa"
+Then delete "bbb", get "dddaa"
+Finally delete "ddd", get "aa"
 ```
 
+**Example 3:**
+
+```
+Input: s = "pbbcggttciiippooaais", k = 2
+Output: "ps"
+```
 
 ## 结语
 
