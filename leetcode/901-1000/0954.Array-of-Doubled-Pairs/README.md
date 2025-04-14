@@ -1,28 +1,29 @@
 # [954.Array of Doubled Pairs][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given an integer array of even length `arr`, return `true` if it is possible to reorder arr such that `arr[2 * i + 1] = 2 * arr[2 * i]` for every `0 <= i < len(arr) / 2`, or `false` otherwise.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: arr = [3,1,3,6]
+Output: false
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Array of Doubled Pairs
-```go
+```
+Input: arr = [2,1,2,6]
+Output: false
 ```
 
+**Example 3:**
+
+```
+Input: arr = [4,-2,2,-4]
+Output: true
+Explanation: We can take two groups, [-2,-4] and [2,4] to form [-2,-4,2,4] or [2,4,-2,-4].
+```
 
 ## 结语
 
