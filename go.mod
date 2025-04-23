@@ -1,6 +1,7 @@
 module awesome-golang-algorithm
 
 go 1.24
+toolchain go1.24.1
 
 require (
 	github.com/imroc/req/v3 v3.50.0
@@ -20,7 +21,7 @@ require (
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/quic-go/qpack v0.5.1 // indirect
 	github.com/quic-go/quic-go v0.50.1 // indirect
-	github.com/refraction-networking/utls v1.6.7 // indirect
+	github.com/refraction-networking/utls v1.7.0 // indirect
 	go.uber.org/automaxprocs v1.6.0 // indirect
 	go.uber.org/mock v0.5.1 // indirect
 	golang.org/x/crypto v0.37.0 // indirect
