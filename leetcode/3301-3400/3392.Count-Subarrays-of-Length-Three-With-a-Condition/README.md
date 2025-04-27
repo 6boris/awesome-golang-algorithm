@@ -1,28 +1,31 @@
 # [3392.Count Subarrays of Length Three With a Condition][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given an integer array `nums`, return the number of subarrays of length 3 such that the sum of the first and third numbers equals exactly half of the second number.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: nums = [1,2,1,4,1]
+
+Output: 1
+
+Explanation:
+
+Only the subarray [1,4,1] contains exactly 3 elements where the sum of the first and third numbers equals half the middle number.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Count Subarrays of Length Three With a Condition
-```go
 ```
+Input: nums = [1,1,1]
 
+Output: 0
+
+Explanation:
+
+[1,1,1] is the only subarray of length 3. However, its first and third numbers do not add to half the middle number.
+```
 
 ## 结语
 
