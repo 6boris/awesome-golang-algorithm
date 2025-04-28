@@ -1,28 +1,35 @@
 # [3211.Generate Binary Strings Without Adjacent Zeros][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given a positive integer `n`.
+
+A binary string `x` is **valid** if all substrings of `x` of length 2 contain **at least** one `"1"`.
+
+Return all **valid** strings with length `n`, in any order.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: n = 3
+
+Output: ["010","011","101","110","111"]
+
+Explanation:
+
+The valid strings of length 3 are: "010", "011", "101", "110", and "111".
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Generate Binary Strings Without Adjacent Zeros
-```go
 ```
+Input: n = 1
 
+Output: ["0","1"]
+
+Explanation:
+
+The valid strings of length 1 are: "0" and "1".
+```
 
 ## 结语
 
