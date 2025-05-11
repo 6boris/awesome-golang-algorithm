@@ -1,28 +1,31 @@
 # [1262.Greatest Sum Divisible by Three][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given an integer array `nums`, return the **maximum possible sum** of elements of the array such that it is divisible by three.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: nums = [3,6,5,1,8]
+Output: 18
+Explanation: Pick numbers 3, 6, 1 and 8 their sum is 18 (maximum sum divisible by 3).
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Greatest Sum Divisible by Three
-```go
+```
+Input: nums = [4]
+Output: 0
+Explanation: Since 4 is not divisible by 3, do not pick any number.
 ```
 
+**Example 3:**
+
+```
+Input: nums = [1,2,3,4,4]
+Output: 12
+Explanation: Pick numbers 1, 3, 4 and 4 their sum is 12 (maximum sum divisible by 3).
+```
 
 ## 结语
 
