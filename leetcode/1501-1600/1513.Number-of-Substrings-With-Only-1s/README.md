@@ -1,28 +1,34 @@
 # [1513.Number of Substrings With Only 1s][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given a binary string `s`, return the number of substrings with all characters `1`'s. Since the answer may be too large, return it modulo `10^9 + 7`.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: s = "0110111"
+Output: 9
+Explanation: There are 9 substring in total with only 1's characters.
+"1" -> 5 times.
+"11" -> 3 times.
+"111" -> 1 time.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Number of Substrings With Only 1s
-```go
+```
+Input: s = "101"
+Output: 2
+Explanation: Substring "1" is shown 2 times in s.
 ```
 
+**Example 3:**
+
+```
+Input: s = "111111"
+Output: 21
+Explanation: Each substring contains only 1's characters.
+```
 
 ## 结语
 
