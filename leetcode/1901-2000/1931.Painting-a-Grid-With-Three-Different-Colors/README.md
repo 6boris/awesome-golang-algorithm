@@ -1,28 +1,36 @@
 # [1931.Painting a Grid With Three Different Colors][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given two integers `m` and `n`. Consider an m x n grid where each cell is initially white. You can paint each cell **red**, **green**, or **blue**. All cells **must** be painted.
 
-**Example 1:**
+Return the number of ways to color the grid with **no two adjacent cells having the same color**. Since the answer can be very large, return it **modulo** `10^9 + 7`.
+
+**Example 1:**  
+
+![1](./1.png)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: m = 1, n = 1
+Output: 3
+Explanation: The three possible colorings are shown in the image above.
 ```
 
-## 题意
-> ...
+**Example 2:**  
 
-## 题解
+![2](./2.png)
 
-### 思路1
-> ...
-Painting a Grid With Three Different Colors
-```go
+```
+Input: m = 1, n = 2
+Output: 6
+Explanation: The six possible colorings are shown in the image above.
 ```
 
+**Example 3:**
+
+```
+Input: m = 5, n = 5
+Output: 580986
+```
 
 ## 结语
 
