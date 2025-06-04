@@ -1,28 +1,22 @@
 # [1163.Last Substring in Lexicographical Order][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given a string `s`, return the last substring of `s` in lexicographical order.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: s = "abab"
+Output: "bab"
+Explanation: The substrings are ["a", "ab", "aba", "abab", "b", "ba", "bab"]. The lexicographically maximum substring is "bab".
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Last Substring in Lexicographical Order
-```go
 ```
-
+Input: s = "leetcode"
+Output: "tcode"
+```
 
 ## 结语
 
