@@ -1,28 +1,37 @@
 # [3170.Lexicographically Minimum String After Removing Stars][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given a string `s`. It may contain any number of `'*'` characters. Your task is to remove all `'*'` characters.
+
+While there is a `'*'`, do the following operation:
+
+- Delete the leftmost `'*'` and the **smallest** non-`'*'` character to its left. If there are several smallest characters, you can delete any of them.
+
+Return the **lexicographically smallest** resulting string after removing all `'*'` characters.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: s = "aaba*"
+
+Output: "aab"
+
+Explanation:
+
+We should delete one of the 'a' characters with '*'. If we choose s[3], s becomes the lexicographically smallest.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Lexicographically Minimum String After Removing Stars
-```go
 ```
+Input: s = "abc"
 
+Output: "abc"
+
+Explanation:
+
+There is no '*' in the string.
+```
 
 ## 结语
 
