@@ -1,28 +1,43 @@
 # [3304.Find the K-th Character in String Game I][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Alice and Bob are playing a game. Initially, Alice has a string `word = "a"`.
+
+You are given a **positive** integer `k`.
+
+Now Bob will ask Alice to perform the following operation **forever**:
+
+- Generate a new string by **changing** each character in `word` to its **next** character in the English alphabet, and **append** it to the original `word`.
+
+For example, performing the operation on `"c"` generates `"cd"` and performing the operation on `"zb"` generates `"zbac"`.
+
+Return the value of the `kth` character in `word`, after enough operations have been done for `word` to have **at least** `k` characters.
+
+**Note** that the character `'z'` can be changed to `'a'` in the operation.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: k = 5
+
+Output: "b"
+
+Explanation:
+
+Initially, word = "a". We need to do the operation three times:
+
+Generated string is "b", word becomes "ab".
+Generated string is "bc", word becomes "abbc".
+Generated string is "bccd", word becomes "abbcbccd".
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Find the K-th Character in String Game I
-```go
 ```
+Input: k = 10
 
+Output: "c"
+```
 
 ## 结语
 
