@@ -10,12 +10,25 @@ func TestSolution(t *testing.T) {
 	//	测试用例
 	cases := []struct {
 		name   string
-		inputs bool
-		expect bool
+		inputs [][]string
+		expect [][]string
 	}{
-		{"TestCase", true, true},
-		{"TestCase", true, true},
-		{"TestCase", false, false},
+		{"TestCase1", [][]string{
+			{"a"}, {"c"}, {"d"}, {"a", "b"},
+			{"c", "b"}, {"d", "a"},
+		}, [][]string{{"d"}, {"d", "a"}}},
+		{"TestCase2", [][]string{
+			{"a"}, {"c"}, {"a", "b"}, {"c", "b"}, {"a", "b", "x"},
+			{"a", "b", "x", "y"}, {"w"}, {"w", "y"},
+		}, [][]string{
+			{"a"}, {"a", "b"},
+			{"c"}, {"c", "b"},
+		}},
+		{"TestCase3", [][]string{
+			{"a", "b"}, {"c", "d"}, {"c"}, {"a"},
+		}, [][]string{
+			{"a"}, {"a", "b"}, {"c"}, {"c", "d"},
+		}},
 	}
 
 	//	开始测试
@@ -30,10 +43,10 @@ func TestSolution(t *testing.T) {
 	}
 }
 
-//	压力测试
+// 压力测试
 func BenchmarkSolution(b *testing.B) {
 }
 
-//	使用案列
+// 使用案列
 func ExampleSolution() {
 }
