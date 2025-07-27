@@ -1,28 +1,23 @@
 # [1016.Binary String With Substrings Representing 1 To N][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given a binary string `s` and a positive integer `n`, return `true` if the binary representation of all the integers in the range `[1, n]` are **substrings** of `s`, or `false` otherwise.
+
+A **substring** is a contiguous sequence of characters within a string.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: s = "0110", n = 3
+Output: true
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Binary String With Substrings Representing 1 To N
-```go
 ```
-
+Input: s = "0110", n = 4
+Output: false
+```
 
 ## 结语
 
