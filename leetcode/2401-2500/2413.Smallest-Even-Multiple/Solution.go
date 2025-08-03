@@ -1,5 +1,8 @@
 package Solution
 
-func Solution(x bool) bool {
-	return x
+func Solution(n int) int {
+	if n&1 == 1 {
+		return 2 * n
+	}
+	return n
 }
