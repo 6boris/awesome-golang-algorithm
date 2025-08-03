@@ -1,28 +1,36 @@
 # [3202.Find the Maximum Length of Valid Subsequence II][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given an integer array `nums` and a **positive** integer `k`.
+A `subsequence` `sub` of `nums` with length `x` is called **valid** if it satisfies:
+
+- `(sub[0] + sub[1]) % k == (sub[1] + sub[2]) % k == ... == (sub[x - 2] + sub[x - 1]) % k`.
+
+Return the length of the **longest valid** subsequence of `nums`.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: nums = [1,2,3,4,5], k = 2
+
+Output: 5
+
+Explanation:
+
+The longest valid subsequence is [1, 2, 3, 4, 5].
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Find the Maximum Length of Valid Subsequence II
-```go
 ```
+Input: nums = [1,4,2,3,1,4], k = 3
 
+Output: 4
+
+Explanation:
+
+The longest valid subsequence is [1, 4, 1, 4].
+```
 
 ## 结语
 
