@@ -1,28 +1,32 @@
 # [593.Valid Square][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given the coordinates of four points in 2D space `p1`, `p2`, `p3` and `p4`, return true if the four points construct a square.
+
+The coordinate of a point pi is represented as `[xi, yi]`. The input is **not** given in any order.
+
+A **valid square** has four equal sides with positive length and four equal angles (90-degree angles).
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: p1 = [0,0], p2 = [1,1], p3 = [1,0], p4 = [0,1]
+Output: true
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Valid Square
-```go
+```
+Input: p1 = [0,0], p2 = [1,1], p3 = [1,0], p4 = [0,12]
+Output: false
 ```
 
+**Example 3:**
+
+```
+Input: p1 = [1,0], p2 = [-1,0], p3 = [0,1], p4 = [0,-1]
+Output: true
+```
 
 ## 结语
 
