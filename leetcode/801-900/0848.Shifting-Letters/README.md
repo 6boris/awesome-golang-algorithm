@@ -1,28 +1,33 @@
 # [848.Shifting Letters][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given a string `s` of lowercase English letters and an integer array `shifts` of the same length.
+
+Call the `shift()` of a letter, the next letter in the alphabet, (wrapping around so that `'z'` becomes `'a'`).
+
+- For example, `shift('a') = 'b'`, `shift('t') = 'u'`, and `shift('z') = 'a'`.
+
+Now for each `shifts[i] = x`, we want to shift the first `i + 1` letters of `s`, x times.
+
+Return the final string after all such shifts to s are applied.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: s = "abc", shifts = [3,5,9]
+Output: "rpl"
+Explanation: We start with "abc".
+After shifting the first 1 letters of s by 3, we have "dbc".
+After shifting the first 2 letters of s by 5, we have "igc".
+After shifting the first 3 letters of s by 9, we have "rpl", the answer.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Shifting Letters
-```go
 ```
-
+Input: s = "aaa", shifts = [1,2,3]
+Output: "gfd"
+```
 
 ## 结语
 
