@@ -1,28 +1,36 @@
 # [3100.Water Bottles II][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given two integers `numBottles` and `numExchange`.
 
-**Example 1:**
+`numBottles` represents the number of full water bottles that you initially have. In one operation, you can perform one of the following operations:
+
+- Drink any number of full water bottles turning them into empty bottles.
+- Exchange `numExchange` empty bottles with one full water bottle. Then, increase `numExchange` by one.
+
+Note that you cannot exchange multiple batches of empty bottles for the same value of `numExchange`. For example, if `numBottles == 3` and `numExchange == 1`, you cannot exchange `3` empty water bottles for `3` full bottles.
+
+Return the **maximum** number of water bottles you can drink.
+
+**Example 1:**  
+
+![1](./1.png)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: numBottles = 13, numExchange = 6
+Output: 15
+Explanation: The table above shows the number of full water bottles, empty water bottles, the value of numExchange, and the number of bottles drunk.
 ```
 
-## 题意
-> ...
+**Example 2:**  
 
-## 题解
+![2](./2.png)
 
-### 思路1
-> ...
-Water Bottles II
-```go
 ```
-
+Input: numBottles = 10, numExchange = 3
+Output: 13
+Explanation: The table above shows the number of full water bottles, empty water bottles, the value of numExchange, and the number of bottles drunk.
+```
 
 ## 结语
 
