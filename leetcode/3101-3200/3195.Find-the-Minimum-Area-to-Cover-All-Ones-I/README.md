@@ -1,28 +1,37 @@
 # [3195.Find the Minimum Area to Cover All Ones I][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given a 2D **binary** array `grid`. Find a rectangle with horizontal and vertical sides with the **smallest** area, such that all the 1's in `grid` lie inside this rectangle.
 
-**Example 1:**
+Return the **minimum** possible area of the rectangle.
+
+**Example 1:**  
+
+![1](./1.png)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: grid = [[0,1,0],[1,0,1]]
+
+Output: 6
+
+Explanation:
+
+The smallest rectangle has a height of 2 and a width of 3, so it has an area of 2 * 3 = 6.
 ```
 
-## 题意
-> ...
+**Example 2:**  
 
-## 题解
+![2](./2.png)
 
-### 思路1
-> ...
-Find the Minimum Area to Cover All Ones I
-```go
 ```
+Input: grid = [[1,0],[0,0]]
 
+Output: 1
+
+Explanation:
+
+The smallest rectangle has both height and width 1, so its area is 1 * 1 = 1.
+```
 
 ## 结语
 
