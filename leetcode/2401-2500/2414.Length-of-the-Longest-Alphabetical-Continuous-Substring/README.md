@@ -1,28 +1,28 @@
 # [2414.Length of the Longest Alphabetical Continuous Substring][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+An **alphabetical continuous string** is a string consisting of consecutive letters in the alphabet. In other words, it is any substring of the string `"abcdefghijklmnopqrstuvwxyz"`.
+
+- For example, `"abc"` is an alphabetical continuous string, while `"acb"` and `"za"` are not.
+
+Given a string `s` consisting of lowercase letters only, return the length of the **longest** alphabetical continuous substring.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: s = "abacaba"
+Output: 2
+Explanation: There are 4 distinct continuous substrings: "a", "b", "c" and "ab".
+"ab" is the longest continuous substring.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Length of the Longest Alphabetical Continuous Substring
-```go
 ```
-
+Input: s = "abcde"
+Output: 5
+Explanation: "abcde" is the longest continuous substring.
+```
 
 ## 结语
 
