@@ -1,28 +1,54 @@
 # [3239.Minimum Number of Flips to Make Binary Grid Palindromic I][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given an `m x n` binary matrix `grid`.
 
-**Example 1:**
+A row or column is considered `palindromic` if its values read the same forward and backward.
+
+You can **flip** any number of cells in `grid` from `0` to `1`, or from `1` to `0`.
+
+Return the **minimum** number of cells that need to be flipped to make **either** all rows **palindromic** or all columns **palindromic**.
+
+
+**Example 1:**  
+
+![1](./1.png)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: grid = [[1,0,0],[0,0,0],[0,0,1]]
+
+Output: 2
+
+Explanation:
+
+Flipping the highlighted cells makes all the rows palindromic.
 ```
 
-## 题意
-> ...
+**Example 2:**  
 
-## 题解
+![2](./2.png)
 
-### 思路1
-> ...
-Minimum Number of Flips to Make Binary Grid Palindromic I
-```go
+```
+Input: grid = [[0,1],[0,1],[0,0]]
+
+Output: 1
+
+Explanation:
+
+Flipping the highlighted cell makes all the columns palindromic.
 ```
 
+**Example 3:**
+
+```
+Input: grid = [[1],[0]]
+
+Output: 0
+
+Explanation:
+
+All rows are already palindromic.
+```
 
 ## 结语
 
