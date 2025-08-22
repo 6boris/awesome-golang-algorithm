@@ -1,28 +1,41 @@
 # [1504.Count Submatrices With All Ones][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given an `m x n` binary matrix `mat`, return the number of **submatrices** that have all ones.
 
-**Example 1:**
+**Example 1:**  
+
+![1](./1.jpg)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: mat = [[1,0,1],[1,1,0],[1,1,0]]
+Output: 13
+Explanation: 
+There are 6 rectangles of side 1x1.
+There are 2 rectangles of side 1x2.
+There are 3 rectangles of side 2x1.
+There is 1 rectangle of side 2x2. 
+There is 1 rectangle of side 3x1.
+Total number of rectangles = 6 + 2 + 3 + 1 + 1 = 13.
 ```
 
-## 题意
-> ...
+**Example 2:**  
 
-## 题解
+![2](./2.jpg)
 
-### 思路1
-> ...
-Count Submatrices With All Ones
-```go
 ```
-
+Input: mat = [[0,1,1,0],[0,1,1,1],[1,1,1,0]]
+Output: 24
+Explanation: 
+There are 8 rectangles of side 1x1.
+There are 5 rectangles of side 1x2.
+There are 2 rectangles of side 1x3. 
+There are 4 rectangles of side 2x1.
+There are 2 rectangles of side 2x2. 
+There are 2 rectangles of side 3x1. 
+There is 1 rectangle of side 3x2. 
+Total number of rectangles = 8 + 5 + 2 + 4 + 2 + 2 + 1 = 24.
+```
 
 ## 结语
 
