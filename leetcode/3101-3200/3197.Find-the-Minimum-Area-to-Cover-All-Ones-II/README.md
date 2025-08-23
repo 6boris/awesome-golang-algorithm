@@ -1,28 +1,43 @@
 # [3197.Find the Minimum Area to Cover All Ones II][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given a 2D **binary** array `grid`. You need to find 3 **non-overlapping** rectangles having **non-zero** areas with horizontal and vertical sides such that all the 1's in `grid` lie inside these rectangles.
 
-**Example 1:**
+Return the **minimum** possible sum of the area of these rectangles.
+
+**Note** that the rectangles are allowed to touch.
+
+**Example 1:**  
+
+![1](./1.png)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: grid = [[1,0,1],[1,1,1]]
+
+Output: 5
+
+Explanation:
+
+The 1's at (0, 0) and (1, 0) are covered by a rectangle of area 2.
+The 1's at (0, 2) and (1, 2) are covered by a rectangle of area 2.
+The 1 at (1, 1) is covered by a rectangle of area 1.
 ```
 
-## 题意
-> ...
+**Example 2:**  
 
-## 题解
+![2](./2.png)
 
-### 思路1
-> ...
-Find the Minimum Area to Cover All Ones II
-```go
 ```
+Input: grid = [[1,0,1,0],[0,1,0,1]]
 
+Output: 5
+
+Explanation:
+
+The 1's at (0, 0) and (0, 2) are covered by a rectangle of area 3.
+The 1 at (1, 1) is covered by a rectangle of area 1.
+The 1 at (1, 3) is covered by a rectangle of area 1.
+```
 
 ## 结语
 
