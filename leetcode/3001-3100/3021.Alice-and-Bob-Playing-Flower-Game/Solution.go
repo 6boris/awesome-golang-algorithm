@@ -1,5 +1,5 @@
 package Solution
 
-func Solution(x bool) bool {
-	return x
+func Solution(n int, m int) int64 {
+	return int64(m) * int64(n) / 2
 }
