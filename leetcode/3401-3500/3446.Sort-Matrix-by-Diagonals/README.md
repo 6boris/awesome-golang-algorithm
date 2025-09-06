@@ -1,28 +1,57 @@
 # [3446.Sort Matrix by Diagonals][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given an `n x n` square matrix of integers `grid`. Return the matrix such that:
 
-**Example 1:**
+- The diagonals in the **bottom-left triangle** (including the middle diagonal) are sorted in **non-increasing order**.
+- The diagonals in the **top-right triangle** are sorted in **non-decreasing order**.
+
+**Example 1:**  
+
+![1](./1.png)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: grid = [[1,7,3],[9,8,2],[4,5,6]]
+
+Output: [[8,2,3],[9,6,7],[4,5,1]]
+
+Explanation:
+
+The diagonals with a black arrow (bottom-left triangle) should be sorted in non-increasing order:
+
+[1, 8, 6] becomes [8, 6, 1].
+[9, 5] and [4] remain unchanged.
+The diagonals with a blue arrow (top-right triangle) should be sorted in non-decreasing order:
+
+[7, 2] becomes [2, 7].
+[3] remains unchanged.
 ```
 
-## 题意
-> ...
+**Example 2:**  
 
-## 题解
+![2](./2.png)
 
-### 思路1
-> ...
-Sort Matrix by Diagonals
-```go
+```
+Input: grid = [[0,1],[1,2]]
+
+Output: [[2,1],[1,0]]
+
+Explanation:
+
+The diagonals with a black arrow must be non-increasing, so [0, 2] is changed to [2, 0]. The other diagonals are already in the correct order.
 ```
 
+**Example 3:**
+
+```
+Input: grid = [[1]]
+
+Output: [[1]]
+
+Explanation:
+
+Diagonals with exactly one element are already in order, so no changes are needed.
+```
 
 ## 结语
 
