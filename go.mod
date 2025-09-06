@@ -3,15 +3,13 @@ module awesome-golang-algorithm
 go 1.24
 
 require (
-	github.com/imroc/req/v3 v3.54.0
-	github.com/stretchr/testify v1.10.0
+	github.com/imroc/req/v3 v3.54.2
+	github.com/stretchr/testify v1.11.1
 )
 
 require (
 	github.com/andybalholm/brotli v1.2.0 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
-	github.com/hashicorp/errwrap v1.1.0 // indirect
-	github.com/hashicorp/go-multierror v1.1.1 // indirect
 	github.com/icholy/digest v1.1.0 // indirect
 	github.com/klauspost/compress v1.18.0 // indirect
 	github.com/kr/pretty v0.3.1 // indirect
