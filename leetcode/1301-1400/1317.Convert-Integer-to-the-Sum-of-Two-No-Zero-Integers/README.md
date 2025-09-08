@@ -1,28 +1,33 @@
 # [1317.Convert Integer to the Sum of Two No-Zero Integers][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+**No-Zero integer** is a positive integer that **does not contain any** `0` in its decimal representation.
+
+Given an integer `n`, return a list of two integers `[a, b]` where:
+
+- `a` and `b` are **No-Zero integers**.
+- `a + b = n`
+
+The test cases are generated so that there is at least one valid solution. If there are many valid solutions, you can return any of them.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: n = 2
+Output: [1,1]
+Explanation: Let a = 1 and b = 1.
+Both a and b are no-zero integers, and a + b = 2 = n.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Convert Integer to the Sum of Two No-Zero Integers
-```go
 ```
-
+Input: n = 11
+Output: [2,9]
+Explanation: Let a = 2 and b = 9.
+Both a and b are no-zero integers, and a + b = 11 = n.
+Note that there are other valid answers as [8, 3] that can be accepted.
+```
 
 ## 结语
 
