@@ -9,31 +9,32 @@ import (
 func TestSolution(t *testing.T) {
 	//	测试用例
 	cases := []struct {
-		name   string
-		inputs bool
-		expect bool
+		name          string
+		inputs        string
+		brokenLetters string
+		expect        int
 	}{
-		{"TestCase", true, true},
-		{"TestCase", true, true},
-		{"TestCase", false, false},
+		{"TestCase1", "hello world", "ad", 1},
+		{"TestCase2", "leet code", "lt", 1},
+		{"TestCase3", "leet code", "e", 0},
 	}
 
 	//	开始测试
 	for i, c := range cases {
 		t.Run(c.name+" "+strconv.Itoa(i), func(t *testing.T) {
-			got := Solution(c.inputs)
+			got := Solution(c.inputs, c.brokenLetters)
 			if !reflect.DeepEqual(got, c.expect) {
-				t.Fatalf("expected: %v, but got: %v, with inputs: %v",
-					c.expect, got, c.inputs)
+				t.Fatalf("expected: %v, but got: %v, with inputs: %v %v",
+					c.expect, got, c.inputs, c.brokenLetters)
 			}
 		})
 	}
 }
 
-//	压力测试
+// 压力测试
 func BenchmarkSolution(b *testing.B) {
 }
 
-//	使用案列
+// 使用案列
 func ExampleSolution() {
 }
