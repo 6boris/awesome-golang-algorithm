@@ -1,28 +1,21 @@
 # [1139.Largest 1-Bordered Square][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given a 2D `grid` of `0`s and `1`s, return the number of elements in the largest **square** subgrid that has all `1`s on its **border**, or 0 if such a subgrid doesn't exist in the `grid`.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: grid = [[1,1,1],[1,0,1],[1,1,1]]
+Output: 9
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Largest 1-Bordered Square
-```go
 ```
-
+Input: grid = [[1,1,0,0]]
+Output: 1
+```
 
 ## 结语
 
