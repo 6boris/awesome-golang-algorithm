@@ -1,28 +1,24 @@
 # [812.Largest Triangle Area][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given an array of points on the **X-Y** plane `points` where `points[i] = [xi, yi]`, return the area of the largest triangle that can be formed by any three different points. Answers within 10-5 of the actual answer will be accepted.
 
-**Example 1:**
+**Example 1:**  
+
+![1](./1.png)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: points = [[0,0],[0,1],[1,0],[0,2],[2,0]]
+Output: 2.00000
+Explanation: The five points are shown in the above figure. The red triangle is the largest.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Largest Triangle Area
-```go
 ```
-
+Input: points = [[1,0],[0,0],[0,1]]
+Output: 0.50000
+```
 
 ## 结语
 
