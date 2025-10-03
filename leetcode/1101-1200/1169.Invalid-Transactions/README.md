@@ -1,28 +1,36 @@
 # [1169.Invalid Transactions][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+A transaction is possibly invalid if:
+
+- the amount exceeds `$1000`, or;
+- if it occurs within (and including) `60` minutes of another transaction with the **same name** in a **different city**.
+
+You are given an array of strings `transactions` where `transactions[i]` consists of comma-separated values representing the name, time (in minutes), amount, and city of the transaction.
+
+Return a list of `transactions` that are possibly invalid. You may return the answer in **any order**.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: transactions = ["alice,20,800,mtv","alice,50,100,beijing"]
+Output: ["alice,20,800,mtv","alice,50,100,beijing"]
+Explanation: The first transaction is invalid because the second transaction occurs within a difference of 60 minutes, have the same name and is in a different city. Similarly the second one is invalid too.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Invalid Transactions
-```go
+```
+Input: transactions = ["alice,20,800,mtv","alice,50,1200,mtv"]
+Output: ["alice,50,1200,mtv"]
 ```
 
+**Example 3:**
+
+```
+Input: transactions = ["alice,20,800,mtv","bob,50,1200,mtv"]
+Output: ["bob,50,1200,mtv"]
+```
 
 ## 结语
 
