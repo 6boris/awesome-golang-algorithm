@@ -1,28 +1,27 @@
 # [976.Largest Perimeter Triangle][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given an integer array `nums`, return the largest perimeter of a triangle with a non-zero area, formed from three of these lengths. If it is impossible to form any triangle of a non-zero area, return `0`.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: nums = [2,1,2]
+Output: 5
+Explanation: You can form a triangle with three side lengths: 1, 2, and 2.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Largest Perimeter Triangle
-```go
 ```
-
+Input: nums = [1,2,1,10]
+Output: 0
+Explanation: 
+You cannot use the side lengths 1, 1, and 2 to form a triangle.
+You cannot use the side lengths 1, 1, and 10 to form a triangle.
+You cannot use the side lengths 1, 2, and 10 to form a triangle.
+As we cannot use any three side lengths to form a triangle of non-zero area, we return 0.
+```
 
 ## 结语
 
