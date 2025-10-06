@@ -2,7 +2,6 @@ module awesome-golang-algorithm
 
 go 1.25
 
-
 require (
 	github.com/imroc/req/v3 v3.55.0
 	github.com/stretchr/testify v1.11.1
@@ -17,7 +16,7 @@ require (
 	github.com/kr/pretty v0.3.1 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/quic-go/qpack v0.5.1 // indirect
-	github.com/quic-go/quic-go v0.54.0 // indirect
+	github.com/quic-go/quic-go v0.55.0 // indirect
 	github.com/refraction-networking/utls v1.8.0 // indirect
 	github.com/rogpeppe/go-internal v1.14.1 // indirect
 	go.uber.org/mock v0.6.0 // indirect
