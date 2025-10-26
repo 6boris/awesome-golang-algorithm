@@ -1,28 +1,24 @@
 # [2177.Find Three Consecutive Integers That Sum to a Given Number][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given an integer `num`, return three consecutive integers (as a sorted array) that **sum** to `num`. If `num` cannot be expressed as the sum of three consecutive integers, return an **empty** array.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: num = 33
+Output: [10,11,12]
+Explanation: 33 can be expressed as 10 + 11 + 12 = 33.
+10, 11, 12 are 3 consecutive integers, so we return [10, 11, 12].
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Find Three Consecutive Integers That Sum to a Given Number
-```go
 ```
-
+Input: num = 4
+Output: []
+Explanation: There is no way to express 4 as the sum of 3 consecutive integers.
+```
 
 ## 结语
 
