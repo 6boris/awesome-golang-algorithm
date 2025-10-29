@@ -1,28 +1,45 @@
 # [3370.Smallest Number With All Set Bits][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given a positive number `n`.
+
+Return the **smallest** number `x` **greater than** or **equal to** `n`, such that the binary representation of `x` contains only set bits
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: n = 5
+
+Output: 7
+
+Explanation:
+
+The binary representation of 7 is "111".
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
+```
+Input: n = 10
 
-### 思路1
-> ...
-Smallest Number With All Set Bits
-```go
+Output: 15
+
+Explanation:
+
+The binary representation of 15 is "1111".
 ```
 
+**Example 3:**
+
+```
+Input: n = 3
+
+Output: 3
+
+Explanation:
+
+The binary representation of 3 is "11".
+```
 
 ## 结语
 
