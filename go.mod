@@ -3,6 +3,7 @@ module awesome-golang-algorithm
 go 1.24
 
 require (
+	github.com/emirpasic/gods/v2 v2.0.0-alpha
 	github.com/imroc/req/v3 v3.54.2
 	github.com/stretchr/testify v1.11.1
 )
