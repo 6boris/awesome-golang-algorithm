@@ -1,28 +1,39 @@
 # [3228.Maximum Number of Operations to Move Ones to the End][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given a binary string `s`.
+
+You can perform the following operation on the string **any** number of times:
+
+- Choose **any** index `i` from the string where `i + 1 < s.length` such that `s[i] == '1'` and `s[i + 1] == '0'`.
+- Move the character `s[i]` to the **right** until it reaches the end of the string or another `'1'`. For example, for `s = "010010"`, if we choose `i = 1`, the resulting string will be `s = "000110"`.
+
+Return the **maximum** number of operations that you can perform.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: s = "1001101"
+
+Output: 4
+
+Explanation:
+
+We can perform the following operations:
+
+Choose index i = 0. The resulting string is s = "0011101".
+Choose index i = 4. The resulting string is s = "0011011".
+Choose index i = 3. The resulting string is s = "0010111".
+Choose index i = 2. The resulting string is s = "0001111".
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Maximum Number of Operations to Move Ones to the End
-```go
 ```
+Input: s = "00111"
 
+Output: 0
+```
 
 ## 结语
 
