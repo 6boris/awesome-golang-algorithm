@@ -1,28 +1,36 @@
 # [2154.Keep Multiplying Found Values by Two][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given an array of integers `nums`. You are also given an integer `original` which is the first number that needs to be searched for in `nums`.
+
+You then do the following steps:
+
+1. If `original` is found in `nums`, **multiply** it by two (i.e., set `original = 2 * original`).
+2. Otherwise, **stop** the process.
+3. **Repeat** this process with the new number as long as you keep finding the number.
+
+Return the **final** value of `original`.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: nums = [5,3,6,1,12], original = 3
+Output: 24
+Explanation: 
+- 3 is found in nums. 3 is multiplied by 2 to obtain 6.
+- 6 is found in nums. 6 is multiplied by 2 to obtain 12.
+- 12 is found in nums. 12 is multiplied by 2 to obtain 24.
+- 24 is not found in nums. Thus, 24 is returned.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Keep Multiplying Found Values by Two
-```go
 ```
-
+Input: nums = [2,7,9], original = 4
+Output: 4
+Explanation:
+- 4 is not found in nums. Thus, 4 is returned.
+```
 
 ## 结语
 
