@@ -1,5 +1,9 @@
 package Solution
 
-func Solution(x bool) bool {
-	return x
+func Solution(nums []int) int {
+	var ret int
+	for _, n := range nums {
+		ret |= n
+	}
+	return ret
 }
