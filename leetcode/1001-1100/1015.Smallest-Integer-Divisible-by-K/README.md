@@ -1,28 +1,37 @@
 # [1015.Smallest Integer Divisible by K][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given a positive integer `k`, you need to find the **length** of the **smallest** positive integer `n` such that `n` is divisible by `k`, and `n` only contains the digit `1`.
+
+Return the **length** of `n`. If there is no such `n`, return -1.
+
+**Note**: `n` may not fit in a 64-bit signed integer.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Given a positive integer k, you need to find the length of the smallest positive integer n such that n is divisible by k, and n only contains the digit 1.
+
+Return the length of n. If there is no such n, return -1.
+
+Note: n may not fit in a 64-bit signed integer.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Smallest Integer Divisible by K
-```go
+```
+Input: k = 2
+Output: -1
+Explanation: There is no such positive integer n divisible by 2.
 ```
 
+**Example 3:**
+
+```
+Input: k = 3
+Output: 3
+Explanation: The smallest answer is n = 111, which has length 3.
+```
 
 ## 结语
 
