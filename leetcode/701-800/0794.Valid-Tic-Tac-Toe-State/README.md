@@ -1,28 +1,48 @@
 # [794.Valid Tic-Tac-Toe State][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
 
-**Example 1:**
+Given a Tic-Tac-Toe `board` as a string array board, return `true` if and only if it is possible to reach this board position during the course of a valid tic-tac-toe game.
+
+The board is a `3 x 3` array that consists of characters `' '`, `'X'`, and `'O'`. The `' '` character represents an empty square.
+
+Here are the rules of Tic-Tac-Toe:
+
+- Players take turns placing characters into empty squares `' '`.
+- The first player always places `'X'` characters, while the second player always places `'O'` characters.
+- `'X'` and `'O'` characters are always placed into empty squares, never filled ones.
+- The game ends when there are three of the same (non-empty) character filling any row, column, or diagonal.
+- The game also ends if all squares are non-empty.
+- No more moves can be played if the game is over.
+
+**Example 1:**  
+
+![1](./1.jpg)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: board = ["O  ","   ","   "]
+Output: false
+Explanation: The first player always plays "X".
 ```
 
-## 题意
-> ...
+**Example 2:**  
 
-## 题解
+![2](./2.jpg)
 
-### 思路1
-> ...
-Valid Tic-Tac-Toe State
-```go
+```
+Input: board = ["XOX"," X ","   "]
+Output: false
+Explanation: Players take turns making moves.
 ```
 
+**Example 3:**  
+
+![3](./3.jpg)
+
+```
+Input: board = ["XOX","O O","XOX"]
+Output: true
+```
 
 ## 结语
 
