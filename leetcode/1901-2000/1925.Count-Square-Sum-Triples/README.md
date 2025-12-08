@@ -1,28 +1,25 @@
 # [1925.Count Square Sum Triples][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+A **square triple** `(a,b,c)` is a triple where `a`, `b`, and `c` are **integers** and `a^2 + b^2 = c^2`.
+
+Given an integer `n`, return the number of **square triples** such that `1 <= a, b, c <= n`.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: n = 5
+Output: 2
+Explanation: The square triples are (3,4,5) and (4,3,5).
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Count Square Sum Triples
-```go
 ```
-
+Input: n = 10
+Output: 4
+Explanation: The square triples are (3,4,5), (4,3,5), (6,8,10), and (8,6,10).
+```
 
 ## 结语
 
