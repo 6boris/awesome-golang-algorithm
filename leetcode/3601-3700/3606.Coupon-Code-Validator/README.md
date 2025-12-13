@@ -1,28 +1,48 @@
 # [3606.Coupon Code Validator][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given three arrays of length n that describe the properties of `n` coupons: `code`, `businessLine`, and `isActive`. The `ith` coupon has:
+
+- `code[i]`: a **string** representing the coupon identifier.
+- `businessLine[i]`: a **string** denoting the business category of the coupon.
+- `isActive[i]`: a **boolean** indicating whether the coupon is currently active.
+
+A coupon is considered **valid** if all of the following conditions hold:
+
+- `code[i]` is non-empty and consists only of alphanumeric characters (a-z, A-Z, 0-9) and underscores (`_`).
+- `businessLine[i]` is one of the following four categories: `"electronics"`, `"grocery`, `"pharmacy`, `"restaurant"`.
+- `isActive[i]` is **true**.
+
+Return an array of the **codes***codes** all valid coupons, **sorted** first by their **businessLine** in the order: `"electronics"`, `"grocery"`, `"pharmacy"`, `"restaurant"`, and then by **code** in lexicographical (ascending) order within each category.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: code = ["SAVE20","","PHARMA5","SAVE@20"], businessLine = ["restaurant","grocery","pharmacy","restaurant"], isActive = [true,true,true,true]
+
+Output: ["PHARMA5","SAVE20"]
+
+Explanation:
+
+First coupon is valid.
+Second coupon has empty code (invalid).
+Third coupon is valid.
+Fourth coupon has special character @ (invalid).
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Coupon Code Validator
-```go
 ```
+Input: code = ["GROCERY15","ELECTRONICS_50","DISCOUNT10"], businessLine = ["grocery","electronics","invalid"], isActive = [false,true,true]
 
+Output: ["ELECTRONICS_50"]
+
+Explanation:
+
+First coupon is inactive (invalid).
+Second coupon is valid.
+Third coupon has invalid business line (invalid).
+```
 
 ## 结语
 
