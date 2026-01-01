@@ -1,28 +1,40 @@
 # [3668.Restore Finishing Order][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+ are given an integer array `order` of length n and an integer array `friends`.
+
+- `order` contains every integer from 1 to `n` **exactly once**, representing the IDs of the participants of a race in their **finishing** order.
+- `friends` contains the IDs of your friends in the race **sorted** in strictly increasing order. Each ID in friends is guaranteed to appear in the `order` array.
+
+Return an array containing your friends' IDs in their **finishing** order.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+
+
+Input: order = [3,1,2,5,4], friends = [1,3,4]
+
+Output: [3,1,4]
+
+Explanation:
+
+The finishing order is [3, 1, 2, 5, 4]. Therefore, the finishing order of your friends is [3, 1, 4].
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Restore Finishing Order
-```go
 ```
 
+
+Input: order = [1,4,5,3,2], friends = [2,5]
+
+Output: [5,2]
+
+Explanation:
+
+The finishing order is [1, 4, 5, 3, 2]. Therefore, the finishing order of your friends is [5, 2].
+```
 
 ## 结语
 
