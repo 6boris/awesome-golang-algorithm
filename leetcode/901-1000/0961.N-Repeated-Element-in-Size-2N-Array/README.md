@@ -1,28 +1,34 @@
 # [961.N-Repeated Element in Size 2N Array][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given an integer array `nums` with the following properties:
+
+- `nums.length == 2 * n`.
+- `nums` contains `n + 1` **unique** elements.
+- Exactly one element of `nums` is repeated n times.
+
+Return the element that is repeated `n` times.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: nums = [1,2,3,3]
+Output: 3
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-N-Repeated Element in Size 2N Array
-```go
+```
+Input: nums = [2,1,2,5,3,2]
+Output: 2
 ```
 
+**Example 3:**
+
+```
+Input: nums = [5,1,5,2,5,3,5,4]
+Output: 5
+```
 
 ## 结语
 
