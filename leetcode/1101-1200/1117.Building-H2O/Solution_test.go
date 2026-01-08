@@ -11,24 +11,22 @@ import (
 )
 
 // Solution func Info
-type SolutionFuncType func(x bool) bool
+type SolutionFuncType func(string) string
 
 var SolutionFuncList = []SolutionFuncType{
-	Solution_1,
-	Solution_2,
+	Solution,
 }
 
 // Test case info struct
 type Case struct {
 	name   string
-	input  bool
-	expect bool
+	input  string
+	expect []string
 }
 
 // Test case
 var cases = []Case{
-	{name: "TestCase 1", input: true, expect: true},
-	{name: "TestCase 2", input: false, expect: false},
+	{name: "TestCase 1", input: "HOH", expect: []string{"HHO", "OHH", "HOH"}},
 }
 
 // TestSolution Run test case for all solutions
@@ -40,8 +38,17 @@ func TestSolution(t *testing.T) {
 		for _, c := range cases {
 			t.Run(fmt.Sprintf("%s %s", funcName, c.name), func(t *testing.T) {
 				got := f(c.input)
-				ast.Equal(c.expect, got,
-					"func: %v case: %v ", funcName, c.name)
+				ok := false
+				for _, target := range c.expect {
+					if got == target {
+						ok = true
+						break
+					}
+				}
+				if !ok {
+					ast.Equal(c.expect, got,
+						"func: %v case: %v ", funcName, c.name)
+				}
 			})
 		}
 	}
