@@ -11,24 +11,23 @@ import (
 )
 
 // Solution func Info
-type SolutionFuncType func(x bool) bool
+type SolutionFuncType func(x int) string
 
 var SolutionFuncList = []SolutionFuncType{
-	Solution_1,
-	Solution_2,
+	Solution,
 }
 
 // Test case info struct
 type Case struct {
 	name   string
-	input  bool
-	expect bool
+	input  int
+	expect string
 }
 
 // Test case
 var cases = []Case{
-	{name: "TestCase 1", input: true, expect: true},
-	{name: "TestCase 2", input: false, expect: false},
+	{name: "TestCase 1", input: 2, expect: "0102"},
+	{name: "TestCase 2", input: 5, expect: "0102030405"},
 }
 
 // TestSolution Run test case for all solutions
