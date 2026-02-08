@@ -1,28 +1,31 @@
 # [433.Minimum Genetic Mutation][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+A gene string can be represented by an 8-character long string, with choices from `'A'`, `'C'`, `'G'`, and `'T'`.
+
+Suppose we need to investigate a mutation from a gene string `startGene` to a gene string `endGene` where one mutation is defined as one single character changed in the gene string.
+
+- For example, `"AACCGGTT" --> "AACCGGTA"` is one mutation.
+
+There is also a gene bank `bank` that records all the valid gene mutations. A gene must be in `bank` to make it a valid gene string.
+
+Given the two gene strings `startGene` and `endGene` and the gene bank `bank`, return the minimum number of mutations needed to mutate from `startGene` to `endGene`. If there is no such a mutation, return `-1`.
+
+Note that the starting point is assumed to be valid, so it might not be included in the bank.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: startGene = "AACCGGTT", endGene = "AACCGGTA", bank = ["AACCGGTA"]
+Output: 1
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Minimum Genetic Mutation
-```go
 ```
-
+Input: startGene = "AACCGGTT", endGene = "AAACGGTA", bank = ["AACCGGTA","AACCGCTA","AAACGGTA"]
+Output: 2
+```
 
 ## 结语
 
