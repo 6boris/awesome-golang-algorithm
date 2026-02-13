@@ -34,25 +34,6 @@ Total number of H will be 2n in the input string.
 Total number of O will be n in the input string.
 ```
 
-
-## 题意
-> 求2数之和
-
-## 题解
-
-### 思路1
-> 。。。。
-
-```go
-
-```
-
-### 思路2
-> 思路2
-```go
-
-```
-
 ## 结语
 
 如果你同我一样热爱数据结构、算法、LeetCode，可以关注我 GitHub 上的 LeetCode 题解：[awesome-golang-algorithm][me]
