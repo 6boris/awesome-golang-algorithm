@@ -37,7 +37,9 @@ func main() {
 	//leetcode.MakeDirFromTo(problems, 3201, 3300)
 	//leetcode.MakeDirFromTo(problems, 3301, 3400)
 	//leetcode.MakeDirFromTo(problems, 3401, 3500)
-	leetcode.MakeDirFromTo(problems, 3601, 3700)
+	//leetcode.MakeDirFromTo(problems, 3601, 3700)
+	leetcode.MakeDirFromTo(problems, 3701, 3800)
+
 
 	// leetcode.MakeDir(problems)
 
