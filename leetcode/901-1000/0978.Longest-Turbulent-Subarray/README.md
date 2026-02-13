@@ -1,28 +1,41 @@
 # [978.Longest Turbulent Subarray][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given an integer array `arr`, return the length of a maximum size turbulent subarray of `arr`.
+
+A subarray is **turbulent** if the comparison sign flips between each adjacent pair of elements in the subarray.
+
+More formally, a subarray `[arr[i], arr[i + 1], ..., arr[j]]` of `arr` is said to be turbulent if and only if:
+
+- For `i <= k < j`:
+    - `arr[k] > arr[k + 1]` when `k` is odd, and
+    - `arr[k] < arr[k + 1]` when `k` is even.
+
+- Or, for `i <= k < j`:
+    - `arr[k] > arr[k + 1]` when `k` is even, and
+    - `arr[k] < arr[k + 1]` when `k` is odd.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: arr = [9,4,2,10,7,8,8,1,9]
+Output: 5
+Explanation: arr[1] > arr[2] < arr[3] > arr[4] < arr[5]
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Longest Turbulent Subarray
-```go
+```
+Input: arr = [4,8,12,16]
+Output: 2
 ```
 
+**Example 3:**
+
+```
+Input: arr = [100]
+Output: 1
+```
 
 ## 结语
 
