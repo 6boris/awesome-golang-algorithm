@@ -1,28 +1,65 @@
 # [3047.Find the Largest Area of Square Inside Two Rectangles][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+There exist `n` rectangles in a 2D plane with edges parallel to the x and y axis. You are given two 2D integer arrays `bottomLeft` and `topRight` where `bottomLeft[i] = [a_i, b_i]` and `topRight[i] = [c_i, d_i]` represent the **bottom-left** and **top-right** coordinates of the `ith` rectangle, respectively.
 
-**Example 1:**
+You need to find the **maximum** area of a **square** that can fit inside the intersecting region of at least two rectangles. Return `0` if such a square does not exist.
+
+**Example 1:**  
+
+![1](./1.png)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: bottomLeft = [[1,1],[2,2],[3,1]], topRight = [[3,3],[4,4],[6,6]]
+
+Output: 1
+
+Explanation:
+
+A square with side length 1 can fit inside either the intersecting region of rectangles 0 and 1 or the intersecting region of rectangles 1 and 2. Hence the maximum area is 1. It can be shown that a square with a greater side length can not fit inside any intersecting region of two rectangles.
 ```
 
-## 题意
-> ...
+**Example 2:**  
 
-## 题解
+![2](./2.png)
 
-### 思路1
-> ...
-Find the Largest Area of Square Inside Two Rectangles
-```go
+```
+Input: bottomLeft = [[1,1],[1,3],[1,5]], topRight = [[5,5],[5,7],[5,9]]
+
+Output: 4
+
+Explanation:
+
+A square with side length 2 can fit inside either the intersecting region of rectangles 0 and 1 or the intersecting region of rectangles 1 and 2. Hence the maximum area is 2 * 2 = 4. It can be shown that a square with a greater side length can not fit inside any intersecting region of two rectangles.
 ```
 
+**Example 3:**  
+
+![3](./3.png)
+
+```
+Input: bottomLeft = [[1,1],[2,2],[1,2]], topRight = [[3,3],[4,4],[3,4]]
+
+Output: 1
+
+Explanation:
+
+A square with side length 1 can fit inside the intersecting region of any two rectangles. Also, no larger square can, so the maximum area is 1. Note that the region can be formed by the intersection of more than 2 rectangles.
+```
+
+**Example 4:**  
+
+![4](./4.png)
+
+```
+Input: bottomLeft = [[1,1],[3,3],[3,1]], topRight = [[2,2],[4,4],[4,2]]
+
+Output: 0
+
+Explanation:
+
+No pair of rectangles intersect, hence, the answer is 0.
+```
 
 ## 结语
 
