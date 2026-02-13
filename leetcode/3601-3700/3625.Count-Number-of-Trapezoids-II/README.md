@@ -1,15 +1,41 @@
 # [3625.Count Number of Trapezoids II][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given a 2D integer array `points` where `points[i] = [xi, yi]` represents the coordinates of the `ith` point on the Cartesian plane.
 
-**Example 1:**
+Return the number of unique trapezoids that can be formed by choosing any four distinct points from `points`.
+
+A **trapezoid** is a convex quadrilateral with **at least one pair** of parallel sides. Two lines are parallel if and only if they have the same slope.
+
+**Example 1:**  
+
+![1](./1.png)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: points = [[-3,2],[3,0],[2,3],[3,2],[2,-3]]
+
+Output: 2
+
+Explanation:
+
+There are two distinct ways to pick four points that form a trapezoid:
+
+The points [-3,2], [2,3], [3,2], [2,-3] form one trapezoid.
+The points [2,3], [3,2], [3,0], [2,-3] form another trapezoid.
+```
+
+**Example 2:**  
+
+![2](./2.png)
+
+```
+Input: points = [[0,0],[1,0],[0,1],[2,1]]
+
+Output: 1
+
+Explanation:
+
+There is only one trapezoid which can be formed.
 ```
 
 ## 题意
