@@ -1,28 +1,32 @@
 # [2186.Minimum Number of Steps to Make Two Strings Anagram II][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given two strings `s` and `t`. In one step, you can append **any character** to either `s` or `t`.
+
+Return the minimum number of steps to make `s` and `t` **anagrams** of each other.
+
+An **anagram** of a string is a string that contains the same characters with a different (or the same) ordering.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: s = "leetcode", t = "coats"
+Output: 7
+Explanation: 
+- In 2 steps, we can append the letters in "as" onto s = "leetcode", forming s = "leetcodeas".
+- In 5 steps, we can append the letters in "leede" onto t = "coats", forming t = "coatsleede".
+"leetcodeas" and "coatsleede" are now anagrams of each other.
+We used a total of 2 + 5 = 7 steps.
+It can be shown that there is no way to make them anagrams of each other with less than 7 steps.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Minimum Number of Steps to Make Two Strings Anagram II
-```go
 ```
-
+Input: s = "night", t = "thing"
+Output: 0
+Explanation: The given strings are already anagrams of each other. Thus, we do not need any further steps.
+```
 
 ## 结语
 
