@@ -1,28 +1,36 @@
 # [3101.Count Alternating Subarrays][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given a binary array `nums`.
+
+We call a subarray **alternating** if **no** two **adjacent** elements in the subarray have the **same** value.
+
+Return the number of alternating subarrays in `nums`.
+
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: nums = [0,1,1,1]
+
+Output: 5
+
+Explanation:
+
+The following subarrays are alternating: [0], [1], [1], [1], and [0,1].
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Count Alternating Subarrays
-```go
 ```
+Input: nums = [1,0,1,0]
 
+Output: 10
+
+Explanation:
+
+Every subarray of the array is alternating. There are 10 possible subarrays that we can choose.
+```
 
 ## 结语
 
