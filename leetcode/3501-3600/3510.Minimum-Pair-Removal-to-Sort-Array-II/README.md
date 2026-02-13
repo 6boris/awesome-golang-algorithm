@@ -1,28 +1,40 @@
 # [3510.Minimum Pair Removal to Sort Array II][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given an array `nums`, you can perform the following operation any number of times:
+
+- Select the **adjacent** pair with the **minimum** sum in `nums`. If multiple such pairs exist, choose the leftmost one.
+- Replace the pair with their sum.
+
+Return the **minimum number of operations** needed to make the array **non-decreasing**.
+
+An array is said to be **non-decreasing** if each element is greater than or equal to its previous element (if it exists).
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: nums = [5,2,3,1]
+
+Output: 2
+
+Explanation:
+
+The pair (3,1) has the minimum sum of 4. After replacement, nums = [5,2,4].
+The pair (2,4) has the minimum sum of 6. After replacement, nums = [5,6].
+The array nums became non-decreasing in two operations.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Minimum Pair Removal to Sort Array II
-```go
 ```
+Input: nums = [1,2,2]
 
+Output: 0
+
+Explanation:
+
+The array nums is already sorted.
+```
 
 ## 结语
 
