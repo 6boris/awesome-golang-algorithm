@@ -1,28 +1,50 @@
 # [3719.Longest Balanced Subarray I][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given an integer array `nums`.
+
+A subarray is called **balanced** if the number of **distinct even** numbers in the subarray is equal to the number of **distinct odd** numbers.
+
+Return the length of the **longest** balanced subarray.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: nums = [2,5,4,3]
+
+Output: 4
+
+Explanation:
+
+The longest balanced subarray is [2, 5, 4, 3].
+It has 2 distinct even numbers [2, 4] and 2 distinct odd numbers [5, 3]. Thus, the answer is 4.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
+```
+Input: nums = [3,2,2,5,4]
 
-### 思路1
-> ...
-Longest Balanced Subarray I
-```go
+Output: 5
+
+Explanation:
+
+The longest balanced subarray is [3, 2, 2, 5, 4].
+It has 2 distinct even numbers [2, 4] and 2 distinct odd numbers [3, 5]. Thus, the answer is 5.
 ```
 
+**Example 3:**
+
+```
+Input: nums = [1,2,3,2]
+
+Output: 3
+
+Explanation:
+
+The longest balanced subarray is [2, 3, 2].
+It has 1 distinct even number [2] and 1 distinct odd number [3]. Thus, the answer is 3.
+```
 
 ## 结语
 
