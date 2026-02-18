@@ -1,5 +1,23 @@
 package Solution
 
-func Solution(x bool) bool {
-	return x
+func Solution(nums []int, target int) int {
+	cache := map[int]struct{}{
+		0: struct{}{},
+	}
+	var ret int
+	sum, need := 0, 0
+	for i := range nums {
+		sum += nums[i]
+		need = sum - target
+		if _, ok := cache[need]; ok {
+			ret++
+			cache = map[int]struct{}{
+				0: struct{}{},
+			}
+			sum = 0
+			continue
+		}
+		cache[sum] = struct{}{}
+	}
+	return ret
 }
