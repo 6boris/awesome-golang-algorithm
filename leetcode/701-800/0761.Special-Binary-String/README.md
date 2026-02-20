@@ -1,28 +1,32 @@
 # [761.Special Binary String][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+**Special binary strings** are binary strings with the following two properties:
+
+- The number of `0`'s is equal to the number of `1`'s.
+- Every prefix of the binary string has at least as many `1`'s as `0`'s.
+
+You are given a **special binary** string `s`.
+
+A move consists of choosing two consecutive, non-empty, special substrings of `s`, and swapping them. Two strings are consecutive if the last character of the first string is exactly one index before the first character of the second string.
+
+Return the lexicographically largest resulting string possible after applying the mentioned operations on the string.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: s = "11011000"
+Output: "11100100"
+Explanation: The strings "10" [occuring at s[1]] and "1100" [at s[3]] are swapped.
+This is the lexicographically largest string possible after some number of swaps.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Special Binary String
-```go
 ```
-
+Input: s = "10"
+Output: "10"
+```
 
 ## 结语
 
