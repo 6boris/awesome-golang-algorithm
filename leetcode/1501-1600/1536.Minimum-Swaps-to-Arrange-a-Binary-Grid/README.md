@@ -1,28 +1,41 @@
 # [1536.Minimum Swaps to Arrange a Binary Grid][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given an `n x n` binary `grid`, in one step you can choose two **adjacent rows** of the grid and swap them.
 
-**Example 1:**
+A grid is said to be **valid** if all the cells above the main diagonal are **zeros**.
+
+Return the minimum number of steps needed to make the grid valid, or **-1** if the grid cannot be valid.
+
+The main diagonal of a grid is the diagonal that starts at cell `(1, 1)` and ends at cell `(n, n)`.
+
+**Example 1:**  
+
+![1](./1.jpg)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: grid = [[0,0,1],[1,1,0],[1,0,0]]
+Output: 3
 ```
 
-## 题意
-> ...
+**Example 2:**  
 
-## 题解
+![2](./2.jpg)
 
-### 思路1
-> ...
-Minimum Swaps to Arrange a Binary Grid
-```go
+```
+Input: grid = [[0,1,1,0],[0,1,1,0],[0,1,1,0],[0,1,1,0]]
+Output: -1
+Explanation: All rows are similar, swaps have no effect on the grid.
 ```
 
+**Example 3:**  
+
+![3](./3.jpg)
+
+```
+Input: grid = [[1,0,0],[1,1,0],[1,1,1]]
+Output: 0
+```
 
 ## 结语
 
