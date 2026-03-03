@@ -1,28 +1,29 @@
 # [680.Valid Palindrome II][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given a string `s`, return `true` if the `s` can be palindrome after deleting **at most one** character from it.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: s = "aba"
+Output: true
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Valid Palindrome II
-```go
+```
+Input: s = "abca"
+Output: true
+Explanation: You could delete the character 'c'.
 ```
 
+**Example 3:**
+
+```
+Input: s = "abc"
+Output: false
+```
 
 ## 结语
 
