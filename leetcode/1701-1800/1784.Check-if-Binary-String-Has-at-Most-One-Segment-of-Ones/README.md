@@ -1,28 +1,23 @@
 # [1784.Check if Binary String Has at Most One Segment of Ones][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given a binary string `s` **without leading zeros**, return `true` if s contains **at most one contiguous segment of ones**. 
+Otherwise, return `false`.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: s = "1001"
+Output: false
+Explanation: The ones do not form a contiguous segment.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Check if Binary String Has at Most One Segment of Ones
-```go
 ```
-
+Input: s = "110"
+Output: true
+```
 
 ## 结语
 
