@@ -1,28 +1,57 @@
 # [3775.Reverse Words With Same Vowel Count][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given a string `s` consisting of lowercase English words, each separated by a single space.
+
+Determine how many vowels appear in the **first** word. Then, reverse each following word that has the **same vowel count**. Leave all remaining words unchanged.
+
+Return the resulting string.
+
+Vowels are `'a'`, `'e'`, `'i'`, `'o'`, and `'u'`.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: s = "cat and mice"
+
+Output: "cat dna mice"
+
+Explanation:​​​​​​​
+
+The first word "cat" has 1 vowel.
+"and" has 1 vowel, so it is reversed to form "dna".
+"mice" has 2 vowels, so it remains unchanged.
+Thus, the resulting string is "cat dna mice".
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
+```
+Input: s = "book is nice"
 
-### 思路1
-> ...
-Reverse Words With Same Vowel Count
-```go
+Output: "book is ecin"
+
+Explanation:
+
+The first word "book" has 2 vowels.
+"is" has 1 vowel, so it remains unchanged.
+"nice" has 2 vowels, so it is reversed to form "ecin".
+Thus, the resulting string is "book is ecin".
 ```
 
+**Example 3:**
+
+```
+Input: s = "banana healthy"
+
+Output: "banana healthy"
+
+Explanation:
+
+The first word "banana" has 3 vowels.
+"healthy" has 2 vowels, so it remains unchanged.
+Thus, the resulting string is "banana healthy".
+```
 
 ## 结语
 
