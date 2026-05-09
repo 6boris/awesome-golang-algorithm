@@ -1,28 +1,47 @@
 # [3212.Count Submatrices With Equal Frequency of X and Y][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given a 2D character matrix `grid`, where `grid[i][j]` is either `'X'`, `'Y'`, or `'.'`, return the number of submatrices that contain:
 
-**Example 1:**
+- `grid[0][0]`
+- an **equal** frequency of `'X'` and `'Y'`.
+- **at least** one `'X'`.
+
+**Example 1:**  
+
+![1](./1.png)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: grid = [["X","Y","."],["Y",".","."]]
+
+Output: 3
+
+Explanation:
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
+```
+Input: grid = [["X","X"],["X","Y"]]
 
-### 思路1
-> ...
-Count Submatrices With Equal Frequency of X and Y
-```go
+Output: 0
+
+Explanation:
+
+No submatrix has an equal frequency of 'X' and 'Y'.
 ```
 
+**Example 3:**
+
+```
+Input: grid = [[".","."],[".","."]]
+
+Output: 0
+
+Explanation:
+
+No submatrix has at least one 'X'.
+```
 
 ## 结语
 
