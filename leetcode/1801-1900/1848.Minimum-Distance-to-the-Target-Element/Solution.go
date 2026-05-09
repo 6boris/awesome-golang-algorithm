@@ -1,5 +1,18 @@
 package Solution
 
-func Solution(x bool) bool {
-	return x
+func Solution(nums []int, target int, start int) int {
+	ret := -1
+	diff := 0
+	for i := range nums {
+		if nums[i] == target {
+			diff = i - start
+			if diff < .0 {
+				diff = -diff
+			}
+			if ret == -1 || ret > diff {
+				ret = diff
+			}
+		}
+	}
+	return ret
 }
