@@ -1,28 +1,25 @@
 # [2260.Minimum Consecutive Cards to Pick Up][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given an integer array `cards` where `cards[i]` represents the **value** of the `ith` card. A pair of cards are **matching** if the cards have the **same** value.
+
+Return the **minimum** number of **consecutive** cards you have to pick up to have a pair of **matching** cards among the picked cards. If it is impossible to have matching cards, return `-1`.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: cards = [3,4,2,3,4,7]
+Output: 4
+Explanation: We can pick up the cards [3,4,2,3] which contain a matching pair of cards with value 3. Note that picking up the cards [4,2,3,4] is also optimal.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Minimum Consecutive Cards to Pick Up
-```go
 ```
-
+Input: cards = [1,0,5,3]
+Output: -1
+Explanation: There is no way to pick up a set of consecutive cards that contain a pair of matching cards.
+```
 
 ## 结语
 
