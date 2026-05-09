@@ -1,28 +1,57 @@
 # [2946.Matrix Similarity After Cyclic Shifts][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given an `m x n` integer matrix `mat` and an integer `k`. The matrix rows are 0-indexed.
 
-**Example 1:**
+The following proccess happens `k` times:
+
+- **Even-indexed** rows (0, 2, 4, ...) are cyclically shifted to the left.
+
+![1](./d1.jpg)
+
+- **Odd-indexed** rows (1, 3, 5, ...) are cyclically shifted to the right.
+
+![2](./d2.jpg)
+
+Return `true` if the final modified matrix after `k` steps is identical to the original matrix, and `false` otherwise.
+
+**Example 1:**  
+
+![1](./1.jpg)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: mat = [[1,2,3],[4,5,6],[7,8,9]], k = 4
+
+Output: false
+
+Explanation:
+
+In each step left shift is applied to rows 0 and 2 (even indices), and right shift to row 1 (odd index).
 ```
 
-## 题意
-> ...
+**Example 2:**  
 
-## 题解
+![2](./2.jpg)
 
-### 思路1
-> ...
-Matrix Similarity After Cyclic Shifts
-```go
+```
+Input: mat = [[1,2,1,2],[5,5,5,5],[6,3,6,3]], k = 2
+
+Output: true
+
+Explanation:
 ```
 
+**Example 3:**
+
+```
+Input: mat = [[2,2],[2,2]], k = 3
+
+Output: true
+
+Explanation:
+
+As all the values are equal in the matrix, even after performing cyclic shifts the matrix will remain the same.
+```
 
 ## 结语
 
