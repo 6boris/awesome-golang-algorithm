@@ -1,28 +1,26 @@
 # [932.Beautiful Array][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+An array `nums` of length `n` is **beautiful** if:
+
+- `nums` is a permutation of the integers in the range `[1, n]`.
+- For every `0 <= i < j < n`, there is no index `k` with `i < k < j` where `2 * nums[k] == nums[i] + nums[j]`.
+
+Given the integer `n`, return any **beautiful** array `nums` of length `n`. There will be at least one valid answer for the given `n`.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: n = 4
+Output: [2,1,4,3]
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Beautiful Array
-```go
 ```
-
+Input: n = 5
+Output: [3,1,2,5,4]
+```
 
 ## 结语
 
