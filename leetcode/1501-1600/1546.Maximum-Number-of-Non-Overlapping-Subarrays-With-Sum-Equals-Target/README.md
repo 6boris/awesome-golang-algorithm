@@ -1,28 +1,24 @@
 # [1546.Maximum Number of Non-Overlapping Subarrays With Sum Equals Target][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given an array `nums` and an integer `target`, return the maximum number of **non-empty non-overlapping** subarrays such that the sum of values in each subarray is equal to `target`.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: nums = [1,1,1,1,1], target = 2
+Output: 2
+Explanation: There are 2 non-overlapping subarrays [1,1,1,1,1] with sum equals to target(2).
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Maximum Number of Non-Overlapping Subarrays With Sum Equals Target
-```go
 ```
-
+Input: nums = [-1,3,5,1,4,2,-9], target = 6
+Output: 2
+Explanation: There are 3 subarrays with sum equal to 6.
+([5,1], [4,2], [3,5,1,4,2,-9]) but only the first 2 are non-overlapping.
+```
 
 ## 结语
 
