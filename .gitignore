@@ -22,3 +22,5 @@ node_modules/
 /python
 package-lock.json
 .hugo_build.lock
+.omc
+.claude
