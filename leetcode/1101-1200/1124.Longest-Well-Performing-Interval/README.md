@@ -1,28 +1,28 @@
 # [1124.Longest Well-Performing Interval][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+We are given `hours`, a list of the number of hours worked per day for a given employee.
+
+A day is considered to be a tiring day if and only if the number of hours worked is (strictly) greater than `8`.
+
+A well-performing interval is an interval of days for which the number of tiring days is strictly larger than the number of non-tiring days.
+
+Return the length of the longest well-performing interval.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: hours = [9,9,6,0,6,6,9]
+Output: 3
+Explanation: The longest well-performing interval is [9,9,6].
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Longest Well-Performing Interval
-```go
 ```
-
+Input: hours = [6,6,6]
+Output: 0
+```
 
 ## 结语
 
