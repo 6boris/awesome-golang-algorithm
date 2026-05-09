@@ -1,28 +1,47 @@
 # [3714.Longest Balanced Substring II][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given a string `s` consisting only of the characters `'a'`, `'b'`, and `'c'`.
+
+A **substring** of `s` is called **balanced** if all **distinct** characters in the **substring** appear the **same** number of times.
+
+Return the **length of the longest balanced substring** of `s`.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: s = "abbac"
+
+Output: 4
+
+Explanation:
+
+The longest balanced substring is "abba" because both distinct characters 'a' and 'b' each appear exactly 2 times.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
+```
+Input: s = "aabcc"
 
-### 思路1
-> ...
-Longest Balanced Substring II
-```go
+Output: 3
+
+Explanation:
+
+The longest balanced substring is "abc" because all distinct characters 'a', 'b' and 'c' each appear exactly 1 time.
 ```
 
+**Example 3: **
+
+```
+Input: s = "aba"
+
+Output: 2
+
+Explanation:
+
+One of the longest balanced substrings is "ab" because both distinct characters 'a' and 'b' each appear exactly 1 time. Another longest balanced substring is "ba".
+```
 
 ## 结语
 
