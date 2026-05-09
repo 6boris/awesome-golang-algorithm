@@ -1,28 +1,38 @@
 # [866.Prime Palindrome][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given an integer n, return the smallest **prime palindrome** greater than or equal to `n`.
+
+An integer is **prime** if it has exactly two divisors: `1` and itself. Note that `1` is not a prime number.
+
+- For example, `2`, `3`, `5`, `7`, `11`, and `13` are all primes.
+
+An integer is a **palindrome** if it reads the same from left to right as it does from right to left.
+
+- For example, `101` and 12321 are palindromes.
+
+The test cases are generated so that the answer always exists and is in the range `[2, 2 * 10^8]`.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: n = 6
+Output: 7
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Prime Palindrome
-```go
+```
+Input: n = 8
+Output: 11
 ```
 
+**Exampl3 3:**
+
+```
+Input: n = 13
+Output: 101
+```
 
 ## 结语
 
