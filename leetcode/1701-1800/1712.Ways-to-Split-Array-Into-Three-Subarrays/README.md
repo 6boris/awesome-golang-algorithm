@@ -1,28 +1,39 @@
 # [1712.Ways to Split Array Into Three Subarrays][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+A split of an integer array is **good** if:
+
+- The array is split into three **non-empty** contiguous subarrays - named `left`, `mid`, `right` respectively from left to right.
+- The sum of the elements in `left` is less than or equal to the sum of the elements in `mid`, and the sum of the elements in `mid` is less than or equal to the sum of the elements in `right`.
+
+Given `nums`, an array of **non-negative** integers, return the number of **good** ways to split `nums`. As the number may be too large, return it **modulo** `10^9 + 7`.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: nums = [1,1,1]
+Output: 1
+Explanation: The only good way to split nums is [1] [1] [1].
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Ways to Split Array Into Three Subarrays
-```go
+```
+Input: nums = [1,2,2,2,5,0]
+Output: 3
+Explanation: There are three good ways of splitting nums:
+[1] [2] [2,2,5,0]
+[1] [2,2] [2,5,0]
+[1,2] [2,2] [5,0]
 ```
 
+**Example 3:**
+
+```
+Input: nums = [3,2,1]
+Output: 0
+Explanation: There is no good way to split nums.
+```
 
 ## 结语
 
