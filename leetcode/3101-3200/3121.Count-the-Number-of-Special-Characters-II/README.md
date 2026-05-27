@@ -1,28 +1,45 @@
 # [3121.Count the Number of Special Characters II][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given a string `word`. A letter `c` is called **special** if it appears **both** in lowercase and uppercase in `word`, and **every** lowercase occurrence of `c` appears before the **first** uppercase occurrence of `c`.
+
+Return the number of **special** letters in `word`.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: word = "aaAbcBC"
+
+Output: 3
+
+Explanation:
+
+The special characters are 'a', 'b', and 'c'.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
+```
+Input: word = "abc"
 
-### 思路1
-> ...
-Count the Number of Special Characters II
-```go
+Output: 0
+
+Explanation:
+
+There are no special characters in word.
 ```
 
+**Example 3:**
+
+```
+Input: word = "AbBCab"
+
+Output: 0
+
+Explanation:
+
+There are no special characters in word.
+```
 
 ## 结语
 
