@@ -1,5 +1,15 @@
 package Solution
 
-func Solution(x bool) bool {
-	return x
+import "sort"
+
+func Solution(mass int, asteroids []int) bool {
+	sort.Ints(asteroids)
+	for i := range asteroids {
+		if mass < asteroids[i] {
+			return false
+		}
+		mass += asteroids[i]
+	}
+
+	return true
 }
