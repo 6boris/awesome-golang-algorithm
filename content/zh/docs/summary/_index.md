@@ -6,12 +6,10 @@ title: "SUMMARY"
 
 # SUMMARY
 
-{{< hint info >}}
-**代码归类**
-
-本页面统计了 LeetCode 比较火的一类题目，方便总结。
-
-{{< /hint >}}
+> [!NOTE]
+> **代码归类**
+>
+> 本页面统计了 LeetCode 比较火的一类题目，方便总结。
 
 ## 股票买卖
 

@@ -22,11 +22,11 @@ markup:
 # And https://gohugo.io/content-management/multilingual/#translation-by-content-directory
 languages:
   zh:
-    languageName: 中文
+    label: 中文
     contentDir: content/zh
     weight: 1
   en:
-    languageName: English
+    label: English
     contentDir: content/en
     weight: 2
 
