@@ -1,0 +1,8 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "installCommand": "git submodule update --init --recursive && curl -sSL https://github.com/gohugoio/hugo/releases/download/v0.161.1/hugo_extended_0.161.1_linux-amd64.tar.gz | tar -xz hugo",
+  "buildCommand": "./hugo --gc --minify",
+  "outputDirectory": "public",
+  "trailingSlash": true
+}

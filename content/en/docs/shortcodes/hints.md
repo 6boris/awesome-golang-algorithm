@@ -1,32 +1,38 @@
 # Hints
 
-Hint shortcode can be used as hint/alerts/notification block.  
-There are 3 colors to choose: `info`, `warning` and `danger`.
+Hugo-Book renders alerts using GitHub-style markdown alerts. The legacy
+`{{</* hint */>}}` shortcode is deprecated; use blockquote alerts instead.
 
-```tpl
-{{</* hint [info|warning|danger] */>}}
-**Markdown content**  
-Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat
-stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa
-{{</* /hint */>}}
+```md
+> [!NOTE|TIP|IMPORTANT|WARNING|CAUTION]
+> **Markdown content**
+> Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat
+> stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa
 ```
 
 ## Example
 
-{{< hint info >}}
-**Markdown content**  
-Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat
-stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa
-{{< /hint >}}
+> [!NOTE]
+> **Markdown content**
+> Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat
+> stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa
 
-{{< hint warning >}}
-**Markdown content**  
-Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat
-stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa
-{{< /hint >}}
+> [!TIP]
+> **Markdown content**
+> Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat
+> stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa
 
-{{< hint danger >}}
-**Markdown content**  
-Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat
-stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa
-{{< /hint >}}
+> [!IMPORTANT]
+> **Markdown content**
+> Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat
+> stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa
+
+> [!WARNING]
+> **Markdown content**
+> Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat
+> stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa
+
+> [!CAUTION]
+> **Markdown content**
+> Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat
+> stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa

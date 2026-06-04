@@ -34,19 +34,15 @@ bookFlatSection: true
 
 # Introduction
 
-{{< columns >}}
+{{% columns %}}
+- ### LeetCode
 
-## LeetCode
+  Leetcode 是一个包含很多算法问题的网站。他们中的大多数都是谷歌，Facebook, LinkedIn, Apple 等真实的面试问题，它总是有助于提高我们的算法技能。提高你的编码技能，很快就能找到工作。这是扩充知识、为下一次面试做准备的最佳场所。[Code](https://github.com/kylesliu/awesome-golang-algorithm/tree/master/leetcode)
 
-Leetcode 是一个包含很多算法问题的网站。他们中的大多数都是谷歌，Facebook, LinkedIn, Apple 等真实的面试问题，它总是有助于提高我们的算法技能。提高你的编码技能，很快就能找到工作。这是扩充知识、为下一次面试做准备的最佳场所。[Code](https://github.com/kylesliu/awesome-golang-algorithm/tree/master/leetcode)
+- ### 剑指 Offer
 
-<--->
-
-## 剑指 Offer
-
-剑指 offer 专题精选谷歌、微软等知名 IT 企业的 50 余道典型面试题,从基础知识、代码质量、解题思路、优化效率和综合能力五个方面系统整理了影响面试的 5 个要点。[Code](https://github.com/kylesliu/awesome-golang-algorithm/tree/master/lcof)
-
-{{< /columns >}}
+  剑指 offer 专题精选谷歌、微软等知名 IT 企业的 50 余道典型面试题,从基础知识、代码质量、解题思路、优化效率和综合能力五个方面系统整理了影响面试的 5 个要点。[Code](https://github.com/kylesliu/awesome-golang-algorithm/tree/master/lcof)
+{{% /columns %}}
 
 ## Community
 
