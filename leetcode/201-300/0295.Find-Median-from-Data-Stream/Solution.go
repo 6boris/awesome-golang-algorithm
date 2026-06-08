@@ -7,11 +7,11 @@ type IntHeap []int
 func (ih IntHeap) Len() int           { return len(ih) }
 func (ih IntHeap) Less(i, j int) bool { return ih[i] < ih[j] }
 func (ih IntHeap) Swap(i, j int)      { ih[i], ih[j] = ih[j], ih[i] }
-func (ih *IntHeap) Push(num interface{}) {
+func (ih *IntHeap) Push(num any) {
 	*ih = append(*ih, num.(int))
 }
 
-func (ih *IntHeap) Pop() interface{} {
+func (ih *IntHeap) Pop() any {
 	old := *ih
 	n := ih.Len()
 	num := old[n-1]

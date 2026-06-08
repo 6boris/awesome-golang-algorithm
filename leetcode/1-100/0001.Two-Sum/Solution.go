@@ -30,7 +30,7 @@ func TwoSum_2(nums []int, target int) []int {
 }
 
 func TwoSum_3(nums []int, target int) []int {
-	if nums == nil || len(nums) < 2 {
+	if len(nums) < 2 {
 		return []int{-1, -1}
 	}
 

@@ -1,6 +1,6 @@
 package Solution
 
-//	直接二分
+// 直接二分
 func firstBadVersion(n int) int {
 	left, right := 1, n
 

@@ -7,7 +7,6 @@ func merge(nums []int, start, end int) int {
 	count := 0
 	for ; l <= mid; l++ {
 		for ; r <= end && nums[l] > 2*nums[r]; r++ {
-
 		}
 		count += r - 1 - mid
 	}

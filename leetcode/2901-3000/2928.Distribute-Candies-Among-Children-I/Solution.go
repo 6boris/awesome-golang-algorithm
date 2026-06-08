@@ -8,14 +8,14 @@ func binom(a, b int) int {
 	if k > n-k {
 		k = n - k
 	}
-	var result int = 1
+	result := 1
 	for i := 1; i <= k; i++ {
 		result = result * (n - i + 1) / i
 	}
 	return result
 }
 
-func Solution(n int, limit int) int {
+func Solution(n, limit int) int {
 	total := binom(n+2, 2)
 
 	n1 := n - (limit + 1)

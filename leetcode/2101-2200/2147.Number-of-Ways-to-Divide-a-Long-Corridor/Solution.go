@@ -4,11 +4,11 @@ const mod2147 = 1000000007
 
 func Solution(corridor string) int {
 	totalS := 0 // 记录s的总数
-	tmpS := 0   //记录s是否到2个
+	tmpS := 0   // 记录s是否到2个
 
 	bs := []byte(corridor)
 
-	//记录p的个数
+	// 记录p的个数
 	p := 0
 	ans := 1
 	for _, b := range bs {

@@ -1,7 +1,6 @@
 package Solution
 
 func Solution(n int) int {
-
 	begin, init := 1, 1
 	half, ret := n/2, 0
 	for i := 0; i < n; i++ {

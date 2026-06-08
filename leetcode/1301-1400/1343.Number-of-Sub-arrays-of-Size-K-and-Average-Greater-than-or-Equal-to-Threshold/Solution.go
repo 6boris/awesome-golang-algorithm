@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(arr []int, k int, threshold int) int {
+func Solution(arr []int, k, threshold int) int {
 	ans := 0
 	sum := 0
 	for i := 0; i < k; i++ {

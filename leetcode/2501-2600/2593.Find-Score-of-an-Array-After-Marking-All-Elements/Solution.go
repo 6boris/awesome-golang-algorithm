@@ -15,6 +15,7 @@ func (h *heap2593) Len() int {
 func (h *heap2593) Swap(i, j int) {
 	(*h)[i], (*h)[j] = (*h)[j], (*h)[i]
 }
+
 func (h *heap2593) Less(i, j int) bool {
 	a, b := (*h)[i], (*h)[j]
 	if a.v == b.v {
@@ -26,6 +27,7 @@ func (h *heap2593) Less(i, j int) bool {
 func (h *heap2593) Push(x any) {
 	*h = append(*h, x.(item2593))
 }
+
 func (h *heap2593) Pop() any {
 	old := *h
 	l := len(old)

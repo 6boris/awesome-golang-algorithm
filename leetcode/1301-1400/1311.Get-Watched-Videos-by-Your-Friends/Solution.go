@@ -2,7 +2,7 @@ package Solution
 
 import "sort"
 
-func Solution(watchedVideos [][]string, friends [][]int, id int, level int) []string {
+func Solution(watchedVideos [][]string, friends [][]int, id, level int) []string {
 	now := 0
 	var ans []string
 	queue := []int{id}
@@ -38,5 +38,4 @@ func Solution(watchedVideos [][]string, friends [][]int, id int, level int) []st
 		queue = nq
 	}
 	return ans
-
 }

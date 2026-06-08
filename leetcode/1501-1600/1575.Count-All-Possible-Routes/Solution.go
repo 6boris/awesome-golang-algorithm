@@ -2,7 +2,7 @@ package Solution
 
 const mod1575 = 1000000007
 
-func Solution(locations []int, start int, finish int, fuel int) int {
+func Solution(locations []int, start, finish, fuel int) int {
 	// 需要dp[i][j] 表示 从第i个城市，还有fuel油量的时候能走的路径
 	dp := make([][]int, len(locations))
 	for i := 0; i < len(locations); i++ {

@@ -2,7 +2,7 @@ package Solution
 
 import "math"
 
-func divide(dividend int, divisor int) int {
+func divide(dividend, divisor int) int {
 	dm, dsm, sign := true, true, true
 	if dividend < 0 {
 		dm = false

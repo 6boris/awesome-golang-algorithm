@@ -2,7 +2,7 @@ package Solution
 
 const mod1155 = 1000000007
 
-func Solution(n int, k int, target int) int {
+func Solution(n, k, target int) int {
 	cache := make(map[int]map[int]int)
 	for i := 1; i <= k; i++ {
 		cache[i] = make(map[int]int)

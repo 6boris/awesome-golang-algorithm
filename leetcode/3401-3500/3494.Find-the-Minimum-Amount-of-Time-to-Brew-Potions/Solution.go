@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(skill []int, mana []int) int64 {
+func Solution(skill, mana []int) int64 {
 	N, M := len(skill), len(mana)
 	prevPotion := make([]int64, N)
 	for potion := 0; potion < M; potion++ {

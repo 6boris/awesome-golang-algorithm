@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(n int, languages [][]int, friendships [][]int) int {
+func Solution(n int, languages, friendships [][]int) int {
 	cncon := make(map[int]bool)
 	for _, friendship := range friendships {
 		mp := make(map[int]bool)

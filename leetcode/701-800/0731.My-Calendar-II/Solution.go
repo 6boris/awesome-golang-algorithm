@@ -14,7 +14,7 @@ func Constructor731() MyCalendarTwo {
 	}
 }
 
-func (this *MyCalendarTwo) Book(start int, end int) bool {
+func (this *MyCalendarTwo) Book(start, end int) bool {
 	_, ok1 := this.store[start]
 	_, ok2 := this.store[end]
 	tmp := make([]int, len(this.keys))

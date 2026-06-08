@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(nums []int, queries []int, x int) []int {
+func Solution(nums, queries []int, x int) []int {
 	indies := []int{}
 	for idx := 0; idx < len(nums); idx++ {
 		if nums[idx] == x {

@@ -27,11 +27,11 @@ func (h *heap502ItemList) Swap(i, j int) {
 	(*h)[i], (*h)[j] = (*h)[j], (*h)[i]
 }
 
-func (h *heap502ItemList) Push(x interface{}) {
+func (h *heap502ItemList) Push(x any) {
 	*h = append(*h, x.(heap502Item))
 }
 
-func (h *heap502ItemList) Pop() interface{} {
+func (h *heap502ItemList) Pop() any {
 	old := *h
 	l := len(old)
 	x := old[l-1]
@@ -39,7 +39,7 @@ func (h *heap502ItemList) Pop() interface{} {
 	return x
 }
 
-func Solution(k int, w int, profits []int, capital []int) int {
+func Solution(k, w int, profits, capital []int) int {
 	x := make([]heap502Item, len(profits))
 	for i := 0; i < len(profits); i++ {
 		x[i] = heap502Item{cost: capital[i], profit: profits[i]}

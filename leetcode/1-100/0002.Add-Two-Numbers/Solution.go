@@ -1,6 +1,6 @@
 package Solution
 
-func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
+func addTwoNumbers(l1, l2 *ListNode) *ListNode {
 	node := &ListNode{Val: 0, Next: nil}
 	n1, n2, tmp := l1, l2, node
 	sum := 0

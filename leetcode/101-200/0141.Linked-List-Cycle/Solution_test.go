@@ -6,12 +6,6 @@ import (
 	"testing"
 )
 
-type Case struct {
-	name   string
-	inputs *ListNode
-	expect bool
-}
-
 //func TestSolution1(t *testing.T) {
 //	//	测试用例
 //	cases := []struct {
@@ -110,7 +104,7 @@ func getRandList(hasCycle bool, len int) *ListNode {
 	return head
 }
 
-//	更具数组反序列化链表
+// 更具数组反序列化链表
 func UnmarshalListBySlice(nums []int) *ListNode {
 	head := &ListNode{Val: -1, Next: nil}
 	tmp := head
@@ -122,7 +116,7 @@ func UnmarshalListBySlice(nums []int) *ListNode {
 }
 
 // 随机初始化链表
-func UnmarshalListByRand(max_num int, len int) *ListNode {
+func UnmarshalListByRand(max_num, len int) *ListNode {
 	head := &ListNode{Val: -1, Next: nil}
 	tmp := head
 

@@ -18,7 +18,6 @@ func merge(nums []int, left, right int) int {
 	}
 	for ; i <= mid; i, k = i+1, k+1 {
 		temp[k] = nums[i]
-
 	}
 	for ; j <= right; j, k = j+1, k+1 {
 		temp[k] = nums[j]
@@ -28,6 +27,7 @@ func merge(nums []int, left, right int) int {
 	}
 	return reverseOrderPairs
 }
+
 func mergeSort(nums []int, left, right int) int {
 	if left < right {
 		mid := (right-left)/2 + left

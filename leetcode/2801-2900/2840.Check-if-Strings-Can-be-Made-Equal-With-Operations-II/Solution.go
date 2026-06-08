@@ -4,7 +4,7 @@ import (
 	"slices"
 )
 
-func Solution(s1 string, s2 string) bool {
+func Solution(s1, s2 string) bool {
 	a1, b1 := make([]byte, 0), make([]byte, 0)
 	n := len(s1)
 	for i := 0; i < n; i += 2 {
@@ -29,7 +29,6 @@ func Solution(s1 string, s2 string) bool {
 			return 0
 		}
 		return 1
-
 	})
 
 	for i := range a1 {
@@ -51,7 +50,6 @@ func Solution(s1 string, s2 string) bool {
 			return 0
 		}
 		return 1
-
 	})
 	slices.SortFunc(b2, func(i, j byte) int {
 		if i < j {
@@ -61,7 +59,6 @@ func Solution(s1 string, s2 string) bool {
 			return 0
 		}
 		return 1
-
 	})
 	for i := range a2 {
 		if a2[i] != b2[i] {

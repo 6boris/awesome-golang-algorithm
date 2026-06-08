@@ -10,6 +10,7 @@ func bitOfOne(n int) int {
 	}
 	return ans
 }
+
 func Solution(arr []int) []int {
 	sort.Slice(arr, func(i, j int) bool {
 		a := bitOfOne(arr[i])

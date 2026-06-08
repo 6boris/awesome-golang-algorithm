@@ -21,9 +21,6 @@ func pathSum_1(root *TreeNode, targetSum int) [][]int {
 		}
 		dfs(node.Left, target, path)
 		dfs(node.Right, target, path)
-		if len(path) != 0 {
-			path = path[:len(path)-1]
-		}
 	}
 	dfs(root, targetSum, []int{})
 	return ans
@@ -35,8 +32,9 @@ type pair struct {
 }
 
 func pathSum_2(root *TreeNode, targetSum int) (ans [][]int) {
+	ans = make([][]int, 0)
 	if root == nil {
-		return
+		return ans
 	}
 	parent := map[*TreeNode]*TreeNode{}
 	getPath := func(node *TreeNode) (path []int) {
@@ -47,7 +45,7 @@ func pathSum_2(root *TreeNode, targetSum int) (ans [][]int) {
 			path[i], path[j] = path[j], path[i]
 			j--
 		}
-		return
+		return path
 	}
 	queue := []pair{{root, targetSum}}
 	for len(queue) > 0 {
@@ -70,5 +68,5 @@ func pathSum_2(root *TreeNode, targetSum int) (ans [][]int) {
 			}
 		}
 	}
-	return
+	return ans
 }

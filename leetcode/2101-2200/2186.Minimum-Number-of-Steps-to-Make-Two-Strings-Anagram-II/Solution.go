@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(s string, t string) int {
+func Solution(s, t string) int {
 	ss, tt := [26]int{}, [26]int{}
 	bs, bt := []byte(s), []byte(t)
 

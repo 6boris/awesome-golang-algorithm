@@ -4,7 +4,7 @@ import "fmt"
 
 func genParts(bs string) []string {
 	if len(bs) == 1 {
-		return []string{string(bs)}
+		return []string{bs}
 	}
 
 	l := len(bs)
@@ -15,15 +15,16 @@ func genParts(bs string) []string {
 		return []string{fmt.Sprintf("0.%s", bs[1:])}
 	}
 	if bs[l-1] == '0' {
-		return []string{string(bs)}
+		return []string{bs}
 	}
-	ans := []string{string(bs)}
+	ans := []string{bs}
 	// 1, 2 3 4
 	for i := 1; i < l; i++ {
 		ans = append(ans, fmt.Sprintf("%s.%s", bs[:i], bs[i:]))
 	}
 	return ans
 }
+
 func Solution(s string) []string {
 	ll := len(s)
 	bs := s[1 : ll-1]

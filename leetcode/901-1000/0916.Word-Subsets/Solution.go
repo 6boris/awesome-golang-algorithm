@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(words1 []string, words2 []string) []string {
+func Solution(words1, words2 []string) []string {
 	ac := [26]int{}
 	for _, w := range words2 {
 		tmp := [26]int{}

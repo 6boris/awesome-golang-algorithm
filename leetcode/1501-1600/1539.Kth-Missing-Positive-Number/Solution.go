@@ -11,7 +11,6 @@ func Solution(arr []int, k int) int {
 		index++
 	}
 	for ; k > 0; k, i = k-1, i+1 {
-
 	}
 	return i - 1
 }

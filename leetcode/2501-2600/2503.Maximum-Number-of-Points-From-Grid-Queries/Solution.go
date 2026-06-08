@@ -3,7 +3,7 @@ package Solution
 import "sort"
 
 func Solution(grid [][]int, queries []int) []int {
-	var dirs = [][2]int{
+	dirs := [][2]int{
 		{0, 1}, {1, 0}, {0, -1}, {-1, 0},
 	}
 	rows, cols := len(grid), len(grid[0])

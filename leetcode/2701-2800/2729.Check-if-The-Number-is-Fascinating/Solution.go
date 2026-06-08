@@ -2,8 +2,7 @@ package Solution
 
 func Solution(n int) bool {
 	checker := [10]int{}
-	var checkNum func(n int)
-	checkNum = func(n int) {
+	var checkNum func(n int) = func(n int) {
 		for n > 0 {
 			x := n % 10
 			checker[x]++

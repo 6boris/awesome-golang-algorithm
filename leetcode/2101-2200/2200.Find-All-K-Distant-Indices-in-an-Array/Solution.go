@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(nums []int, key int, k int) []int {
+func Solution(nums []int, key, k int) []int {
 	l := len(nums)
 	used := make([]bool, l)
 	c := 0

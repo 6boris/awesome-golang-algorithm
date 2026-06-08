@@ -32,7 +32,7 @@ func (h *heap3264) Pop() any {
 	return x
 }
 
-func Solution(nums []int, k int, multiplier int) []int {
+func Solution(nums []int, k, multiplier int) []int {
 	h := &heap3264{}
 	for i := range nums {
 		heap.Push(h, [2]int{i, nums[i]})

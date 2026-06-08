@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(order []int, friends []int) []int {
+func Solution(order, friends []int) []int {
 	friendsMap := make(map[int]struct{})
 	for _, n := range friends {
 		friendsMap[n] = struct{}{}

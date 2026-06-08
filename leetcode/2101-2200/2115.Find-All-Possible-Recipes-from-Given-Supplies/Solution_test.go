@@ -18,7 +18,13 @@ func TestSolution(t *testing.T) {
 	}{
 		{"TestCase1", []string{"bread"}, [][]string{{"yeast", "flour"}}, []string{"yeast", "flour", "conr"}, []string{"bread"}},
 		{"TestCase2", []string{"bread", "sandwich"}, [][]string{{"yeast", "flour"}, {"bread", "meat"}}, []string{"yeast", "flour", "meat"}, []string{"bread", "sandwich"}},
-		{"TestCase3", []string{"bread", "sandwich", "burger"}, [][]string{{"yeast", "flour"}, {"bread", "meat"}, {"sandwich", "meat", "bread"}}, []string{"yeast", "flour", "meat"}, []string{"bread", "burger", "sandwich"}},
+		{
+			"TestCase3",
+			[]string{"bread", "sandwich", "burger"},
+			[][]string{{"yeast", "flour"}, {"bread", "meat"}, {"sandwich", "meat", "bread"}},
+			[]string{"yeast", "flour", "meat"},
+			[]string{"bread", "burger", "sandwich"},
+		},
 	}
 
 	//	开始测试

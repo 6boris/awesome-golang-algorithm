@@ -8,7 +8,7 @@ type queueItem struct {
 	node, steps, color int
 }
 
-func Solution(n int, redEdges [][]int, blueEdges [][]int) []int {
+func Solution(n int, redEdges, blueEdges [][]int) []int {
 	ans := make([]int, n)
 	for i := 1; i < n; i++ {
 		ans[i] = -1

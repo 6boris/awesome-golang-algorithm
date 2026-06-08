@@ -12,15 +12,16 @@ import (
 
 func foo(output io.Writer) func() {
 	return func() {
-		fmt.Fprint(output, "foo")
+		_, _ = fmt.Fprint(output, "foo")
 	}
 }
 
 func bar(output io.Writer) func() {
 	return func() {
-		fmt.Fprint(output, "bar")
+		_, _ = fmt.Fprint(output, "bar")
 	}
 }
+
 func run(fb *FooBar) string {
 	var wg sync.WaitGroup
 	wg.Add(2)

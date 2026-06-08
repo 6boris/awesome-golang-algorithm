@@ -39,7 +39,7 @@ type workProfit struct {
 	d, p int
 }
 
-func Solution(difficulty []int, profit []int, worker []int) int {
+func Solution(difficulty, profit, worker []int) int {
 	l := len(difficulty)
 	dp := make([]workProfit, l)
 	for i := 0; i < len(difficulty); i++ {

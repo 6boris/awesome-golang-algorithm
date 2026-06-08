@@ -21,21 +21,24 @@ func Solution(moves [][]int) string {
 
 func winner(board [][]string) string {
 	player := checkRow(board)
-	if player == "X" {
+	switch player {
+	case "X":
 		return "A"
-	} else if player == "O" {
+	case "O":
 		return "B"
 	}
 	player = checkColumn(board)
-	if player == "X" {
+	switch player {
+	case "X":
 		return "A"
-	} else if player == "O" {
+	case "O":
 		return "B"
 	}
 	player = checkDiagonals(board)
-	if player == "X" {
+	switch player {
+	case "X":
 		return "A"
-	} else if player == "O" {
+	case "O":
 		return "B"
 	}
 	count := 0
@@ -57,9 +60,10 @@ func checkRow(moves [][]string) string {
 	for i := 0; i < 3; i++ {
 		x, o := 0, 0
 		for j := 0; j < 3; j++ {
-			if moves[i][j] == "X" {
+			switch moves[i][j] {
+			case "X":
 				x++
-			} else if moves[i][j] == "O" {
+			case "O":
 				o++
 			}
 		}
@@ -76,9 +80,10 @@ func checkColumn(moves [][]string) string {
 	for i := 0; i < 3; i++ {
 		x, o := 0, 0
 		for j := 0; j < 3; j++ {
-			if moves[j][i] == "X" {
+			switch moves[j][i] {
+			case "X":
 				x++
-			} else if moves[j][i] == "O" {
+			case "O":
 				o++
 			}
 		}
@@ -96,9 +101,10 @@ func checkDiagonals(moves [][]string) string {
 	for i := 0; i < 3; i++ {
 		for j := 0; j < 3; j++ {
 			if i == j {
-				if moves[i][j] == "X" {
+				switch moves[i][j] {
+				case "X":
 					x++
-				} else if moves[i][j] == "O" {
+				case "O":
 					o++
 				}
 			}
@@ -113,9 +119,10 @@ func checkDiagonals(moves [][]string) string {
 	for i := 0; i < 3; i++ {
 		for j := 0; j < 3; j++ {
 			if i+j == 2 {
-				if moves[i][j] == "X" {
+				switch moves[i][j] {
+				case "X":
 					x++
-				} else if moves[i][j] == "O" {
+				case "O":
 					o++
 				}
 			}

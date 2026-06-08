@@ -15,7 +15,7 @@ type SolutionFuncType func(*TreeNode) bool
 
 var SolutionFuncList = []SolutionFuncType{
 	isCompleteTree_1,
-	//isCompleteTree_2,
+	// isCompleteTree_2,
 }
 
 // Test case info struct

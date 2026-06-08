@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(n int, left []int, right []int) int {
+func Solution(n int, left, right []int) int {
 	ans := 0
 	for _, l := range left {
 		if l > ans {

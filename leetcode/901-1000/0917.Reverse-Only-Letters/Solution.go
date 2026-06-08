@@ -9,7 +9,6 @@ func Solution(s string) string {
 	l, r := 0, len(bs)-1
 	for l < r {
 		for ; l < r && !ok(bs[l]); l++ {
-
 		}
 		for ; r > l && !ok(bs[r]); r-- {
 		}

@@ -14,7 +14,6 @@ func Solution(grid [][]int) [][]int {
 	)
 	for i := 0; i < m; i++ {
 		for j := 0; j < n; j++ {
-			left, right = 0, 0
 			exist = map[int]struct{}{}
 			for ii, jj := i-1, j-1; ii >= 0 && jj >= 0; ii, jj = ii-1, jj-1 {
 				exist[grid[ii][jj]] = struct{}{}

@@ -1,7 +1,6 @@
 package Solution
 
-func Solution(edges []int, node1 int, node2 int) int {
-
+func Solution(edges []int, node1, node2 int) int {
 	var canReach func(int, int, map[int]int)
 	canReach = func(startNode, l int, path map[int]int) {
 		if _, ok := path[startNode]; ok {

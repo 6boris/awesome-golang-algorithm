@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(n int, edges [][]int, source int, destination int) bool {
+func Solution(n int, edges [][]int, source, destination int) bool {
 	graph := make(map[int]map[int]struct{})
 	for _, e := range edges {
 		if _, ok := graph[e[0]]; !ok {
@@ -39,7 +39,7 @@ func Solution(n int, edges [][]int, source int, destination int) bool {
 	return found
 }
 
-func Solution1(n int, edges [][]int, source int, destination int) bool {
+func Solution1(n int, edges [][]int, source, destination int) bool {
 	if source == destination {
 		return true
 	}

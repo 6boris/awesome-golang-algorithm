@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(total int, cost1 int, cost2 int) int64 {
+func Solution(total, cost1, cost2 int) int64 {
 	var ret int64
 	penCount := 0
 	for ; penCount*cost1 <= total; penCount++ {

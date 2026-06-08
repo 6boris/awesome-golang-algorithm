@@ -2,7 +2,7 @@ package Solution
 
 import "strings"
 
-func Solution(text string, brokenLetters string) int {
+func Solution(text, brokenLetters string) int {
 	broken := [26]bool{}
 	for _, b := range brokenLetters {
 		broken[b-'a'] = true

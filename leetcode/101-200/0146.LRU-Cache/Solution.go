@@ -34,7 +34,7 @@ func (this *LRUCache) Get(key int) int {
 	return -1
 }
 
-func (this *LRUCache) Put(key int, value int) {
+func (this *LRUCache) Put(key, value int) {
 	if v, ok := this.m[key]; ok {
 		v.val = value
 		this.removeNode(v)
@@ -52,12 +52,14 @@ func (this *LRUCache) Put(key int, value int) {
 		}
 	}
 }
+
 func (this *LRUCache) moveHead(node *Node) {
 	this.head.next.prev = node
 	node.next = this.head.next
 	node.prev = this.head
 	this.head.next = node
 }
+
 func (this *LRUCache) removeNode(node *Node) {
 	node.next.prev = node.prev
 	node.prev.next = node.next

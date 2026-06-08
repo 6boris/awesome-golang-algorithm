@@ -27,11 +27,12 @@ func TestSolution(t *testing.T) {
 			{2, 2, 7},
 			{3, 3, 6},
 		}, 5, false},
-		{"TestCase4", [][]int{
-			{1, 1, 8},
-			{2, 2, 7},
-			{3, 3, 6},
-		}, 6, true,
+		{
+			"TestCase4", [][]int{
+				{1, 1, 8},
+				{2, 2, 7},
+				{3, 3, 6},
+			}, 6, true,
 		},
 		{"TestCase5", [][]int{
 			{2, 1, 5},
@@ -51,10 +52,10 @@ func TestSolution(t *testing.T) {
 	}
 }
 
-//	压力测试
+// 压力测试
 func BenchmarkSolution(b *testing.B) {
 }
 
-//	使用案列
+// 使用案列
 func ExampleSolution() {
 }

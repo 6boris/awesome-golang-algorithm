@@ -17,6 +17,7 @@ func buildTree3093(tree *trieNode3093, word string, index int) {
 		root = root.child[idx]
 	}
 }
+
 func search3093(tree *trieNode3093, word string) int {
 	root := tree
 	for i := len(word) - 1; i >= 0; i-- {
@@ -29,7 +30,7 @@ func search3093(tree *trieNode3093, word string) int {
 	return root.end
 }
 
-func Solution(wordsContainer []string, wordsQuery []string) []int {
+func Solution(wordsContainer, wordsQuery []string) []int {
 	indies := make([]int, len(wordsContainer))
 	for i := range indies {
 		indies[i] = i

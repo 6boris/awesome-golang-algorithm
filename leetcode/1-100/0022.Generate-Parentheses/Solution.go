@@ -4,7 +4,7 @@ func generateParenthesis(n int) []string {
 	return dp("", 0, n*2)
 }
 
-func dp(prefix string, depth int, n int) []string {
+func dp(prefix string, depth, n int) []string {
 	if depth == 0 && n == 0 {
 		return []string{prefix}
 	}

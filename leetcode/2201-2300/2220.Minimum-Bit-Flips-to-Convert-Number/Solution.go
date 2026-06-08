@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(start int, goal int) int {
+func Solution(start, goal int) int {
 	x := start ^ goal
 	n := 0
 	for x > 0 {

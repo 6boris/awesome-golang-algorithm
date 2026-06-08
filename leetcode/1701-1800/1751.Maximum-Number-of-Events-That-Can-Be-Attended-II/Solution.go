@@ -15,11 +15,7 @@ func Solution(events [][]int, k int) int {
 	})
 	row := len(events)
 
-	var bsearch func(int, int) int
-
-	bsearch = func(source, end int) int {
-		// 1, 2, 3, 4, 5, 6, 7, 8,
-		// 找到最后一个小于6个元素
+	var bsearch func(int, int) int = func(source, end int) int {
 		l, r := 0, end
 		for l < r {
 			m := (r-l)/2 + l

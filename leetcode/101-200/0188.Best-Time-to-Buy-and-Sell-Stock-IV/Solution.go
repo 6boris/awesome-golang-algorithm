@@ -61,11 +61,11 @@ func (s *stock) Swap(i, j int) {
 	(*s)[i], (*s)[j] = (*s)[j], (*s)[i]
 }
 
-func (s *stock) Push(x interface{}) {
+func (s *stock) Push(x any) {
 	*s = append(*s, x.(int))
 }
 
-func (s *stock) Pop() interface{} {
+func (s *stock) Pop() any {
 	old := *s
 	n := len(old)
 	x := old[n-1]

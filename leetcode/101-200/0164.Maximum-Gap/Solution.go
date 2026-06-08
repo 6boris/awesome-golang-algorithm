@@ -33,6 +33,7 @@ func radixSort(nums []int) {
 		}
 	}
 }
+
 func Solution(nums []int) int {
 	l := len(nums)
 	if l <= 1 {

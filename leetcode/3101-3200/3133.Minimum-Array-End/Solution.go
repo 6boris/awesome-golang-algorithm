@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(n int, x int) int64 {
+func Solution(n, x int) int64 {
 	ans := int64(x)
 	if n == 1 {
 		return ans

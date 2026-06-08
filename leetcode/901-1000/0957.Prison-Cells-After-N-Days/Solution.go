@@ -2,17 +2,14 @@ package Solution
 
 func Solution(cells []int, n int) []int {
 	start := [8]int{}
-	for i := range cells {
-		start[i] = cells[i]
-	}
+	copy(start[:], cells)
 	days := [][8]int{start}
 	day := 0
 	cache := map[[8]int]int{
 		start: day,
 	}
 
-	var convert func([8]int) [8]int
-	convert = func(now [8]int) [8]int {
+	convert := func(now [8]int) [8]int {
 		var res [8]int
 		res[0], res[7] = 0, 0
 		for i := 1; i < 7; i++ {

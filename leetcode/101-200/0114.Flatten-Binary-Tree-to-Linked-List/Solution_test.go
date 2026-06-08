@@ -33,6 +33,7 @@ func TestSolution(t *testing.T) {
 		})
 	}
 }
+
 func TestSolution2(t *testing.T) {
 	//	测试用例
 	cases := []struct {

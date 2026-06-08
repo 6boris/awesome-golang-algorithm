@@ -46,6 +46,7 @@ func judge306(num string, start, mid, end int) bool {
 	}
 	return true
 }
+
 func addStr(num string, start, mid, end int) string {
 	buf := strings.Builder{}
 	i, j := mid, end
@@ -53,10 +54,10 @@ func addStr(num string, start, mid, end int) string {
 	for ; i >= start || j > mid; i, j = i-1, j-1 {
 		a, b := byte('0'), byte('0')
 		if i >= start {
-			a = byte(num[i])
+			a = num[i]
 		}
 		if j > mid {
-			b = byte(num[j])
+			b = num[j]
 		}
 		tmp := a - '0' + b - '0' + cf
 		cf = tmp / 10

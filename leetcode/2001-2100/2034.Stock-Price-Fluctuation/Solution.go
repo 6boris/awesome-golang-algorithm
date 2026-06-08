@@ -66,7 +66,7 @@ func Constructor() StockPrice {
 	}
 }
 
-func (this *StockPrice) Update(timestamp int, price int) {
+func (this *StockPrice) Update(timestamp, price int) {
 	if timestamp >= this.maxTimestamp {
 		this.maxTimestamp = timestamp
 		this.currentPrice = price
@@ -95,7 +95,6 @@ func (this *StockPrice) Update(timestamp int, price int) {
 
 func (this *StockPrice) Current() int {
 	return this.currentPrice
-
 }
 
 func (this *StockPrice) Maximum() int {

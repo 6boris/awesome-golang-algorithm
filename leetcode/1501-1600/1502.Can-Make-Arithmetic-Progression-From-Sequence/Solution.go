@@ -16,11 +16,11 @@ func (a *arr1502) Swap(i, j int) {
 	(*a)[i], (*a)[j] = (*a)[j], (*a)[i]
 }
 
-func (a *arr1502) Push(x interface{}) {
+func (a *arr1502) Push(x any) {
 	*a = append(*a, x.(int))
 }
 
-func (a *arr1502) Pop() interface{} {
+func (a *arr1502) Pop() any {
 	old := *a
 	l := len(old)
 	x := old[l-1]

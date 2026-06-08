@@ -3,7 +3,6 @@ package Solution
 import "sort"
 
 func Solution(s string) string {
-
 	sb := []byte(s)
 	byteCount := make(map[byte]int)
 	for _, b := range sb {

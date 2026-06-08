@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(s1 string, s2 string) bool {
+func Solution(s1, s2 string) bool {
 	if s1 == s2 {
 		return true
 	}
@@ -12,14 +12,15 @@ func Solution(s1 string, s2 string) bool {
 			continue
 		}
 		diff++
-		if diff == 1 {
+		switch diff {
+		case 1:
 			a, b = s1[i], s2[i]
-		} else if diff == 2 {
+		case 2:
 			// a, s1, b s2
-			if !(a == s2[i] && b == s1[i]) {
+			if a != s2[i] || b != s1[i] {
 				return false
 			}
-		} else {
+		default:
 			return false
 		}
 	}

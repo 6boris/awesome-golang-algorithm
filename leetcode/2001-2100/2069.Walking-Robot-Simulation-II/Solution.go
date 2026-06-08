@@ -8,7 +8,7 @@ type Robot struct {
 	toDir map[int]string
 }
 
-func Constructor(width int, height int) Robot {
+func Constructor(width, height int) Robot {
 	robot := Robot{
 		toDir: map[int]string{
 			0: "East",

@@ -45,7 +45,7 @@ func Solution(pressedKeys string) int {
 
 	ret, cnt := 1, 1
 	cache := make(map[[2]int]int)
-	which := 3
+	var which int
 	fn := []fn2266{for4, for3}
 
 	for i := 1; i < len(bs); i++ {

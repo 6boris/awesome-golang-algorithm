@@ -22,10 +22,11 @@ func myAtoi(str string) int {
 
 	// 判断符号
 	//	+
-	if str[i] == 43 {
+	switch str[i] {
+	case 43:
 		i++
 		//	-
-	} else if str[i] == 45 {
+	case 45:
 		sign = -1
 		i++
 	}

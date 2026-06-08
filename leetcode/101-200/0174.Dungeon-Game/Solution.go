@@ -5,14 +5,14 @@ type NumArray struct {
 	m   map[[2]int]int
 }
 
-//	暴力循环
+// 暴力循环
 func Constructor(nums []int) NumArray {
 	var s NumArray
 	s.Sum = nums
 	return s
 }
 
-func (this *NumArray) SumRange(i int, j int) int {
+func (this *NumArray) SumRange(i, j int) int {
 	ans := 0
 	for k := i; k <= j; k++ {
 		ans += this.Sum[k]
@@ -20,7 +20,7 @@ func (this *NumArray) SumRange(i int, j int) int {
 	return ans
 }
 
-//	利用 map 做缓存
+// 利用 map 做缓存
 func Constructor2(nums []int) NumArray {
 	s := NumArray{m: map[[2]int]int{}}
 
@@ -34,13 +34,13 @@ func Constructor2(nums []int) NumArray {
 	return s
 }
 
-func (this *NumArray) SumRange2(i int, j int) int {
+func (this *NumArray) SumRange2(i, j int) int {
 	return this.m[[2]int{i, j}]
 }
 
-//	DP
-//	sum[i] = nums[0] +  nums[1] + nums[2]
-//	sum[i+1] = sum[i] + nums[i+1]
+// DP
+// sum[i] = nums[0] +  nums[1] + nums[2]
+// sum[i+1] = sum[i] + nums[i+1]
 func Constructor3(nums []int) NumArray {
 	var res NumArray
 	res.Sum = make([]int, len(nums)+1)
@@ -50,7 +50,7 @@ func Constructor3(nums []int) NumArray {
 	return res
 }
 
-func (this *NumArray) SumRange3(i int, j int) int {
+func (this *NumArray) SumRange3(i, j int) int {
 	return this.Sum[j+1] - this.Sum[i]
 }
 

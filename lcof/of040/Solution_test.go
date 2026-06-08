@@ -10,14 +10,14 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-//	solution func Info
+// solution func Info
 type SolutionFuncType func([]int, int) []int
 
 var SolutionFuncList = []SolutionFuncType{
 	getLeastNumbers,
 }
 
-//	test info struct
+// test info struct
 type Case struct {
 	name   string
 	arr    []int
@@ -25,7 +25,7 @@ type Case struct {
 	expect []int
 }
 
-// 	Test case
+// Test case
 var cases = []Case{
 	{name: "TestCase", arr: []int{3, 2, 1}, k: 2, expect: []int{1, 2}},
 	{name: "TestCase", arr: []int{0, 1, 2, 1}, k: 1, expect: []int{0}},

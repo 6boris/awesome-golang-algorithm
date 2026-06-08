@@ -17,7 +17,7 @@ var SolutionFuncList = []SolutionFuncType{
 
 var DefaultValue int = -1024
 
-func InsertNodeToTree(tree *TreeNode, node *TreeNode) {
+func InsertNodeToTree(tree, node *TreeNode) {
 	if tree == nil {
 		return
 	}
@@ -52,7 +52,8 @@ func TestSolution(t *testing.T) {
 	//	测试用例
 	ast := assert.New(t)
 
-	// The original Problem requires the binary tree constructed from array. Please refer to test cases produced at Leetcode problem https://leetcode.com/problems/maximum-level-sum-of-a-binary-tree/
+	// The original Problem requires the binary tree constructed from array. Please refer to test cases produced at Leetcode problem
+	// https://leetcode.com/problems/maximum-level-sum-of-a-binary-tree/
 	// treeNode := InitTree(1, 7, 0, 7, -8)
 	treeNode := &TreeNode{
 		Val:   1,

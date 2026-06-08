@@ -2,7 +2,7 @@ package Solution
 
 import "sort"
 
-func Solution(low int, high int) []int {
+func Solution(low, high int) []int {
 	start := []int{12, 23, 34, 45, 56, 67, 78, 89}
 	ans := make([]int, 0)
 	for i, n := range start {

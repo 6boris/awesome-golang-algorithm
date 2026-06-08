@@ -18,7 +18,7 @@ func (this *TweetCounts) RecordTweet(tweetName string, time int) {
 	sort.Ints(this.data[tweetName])
 }
 
-func (this *TweetCounts) GetTweetCountsPerFrequency(freq string, tweetName string, startTime int, endTime int) []int {
+func (this *TweetCounts) GetTweetCountsPerFrequency(freq, tweetName string, startTime, endTime int) []int {
 	interval := 60
 	if freq == "hour" {
 		interval = 3600

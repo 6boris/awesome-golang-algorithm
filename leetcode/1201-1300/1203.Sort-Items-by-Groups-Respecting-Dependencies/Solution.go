@@ -2,7 +2,7 @@ package Solution
 
 import "sort"
 
-func Solution(n int, m int, group []int, beforeItems [][]int) []int {
+func Solution(n, m int, group []int, beforeItems [][]int) []int {
 	groupItems := make(map[int][]int)
 	item2Group := make(map[int]int)
 	for idx, g := range group {
@@ -62,8 +62,7 @@ func Solution(n int, m int, group []int, beforeItems [][]int) []int {
 		fmt.Printf("groupOrder: %+v\n", groupOrder)
 		fmt.Printf("groupIn: %+v\n", groupIn)
 	*/
-	var groupTopology func(int) bool
-	groupTopology = func(groupID int) bool {
+	groupTopology := func(groupID int) bool {
 		items := groupItems[groupID]
 		if len(items) == 1 {
 			return true
@@ -84,7 +83,7 @@ func Solution(n int, m int, group []int, beforeItems [][]int) []int {
 		if len(queue) == 0 {
 			return false
 		}
-		// The sorting is added here for test cases, and can be removed from the actual commit code
+
 		sort.Ints(newOrder)
 		for len(queue) > 0 {
 			n := make([]int, 0)
@@ -101,7 +100,7 @@ func Solution(n int, m int, group []int, beforeItems [][]int) []int {
 			}
 			queue = n
 			used += len(n)
-			// The sorting is added here for test cases, and can be removed from the actual commit code
+
 			sort.Ints(n)
 			newOrder = append(newOrder, n...)
 		}
@@ -112,7 +111,7 @@ func Solution(n int, m int, group []int, beforeItems [][]int) []int {
 	// 先检查每个组是否可以满足要求
 	for groupID := range groupItems {
 		if !groupTopology(groupID) {
-			//fmt.Printf("group; %d, don't", groupID)
+			// fmt.Printf("group; %d, don't", groupID)
 			return nil
 		}
 	}
@@ -123,7 +122,7 @@ func Solution(n int, m int, group []int, beforeItems [][]int) []int {
 	for i := range groupItems {
 		if _, ok := groupIn[i]; !ok {
 			queue = append(queue, i)
-			//fmt.Printf("add group: %d\n", i)
+			// fmt.Printf("add group: %d\n", i)
 			newGroupOrder = append(newGroupOrder, i)
 			used++
 		}

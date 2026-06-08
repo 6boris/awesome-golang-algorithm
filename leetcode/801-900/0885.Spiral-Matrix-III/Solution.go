@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(rows int, cols int, rStart int, cStart int) [][]int {
+func Solution(rows, cols, rStart, cStart int) [][]int {
 	ans := make([][]int, 0)
 	steps := 1
 	first := true
@@ -10,7 +10,7 @@ func Solution(rows int, cols int, rStart int, cStart int) [][]int {
 			ans = append(ans, []int{rStart, cStart})
 			end--
 		}
-		//right
+		// right
 		if !first {
 			for s := steps - 1; s > 0 && end > 0; s-- {
 				rStart--

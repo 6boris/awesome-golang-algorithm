@@ -19,7 +19,7 @@ func Solution(s string, k int) int {
 				break
 			}
 			if s[p] == '0' {
-				//leading zero
+				// leading zero
 				continue
 			}
 			tmp := int(s[p]-'0')*x + base

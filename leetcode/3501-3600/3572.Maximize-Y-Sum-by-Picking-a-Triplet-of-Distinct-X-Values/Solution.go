@@ -4,7 +4,7 @@ import (
 	"sort"
 )
 
-func Solution(x []int, y []int) int {
+func Solution(x, y []int) int {
 	maxItem := make(map[int]int)
 	for index, n := range x {
 		maxItem[n] = max(maxItem[n], y[index])

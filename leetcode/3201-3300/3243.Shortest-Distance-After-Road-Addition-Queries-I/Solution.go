@@ -10,8 +10,7 @@ func Solution(n int, queries [][]int) []int {
 	for i := range n - 1 {
 		adj[i][i+1] = struct{}{}
 	}
-	var bfs func() int
-	bfs = func() int {
+	var bfs func() int = func() int {
 		queue := []int{0}
 		step := 0
 		used := map[int]struct{}{

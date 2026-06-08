@@ -4,7 +4,7 @@ import "slices"
 
 const INF2304 = 0x7fffffff
 
-func Solution(grid [][]int, moveCost [][]int) int {
+func Solution(grid, moveCost [][]int) int {
 	rows, cols := len(grid), len(grid[0])
 	dp := [2][]int{}
 	for i := range 2 {

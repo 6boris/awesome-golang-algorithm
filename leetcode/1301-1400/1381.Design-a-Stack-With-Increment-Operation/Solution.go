@@ -31,7 +31,7 @@ func (this *CustomStack) Pop() int {
 	return top
 }
 
-func (this *CustomStack) Increment(k int, val int) {
+func (this *CustomStack) Increment(k, val int) {
 	if this.index == -1 {
 		return
 	}

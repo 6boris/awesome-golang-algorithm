@@ -5,7 +5,7 @@ type pair2337 struct {
 	i int
 }
 
-func Solution(start string, target string) bool {
+func Solution(start, target string) bool {
 	a, b := make([]pair2337, 0), make([]pair2337, 0)
 	for i, c := range []byte(start) {
 		if c == '_' {

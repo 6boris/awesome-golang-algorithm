@@ -27,7 +27,7 @@ func calPrime(max int) []int {
 	return primes
 }
 
-func Solution(left int, right int) []int {
+func Solution(left, right int) []int {
 	res := []int{-1, -1}
 	primes := calPrime(right)
 	start := sort.Search(len(primes), func(i int) bool {

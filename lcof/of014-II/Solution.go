@@ -16,7 +16,7 @@ func cuttingRope(n int) int {
 	return dp[n]
 }
 
-func max(x int, y int) int {
+func max(x, y int) int {
 	if x > y {
 		return x
 	}

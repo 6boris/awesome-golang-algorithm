@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(nums1 []int, nums2 []int) int {
+func Solution(nums1, nums2 []int) int {
 	l1 := len(nums1) & 1
 	l2 := len(nums2) & 1
 	ans := 0

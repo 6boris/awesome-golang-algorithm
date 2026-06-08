@@ -46,7 +46,6 @@ func BenchmarkGetContributorInstance(b *testing.B) {
 		return
 	}
 
-	b.N = 2000000
 	contributors := GetContributorInstance()
 	fmt.Println(contributors)
 }

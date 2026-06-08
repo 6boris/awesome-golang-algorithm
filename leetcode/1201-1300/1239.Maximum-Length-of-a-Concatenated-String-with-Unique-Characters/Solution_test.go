@@ -16,7 +16,28 @@ func TestSolution(t *testing.T) {
 		{"TestCase1", []string{"un", "iq", "ue"}, 4},
 		{"TestCase2", []string{"cha", "r", "act", "ers"}, 6},
 		{"TestCase3", []string{"abcdefghijklmnopqrstuvwxyz"}, 26},
-		{"TestCase4", []string{"abcdefghijklm", "bcdefghijklmn", "cdefghijklmno", "defghijklmnop", "efghijklmnopq", "fghijklmnopqr", "ghijklmnopqrs", "hijklmnopqrst", "ijklmnopqrstu", "jklmnopqrstuv", "klmnopqrstuvw", "lmnopqrstuvwx", "mnopqrstuvwxy", "nopqrstuvwxyz", "opqrstuvwxyza", "pqrstuvwxyzab"}, 26},
+		{
+			"TestCase4",
+			[]string{
+				"abcdefghijklm",
+				"bcdefghijklmn",
+				"cdefghijklmno",
+				"defghijklmnop",
+				"efghijklmnopq",
+				"fghijklmnopqr",
+				"ghijklmnopqrs",
+				"hijklmnopqrst",
+				"ijklmnopqrstu",
+				"jklmnopqrstuv",
+				"klmnopqrstuvw",
+				"lmnopqrstuvwx",
+				"mnopqrstuvwxy",
+				"nopqrstuvwxyz",
+				"opqrstuvwxyza",
+				"pqrstuvwxyzab",
+			},
+			26,
+		},
 	}
 
 	//	开始测试

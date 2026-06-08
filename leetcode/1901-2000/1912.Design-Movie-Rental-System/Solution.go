@@ -14,6 +14,7 @@ type movieList []*movie
 func (m *movieList) Len() int {
 	return len(*m)
 }
+
 func (m *movieList) Swap(i, j int) {
 	(*m)[i], (*m)[j] = (*m)[j], (*m)[i]
 	(*m)[i].index = i
@@ -110,7 +111,7 @@ func (this *MovieRentingSystem) Search(m int) []int {
 	return ret
 }
 
-func (this *MovieRentingSystem) Rent(shop int, m int) {
+func (this *MovieRentingSystem) Rent(shop, m int) {
 	// 需要记录价格
 	key := [2]int{shop, m}
 	item := this.index[key]
@@ -118,7 +119,7 @@ func (this *MovieRentingSystem) Rent(shop int, m int) {
 	heap.Push(this.rentQueue, item)
 }
 
-func (this *MovieRentingSystem) Drop(shop int, m int) {
+func (this *MovieRentingSystem) Drop(shop, m int) {
 	key := [2]int{shop, m}
 	item := this.index[key]
 	heap.Remove(this.rentQueue, item.index)

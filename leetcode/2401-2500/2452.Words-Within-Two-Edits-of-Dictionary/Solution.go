@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(queries []string, dictionary []string) []string {
+func Solution(queries, dictionary []string) []string {
 	var ret []string
 	dict := make(map[string]struct{})
 	for i := range dictionary {

@@ -16,11 +16,11 @@ func (ii *i64score) Swap(i, j int) {
 	(*ii)[i], (*ii)[j] = (*ii)[j], (*ii)[i]
 }
 
-func (i *i64score) Push(x interface{}) {
+func (i *i64score) Push(x any) {
 	*i = append(*i, x.(int64))
 }
 
-func (i *i64score) Pop() interface{} {
+func (i *i64score) Pop() any {
 	old := *i
 	l := len(old)
 	x := old[l-1]

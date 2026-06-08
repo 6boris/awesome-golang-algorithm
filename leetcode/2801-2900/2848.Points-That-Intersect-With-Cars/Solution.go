@@ -28,7 +28,7 @@ func Solution(nums [][]int) int {
 			if car[0] > right {
 				points++
 			}
-			left, right = car[0], car[1]
+			right = car[1]
 			continue
 		}
 		if car[1] > right {

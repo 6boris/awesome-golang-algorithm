@@ -1,6 +1,6 @@
 package Solution
 
-//	普通搜索
+// 普通搜索
 func BinarySearch(nums []int, target int) int {
 	left, right := 0, len(nums)-1
 
@@ -18,7 +18,7 @@ func BinarySearch(nums []int, target int) int {
 	return -1
 }
 
-//	左边界
+// 左边界
 func BinarySearchLeftBound(nums []int, target int) int {
 	left, right := 0, len(nums)-1
 
@@ -38,7 +38,7 @@ func BinarySearchLeftBound(nums []int, target int) int {
 	return left
 }
 
-//	右边界
+// 右边界
 func BinarySearchRightBound(nums []int, target int) int {
 	left, right := 0, len(nums)-1
 

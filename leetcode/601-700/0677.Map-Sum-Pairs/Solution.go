@@ -29,7 +29,6 @@ func (this *trieNode677) sum(prefix string) int {
 		root = root.child[idx]
 	}
 	return ans
-
 }
 
 type MapSum struct {

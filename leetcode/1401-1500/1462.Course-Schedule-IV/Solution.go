@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(numCourses int, prerequisites [][]int, queries [][]int) []bool {
+func Solution(numCourses int, prerequisites, queries [][]int) []bool {
 	father := make([][]bool, numCourses)
 	for i := 0; i < numCourses; i++ {
 		father[i] = make([]bool, numCourses)

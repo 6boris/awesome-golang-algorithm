@@ -23,7 +23,6 @@ func Solution(root *TreeNode) {
 	Solution(root.Right)
 }
 
-
 func flatten114(root *TreeNode) (*TreeNode, *TreeNode) {
 	if root == nil {
 		return nil, nil
@@ -42,7 +41,7 @@ func flatten114(root *TreeNode) (*TreeNode, *TreeNode) {
 	root.Left = nil
 	return root, end
 }
+
 func Solution2(root *TreeNode) {
 	flatten114(root)
-	return
 }

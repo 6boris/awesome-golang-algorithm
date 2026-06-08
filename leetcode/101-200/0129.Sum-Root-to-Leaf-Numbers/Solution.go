@@ -20,7 +20,6 @@ func sumNumbers_1(root *TreeNode) int {
 		left := dfs(node.Left, sum)
 		right := dfs(node.Right, sum)
 		return left + right
-
 	}
 	return dfs(root, 0)
 }
@@ -32,7 +31,7 @@ type pair struct {
 
 func sumNumbers_2(root *TreeNode) (sum int) {
 	if root == nil {
-		return
+		return sum
 	}
 	queue := []pair{{root, root.Val}}
 	for len(queue) > 0 {
@@ -50,5 +49,5 @@ func sumNumbers_2(root *TreeNode) (sum int) {
 			}
 		}
 	}
-	return
+	return sum
 }

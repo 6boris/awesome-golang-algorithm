@@ -36,6 +36,7 @@ func maxPathSum_2(root *TreeNode) int {
 	maxPathSum124(root, &ans, &ansInit)
 	return ans
 }
+
 func maxPathSum124(root *TreeNode, ans *int, ansInit *bool) (int, int) {
 	if root == nil {
 		return 0, 0

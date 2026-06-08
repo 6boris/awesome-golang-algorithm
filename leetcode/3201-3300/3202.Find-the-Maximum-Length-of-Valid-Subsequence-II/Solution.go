@@ -14,6 +14,7 @@ func longestAlternatingSubsequnece(l1, l2 []int) int {
 	}
 	return max(a, b) + 1
 }
+
 func Solution(nums []int, k int) int {
 	group := make([][]int, k)
 	for i := range nums {

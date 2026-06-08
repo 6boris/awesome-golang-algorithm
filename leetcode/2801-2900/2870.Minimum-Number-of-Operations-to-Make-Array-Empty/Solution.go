@@ -14,7 +14,7 @@ func Solution(nums []int) int {
 		three := n / 3
 		mod := n % 3
 		if mod == 1 {
-			three-- //挪出去一个3，组成3+1
+			three-- // 挪出去一个3，组成3+1
 			three += 2
 		}
 		if mod == 2 {

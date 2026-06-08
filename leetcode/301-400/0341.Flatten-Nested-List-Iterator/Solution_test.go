@@ -13,7 +13,11 @@ func TestSolution(t *testing.T) {
 		inputs []*NestedInteger
 		expect []int
 	}{
-		{"TestCase1", []*NestedInteger{{Val: 1, isInt: true}, {isInt: false, list: []*NestedInteger{{Val: 2, isInt: true}, {Val: 3, isInt: true}}}, {Val: 1, isInt: true, list: nil}}, []int{1, 2, 3, 1}},
+		{
+			"TestCase1",
+			[]*NestedInteger{{Val: 1, isInt: true}, {isInt: false, list: []*NestedInteger{{Val: 2, isInt: true}, {Val: 3, isInt: true}}}, {Val: 1, isInt: true, list: nil}},
+			[]int{1, 2, 3, 1},
+		},
 		{"TestCase2", []*NestedInteger{{Val: 1, isInt: true}, {Val: 2, isInt: true}, {Val: 3, isInt: true}}, []int{1, 2, 3}},
 		{
 			"TestCase3",
@@ -44,10 +48,10 @@ func TestSolution(t *testing.T) {
 	}
 }
 
-//	压力测试
+// 压力测试
 func BenchmarkSolution(b *testing.B) {
 }
 
-//	使用案列
+// 使用案列
 func ExampleSolution() {
 }

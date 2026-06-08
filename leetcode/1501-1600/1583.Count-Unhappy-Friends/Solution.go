@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(n int, preferences [][]int, pairs [][]int) int {
+func Solution(n int, preferences, pairs [][]int) int {
 	likeIndex := make([]map[int]int, len(preferences))
 	for i, p := range preferences {
 		likeIndex[i] = make(map[int]int)

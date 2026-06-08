@@ -8,7 +8,7 @@ type tmp2191 struct {
 	v, s, i int
 }
 
-func Solution(mapping []int, nums []int) []int {
+func Solution(mapping, nums []int) []int {
 	convert := func(n int) int {
 		if n == 0 {
 			return mapping[0]

@@ -2,7 +2,7 @@ package Solution
 
 func Solution(nums []int, target int) int {
 	cache := map[int]struct{}{
-		0: struct{}{},
+		0: {},
 	}
 	var ret int
 	sum, need := 0, 0
@@ -12,7 +12,7 @@ func Solution(nums []int, target int) int {
 		if _, ok := cache[need]; ok {
 			ret++
 			cache = map[int]struct{}{
-				0: struct{}{},
+				0: {},
 			}
 			sum = 0
 			continue

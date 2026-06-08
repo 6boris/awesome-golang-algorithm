@@ -18,6 +18,7 @@ func swapPairs_1(head *ListNode) *ListNode {
 	}
 	return dummyHead.Next
 }
+
 func swapPairs_2(head *ListNode) *ListNode {
 	dummyHead := &ListNode{0, head}
 	temp := dummyHead

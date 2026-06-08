@@ -37,7 +37,7 @@ func Constructor1(k int, nums []int) KthLargest1 {
 	return kthLargest
 }
 
-//	想数据流中添加一个数并返回第K大的数
+// 想数据流中添加一个数并返回第K大的数
 func (this *KthLargest1) Add(val int) int {
 	//	如果添加进来的数比末尾的打就直接替换掉末尾的数
 	if val > this.heap[this.k-1] {

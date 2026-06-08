@@ -23,9 +23,15 @@ func TestSolution(t *testing.T) {
 				Right: &TreeNode{Val: 20},
 			},
 		}, []uint8{1, 1, 0, 1, 0, 1, 0, 1, 0}, []result{
-			{intF: 3}, {intF: 7}, {boolF: true},
-			{intF: 9}, {boolF: true}, {intF: 15},
-			{boolF: true}, {intF: 20}, {boolF: false},
+			{intF: 3},
+			{intF: 7},
+			{boolF: true},
+			{intF: 9},
+			{boolF: true},
+			{intF: 15},
+			{boolF: true},
+			{intF: 20},
+			{boolF: false},
 		}},
 	}
 

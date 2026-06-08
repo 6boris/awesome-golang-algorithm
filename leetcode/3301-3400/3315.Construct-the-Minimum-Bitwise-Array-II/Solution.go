@@ -9,7 +9,6 @@ func Solution(nums []int) []int {
 		}
 		k, t := 0, n
 		for ; t&1 == 1; t, k = t>>1, k+1 {
-
 		}
 
 		ret[i] = n ^ (1 << (k - 1))

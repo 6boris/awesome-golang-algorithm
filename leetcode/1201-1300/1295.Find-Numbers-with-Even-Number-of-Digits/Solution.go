@@ -14,8 +14,7 @@ func Solution(nums []int) int {
 }
 
 func Solution1(nums []int) int {
-	var isEven func(int) bool
-	isEven = func(n int) bool {
+	var isEven func(int) bool = func(n int) bool {
 		c := 0
 		for n > 0 {
 			n /= 10

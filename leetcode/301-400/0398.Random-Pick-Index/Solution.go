@@ -30,7 +30,7 @@ func (this *Solution1) Pick(target int) int {
 	return this.data[target].list[cur]
 }
 
-func Solution(nums []int, check []int) []int {
+func Solution(nums, check []int) []int {
 	c := Constructor(nums)
 	ans := make([]int, len(check))
 	for i, n := range check {

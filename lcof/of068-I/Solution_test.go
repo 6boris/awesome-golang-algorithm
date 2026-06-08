@@ -8,14 +8,14 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-//	solution func Info
+// solution func Info
 type SolutionFuncType func(*TreeNode, *TreeNode, *TreeNode) *TreeNode
 
 var SolutionFuncList = []SolutionFuncType{
 	lowestCommonAncestor,
 }
 
-//	test info struct
+// test info struct
 type Case struct {
 	name   string
 	root   *TreeNode
@@ -24,7 +24,7 @@ type Case struct {
 	expect *TreeNode
 }
 
-// 	test case
+// test case
 var cases = []Case{
 	{
 		name: "TestCase 1",

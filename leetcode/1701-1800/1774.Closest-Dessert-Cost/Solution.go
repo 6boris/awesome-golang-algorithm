@@ -21,7 +21,7 @@ func getSubsets(length, sum, start int, toppingCosts []int, next *[]int, in map[
 }
 
 // 二分搜索? 将topping里面的数据都计算出来。然后开始判断
-func Solution(baseCosts []int, toppingCosts []int, target int) int {
+func Solution(baseCosts, toppingCosts []int, target int) int {
 	next := make([]int, 0)
 	in := make(map[int]struct{})
 	for l := 1; l <= len(toppingCosts); l++ {

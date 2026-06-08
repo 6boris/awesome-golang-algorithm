@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(s string, t string) int {
+func Solution(s, t string) int {
 	as := [26]int{}
 	ts := [26]int{}
 	if s == t {

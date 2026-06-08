@@ -10,7 +10,7 @@ type Interval struct {
 	End   int
 }
 
-//	自定义排序规则
+// 自定义排序规则
 type SortByInt []Interval
 
 func (p SortByInt) Len() int {
@@ -32,9 +32,8 @@ func Max(x, y int) int {
 	return y
 }
 
-//
 func merge(intervals []Interval) []Interval {
-	if intervals == nil || len(intervals) <= 1 {
+	if len(intervals) <= 1 {
 		return intervals
 	}
 	//	先将结构体排序

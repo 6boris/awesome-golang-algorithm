@@ -9,7 +9,7 @@ func countOfOne(x int) int {
 	return c
 }
 
-func Solution(num1 int, num2 int) int {
+func Solution(num1, num2 int) int {
 	n1, n2 := countOfOne(num1), countOfOne(num2)
 	if n1 == n2 {
 		return num1

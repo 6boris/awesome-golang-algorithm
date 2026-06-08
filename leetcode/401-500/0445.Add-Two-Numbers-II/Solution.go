@@ -7,7 +7,7 @@ func reverse(arr []int) []int {
 	return arr
 }
 
-func Solution(l1 *ListNode, l2 *ListNode) *ListNode {
+func Solution(l1, l2 *ListNode) *ListNode {
 	var a1 []int
 	for l1 != nil {
 		a1 = append(a1, l1.Val)

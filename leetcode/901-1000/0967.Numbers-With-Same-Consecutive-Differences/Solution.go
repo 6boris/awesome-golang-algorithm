@@ -2,8 +2,7 @@ package Solution
 
 import "fmt"
 
-func Solution(n int, k int) []int {
-
+func Solution(n, k int) []int {
 	ans := make([]int, 0)
 	bs := make([]byte, n)
 	for idx := 1; idx <= 9; idx++ {
@@ -13,12 +12,11 @@ func Solution(n int, k int) []int {
 }
 
 func helper967(deep, now, k, n int, bs []byte) []int {
-
 	ans := make([]int, 0)
 	bs[deep] = uint8(now) + '0'
 	if deep == n-1 {
 		var num int
-		fmt.Sscanf(string(bs), "%d", &num)
+		_, _ = fmt.Sscanf(string(bs), "%d", &num)
 		return []int{num}
 	}
 	if r := now - k; r >= 0 && r <= 9 {

@@ -19,9 +19,10 @@ func Solution(grid [][]byte) int {
 	for i := 0; i < rows; i++ {
 		for j := 0; j < cols; j++ {
 			xVal, yVal := 0, 0
-			if grid[i][j] == 'X' {
+			switch grid[i][j] {
+			case 'X':
 				xVal = 1
-			} else if grid[i][j] == 'Y' {
+			case 'Y':
 				yVal = 1
 			}
 

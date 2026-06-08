@@ -15,8 +15,7 @@ func Solution(intervals [][]int) int {
 	dp[0] = 1
 	maxl := 1
 
-	var bsearch func(int, int) int
-	bsearch = func(end, target int) int {
+	var bsearch func(int, int) int = func(end, target int) int {
 		l, r := 0, end
 		ans := -1
 		mid := 0

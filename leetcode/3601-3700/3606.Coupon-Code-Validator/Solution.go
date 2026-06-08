@@ -4,15 +4,14 @@ import "sort"
 
 func validateCode(str string) bool {
 	for _, b := range str {
-		if !(b >= 'a' && b <= 'z' || b >= 'A' && b <= 'Z' || b >= '0' && b <= '9' || b == '_') {
+		if (b < 'a' || b > 'z') && (b < 'A' || b > 'Z') && (b < '0' || b > '9') && b != '_' {
 			return false
 		}
 	}
 	return len(str) > 0
 }
 
-func Solution(code []string, businessLine []string, isActive []bool) []string {
-
+func Solution(code, businessLine []string, isActive []bool) []string {
 	indies := make([]int, 0)
 	order := map[string]int{
 		"electronics": 1, "grocery": 2, "pharmacy": 3, "restaurant": 4,

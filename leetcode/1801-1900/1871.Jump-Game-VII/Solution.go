@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(s string, minJump int, maxJump int) bool {
+func Solution(s string, minJump, maxJump int) bool {
 	size := len(s)
 	if s[size-1] != '0' {
 		return false

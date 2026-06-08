@@ -10,8 +10,8 @@ type ListNode struct {
 	Next *ListNode
 }
 
-//	比较结果
-func isEqual(l1 *ListNode, l2 *ListNode) bool {
+// 比较结果
+func isEqual(l1, l2 *ListNode) bool {
 	for l1 != nil && l2 != nil {
 		if l1.Val != l2.Val {
 			return false
@@ -36,7 +36,7 @@ func PrintList(head *ListNode) {
 	fmt.Println()
 }
 
-//	更具数组反序列化链表
+// 更具数组反序列化链表
 func UnmarshalListBySlice(nums []int) *ListNode {
 	head := &ListNode{Val: -1, Next: nil}
 	tmp := head
@@ -48,7 +48,7 @@ func UnmarshalListBySlice(nums []int) *ListNode {
 }
 
 // 随机初始化链表
-func UnmarshalListByRand(max_num int, len int) *ListNode {
+func UnmarshalListByRand(max_num, len int) *ListNode {
 	head := &ListNode{Val: -1, Next: nil}
 	tmp := head
 

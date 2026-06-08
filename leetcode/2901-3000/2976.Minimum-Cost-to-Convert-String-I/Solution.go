@@ -2,7 +2,7 @@ package Solution
 
 const unreachable = 1 << 32
 
-func Solution(source string, target string, original []byte, changed []byte, cost []int) int64 {
+func Solution(source, target string, original, changed []byte, cost []int) int64 {
 	cache := make([][]int64, 26)
 	for i := 0; i < 26; i++ {
 		cache[i] = make([]int64, 26)

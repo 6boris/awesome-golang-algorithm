@@ -30,25 +30,27 @@ type Case struct {
 var cases = []Case{
 	{"TestCase 1", &TreeNode{Val: 1, Left: &TreeNode{Val: 2}, Right: &TreeNode{Val: 3}}, 0, false},
 	{"TestCase 2", &TreeNode{Val: 1, Left: &TreeNode{Val: 2}}, 2, false},
-	{"TestCase 3", &TreeNode{
-		Val: 5,
-		Left: &TreeNode{
-			Val: 4,
+	{
+		"TestCase 3", &TreeNode{
+			Val: 5,
 			Left: &TreeNode{
-				Val:   11,
-				Left:  &TreeNode{Val: 7},
-				Right: &TreeNode{Val: 2},
+				Val: 4,
+				Left: &TreeNode{
+					Val:   11,
+					Left:  &TreeNode{Val: 7},
+					Right: &TreeNode{Val: 2},
+				},
+			},
+			Right: &TreeNode{
+				Val:  8,
+				Left: &TreeNode{Val: 13},
+				Right: &TreeNode{
+					Val:   4,
+					Left:  &TreeNode{Val: 5},
+					Right: &TreeNode{Val: 1},
+				},
 			},
 		},
-		Right: &TreeNode{
-			Val:  8,
-			Left: &TreeNode{Val: 13},
-			Right: &TreeNode{
-				Val:   4,
-				Left:  &TreeNode{Val: 5},
-				Right: &TreeNode{Val: 1},
-			},
-		}},
 		22,
 		true,
 	},

@@ -12,6 +12,7 @@ func (u *unionFind721) find(x int) int {
 	}
 	return u.father[x]
 }
+
 func (u *unionFind721) union(x, y int) {
 	fx := u.find(x)
 	fy := u.find(y)
@@ -20,8 +21,8 @@ func (u *unionFind721) union(x, y int) {
 	} else {
 		u.father[fx] = fy
 	}
-
 }
+
 func Solution(accounts [][]string) [][]string {
 	u := unionFind721{father: make([]int, len(accounts))}
 	for i := 0; i < len(accounts); i++ {

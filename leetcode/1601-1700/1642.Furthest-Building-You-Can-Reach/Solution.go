@@ -2,7 +2,7 @@ package Solution
 
 import "container/heap"
 
-func Solution(heights []int, bricks int, ladders int) int {
+func Solution(heights []int, bricks, ladders int) int {
 	// 1  2  3  4  5  6
 	// 4  0  1  1  1  9996  diff bsearchr+judge????
 	// b=4, l=1
@@ -40,20 +40,23 @@ func (h *heap1642) Len() int {
 func (h *heap1642) Less(i, j int) bool {
 	return (*h)[i] < (*h)[j]
 }
+
 func (h *heap1642) Swap(i, j int) {
 	(*h)[i], (*h)[j] = (*h)[j], (*h)[i]
 }
-func (h *heap1642) Push(x interface{}) {
+
+func (h *heap1642) Push(x any) {
 	*h = append(*h, x.(int))
 }
 
-func (h *heap1642) Pop() interface{} {
+func (h *heap1642) Pop() any {
 	old := *h
 	l := len(old)
 	x := old[l-1]
 	*h = old[:l-1]
 	return x
 }
+
 func isOk1642(diffs []int, b, l int) bool {
 	h := heap1642(diffs)
 	heap.Init(&h)

@@ -5,7 +5,7 @@ type ListNode struct {
 	Next *ListNode
 }
 
-func Solution(list1 *ListNode, a int, b int, list2 *ListNode) *ListNode {
+func Solution(list1 *ListNode, a, b int, list2 *ListNode) *ListNode {
 	list2LastNode := list2
 	for ; list2LastNode.Next != nil; list2LastNode = list2LastNode.Next {
 	}

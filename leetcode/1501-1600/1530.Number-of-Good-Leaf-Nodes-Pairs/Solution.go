@@ -31,6 +31,7 @@ func dfs1530(root *TreeNode, dep, disLimit int, ans *int) map[int]int {
 	}
 	return h
 }
+
 func Solution(root *TreeNode, distance int) int {
 	ans := 0
 	dfs1530(root, 0, distance, &ans)

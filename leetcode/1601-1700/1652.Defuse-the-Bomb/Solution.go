@@ -38,7 +38,6 @@ func Solution(code []int, k int) []int {
 				ans[i] += sum[diff-l]
 			}
 		}
-
 	}
 
 	return ans

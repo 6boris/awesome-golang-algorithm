@@ -30,6 +30,7 @@ func bfs1267(x, y, m, n int, grid [][]int) int {
 	}
 	return ans
 }
+
 func Solution(grid [][]int) int {
 	m, n := len(grid), len(grid[0])
 	ans := 0

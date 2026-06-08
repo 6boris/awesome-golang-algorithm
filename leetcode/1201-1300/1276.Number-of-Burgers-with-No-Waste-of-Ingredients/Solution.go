@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(tomatoSlices int, cheeseSlices int) []int {
+func Solution(tomatoSlices, cheeseSlices int) []int {
 	// 4x + 2y = tomatoSlices
 	// 2x + 2y = 2*cheeseSlices
 	jumbo := tomatoSlices - 2*cheeseSlices

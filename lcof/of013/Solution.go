@@ -2,7 +2,7 @@ package Solution
 
 import "container/list"
 
-func movingCount1(m int, n int, k int) int {
+func movingCount1(m, n, k int) int {
 	queue := list.List{}
 	visited := make([][]bool, m)
 	for i := 0; i < len(visited); i++ {
@@ -45,7 +45,7 @@ var (
 	visited    [][]bool
 )
 
-func movingCount2(m int, n int, k int) int {
+func movingCount2(m, n, k int) int {
 	m1 = m
 	n1 = n
 	k1 = k
@@ -57,7 +57,7 @@ func movingCount2(m int, n int, k int) int {
 	return dfs(0, 0, 0, 0)
 }
 
-func dfs(i int, j int, si int, sj int) int {
+func dfs(i, j, si, sj int) int {
 	if i >= m1 || j >= n1 || si+sj > k1 || visited[i][j] {
 		return 0
 	}

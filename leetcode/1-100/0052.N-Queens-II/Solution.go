@@ -19,7 +19,7 @@ func totalNQueens(n int) int {
 	return count
 }
 
-func helper(row int, cols []bool, d1 []bool, d2 []bool, n int, count *int) {
+func helper(row int, cols, d1, d2 []bool, n int, count *int) {
 	if row == n {
 		*count++
 	}

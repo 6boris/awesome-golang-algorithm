@@ -11,7 +11,7 @@ func Constructor(nums []int) NumArray {
 	return NumArray{data: nums}
 }
 
-func (this *NumArray) SumRange(left int, right int) int {
+func (this *NumArray) SumRange(left, right int) int {
 	del := 0
 	if left > 0 {
 		del = this.data[left-1]

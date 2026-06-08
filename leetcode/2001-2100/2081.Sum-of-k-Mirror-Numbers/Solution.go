@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(k int, n int) int64 {
+func Solution(k, n int) int64 {
 	digit := make([]int, 100)
 	left, count, ans := 1, 0, int64(0)
 	for count < n {

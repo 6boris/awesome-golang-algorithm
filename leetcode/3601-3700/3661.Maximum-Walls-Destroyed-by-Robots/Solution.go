@@ -2,7 +2,7 @@ package Solution
 
 import "sort"
 
-func Solution(robots []int, distance []int, walls []int) int {
+func Solution(robots, distance, walls []int) int {
 	n := len(robots)
 	left := make([]int, n)
 	right := make([]int, n)

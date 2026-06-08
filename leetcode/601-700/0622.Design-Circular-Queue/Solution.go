@@ -48,6 +48,7 @@ func (n *node622List) Front() int {
 	}
 	return n.root.val
 }
+
 func (n *node622List) Back() int {
 	if n.count == 0 {
 		return -1

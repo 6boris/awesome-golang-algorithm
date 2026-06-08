@@ -12,7 +12,7 @@ func findCircleNum(M [][]int) int {
 
 	for i := 0; i < len(M); i++ {
 		for j := 0; j < i; j++ {
-			if 1 == M[i][j] {
+			if M[i][j] == 1 {
 				union(i, j)
 			}
 		}

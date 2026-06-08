@@ -3,6 +3,7 @@ package Solution
 func isVowel(x byte) bool {
 	return x == 'a' || x == 'e' || x == 'i' || x == 'o' || x == 'u'
 }
+
 func Solution(s string, k int) int {
 	ans := 0
 	start, end := 0-k, 0

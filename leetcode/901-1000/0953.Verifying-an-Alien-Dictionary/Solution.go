@@ -6,8 +6,7 @@ func Solution(words []string, order string) bool {
 		newOrder[order[i]-'a'] = uint8(i)
 	}
 
-	var less func(string, string) bool
-	less = func(a, b string) bool {
+	var less func(string, string) bool = func(a, b string) bool {
 		la, lb := len(a), len(b)
 		for i := 0; i < la && i < lb; i++ {
 			if newOrder[a[i]-'a'] == newOrder[b[i]-'a'] {

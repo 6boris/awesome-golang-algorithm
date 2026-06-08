@@ -2,7 +2,7 @@ package Solution
 
 import "strings"
 
-func Solution(s1 string, s2 string) []string {
+func Solution(s1, s2 string) []string {
 	ans := make([]string, 0)
 	ls1 := strings.Split(s1, " ")
 	ls2 := strings.Split(s2, " ")

@@ -2,7 +2,7 @@ package Solution
 
 import "sort"
 
-func Solution(nums []int, l []int, r []int) []bool {
+func Solution(nums, l, r []int) []bool {
 	ans := make([]bool, len(l))
 	for i := 0; i < len(l); i++ {
 		s, e := l[i], r[i]

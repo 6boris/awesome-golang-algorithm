@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(prices []int, strategy []int, k int) int64 {
+func Solution(prices, strategy []int, k int) int64 {
 	n := len(prices)
 	profitSum := make([]int64, n+1)
 	priceSum := make([]int64, n+1)

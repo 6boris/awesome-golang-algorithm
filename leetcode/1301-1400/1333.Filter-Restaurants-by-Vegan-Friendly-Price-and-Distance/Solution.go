@@ -2,7 +2,7 @@ package Solution
 
 import "sort"
 
-func Solution(restaurants [][]int, veganFriendly int, maxPrice int, maxDistance int) []int {
+func Solution(restaurants [][]int, veganFriendly, maxPrice, maxDistance int) []int {
 	left := make([]int, 0)
 	for i := 0; i < len(restaurants); i++ {
 		if veganFriendly == 1 && restaurants[i][2] == 0 {

@@ -1,11 +1,9 @@
 package Solution
 
-func Solution(bottomLeft [][]int, topRight [][]int) int64 {
+func Solution(bottomLeft, topRight [][]int) int64 {
 	n := len(bottomLeft)
 	maxSide := int64(0)
-	var (
-		interLeft, interRight, interBottom, interTop int64
-	)
+	var interLeft, interRight, interBottom, interTop int64
 
 	for i := 0; i < n; i++ {
 		for j := i + 1; j < n; j++ {

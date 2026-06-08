@@ -2,7 +2,6 @@ package Solution
 
 import (
 	"fmt"
-	"reflect"
 	"strconv"
 	"testing"
 )
@@ -62,11 +61,7 @@ func TestSolution(t *testing.T) {
 	//	开始测试
 	for _, c := range cases {
 		t.Run(c.name, func(t *testing.T) {
-			ret := isSameTree(c.input1, c.input2)
-			if !reflect.DeepEqual(ret, c.expect) {
-				// t.Fatalf("expected: %v, but got: %v, with inputs: %v",
-				// c.expect, ret, c.input1)
-			}
+			isSameTree(c.input1, c.input2)
 		})
 	}
 }
@@ -79,9 +74,9 @@ func TestIsSameTree(t *testing.T) {
 	})
 }
 
-//	序列化
+// 序列化
 func dumpTreeToString(tree *TreeNode) string {
-	var str string = ""
+	str := ""
 	dumpTreeToStringHelper(tree, &str)
 	return str
 }
@@ -96,9 +91,9 @@ func dumpTreeToStringHelper(tree *TreeNode, str *string) {
 	dumpTreeToStringHelper(tree.Right, str)
 }
 
-//	反序列化
+// 反序列化
 func conFromPreStr(str string) *TreeNode {
-	var strIndex int = 0
+	strIndex := 0
 	return conFromPreStrHelper(str, &strIndex)
 }
 

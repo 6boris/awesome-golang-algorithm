@@ -17,6 +17,7 @@ func distance(a, b []int) int {
 	y := a[1] - b[1]
 	return x*x + y*y
 }
+
 func edgesEqual(x1, y1, x2, y2 []int) bool {
 	x1x2 := distance(x1, x2)
 	x1y2 := distance(x1, y2)
@@ -35,7 +36,7 @@ func edgesEqual(x1, y1, x2, y2 []int) bool {
 	return distance(x1, y1) == distance(x2, y2)
 }
 
-func Solution(p1 []int, p2 []int, p3 []int, p4 []int) bool {
+func Solution(p1, p2, p3, p4 []int) bool {
 	ps := [][]int{p1, p2, p3, p4}
 	for i := range 3 {
 		for j := i + 1; j < 4; j++ {

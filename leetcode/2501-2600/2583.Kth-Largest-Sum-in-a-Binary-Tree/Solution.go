@@ -20,11 +20,11 @@ func (l *list2583) Less(i, j int) bool {
 	return (*l)[i] < (*l)[j]
 }
 
-func (l *list2583) Push(x interface{}) {
+func (l *list2583) Push(x any) {
 	*l = append(*l, x.(int64))
 }
 
-func (l *list2583) Pop() interface{} {
+func (l *list2583) Pop() any {
 	old := *l
 	ll := len(old)
 	x := old[ll-1]

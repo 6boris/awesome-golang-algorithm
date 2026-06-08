@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(str1 string, str2 string) string {
+func Solution(str1, str2 string) string {
 	n, m := len(str1), len(str2)
 	s := make([]byte, n+m-1)
 	fixed := make([]int, n+m-1)

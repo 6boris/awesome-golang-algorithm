@@ -42,6 +42,7 @@ type heap862list []heap862
 func (h *heap862list) Len() int {
 	return len(*h)
 }
+
 func (h *heap862list) Swap(i, j int) {
 	(*h)[i], (*h)[j] = (*h)[j], (*h)[i]
 }
@@ -49,9 +50,11 @@ func (h *heap862list) Swap(i, j int) {
 func (h *heap862list) Less(i, j int) bool {
 	return (*h)[i].v < (*h)[j].v
 }
+
 func (h *heap862list) Push(x any) {
 	*h = append(*h, x.(heap862))
 }
+
 func (h *heap862list) Pop() any {
 	old := *h
 	l := len(old)

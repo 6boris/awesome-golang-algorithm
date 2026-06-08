@@ -18,6 +18,7 @@ func columns(m int, cur string, preColor byte) []string {
 	}
 	return ans
 }
+
 func can(a, b string) bool {
 	for i := 0; i < len(a); i++ {
 		if a[i] == b[i] {
@@ -27,7 +28,7 @@ func can(a, b string) bool {
 	return true
 }
 
-func Solution(m int, n int) int {
+func Solution(m, n int) int {
 	groups := columns(m, "", ' ')
 	cache := make(map[string]map[int]int)
 	var dfs func(int, string) int

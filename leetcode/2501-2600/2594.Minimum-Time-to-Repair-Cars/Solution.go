@@ -6,8 +6,7 @@ import (
 )
 
 func Solution(ranks []int, cars int) int64 {
-	var ok func(int64) bool
-	ok = func(minutes int64) bool {
+	var ok func(int64) bool = func(minutes int64) bool {
 		c := int64(0)
 		for _, r := range ranks {
 			nn := minutes / int64(r)

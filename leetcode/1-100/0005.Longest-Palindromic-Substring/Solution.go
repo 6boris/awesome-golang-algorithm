@@ -2,7 +2,7 @@ package Solution
 
 import "fmt"
 
-//	暴力查找
+// 暴力查找
 func longestPalindrome1(s string) string {
 	if len(s) == 1 {
 		return s
@@ -34,38 +34,6 @@ func isPalindrome(s string) bool {
 	return true
 }
 
-// 从中心开始向2边比较
-func longestPalindrome2(s string) string {
-	if len(s) == 0 {
-		return ""
-	}
-
-	start, end := 0, 0
-	for i := 0; i < len(s); i++ {
-		len1 := expandAroundCenter(s, i, i)
-		len2 := expandAroundCenter(s, i, i+1)
-		len := Max(len1, len2)
-
-		if len > end-start {
-
-			start = i - (len-1)/2
-			end = i + len/2
-		}
-	}
-
-	return s[start : end+1]
-}
-
-func expandAroundCenter(s string, left, right int) int {
-	L, R := left, right
-	for L >= 0 && R < len(s) && s[L] == s[R] {
-		L--
-		R++
-	}
-
-	return R - L - 1
-}
-
 func Max(x, y int) int {
 	if x > y {
 		return x
@@ -87,7 +55,7 @@ func longestPalindrome3(s string) string {
 	return longestPalindromeLinear(s)
 }
 
-//	初始化Manacher需要的字符串
+// 初始化Manacher需要的字符串
 func initManacherStr(s string) string {
 	ans := make([]rune, 0)
 	ans = append(ans, '$')
@@ -97,7 +65,7 @@ func initManacherStr(s string) string {
 	return string(ans)
 }
 
-//	Manacher
+// Manacher
 func longestPalindromeLinear(in string) string {
 	/*
 	*	初始化字符串，在字符串的没个字符左右都插入一个字符"$"
@@ -152,7 +120,7 @@ func extractLongest(s string, P []int) string {
 	return s[offset : offset+longestLength]
 }
 
-//	DP
+// DP
 func longestPalindrome4(s string) string {
 	n := len(s)
 	dp := [][]bool{}
@@ -177,7 +145,7 @@ func longestPalindrome4(s string) string {
 	maxStr := ""
 	for i := 0; i < n; i++ {
 		for j := 0; j < n; j++ {
-			if dp[i][j] == true && j-i+1 > max {
+			if dp[i][j] && j-i+1 > max {
 				max = j - i + 1
 				maxStr = s[i : j+1]
 			}

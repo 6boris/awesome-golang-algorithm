@@ -28,7 +28,7 @@ func Solution(expression string) bool {
 			index--
 			if top.op == '!' {
 				if t {
-					t, f = false, true
+					t = false
 					f = true
 				} else {
 					t, f = true, false

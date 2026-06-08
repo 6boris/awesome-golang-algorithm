@@ -27,6 +27,7 @@ func (u *unionFind839) findFather(x int) int {
 	}
 	return u.father[x]
 }
+
 func (u *unionFind839) union(x, y int) {
 	fx := u.findFather(x)
 	fy := u.findFather(y)

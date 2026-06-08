@@ -18,64 +18,62 @@ func Constructor(parent []int) LockingTree {
 }
 
 // u, u, ul, l, u
-func (this *LockingTree) Lock(num int, user int) bool {
-	if this.locker[num] != 0 {
+func (t *LockingTree) Lock(num, user int) bool {
+	if t.locker[num] != 0 {
 		return false
 	}
-	this.locker[num] = user
+	t.locker[num] = user
 	return true
 }
 
-func (this *LockingTree) Unlock(num int, user int) bool {
-	if this.locker[num] == 0 || this.locker[num] != user {
+func (t *LockingTree) Unlock(num, user int) bool {
+	if t.locker[num] == 0 || t.locker[num] != user {
 		return false
 	}
-	this.locker[num] = 0
+	t.locker[num] = 0
 	return true
 }
 
-func (this *LockingTree) ancesors(num int) bool {
+func (t *LockingTree) ancesors(num int) bool {
 	for {
 		if num == -1 {
 			return false
 		}
-		if this.locker[num] != 0 {
+		if t.locker[num] != 0 {
 			return true
 		}
-		num = this.tree[num]
+		num = t.tree[num]
 	}
 }
 
-func (this *LockingTree) unlockDescendant(num int) bool {
+func (t *LockingTree) unlockDescendant(num int) bool {
 	q := []int{num}
 	found := false
 	for len(q) > 0 {
 		nq := make([]int, 0)
 		for _, i := range q {
-			if this.locker[i] != 0 {
-				this.locker[i] = 0
+			if t.locker[i] != 0 {
+				t.locker[i] = 0
 				found = true
 			}
-			for _, c := range this.children[i] {
-				nq = append(nq, c)
-			}
+			nq = append(nq, t.children[i]...)
 		}
 		q = nq
 	}
 	return found
 }
 
-func (this *LockingTree) Upgrade(num int, user int) bool {
-	if this.locker[num] != 0 {
+func (t *LockingTree) Upgrade(num, user int) bool {
+	if t.locker[num] != 0 {
 		return false
 	}
-	if this.ancesors(num) {
+	if t.ancesors(num) {
 		return false
 	}
-	if !this.unlockDescendant(num) {
+	if !t.unlockDescendant(num) {
 		return false
 	}
-	this.locker[num] = user
+	t.locker[num] = user
 	return true
 }
 

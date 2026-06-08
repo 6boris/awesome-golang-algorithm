@@ -5,7 +5,6 @@ import (
 	"testing"
 )
 
-//
 // TestSolution Example for solution test cases
 func TestSolution(t *testing.T) {
 	// ser := Constructor();

@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(list1 []string, list2 []string) []string {
+func Solution(list1, list2 []string) []string {
 	map2 := make(map[string]int)
 	for index, str := range list2 {
 		map2[str] = index

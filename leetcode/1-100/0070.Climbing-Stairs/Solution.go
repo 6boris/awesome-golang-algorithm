@@ -1,6 +1,6 @@
 package Solution
 
-//	优化后
+// 优化后
 func climbStairs_1(n int) int {
 	a, b, c := 0, 0, 1
 	for i := 1; i <= n; i++ {
@@ -11,7 +11,7 @@ func climbStairs_1(n int) int {
 	return c
 }
 
-//	标准斐波拉契数列
+// 标准斐波拉契数列
 func climbStairs_2(n int) int {
 	if n <= 2 {
 		return n
@@ -27,7 +27,6 @@ func climbStairs_2(n int) int {
 var m = make(map[int]int)
 
 func climbStairs_3(n int) int {
-
 	if n <= 2 {
 		return n
 	}

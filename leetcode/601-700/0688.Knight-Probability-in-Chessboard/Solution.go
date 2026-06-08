@@ -1,11 +1,17 @@
 package Solution
 
-func Solution(n int, k int, row int, column int) float64 {
+func Solution(n, k, row, column int) float64 {
 	var (
 		dfs  func(int, int, int) float64
 		dirs = [][]int{
-			{-1, -2}, {1, -2}, {2, -1}, {2, 1},
-			{1, 2}, {-1, 2}, {-2, 1}, {-2, -1},
+			{-1, -2},
+			{1, -2},
+			{2, -1},
+			{2, 1},
+			{1, 2},
+			{-1, 2},
+			{-2, 1},
+			{-2, -1},
 		}
 	)
 	// dp[i][j][k] = floatx 表示在i，j的位置走k步留在棋盘的概率

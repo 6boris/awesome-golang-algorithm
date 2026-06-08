@@ -5,7 +5,7 @@ type TreeNode struct {
 	Left, Right *TreeNode
 }
 
-func Solution(root1 *TreeNode, root2 *TreeNode) *TreeNode {
+func Solution(root1, root2 *TreeNode) *TreeNode {
 	if root1 == nil {
 		return root2
 	}

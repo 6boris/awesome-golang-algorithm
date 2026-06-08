@@ -8,7 +8,7 @@ type Cashier struct {
 	pp map[int]int
 }
 
-func Constructor1357(n int, discount int, products []int, prices []int) Cashier {
+func Constructor1357(n, discount int, products, prices []int) Cashier {
 	pp := map[int]int{}
 	for i := range products {
 		pp[products[i]] = prices[i]
@@ -19,7 +19,7 @@ func Constructor1357(n int, discount int, products []int, prices []int) Cashier 
 	}
 }
 
-func (this *Cashier) GetBill(product []int, amount []int) float64 {
+func (this *Cashier) GetBill(product, amount []int) float64 {
 	cost := 0
 	for i := range product {
 		cost += this.pp[product[i]] * amount[i]

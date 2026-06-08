@@ -10,11 +10,11 @@ func Solution(nums []int, diff int) int {
 
 	for idx := 0; idx <= len(nums)-3; idx++ {
 		next := nums[idx] + diff
-		if !(next <= 200 && bucket[next] > 0) {
+		if next > 200 || bucket[next] <= 0 {
 			continue
 		}
 		nextNext := next + diff
-		if !(nextNext <= 200 && bucket[nextNext] > 0) {
+		if nextNext > 200 || bucket[nextNext] <= 0 {
 			continue
 		}
 		count++

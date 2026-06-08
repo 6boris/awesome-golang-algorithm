@@ -13,7 +13,12 @@ func TestSolution(t *testing.T) {
 		wordlist, queries []string
 		expect            []string
 	}{
-		{"TestCase1", []string{"KiTe", "kite", "hare", "Hare"}, []string{"kite", "Kite", "KiTe", "Hare", "HARE", "Hear", "hear", "keti", "keet", "keto"}, []string{"kite", "KiTe", "KiTe", "Hare", "hare", "", "", "KiTe", "", "KiTe"}},
+		{
+			"TestCase1",
+			[]string{"KiTe", "kite", "hare", "Hare"},
+			[]string{"kite", "Kite", "KiTe", "Hare", "HARE", "Hear", "hear", "keti", "keet", "keto"},
+			[]string{"kite", "KiTe", "KiTe", "Hare", "hare", "", "", "KiTe", "", "KiTe"},
+		},
 		{"TestCase2", []string{"yellow"}, []string{"YellOw"}, []string{"yellow"}},
 	}
 

@@ -14,11 +14,23 @@ func TestSolution(t *testing.T) {
 		head   *ListNode
 		expect [][]int
 	}{
-		{"TestCase1", 3, 5, &ListNode{3, &ListNode{0, &ListNode{2, &ListNode{6, &ListNode{8, &ListNode{1, &ListNode{7, &ListNode{9, &ListNode{4, &ListNode{2, &ListNode{5, &ListNode{5, &ListNode{0, nil}}}}}}}}}}}}}, [][]int{
-			{3, 0, 2, 6, 8},
-			{5, 0, -1, -1, 1},
-			{5, 2, 4, 9, 7},
-		}},
+		{
+			"TestCase1",
+			3,
+			5,
+			&ListNode{
+				3,
+				&ListNode{
+					0,
+					&ListNode{2, &ListNode{6, &ListNode{8, &ListNode{1, &ListNode{7, &ListNode{9, &ListNode{4, &ListNode{2, &ListNode{5, &ListNode{5, &ListNode{0, nil}}}}}}}}}}},
+				},
+			},
+			[][]int{
+				{3, 0, 2, 6, 8},
+				{5, 0, -1, -1, 1},
+				{5, 2, 4, 9, 7},
+			},
+		},
 		{"TestCase2", 1, 4, &ListNode{0, &ListNode{1, &ListNode{2, nil}}}, [][]int{
 			{0, 1, 2, -1},
 		}},

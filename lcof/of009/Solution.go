@@ -13,20 +13,20 @@ func Constructor() CQueue {
 	}
 }
 
-func (this *CQueue) AppendTail(value int) {
-	this.stack1.PushBack(value)
+func (q *CQueue) AppendTail(value int) {
+	q.stack1.PushBack(value)
 }
 
-func (this *CQueue) DeleteHead() int {
+func (q *CQueue) DeleteHead() int {
 	// 如果第二个栈为空
-	if this.stack2.Len() == 0 {
-		for this.stack1.Len() > 0 {
-			this.stack2.PushBack(this.stack1.Remove(this.stack1.Back()))
+	if q.stack2.Len() == 0 {
+		for q.stack1.Len() > 0 {
+			q.stack2.PushBack(q.stack1.Remove(q.stack1.Back()))
 		}
 	}
-	if this.stack2.Len() != 0 {
-		e := this.stack2.Back()
-		this.stack2.Remove(e)
+	if q.stack2.Len() != 0 {
+		e := q.stack2.Back()
+		q.stack2.Remove(e)
 		return e.Value.(int)
 	}
 	return -1

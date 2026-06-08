@@ -2,7 +2,7 @@ package Solution
 
 import "sort"
 
-//	排序 + 遍历
+// 排序 + 遍历
 func findRepeatNumber(nums []int) int {
 	sort.Ints(nums)
 	for idx := range nums {
@@ -15,7 +15,7 @@ func findRepeatNumber(nums []int) int {
 	return 0
 }
 
-//	map哈希表
+// map哈希表
 func findRepeatNumber2(nums []int) int {
 	mapTmp := make(map[int]bool)
 	for _, val := range nums {
@@ -28,7 +28,7 @@ func findRepeatNumber2(nums []int) int {
 	return 0
 }
 
-//	原地置换
+// 原地置换
 func findRepeatNumber3(nums []int) int {
 	for idx, val := range nums {
 		if idx == val {

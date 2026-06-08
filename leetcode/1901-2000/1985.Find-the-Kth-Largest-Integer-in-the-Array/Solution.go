@@ -21,6 +21,7 @@ func greater1985(a, b string) bool {
 	}
 	return true
 }
+
 func (h *hp1985) Len() int {
 	return len(*h)
 }
@@ -32,11 +33,12 @@ func (h *hp1985) Less(i, j int) bool {
 func (h *hp1985) Swap(i, j int) {
 	(*h)[i], (*h)[j] = (*h)[j], (*h)[i]
 }
-func (h *hp1985) Push(x interface{}) {
+
+func (h *hp1985) Push(x any) {
 	*h = append(*h, x.(string))
 }
 
-func (h *hp1985) Pop() interface{} {
+func (h *hp1985) Pop() any {
 	old := *h
 	l := len(*h)
 	x := old[l-1]

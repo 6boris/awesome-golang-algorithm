@@ -23,7 +23,7 @@ func Solution(position []int, m int) int {
 	sort.Ints(position)
 
 	low := 1
-	high := int(position[n-1]) / (m - 1)
+	high := position[n-1] / (m - 1)
 	for low <= high {
 		mid := low + (high-low)/2
 		if canPlaceBalls(mid, position, m) {

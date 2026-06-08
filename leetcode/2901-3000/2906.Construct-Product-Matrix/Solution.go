@@ -31,10 +31,9 @@ func Solution(grid [][]int) [][]int {
 		}
 	}
 
-	base := 1
 	for i := range m {
 		for j := range n {
-			base = 1
+			base := 1
 			index = i*n + j
 			if index >= 1 {
 				base = (base * left[index-1]) % 12345

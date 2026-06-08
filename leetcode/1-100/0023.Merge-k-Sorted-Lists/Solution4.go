@@ -1,6 +1,6 @@
 package Solution
 
-//	递归方法合并
+// 递归方法合并
 func mergeKLists4(lists []*ListNode) *ListNode {
 	if len(lists) == 0 {
 		return nil
@@ -12,7 +12,7 @@ func mergeKLists4(lists []*ListNode) *ListNode {
 	return merge(mergeKLists4(lists[:n]), mergeKLists4(lists[n:]))
 }
 
-func merge(l1 *ListNode, l2 *ListNode) *ListNode {
+func merge(l1, l2 *ListNode) *ListNode {
 	head := &ListNode{0, nil}
 	node := head
 

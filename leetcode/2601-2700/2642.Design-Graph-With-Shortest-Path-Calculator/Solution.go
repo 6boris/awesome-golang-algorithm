@@ -22,7 +22,7 @@ func (this *Graph) AddEdge(edge []int) {
 	this.adj[f][t] = w
 }
 
-func (this *Graph) ShortestPath(node1 int, node2 int) int {
+func (this *Graph) ShortestPath(node1, node2 int) int {
 	distance := make([]int, this.n)
 	for i := 0; i < this.n; i++ {
 		distance[i] = -1

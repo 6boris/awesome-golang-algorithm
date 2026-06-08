@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-func Solution(start int64, finish int64, limit int, s string) int64 {
+func Solution(start, finish int64, limit int, s string) int64 {
 	low := fmt.Sprintf("%d", start)
 	high := fmt.Sprintf("%d", finish)
 	n := len(high)

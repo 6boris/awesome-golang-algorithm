@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(nums []int, left int, right int) int {
+func Solution(nums []int, left, right int) int {
 	ans := 0
 	// 1, 2, 2, 1 [2,3]
 	//    2[1,2], [2]

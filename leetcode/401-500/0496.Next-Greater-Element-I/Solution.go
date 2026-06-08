@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(nums1 []int, nums2 []int) []int {
+func Solution(nums1, nums2 []int) []int {
 	ans := make([]int, len(nums1))
 
 	greater := make([]int, len(nums2))

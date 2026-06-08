@@ -11,11 +11,11 @@ func NewStack() *Stack {
 	return &Stack{list}
 }
 
-func (stack *Stack) Push(value interface{}) {
+func (stack *Stack) Push(value any) {
 	stack.list.PushBack(value)
 }
 
-func (stack *Stack) Pop() interface{} {
+func (stack *Stack) Pop() any {
 	if e := stack.list.Back(); e != nil {
 		stack.list.Remove(e)
 		return e.Value

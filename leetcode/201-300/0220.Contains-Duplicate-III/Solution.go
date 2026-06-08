@@ -2,7 +2,7 @@ package Solution
 
 import "sort"
 
-func Solution(nums []int, indexDiff int, valueDiff int) bool {
+func Solution(nums []int, indexDiff, valueDiff int) bool {
 	indies := make([]int, len(nums))
 	for i := range nums {
 		indies[i] = i

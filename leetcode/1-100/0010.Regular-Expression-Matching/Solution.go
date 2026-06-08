@@ -1,6 +1,6 @@
 package Solution
 
-func isMatch(s string, p string) bool {
+func isMatch(s, p string) bool {
 	// DP解法
 	dp := make([][]bool, len(s)+1)
 	for i := 0; i < len(s)+1; i++ {

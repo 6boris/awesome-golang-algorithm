@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(nums []int, target int, start int) int {
+func Solution(nums []int, target, start int) int {
 	ret := -1
 	diff := 0
 	for i := range nums {

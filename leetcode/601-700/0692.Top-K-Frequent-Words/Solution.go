@@ -27,11 +27,11 @@ func (tl *topWordList) Less(i, j int) bool {
 	return (*tl)[i].count > (*tl)[j].count
 }
 
-func (tl *topWordList) Push(x interface{}) {
+func (tl *topWordList) Push(x any) {
 	*tl = append(*tl, x.(topWord))
 }
 
-func (tl *topWordList) Pop() interface{} {
+func (tl *topWordList) Pop() any {
 	old := *tl
 	n := len(old)
 	item := old[n-1]

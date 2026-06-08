@@ -9,6 +9,7 @@ func toKey(n int) [10]int {
 	}
 	return tmp
 }
+
 func Solution(n int) bool {
 	if n&(n-1) == 0 {
 		return true

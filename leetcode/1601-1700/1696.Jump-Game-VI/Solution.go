@@ -19,18 +19,18 @@ func (h MyHeap) Swap(i, j int) {
 	h[i], h[j] = h[j], h[i]
 }
 
-func (h *MyHeap) Push(val interface{}) {
+func (h *MyHeap) Push(val any) {
 	*h = append(*h, val.(heapNode))
 }
 
-func (h *MyHeap) Pop() interface{} {
+func (h *MyHeap) Pop() any {
 	l := len(*h)
 	ret := (*h)[l-1]
 	*h = (*h)[:l-1]
 	return ret
 }
 
-func (h *MyHeap) Top() interface{} {
+func (h *MyHeap) Top() any {
 	if len(*h) > 0 {
 		top := (*h)[0]
 		return top

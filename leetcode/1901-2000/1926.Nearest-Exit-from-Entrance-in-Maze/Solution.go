@@ -21,11 +21,11 @@ func (p *points) Less(i, j int) bool {
 	return (*p)[i].l < (*p)[j].l
 }
 
-func (p *points) Push(x interface{}) {
+func (p *points) Push(x any) {
 	*p = append(*p, x.(point))
 }
 
-func (p *points) Pop() interface{} {
+func (p *points) Pop() any {
 	old := *p
 	n := len(old)
 	x := old[n-1]

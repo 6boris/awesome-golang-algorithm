@@ -6,7 +6,7 @@ type TreeNode struct {
 	right *TreeNode
 }
 
-func Lowest(root *TreeNode, p *TreeNode, q *TreeNode) *TreeNode {
+func Lowest(root, p, q *TreeNode) *TreeNode {
 	if p.val < root.val && q.val < root.val {
 		return Lowest(root.left, p, q)
 	}

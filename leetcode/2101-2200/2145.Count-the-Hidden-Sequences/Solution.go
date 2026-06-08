@@ -2,7 +2,7 @@ package Solution
 
 import "math"
 
-func Solution(differences []int, lower int, upper int) int {
+func Solution(differences []int, lower, upper int) int {
 	sum := int64(0)
 	var maxSum, minSum int64
 	maxSum, minSum = int64(0), math.MaxInt64

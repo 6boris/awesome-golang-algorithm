@@ -7,7 +7,7 @@ import (
 
 var minSum = 99999
 
-//	dfs solution
+// dfs solution
 func minimumTotal(triangle [][]int) int {
 	if len(triangle) == 0 || len(triangle[0]) == 0 {
 		return 0
@@ -43,7 +43,7 @@ func _dfs(triangle [][]int, i, j int, path string, sum int) int {
 	return 0
 }
 
-//	dp solution
+// dp solution
 func minimumTotal1(triangle [][]int) int {
 	if len(triangle) == 0 || len(triangle[0]) == 0 {
 		return 0
@@ -58,7 +58,7 @@ func minimumTotal1(triangle [][]int) int {
 	return triangle[0][0]
 }
 
-//	dp solution
+// dp solution
 func minimumTotal2(triangle [][]int) int {
 	if len(triangle) == 0 || len(triangle[0]) == 0 {
 		return 0

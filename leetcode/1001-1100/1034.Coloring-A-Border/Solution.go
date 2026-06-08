@@ -4,13 +4,13 @@ var dirs1034 = [][2]int{
 	{1, 0}, {-1, 0}, {0, 1}, {0, -1},
 }
 
-func Solution(grid [][]int, row int, col int, color int) [][]int {
+func Solution(grid [][]int, row, col, color int) [][]int {
 	m, n := len(grid), len(grid[0])
 	initColor := grid[row][col]
 
 	queue := [][2]int{{row, col}}
 	v := map[[2]int]struct{}{
-		[2]int{row, col}: struct{}{},
+		{row, col}: {},
 	}
 
 	pos := make([][2]int, 0)

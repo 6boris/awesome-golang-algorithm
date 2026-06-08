@@ -8,16 +8,16 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-//	solution func Info
+// solution func Info
 type SolutionFuncType func(*ListNode) *ListNode
 
 var SolutionFuncList = []SolutionFuncType{
 	reverseList,
-	//reverseList_2,
-	//reverseList_3,
+	// reverseList_2,
+	// reverseList_3,
 }
 
-//	test info struct
+// test info struct
 type Case struct {
 	name   string
 	inputs *ListNode
@@ -25,7 +25,7 @@ type Case struct {
 	expect *ListNode
 }
 
-// 	test case
+// test case
 var cases = []Case{
 	{
 		name:   "TestCase 1",

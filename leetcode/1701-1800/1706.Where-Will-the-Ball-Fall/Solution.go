@@ -10,7 +10,7 @@ func Solution(grid [][]int) []int {
 			nextCol := cur + grid[row][cur]
 
 			/* /\  \/ */
-			if !(nextCol >= 0 && nextCol < n && grid[row][cur] == grid[row][nextCol]) {
+			if nextCol < 0 || nextCol >= n || grid[row][cur] != grid[row][nextCol] {
 				ans[col] = -1
 				break
 			}

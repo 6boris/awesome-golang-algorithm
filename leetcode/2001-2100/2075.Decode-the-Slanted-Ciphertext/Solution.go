@@ -18,7 +18,6 @@ func Solution(encodedText string, rows int) string {
 	ret := buf.String()
 	end := len(ret) - 1
 	for ; ret[end] == ' '; end-- {
-
 	}
 	return ret[:end+1]
 }

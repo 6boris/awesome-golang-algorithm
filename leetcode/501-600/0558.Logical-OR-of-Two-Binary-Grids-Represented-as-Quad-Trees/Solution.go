@@ -9,7 +9,7 @@ type QuadNode struct {
 	BottomRight *QuadNode
 }
 
-func Solution(quadTree1 *QuadNode, quadTree2 *QuadNode) *QuadNode {
+func Solution(quadTree1, quadTree2 *QuadNode) *QuadNode {
 	if quadTree1.IsLeaf && quadTree2.IsLeaf {
 		return &QuadNode{IsLeaf: true, Val: quadTree1.Val || quadTree2.Val}
 	}

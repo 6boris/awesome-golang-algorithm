@@ -6,7 +6,7 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
-func buildTree_1(inorder []int, postorder []int) *TreeNode {
+func buildTree_1(inorder, postorder []int) *TreeNode {
 	idxMap := map[int]int{}
 	for i, v := range inorder {
 		idxMap[v] = i
@@ -32,7 +32,8 @@ func buildTree_1(inorder []int, postorder []int) *TreeNode {
 	}
 	return build(0, len(inorder)-1)
 }
-func buildTree_2(inorder []int, postorder []int) *TreeNode {
+
+func buildTree_2(inorder, postorder []int) *TreeNode {
 	if len(postorder) == 0 {
 		return nil
 	}

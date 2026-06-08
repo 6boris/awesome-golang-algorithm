@@ -21,7 +21,7 @@ func buildStringFromTree(root *TreeNode, sb *strings.Builder) {
 	if root == nil {
 		return
 	}
-	sb.WriteString(fmt.Sprintf("%d", root.Val))
+	fmt.Fprintf(sb, "%d", root.Val)
 	if root.Left == nil && root.Right == nil {
 		return
 	}

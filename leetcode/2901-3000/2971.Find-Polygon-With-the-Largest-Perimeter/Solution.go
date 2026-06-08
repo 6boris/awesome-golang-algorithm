@@ -3,7 +3,6 @@ package Solution
 import "sort"
 
 func Solution(nums []int) int64 {
-
 	sort.Ints(nums)
 	sum := make([]int, len(nums))
 	sum[0] = nums[0]

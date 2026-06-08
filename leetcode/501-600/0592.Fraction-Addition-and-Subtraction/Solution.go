@@ -26,8 +26,8 @@ func add592(a, b, c, d int) (int, int) {
 
 	return numerator, denominator
 }
-func sub592(a, b, c, d int) (int, int) {
 
+func sub592(a, b, c, d int) (int, int) {
 	denominator := b * d
 	numerator := a*d - b*c
 	lessZero := false

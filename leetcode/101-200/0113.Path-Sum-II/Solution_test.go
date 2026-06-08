@@ -29,27 +29,30 @@ type Case struct {
 // Test case
 var cases = []Case{
 	{"TestCase 1", &TreeNode{Val: 1, Left: &TreeNode{Val: 2}, Right: &TreeNode{Val: 3}}, 0, [][]int{}},
-	{"TestCase 2", &TreeNode{
-		Val: 5,
-		Left: &TreeNode{
-			Val: 4,
+	{
+		"TestCase 2", &TreeNode{
+			Val: 5,
 			Left: &TreeNode{
-				Val:   11,
-				Left:  &TreeNode{Val: 7},
-				Right: &TreeNode{Val: 2},
+				Val: 4,
+				Left: &TreeNode{
+					Val:   11,
+					Left:  &TreeNode{Val: 7},
+					Right: &TreeNode{Val: 2},
+				},
+			},
+			Right: &TreeNode{
+				Val:  8,
+				Left: &TreeNode{Val: 13},
+				Right: &TreeNode{
+					Val:   4,
+					Left:  &TreeNode{Val: 5},
+					Right: &TreeNode{Val: 1},
+				},
 			},
 		},
-		Right: &TreeNode{
-			Val:  8,
-			Left: &TreeNode{Val: 13},
-			Right: &TreeNode{
-				Val:   4,
-				Left:  &TreeNode{Val: 5},
-				Right: &TreeNode{Val: 1},
-			},
-		}},
 		22,
-		[][]int{{5, 4, 11, 2}, {5, 8, 4, 5}}},
+		[][]int{{5, 4, 11, 2}, {5, 8, 4, 5}},
+	},
 }
 
 // TestSolution Run test case for all solutions

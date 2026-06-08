@@ -1,6 +1,6 @@
 package Solution
 
-//	普通的动态规划
+// 普通的动态规划
 func rob(nums []int) int {
 	dp := make([][2]int, len(nums)+1)
 
@@ -12,7 +12,7 @@ func rob(nums []int) int {
 	return max(dp[len(nums)][0], dp[len(nums)][1])
 }
 
-//	优化空间
+// 优化空间
 func rob2(nums []int) int {
 	prevNo, prevYes := 0, 0
 

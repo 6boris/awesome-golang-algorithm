@@ -2,7 +2,7 @@ package Solution
 
 import "strings"
 
-func Solution(text string, first string, second string) []string {
+func Solution(text, first, second string) []string {
 	testlist := strings.Split(text, " ")
 	fm := make(map[string]struct{})
 	sm := make(map[string]struct{})

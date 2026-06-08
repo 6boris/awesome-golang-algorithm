@@ -2,7 +2,7 @@ package Solution
 
 import "sort"
 
-func canFormBasket(prices []int, k int, diff int) bool {
+func canFormBasket(prices []int, k, diff int) bool {
 	count := 1                // 选第一个
 	lastSelected := prices[0] // 第一个元素
 	for _, price := range prices[1:] {

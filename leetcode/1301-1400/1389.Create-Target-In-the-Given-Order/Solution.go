@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(nums []int, index []int) []int {
+func Solution(nums, index []int) []int {
 	n := len(nums)
 	if n == 1 {
 		return []int{nums[0]}

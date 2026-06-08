@@ -2,7 +2,7 @@ package Solution
 
 import "sort"
 
-func intersection_1(nums1 []int, nums2 []int) []int {
+func intersection_1(nums1, nums2 []int) []int {
 	m1, m2 := make(map[int]int), make(map[int]int)
 	ans := make([]int, 0)
 	for idx, val := range nums1 {
@@ -20,7 +20,7 @@ func intersection_1(nums1 []int, nums2 []int) []int {
 	return ans
 }
 
-func intersection_2(nums1 []int, nums2 []int) []int {
+func intersection_2(nums1, nums2 []int) []int {
 	sort.Ints(nums1)
 	sort.Ints(nums2)
 	ans := make([]int, 0)

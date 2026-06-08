@@ -2,7 +2,7 @@ package Solution
 
 func Solution(nums []int) int {
 	ans := 0
-	_max, _min := 0, 0 //最大的正数，最小的负数
+	_max, _min := 0, 0 // 最大的正数，最小的负数
 	sum := 0
 	for _, n := range nums {
 		cur := n

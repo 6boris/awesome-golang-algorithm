@@ -2,7 +2,7 @@ package Solution
 
 import "sort"
 
-func Solution(processorTime []int, tasks []int) int {
+func Solution(processorTime, tasks []int) int {
 	sort.Slice(tasks, func(i, j int) bool {
 		return tasks[i] > tasks[j]
 	})

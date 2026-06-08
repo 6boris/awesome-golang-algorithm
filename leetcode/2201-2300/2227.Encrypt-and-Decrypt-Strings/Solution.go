@@ -35,7 +35,7 @@ type Encrypter struct {
 	valuesMapper map[string][]int
 }
 
-func Constructor(keys []byte, values []string, dictionary []string) Encrypter {
+func Constructor(keys []byte, values, dictionary []string) Encrypter {
 	tree := buildTrieNode2227(dictionary)
 	e := Encrypter{
 		tree:         tree,
@@ -89,11 +89,12 @@ func (this *Encrypter) search(word2 string, index int, tree *trieNode2227) int {
 	}
 	return ret
 }
+
 func (this *Encrypter) Decrypt(word2 string) int {
 	return this.search(word2, 0, this.tree)
 }
 
-func Solution(keys []byte, values []string, dictionary []string, encryptStr, decryptStr string) []any {
+func Solution(keys []byte, values, dictionary []string, encryptStr, decryptStr string) []any {
 	c := Constructor(keys, values, dictionary)
 	var ret []any
 	ret = append(ret, c.Encrypt(encryptStr))

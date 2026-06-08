@@ -10,7 +10,7 @@ func totalNQueens3(n int) int {
 	return count
 }
 
-func dfs(n int, row int, cols int, pie int, na int) {
+func dfs(n, row, cols, pie, na int) {
 	if row >= n {
 		count++
 		return

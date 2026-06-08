@@ -5,7 +5,7 @@ type TreeNode struct {
 	Left, Right *TreeNode
 }
 
-func Solution(root1 *TreeNode, root2 *TreeNode) bool {
+func Solution(root1, root2 *TreeNode) bool {
 	root1Leaves := leaves872(root1)
 	root2Leaves := leaves872(root2)
 	if len(root1Leaves) != len(root2Leaves) {

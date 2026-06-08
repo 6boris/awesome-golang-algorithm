@@ -4,16 +4,17 @@ func isValid_1(s string) bool {
 	stack := make([]rune, len(s))
 	top := 0
 	for _, v := range s {
-		if v == '(' {
+		switch v {
+		case '(':
 			stack[top] = ')'
 			top++
-		} else if v == '{' {
+		case '{':
 			stack[top] = '}'
 			top++
-		} else if v == '[' {
+		case '[':
 			stack[top] = ']'
 			top++
-		} else {
+		default:
 			if top == 0 || stack[top-1] != v {
 				return false
 			}

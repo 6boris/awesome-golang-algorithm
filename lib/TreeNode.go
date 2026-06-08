@@ -32,9 +32,9 @@ func GenTreeHelp(x []int, index *int) *TreeNode {
 	return node
 }
 
-//	序列化
+// 序列化
 func dumpTreeToString(tree *TreeNode) string {
-	var str string = ""
+	str := ""
 	dumpTreeToStringHelper(tree, &str)
 	return str
 }
@@ -49,9 +49,9 @@ func dumpTreeToStringHelper(tree *TreeNode, str *string) {
 	dumpTreeToStringHelper(tree.Right, str)
 }
 
-//	反序列化
+// 反序列化
 func conFromPreStr(str string) *TreeNode {
-	var strIndex int = 0
+	strIndex := 0
 	return conFromPreStrHelper(str, &strIndex)
 }
 

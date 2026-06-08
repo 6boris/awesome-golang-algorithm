@@ -55,9 +55,9 @@ func jump2(nums []int) int {
 	return res
 }
 
-/**
+/*
+*
 1
-
 */
 func jump3(nums []int) int {
 	//	如果数组小于2，则说明不用跳跃返回0

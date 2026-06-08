@@ -4,7 +4,7 @@ import (
 	"github.com/emirpasic/gods/v2/trees/redblacktree"
 )
 
-func Solution(nums []int, k int, x int) []int64 {
+func Solution(nums []int, k, x int) []int64 {
 	helper := NewHelper(x)
 	ans := []int64{}
 

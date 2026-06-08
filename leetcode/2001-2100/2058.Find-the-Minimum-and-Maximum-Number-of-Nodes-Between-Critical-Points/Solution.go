@@ -17,7 +17,7 @@ func Solution(head *ListNode) []int {
 	for ; cur.Next != nil; pre, cur, index = cur, cur.Next, index+1 {
 		a := pre.Val
 		b := cur.Next.Val
-		if !(cur.Val > a && cur.Val > b || cur.Val < a && cur.Val < b) {
+		if (cur.Val <= a || cur.Val <= b) && (cur.Val >= a || cur.Val >= b) {
 			continue
 		}
 		end = index

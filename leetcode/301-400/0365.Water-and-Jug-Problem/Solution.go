@@ -6,7 +6,8 @@ func gcd365(x, y int) int {
 	}
 	return x
 }
-func Solution(x int, y int, target int) bool {
+
+func Solution(x, y, target int) bool {
 	if x+y < target {
 		return false
 	}

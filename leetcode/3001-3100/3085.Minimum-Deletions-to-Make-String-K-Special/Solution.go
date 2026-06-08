@@ -26,7 +26,7 @@ func Solution(word string, k int) int {
 	}
 
 	ans := -1
-	//26*26 N^2 ojbk
+	// 26*26 N^2 ojbk
 	for start := 0; start < ll; start++ {
 		leftRemove := 0
 		if start > 0 {

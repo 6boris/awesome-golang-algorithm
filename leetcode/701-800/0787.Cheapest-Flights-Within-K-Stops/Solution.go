@@ -6,7 +6,7 @@ type node787 struct {
 }
 
 // 感觉dijkstra算法呢
-func Solution(n int, flights [][]int, src int, dst int, k int) int {
+func Solution(n int, flights [][]int, src, dst, k int) int {
 	stops := 0
 	dist := make([]int, n)
 	for i := 0; i < n; i++ {

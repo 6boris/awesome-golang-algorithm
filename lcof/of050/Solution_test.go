@@ -8,21 +8,21 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-//	solution func Info
+// solution func Info
 type SolutionFuncType func(string) byte
 
 var SolutionFuncList = []SolutionFuncType{
 	firstUniqChar,
 }
 
-//	test info struct
+// test info struct
 type Case struct {
 	name   string
 	inputs string
 	expect byte
 }
 
-// 	test case
+// test case
 var cases = []Case{
 	{
 		name:   "TestCase 1",

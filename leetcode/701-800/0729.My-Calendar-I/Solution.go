@@ -28,7 +28,8 @@ func (this *MyCalendar) Book(start, end int) bool {
 			breakPoint = true
 			break
 		}
-		if (s.start >= this.books[idx].start && s.start < this.books[idx].end) || (s.end > this.books[idx].start && s.end < this.books[idx].end) || (s.end >= this.books[idx].end && s.start <= this.books[idx].start) {
+		if (s.start >= this.books[idx].start && s.start < this.books[idx].end) || (s.end > this.books[idx].start && s.end < this.books[idx].end) ||
+			(s.end >= this.books[idx].end && s.start <= this.books[idx].start) {
 			return false
 		}
 		if idx == 0 {

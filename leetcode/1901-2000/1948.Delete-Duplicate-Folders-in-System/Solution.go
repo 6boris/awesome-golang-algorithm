@@ -26,8 +26,7 @@ func Solution(paths [][]string) [][]string {
 	})
 	// 将所有的子目录序列化成一个字符串。之前有过这样的题，搞成字符串
 	root := &Tree{Value: "/", Children: []*Tree{}, ValueIndex: map[string]int{}}
-	var buildTree func([]string)
-	buildTree = func(p []string) {
+	var buildTree func([]string) = func(p []string) {
 		walker := root
 		for _, sub := range p {
 			index, ok := walker.ValueIndex[sub]
@@ -78,8 +77,7 @@ func Solution(paths [][]string) [][]string {
 			}
 		}
 	}
-	var filterPath func([]string) []string
-	filterPath = func(cur []string) []string {
+	var filterPath func([]string) []string = func(cur []string) []string {
 		walker := root
 		i := 0
 		for ; i < len(cur); i++ {

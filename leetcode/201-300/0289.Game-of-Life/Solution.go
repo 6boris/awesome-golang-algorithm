@@ -3,8 +3,7 @@ package Solution
 func Solution(board [][]int) {
 	rows, cols := len(board), len(board[0])
 
-	var ones func(int, int) int
-	ones = func(x, y int) int {
+	ones := func(x, y int) int {
 		count := 0
 		for i := -1; i <= 1; i++ {
 			for j := -1; j <= 1; j++ {
@@ -13,7 +12,7 @@ func Solution(board [][]int) {
 				}
 
 				a, b := x+i, y+j
-				// 1说明之前就是就是活着的，2表示之前是活着的，但是因为周围环境自己死亡
+
 				if a >= 0 && a < rows && b >= 0 && b < cols && (board[a][b] == 1 || board[a][b] == 2) {
 					count++
 				}
@@ -47,5 +46,4 @@ func Solution(board [][]int) {
 			}
 		}
 	}
-	return
 }

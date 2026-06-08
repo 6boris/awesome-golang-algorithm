@@ -2,7 +2,7 @@ package Solution
 
 import "sort"
 
-func Solution(nums []int, queries []int) []int {
+func Solution(nums, queries []int) []int {
 	ret := make([]int, len(queries))
 	group := make(map[int][]int)
 	// 最后一个元素可以

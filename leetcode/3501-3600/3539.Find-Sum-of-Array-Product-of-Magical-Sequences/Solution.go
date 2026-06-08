@@ -14,7 +14,7 @@ func quickmul(x, y, mod int64) int64 {
 	return res
 }
 
-func Solution(m int, k int, nums []int) int {
+func Solution(m, k int, nums []int) int {
 	mod := int64(1000000007)
 	fac := make([]int64, m+1)
 	fac[0] = 1

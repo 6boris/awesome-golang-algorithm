@@ -17,12 +17,12 @@ func (h iheap) Peek() int {
 }
 
 // 实现 container/Heap 接口的Pop,Push方法，receiver需要是指针
-func (h *iheap) Push(x interface{}) {
+func (h *iheap) Push(x any) {
 	*h = append(*h, x.(int))
 }
 
 // 弹出数组最后一个元素，同时数组长度--，堆内部通过替换堆顶元素来进行 heapifyDown 调整
-func (h *iheap) Pop() interface{} {
+func (h *iheap) Pop() any {
 	n := (*h).Len()
 	x := (*h)[n-1]  // 数组最后一个元素
 	*h = (*h)[:n-1] // size--

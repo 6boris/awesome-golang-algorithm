@@ -10,8 +10,7 @@ func Solution(n int) []*TreeNode {
 	cache[1] = []*TreeNode{{Val: 0}}
 	cache[3] = []*TreeNode{{Val: 0, Left: &TreeNode{Val: 0}, Right: &TreeNode{Val: 0}}}
 
-	var buildTree func(left int) []*TreeNode
-	buildTree = func(left int) []*TreeNode {
+	var buildTree func(left int) []*TreeNode = func(left int) []*TreeNode {
 		result := make([]*TreeNode, 0)
 		for leftNode := 1; leftNode < left; leftNode += 2 {
 			for li := 0; li < len(cache[leftNode]); li++ {

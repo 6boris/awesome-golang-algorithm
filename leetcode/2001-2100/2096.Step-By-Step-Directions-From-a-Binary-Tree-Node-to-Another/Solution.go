@@ -5,7 +5,7 @@ type TreeNode struct {
 	Left, Right *TreeNode
 }
 
-func Solution(root *TreeNode, startValue int, destValue int) string {
+func Solution(root *TreeNode, startValue, destValue int) string {
 	var dfs func(*TreeNode, *[]int, *[]byte, int) bool
 	dfs = func(tree *TreeNode, nums *[]int, dirs *[]byte, value int) bool {
 		if tree == nil {

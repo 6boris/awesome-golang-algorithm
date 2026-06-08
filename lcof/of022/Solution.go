@@ -10,7 +10,7 @@ func getKthFromEnd_1(head *ListNode, k int) *ListNode {
 	for l := head; l != nil; l = l.Next {
 		c++
 	}
-	klh := new(ListNode)
+	var klh *ListNode
 	for klh = head; c > k; klh = klh.Next {
 		c--
 	}

@@ -14,7 +14,7 @@ func Constructor() NumberContainers {
 	}
 }
 
-func (this *NumberContainers) Change(index int, number int) {
+func (this *NumberContainers) Change(index, number int) {
 	v, ok := this.indies[index]
 	this.indies[index] = number
 	if !ok {
@@ -50,7 +50,6 @@ func (this *NumberContainers) Change(index int, number int) {
 			this.list[number] = a
 		}
 	}
-
 }
 
 func (this *NumberContainers) Find(number int) int {

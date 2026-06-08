@@ -48,6 +48,7 @@ func (a *AlgorithmsPair) GetFormatID() string {
 	}
 	return strId
 }
+
 func (a *AlgorithmsPair) GetFormatName() string {
 	name := strings.Trim(a.Stat.QuestionTitle, " ")
 	str := ""
@@ -92,11 +93,12 @@ func (a *AlgorithmsPair) GetFormatName() string {
 		}
 		str = str + string(v)
 	}
-	if name[len(name)-1:] == "-" {
-		name = name[:len(name)-1]
+	if len(str) > 0 && str[len(str)-1:] == "-" {
+		str = str[:len(str)-1]
 	}
 	return str
 }
+
 func (a *AlgorithmsPair) GetDir() string {
 	return fmt.Sprintf("../../leetcode/%d-%d/%s/", (a.Stat.FrontendQuestionID-1)/100*100+1, ((a.Stat.FrontendQuestionID-1)/100+1)*100, fmt.Sprintf("%s.%s", a.GetFormatID(), a.GetFormatName()))
 }
@@ -128,7 +130,7 @@ func createDirectory(path string) error {
 			return err
 		}
 		// Create the directory
-		err = os.Mkdir(path, 0777)
+		err = os.Mkdir(path, 0o750)
 		if err != nil {
 			return err
 		}
@@ -140,11 +142,11 @@ func copyFile(sourceFile, destinationFile string, perm os.FileMode) error {
 	if sourceFile == "" || destinationFile == "" {
 		return errors.New("sourceFile or destinationFile is null")
 	}
-	data, err := os.ReadFile(sourceFile)
+	data, err := os.ReadFile(sourceFile) //nolint:gosec // local code-gen tool: template path is trusted
 	if err != nil {
 		return err
 	}
-	err = os.WriteFile(destinationFile, data, perm)
+	err = os.WriteFile(destinationFile, data, perm) //nolint:gosec // local code-gen tool: destination path is trusted
 	if err != nil {
 		return err
 	}
@@ -154,11 +156,11 @@ func copyFile(sourceFile, destinationFile string, perm os.FileMode) error {
 func GenerateReadmeFromTpl(problem *AlgorithmsPair) error {
 	log.Println("开始生成 README")
 	file, err := os.OpenFile("../template/solution/README.md", os.O_RDONLY, 0o600)
-	defer file.Close()
 	if err != nil {
 		log.Panicf("README 模板读取失败1：%s", err.Error())
 		return err
 	}
+	defer func() { _ = file.Close() }()
 
 	buffer, err := io.ReadAll(file)
 	if err != nil {
@@ -169,10 +171,14 @@ func GenerateReadmeFromTpl(problem *AlgorithmsPair) error {
 	var tmpRes bytes.Buffer
 
 	tmpl, err := template.New("README: ").Parse(string(buffer))
-	err = tmpl.Execute(&tmpRes, problem)
-	//write(SOLUTIONS_PATH+problem.PathName+"/README.md", string(tmpRes.Bytes()))
-	err = os.WriteFile(problem.GetDir()+"/README.md", tmpRes.Bytes(), 0o755)
 	if err != nil {
+		return err
+	}
+	if err = tmpl.Execute(&tmpRes, problem); err != nil {
+		return err
+	}
+	// write(SOLUTIONS_PATH+problem.PathName+"/README.md", string(tmpRes.Bytes()))
+	if err = os.WriteFile(problem.GetDir()+"/README.md", tmpRes.Bytes(), 0o600); err != nil { //nolint:gosec // local code-gen tool: output path is trusted
 		return err
 	}
 	return nil

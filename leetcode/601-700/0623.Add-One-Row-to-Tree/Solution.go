@@ -6,7 +6,7 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
-func Solution(root *TreeNode, val int, depth int) *TreeNode {
+func Solution(root *TreeNode, val, depth int) *TreeNode {
 	if depth == 1 {
 		node := &TreeNode{Val: val, Left: root}
 		return node

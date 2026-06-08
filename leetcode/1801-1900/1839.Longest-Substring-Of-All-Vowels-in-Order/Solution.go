@@ -6,7 +6,6 @@ type charCount struct {
 }
 
 func Solution(word string) int {
-
 	pre := byte(' ')
 	// a, e, i, o, u
 	group := make([]charCount, 0)

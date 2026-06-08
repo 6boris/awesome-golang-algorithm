@@ -1,8 +1,7 @@
 package Solution
 
 func Solution(s string, k int) int {
-	var isVowel func(byte) bool
-	isVowel = func(b byte) bool {
+	var isVowel func(byte) bool = func(b byte) bool {
 		return b == 'a' || b == 'e' || b == 'i' || b == 'o' || b == 'u'
 	}
 	ans := 0

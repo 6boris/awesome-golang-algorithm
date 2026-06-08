@@ -26,11 +26,11 @@ func (p *pairs2462) Swap(i, j int) {
 	(*p)[i], (*p)[j] = (*p)[j], (*p)[i]
 }
 
-func (p *pairs2462) Push(x interface{}) {
+func (p *pairs2462) Push(x any) {
 	*p = append(*p, x.(pair2462))
 }
 
-func (p *pairs2462) Pop() interface{} {
+func (p *pairs2462) Pop() any {
 	old := *p
 	l := len(old)
 	x := old[l-1]
@@ -38,7 +38,7 @@ func (p *pairs2462) Pop() interface{} {
 	return x
 }
 
-func Solution(costs []int, k int, candidates int) int64 {
+func Solution(costs []int, k, candidates int) int64 {
 	left := len(costs)
 	l, r := pairs2462{}, pairs2462{}
 	li, ri := 0, left-1

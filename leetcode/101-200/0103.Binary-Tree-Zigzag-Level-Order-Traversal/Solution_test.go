@@ -47,7 +47,8 @@ var cases = []Case{
 	},
 	{
 		name: "TestCase 4",
-		input: &TreeNode{Val: 4,
+		input: &TreeNode{
+			Val: 4,
 			Left: &TreeNode{
 				Val:   2,
 				Left:  &TreeNode{Val: 1},

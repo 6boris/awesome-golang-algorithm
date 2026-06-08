@@ -44,6 +44,7 @@ func (this *Skiplist) search(target int) *SkipListNode {
 	}
 	return nil
 }
+
 func (this *Skiplist) Search(target int) bool {
 	return this.search(target) != nil
 }

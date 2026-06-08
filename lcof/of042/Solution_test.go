@@ -10,23 +10,23 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-//	solution func Info
+// solution func Info
 type SolutionFuncType func([]int) int
 
 var SolutionFuncList = []SolutionFuncType{
 	maxSubArray_1,
 	maxSubArray_2,
-	//maxSubArray_3,
+	// maxSubArray_3,
 }
 
-//	Test info struct
+// Test info struct
 type Case struct {
 	name   string
 	inputs []int
 	expect int
 }
 
-// 	test case
+// test case
 var cases = []Case{
 	{name: "TestCase 1", inputs: []int{1}, expect: 1},
 	{name: "TestCase 2", inputs: []int{-2, 1}, expect: 1},

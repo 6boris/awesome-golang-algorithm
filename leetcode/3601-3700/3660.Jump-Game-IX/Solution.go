@@ -21,12 +21,12 @@ func Solution(nums []int) []int {
 		prevMax[i] = prev
 	}
 
-	var process func(r int, rightMin int, rightMax int)
-	process = func(r int, rightMin int, rightMax int) {
+	var process func(r, rightMin, rightMax int)
+	process = func(r, rightMin, rightMax int) {
 		pMax := prevMax[r].value
 		pivotIndex := prevMax[r].index
 
-		currMax := pMax
+		var currMax int
 		if pMax <= rightMin {
 			currMax = pMax
 		} else {

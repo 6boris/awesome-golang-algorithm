@@ -2,7 +2,7 @@ package Solution
 
 import "sort"
 
-func Solution(nums []int, queries []int) []int {
+func Solution(nums, queries []int) []int {
 	ans := make([]int, len(queries))
 	sort.Ints(nums)
 	for i := 1; i < len(nums); i++ {

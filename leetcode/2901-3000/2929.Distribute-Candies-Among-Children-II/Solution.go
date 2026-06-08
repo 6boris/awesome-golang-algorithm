@@ -15,7 +15,7 @@ func binom(a, b int) int64 {
 	return result
 }
 
-func Solution(n int, limit int) int64 {
+func Solution(n, limit int) int64 {
 	total := binom(n+2, 2)
 
 	n1 := n - (limit + 1)

@@ -15,13 +15,14 @@ func toChars(s string) []char809 {
 			c++
 			continue
 		}
-		chars = append(chars, char809{c: byte(pre), cc: c})
+		chars = append(chars, char809{c: pre, cc: c})
 		pre = b
 		c = 1
 	}
-	chars = append(chars, char809{c: byte(pre), cc: c})
+	chars = append(chars, char809{c: pre, cc: c})
 	return chars
 }
+
 func Solution(s string, words []string) int {
 	ans := 0
 	target := toChars(s)

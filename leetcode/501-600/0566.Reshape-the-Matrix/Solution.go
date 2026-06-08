@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(nums [][]int, r int, c int) [][]int {
+func Solution(nums [][]int, r, c int) [][]int {
 	m, n := len(nums), len(nums[0])
 	if m*n != r*c {
 		return nums

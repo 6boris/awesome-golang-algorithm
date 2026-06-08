@@ -6,8 +6,8 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
-//	递归求解
-func buildTree(pre []int, in []int) *TreeNode {
+// 递归求解
+func buildTree(pre, in []int) *TreeNode {
 	if len(pre) == 0 || len(in) == 0 {
 		return nil
 	}

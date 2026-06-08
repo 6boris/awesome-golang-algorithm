@@ -8,7 +8,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-//	solution func Info
+// solution func Info
 type SolutionFuncType func(string, int) string
 
 var SolutionFuncList = []SolutionFuncType{
@@ -16,7 +16,7 @@ var SolutionFuncList = []SolutionFuncType{
 	reverseLeftWords2,
 }
 
-//	test info struct
+// test info struct
 type Case struct {
 	name   string
 	inputs string
@@ -24,7 +24,7 @@ type Case struct {
 	expect string
 }
 
-// 	test case
+// test case
 var cases = []Case{
 	{
 		name:   "TestCase 1",

@@ -32,7 +32,7 @@ func (r *trieNode3043) prefixMatch(intStr string) int {
 	return i
 }
 
-func Solution(arr1 []int, arr2 []int) int {
+func Solution(arr1, arr2 []int) int {
 	ans := 0
 	tree := &trieNode3043{}
 	for _, intVal := range arr1 {

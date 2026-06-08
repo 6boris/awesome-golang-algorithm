@@ -1,11 +1,11 @@
 package Solution
 
-func Solution(x int, y int, bound int) []int {
+func Solution(x, y, bound int) []int {
 	xm := map[int]struct{}{
-		1: struct{}{},
+		1: {},
 	}
 	ym := map[int]struct{}{
-		1: struct{}{},
+		1: {},
 	}
 	if x != 1 {
 		base := x

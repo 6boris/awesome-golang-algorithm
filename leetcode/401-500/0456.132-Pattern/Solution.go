@@ -51,7 +51,7 @@ func Solution(nums []int) bool {
 			return l
 		}
 	*/
-	k := ll
+	var k int
 	for j := ll - 1; j >= 0; j-- {
 		if minArr[j] >= nums[j] {
 			continue

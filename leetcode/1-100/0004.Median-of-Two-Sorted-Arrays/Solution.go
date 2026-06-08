@@ -1,20 +1,20 @@
 package Solution
 
-func Min(a int, b int) int {
+func Min(a, b int) int {
 	if a > b {
 		return b
 	}
 	return a
 }
 
-func Max(a int, b int) int {
+func Max(a, b int) int {
 	if a > b {
 		return a
 	}
 	return b
 }
 
-func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
+func findMedianSortedArrays(nums1, nums2 []int) float64 {
 	m, n := len(nums1), len(nums2)
 	halfLen := (m + n + 1) / 2
 
@@ -80,7 +80,7 @@ func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
 	return -1.0
 }
 
-func findMedianSortedArrays1(nums1 []int, nums2 []int) float64 {
+func findMedianSortedArrays1(nums1, nums2 []int) float64 {
 	l1 := len(nums1)
 	l2 := len(nums2)
 	targetIndex := (l1 + l2) / 2

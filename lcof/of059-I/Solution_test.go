@@ -8,7 +8,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-//	solution func Info
+// solution func Info
 type SolutionFuncType func([]int, int) []int
 
 var SolutionFuncList = []SolutionFuncType{
@@ -17,7 +17,7 @@ var SolutionFuncList = []SolutionFuncType{
 	maxSlidingWindow3,
 }
 
-//	test info struct
+// test info struct
 type Case struct {
 	name   string
 	inputs []int
@@ -25,7 +25,7 @@ type Case struct {
 	expect []int
 }
 
-// 	test case
+// test case
 var cases = []Case{
 	{
 		name:   "TestCase 1",

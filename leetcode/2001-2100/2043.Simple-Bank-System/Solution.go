@@ -18,7 +18,7 @@ func (this *Bank) validateAccount(a int) bool {
 	return a >= 1 && a <= this.ok
 }
 
-func (this *Bank) Transfer(account1 int, account2 int, money int64) bool {
+func (this *Bank) Transfer(account1, account2 int, money int64) bool {
 	if !this.validateAccount(account1) || !this.validateAccount(account2) {
 		return false
 	}

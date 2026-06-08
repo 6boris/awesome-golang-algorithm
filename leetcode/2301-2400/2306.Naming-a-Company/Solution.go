@@ -9,6 +9,7 @@ func intersection2306(a, b map[string]struct{}) int64 {
 	}
 	return i
 }
+
 func Solution(ideas []string) int64 {
 	byteWithSuffix := make([]map[string]struct{}, 26)
 	for _, w := range ideas {

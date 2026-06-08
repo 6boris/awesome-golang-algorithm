@@ -13,7 +13,7 @@ type LeetCode struct {
 	CategorySlug    string    `json:"category_slug"`
 }
 
-//	问题
+// 问题
 type Problem struct {
 	Stat       Stat       `json:"stat"`
 	Status     bool       `json:"status"`

@@ -15,11 +15,15 @@ func TestSolution(t *testing.T) {
 		expect  []int
 	}{
 		{"TestCase1", 3, []op{
-			{"push", 1, 0}, {"push", 2, 0},
+			{"push", 1, 0},
+			{"push", 2, 0},
 			{"pop", 0, 0},
 
-			{"push", 2, 0}, {"push", 3, 0}, {"push", 4, 0},
-			{"i", 5, 100}, {"i", 2, 100},
+			{"push", 2, 0},
+			{"push", 3, 0},
+			{"push", 4, 0},
+			{"i", 5, 100},
+			{"i", 2, 100},
 			{"pop", 0, 0},
 			{"pop", 0, 0},
 			{"pop", 0, 0},

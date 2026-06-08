@@ -13,6 +13,7 @@ func ok(n, target int) bool {
 	}
 	return false
 }
+
 func Solution(n int) int {
 	ans := 0
 	for i := 1; i <= n; i++ {

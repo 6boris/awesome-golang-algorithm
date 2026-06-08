@@ -1,6 +1,6 @@
 package Solution
 
-//	直接扫描
+// 直接扫描
 func searchRange(nums []int, target int) []int {
 	targetRange := []int{-1, -1}
 

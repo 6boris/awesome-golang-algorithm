@@ -46,7 +46,7 @@ func (this *RandomizedSet) Remove(val int) bool {
 }
 
 func (this *RandomizedSet) GetRandom() int {
-	i := rand.Intn(int(this.index) + 1)
+	i := rand.Intn(this.index + 1)
 	return this.stack[i]
 }
 

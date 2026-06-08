@@ -1,7 +1,7 @@
 package Solution
 
-func Solution(numBottles int, numExchange int) int {
-	var ans int = numBottles
+func Solution(numBottles, numExchange int) int {
+	ans := numBottles
 	drink := 0
 	empty := numBottles
 	for {

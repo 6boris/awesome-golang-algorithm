@@ -2,7 +2,7 @@ package Solution
 
 import "sort"
 
-func Solution(players []int, trainers []int) int {
+func Solution(players, trainers []int) int {
 	sort.Ints(players)
 	sort.Ints(trainers)
 	i, j := 0, 0

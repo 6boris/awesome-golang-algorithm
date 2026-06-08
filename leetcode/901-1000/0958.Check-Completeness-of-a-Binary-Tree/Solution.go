@@ -14,7 +14,7 @@ func isCompleteTree_1(root *TreeNode) bool {
 		if node == nil {
 			end = true
 		} else {
-			if end == true {
+			if end {
 				return false
 			}
 			que = append(que, node.Left, node.Right)

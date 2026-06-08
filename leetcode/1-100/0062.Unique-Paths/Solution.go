@@ -1,6 +1,6 @@
 package Solution
 
-func uniquePaths(m int, n int) int {
+func uniquePaths(m, n int) int {
 	//	Init DP
 	dp := make([][]int, m)
 	for i := 0; i < m; i++ {

@@ -24,7 +24,7 @@ func countPrimes_2(n int) int {
 	var ans int
 	prime := make([]bool, n)
 	for i := 2; i < n; i++ {
-		if prime[i] == false {
+		if !prime[i] {
 			ans++
 			for j := 2; j*i < n; j++ {
 				prime[j*i] = true
@@ -43,7 +43,7 @@ func countPrimes_3(num int) int {
 	//	循环检查质数 i<sqrt(n)可以转换为i*i < n
 	//	因为提劲的进行标记所以时间复杂可以到O(log N)
 	for i := 2; i*i < num; i++ {
-		if isPrime[i] == false {
+		if !isPrime[i] {
 			continue
 		}
 		for j := i * i; j < num; j = j + i {

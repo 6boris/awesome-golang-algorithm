@@ -2,7 +2,7 @@ package Solution
 
 var localDirs = [][2]int{{0, -1}, {0, 1}, {-1, 0}, {1, 0}}
 
-func floodFillDFS(image, visited [][]int, sr, sc, rows, cols int, sourceColor, newColor int) {
+func floodFillDFS(image, visited [][]int, sr, sc, rows, cols, sourceColor, newColor int) {
 	if sr < 0 || sr >= rows || sc < 0 || sc >= cols {
 		return
 	}
@@ -29,7 +29,7 @@ func Solution(image [][]int, sr, sc, newColor int) [][]int {
 	return image
 }
 
-func floodFill_dfs(image [][]int, sr int, sc int, newColor int) [][]int {
+func floodFill_dfs(image [][]int, sr, sc, newColor int) [][]int {
 	var dfs func([][]int, int, int, int, int)
 	dfs = func(image [][]int, r, c, oldColor, newColor int) {
 		if c < 0 || r < 0 || r >= len(image) || c >= len(image[0]) || image[r][c] != oldColor {
@@ -46,7 +46,7 @@ func floodFill_dfs(image [][]int, sr int, sc int, newColor int) [][]int {
 	return image
 }
 
-func floodFill_bfs(image [][]int, sr int, sc int, newColor int) [][]int {
+func floodFill_bfs(image [][]int, sr, sc, newColor int) [][]int {
 	oldColor := image[sr][sc]
 	if oldColor == newColor {
 		return image

@@ -10,7 +10,7 @@ func power(base, n int) int {
 
 const mod = 1000000007
 
-func Solution(n int, x int) int {
+func Solution(n, x int) int {
 	candidates := []int{}
 	i := 1
 	for ; ; i++ {

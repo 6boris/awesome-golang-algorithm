@@ -15,7 +15,6 @@ var dir773 = [4][2]int{
 }
 
 func Solution(board [][]int) int {
-
 	key := [2][3]int{
 		{board[0][0], board[0][1], board[0][2]},
 		{board[1][0], board[1][1], board[1][2]},
@@ -32,7 +31,7 @@ func Solution(board [][]int) int {
 		{key, zeroIndex},
 	}
 	used := map[[2][3]int]struct{}{
-		key: struct{}{},
+		key: {},
 	}
 	steps := 0
 	for len(queue) > 0 {

@@ -30,8 +30,10 @@ var cases = []Case{
 	{"TestCase 1", &TreeNode{3, &TreeNode{Val: 9}, &TreeNode{20, &TreeNode{Val: 15}, &TreeNode{Val: 7}}}, true},
 	{"TestCase 2", &TreeNode{1, &TreeNode{2, &TreeNode{3, &TreeNode{Val: 4}, &TreeNode{Val: 4}}, &TreeNode{Val: 3}}, &TreeNode{Val: 2}}, false},
 	{"TestCase 3", &TreeNode{}, true},
-	{"TestCase 4",
-		&TreeNode{Val: 1,
+	{
+		"TestCase 4",
+		&TreeNode{
+			Val: 1,
 			Left: &TreeNode{
 				Val: 2,
 				Left: &TreeNode{
@@ -44,7 +46,8 @@ var cases = []Case{
 			Right: &TreeNode{Val: 2},
 		},
 
-		false},
+		false,
+	},
 }
 
 // TestSolution Run test case for all solutions

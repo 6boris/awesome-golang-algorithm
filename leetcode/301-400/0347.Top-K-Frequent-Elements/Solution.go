@@ -46,11 +46,11 @@ func (f *fqs) Swap(i, j int) {
 	(*f)[i], (*f)[j] = (*f)[j], (*f)[i]
 }
 
-func (f *fqs) Push(x interface{}) {
+func (f *fqs) Push(x any) {
 	*f = append(*f, x.(fq))
 }
 
-func (f *fqs) Pop() interface{} {
+func (f *fqs) Pop() any {
 	old := *f
 	l := len(old)
 	x := old[l-1]

@@ -46,7 +46,7 @@ func Solution(word string, k int) int {
 		for j := 1; j < k; j++ {
 			g_new[j] = (g_new[j-1] + f_new[j]) % mod
 		}
-		f, g = f_new, g_new
+		g = g_new
 	}
 
 	return (ans - g[k-1] + mod) % mod

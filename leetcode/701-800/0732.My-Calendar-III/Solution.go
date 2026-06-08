@@ -17,7 +17,7 @@ func Constructor732() MyCalendarThree {
 	}
 }
 
-func (this *MyCalendarThree) Book(startTime int, endTime int) int {
+func (this *MyCalendarThree) Book(startTime, endTime int) int {
 	_, ok1 := this.store[startTime]
 	_, ok2 := this.store[endTime]
 	this.store[startTime]++

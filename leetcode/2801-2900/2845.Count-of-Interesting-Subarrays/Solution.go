@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(nums []int, modulo int, k int) int64 {
+func Solution(nums []int, modulo, k int) int64 {
 	cache := make(map[int]int)
 	var res int64 = 0
 	cnt := 0

@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(rolls []int, mean int, n int) []int {
+func Solution(rolls []int, mean, n int) []int {
 	target := (n + len(rolls)) * mean
 	for _, r := range rolls {
 		target -= r

@@ -9,11 +9,11 @@ import (
 func TestSolution(t *testing.T) {
 	//	测试用例
 	cases := []struct {
-		name   string
+		name       string
 		n1, n2, n3 []int
-		expect []int
+		expect     []int
 	}{
-		{"TestCase1", []int{1, 1, 3, 2}, []int{2, 3}, []int{3}, []int{2 ,3}},
+		{"TestCase1", []int{1, 1, 3, 2}, []int{2, 3}, []int{3}, []int{2, 3}},
 		{"TestCase2", []int{3, 1}, []int{2, 3}, []int{1, 2}, []int{1, 2, 3}},
 		{"TestCase3", []int{1, 2, 2}, []int{4, 3, 3}, []int{5}, []int{}},
 	}
@@ -30,10 +30,10 @@ func TestSolution(t *testing.T) {
 	}
 }
 
-//	压力测试
+// 压力测试
 func BenchmarkSolution(b *testing.B) {
 }
 
-//	使用案列
+// 使用案列
 func ExampleSolution() {
 }

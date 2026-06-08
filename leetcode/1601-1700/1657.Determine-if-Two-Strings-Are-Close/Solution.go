@@ -2,7 +2,7 @@ package Solution
 
 import "sort"
 
-func Solution(word1 string, word2 string) bool {
+func Solution(word1, word2 string) bool {
 	if len(word1) != len(word2) {
 		return false
 	}

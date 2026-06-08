@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(n int, time int) int {
+func Solution(n, time int) int {
 	need := n - 1
 
 	loop := time / need

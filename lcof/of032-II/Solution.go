@@ -13,7 +13,7 @@ func levelOrder(root *TreeNode) [][]int {
 	}
 	// 利用队列
 	queue := []*TreeNode{root}
-	var level int = 0
+	level := 0
 	for len(queue) != 0 {
 		// 利用临时队列，暂存每个节点的左右子树
 		temp := []*TreeNode{}

@@ -1,14 +1,13 @@
 package Solution
 
 func Solution(nums []int, maxOperations int) int {
-	var can func(int) bool
-	can = func(limit int) bool {
+	var can func(int) bool = func(limit int) bool {
 		op := maxOperations
 		for _, n := range nums {
 			if n <= limit {
 				continue
 			}
-			// 9 /3
+
 			times := n / limit
 			if n%limit == 0 {
 				times--

@@ -2,7 +2,7 @@ package Solution
 
 const MOD = 1000000007
 
-func Solution(zero int, one int, limit int) int {
+func Solution(zero, one, limit int) int {
 	memo := make([][][]int, zero+1)
 	for i := range memo {
 		memo[i] = make([][]int, one+1)

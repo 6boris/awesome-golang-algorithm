@@ -6,7 +6,7 @@ func Solution(points [][]int) int {
 	for i := 0; i < l; i++ {
 		for j := 0; j < l; j++ {
 			// 检查他俩是否ok
-			if i == j || !(points[i][0] <= points[j][0] && points[i][1] >= points[j][1]) {
+			if i == j || (points[i][0] > points[j][0] || points[i][1] < points[j][1]) {
 				// 不在左上角
 				continue
 			}

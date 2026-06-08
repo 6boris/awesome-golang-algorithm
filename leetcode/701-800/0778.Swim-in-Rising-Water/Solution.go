@@ -12,8 +12,8 @@ func dfs778(grid [][]int, visited [][]bool, x, y, t int) bool {
 		dfs778(grid, visited, x+1, y, t) ||
 		dfs778(grid, visited, x, y-1, t) ||
 		dfs778(grid, visited, x, y+1, t)
-
 }
+
 func do778(grid [][]int, x, y, t int) bool {
 	gridCopy := make([][]int, len(grid))
 	v := make([][]bool, len(grid))
@@ -25,8 +25,8 @@ func do778(grid [][]int, x, y, t int) bool {
 
 	return dfs778(gridCopy, v, x, y, t)
 }
-func Solution(grid [][]int) int {
 
+func Solution(grid [][]int) int {
 	// 一般这种dfs或者bfs都不太好确定的题，可以尝试binary search+dfs
 	// 直接尝试搜索每个答案
 	ans := -1

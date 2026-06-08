@@ -27,11 +27,11 @@ func (t *Tweets) Less(i, j int) bool {
 	return (*t)[i].id < (*t)[j].id
 }
 
-func (t *Tweets) Push(x interface{}) {
+func (t *Tweets) Push(x any) {
 	*t = append(*t, x.(Tweet))
 }
 
-func (t *Tweets) Pop() interface{} {
+func (t *Tweets) Pop() any {
 	old := *t
 	l := len(old)
 	x := old[l-1]
@@ -53,7 +53,7 @@ func Constructor355() Twitter {
 	}
 }
 
-func (this *Twitter) PostTweet(userId int, tweetId int) {
+func (this *Twitter) PostTweet(userId, tweetId int) {
 	if _, ok := this.userTweets[userId]; !ok {
 		this.userTweets[userId] = make([]Tweet, 0)
 	}
@@ -92,14 +92,14 @@ func (this *Twitter) GetNewsFeed(userId int) []int {
 	return tids
 }
 
-func (this *Twitter) Follow(followerId int, followeeId int) {
+func (this *Twitter) Follow(followerId, followeeId int) {
 	if _, ok := this.following[followerId]; !ok {
 		this.following[followerId] = make(map[int]struct{})
 	}
 	this.following[followerId][followeeId] = struct{}{}
 }
 
-func (this *Twitter) Unfollow(followerId int, followeeId int) {
+func (this *Twitter) Unfollow(followerId, followeeId int) {
 	if v, ok := this.following[followerId]; ok {
 		delete(v, followeeId)
 		this.following[followerId] = v

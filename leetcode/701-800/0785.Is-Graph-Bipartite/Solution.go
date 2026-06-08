@@ -10,6 +10,7 @@ func (u *unionFind785) findFather(x int) int {
 	}
 	return u.father[x]
 }
+
 func (u *unionFind785) union(x, y int) {
 	fx := u.findFather(x)
 	fy := u.findFather(y)
@@ -19,6 +20,7 @@ func (u *unionFind785) union(x, y int) {
 		u.father[x] = fy
 	}
 }
+
 func Solution(graph [][]int) bool {
 	n := len(graph)
 

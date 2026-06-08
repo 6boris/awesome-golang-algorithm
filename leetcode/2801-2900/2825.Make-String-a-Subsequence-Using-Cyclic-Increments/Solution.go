@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(str1 string, str2 string) bool {
+func Solution(str1, str2 string) bool {
 	if len(str2) > len(str1) {
 		return false
 	}

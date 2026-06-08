@@ -1,7 +1,7 @@
 package Solution
 
 func Solution(head *ListNode, k int) *ListNode {
-	if nil == head || 0 == k {
+	if nil == head || k == 0 {
 		return head
 	}
 	head, length := cycleList(head)
@@ -24,28 +24,4 @@ func cycleList(l *ListNode) (*ListNode, int) {
 	}
 	l.Next = head
 	return head, length
-}
-
-func rotateRight(head *ListNode, k int) *ListNode {
-	pointer := head
-	count := 1
-	if head == nil || head.Next == nil {
-		return head
-	}
-	for pointer != nil {
-		if pointer.Next == nil {
-			pointer.Next = head
-			break
-		}
-		pointer = pointer.Next
-		count++
-	}
-	rem := count - k%count
-	for rem > 0 {
-		pointer = pointer.Next
-		rem--
-	}
-	ans := pointer.Next
-	pointer.Next = nil
-	return ans
 }

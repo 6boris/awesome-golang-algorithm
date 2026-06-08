@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(s1 string, s2 string) int {
+func Solution(s1, s2 string) int {
 	l1, l2 := len(s1), len(s2)
 	dp := make([][]int, l1+1)
 	for i := 0; i <= l1; i++ {

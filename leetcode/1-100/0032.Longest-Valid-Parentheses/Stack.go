@@ -8,18 +8,18 @@ type Stack struct {
 	data list.List
 }
 
-//	入栈
-func (s *Stack) Push(data interface{}) {
+// 入栈
+func (s *Stack) Push(data any) {
 	s.data.PushBack(data)
 }
 
-func (s *Stack) Pop() interface{} {
+func (s *Stack) Pop() any {
 	data := s.data.Back().Value
 	s.data.Remove(s.data.Back())
 	return data
 }
 
-func (s *Stack) Top() interface{} {
+func (s *Stack) Top() any {
 	return s.data.Back().Value
 }
 
@@ -28,10 +28,7 @@ func (s *Stack) Len() int {
 }
 
 func (s *Stack) IsEmpty() bool {
-	if s.data.Len() == 0 {
-		return true
-	}
-	return false
+	return s.data.Len() == 0
 }
 
 func NewStack() {

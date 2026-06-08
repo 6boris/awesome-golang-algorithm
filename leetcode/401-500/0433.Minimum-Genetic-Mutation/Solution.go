@@ -5,7 +5,7 @@ type Step433 struct {
 	step int
 }
 
-func Solution(startGene string, endGene string, bank []string) int {
+func Solution(startGene, endGene string, bank []string) int {
 	index := 0
 	lb := len(bank)
 	for ; index < lb; index++ {
@@ -52,7 +52,7 @@ func Solution(startGene string, endGene string, bank []string) int {
 		{startGene, 0},
 	}
 	used := map[string]struct{}{
-		startGene: struct{}{},
+		startGene: {},
 	}
 
 	for len(queue) > 0 {

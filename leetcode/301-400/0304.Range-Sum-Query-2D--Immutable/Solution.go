@@ -14,7 +14,7 @@ func Constructor(matrix [][]int) NumMatrix {
 	return NumMatrix{matrix: matrix}
 }
 
-func (this *NumMatrix) SumRegion(row1 int, col1 int, row2 int, col2 int) int {
+func (this *NumMatrix) SumRegion(row1, col1, row2, col2 int) int {
 	ans := 0
 	for row := row1; row <= row2; row++ {
 		ans += this.matrix[row][col2]

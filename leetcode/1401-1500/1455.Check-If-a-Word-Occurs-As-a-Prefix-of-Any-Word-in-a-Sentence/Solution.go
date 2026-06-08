@@ -29,7 +29,7 @@ func (tree *trie1455) search1455(word string) int {
 	return cur.end
 }
 
-func Solution(sentence string, searchWord string) int {
+func Solution(sentence, searchWord string) int {
 	tree := &trie1455{end: -1}
 	for i, w := range strings.Split(sentence, " ") {
 		tree.insert1455(w, i+1)

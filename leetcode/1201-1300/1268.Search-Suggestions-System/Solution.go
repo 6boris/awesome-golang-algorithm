@@ -32,6 +32,7 @@ func prefixNode(root *trieNode1268, prefix string) *trieNode1268 {
 	}
 	return w
 }
+
 func searchWords(root *trieNode1268, base string, count *int, res *[]string) {
 	if *count == 0 {
 		return
@@ -47,6 +48,7 @@ func searchWords(root *trieNode1268, base string, count *int, res *[]string) {
 		}
 	}
 }
+
 func Solution(products []string, searchWord string) [][]string {
 	l := len(searchWord)
 	root := &trieNode1268{end: false, child: [26]*trieNode1268{}}

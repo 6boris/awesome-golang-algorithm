@@ -32,11 +32,11 @@ func (npl *nodePointerList) Swap(i, j int) {
 	(*npl)[i], (*npl)[j] = (*npl)[j], (*npl)[i]
 }
 
-func (npl *nodePointerList) Push(x interface{}) {
+func (npl *nodePointerList) Push(x any) {
 	*npl = append(*npl, x.(nodePointer))
 }
 
-func (npl *nodePointerList) Pop() interface{} {
+func (npl *nodePointerList) Pop() any {
 	old := *npl
 	n := len(old)
 	x := old[n-1]
@@ -55,7 +55,7 @@ func Solution(root *TreeNode) [][]int {
 		columns[idx] = &nodePointerList{}
 	}
 	var inOrder func(*TreeNode, int, int)
-	inOrder = func(root *TreeNode, row int, col int) {
+	inOrder = func(root *TreeNode, row, col int) {
 		if root.Left != nil {
 			inOrder(root.Left, row+1, col-1)
 		}

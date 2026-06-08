@@ -2,7 +2,7 @@ package Solution
 
 import "sort"
 
-func Solution(arr1 []int, arr2 []int, d int) int {
+func Solution(arr1, arr2 []int, d int) int {
 	sort.Ints(arr2)
 	c := 0
 	for _, v1 := range arr1 {

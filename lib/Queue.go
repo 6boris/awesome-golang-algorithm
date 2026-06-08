@@ -20,12 +20,12 @@ func (q Queue) Swap(i, j int) {
 	q[i], q[j] = q[j], q[i]
 }
 
-func (q *Queue) Push(x interface{}) {
+func (q *Queue) Push(x any) {
 	item := x.(*ListNode)
 	*q = append(*q, item)
 }
 
-func (q *Queue) Pop() interface{} {
+func (q *Queue) Pop() any {
 	old := *q
 	n := len(old)
 	item := old[n-1]

@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(nums []int, pattern []int) int {
+func Solution(nums, pattern []int) int {
 	var ans int
 	m := len(pattern)
 	n := len(nums)

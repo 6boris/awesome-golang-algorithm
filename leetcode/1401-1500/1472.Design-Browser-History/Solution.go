@@ -39,7 +39,7 @@ func (this *BrowserHistory) Back(steps int) string {
 }
 
 func (this *BrowserHistory) Forward(steps int) string {
-	//a,b,c
+	// a,b,c
 	this.index += steps
 	if this.index >= this.length {
 		this.index = this.length - 1

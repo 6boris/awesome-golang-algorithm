@@ -1,7 +1,6 @@
 package Solution
 
 func Solution(digits []int) []int {
-
 	bucket := make([]int, 10)
 
 	for _, i := range digits {

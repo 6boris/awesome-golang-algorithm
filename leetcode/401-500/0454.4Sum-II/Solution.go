@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(nums1 []int, nums2 []int, nums3 []int, nums4 []int) int {
+func Solution(nums1, nums2, nums3, nums4 []int) int {
 	l := len(nums1)
 	cache := make(map[int]int)
 	for i := 0; i < l; i++ {

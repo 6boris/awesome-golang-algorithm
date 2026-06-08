@@ -18,11 +18,11 @@ func (h *heap1738) Less(i, j int) bool {
 	return (*h)[i] < (*h)[j]
 }
 
-func (h *heap1738) Push(x interface{}) {
+func (h *heap1738) Push(x any) {
 	*h = append(*h, x.(int))
 }
 
-func (h *heap1738) Pop() interface{} {
+func (h *heap1738) Pop() any {
 	old := *h
 	l := len(old)
 	x := old[l-1]

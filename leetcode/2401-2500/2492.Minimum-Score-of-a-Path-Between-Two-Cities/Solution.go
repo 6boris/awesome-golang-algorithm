@@ -19,7 +19,6 @@ func Solution(n int, roads [][]int) int {
 	var dfs func(int)
 	visited := make(map[string]struct{})
 	dfs = func(city int) {
-
 		for to, distnace := range edges[city] {
 			key := fmt.Sprintf("%d-%d", city, to)
 			if _, ok := visited[key]; ok {

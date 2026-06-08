@@ -17,11 +17,10 @@ func Solution(nums []int) []int {
 	stack[0] = nums[0]
 	index := 0
 	for i := 1; i < len(nums); i++ {
-		g := gcd2197(stack[index], nums[i])
 		// 如果可以一只gcd下去，那就一只gcd2197
 		cmp := nums[i]
 		for ; index >= 0; index-- {
-			g = gcd2197(stack[index], cmp)
+			g := gcd2197(stack[index], cmp)
 			if g == 1 {
 				break
 			}

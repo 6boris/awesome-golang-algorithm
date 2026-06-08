@@ -20,8 +20,10 @@ func TestSolution(t *testing.T) {
 			{'a', 'a', 'a', 'a'},
 		}, true},
 		{"TestCase2", [][]byte{
-			{'c', 'c', 'c', 'a'}, {'c', 'd', 'c', 'c'},
-			{'c', 'c', 'e', 'c'}, {'f', 'c', 'c', 'c'},
+			{'c', 'c', 'c', 'a'},
+			{'c', 'd', 'c', 'c'},
+			{'c', 'c', 'e', 'c'},
+			{'f', 'c', 'c', 'c'},
 		}, true},
 		{"TestCase1", [][]byte{
 			{'a', 'b', 'b'}, {'b', 'z', 'b'}, {'b', 'b', 'a'},

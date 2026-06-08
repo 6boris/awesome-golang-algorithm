@@ -16,11 +16,11 @@ func (s *stoneList) Swap(i, j int) {
 	(*s)[i], (*s)[j] = (*s)[j], (*s)[i]
 }
 
-func (s *stoneList) Push(x interface{}) {
+func (s *stoneList) Push(x any) {
 	*s = append(*s, x.(int))
 }
 
-func (s *stoneList) Pop() interface{} {
+func (s *stoneList) Pop() any {
 	old := *s
 	l := len(old)
 	x := old[l-1]

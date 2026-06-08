@@ -11,12 +11,12 @@ type TreeNode struct {
 	Val         int
 	Left, Right *TreeNode
 }
-type Codec struct {
-}
+type Codec struct{}
 
 func Constructor() Codec {
 	return Codec{}
 }
+
 func (this *Codec) preOrder(root *TreeNode) []int {
 	if root == nil {
 		return nil
@@ -44,14 +44,14 @@ func (this *Codec) serialize(root *TreeNode) string {
 		if i != 0 {
 			buf.WriteByte(',')
 		}
-		buf.WriteString(fmt.Sprintf("%d", pre[i]))
+		fmt.Fprintf(&buf, "%d", pre[i])
 	}
 	buf.WriteByte('#')
 	for i := 0; i < len(dst); i++ {
 		if i != 0 {
 			buf.WriteByte(',')
 		}
-		buf.WriteString(fmt.Sprintf("%d", dst[i]))
+		fmt.Fprintf(&buf, "%d", dst[i])
 	}
 	return buf.String()
 }

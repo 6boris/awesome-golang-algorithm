@@ -28,7 +28,7 @@ func (this *RLEIterator) Next(n int) int {
 	return this.source[this.index+1]
 }
 
-func Solution(encodings []int, input []int) []int {
+func Solution(encodings, input []int) []int {
 	c := Constructor900(encodings)
 	ans := make([]int, len(input))
 	for i, n := range input {
