@@ -43,5 +43,4 @@ func Solution2(s string) int {
 		return case2
 	}
 	return case1
-
 }

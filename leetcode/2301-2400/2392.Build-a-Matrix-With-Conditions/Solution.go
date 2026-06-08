@@ -43,7 +43,7 @@ func sortConditions(k int, conditions [][]int) (map[int]int, bool) {
 	return pos, true
 }
 
-func Solution(k int, rowConditions [][]int, colConditions [][]int) [][]int {
+func Solution(k int, rowConditions, colConditions [][]int) [][]int {
 	ans := make([][]int, k)
 	for i := 0; i < k; i++ {
 		ans[i] = make([]int, k)

@@ -5,7 +5,7 @@ type ListNode struct {
 	Next *ListNode
 }
 
-func Solution(m int, n int, head *ListNode) [][]int {
+func Solution(m, n int, head *ListNode) [][]int {
 	ans := make([][]int, m)
 	for i := range m {
 		ans[i] = make([]int, n)

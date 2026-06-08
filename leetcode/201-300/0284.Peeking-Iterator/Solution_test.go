@@ -12,9 +12,9 @@ func TestSolution(t *testing.T) {
 		name       string
 		inputs     *Iterator
 		operations []string
-		expect     []interface{}
+		expect     []any
 	}{
-		{"TestCase1", &Iterator{data: []int{1, 2, 3}}, []string{"next", "peek", "next", "next", "hasNext"}, []interface{}{1, 2, 2, 3, false}},
+		{"TestCase1", &Iterator{data: []int{1, 2, 3}}, []string{"next", "peek", "next", "next", "hasNext"}, []any{1, 2, 2, 3, false}},
 	}
 
 	//	开始测试

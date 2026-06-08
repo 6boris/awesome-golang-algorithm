@@ -5,7 +5,7 @@ type ListNode struct {
 	Next *ListNode
 }
 
-//	递归写法
+// 递归写法
 func reversePrint(head *ListNode) []int {
 	ans := make([]int, 0)
 	if head == nil {
@@ -16,12 +16,13 @@ func reversePrint(head *ListNode) []int {
 	return ans
 }
 
-//	反转琏表
+// 反转琏表
 func reversePrint2(head *ListNode) []int {
 	if head == nil {
 		return []int{}
 	}
-	pre, cur, next, ans := &ListNode{}, head, head.Next, []int{}
+	pre, cur, ans := &ListNode{}, head, []int{}
+	var next *ListNode
 	for cur != nil {
 		next = cur.Next
 		cur.Next = pre

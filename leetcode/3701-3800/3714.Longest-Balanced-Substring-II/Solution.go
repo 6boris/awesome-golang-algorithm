@@ -10,9 +10,10 @@ func longestPairBalanced(s string, x, y, z byte) int {
 			xCount, yCount = 0, 0
 			continue
 		}
-		if s[i] == x {
+		switch s[i] {
+		case x:
 			xCount++
-		} else if s[i] == y {
+		case y:
 			yCount++
 		}
 		diff := xCount - yCount

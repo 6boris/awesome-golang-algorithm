@@ -2,7 +2,7 @@ package Solution
 
 import "sort"
 
-func Solution(queries []string, words []string) []int {
+func Solution(queries, words []string) []int {
 	wordsFreq := make([]int, 0)
 	for _, word := range words {
 		wordsFreq = append(wordsFreq, calculateFrequency(word))

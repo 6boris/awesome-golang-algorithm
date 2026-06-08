@@ -2,7 +2,7 @@ package Solution
 
 import "sort"
 
-func Solution(order string, str string) string {
+func Solution(order, str string) string {
 	mapper := make(map[byte]int)
 	for i := range order {
 		mapper[order[i]] = i - 26

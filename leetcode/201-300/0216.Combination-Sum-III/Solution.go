@@ -1,11 +1,11 @@
 package Solution
 
-func combinationSum3(k int, n int) (result [][]int) {
+func combinationSum3(k, n int) (result [][]int) {
 	dfs(&result, make([]int, 0), n, 1, k)
-	return
+	return result
 }
 
-func dfs(result *[][]int, comb []int, remain int, num int, length int) {
+func dfs(result *[][]int, comb []int, remain, num, length int) {
 	if remain < 0 || len(comb) > length {
 		return
 	}

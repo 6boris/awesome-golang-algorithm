@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(eventTime int, k int, startTime []int, endTime []int) int {
+func Solution(eventTime, k int, startTime, endTime []int) int {
 	n := len(startTime)
 	res := 0
 	sum := make([]int, n+1)

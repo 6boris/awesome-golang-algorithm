@@ -34,7 +34,7 @@ func GetContributorString() string {
 	return str
 }
 
-//	get the josnmarshal json
+// get the josnmarshal json
 func GetContributorJosnMarshal(prefix, indent string) string {
 	contributors := []Contributor{}
 
@@ -77,6 +77,8 @@ func GenerateContributorTemplete() {
 	if err != nil {
 		log.Printf("%s", err)
 	}
-	err = tmpl.Execute(&tmpRes, contributors)
-	fmt.Println(string(tmpRes.Bytes()))
+	if err = tmpl.Execute(&tmpRes, contributors); err != nil {
+		log.Printf("%s", err)
+	}
+	fmt.Println(tmpRes.String())
 }

@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(A []int, B []int) []int {
+func Solution(A, B []int) []int {
 	d := (sum(A) - sum(B)) / 2
 	hash := make(map[int]struct{}, len(A))
 	for _, val := range A {

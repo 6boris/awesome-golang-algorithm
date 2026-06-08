@@ -19,5 +19,4 @@ func Solution(n int) string {
 		result[s], result[e] = result[e], result[s]
 	}
 	return string(result)
-
 }

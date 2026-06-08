@@ -15,7 +15,6 @@ func dfs3372(adj map[int][]int, start, parent, limit int) int {
 		cnt += dfs3372(adj, rel, start, limit-1)
 	}
 	return cnt
-
 }
 
 func calDistance(adj map[int][]int, n, limit int) []int {
@@ -26,7 +25,7 @@ func calDistance(adj map[int][]int, n, limit int) []int {
 	return distance
 }
 
-func Solution(edges1 [][]int, edges2 [][]int, k int) []int {
+func Solution(edges1, edges2 [][]int, k int) []int {
 	n, m := 0, 0
 	for _, e := range edges1 {
 		n = max(n, e[0], e[1])

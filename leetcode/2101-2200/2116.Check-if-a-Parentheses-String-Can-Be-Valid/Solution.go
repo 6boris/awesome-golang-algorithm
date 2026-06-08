@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(s string, locked string) bool {
+func Solution(s, locked string) bool {
 	l := len(s)
 	if l&1 == 1 {
 		return false

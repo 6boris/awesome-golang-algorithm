@@ -15,6 +15,7 @@ func preorderTraversal_1(root *TreeNode) []int {
 	}
 	return ans
 }
+
 func preorderTraversal_2(root *TreeNode) []int {
 	ans, stk := make([]int, 0), []*TreeNode{}
 	node := root

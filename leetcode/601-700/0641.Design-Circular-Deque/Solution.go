@@ -46,7 +46,6 @@ func (this *MyCircularDeque) DeleteLast() bool {
 	head := this.list.Back()
 	this.list.Remove(head)
 	return true
-
 }
 
 func (this *MyCircularDeque) GetFront() int {
@@ -61,7 +60,6 @@ func (this *MyCircularDeque) GetRear() int {
 		return -1
 	}
 	return this.list.Back().Value.(int)
-
 }
 
 func (this *MyCircularDeque) IsEmpty() bool {

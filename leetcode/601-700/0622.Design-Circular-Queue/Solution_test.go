@@ -14,12 +14,21 @@ func TestSolution(t *testing.T) {
 		opts   []opt
 		expect []any
 	}{
-		{"TestCase1", 3, []opt{
-			{"en", 1}, {"en", 2}, {"en", 3},
-			{"en", 4}, {"re", 0}, {"", 0},
-			{"de", 0}, {"en", 4}, {"re", 0},
+		{
+			"TestCase1", 3,
+			[]opt{
+				{"en", 1},
+				{"en", 2},
+				{"en", 3},
+				{"en", 4},
+				{"re", 0},
+				{"", 0},
+				{"de", 0},
+				{"en", 4},
+				{"re", 0},
+			},
+			[]any{true, true, true, false, 3, true, true, true, 4},
 		},
-			[]any{true, true, true, false, 3, true, true, true, 4}},
 	}
 
 	//	开始测试

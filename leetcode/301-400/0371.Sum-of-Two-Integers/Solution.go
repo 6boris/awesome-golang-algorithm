@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(a int, b int) int {
+func Solution(a, b int) int {
 	for b != 0 {
 		carry := (a & b) << 1
 		a = a ^ b

@@ -15,7 +15,15 @@ func TestSolution(t *testing.T) {
 		word1, word2       string
 		expect             []any
 	}{
-		{"TestCase1", []byte{'a', 'b', 'c', 'd'}, []string{"ei", "zf", "ei", "am"}, []string{"abcd", "acbd", "adbc", "badc", "dacb", "cadb", "cbda", "abad"}, "abcd", "eizfeiam", []any{"eizfeiam", 2}},
+		{
+			"TestCase1",
+			[]byte{'a', 'b', 'c', 'd'},
+			[]string{"ei", "zf", "ei", "am"},
+			[]string{"abcd", "acbd", "adbc", "badc", "dacb", "cadb", "cbda", "abad"},
+			"abcd",
+			"eizfeiam",
+			[]any{"eizfeiam", 2},
+		},
 	}
 
 	//	开始测试

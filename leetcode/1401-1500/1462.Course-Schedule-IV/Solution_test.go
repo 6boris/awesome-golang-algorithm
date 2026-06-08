@@ -9,9 +9,9 @@ import (
 func TestSolution(t *testing.T) {
 	//	测试用例
 	cases := []struct {
-		name                   string
-		numCourses             int
-		prerequisties, queries [][]int
+		name                  string
+		numCourses            int
+		prerequisite, queries [][]int
 
 		expect []bool
 	}{
@@ -23,10 +23,10 @@ func TestSolution(t *testing.T) {
 	//	开始测试
 	for i, c := range cases {
 		t.Run(c.name+" "+strconv.Itoa(i), func(t *testing.T) {
-			got := Solution(c.numCourses, c.prerequisties, c.queries)
+			got := Solution(c.numCourses, c.prerequisite, c.queries)
 			if !reflect.DeepEqual(got, c.expect) {
 				t.Fatalf("expected: %v, but got: %v, with inputs: %v %v %v",
-					c.expect, got, c.numCourses, c.prerequisties, c.queries)
+					c.expect, got, c.numCourses, c.prerequisite, c.queries)
 			}
 		})
 	}

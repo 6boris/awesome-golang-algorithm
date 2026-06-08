@@ -28,13 +28,13 @@ func findAns(gcdArray []gcdItem, used []bool, start, index, sum int, ans *int) {
 	}
 	findAns(gcdArray, used, start+1, index, sum, ans)
 	x := gcdArray[start]
-	if !(used[x.i] || used[x.j]) {
+	if !used[x.i] && !used[x.j] {
 		used[x.i], used[x.j] = true, true
 		findAns(gcdArray, used, start+1, index-1, sum+index*x.gcd, ans)
 		used[x.i], used[x.j] = false, false
 	}
-
 }
+
 func Solution(nums []int) int {
 	ans := 0
 	l := len(nums)

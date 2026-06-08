@@ -2,7 +2,7 @@ package Solution
 
 import "sort"
 
-func Solution(fruits [][]int, startPos int, k int) int {
+func Solution(fruits [][]int, startPos, k int) int {
 	l := len(fruits)
 	index := sort.Search(l, func(i int) bool {
 		return fruits[i][0] >= startPos
@@ -50,7 +50,6 @@ func Solution(fruits [][]int, startPos int, k int) int {
 			return fruits[index+j][0]-fruits[i][0] > k-dis
 		}); x != 0 {
 			ans = max(ans, left+sum[index+x-1])
-
 		}
 	}
 	return ans

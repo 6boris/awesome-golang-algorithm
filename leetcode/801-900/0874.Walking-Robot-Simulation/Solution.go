@@ -71,8 +71,7 @@ func Solution(commands []int, obstacles [][]int) int {
 		sort.Ints(ewIn[k])
 	}
 
-	var check func(x, y, tx, ty int, cur byte) (int, int)
-	check = func(x, y, tx, ty int, cur byte) (int, int) {
+	var check func(x, y, tx, ty int, cur byte) (int, int) = func(x, y, tx, ty int, cur byte) (int, int) {
 		if cur == 'n' || cur == 's' {
 			v, ok := snIn[x]
 			if !ok {

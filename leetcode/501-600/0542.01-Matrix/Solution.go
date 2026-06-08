@@ -15,7 +15,7 @@ func Solution(mat [][]int) [][]int {
 			mat[r][c] = math.MaxInt
 		}
 	}
-	var dirs = [][]int{
+	dirs := [][]int{
 		{1, 0}, {0, 1}, {-1, 0}, {0, -1},
 	}
 	for len(zeroPoints) > 0 {
@@ -33,5 +33,4 @@ func Solution(mat [][]int) [][]int {
 		zeroPoints = next
 	}
 	return mat
-
 }

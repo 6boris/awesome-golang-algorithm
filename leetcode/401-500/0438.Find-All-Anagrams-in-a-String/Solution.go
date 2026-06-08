@@ -1,14 +1,13 @@
 package Solution
 
-func Solution(s string, p string) []int {
+func Solution(s, p string) []int {
 	ls, lp := len(s), len(p)
 	ans := make([]int, 0)
 	pattern := make([]int, 26)
 	for _, b := range p {
 		pattern[b-'a']++
 	}
-	var equal func([]int, []int) bool
-	equal = func(a, b []int) bool {
+	var equal func([]int, []int) bool = func(a, b []int) bool {
 		for i := 0; i < 26; i++ {
 			if a[i] != b[i] {
 				return false

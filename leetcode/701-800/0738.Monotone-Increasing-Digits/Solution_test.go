@@ -36,5 +36,4 @@ func BenchmarkSolution(b *testing.B) {
 
 // 使用案列
 func ExampleSolution() {
-
 }

@@ -2,7 +2,7 @@ package Solution
 
 import "sort"
 
-func Solution(nums1 []int, nums2 []int) []int {
+func Solution(nums1, nums2 []int) []int {
 	indies := make([]int, len(nums2))
 	res := make([]int, len(nums2))
 	for i := range nums2 {

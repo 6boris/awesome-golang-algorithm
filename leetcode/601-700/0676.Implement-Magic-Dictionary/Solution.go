@@ -34,7 +34,7 @@ func (root *MagicDictionary) BuildDict(dict []string) {
 }
 
 // the second parameter is mismatched character, the third one is word length, and the fourth is the word access index
-func (root *MagicDictionary) SearchHelper(word string, miss int, wl int, ind int) bool {
+func (root *MagicDictionary) SearchHelper(word string, miss, wl, ind int) bool {
 	// if mismatch is more than 1
 	if miss > 1 {
 		return false

@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(stations []int, r int, k int) int64 {
+func Solution(stations []int, r, k int) int64 {
 	n := len(stations)
 	cnt := make([]int64, n+1)
 	for i := 0; i < n; i++ {
@@ -34,7 +34,7 @@ func Solution(stations []int, r int, k int) int64 {
 	return res
 }
 
-func check(cnt []int64, val int64, r int, k int) bool {
+func check(cnt []int64, val int64, r, k int) bool {
 	n := len(cnt) - 1
 	diff := make([]int64, len(cnt))
 	copy(diff, cnt)

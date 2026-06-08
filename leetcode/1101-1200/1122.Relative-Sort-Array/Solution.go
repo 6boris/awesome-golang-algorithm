@@ -2,7 +2,7 @@ package Solution
 
 import "sort"
 
-func Solution(arr1 []int, arr2 []int) []int {
+func Solution(arr1, arr2 []int) []int {
 	hash := make(map[int]int)
 	for _, val := range arr1 {
 		hash[val]++

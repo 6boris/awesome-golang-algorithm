@@ -4,7 +4,7 @@ import (
 	"strings"
 )
 
-func canConstruct(ransomNote string, magazine string) bool {
+func canConstruct(ransomNote, magazine string) bool {
 	for _, c := range ransomNote {
 		idx := strings.IndexRune(magazine, c)
 		if idx > -1 {
@@ -16,7 +16,7 @@ func canConstruct(ransomNote string, magazine string) bool {
 	return true
 }
 
-func canConstruct2(ransomNote string, magazine string) bool {
+func canConstruct2(ransomNote, magazine string) bool {
 	m := make(map[rune]int)
 
 	for _, v := range magazine {

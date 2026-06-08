@@ -19,10 +19,3 @@ func reverseList2(head *ListNode) *ListNode {
 	head.Next = p
 	return p
 }
-
-func min[T ~int | ~float64](x, y T) T {
-	if x < y {
-		return x
-	}
-	return y
-}

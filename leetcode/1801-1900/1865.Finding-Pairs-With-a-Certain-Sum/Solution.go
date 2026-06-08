@@ -5,7 +5,7 @@ type FindSumPairs struct {
 	n2     []int
 }
 
-func Constructor(nums1 []int, nums2 []int) FindSumPairs {
+func Constructor(nums1, nums2 []int) FindSumPairs {
 	f := FindSumPairs{
 		c1: map[int]int{}, c2: map[int]int{}, n2: nums2,
 	}
@@ -18,7 +18,7 @@ func Constructor(nums1 []int, nums2 []int) FindSumPairs {
 	return f
 }
 
-func (this *FindSumPairs) Add(index int, val int) {
+func (this *FindSumPairs) Add(index, val int) {
 	source := this.n2[index]
 	this.n2[index] += val
 	this.c2[source]--
@@ -54,5 +54,4 @@ func Solution(nums1, nums2 []int, ops []op) []int {
 		ans = append(ans, c.Count(o.a))
 	}
 	return ans
-
 }

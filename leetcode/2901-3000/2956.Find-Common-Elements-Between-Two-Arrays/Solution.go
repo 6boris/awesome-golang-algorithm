@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(nums1 []int, nums2 []int) []int {
+func Solution(nums1, nums2 []int) []int {
 	m1 := make(map[int]struct{})
 	for _, n := range nums1 {
 		m1[n] = struct{}{}

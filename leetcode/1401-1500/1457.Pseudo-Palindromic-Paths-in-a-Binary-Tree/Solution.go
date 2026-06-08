@@ -41,5 +41,4 @@ func pseudoPalindromic1457(root *TreeNode, path []bool, ans *int) {
 	}
 
 	path[root.Val-1] = !path[root.Val-1]
-
 }

@@ -21,7 +21,7 @@ func Constructor(memoryLimit int) Router {
 	}
 }
 
-func (this *Router) AddPacket(source int, destination int, timestamp int) bool {
+func (this *Router) AddPacket(source, destination, timestamp int) bool {
 	key := [3]int{source, destination, timestamp}
 	if _, ok := this.in[key]; ok {
 		return false
@@ -55,7 +55,7 @@ func (this *Router) ForwardPacket() []int {
 	return first[:]
 }
 
-func (this *Router) GetCount(destination int, startTime int, endTime int) int {
+func (this *Router) GetCount(destination, startTime, endTime int) int {
 	sources, ok := this.dest[destination]
 	if !ok {
 		return 0

@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(s1 string, s2 string) bool {
+func Solution(s1, s2 string) bool {
 	a := make([]int, 26)
 	cache := make(map[string]bool)
 	return isScramble87([]byte(s1), []byte(s2), cache, chars1(a))

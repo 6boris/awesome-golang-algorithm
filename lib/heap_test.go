@@ -25,9 +25,9 @@ func TestIntHeap_Less(t *testing.T) {
 	// fmt.Printf("minimum: %d\n", (*h))
 	// fmt.Printf("minimum: %d\n", (*h)[2])
 
-	//h := &IntMaxHeap{[5]int{}...}
-	//heap.Init(h)
-	//n := 0
+	// h := &IntMaxHeap{[5]int{}...}
+	// heap.Init(h)
+	// n := 0
 	// for _,v := range nums {
 	//     if n <k {
 

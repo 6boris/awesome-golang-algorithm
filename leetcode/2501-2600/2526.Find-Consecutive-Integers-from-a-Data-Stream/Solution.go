@@ -4,7 +4,7 @@ type DataStream struct {
 	value, k, cnt int
 }
 
-func Constructor(value int, k int) DataStream {
+func Constructor(value, k int) DataStream {
 	return DataStream{
 		value: value,
 		k:     k,

@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(points [][]int, queries [][]int) []int {
+func Solution(points, queries [][]int) []int {
 	ans := make([]int, len(queries))
 	for idx, q := range queries {
 		distance := q[2] * q[2]

@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(nums1 []int, nums2 []int) int64 {
+func Solution(nums1, nums2 []int) int64 {
 	a, b := 0, 0
 	a0, b0 := 0, 0
 	for _, n := range nums1 {

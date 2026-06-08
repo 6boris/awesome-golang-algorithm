@@ -13,7 +13,20 @@ func TestSolution(t *testing.T) {
 		inputs []operation
 		expect []int
 	}{
-		{"TestCase1", []operation{{name: "put", k: 1, v: 1}, {name: "put", k: 2, v: 2}, {name: "get", k: 1}, {name: "get", k: 3}, {name: "put", k: 2, v: 1}, {name: "get", k: 2}, {name: "remove", k: 2}, {name: "get", k: 2}}, []int{1, -1, 1, -1}},
+		{
+			"TestCase1",
+			[]operation{
+				{name: "put", k: 1, v: 1},
+				{name: "put", k: 2, v: 2},
+				{name: "get", k: 1},
+				{name: "get", k: 3},
+				{name: "put", k: 2, v: 1},
+				{name: "get", k: 2},
+				{name: "remove", k: 2},
+				{name: "get", k: 2},
+			},
+			[]int{1, -1, 1, -1},
+		},
 	}
 
 	//	开始测试

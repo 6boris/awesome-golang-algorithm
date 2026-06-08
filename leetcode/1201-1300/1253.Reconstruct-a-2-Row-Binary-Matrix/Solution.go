@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(upper int, lower int, colsum []int) [][]int {
+func Solution(upper, lower int, colsum []int) [][]int {
 	res := make([][]int, 2)
 	l := len(colsum)
 	sum := 0

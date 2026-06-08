@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(gas []int, cost []int) int {
+func Solution(gas, cost []int) int {
 	l := len(gas)
 	tank, total, target := 0, 0, 0
 	for i := 0; i < l; i++ {

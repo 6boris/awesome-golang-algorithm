@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(s string, a int, b int) string {
+func Solution(s string, a, b int) string {
 	n := len(s)
 	vis := make([]bool, n)
 	res := s

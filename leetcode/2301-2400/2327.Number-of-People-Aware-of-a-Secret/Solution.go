@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(n int, delay int, forget int) int {
+func Solution(n, delay, forget int) int {
 	MOD := 1_000_000_007
 	dp := make([]int, n+forget+1)
 	inc := make([]int, n+forget+1)

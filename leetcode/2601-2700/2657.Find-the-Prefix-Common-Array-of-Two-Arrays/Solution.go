@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(A []int, B []int) []int {
+func Solution(A, B []int) []int {
 	ans := make([]int, len(A))
 	count := make([]uint8, len(A)+1)
 	for i := 0; i < len(A); i++ {

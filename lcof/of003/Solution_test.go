@@ -10,7 +10,7 @@ import (
 
 type SolutionFuncType func([]int) int
 
-//	Solution func
+// Solution func
 var SolutionFuncList = []SolutionFuncType{
 	findRepeatNumber,
 	findRepeatNumber2,

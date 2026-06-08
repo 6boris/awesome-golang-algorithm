@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(students [][]int, mentors [][]int) int {
+func Solution(students, mentors [][]int) int {
 	var (
 		dfs   func(int, []bool) int
 		match func(int, int) int

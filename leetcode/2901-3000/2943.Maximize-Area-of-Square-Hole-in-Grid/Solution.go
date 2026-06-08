@@ -2,7 +2,7 @@ package Solution
 
 import "sort"
 
-func Solution(n int, m int, hBars []int, vBars []int) int {
+func Solution(n, m int, hBars, vBars []int) int {
 	// 能相邻，就会扩大最大相邻长度
 	sort.Ints(hBars)
 	sort.Ints(vBars)

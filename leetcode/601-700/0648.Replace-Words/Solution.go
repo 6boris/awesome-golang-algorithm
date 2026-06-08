@@ -39,7 +39,6 @@ func (t *trieNode648) search(word string) int {
 }
 
 func Solution(dictionary []string, sentence string) string {
-
 	t := &trieNode648{child: [26]*trieNode648{}, end: false}
 	for _, root := range dictionary {
 		t.insert(root)

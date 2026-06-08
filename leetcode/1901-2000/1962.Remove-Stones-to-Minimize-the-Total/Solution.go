@@ -27,11 +27,11 @@ func (p *Piles) Swap(i, j int) {
 	(*p)[i], (*p)[j] = (*p)[j], (*p)[i]
 }
 
-func (p *Piles) Push(x interface{}) {
+func (p *Piles) Push(x any) {
 	*p = append(*p, x.(int))
 }
 
-func (p *Piles) Pop() interface{} {
+func (p *Piles) Pop() any {
 	old := *p
 	l := len(old)
 	x := old[l-1]

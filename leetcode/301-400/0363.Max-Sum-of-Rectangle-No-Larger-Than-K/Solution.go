@@ -25,7 +25,6 @@ func Solution(matrix [][]int, k int) int {
 						}
 					}
 				}
-
 			}
 		}
 	}

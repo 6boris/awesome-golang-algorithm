@@ -2,7 +2,7 @@ package Solution
 
 import "bytes"
 
-func Solution(key string, message string) string {
+func Solution(key, message string) string {
 	bucket := make([]uint8, 26) // space
 
 	char := 'a'

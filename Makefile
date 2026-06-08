@@ -16,6 +16,10 @@ hugo:
 	@echo start hugo
 	hugo server
 	@echo end  hugo
+lint-fix:
+	@echo start hugo
+	golangci-lint run -v --fix
+	@echo end  hugo
 deploy:
 	@echo start deploy
 	git submodule update --init --recursive 

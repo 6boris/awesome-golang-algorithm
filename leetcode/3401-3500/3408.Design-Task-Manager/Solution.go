@@ -16,6 +16,7 @@ type TaskList struct {
 func (t *TaskList) Len() int {
 	return len(t.items)
 }
+
 func (t *TaskList) Swap(i, j int) {
 	t.items[i], t.items[j] = t.items[j], t.items[i]
 	t.items[i].index = i
@@ -59,7 +60,7 @@ func Constructor(tasks [][]int) TaskManager {
 	return tm
 }
 
-func (this *TaskManager) Add(userId int, taskId int, priority int) {
+func (this *TaskManager) Add(userId, taskId, priority int) {
 	item := &task3408{
 		UserID:   userId,
 		ID:       taskId,
@@ -67,10 +68,10 @@ func (this *TaskManager) Add(userId int, taskId int, priority int) {
 	}
 	this.taskIndex[taskId] = item
 	heap.Push(this.taskHeap, item)
-	//this.taskHeap.Push(item)
+	// this.taskHeap.Push(item)
 }
 
-func (this *TaskManager) Edit(taskId int, newPriority int) {
+func (this *TaskManager) Edit(taskId, newPriority int) {
 	item := this.taskIndex[taskId]
 	item.Priority = newPriority
 	heap.Fix(this.taskHeap, item.index)

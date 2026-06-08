@@ -2,7 +2,7 @@ package Solution
 
 import "fmt"
 
-func Solution(secret string, guess string) string {
+func Solution(secret, guess string) string {
 	a, b := 0, 0
 	bucket := make([]int, 10)
 	missMatch := make([]int, 10)

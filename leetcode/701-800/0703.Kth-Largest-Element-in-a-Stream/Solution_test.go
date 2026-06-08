@@ -15,10 +15,10 @@ func TestSolution(t *testing.T) {
 	fmt.Println(kthLarges.Add(4))
 }
 
-//	压力测试
+// 压力测试
 func BenchmarkSolution(b *testing.B) {
 }
 
-//	使用案列
+// 使用案列
 func ExampleSolution() {
 }

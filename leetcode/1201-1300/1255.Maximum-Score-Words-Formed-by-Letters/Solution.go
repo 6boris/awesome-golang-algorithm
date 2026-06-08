@@ -34,7 +34,7 @@ func Solution(words []string, letters []byte, score []int) int {
 	}
 
 	ans := 0
-	search = func(index int, s int, count [26]int) {
+	search = func(index, s int, count [26]int) {
 		if index == len(restoreWords) {
 			if s > ans {
 				ans = s

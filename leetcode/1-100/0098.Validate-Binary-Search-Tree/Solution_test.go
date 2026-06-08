@@ -40,9 +40,11 @@ var cases = []Case{
 			Right: &TreeNode{
 				Val:   5,
 				Left:  &TreeNode{Val: 4},
-				Right: &TreeNode{Val: 6}},
+				Right: &TreeNode{Val: 6},
+			},
 		},
-		expect: true},
+		expect: true,
+	},
 }
 
 // TestSolution Run test case for all solutions

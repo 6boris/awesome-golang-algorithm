@@ -19,6 +19,7 @@ func (s *seats) Swap(i, j int) {
 func (s *seats) Push(x any) {
 	*s = append(*s, x.(int))
 }
+
 func (s *seats) Pop() any {
 	old := *s
 	l := len(old)

@@ -22,7 +22,7 @@ func (s *ScheduleData) Less(i, j int) bool {
 	return s.endTime[i] < s.endTime[j]
 }
 
-func Solution(startTime []int, endTime []int, profit []int) int {
+func Solution(startTime, endTime, profit []int) int {
 	l := len(profit)
 
 	sd := ScheduleData{
@@ -32,9 +32,7 @@ func Solution(startTime []int, endTime []int, profit []int) int {
 	}
 	sort.Sort(&sd)
 
-	var bsearch func(int, int) int
-
-	bsearch = func(end, target int) int {
+	var bsearch func(int, int) int = func(end, target int) int {
 		l, r := 0, end
 		ans := -1
 		for l < r {

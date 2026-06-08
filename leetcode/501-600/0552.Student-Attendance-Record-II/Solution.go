@@ -21,7 +21,7 @@ func Solution(n int) int {
 			return 0
 		}
 		if nn == 0 {
-			//放满了，
+			// 放满了，
 			return 1
 		}
 		if cache[nn][a][l] != -1 {

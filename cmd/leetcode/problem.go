@@ -2,7 +2,7 @@ package leetcode
 
 import (
 	"encoding/json"
-	"io/ioutil"
+	"io"
 	"log"
 	"net/http"
 	"strconv"
@@ -74,7 +74,7 @@ func GetProblemsInstance() []Problem {
 	}
 
 	for i := 0; i < len(leetcode.StatStatusPairs); i++ {
-		leetcode.StatStatusPairs[i].PathName = string(formatId(leetcode.StatStatusPairs[i].Stat.FrontendQuestionID)) + "." +
+		leetcode.StatStatusPairs[i].PathName = formatId(leetcode.StatStatusPairs[i].Stat.FrontendQuestionID) + "." +
 			formatName(leetcode.StatStatusPairs[i].Stat.QuestionTitle)
 	}
 
@@ -119,12 +119,13 @@ func getProblemsBuffer() []byte {
 	if err != nil {
 		log.Panicln("Lettcode Problem 接口获取失败：", err)
 	}
+	defer func() { _ = request.Body.Close() }()
 
 	if request.StatusCode != 200 {
 		log.Panicln("Lettcode Problem 接口地址不存在：", err)
 	}
 
-	body, _ := ioutil.ReadAll(request.Body)
+	body, _ := io.ReadAll(request.Body)
 	return body
 }
 
@@ -189,9 +190,6 @@ func formatName(name string) string {
 			continue
 		}
 		str = str + string(v)
-	}
-	if name[len(name)-1:] == "-" {
-		name = name[:len(name)-1]
 	}
 	return str
 }

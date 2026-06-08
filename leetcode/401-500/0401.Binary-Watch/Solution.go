@@ -3,28 +3,28 @@ package Solution
 import "fmt"
 
 /*
-func countOf1(n int) int {
-	cnt := 0
-	for n > 0 {
-		cnt++
-		n = n & (n-1)
-	}
-	return cnt
-}
-
-func gen() {
-	r := make(map[int][]string)
-	for n := 1; n < 60 ; n++ {
-		c := countOf1(n)
-		if _, ok := r[c]; !ok {
-			r[c] = make([]string, 0)
+	func countOf1(n int) int {
+		cnt := 0
+		for n > 0 {
+			cnt++
+			n = n & (n-1)
 		}
-		r[c] = append(r[c], fmt.Sprintf("%d", n))
+		return cnt
 	}
-	for k, v := range r {
-		fmt.Printf(`%d: '"%s"'`, k, strings.Join(v, `","`))
+
+	func gen() {
+		r := make(map[int][]string)
+		for n := 1; n < 60 ; n++ {
+			c := countOf1(n)
+			if _, ok := r[c]; !ok {
+				r[c] = make([]string, 0)
+			}
+			r[c] = append(r[c], fmt.Sprintf("%d", n))
+		}
+		for k, v := range r {
+			fmt.Printf(`%d: '"%s"'`, k, strings.Join(v, `","`))
+		}
 	}
-}
 */
 var (
 	hour = [4][]string{

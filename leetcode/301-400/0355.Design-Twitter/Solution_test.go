@@ -13,7 +13,19 @@ func TestSolution(t *testing.T) {
 		inputs []operation
 		expect [][]int
 	}{
-		{"TestCase1", []operation{{name: "p", userId: 1, tweetId: 5}, {name: "g", userId: 1}, {name: "f", followerId: 1, followeeId: 2}, {name: "p", userId: 2, tweetId: 6}, {name: "g", userId: 1}, {name: "u", followerId: 1, followeeId: 2}, {name: "g", userId: 1}}, [][]int{{5}, {6, 5}, []int{5}}},
+		{
+			"TestCase1",
+			[]operation{
+				{name: "p", userId: 1, tweetId: 5},
+				{name: "g", userId: 1},
+				{name: "f", followerId: 1, followeeId: 2},
+				{name: "p", userId: 2, tweetId: 6},
+				{name: "g", userId: 1},
+				{name: "u", followerId: 1, followeeId: 2},
+				{name: "g", userId: 1},
+			},
+			[][]int{{5}, {6, 5}, {5}},
+		},
 	}
 
 	//	开始测试

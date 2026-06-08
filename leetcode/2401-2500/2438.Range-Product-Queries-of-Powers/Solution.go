@@ -15,7 +15,7 @@ func construct(n int, powers [33]int) []int {
 	return set
 }
 
-func modPow(x int64, n int64, m int64) int64 {
+func modPow(x, n, m int64) int64 {
 	result := int64(1)
 	x %= m
 	for n > 0 {
@@ -28,14 +28,13 @@ func modPow(x int64, n int64, m int64) int64 {
 	return result
 }
 
-func modInverse(x int64, m int64) int64 {
+func modInverse(x, m int64) int64 {
 	return modPow(x, m-2, m)
 }
 
 const mod = 1000000007
 
 func Solution(n int, queries [][]int) []int {
-
 	powers := [33]int{}
 	powers[0] = 1
 	for i := 1; i < 33; i++ {

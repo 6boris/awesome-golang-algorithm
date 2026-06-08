@@ -2,7 +2,7 @@ package Solution
 
 import "strings"
 
-func Solution(messages []string, senders []string) string {
+func Solution(messages, senders []string) string {
 	count := make(map[string]int)
 	mc, ma := 0, ""
 	for idx, msg := range messages {

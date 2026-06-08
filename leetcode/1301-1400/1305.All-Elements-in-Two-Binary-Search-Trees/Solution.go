@@ -5,7 +5,7 @@ type TreeNode struct {
 	Left, Right *TreeNode
 }
 
-func Solution(root1 *TreeNode, root2 *TreeNode) []int {
+func Solution(root1, root2 *TreeNode) []int {
 	stack1 := make([]*TreeNode, 0)
 	stack2 := make([]*TreeNode, 0)
 

@@ -16,11 +16,11 @@ func (c *courses) Swap(i, j int) {
 	(*c)[i], (*c)[j] = (*c)[j], (*c)[i]
 }
 
-func (c *courses) Push(x interface{}) {
+func (c *courses) Push(x any) {
 	*c = append(*c, x.([2]int))
 }
 
-func (c *courses) Pop() interface{} {
+func (c *courses) Pop() any {
 	old := *c
 	l := len(old)
 	x := old[l-1]

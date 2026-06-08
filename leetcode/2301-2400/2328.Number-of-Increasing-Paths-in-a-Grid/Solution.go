@@ -6,7 +6,7 @@ func Solution(grid [][]int) int {
 	rows, cols := len(grid), len(grid[0])
 	dp := make([][]int, rows)
 	// try dfs
-	var dirs = [][]int{
+	dirs := [][]int{
 		{0, 1}, {0, -1}, {1, 0}, {-1, 0},
 	}
 	for row := 0; row < rows; row++ {

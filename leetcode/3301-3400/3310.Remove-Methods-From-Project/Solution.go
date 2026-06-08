@@ -21,7 +21,7 @@ func (u *unionFind3310) union(x, y int) {
 	}
 }
 
-func Solution(n int, k int, invocations [][]int) []int {
+func Solution(n, k int, invocations [][]int) []int {
 	u := unionFind3310{father: make([]int, n)}
 	for i := range n {
 		u.father[i] = i

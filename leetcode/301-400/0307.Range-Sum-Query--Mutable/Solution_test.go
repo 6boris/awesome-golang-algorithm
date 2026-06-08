@@ -15,13 +15,20 @@ func TestSolution(t *testing.T) {
 		optNums    [][]int
 		expect     []int
 	}{
-		{"TestCase1",
+		{
+			"TestCase1",
 			[]int{1, 3, 5},
 			[]string{"sumRange", "update", "sumRange"},
-			[][]int{{0, 2}, {1, 2}, {0, 2}}, []int{9, 8}},
-		{"TestCase2", []int{1},
+			[][]int{{0, 2}, {1, 2}, {0, 2}},
+			[]int{9, 8},
+		},
+		{
+			"TestCase2",
+			[]int{1},
 			[]string{"sumRange", "update", "sumRange"},
-			[][]int{{0, 0}, {0, 3}, {0, 0}}, []int{1, 3}},
+			[][]int{{0, 0}, {0, 3}, {0, 0}},
+			[]int{1, 3},
+		},
 	}
 
 	//	开始测试
@@ -36,10 +43,10 @@ func TestSolution(t *testing.T) {
 	}
 }
 
-//	压力测试
+// 压力测试
 func BenchmarkSolution(b *testing.B) {
 }
 
-//	使用案列
+// 使用案列
 func ExampleSolution() {
 }

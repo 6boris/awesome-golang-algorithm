@@ -26,5 +26,4 @@ func Solution(blocks string, k int) int {
 		start++
 	}
 	return ans
-
 }

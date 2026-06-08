@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func Solution(a int, b int, c int) int {
+func Solution(a, b, c int) int {
 	aStr := fmt.Sprintf("%b", a)
 	bStr := fmt.Sprintf("%b", b)
 	cStr := fmt.Sprintf("%b", c)

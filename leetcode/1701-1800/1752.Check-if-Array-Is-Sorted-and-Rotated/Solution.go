@@ -16,7 +16,7 @@ func Solution(nums []int) bool {
 		if idx == i && nums[i] > nums[0] {
 			return false
 		}
-		if i != idx && !(nums[i] >= nums[i-1] && nums[i] <= nums[0]) {
+		if i != idx && (nums[i] < nums[i-1] || nums[i] > nums[0]) {
 			return false
 		}
 	}

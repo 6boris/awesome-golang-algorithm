@@ -2,7 +2,7 @@ package Solution
 
 import "strings"
 
-func Solution(s string, part string) string {
+func Solution(s, part string) string {
 	ls := len(s)
 	lp := len(part)
 
@@ -20,7 +20,7 @@ func Solution(s string, part string) string {
 	return s
 }
 
-func Solution1(s string, part string) string {
+func Solution1(s, part string) string {
 	bs := []byte(s)
 	index := -1
 	l := len(part)

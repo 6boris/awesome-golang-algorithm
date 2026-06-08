@@ -45,6 +45,7 @@ func buildSegTree(left, right int, nums []int) *segNode {
 	}
 	return node
 }
+
 func searchSeg(root *segNode, s, e int, nums []int) int {
 	if root.l == s && root.r == e {
 		return root.m

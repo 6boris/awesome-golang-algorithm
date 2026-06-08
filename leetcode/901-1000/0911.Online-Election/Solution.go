@@ -10,7 +10,7 @@ type TopVotedCandidate struct {
 	times  []int
 }
 
-func Constructor(persons []int, times []int) TopVotedCandidate {
+func Constructor(persons, times []int) TopVotedCandidate {
 	l := len(times)
 
 	matrix := make([][]int, l)
@@ -62,7 +62,7 @@ func (this *TopVotedCandidate) Q(t int) int {
 	return this.mm[index]
 }
 
-func Solution(persons, times []int, ops []int) []int {
+func Solution(persons, times, ops []int) []int {
 	ans := make([]int, len(ops))
 	c := Constructor(persons, times)
 	for i := range ops {

@@ -17,21 +17,23 @@ func (e *eleCountList) Len() int {
 func (e *eleCountList) Less(i, j int) bool {
 	return (*e)[i].c < (*e)[j].c
 }
+
 func (e *eleCountList) Swap(i, j int) {
 	(*e)[i], (*e)[j] = (*e)[j], (*e)[i]
 }
 
-func (e *eleCountList) Push(x interface{}) {
+func (e *eleCountList) Push(x any) {
 	*e = append(*e, x.(eleCount))
 }
 
-func (e *eleCountList) Pop() interface{} {
+func (e *eleCountList) Pop() any {
 	old := *e
 	l := len(old)
 	x := old[l-1]
 	*e = old[:l-1]
 	return x
 }
+
 func Solution(arr []int, k int) int {
 	nodeCache := make(map[int]int)
 	list := eleCountList{}

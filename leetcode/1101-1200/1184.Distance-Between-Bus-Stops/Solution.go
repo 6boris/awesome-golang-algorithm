@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(distance []int, start int, destination int) int {
+func Solution(distance []int, start, destination int) int {
 	if start > destination {
 		start, destination = destination, start
 	}

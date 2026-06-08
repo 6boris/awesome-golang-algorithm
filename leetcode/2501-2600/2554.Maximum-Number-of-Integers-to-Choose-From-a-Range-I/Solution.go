@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(banned []int, n int, maxSum int) int {
+func Solution(banned []int, n, maxSum int) int {
 	sum := 0
 	bm := make(map[int]struct{})
 	for _, x := range banned {

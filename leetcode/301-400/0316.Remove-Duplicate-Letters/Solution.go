@@ -19,7 +19,7 @@ func Solution(s string) string {
 		for len(stack) > 0 {
 			l := len(stack)
 			last := stack[l-1]
-			if !(last > b && count[last-'a'] > 0) {
+			if last <= b || count[last-'a'] <= 0 {
 				break
 			}
 			visited[last-'a'] = false

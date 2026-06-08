@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(times [][]int, n int, k int) int {
+func Solution(times [][]int, n, k int) int {
 	adj := make(map[int]map[int]int)
 	for _, t := range times {
 		from, to, weigth := t[0], t[1], t[2]

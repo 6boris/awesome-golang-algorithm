@@ -12,8 +12,7 @@ func Solution(s string, k int) string {
 		}
 	}
 
-	var match func(string) bool
-	match = func(pattern string) bool {
+	var match func(string) bool = func(pattern string) bool {
 		i, c := 0, 0
 		for j := 0; j < len(s); j++ {
 			if s[j] == pattern[i] {

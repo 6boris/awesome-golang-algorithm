@@ -4,7 +4,7 @@ type windows struct {
 	start, end, sum int
 }
 
-func Solution(nums []int, firstLen int, secondLen int) int {
+func Solution(nums []int, firstLen, secondLen int) int {
 	ans := 0
 	tsum, start := 0, 0
 	firstWindows := make([]windows, 0)

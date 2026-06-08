@@ -11,6 +11,7 @@ func xor(n int) int {
 	}
 	return 0
 }
+
 func Solution(encoded []int) []int {
 	l := len(encoded)
 	toN := xor(l + 1)

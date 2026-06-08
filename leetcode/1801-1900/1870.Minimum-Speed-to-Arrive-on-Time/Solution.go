@@ -2,8 +2,7 @@ package Solution
 
 func Solution(dist []int, hour float64) int {
 	l, r := 1, 1000000001
-	var canReach func(int) bool
-	canReach = func(speed int) bool {
+	var canReach func(int) bool = func(speed int) bool {
 		cost := float64(0)
 		for idx, dis := range dist {
 			tmp := float64(dis) / float64(speed)

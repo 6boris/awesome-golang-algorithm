@@ -26,7 +26,6 @@ func kthLargest_1(root *TreeNode, k int) int {
 			ans = node.Val
 		}
 		dfs(node.Left)
-
 	}
 	dfs(root)
 	return ans

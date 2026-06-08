@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(ring string, key string) int {
+func Solution(ring, key string) int {
 	// 感觉是dfs+cache实现
 	pos := [26][]int{}
 	for i := 0; i < 26; i++ {

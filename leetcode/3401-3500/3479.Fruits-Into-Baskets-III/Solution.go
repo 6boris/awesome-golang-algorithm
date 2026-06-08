@@ -48,7 +48,7 @@ func (this *SegTree) update(p, l, r, pos, val int) {
 	this.segNode[p] = max(this.segNode[p<<1], this.segNode[p<<1|1])
 }
 
-func Solution(fruits []int, baskets []int) int {
+func Solution(fruits, baskets []int) int {
 	m := len(baskets)
 	if m == 0 {
 		return len(fruits)

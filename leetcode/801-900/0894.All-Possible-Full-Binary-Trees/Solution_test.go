@@ -14,7 +14,7 @@ func TestSolution(t *testing.T) {
 		expect []*TreeNode
 	}{
 		{"TestCase1", 5, []*TreeNode{
-			&TreeNode{
+			{
 				Val: 0,
 				Left: &TreeNode{
 					Val: 0,
@@ -25,7 +25,7 @@ func TestSolution(t *testing.T) {
 					Left:  &TreeNode{Val: 0},
 				},
 			},
-			&TreeNode{
+			{
 				Val: 0,
 				Left: &TreeNode{
 					Val:   0,
@@ -38,7 +38,7 @@ func TestSolution(t *testing.T) {
 			},
 		}},
 		{"TestCase2", 7, []*TreeNode{
-			&TreeNode{
+			{
 				Val:  0,
 				Left: &TreeNode{Val: 0},
 				Right: &TreeNode{
@@ -53,7 +53,7 @@ func TestSolution(t *testing.T) {
 					},
 				},
 			},
-			&TreeNode{
+			{
 				Val: 0,
 				Left: &TreeNode{
 					Val: 0,
@@ -68,7 +68,7 @@ func TestSolution(t *testing.T) {
 					Right: &TreeNode{Val: 0},
 				},
 			},
-			&TreeNode{
+			{
 				Val: 0,
 				Left: &TreeNode{
 					Val:   0,
@@ -81,7 +81,7 @@ func TestSolution(t *testing.T) {
 					Right: &TreeNode{Val: 0},
 				},
 			},
-			&TreeNode{
+			{
 				Val: 0,
 				Right: &TreeNode{
 					Val: 0,
@@ -96,7 +96,7 @@ func TestSolution(t *testing.T) {
 					},
 				},
 			},
-			&TreeNode{
+			{
 				Val:   0,
 				Right: &TreeNode{Val: 0},
 				Left: &TreeNode{

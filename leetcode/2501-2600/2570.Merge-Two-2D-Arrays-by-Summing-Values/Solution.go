@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(nums1 [][]int, nums2 [][]int) [][]int {
+func Solution(nums1, nums2 [][]int) [][]int {
 	if len(nums1) == 0 {
 		return nums2
 	}

@@ -24,7 +24,7 @@ func (u *unionFind3108) union(x, y, w int) {
 	}
 }
 
-func Solution(n int, edges [][]int, query [][]int) []int {
+func Solution(n int, edges, query [][]int) []int {
 	u := &unionFind3108{father: make([]int, n), weight: make([]int, n)}
 	for i := range n {
 		u.father[i] = i

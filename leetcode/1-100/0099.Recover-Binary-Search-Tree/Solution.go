@@ -14,7 +14,6 @@ func Solution(root *TreeNode) {
 				} else {
 					change[0], change[1] = *pre, tn
 				}
-
 			}
 		}
 		*pre = tn

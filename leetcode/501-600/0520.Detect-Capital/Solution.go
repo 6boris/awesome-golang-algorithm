@@ -5,10 +5,7 @@ func Solution(word string) bool {
 	if length <= 1 {
 		return true
 	}
-	cap := false
-	if word[0] >= 65 && word[0] <= 90 {
-		cap = true
-	}
+	cap := word[0] >= 65 && word[0] <= 90
 
 	haveCap, haveLow := false, false
 	for idx := 1; idx < length; idx++ {
@@ -21,7 +18,7 @@ func Solution(word string) bool {
 			break
 		}
 	}
-	if cap && !(haveCap && haveLow) {
+	if cap && (!haveCap || !haveLow) {
 		return true
 	}
 	return haveLow && !haveCap

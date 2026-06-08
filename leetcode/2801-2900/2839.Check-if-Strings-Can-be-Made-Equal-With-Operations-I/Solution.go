@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(s1 string, s2 string) bool {
+func Solution(s1, s2 string) bool {
 	testIndex := func(i, j int) bool {
 		a1, b1 := s1[i], s1[j]
 		a2, b2 := s2[i], s2[j]

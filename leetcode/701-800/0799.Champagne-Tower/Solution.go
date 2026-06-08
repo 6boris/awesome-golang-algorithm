@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(poured int, query_row int, query_glass int) float64 {
+func Solution(poured, query_row, query_glass int) float64 {
 	tower := make([][]float64, 101)
 	for i := 0; i < 101; i++ {
 		tower[i] = make([]float64, 101)

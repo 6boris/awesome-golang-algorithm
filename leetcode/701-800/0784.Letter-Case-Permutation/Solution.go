@@ -27,5 +27,4 @@ func help(bs []byte, index int, ans *[]string) {
 	}
 	help(bs, index+1, ans)
 	bs[index] = source
-
 }

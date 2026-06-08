@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(s string, t string, maxCost int) int {
+func Solution(s, t string, maxCost int) int {
 	start, end := 0, 0
 	ans, cur, diff := 0, 0, 0
 	for ; end < len(s); end++ {

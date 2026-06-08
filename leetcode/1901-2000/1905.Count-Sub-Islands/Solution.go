@@ -4,7 +4,7 @@ var dirs1905 = [][]int{
 	{1, 0}, {-1, 0}, {0, 1}, {0, -1},
 }
 
-func Solution(grid1 [][]int, grid2 [][]int) int {
+func Solution(grid1, grid2 [][]int) int {
 	m, n := len(grid1), len(grid1[0])
 	var dfs func(int, int, *bool)
 	dfs = func(x, y int, ok *bool) {

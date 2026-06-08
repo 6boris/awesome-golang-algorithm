@@ -13,6 +13,7 @@ func Solution(s string) bool {
 	}
 	return l == r
 }
+
 func isVowels1704(b byte) bool {
 	return b == 'a' || b == 'A' || b == 'e' || b == 'E' || b == 'i' || b == 'I' || b == 'o' || b == 'O' || b == 'u' || b == 'U'
 }

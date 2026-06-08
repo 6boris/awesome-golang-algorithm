@@ -3,7 +3,6 @@ package Solution
 import "strings"
 
 func Solution(input string) int {
-
 	ans := 0
 	if !strings.Contains(input, "\n\t") {
 		if !strings.Contains(input, ".") {

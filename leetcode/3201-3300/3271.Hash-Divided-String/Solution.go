@@ -8,7 +8,7 @@ func Solution(s string, k int) string {
 	for i := 0; i < len(s); i++ {
 		if i != 0 && i%k == 0 {
 			buf.WriteByte(byte(sum%26 + 'a'))
-			sum = int(s[i]-'a')
+			sum = int(s[i] - 'a')
 			continue
 		}
 		sum += int(s[i] - 'a')

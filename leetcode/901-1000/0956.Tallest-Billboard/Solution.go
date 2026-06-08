@@ -60,8 +60,7 @@ func Solution(rods []int) int {
 			subset(l, 0, 0, []int{})
 		}
 	*/
-	var helper func(int, int) map[int]int
-	helper = func(left, right int) map[int]int {
+	var helper func(int, int) map[int]int = func(left, right int) map[int]int {
 		states := make(map[pair956]struct{})
 		states[pair956{0, 0}] = struct{}{}
 		for i := left; i < right; i++ {

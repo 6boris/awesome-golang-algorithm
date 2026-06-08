@@ -16,7 +16,7 @@ func Solution(grid [][]int) int {
 			}
 		}
 	}
-	var dirs = [][2]int{
+	dirs := [][2]int{
 		{-1, 0}, {1, 0}, {0, 1}, {0, -1},
 	}
 	steps := 0

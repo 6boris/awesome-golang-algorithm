@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(landStartTime []int, landDuration []int, waterStartTime []int, waterDuration []int) int {
+func Solution(landStartTime, landDuration, waterStartTime, waterDuration []int) int {
 	ans := 0x7fffffff
 
 	minLandEnd := 0x7fffffff

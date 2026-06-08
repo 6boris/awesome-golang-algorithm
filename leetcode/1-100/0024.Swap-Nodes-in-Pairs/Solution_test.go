@@ -27,9 +27,11 @@ type Case struct {
 
 // Test case
 var cases = []Case{
-	{"TestCase 1",
+	{
+		"TestCase 1",
 		&ListNode{Val: 1, Next: &ListNode{Val: 2, Next: &ListNode{Val: 3, Next: &ListNode{Val: 4, Next: nil}}}},
-		&ListNode{Val: 2, Next: &ListNode{Val: 1, Next: &ListNode{Val: 4, Next: &ListNode{Val: 3, Next: nil}}}}},
+		&ListNode{Val: 2, Next: &ListNode{Val: 1, Next: &ListNode{Val: 4, Next: &ListNode{Val: 3, Next: nil}}}},
+	},
 }
 
 // TestSolution Run test case for all solutions

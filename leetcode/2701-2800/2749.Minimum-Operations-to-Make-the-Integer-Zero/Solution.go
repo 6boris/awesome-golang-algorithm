@@ -4,7 +4,7 @@ import (
 	"math/bits"
 )
 
-func canBeSumOfPowersOfTwo(n int64, k int64) bool {
+func canBeSumOfPowersOfTwo(n, k int64) bool {
 	// 1. 如果 n < k，则无法组成。因为每个 2^i 至少是 1 (2^0)。
 	if n < k {
 		return false
@@ -19,7 +19,7 @@ func canBeSumOfPowersOfTwo(n int64, k int64) bool {
 	return k >= minK && k <= n
 }
 
-func Solution(num1 int, num2 int) int {
+func Solution(num1, num2 int) int {
 	// 这个可定是无法完成的
 	if num2 >= num1 {
 		return -1

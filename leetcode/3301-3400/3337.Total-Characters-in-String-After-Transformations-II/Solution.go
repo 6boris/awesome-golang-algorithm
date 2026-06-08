@@ -1,7 +1,9 @@
 package Solution
 
-const MOD = 1e9 + 7
-const L = 26
+const (
+	MOD = 1e9 + 7
+	L   = 26
+)
 
 func Solution(s string, t int, nums []int) int {
 	T := NewMat()

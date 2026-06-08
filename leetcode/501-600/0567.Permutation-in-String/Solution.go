@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(s1 string, s2 string) bool {
+func Solution(s1, s2 string) bool {
 	l2 := len(s2)
 	l1 := len(s1)
 	if l2 < l1 {
@@ -14,8 +14,7 @@ func Solution(s1 string, s2 string) bool {
 	for i := 0; i < l1; i++ {
 		cmp[s2[i]-'a']++
 	}
-	var equal func([]int, []int) bool
-	equal = func(a, b []int) bool {
+	var equal func([]int, []int) bool = func(a, b []int) bool {
 		for i := 0; i < 26; i++ {
 			if a[i] != b[i] {
 				return false

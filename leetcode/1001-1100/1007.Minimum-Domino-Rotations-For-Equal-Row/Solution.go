@@ -30,7 +30,7 @@ func bottomCanImpl(elem int, tops, bottoms []int) (bool, int) {
 	return true, count
 }
 
-func Solution(tops []int, bottoms []int) int {
+func Solution(tops, bottoms []int) int {
 	minCount := -1
 	if ttOk, ttCount := topCanImpl(tops[0], tops, bottoms); ttOk && (minCount == -1 || minCount > ttCount) {
 		minCount = ttCount

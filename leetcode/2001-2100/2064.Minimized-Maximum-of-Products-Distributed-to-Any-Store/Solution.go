@@ -7,8 +7,7 @@ func Solution(n int, quantities []int) int {
 	if n == len(quantities) {
 		return m
 	}
-	var ok func(int) bool
-	ok = func(x int) bool {
+	var ok func(int) bool = func(x int) bool {
 		need := n
 		for _, n := range quantities {
 			a := n / x

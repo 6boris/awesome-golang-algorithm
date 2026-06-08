@@ -6,6 +6,7 @@ func Solution(head *ListNode) bool {
 	isPalindromeAux(head, &walk, &r)
 	return r
 }
+
 func isPalindromeAux(head *ListNode, tail **ListNode, r *bool) {
 	if head == nil {
 		return

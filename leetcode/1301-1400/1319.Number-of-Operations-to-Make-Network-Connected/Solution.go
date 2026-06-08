@@ -20,6 +20,7 @@ func (uf *UnionFind1319) Union(x, y int) {
 		uf.Father[x] = y
 	}
 }
+
 func Solution(n int, connections [][]int) int {
 	if len(connections) < n-1 {
 		return -1

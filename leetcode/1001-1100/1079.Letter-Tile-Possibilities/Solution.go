@@ -17,7 +17,6 @@ func Solution(tiles string) int {
 			count[i]++
 		}
 		return r
-
 	}
 	return dfs() - 1
 }

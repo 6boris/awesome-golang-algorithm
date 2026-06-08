@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(nums1 []int, nums2 []int, nums3 []int) []int {
+func Solution(nums1, nums2, nums3 []int) []int {
 	ans := make([]int, 0)
 	bucket := make([]int, 101)
 	for _, n := range nums1 {

@@ -3,9 +3,7 @@ package Solution
 // 00000010100101000001111010011100
 // 00111001011110000010100101000000
 func Solution(num uint32) uint32 {
-	var (
-		a, b, aa, bb uint32
-	)
+	var a, b, aa, bb uint32
 	// 1
 	a = 0xAAAAAAAA
 	b = 0x55555555

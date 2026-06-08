@@ -24,7 +24,7 @@ func Solution(sentence string) int {
 					return false
 				}
 				foundHyphens = true
-				if !(i > 0 && i < size-1 && str[i-1] >= 'a' && str[i-1] <= 'z' && str[i+1] >= 'a' && str[i+1] <= 'z') {
+				if i <= 0 || i >= size-1 || str[i-1] < 'a' || str[i-1] > 'z' || str[i+1] < 'a' || str[i+1] > 'z' {
 					return false
 				}
 			}

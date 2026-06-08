@@ -20,11 +20,11 @@ func (ii *ints) Less(i, j int) bool {
 	return (*ii)[i] < (*ii)[j]
 }
 
-func (i *ints) Push(x interface{}) {
+func (i *ints) Push(x any) {
 	*i = append(*i, x.(int))
 }
 
-func (i *ints) Pop() interface{} {
+func (i *ints) Pop() any {
 	old := *i
 	l := len(old)
 	x := old[l-1]
@@ -32,7 +32,7 @@ func (i *ints) Pop() interface{} {
 	return x
 }
 
-func Solution(nums []int, n int, left int, right int) int {
+func Solution(nums []int, n, left, right int) int {
 	h := ints{nums[0]}
 	for i := 1; i < n; i++ {
 		nums[i] += nums[i-1]

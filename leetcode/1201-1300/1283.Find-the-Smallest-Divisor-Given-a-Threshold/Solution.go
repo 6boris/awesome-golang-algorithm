@@ -7,8 +7,7 @@ import (
 
 func Solution(nums []int, threshold int) int {
 	m := slices.Max(nums)
-	var ok func(int) int
-	ok = func(divisor int) int {
+	var ok func(int) int = func(divisor int) int {
 		sum := 0
 		for _, n := range nums {
 			a := n / divisor

@@ -4,9 +4,7 @@ import "container/heap"
 
 func mergeKLists3(lists []*ListNode) *ListNode {
 	pq := make(ListNodeQueue, len(lists))
-	for i := range lists {
-		pq[i] = lists[i]
-	}
+	copy(pq, lists)
 	heap.Init(&pq)
 	if pq.Len() < 1 {
 		return nil

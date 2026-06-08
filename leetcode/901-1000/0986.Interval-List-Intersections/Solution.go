@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(firstList [][]int, secondList [][]int) [][]int {
+func Solution(firstList, secondList [][]int) [][]int {
 	la, lb := len(firstList), len(secondList)
 	if la == 0 || lb == 0 {
 		return nil

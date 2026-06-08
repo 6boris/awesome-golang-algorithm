@@ -2,20 +2,20 @@ package Solution
 
 import "container/heap"
 
-//	根据golang只带的container类型自定义一个堆
+// 根据golang只带的container类型自定义一个堆
 type IntHeap []int
 
 func (h IntHeap) Len() int           { return len(h) }
 func (h IntHeap) Less(i, j int) bool { return h[i] < h[j] }
 func (h IntHeap) Swap(i, j int)      { h[i], h[j] = h[j], h[i] }
 
-func (h *IntHeap) Push(x interface{}) {
+func (h *IntHeap) Push(x any) {
 	// Push and Pop use pointer receivers because they modify the slice's length,
 	// not just its contents.
 	*h = append(*h, x.(int))
 }
 
-func (h *IntHeap) Pop() interface{} {
+func (h *IntHeap) Pop() any {
 	old := *h
 	n := len(old)
 	x := old[n-1]
@@ -23,13 +23,13 @@ func (h *IntHeap) Pop() interface{} {
 	return x
 }
 
-//	基本结构体
+// 基本结构体
 type KthLargest struct {
 	Nums *IntHeap
 	K    int
 }
 
-//	根据所给的数据初始化heap
+// 根据所给的数据初始化heap
 func Constructor(k int, nums []int) KthLargest {
 	h := &IntHeap{}
 	heap.Init(h)

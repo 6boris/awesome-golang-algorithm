@@ -33,6 +33,7 @@ func check1026(ans *int, others []int) (int, int) {
 	}
 	return m, n
 }
+
 func maxAncestorDiff1026(root *TreeNode, ans *int) (int, int) {
 	other := []int{root.Val}
 	if root.Left != nil {

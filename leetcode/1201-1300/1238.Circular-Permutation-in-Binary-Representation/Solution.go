@@ -13,7 +13,7 @@ func revg(x int) int {
 }
 
 // k 位的格雷码
-func Solution(n int, start int) []int {
+func Solution(n, start int) []int {
 	alloc := 1
 	for i := 0; i < n; i++ {
 		alloc *= 2

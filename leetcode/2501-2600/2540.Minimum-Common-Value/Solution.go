@@ -2,7 +2,7 @@ package Solution
 
 import "sort"
 
-func Solution(nums1 []int, nums2 []int) int {
+func Solution(nums1, nums2 []int) int {
 	l2 := len(nums2)
 	for _, n := range nums1 {
 		if idx := sort.Search(l2, func(i int) bool {

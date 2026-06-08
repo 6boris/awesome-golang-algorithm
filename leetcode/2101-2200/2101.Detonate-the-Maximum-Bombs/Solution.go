@@ -1,26 +1,5 @@
 package Solution
 
-type union2101 struct {
-	father []int
-}
-
-func (u *union2101) findFather(x int) int {
-	if u.father[x] != x {
-		u.father[x] = u.findFather(u.father[x])
-	}
-	return u.father[x]
-}
-
-func (u *union2101) union(x, y int) {
-	x = u.father[x]
-	y = u.father[y]
-	if x < y {
-		u.father[y] = x
-	} else {
-		u.father[x] = y
-	}
-}
-
 func distance(x1, y1, x2, y2 int) int64 {
 	diffX := int64(x2 - x1)
 	diffY := int64(y2 - y1)

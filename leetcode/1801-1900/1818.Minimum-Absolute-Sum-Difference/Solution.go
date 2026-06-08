@@ -4,13 +4,12 @@ import "sort"
 
 const mod1818 = 1000000007
 
-func Solution(nums1 []int, nums2 []int) int {
+func Solution(nums1, nums2 []int) int {
 	next := make([]int, len(nums1))
 	copy(next, nums1)
 	sort.Ints(next)
 	shouldCut := -1
-	var bsearch func(cur, target int) int
-	bsearch = func(cur, target int) int {
+	var bsearch func(cur, target int) int = func(cur, target int) int {
 		ans := -1
 		left, right := 0, len(next)
 		for left < right {

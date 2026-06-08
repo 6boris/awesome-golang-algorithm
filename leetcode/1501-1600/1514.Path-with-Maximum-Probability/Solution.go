@@ -1,7 +1,7 @@
 package Solution
 
 // 哈哈哈哈哈， challengeProgrammingDatastructure/13-3-single-source-shortest-path-1.go dijkstra模板
-func Solution(n int, edges [][]int, succProb []float64, start int, end int) float64 {
+func Solution(n int, edges [][]int, succProb []float64, start, end int) float64 {
 	adj := make(map[int]map[int]float64)
 	for idx, edge := range edges {
 		f, t := edge[0], edge[1]

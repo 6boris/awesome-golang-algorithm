@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(s string, t string) bool {
+func Solution(s, t string) bool {
 	ls, lt := len(s), len(t)
 	if ls != lt {
 		return false

@@ -16,13 +16,16 @@ func (h *heap1090) Len() int {
 func (h *heap1090) Less(i, j int) bool {
 	return h.values[h.data[i]] > h.values[h.data[j]]
 }
+
 func (h *heap1090) Swap(i, j int) {
 	h.data[i], h.data[j] = h.data[j], h.data[i]
 }
-func (h *heap1090) Push(x interface{}) {
+
+func (h *heap1090) Push(x any) {
 	h.data = append(h.data, x.(int))
 }
-func (h *heap1090) Pop() interface{} {
+
+func (h *heap1090) Pop() any {
 	old := h.data
 	l := len(old)
 	x := old[l-1]
@@ -30,7 +33,7 @@ func (h *heap1090) Pop() interface{} {
 	return x
 }
 
-func Solution(values []int, labels []int, numWanted int, useLimit int) int {
+func Solution(values, labels []int, numWanted, useLimit int) int {
 	group := make(map[int]int)
 	h := heap1090{data: make([]int, 0), values: values}
 	for i := 0; i < len(values); i++ {

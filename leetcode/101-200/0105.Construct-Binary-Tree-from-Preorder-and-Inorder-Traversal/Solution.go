@@ -6,7 +6,7 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
-func buildTree_1(preorder []int, inorder []int) *TreeNode {
+func buildTree_1(preorder, inorder []int) *TreeNode {
 	if len(preorder) == 0 {
 		return nil
 	}
@@ -21,7 +21,8 @@ func buildTree_1(preorder []int, inorder []int) *TreeNode {
 	root.Right = buildTree_1(preorder[len(inorder[:i])+1:], inorder[i+1:])
 	return root
 }
-func buildTree_2(preorder []int, inorder []int) *TreeNode {
+
+func buildTree_2(preorder, inorder []int) *TreeNode {
 	if len(preorder) == 0 {
 		return nil
 	}

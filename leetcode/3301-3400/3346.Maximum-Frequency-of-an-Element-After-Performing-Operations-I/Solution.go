@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(nums []int, k int, numOperations int) int {
+func Solution(nums []int, k, numOperations int) int {
 	const N = 100000 + 2
 
 	freq := make([]int, N)

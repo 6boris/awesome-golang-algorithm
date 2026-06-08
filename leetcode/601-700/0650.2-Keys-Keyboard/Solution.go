@@ -35,7 +35,7 @@ func Solution(n int) int {
 						op = dp[start][pn]
 					}
 				}
-				op += 2 //copy and past
+				op += 2 // copy and past
 				if dp[i][ct] == -1 || dp[i][ct] > op {
 					dp[i][ct] = op
 				}

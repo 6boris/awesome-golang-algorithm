@@ -1,9 +1,8 @@
 package Solution
 
-func Solution(left int, right int) []int {
+func Solution(left, right int) []int {
 	var res []int
-	var ok func(int) bool
-	ok = func(n int) bool {
+	var ok func(int) bool = func(n int) bool {
 		self := n
 		for n > 0 {
 			mod := n % 10

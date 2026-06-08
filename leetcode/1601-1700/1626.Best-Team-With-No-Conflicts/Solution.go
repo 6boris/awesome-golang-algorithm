@@ -11,7 +11,8 @@ func sort1626(scores, ages []int) {
 		}
 	}
 }
-func Solution(scores []int, ages []int) int {
+
+func Solution(scores, ages []int) int {
 	sort1626(scores, ages)
 	l := len(scores)
 	dp := make([]int, l)

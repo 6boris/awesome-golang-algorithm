@@ -9,6 +9,7 @@ func rev(n int) int {
 	}
 	return x
 }
+
 func Solution(nums []int) int {
 	set := make(map[int]struct{})
 	for _, n := range nums {

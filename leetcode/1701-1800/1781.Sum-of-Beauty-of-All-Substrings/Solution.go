@@ -2,7 +2,7 @@ package Solution
 
 func Solution(s string) int {
 	ans := 0
-	//ab,aa
+	// ab,aa
 	for end := 2; end < len(s); end++ {
 		tmp := [26]int{}
 		tmp[s[end]-'a']++

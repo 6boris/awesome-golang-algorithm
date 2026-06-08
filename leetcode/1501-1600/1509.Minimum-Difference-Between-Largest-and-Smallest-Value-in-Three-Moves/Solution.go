@@ -25,5 +25,5 @@ func Solution(nums []int) int {
 	}
 
 	return ans
-	//return nums[len(nums)-4] - nums[0]
+	// return nums[len(nums)-4] - nums[0]
 }

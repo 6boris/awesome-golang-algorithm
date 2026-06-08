@@ -75,7 +75,6 @@ func (this *AllOne) Dec(key string) {
 	} else {
 		node.Value = v
 	}
-
 }
 
 func (this *AllOne) GetMinKey() string {

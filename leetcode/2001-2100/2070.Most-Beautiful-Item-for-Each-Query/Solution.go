@@ -24,6 +24,7 @@ func buildSegTree2070(left, right int, nums []int, m map[int]int) *segNode2070 {
 	}
 	return node
 }
+
 func queryMax2070(node *segNode2070, left, right int) int {
 	if node.l == left && node.r == right {
 		return node.m

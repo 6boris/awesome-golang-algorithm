@@ -16,7 +16,7 @@ func Constructor981() TimeMap {
 	}
 }
 
-func (this *TimeMap) Set(key string, value string, timestamp int) {
+func (this *TimeMap) Set(key, value string, timestamp int) {
 	if _, ok := this.data[key]; !ok {
 		this.data[key] = make([]storeItem, 0)
 	}

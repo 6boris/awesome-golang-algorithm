@@ -9,7 +9,7 @@ func Solution(timePoints []string) int {
 	hm := make([][]int, len(timePoints))
 	var a, b int
 	for idx, tp := range timePoints {
-		fmt.Sscanf(tp, "%d:%d", &a, &b)
+		_, _ = fmt.Sscanf(tp, "%d:%d", &a, &b)
 		if a == 0 {
 			a = 24
 		}

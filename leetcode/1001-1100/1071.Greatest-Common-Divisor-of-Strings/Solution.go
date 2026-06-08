@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(str1 string, str2 string) string {
+func Solution(str1, str2 string) string {
 	ls1, ls2 := len(str1), len(str2)
 	common := make([]int, 0)
 	for i := 1; i <= ls1 && i <= ls2; i++ {
@@ -8,8 +8,7 @@ func Solution(str1 string, str2 string) string {
 			common = append(common, i)
 		}
 	}
-	var check func(int) bool
-	check = func(windowSize int) bool {
+	check := func(windowSize int) bool {
 		target := str1[:windowSize]
 		start := windowSize
 		for ; start <= ls1-windowSize; start += windowSize {

@@ -1,6 +1,5 @@
 package Solution
 
-
 import (
 	"bytes"
 	"fmt"
@@ -13,7 +12,6 @@ type tmp767 struct {
 }
 
 func Solution(s string) string {
-
 	list := make([]tmp767, 0)
 	letterIndex := make(map[uint8]int)
 	for _, b := range s {

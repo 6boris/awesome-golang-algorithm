@@ -27,6 +27,7 @@ func (r *trieNode2416) score(word string) int {
 	}
 	return x
 }
+
 func Solution(words []string) []int {
 	ans := make([]int, len(words))
 	tree := &trieNode2416{}

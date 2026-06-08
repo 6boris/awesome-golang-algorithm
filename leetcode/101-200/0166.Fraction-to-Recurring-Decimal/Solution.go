@@ -5,7 +5,7 @@ import (
 	"fmt"
 )
 
-func Solution(numerator int, denominator int) string {
+func Solution(numerator, denominator int) string {
 	const maxn = 65536
 	var flag bool
 	if numerator*denominator < 0 {
@@ -28,16 +28,16 @@ func Solution(numerator int, denominator int) string {
 	quotient[0] = numerator / denominator
 	buf := bytes.NewBufferString("")
 	if flag {
-		buf.WriteString(fmt.Sprintf("%d.", quotient[0]))
+		fmt.Fprintf(buf, "%d.", quotient[0])
 	} else {
-		buf.WriteString(fmt.Sprintf("-%d.", quotient[0]))
+		fmt.Fprintf(buf, "-%d.", quotient[0])
 	}
 	for i := 0; i < denominator-1; i++ {
 		tmp := (cf[i] * 10) % denominator
 		quotient[i+1] = (cf[i] * 10) / denominator
 		if tmp == 0 {
 			for index := 1; index <= i+1; index++ {
-				buf.WriteString(fmt.Sprintf("%d", quotient[index]))
+				fmt.Fprintf(buf, "%d", quotient[index])
 			}
 			return buf.String()
 		}
@@ -46,17 +46,17 @@ func Solution(numerator int, denominator int) string {
 			if cf[i+1] == cf[index] {
 				if index != 0 {
 					for inner := 1; inner <= index; inner++ {
-						buf.WriteString(fmt.Sprintf("%d", quotient[inner]))
+						fmt.Fprintf(buf, "%d", quotient[inner])
 					}
 					buf.WriteString("(")
 					for inner := index + 1; inner <= i+1; inner++ {
-						buf.WriteString(fmt.Sprintf("%d", quotient[inner]))
+						fmt.Fprintf(buf, "%d", quotient[inner])
 					}
 					buf.WriteString(")")
 				} else {
 					buf.WriteString("(")
 					for inner := 1; inner <= i+1; inner++ {
-						buf.WriteString(fmt.Sprintf("%d", quotient[inner]))
+						fmt.Fprintf(buf, "%d", quotient[inner])
 					}
 					buf.WriteString(")")
 				}

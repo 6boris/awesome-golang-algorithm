@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(s string, chars string, vals []int) int {
+func Solution(s, chars string, vals []int) int {
 	value := [26]int{}
 	for i := range 26 {
 		value[i] = i + 1

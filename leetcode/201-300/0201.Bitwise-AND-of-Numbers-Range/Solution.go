@@ -11,7 +11,7 @@ func whichBase(n int) int {
 	return n
 }
 
-func Solution(left int, right int) int {
+func Solution(left, right int) int {
 	// 只有在同一个范围的数字才不会出现0
 	// 1, 2, 3, 4, 5, 6, 7, 8, 9
 	// 0  1, 1, 2, 2, 2, 2, 3, 3

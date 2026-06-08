@@ -7,8 +7,7 @@ import (
 
 func Solution(candies []int, k int64) int {
 	m := slices.Max(candies)
-	var ok func(int) bool
-	ok = func(n int) bool {
+	var ok func(int) bool = func(n int) bool {
 		cnt := int64(0)
 		for _, c := range candies {
 			cnt += int64(c / n)

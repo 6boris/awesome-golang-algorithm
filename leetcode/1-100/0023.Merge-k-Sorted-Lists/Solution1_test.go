@@ -35,10 +35,6 @@ func TestSolution(t *testing.T) {
 	}
 }
 
-//	压力测试
+// 压力测试
 func BenchmarkSolution(b *testing.B) {
-}
-
-//	使用案列
-func ExampleSolution() {
 }

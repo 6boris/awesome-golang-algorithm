@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(nums []int, limit int, goal int) int {
+func Solution(nums []int, limit, goal int) int {
 	diff := goal
 	for _, n := range nums {
 		diff -= n

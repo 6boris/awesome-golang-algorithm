@@ -27,8 +27,7 @@ func Solution(arr []int) int {
 		rr[i] = 1
 	}
 
-	var ok func(int) bool
-	ok = func(length int) bool {
+	var ok func(int) bool = func(length int) bool {
 		start, end := 0, length-1
 		for ; end < l; start, end = start+1, end+1 {
 			lok := (start == 0 || ll[start-1] == start)

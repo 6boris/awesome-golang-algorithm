@@ -1,7 +1,6 @@
 package Solution
 
-func Solution(n int, leftChild []int, rightChild []int) bool {
-
+func Solution(n int, leftChild, rightChild []int) bool {
 	father := make([]int, n)
 	for i := 0; i < n; i++ {
 		// 孤立的节点

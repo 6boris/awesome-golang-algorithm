@@ -43,9 +43,7 @@ func TestSolution(t *testing.T) {
 		for _, c := range cases {
 			t.Run(fmt.Sprintf("%s %s", funcName, c.name), func(t *testing.T) {
 				nums := make([]int, 0)
-				for _, v := range c.input {
-					nums = append(nums, v)
-				}
+				nums = append(nums, c.input...)
 				got := f(nums)
 				ast.Equal(c.expect, got,
 					"func: %v case: %v ", funcName, c.name)

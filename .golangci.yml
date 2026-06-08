@@ -1,14 +1,106 @@
-output:
-  format: colored-line-number
-  print-issued-lines: true
-  print-linter-name: true
-  uniq-by-line: true
-  path-prefix: ""
-  sort-results: false
-
+# See the dedicated "version" documentation section.
+version: "2"
 linters:
-  disable-all: true
-  fast: false
   enable:
+    - errcheck
+    - govet
+    - staticcheck
     - unused
-    - typecheck
+    - ineffassign
+    - gosec
+    - unconvert
+    - misspell
+    - bodyclose
+    - sqlclosecheck
+  settings:
+    gosec:
+      # Rules excluded as noise for an algorithm-practice repo:
+      # G404 weak RNG (used only in test list/tree generators),
+      # G115 integer overflow conversions (bounded by problem constraints),
+      # G602 slice index out of range (false positives on rune/byte indexing).
+      excludes:
+        - G404
+        - G115
+        - G602
+  exclusions:
+    generated: lax
+    rules:
+      # Style-only staticcheck checks that are pervasive and intentional in this
+      # algorithm-practice repo. Enforcing them would churn ~100 solution files
+      # without changing behavior:
+      #   ST1006 this/self receiver names, ST1023 explicit closure types, and the
+      #   QF* "quickfix" refactor suggestions (e.g. QF1001 De Morgan, QF1003
+      #   tagged switch, QF1011 omit inferred type).
+      - linters:
+          - staticcheck
+        text: '(ST1006|ST1023|QF[0-9]+):'
+      # Examples are conventionally named ExampleSolution repo-wide even when the
+      # solved function is not literally named Solution.
+      - linters:
+          - govet
+        text: 'refers to unknown identifier'
+formatters:
+  # See the dedicated "formatters" documentation section.
+  enable:
+    - gofmt
+    - gofumpt
+    - goimports
+    - golines
+    - swaggo
+  settings:
+    gofmt:
+      # Simplify code: gofmt with `-s` option.
+      # Default: true
+      simplify: true
+      # Apply the rewrite rules to the source before reformatting.
+      # https://pkg.go.dev/cmd/gofmt
+      # Default: []
+      rewrite-rules:
+        - pattern: 'interface{}'
+          replacement: 'any'
+        - pattern: 'a[b:len(a)]'
+          replacement: 'a[b:]'
+    gofumpt:
+      # Module path which contains the source code being formatted.
+      # Default: ""
+      module-path: studio
+      # Choose whether to use the extra rules.
+      # Default: false
+      extra-rules: true
+    goimports:
+      # A list of prefixes, which, if set, checks import paths
+      # with the given prefixes are grouped after 3rd-party packages.
+      # Default: []
+      local-prefixes:
+        - studio
+    golines:
+      # Target maximum line length.
+      # Default: 100
+      max-len: 200
+      # Length of a tabulation.
+      # Default: 4
+      tab-len: 8
+      # Shorten single-line comments.
+      # Default: false
+      shorten-comments: true
+      # Default: true
+      reformat-tags: false
+      # Split chained methods on the dots as opposed to the arguments.
+      # Default: true
+      chain-split-dots: false
+issues:
+  # See the dedicated "issues" documentation section.
+  max-issues-per-linter: 0
+  max-same-issues: 0
+# Output configuration options.
+output:
+  path-prefix: ""
+  # See the dedicated "output" documentation section.
+#  option: value
+# Options for analysis running.
+run:
+  # See the dedicated "run" documentation section.
+  timeout: 5m
+severity:
+  # See the dedicated "severity" documentation section.
+  default: error

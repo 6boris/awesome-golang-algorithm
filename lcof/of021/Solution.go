@@ -16,7 +16,7 @@ func exchange(nums []int) []int {
 }
 
 func exchange2(nums []int) []int {
-	ans := make([]int, 0, 0)
+	ans := make([]int, 0)
 	for _, v := range nums {
 		if v&1 != 0 {
 			ans = append(ans, v)

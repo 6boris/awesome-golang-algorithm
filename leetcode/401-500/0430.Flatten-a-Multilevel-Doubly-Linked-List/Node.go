@@ -8,7 +8,7 @@ type Node struct {
 }
 
 func MakeNode(nodes []int) *Node {
-	if nodes == nil || len(nodes) < 1 {
+	if len(nodes) < 1 {
 		return &Node{}
 	}
 	node := &Node{}

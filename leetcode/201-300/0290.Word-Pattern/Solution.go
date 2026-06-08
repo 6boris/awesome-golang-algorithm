@@ -2,7 +2,7 @@ package Solution
 
 import "strings"
 
-func Solution(pattern string, s string) bool {
+func Solution(pattern, s string) bool {
 	words := strings.Split(s, " ")
 	if len(words) != len(pattern) {
 		return false

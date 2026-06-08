@@ -2,7 +2,7 @@ package Solution
 
 const mod1269 = 1000000007
 
-func Solution(steps int, arrLen int) int {
+func Solution(steps, arrLen int) int {
 	dp := make([][]int, arrLen)
 	if steps <= arrLen {
 		arrLen = steps
@@ -15,7 +15,7 @@ func Solution(steps int, arrLen int) int {
 			dp[i][j] = -1
 		}
 	}
-	var dirs = []int{-1, 0, 1}
+	dirs := []int{-1, 0, 1}
 	var dfs func(int, int) int
 	dfs = func(index, useSteps int) int {
 		if useSteps == 0 {

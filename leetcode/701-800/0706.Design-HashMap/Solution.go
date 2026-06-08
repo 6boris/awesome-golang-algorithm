@@ -9,7 +9,7 @@ func Constructor706() MyHashMap {
 	return MyHashMap{data: map[int]int{}}
 }
 
-func (this *MyHashMap) Put(key int, value int) {
+func (this *MyHashMap) Put(key, value int) {
 	this.data[key] = value
 }
 

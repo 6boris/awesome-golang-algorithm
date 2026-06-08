@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(eventTime int, startTime []int, endTime []int) int {
+func Solution(eventTime int, startTime, endTime []int) int {
 	n := len(startTime)
 	q := make([]bool, n)
 	t1, t2 := 0, 0

@@ -1,6 +1,6 @@
 package Solution
 
-//	每次只检查网格的2边
+// 每次只检查网格的2边
 func islandPerimeter(grid [][]int) int {
 	ans := 0
 	for r := 0; r < len(grid); r++ {
@@ -23,7 +23,7 @@ func islandPerimeter(grid [][]int) int {
 	return ans
 }
 
-//	依次检查每个网格的上下左右
+// 依次检查每个网格的上下左右
 func islandPerimeter2(grid [][]int) int {
 	ans := 0
 	for i := 0; i < len(grid); i++ {

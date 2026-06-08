@@ -38,6 +38,6 @@ func Solution(num int) int {
 		}
 	}
 	var n int
-	fmt.Sscanf(string(ans), "%d", &n)
+	_, _ = fmt.Sscanf(string(ans), "%d", &n)
 	return n
 }

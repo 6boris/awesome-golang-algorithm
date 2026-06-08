@@ -5,7 +5,7 @@ type TreeNode struct {
 	Left, Right *TreeNode
 }
 
-func Solution(root *TreeNode, x int, y int) bool {
+func Solution(root *TreeNode, x, y int) bool {
 	var (
 		xnode  *TreeNode
 		ynode  *TreeNode

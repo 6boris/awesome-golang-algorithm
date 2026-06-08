@@ -1,6 +1,6 @@
 package Solution
 
-func cost2448(nums []int, cost []int, target int) int64 {
+func cost2448(nums, cost []int, target int) int64 {
 	c := int64(0)
 	for idx, num := range nums {
 		diff := num - target
@@ -14,7 +14,7 @@ func cost2448(nums []int, cost []int, target int) int64 {
 
 // 这道题和之前的一个相似，忘了， 类似火车运送货物的
 // 也是找到最大最大值，然后二分搜索
-func Solution(nums []int, cost []int) int64 {
+func Solution(nums, cost []int) int64 {
 	max, min := -1, -1
 	for _, i := range nums {
 		if i > max {

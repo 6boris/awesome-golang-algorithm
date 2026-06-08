@@ -34,6 +34,7 @@ func ok(nums []int, k int) bool {
 	}
 	return false
 }
+
 func Solution(nums []int) int {
 	index := sort.Search(len(nums)/2, func(i int) bool {
 		return !ok(nums, i+1)

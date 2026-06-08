@@ -10,6 +10,7 @@ func spaceIndex(str string) int {
 	}
 	return i
 }
+
 func Solution(logs []string) []string {
 	l := len(logs)
 	s, e := l-1, l

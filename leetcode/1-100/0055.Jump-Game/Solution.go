@@ -39,10 +39,7 @@ func canJump3(nums []int) bool {
 		jump++
 	}
 
-	if jump == len(index) {
-		return true
-	}
-	return false
+	return jump == len(index)
 }
 
 func Max(x, y int) int {

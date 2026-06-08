@@ -19,17 +19,17 @@ func toVowel(word string) string {
 			buf.WriteByte(b)
 			continue
 		}
-		buf.WriteString(fmt.Sprintf("%d", c))
+		fmt.Fprintf(&buf, "%d", c)
 		c = 0
 	}
 	if c > 0 {
-		buf.WriteString(fmt.Sprintf("%d", c))
+		fmt.Fprintf(&buf, "%d", c)
 	}
 
 	return buf.String()
 }
 
-func Solution(wordlist []string, queries []string) []string {
+func Solution(wordlist, queries []string) []string {
 	m := make(map[string]struct{})
 	lower := make(map[string]string)
 	matched := make(map[string]string)

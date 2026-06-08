@@ -16,7 +16,7 @@ func Constructor(length int) SnapshotArray {
 	return SnapshotArray{snpaId: 0, data: data}
 }
 
-func (this *SnapshotArray) Set(index int, val int) {
+func (this *SnapshotArray) Set(index, val int) {
 	length := len(this.data[index])
 	if this.data[index][length-1].id != this.snpaId {
 		this.data[index] = append(this.data[index], idWithVal{id: this.snpaId, val: val})
@@ -31,7 +31,7 @@ func (this *SnapshotArray) Snap() int {
 	return id
 }
 
-func (this *SnapshotArray) Get(index int, snap_id int) int {
+func (this *SnapshotArray) Get(index, snap_id int) int {
 	// 该用二分
 	length := len(this.data[index])
 	for i := length - 1; i >= 0; i-- {

@@ -8,6 +8,7 @@ type heap1368 [][4]int
 func (h *heap1368) Len() int {
 	return len(*h)
 }
+
 func (h *heap1368) Swap(i, j int) {
 	(*h)[i], (*h)[j] = (*h)[j], (*h)[i]
 }
@@ -15,6 +16,7 @@ func (h *heap1368) Swap(i, j int) {
 func (h *heap1368) Less(i, j int) bool {
 	return (*h)[i][2] < (*h)[j][2]
 }
+
 func (h *heap1368) Push(x any) {
 	*h = append(*h, x.([4]int))
 }

@@ -45,11 +45,11 @@ func (h Heap) Swap(i, j int) {
 	h[i], h[j] = h[j], h[i]
 }
 
-func (h *Heap) Push(x interface{}) {
+func (h *Heap) Push(x any) {
 	*h = append(*h, x.(int))
 }
 
-func (h *Heap) Pop() interface{} {
+func (h *Heap) Pop() any {
 	old := *h
 	n := len(old)
 	x := old[n-1]

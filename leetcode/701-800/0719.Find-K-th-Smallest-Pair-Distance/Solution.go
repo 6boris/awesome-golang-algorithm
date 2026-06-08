@@ -8,10 +8,9 @@ func Solution(nums []int, k int) int {
 	// 对于条件i < j, 就是选择(i, j)或者(j, i)的问题, 可以直接忽略了
 	// 如果完全计算，肯定是不行的，10^8 如果选择最后几个元素，内存都要爆炸
 	l := len(nums)
-	var count func(int) int
-	count = func(target int) int {
+	var count func(int) int = func(target int) int {
 		ans := 0
-		// 4, 62, 100
+
 		for i := 1; i < l; i++ {
 			idx := sort.Search(i, func(ii int) bool {
 				return nums[i]-nums[ii] <= target

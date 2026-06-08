@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(n int, k int) byte {
+func Solution(n, k int) byte {
 	alloc := 1
 	for i := 2; i <= n; i++ {
 		alloc = (alloc * 2) + 1

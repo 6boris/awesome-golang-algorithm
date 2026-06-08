@@ -19,14 +19,14 @@ func Solution(names []string) []string {
 		for {
 			suffix = strconv.Itoa(nextNumber)
 			tmpName = name + "(" + suffix + ")"
-			//fmt.Printf("testing %s\n", tmpName)
+			// fmt.Printf("testing %s\n", tmpName)
 			_, ok := cache[tmpName]
 			if ok {
 				nextNumber++
 				continue
 			}
 			ret[idx] = tmpName
-			//fmt.Printf("--tmpName: %s\n", tmpName)
+			// fmt.Printf("--tmpName: %s\n", tmpName)
 			cache[tmpName] = 1
 			nextNumber++
 			cache[name] = nextNumber

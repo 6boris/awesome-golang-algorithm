@@ -8,14 +8,14 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-//	solution func Info
+// solution func Info
 type SolutionFuncType func([][]int, int) bool
 
 var SolutionFuncList = []SolutionFuncType{
 	findNumberIn2DArray,
 }
 
-//	test info struct
+// test info struct
 type Case struct {
 	name   string
 	board  [][]int
@@ -23,7 +23,7 @@ type Case struct {
 	expect bool
 }
 
-// 	test case
+// test case
 var cases = []Case{
 	{
 		name: "TestCase 1",

@@ -31,7 +31,7 @@ func Solution(matrix [][]int, target int) int {
 			for x2 := x1; x2 < rows; x2++ {
 				for y2 := y1; y2 < cols; y2++ {
 					diff := cache[x1][y1] + cache[x2+1][y2+1] - cache[x1][y2+1] - cache[x2+1][y1]
-					//fmt.Printf("(%d,%d), (%d,%d) = %d\n", x1, y1, x2, y2, diff)
+					// fmt.Printf("(%d,%d), (%d,%d) = %d\n", x1, y1, x2, y2, diff)
 					if diff == target {
 						ans++
 					}

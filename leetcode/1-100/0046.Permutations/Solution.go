@@ -12,7 +12,7 @@ func permute(nums []int) [][]int {
 	return ans
 }
 
-func dfs(nums []int, curr []int) {
+func dfs(nums, curr []int) {
 	if len(curr) == len(nums) {
 		temp := make([]int, len(curr))
 		copy(temp, curr)

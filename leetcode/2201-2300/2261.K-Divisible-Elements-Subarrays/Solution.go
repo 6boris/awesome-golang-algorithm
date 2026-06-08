@@ -8,7 +8,7 @@ func hash2261(nums []int, start, end int) uint64 {
 	return h
 }
 
-func Solution(nums []int, k int, p int) int {
+func Solution(nums []int, k, p int) int {
 	ans := 0
 	count := make([]int, len(nums))
 	check := make(map[uint64]struct{})

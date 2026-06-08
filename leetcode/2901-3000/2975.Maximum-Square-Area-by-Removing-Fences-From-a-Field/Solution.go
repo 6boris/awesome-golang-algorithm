@@ -2,7 +2,7 @@ package Solution
 
 import "sort"
 
-func Solution(m int, n int, hFences []int, vFences []int) int {
+func Solution(m, n int, hFences, vFences []int) int {
 	hEdges := getEdges(hFences, m)
 	vEdges := getEdges(vFences, n)
 

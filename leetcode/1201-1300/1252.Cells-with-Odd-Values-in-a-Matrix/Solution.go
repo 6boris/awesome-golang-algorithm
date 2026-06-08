@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(n int, m int, indices [][]int) int {
+func Solution(n, m int, indices [][]int) int {
 	mat := make([][]int, n)
 	for i := range mat {
 		mat[i] = make([]int, m)

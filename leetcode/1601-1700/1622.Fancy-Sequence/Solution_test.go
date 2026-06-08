@@ -14,10 +14,17 @@ func TestSolution(t *testing.T) {
 		expect []int
 	}{
 		{"TestCase1", []op{
-			{"append", 2}, {"add", 3}, {"append", 7},
-			{"mul", 2}, {"get", 0}, {"add", 3},
-			{"append", 10}, {"mul", 2},
-			{"get", 0}, {"get", 1}, {"get", 2},
+			{"append", 2},
+			{"add", 3},
+			{"append", 7},
+			{"mul", 2},
+			{"get", 0},
+			{"add", 3},
+			{"append", 10},
+			{"mul", 2},
+			{"get", 0},
+			{"get", 1},
+			{"get", 2},
 		}, []int{10, 26, 34, 20}},
 	}
 

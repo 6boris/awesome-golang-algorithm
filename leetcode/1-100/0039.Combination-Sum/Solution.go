@@ -6,7 +6,7 @@ import (
 
 func combinationSum(candidates []int, target int) [][]int {
 	result := [][]int{}
-	if candidates == nil || len(candidates) == 0 {
+	if len(candidates) == 0 {
 		return result
 	}
 	sort.Ints(candidates)
@@ -16,7 +16,7 @@ func combinationSum(candidates []int, target int) [][]int {
 	return result
 }
 
-func explore(candidates []int, target int, pos int, result *[][]int, set []int) {
+func explore(candidates []int, target, pos int, result *[][]int, set []int) {
 	if target < 0 {
 		return
 	}

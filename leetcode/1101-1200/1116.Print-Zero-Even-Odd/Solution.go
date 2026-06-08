@@ -67,7 +67,7 @@ func Solution(n int) string {
 	done := make(chan struct{}, 3)
 	buf := bytes.NewBuffer([]byte{})
 	lock := make(chan struct{}, 1)
-	var printNumber = func(n int) {
+	printNumber := func(n int) {
 		lock <- struct{}{}
 		fmt.Fprintf(buf, "%d", n)
 		<-lock

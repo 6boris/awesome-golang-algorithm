@@ -32,7 +32,7 @@ func update(x *int64, y int64) {
 	}
 }
 
-func Solution(source string, target string, original []string, changed []string, cost []int) int64 {
+func Solution(source, target string, original, changed []string, cost []int) int64 {
 	n := len(source)
 	m := len(original)
 	root := newTrie()

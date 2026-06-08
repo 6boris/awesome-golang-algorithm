@@ -11,20 +11,23 @@ func (l *list3075) Len() int {
 func (l *list3075) Less(i, j int) bool {
 	return (*l)[i] > (*l)[j]
 }
+
 func (l *list3075) Swap(i, j int) {
 	(*l)[i], (*l)[j] = (*l)[j], (*l)[i]
 }
-func (l *list3075) Push(x interface{}) {
+
+func (l *list3075) Push(x any) {
 	*l = append(*l, x.(int))
 }
 
-func (l *list3075) Pop() interface{} {
+func (l *list3075) Pop() any {
 	old := *l
 	ll := len(old)
 	x := old[ll-1]
 	*l = old[:ll-1]
 	return x
 }
+
 func Solution(happiness []int, k int) int64 {
 	l := list3075(happiness)
 	heap.Init(&l)

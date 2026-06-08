@@ -8,7 +8,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-//	solution func Info
+// solution func Info
 type SolutionFuncType func(*ListNode, *ListNode) *ListNode
 
 var SolutionFuncList = []SolutionFuncType{
@@ -16,7 +16,7 @@ var SolutionFuncList = []SolutionFuncType{
 	// mergeTwoLists2,
 }
 
-//	test info struct
+// test info struct
 type Case struct {
 	name   string
 	l1     *ListNode
@@ -24,7 +24,7 @@ type Case struct {
 	expect *ListNode
 }
 
-// 	test case
+// test case
 var cases = []Case{
 	{
 		name:   "TestCase 1",

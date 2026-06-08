@@ -5,7 +5,7 @@ import (
 	"sort"
 )
 
-func Solution(basket1 []int, basket2 []int) int64 {
+func Solution(basket1, basket2 []int) int64 {
 	freq := map[int]int{}
 	m := math.MaxInt
 	for _, b := range basket1 {

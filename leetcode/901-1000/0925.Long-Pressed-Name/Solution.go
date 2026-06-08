@@ -71,7 +71,7 @@ func checkPressTimes(s string) []byteRepeat {
 	return r
 }
 
-func Solution2(name string, typed string) bool {
+func Solution2(name, typed string) bool {
 	if name == typed {
 		return true
 	}

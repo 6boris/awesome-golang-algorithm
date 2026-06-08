@@ -1,8 +1,7 @@
 package Solution
 
 func Solution(s string) bool {
-	var is func(byte) byte
-	is = func(b byte) byte {
+	is := func(b byte) byte {
 		if b >= '0' && b <= '9' {
 			return b
 		}

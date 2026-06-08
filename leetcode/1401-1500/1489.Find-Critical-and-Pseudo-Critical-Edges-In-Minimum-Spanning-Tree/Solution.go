@@ -54,7 +54,7 @@ func Solution(n int, edges [][]int) [][]int {
 	})
 
 	minWeight := 0
-	//计算树的最小权重
+	// 计算树的最小权重
 	for _, e := range edges {
 		if u.union(e[0], e[1]) {
 			minWeight += e[2]

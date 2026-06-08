@@ -105,18 +105,21 @@ func (pq PriorityQueue) Less(i, j int) bool {
 	}
 	return pq[i].cost < pq[j].cost
 }
+
 func (pq PriorityQueue) Swap(i, j int) {
 	pq[i], pq[j] = pq[j], pq[i]
 	pq[i].index = i
 	pq[j].index = j
 }
-func (pq *PriorityQueue) Push(x interface{}) {
+
+func (pq *PriorityQueue) Push(x any) {
 	n := len(*pq)
 	item := x.(*Item)
 	item.index = n
 	*pq = append(*pq, item)
 }
-func (pq *PriorityQueue) Pop() interface{} {
+
+func (pq *PriorityQueue) Pop() any {
 	old := *pq
 	n := len(old)
 	item := old[n-1]

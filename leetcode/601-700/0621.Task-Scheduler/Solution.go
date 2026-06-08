@@ -16,9 +16,7 @@ func leastInterval(tasks []byte, n int) int {
 	for _, v := range tasks {
 		tmp[v-'A']++
 	}
-	for _, v := range tmp {
-		temp = append(temp, v)
-	}
+	temp = append(temp, tmp...)
 	sort.Slice(temp, func(a, b int) bool {
 		return temp[a] > temp[b]
 	})

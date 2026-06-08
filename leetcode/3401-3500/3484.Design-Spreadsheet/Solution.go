@@ -36,7 +36,7 @@ func (this *Spreadsheet) ResetCell(cell string) {
 func (this *Spreadsheet) part(str string) int {
 	index := 0
 	isNumber := true
-	if !(str[0] >= '0' && str[0] <= '9') {
+	if str[0] < '0' || str[0] > '9' {
 		isNumber = false
 		index++
 	}
@@ -46,6 +46,7 @@ func (this *Spreadsheet) part(str string) int {
 	}
 	return this.sheet[int(str[0]-'A')][num-1]
 }
+
 func (this *Spreadsheet) GetValue(formula string) int {
 	left := formula[1:]
 	parts := strings.Split(left, "+")

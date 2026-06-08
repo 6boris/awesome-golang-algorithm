@@ -1,6 +1,6 @@
 package Solution
 
-//	动态规划
+// 动态规划
 func longestValidParentheses(s string) int {
 	maxans := 0
 	dp := make([]int, len(s))
@@ -33,7 +33,7 @@ func Max(x, y int) int {
 	return y
 }
 
-//	Stack
+// Stack
 func longestValidParentheses2(s string) int {
 	maxans := 0
 	stk := Stack{}

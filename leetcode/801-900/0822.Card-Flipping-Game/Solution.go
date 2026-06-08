@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(fronts []int, backs []int) int {
+func Solution(fronts, backs []int) int {
 	fm := make(map[int]struct{})
 	for _, n := range fronts {
 		fm[n] = struct{}{}

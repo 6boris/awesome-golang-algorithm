@@ -8,7 +8,7 @@ func Solution(points [][]int) int {
 	return path
 }
 
-func walk(A []int, B []int) int {
+func walk(A, B []int) int {
 	Ax, Ay := A[0], A[1]
 	Bx, By := B[0], B[1]
 	return max(abs(Ax-Bx), abs(Ay-By))

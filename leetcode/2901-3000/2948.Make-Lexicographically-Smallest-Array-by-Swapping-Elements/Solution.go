@@ -16,7 +16,7 @@ func Solution(nums []int, limit int) []int {
 		return a < b
 	})
 	groupIndies := map[int][]int{
-		0: []int{1, dst[0]},
+		0: {1, dst[0]},
 	}
 	numGroup := make([]int, len(nums))
 

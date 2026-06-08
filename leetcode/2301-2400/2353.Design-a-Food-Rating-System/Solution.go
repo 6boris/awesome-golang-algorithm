@@ -30,11 +30,11 @@ func (f *frs) Less(i, j int) bool {
 	return a.rating > b.rating
 }
 
-func (f *frs) Push(x interface{}) {
+func (f *frs) Push(x any) {
 	*f = append(*f, x.(fr))
 }
 
-func (f *frs) Pop() interface{} {
+func (f *frs) Pop() any {
 	old := *f
 	l := len(old)
 	x := old[l-1]
@@ -52,7 +52,7 @@ type FoodRatings struct {
 	h map[string]*frs
 }
 
-func Constructor2353(foods []string, cuisines []string, ratings []int) FoodRatings {
+func Constructor2353(foods, cuisines []string, ratings []int) FoodRatings {
 	r := FoodRatings{indies: make(map[string]*int), f2c: make(map[string]string), h: make(map[string]*frs)}
 	for idx, cuisine := range cuisines {
 		r.f2c[foods[idx]] = cuisine
@@ -91,7 +91,7 @@ type opt struct {
 	rating    int
 }
 
-func Solution(foods []string, cuisines []string, ratings []int, opts []opt) []string {
+func Solution(foods, cuisines []string, ratings []int, opts []opt) []string {
 	c := Constructor2353(foods, cuisines, ratings)
 	ans := make([]string, 0)
 	for _, op := range opts {

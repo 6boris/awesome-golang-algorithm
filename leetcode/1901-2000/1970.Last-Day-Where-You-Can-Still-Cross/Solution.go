@@ -1,7 +1,6 @@
 package Solution
 
-func Solution(row int, col int, cells [][]int) int {
-
+func Solution(row, col int, cells [][]int) int {
 	var (
 		bfs  func(int) bool
 		dirs = [][]int{
@@ -44,12 +43,11 @@ func Solution(row int, col int, cells [][]int) int {
 			queue = next
 		}
 		return false
-
 	}
 	//
 	left, right := 1, len(cells)
 	for left < right {
-		//mid := (right-left)/2 + left
+		// mid := (right-left)/2 + left
 		mid := right - (right-left)/2
 		if bfs(mid) {
 			left = mid

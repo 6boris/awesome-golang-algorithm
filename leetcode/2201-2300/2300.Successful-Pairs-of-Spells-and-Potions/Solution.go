@@ -2,7 +2,7 @@ package Solution
 
 import "sort"
 
-func Solution(spells []int, potions []int, success int64) []int {
+func Solution(spells, potions []int, success int64) []int {
 	ans := make([]int, len(spells))
 	sort.Ints(potions)
 	for i, n := range spells {

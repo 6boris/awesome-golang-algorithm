@@ -23,7 +23,7 @@ func minAndMax(a, b, c, d int) (int, int) {
 	return max, min
 }
 
-func Solution(ax1 int, ay1 int, ax2 int, ay2 int, bx1 int, by1 int, bx2 int, by2 int) int {
+func Solution(ax1, ay1, ax2, ay2, bx1, by1, bx2, by2 int) int {
 	// 4 * 4
 	width1 := ax2 - ax1
 	heigh1 := ay2 - ay1

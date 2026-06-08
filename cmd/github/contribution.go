@@ -1,7 +1,7 @@
 package github
 
 import (
-	"io/ioutil"
+	"io"
 	"log"
 	"net/http"
 )
@@ -22,12 +22,13 @@ func getContributorBufer() []byte {
 	if err != nil {
 		log.Panicln("Lettcode Problem 接口获取失败：", err)
 	}
+	defer func() { _ = request.Body.Close() }()
 
 	if request.StatusCode != 200 {
 		log.Panicln("Lettcode Problem 接口地址不存在：", err)
 	}
 
-	body, _ := ioutil.ReadAll(request.Body)
+	body, _ := io.ReadAll(request.Body)
 	return body
 }
 

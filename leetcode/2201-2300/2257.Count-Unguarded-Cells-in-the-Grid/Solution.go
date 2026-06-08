@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(m int, n int, guards [][]int, walls [][]int) int {
+func Solution(m, n int, guards, walls [][]int) int {
 	count := m * n
 	count -= len(guards)
 	count -= len(walls)

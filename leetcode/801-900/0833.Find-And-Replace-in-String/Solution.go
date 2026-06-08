@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-func Solution(s string, indices []int, sources []string, targets []string) string {
+func Solution(s string, indices []int, sources, targets []string) string {
 	position := make([]int, len(indices))
 	for i := 0; i < len(indices); i++ {
 		position[i] = i

@@ -1,7 +1,7 @@
 package Solution
 
 func Solution(isWater [][]int) [][]int {
-	var dir = [][2]int{
+	dir := [][2]int{
 		{0, 1}, {0, -1}, {1, 0}, {-1, 0},
 	}
 	queue := [][2]int{}

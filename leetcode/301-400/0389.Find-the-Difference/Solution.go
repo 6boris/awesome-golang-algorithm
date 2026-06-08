@@ -5,5 +5,5 @@ func Solution(s, t string) byte {
 	for _, b := range append([]byte(s), t...) {
 		start ^= b
 	}
-	return byte(start)
+	return start
 }

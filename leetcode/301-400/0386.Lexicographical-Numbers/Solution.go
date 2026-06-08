@@ -3,7 +3,7 @@ package Solution
 func Solution(n int) []int {
 	ans := make([]int, 0)
 	var dfs func(int, int)
-	dfs = func(i int, j int) {
+	dfs = func(i, j int) {
 		cur := j*10 + i
 		if cur > n {
 			return

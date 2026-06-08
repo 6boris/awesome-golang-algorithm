@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(zero int, one int, limit int) int {
+func Solution(zero, one, limit int) int {
 	dp := make([][][2]int, zero+1)
 	mod := int(1e9 + 7)
 	for i := 0; i <= zero; i++ {

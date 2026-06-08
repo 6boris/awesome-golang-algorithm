@@ -2,9 +2,9 @@ package Solution
 
 func Solution(nums []int, original int) int {
 	var (
-		ret int  = original
-		ok  bool = false
-		end int  = 0
+		ret = original
+		ok  bool
+		end = 0
 	)
 	m := make(map[int]struct{})
 	for _, n := range nums {

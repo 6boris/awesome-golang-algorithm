@@ -2,7 +2,7 @@ package Solution
 
 var canUse = []byte{'a', 'b', 'c'}
 
-func Solution(n int, k int) string {
+func Solution(n, k int) string {
 	bs := make([]byte, n)
 	var dfs func([]byte, byte, int)
 	cnt := 0

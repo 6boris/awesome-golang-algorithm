@@ -9,7 +9,7 @@ package Solution
 	c. 如果删掉c,f[i][j]=f[i-1][j]+1
 */
 
-func minDistance(word1 string, word2 string) int {
+func minDistance(word1, word2 string) int {
 	m, n := len(word1), len(word2)
 	dp := [][]int{}
 	for i := 0; i <= m; i++ {

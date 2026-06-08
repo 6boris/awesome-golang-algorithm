@@ -20,6 +20,7 @@ func power(x int, cache map[int]int) int {
 	cache[x] = ans
 	return ans
 }
+
 func Solution(lo, hi, k int) int {
 	cache := make(map[int]int)
 	x := make([][2]int, hi-lo+1)

@@ -1,6 +1,6 @@
 package Solution
 
-func strStr(haystack string, needle string) int {
+func strStr(haystack, needle string) int {
 	//	检查数据
 	if len(haystack) < len(needle) {
 		return -1

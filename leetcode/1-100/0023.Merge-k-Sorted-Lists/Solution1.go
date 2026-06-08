@@ -2,21 +2,6 @@ package Solution
 
 import "math/rand"
 
-//	1.暴力转换
-func mergeKLists1(lists []*ListNode) *ListNode {
-	nums := make([]int, 0, 10)
-
-	//	1.链表转化为数组
-	for _, v := range lists {
-		nums = append(nums, MarshalListNodeToSlice(v)...)
-	}
-	//	对数组排序
-	nums = QuickSort(nums)
-
-	//	将数组转化为链表
-	return MarshalSliceToListNode(nums)
-}
-
 // 插入排序(Insert Sort)
 func InertSort(arr []int) []int {
 	var i, j, tmp int
@@ -62,7 +47,7 @@ func QuickSort(arr []int) []int {
 	return low_part
 }
 
-//	将ListNode 序列化为一个数组
+// 将ListNode 序列化为一个数组
 func MarshalListNodeToSlice(node *ListNode) []int {
 	ans := make([]int, 0, 10)
 	for node != nil {
@@ -72,7 +57,7 @@ func MarshalListNodeToSlice(node *ListNode) []int {
 	return ans
 }
 
-//	将数组转换为ListNode
+// 将数组转换为ListNode
 func MarshalSliceToListNode(nums []int) *ListNode {
 	head := &ListNode{}
 	tmp := head

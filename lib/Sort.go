@@ -47,10 +47,8 @@ func InsertSort(arr []int) []int {
 
 // 选择排序(Select Sort)
 func SelectSort(arr []int) []int {
-	var min = 0
-
 	for i := 0; i < len(arr); i++ {
-		min = i
+		min := i
 		for j := i + 1; j < len(arr); j++ {
 			if arr[j] < arr[min] {
 				min = j
@@ -63,7 +61,6 @@ func SelectSort(arr []int) []int {
 
 // 快速排序(Qucik Sort)
 func QuickSort(arr []int) []int {
-
 	if len(arr) <= 1 {
 		return arr
 	}
@@ -107,6 +104,7 @@ func MergeSort(arr []int) []int {
 
 	return Merge(left, right)
 }
+
 func Merge(left, right []int) []int {
 	result := make([]int, 0, len(left)+len(right))
 
@@ -146,7 +144,7 @@ func HeapSort(arr []int) []int {
 	return arr
 }
 
-func Sift(arr []int, i int, arrLen int) []int {
+func Sift(arr []int, i, arrLen int) []int {
 	done := false
 
 	tmp := 0
@@ -176,7 +174,7 @@ func Sift(arr []int, i int, arrLen int) []int {
 
 // 希尔排序(Shell Sort)
 func ShellSort(arr []int) []int {
-	for d := int(len(arr) / 2); d > 0; d /= 2 {
+	for d := len(arr) / 2; d > 0; d /= 2 {
 		for i := d; i < len(arr); i++ {
 			for j := i; j >= d && arr[j-d] > arr[j]; j -= d {
 				arr[j], arr[j-d] = arr[j-d], arr[j]
@@ -223,7 +221,7 @@ func CombSort(arr []int) []int {
 	gap := arrLen
 
 	for gap > 1 {
-		gap = gap * 10 / 13 //shrink factor is 1.3
+		gap = gap * 10 / 13 // shrink factor is 1.3
 
 		for i := 0; i+gap < arrLen; i++ {
 			if arr[i] > arr[i+gap] {
@@ -297,7 +295,7 @@ func GnomeSort(arr []int) []int {
 func OddEvenSort(arr []int) []int {
 	tmp, isSorted := 0, false
 
-	for isSorted == false {
+	for !isSorted {
 
 		isSorted = true
 

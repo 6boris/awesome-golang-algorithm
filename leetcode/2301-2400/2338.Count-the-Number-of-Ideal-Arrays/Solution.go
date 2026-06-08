@@ -49,7 +49,7 @@ func initialize() {
 	}
 }
 
-func Solution(n int, maxValue int) int {
+func Solution(n, maxValue int) int {
 	initialize()
 	ans := 0
 	for x := 1; x <= maxValue; x++ {

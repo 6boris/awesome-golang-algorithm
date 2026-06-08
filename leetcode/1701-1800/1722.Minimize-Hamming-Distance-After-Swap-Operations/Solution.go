@@ -21,7 +21,7 @@ func (u *unionFind1722) union(x, y int) {
 	}
 }
 
-func Solution(source []int, target []int, allowedSwaps [][]int) int {
+func Solution(source, target []int, allowedSwaps [][]int) int {
 	size := len(source)
 	u := unionFind1722{
 		father: make([]int, size),

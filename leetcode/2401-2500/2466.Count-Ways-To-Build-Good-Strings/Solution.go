@@ -2,7 +2,7 @@ package Solution
 
 const mod2466 = 1000000007
 
-func Solution(low int, high int, zero int, one int) int {
+func Solution(low, high, zero, one int) int {
 	dp := make([]int, high+1)
 	ans := 0
 	dp[zero] += 1

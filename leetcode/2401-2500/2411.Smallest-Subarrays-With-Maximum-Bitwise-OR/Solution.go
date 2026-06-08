@@ -33,8 +33,7 @@ func Solution(nums []int) []int {
 			oneCount[i][j] = oneCount[i-1][j] + cur[j]
 		}
 	}
-	var ok func(int, int, int) bool
-	ok = func(start, end, target int) bool {
+	var ok func(int, int, int) bool = func(start, end, target int) bool {
 		tmp := oneCount[end]
 		if start != 0 {
 			for i := 0; i < 32; i++ {

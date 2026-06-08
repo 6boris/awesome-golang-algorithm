@@ -6,6 +6,7 @@ func shouldCal(a, b byte) bool {
 	}
 	return a == '*' || a == '/'
 }
+
 func cal(x, y int, op byte) int {
 	if op == '+' {
 		return x + y

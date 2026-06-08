@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(n int, headID int, manager []int, informTime []int) int {
+func Solution(n, headID int, manager, informTime []int) int {
 	managers := make(map[int][]int)
 	for e, m := range manager {
 		if _, ok := managers[m]; !ok {

@@ -11,7 +11,7 @@ func Solution(s string) int {
 	c := 1
 	for i := 1; i < length; i++ {
 		if s[i]-s[i-1] == 1 || s[i-1]-s[i] == 25 {
-			//ab, za
+			// ab, za
 			c++
 		} else {
 			c = 1

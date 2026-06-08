@@ -4,7 +4,7 @@ type ParkingSystem struct {
 	solt [3]int
 }
 
-func Constructor(big int, medium int, small int) ParkingSystem {
+func Constructor(big, medium, small int) ParkingSystem {
 	return ParkingSystem{solt: [3]int{big, medium, small}}
 }
 

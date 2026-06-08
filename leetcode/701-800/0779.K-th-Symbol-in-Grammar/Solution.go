@@ -7,7 +7,7 @@ package Solution
 0 1  1  0  1  0  0  1
 1 2  3  4  5  6  7  8
 */
-func Solution(n int, k int) int {
+func Solution(n, k int) int {
 	nn := n
 	path := make([]int, 0)
 	for nn > 0 {

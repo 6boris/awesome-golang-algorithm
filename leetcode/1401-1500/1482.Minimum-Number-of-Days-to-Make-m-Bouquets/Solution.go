@@ -2,14 +2,13 @@ package Solution
 
 import "sort"
 
-func Solution(bloomDay []int, m int, k int) int {
+func Solution(bloomDay []int, m, k int) int {
 	l := len(bloomDay)
 	need := m * k
 	if need > l {
 		return -1
 	}
-	var ok func(int) bool
-	ok = func(day int) bool {
+	var ok func(int) bool = func(day int) bool {
 		c := 0
 		complete := 0
 		for i := 0; i < l; i++ {

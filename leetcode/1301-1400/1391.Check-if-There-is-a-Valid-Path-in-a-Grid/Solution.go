@@ -6,11 +6,11 @@ var dirFn = [6]func(int, int, [][]int) [][2]int{
 		res := make([][2]int, 0)
 
 		nx, ny := x, y-1
-		if !(nx < 0 || nx >= m || ny < 0 || ny >= n) && (grid[nx][ny] == 1 || grid[nx][ny] == 4 || grid[nx][ny] == 6) {
+		if (nx >= 0 && nx < m && ny >= 0 && ny < n) && (grid[nx][ny] == 1 || grid[nx][ny] == 4 || grid[nx][ny] == 6) {
 			res = append(res, [2]int{nx, ny})
 		}
 		nx, ny = x, y+1
-		if !(nx < 0 || nx >= m || ny < 0 || ny >= n) && (grid[nx][ny] == 1 || grid[nx][ny] == 3 || grid[nx][ny] == 5) {
+		if (nx >= 0 && nx < m && ny >= 0 && ny < n) && (grid[nx][ny] == 1 || grid[nx][ny] == 3 || grid[nx][ny] == 5) {
 			res = append(res, [2]int{nx, ny})
 		}
 		return res
@@ -20,11 +20,11 @@ var dirFn = [6]func(int, int, [][]int) [][2]int{
 		res := make([][2]int, 0)
 
 		nx, ny := x-1, y
-		if !(nx < 0 || nx >= m || ny < 0 || ny >= n) && (grid[nx][ny] == 2 || grid[nx][ny] == 3 || grid[nx][ny] == 4) {
+		if (nx >= 0 && nx < m && ny >= 0 && ny < n) && (grid[nx][ny] == 2 || grid[nx][ny] == 3 || grid[nx][ny] == 4) {
 			res = append(res, [2]int{nx, ny})
 		}
 		nx, ny = x+1, y
-		if !(nx < 0 || nx >= m || ny < 0 || ny >= n) && (grid[nx][ny] == 2 || grid[nx][ny] == 5 || grid[nx][ny] == 6) {
+		if (nx >= 0 && nx < m && ny >= 0 && ny < n) && (grid[nx][ny] == 2 || grid[nx][ny] == 5 || grid[nx][ny] == 6) {
 			res = append(res, [2]int{nx, ny})
 		}
 		return res
@@ -34,11 +34,11 @@ var dirFn = [6]func(int, int, [][]int) [][2]int{
 		res := make([][2]int, 0)
 
 		nx, ny := x, y-1
-		if !(nx < 0 || nx >= m || ny < 0 || ny >= n) && (grid[nx][ny] == 1 || grid[nx][ny] == 4 || grid[nx][ny] == 6) {
+		if (nx >= 0 && nx < m && ny >= 0 && ny < n) && (grid[nx][ny] == 1 || grid[nx][ny] == 4 || grid[nx][ny] == 6) {
 			res = append(res, [2]int{nx, ny})
 		}
 		nx, ny = x+1, y
-		if !(nx < 0 || nx >= m || ny < 0 || ny >= n) && (grid[nx][ny] == 2 || grid[nx][ny] == 5 || grid[nx][ny] == 6) {
+		if (nx >= 0 && nx < m && ny >= 0 && ny < n) && (grid[nx][ny] == 2 || grid[nx][ny] == 5 || grid[nx][ny] == 6) {
 			res = append(res, [2]int{nx, ny})
 		}
 		return res
@@ -48,11 +48,11 @@ var dirFn = [6]func(int, int, [][]int) [][2]int{
 		res := make([][2]int, 0)
 
 		nx, ny := x, y+1
-		if !(nx < 0 || nx >= m || ny < 0 || ny >= n) && (grid[nx][ny] == 1 || grid[nx][ny] == 3 || grid[nx][ny] == 5) {
+		if (nx >= 0 && nx < m && ny >= 0 && ny < n) && (grid[nx][ny] == 1 || grid[nx][ny] == 3 || grid[nx][ny] == 5) {
 			res = append(res, [2]int{nx, ny})
 		}
 		nx, ny = x+1, y
-		if !(nx < 0 || nx >= m || ny < 0 || ny >= n) && (grid[nx][ny] == 2 || grid[nx][ny] == 5 || grid[nx][ny] == 6) {
+		if (nx >= 0 && nx < m && ny >= 0 && ny < n) && (grid[nx][ny] == 2 || grid[nx][ny] == 5 || grid[nx][ny] == 6) {
 			res = append(res, [2]int{nx, ny})
 		}
 		return res
@@ -62,11 +62,11 @@ var dirFn = [6]func(int, int, [][]int) [][2]int{
 		res := make([][2]int, 0)
 
 		nx, ny := x, y-1
-		if !(nx < 0 || nx >= m || ny < 0 || ny >= n) && (grid[nx][ny] == 1 || grid[nx][ny] == 4 || grid[nx][ny] == 6) {
+		if (nx >= 0 && nx < m && ny >= 0 && ny < n) && (grid[nx][ny] == 1 || grid[nx][ny] == 4 || grid[nx][ny] == 6) {
 			res = append(res, [2]int{nx, ny})
 		}
 		nx, ny = x-1, y
-		if !(nx < 0 || nx >= m || ny < 0 || ny >= n) && (grid[nx][ny] == 2 || grid[nx][ny] == 3 || grid[nx][ny] == 4) {
+		if (nx >= 0 && nx < m && ny >= 0 && ny < n) && (grid[nx][ny] == 2 || grid[nx][ny] == 3 || grid[nx][ny] == 4) {
 			res = append(res, [2]int{nx, ny})
 		}
 		return res
@@ -76,11 +76,11 @@ var dirFn = [6]func(int, int, [][]int) [][2]int{
 		res := make([][2]int, 0)
 
 		nx, ny := x, y+1
-		if !(nx < 0 || nx >= m || ny < 0 || ny >= n) && (grid[nx][ny] == 1 || grid[nx][ny] == 3 || grid[nx][ny] == 5) {
+		if (nx >= 0 && nx < m && ny >= 0 && ny < n) && (grid[nx][ny] == 1 || grid[nx][ny] == 3 || grid[nx][ny] == 5) {
 			res = append(res, [2]int{nx, ny})
 		}
 		nx, ny = x-1, y
-		if !(nx < 0 || nx >= m || ny < 0 || ny >= n) && (grid[nx][ny] == 2 || grid[nx][ny] == 3 || grid[nx][ny] == 4) {
+		if (nx >= 0 && nx < m && ny >= 0 && ny < n) && (grid[nx][ny] == 2 || grid[nx][ny] == 3 || grid[nx][ny] == 4) {
 			res = append(res, [2]int{nx, ny})
 		}
 		return res

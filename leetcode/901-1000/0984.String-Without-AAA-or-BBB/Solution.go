@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(a int, b int) string {
+func Solution(a, b int) string {
 	ret := make([]byte, 0, a+b)
 	// 多的先写
 	var (
@@ -9,7 +9,6 @@ func Solution(a int, b int) string {
 	)
 
 	for a > 0 || b > 0 {
-		writeA = false
 		l = len(ret)
 		if l >= 2 && ret[l-1] == ret[l-2] {
 			writeA = ret[l-1] == 'b'

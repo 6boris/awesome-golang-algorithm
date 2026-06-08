@@ -2,9 +2,8 @@ package Solution
 
 func Solution(n int, startPos []int, s string) []int {
 	ans := make([]int, len(s))
-	var steps func(int, int, int) int
 
-	steps = func(x, y, index int) int {
+	steps := func(x, y, index int) int {
 		ans := 0
 		for i := index; i < len(s); i++ {
 			a, b := 0, 0

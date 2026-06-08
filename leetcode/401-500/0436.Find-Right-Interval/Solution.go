@@ -30,8 +30,7 @@ func Solution(intervals [][]int) []int {
 		bi[k] = i
 	}
 
-	var bsearch func(int, int, int) int
-	bsearch = func(left, right, target int) int {
+	var bsearch func(int, int, int) int = func(left, right, target int) int {
 		ll, r := left, right
 		for ll < r {
 			mid := ll + (r-ll)/2

@@ -2,7 +2,7 @@ package Solution
 
 import "sort"
 
-func Solution(apple []int, capacity []int) int {
+func Solution(apple, capacity []int) int {
 	sum := 0
 	for _, n := range apple {
 		sum += n

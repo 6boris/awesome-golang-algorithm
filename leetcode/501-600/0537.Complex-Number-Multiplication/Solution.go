@@ -36,6 +36,7 @@ func parseComplexNumber(s string) complexNumber {
 	}
 	return cm
 }
+
 func (c complexNumber) String() string {
 	return fmt.Sprintf("%d+%di", c.r, c.i)
 }
@@ -45,7 +46,8 @@ func mul(a, b complexNumber) complexNumber {
 	i := a.r*b.i + a.i*b.r
 	return complexNumber{r: r, i: i}
 }
-func Solution(num1 string, num2 string) string {
+
+func Solution(num1, num2 string) string {
 	a := parseComplexNumber(num1)
 	b := parseComplexNumber(num2)
 	return mul(a, b).String()

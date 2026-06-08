@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(fruits []int, baskets []int) int {
+func Solution(fruits, baskets []int) int {
 	left := len(fruits)
 	for _, f := range fruits {
 		for i := range baskets {

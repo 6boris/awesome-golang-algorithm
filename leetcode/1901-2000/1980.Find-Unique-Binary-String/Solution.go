@@ -9,6 +9,7 @@ func addOne(bs []byte) {
 		bs[i] = '0'
 	}
 }
+
 func Solution(nums []string) string {
 	l := len(nums)
 	bs := make([]byte, l)

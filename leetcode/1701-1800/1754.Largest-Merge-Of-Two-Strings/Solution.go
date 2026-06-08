@@ -2,7 +2,7 @@ package Solution
 
 import "bytes"
 
-func Solution(word1 string, word2 string) string {
+func Solution(word1, word2 string) string {
 	buf := bytes.Buffer{}
 	i, j := 0, 0
 

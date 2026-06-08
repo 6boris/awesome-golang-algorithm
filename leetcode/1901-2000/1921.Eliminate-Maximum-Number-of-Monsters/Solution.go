@@ -4,7 +4,7 @@ import (
 	"sort"
 )
 
-func Solution(dist []int, speed []int) int {
+func Solution(dist, speed []int) int {
 	minutes := make([]float64, len(dist))
 	for i := 0; i < len(dist); i++ {
 		minutes[i] = float64(dist[i]) / float64(speed[i])

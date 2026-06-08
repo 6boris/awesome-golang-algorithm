@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(s string, t string) int {
+func Solution(s, t string) int {
 	var (
 		ret, start, end int
 

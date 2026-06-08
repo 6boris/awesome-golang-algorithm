@@ -1,13 +1,14 @@
 package Solution
 
-//	DFS Brute Force
+// DFS Brute Force
 func uniquePathsIII(grid [][]int) int {
 	sx, sy, n := -1, -1, 1
 	for i := 0; i < len(grid); i++ {
 		for j := 0; j < len(grid[0]); j++ {
-			if grid[i][j] == 0 {
+			switch grid[i][j] {
+			case 0:
 				n++
-			} else if grid[i][j] == 1 {
+			case 1:
 				sx, sy = j, i
 			}
 		}

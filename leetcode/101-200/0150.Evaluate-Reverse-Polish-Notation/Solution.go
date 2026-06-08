@@ -6,7 +6,7 @@ func Solution(tokens []string) int {
 	stack := make([]int, len(tokens))
 	idx := 0
 	for _, n := range tokens {
-		if !(n == "+" || n == "-" || n == "*" || n == "/") {
+		if n != "+" && n != "-" && n != "*" && n != "/" {
 			nn, _ := strconv.Atoi(n)
 			stack[idx] = nn
 			idx++

@@ -3,9 +3,7 @@ package Solution
 func Solution(land [][]int) [][]int {
 	ans := make([][]int, 0)
 	rows, cols := len(land), len(land[0])
-	var findEnd func(int, int) (int, int)
-	findEnd = func(x, y int) (int, int) {
-
+	var findEnd func(int, int) (int, int) = func(x, y int) (int, int) {
 		x1, y1 := x, y
 		for ; y1 < cols && land[x][y1] != 0; y1++ {
 		}

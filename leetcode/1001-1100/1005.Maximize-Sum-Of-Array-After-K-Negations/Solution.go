@@ -8,6 +8,7 @@ func _abs(n int) int {
 	}
 	return n
 }
+
 func Solution(nums []int, k int) int {
 	// 如果负数比k小，
 	negations := 0

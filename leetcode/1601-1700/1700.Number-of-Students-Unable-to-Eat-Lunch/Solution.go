@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(students []int, sandwiches []int) int {
+func Solution(students, sandwiches []int) int {
 	ones, zeros := 0, 0
 	for _, n := range students {
 		if n == 1 {

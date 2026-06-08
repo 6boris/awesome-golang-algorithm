@@ -6,7 +6,7 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
-func Solution(preorder []int, postorder []int) *TreeNode {
+func Solution(preorder, postorder []int) *TreeNode {
 	if len(preorder) == 0 {
 		return nil
 	}

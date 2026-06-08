@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(buckets int, minutesToDie int, minutesToTest int) int {
+func Solution(buckets, minutesToDie, minutesToTest int) int {
 	base := minutesToTest / minutesToDie
 	return powerX(base+1, buckets)
 }

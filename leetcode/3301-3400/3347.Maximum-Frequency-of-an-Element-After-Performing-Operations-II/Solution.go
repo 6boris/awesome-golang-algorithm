@@ -2,7 +2,7 @@ package Solution
 
 import "sort"
 
-func Solution(nums []int, k int, numOperations int) int {
+func Solution(nums []int, k, numOperations int) int {
 	sort.Ints(nums)
 	ans := 0
 	numCount := make(map[int]int)

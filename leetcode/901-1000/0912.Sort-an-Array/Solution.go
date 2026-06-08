@@ -6,9 +6,9 @@ func quickSort(nums []int) []int {
 	if len(nums) <= 1 {
 		return nums
 	}
-	//head和i用来标记某个点，head标记等待替换的值的下标，i是用作遍历一次数组的下标，类似for i:=0;i<tail;//i++{}
+	// head和i用来标记某个点，head标记等待替换的值的下标，i是用作遍历一次数组的下标，类似for i:=0;i<tail;//i++{}
 	head, tail, i := 0, len(nums)-1, 0
-	//随机获取一个下标，比如len(nums)=5,如果获取的下标为4，nums[4]大于nums[0]-nums[3]的值，则无排序效果
+	// 随机获取一个下标，比如len(nums)=5,如果获取的下标为4，nums[4]大于nums[0]-nums[3]的值，则无排序效果
 	pivot := rand.Intn(len(nums) - 1)
 	nums[pivot], nums[tail] = nums[tail], nums[pivot]
 	for i < tail {
@@ -23,15 +23,14 @@ func quickSort(nums []int) []int {
 	if nums[head] > nums[tail] {
 		nums[head], nums[tail] = nums[tail], nums[head]
 	}
-	//由于nums[head]可以确定大于左边，小于右边，因此无需排序
+	// 由于nums[head]可以确定大于左边，小于右边，因此无需排序
 	quickSort(nums[:head])
 	quickSort(nums[head+1:])
 	return nums
 }
 
 func heapSort(nums []int) []int {
-	var sink = func([]int, int, int) {}
-	sink = func(heap []int, root, end int) {
+	sink := func(heap []int, root, end int) {
 		for {
 			child := root*2 + 1
 			if child > end {
@@ -64,7 +63,7 @@ func mergeSort(nums []int) []int {
 	if len(nums) <= 1 {
 		return nums
 	}
-	var merge = func(left, right []int) []int {
+	merge := func(left, right []int) []int {
 		result := make([]int, len(left)+len(right))
 		l, r, i := 0, 0, 0
 		for l < len(left) && r < len(right) {
@@ -93,8 +92,8 @@ func selectSort(nums []int) []int {
 	for i := 0; i < len(nums)-1; i++ {
 		minIdx := i
 		for j := i + 1; j < len(nums); j++ {
-			if nums[j] < nums[minIdx] { //找最小的数
-				minIdx = j //保存最小数索引
+			if nums[j] < nums[minIdx] { // 找最小的数
+				minIdx = j // 保存最小数索引
 			}
 		}
 		nums[i], nums[minIdx] = nums[minIdx], nums[i]
@@ -107,11 +106,11 @@ func insertSort(nums []int) []int {
 	for i := 1; i < n; i++ {
 		tmp := nums[i]
 		j := i - 1
-		for j >= 0 && nums[j] > tmp { //左边比右边大
-			nums[j+1] = nums[j] //右移1位
-			j--                 //扫描前一个数
+		for j >= 0 && nums[j] > tmp { // 左边比右边大
+			nums[j+1] = nums[j] // 右移1位
+			j--                 // 扫描前一个数
 		}
-		nums[j+1] = tmp //添加到小于它的数的右边
+		nums[j+1] = tmp // 添加到小于它的数的右边
 	}
 	return nums
 }
@@ -121,8 +120,8 @@ func bubbleSort(nums []int) []int {
 	for i := 0; i < n-1; i++ {
 		exchange := false
 		for j := 0; j < n-i-1; j++ {
-			if nums[j] > nums[j+1] { //两两比较，前面比后面大
-				nums[j], nums[j+1] = nums[j+1], nums[j] //交换
+			if nums[j] > nums[j+1] { // 两两比较，前面比后面大
+				nums[j], nums[j+1] = nums[j+1], nums[j] // 交换
 				exchange = true
 			}
 		}
@@ -132,6 +131,7 @@ func bubbleSort(nums []int) []int {
 	}
 	return nums
 }
+
 func shellSort(nums []int) []int {
 	for gap := len(nums) / 2; gap > 0; gap /= 2 {
 		for i := gap; i < len(nums); i++ {

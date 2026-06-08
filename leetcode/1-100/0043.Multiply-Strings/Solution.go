@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-func multiply(num1 string, num2 string) string {
+func multiply(num1, num2 string) string {
 	pos := make([]int64, len(num1)+len(num2))
 	ans := ""
 

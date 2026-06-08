@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(rowSum []int, colSum []int) [][]int {
+func Solution(rowSum, colSum []int) [][]int {
 	N := len(rowSum)
 	M := len(colSum)
 

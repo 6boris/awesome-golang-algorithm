@@ -1,7 +1,6 @@
 package Solution
 
-func hasPath(maze [][]int, start []int, destination []int) bool {
-
+func hasPath(maze [][]int, start, destination []int) bool {
 	visited := make([][]bool, len(maze))
 	for i := range visited {
 		visited[i] = make([]bool, len(maze[0]))
@@ -44,11 +43,7 @@ func hasPath(maze [][]int, start []int, destination []int) bool {
 		for down < len(maze) && maze[down][y] == 0 {
 			down++
 		}
-		if dfs(down-1, y) {
-			return true
-		}
-
-		return false
+		return dfs(down-1, y)
 	}
 
 	return dfs(start[0], start[1])

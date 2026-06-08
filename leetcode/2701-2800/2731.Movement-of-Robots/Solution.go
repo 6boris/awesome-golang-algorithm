@@ -7,7 +7,6 @@ import (
 const mod2731 = 1000000007
 
 func Solution(nums []int, s string, d int) int {
-
 	length := len(nums)
 	for i := range nums {
 		if s[i] == 'R' {

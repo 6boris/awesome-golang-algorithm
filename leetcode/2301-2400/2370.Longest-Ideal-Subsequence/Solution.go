@@ -11,7 +11,6 @@ func Solution(s string, k int) int {
 					dis[s[i]-'a'] = dis[next-'a'] + 1
 				}
 			}
-
 		}
 		td = uint8(1)
 		for ; td <= uint8(k); td++ {

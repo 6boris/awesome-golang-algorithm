@@ -34,7 +34,6 @@ func (this *SummaryRanges) GetIntervals() [][]int {
 		start := i
 		n := i
 		for ; n <= this.max && this.next[n] == 1; n++ {
-
 		}
 		ans = append(ans, []int{start, n - 1})
 		i = n

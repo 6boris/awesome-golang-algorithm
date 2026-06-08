@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(nums1 []int, nums2 []int) []int {
+func Solution(nums1, nums2 []int) []int {
 	in := [1001]int{}
 	for _, n := range nums1 {
 		in[n]++

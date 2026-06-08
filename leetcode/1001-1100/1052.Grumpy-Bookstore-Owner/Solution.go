@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(customers []int, grumpy []int, minutes int) int {
+func Solution(customers, grumpy []int, minutes int) int {
 	a := make([]int, len(customers))
 
 	pre := 0

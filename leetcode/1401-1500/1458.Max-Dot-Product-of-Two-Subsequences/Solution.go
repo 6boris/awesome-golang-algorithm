@@ -4,7 +4,7 @@ import (
 	"math"
 )
 
-func Solution(nums1 []int, nums2 []int) int {
+func Solution(nums1, nums2 []int) int {
 	l1, l2 := len(nums1), len(nums2)
 	dp := make([][]int, l1)
 	for i := 0; i < l1; i++ {
@@ -15,7 +15,7 @@ func Solution(nums1 []int, nums2 []int) int {
 	}
 	// -1, -1
 	// 1, 1
-	//bool是否确定返回的0是否是因为到了边界导致的, 上面的测试用例就是例子，应该返回-1，但是遇到了边界导致返回0，结果不对
+	// bool是否确定返回的0是否是因为到了边界导致的, 上面的测试用例就是例子，应该返回-1，但是遇到了边界导致返回0，结果不对
 	var dfs func(int, int) (int, bool)
 	dfs = func(i, j int) (int, bool) {
 		if i == l1 || j == l2 {

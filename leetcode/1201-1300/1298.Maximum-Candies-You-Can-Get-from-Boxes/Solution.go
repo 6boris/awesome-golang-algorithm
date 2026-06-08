@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(status []int, candies []int, keys [][]int, containedBoxes [][]int, initialBoxes []int) int {
+func Solution(status, candies []int, keys, containedBoxes [][]int, initialBoxes []int) int {
 	queue := make([]int, 0)
 	toBeUsed := make(map[int]struct{})
 	for _, b := range initialBoxes {

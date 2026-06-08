@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(routes [][]int, source int, target int) int {
+func Solution(routes [][]int, source, target int) int {
 	if source == target {
 		return 0
 	}

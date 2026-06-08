@@ -19,6 +19,7 @@ func isBalanced_1(root *TreeNode) bool {
 	}
 	return (abs(dfs(root.Left)-dfs(root.Right)) <= 1) && isBalanced_1(root.Left) && isBalanced_1(root.Right)
 }
+
 func isBalanced_2(root *TreeNode) bool {
 	var dfs func(*TreeNode) int
 	dfs = func(node *TreeNode) int {

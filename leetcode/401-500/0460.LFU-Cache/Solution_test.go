@@ -15,10 +15,14 @@ func TestSolution(t *testing.T) {
 		values [][]int
 		expect []int
 	}{
-		{"TestCase1", 2, []string{"put", "put", "get", "put", "get", "get", "put", "get", "get", "get"},
+		{
+			"TestCase1", 2,
+			[]string{"put", "put", "get", "put", "get", "get", "put", "get", "get", "get"},
 			[][]int{
 				{1, 1}, {2, 2}, {1}, {3, 3}, {2}, {3}, {4, 4}, {1}, {3}, {4},
-			}, []int{1, -1, 3, -1, 3, 4}},
+			},
+			[]int{1, -1, 3, -1, 3, 4},
+		},
 	}
 
 	//	开始测试

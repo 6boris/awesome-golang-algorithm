@@ -5,7 +5,7 @@ type ListNode struct {
 	Next *ListNode
 }
 
-func mergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
+func mergeTwoLists(l1, l2 *ListNode) *ListNode {
 	head := &ListNode{}
 	tmp := head
 

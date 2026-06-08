@@ -23,7 +23,7 @@ func (t tmp2751) Less(i, j int) bool {
 	return t.p[i] < t.p[j]
 }
 
-func Solution(positions []int, healths []int, directions string) []int {
+func Solution(positions, healths []int, directions string) []int {
 	ans := make([]int, 0)
 	l := len(positions)
 	indies := make([]int, l)

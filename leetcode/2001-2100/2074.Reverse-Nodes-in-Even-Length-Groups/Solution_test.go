@@ -68,8 +68,16 @@ func TestSolution(t *testing.T) {
 				},
 			},
 		}},
-		{"TestCase2", &ListNode{Val: 1, Next: &ListNode{Val: 1, Next: &ListNode{Val: 0, Next: &ListNode{Val: 6}}}}, &ListNode{Val: 1, Next: &ListNode{Val: 0, Next: &ListNode{Val: 1, Next: &ListNode{Val: 6}}}}},
-		{"TestCase3", &ListNode{Val: 1, Next: &ListNode{Val: 1, Next: &ListNode{Val: 0, Next: &ListNode{Val: 6, Next: &ListNode{Val: 5}}}}}, &ListNode{Val: 1, Next: &ListNode{Val: 0, Next: &ListNode{Val: 1, Next: &ListNode{Val: 5, Next: &ListNode{Val: 6}}}}}},
+		{
+			"TestCase2",
+			&ListNode{Val: 1, Next: &ListNode{Val: 1, Next: &ListNode{Val: 0, Next: &ListNode{Val: 6}}}},
+			&ListNode{Val: 1, Next: &ListNode{Val: 0, Next: &ListNode{Val: 1, Next: &ListNode{Val: 6}}}},
+		},
+		{
+			"TestCase3",
+			&ListNode{Val: 1, Next: &ListNode{Val: 1, Next: &ListNode{Val: 0, Next: &ListNode{Val: 6, Next: &ListNode{Val: 5}}}}},
+			&ListNode{Val: 1, Next: &ListNode{Val: 0, Next: &ListNode{Val: 1, Next: &ListNode{Val: 5, Next: &ListNode{Val: 6}}}}},
+		},
 	}
 
 	//	开始测试

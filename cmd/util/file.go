@@ -9,8 +9,11 @@ func WriteFile(path, s string) {
 	f, err := os.Create("sitemap.xml")
 	if err != nil {
 		fmt.Println(err.Error())
+		return
 	}
-	defer f.Close()
+	defer func() { _ = f.Close() }()
 
-	f.WriteString(s)
+	if _, err := f.WriteString(s); err != nil {
+		fmt.Println(err.Error())
+	}
 }

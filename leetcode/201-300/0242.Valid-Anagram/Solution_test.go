@@ -10,7 +10,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-//	solution func Info
+// solution func Info
 type SolutionFuncType func(string, string) bool
 
 var SolutionFuncList = []SolutionFuncType{
@@ -19,7 +19,7 @@ var SolutionFuncList = []SolutionFuncType{
 	isAnagram_3,
 }
 
-//	test info struct
+// test info struct
 type Case struct {
 	name   string
 	s      string
@@ -27,7 +27,7 @@ type Case struct {
 	expect bool
 }
 
-// 	test case
+// test case
 var cases = []Case{
 	{name: "TestCase 1", s: "anagram", t: "nagaram", expect: true},
 	{name: "TestCase 2", s: "rat", t: "car", expect: false},

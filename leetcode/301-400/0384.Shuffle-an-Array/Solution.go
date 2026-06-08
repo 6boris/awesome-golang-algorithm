@@ -32,6 +32,7 @@ func (this *Shuffle) Shuffle() []int {
 	}
 	return cur
 }
+
 func Solution(nums []int, op []string) [][]int {
 	c := Constructor(nums)
 	var ret [][]int

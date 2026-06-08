@@ -23,6 +23,7 @@ func buildTrieNode212(words []string) *trieNode212 {
 	}
 	return root
 }
+
 func Solution(board [][]byte, words []string) []string {
 	rows, cols := len(board), len(board[0])
 	tree := buildTrieNode212(words)

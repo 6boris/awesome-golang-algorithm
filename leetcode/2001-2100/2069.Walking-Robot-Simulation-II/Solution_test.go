@@ -15,10 +15,15 @@ func TestSolution(t *testing.T) {
 		expect        []any
 	}{
 		{"TestCase1", 6, 3, []input{
-			{"step", 2}, {"step", 2},
-			{"pos", 0}, {"dir", 0},
-			{"step", 2}, {"step", 1}, {"step", 4},
-			{"pos", 0}, {"dir", 0},
+			{"step", 2},
+			{"step", 2},
+			{"pos", 0},
+			{"dir", 0},
+			{"step", 2},
+			{"step", 1},
+			{"step", 4},
+			{"pos", 0},
+			{"dir", 0},
 		}, []any{
 			[]int{4, 0}, "East", []int{1, 2}, "West",
 		}},

@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(s string, t string) bool {
+func Solution(s, t string) bool {
 	sbs := []byte(s)
 	tbs := []byte(t)
 	sidx := -1

@@ -1,8 +1,6 @@
 package Solution
 
-import "fmt"
-
-func isInterleave(s1 string, s2 string, s3 string) bool {
+func isInterleave(s1, s2, s3 string) bool {
 	if len(s3) != len(s2)+len(s1) {
 		return false
 	}
@@ -28,7 +26,7 @@ func isInterleave(s1 string, s2 string, s3 string) bool {
 	return dp[len(s1)][len(s2)]
 }
 
-func isInterleave2(s1 string, s2 string, s3 string) bool {
+func isInterleave2(s1, s2, s3 string) bool {
 	if len(s3) != len(s1)+len(s2) {
 		return false
 	}
@@ -56,10 +54,4 @@ func isInterleave2(s1 string, s2 string, s3 string) bool {
 		}
 	}
 	return dp[len(s1)][len(s2)]
-}
-
-func p(x [][]bool) {
-	for i := 0; i < len(x); i++ {
-		fmt.Println(x[i])
-	}
 }

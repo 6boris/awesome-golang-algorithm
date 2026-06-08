@@ -25,7 +25,6 @@ type lus struct {
 }
 
 func Solution(strs []string) int {
-	length := len(strs)
 	ls := make([]lus, 0)
 	exist := make(map[string]int)
 	for i := range strs {
@@ -39,7 +38,7 @@ func Solution(strs []string) int {
 			sub522(strs[i], l, 0, ls[li].exist, []byte{}, &ls[li].subsets)
 		}
 	}
-	length = len(ls)
+	length := len(ls)
 	ans := -1
 	for i := 0; i < length; i++ {
 		if exist[ls[i].source] > 1 {

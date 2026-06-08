@@ -2,7 +2,7 @@ package Solution
 
 const mod629 = 1000000007
 
-func Solution(n int, k int) int {
+func Solution(n, k int) int {
 	dp := [2][]int{}
 	sum := [2][]int{}
 	for i := 0; i < 2; i++ {

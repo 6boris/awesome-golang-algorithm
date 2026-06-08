@@ -15,16 +15,21 @@ func TestSolution(t *testing.T) {
 		opts            []opt
 		expect          []string
 	}{
-		{"TestCase1", []string{"kimchi", "miso", "sushi", "moussaka", "ramen", "bulgogi"},
-			[]string{"korean", "japanese", "japanese", "greek", "japanese", "korean"}, []int{9, 12, 8, 15, 14, 7},
+		{
+			"TestCase1",
+			[]string{"kimchi", "miso", "sushi", "moussaka", "ramen", "bulgogi"},
+			[]string{"korean", "japanese", "japanese", "greek", "japanese", "korean"},
+			[]int{9, 12, 8, 15, 14, 7},
 			[]opt{
 				{name: "h", commonStr: "korean"},
 				{name: "h", commonStr: "japanese"},
 				{name: "c", commonStr: "sushi", rating: 16},
 				{name: "h", commonStr: "japanese"},
 				{name: "c", commonStr: "ramen", rating: 16},
-				{name: "h", commonStr: "japanese"}},
-			[]string{"kimchi", "ramen", "sushi", "ramen"}},
+				{name: "h", commonStr: "japanese"},
+			},
+			[]string{"kimchi", "ramen", "sushi", "ramen"},
+		},
 	}
 
 	//	开始测试

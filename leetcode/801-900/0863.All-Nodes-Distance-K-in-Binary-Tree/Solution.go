@@ -19,7 +19,7 @@ func findFather(root *TreeNode, father map[int]*TreeNode) {
 	}
 }
 
-func Solution(root *TreeNode, target *TreeNode, k int) []int {
+func Solution(root, target *TreeNode, k int) []int {
 	ans := make([]int, 0)
 	father := make(map[int]*TreeNode)
 	findFather(root, father)

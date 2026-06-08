@@ -29,11 +29,12 @@ func Solution(numberOfUsers int, events [][]string) []int {
 			continue
 		}
 
-		if events[i][2] == "ALL" {
+		switch events[i][2] {
+		case "ALL":
 			e.All = true
-		} else if events[i][2] == "HERE" {
+		case "HERE":
 			e.Here = true
-		} else {
+		default:
 			users := strings.Split(events[i][2], " ")
 			e.Users = make([]int, len(users))
 			for i, u := range users {

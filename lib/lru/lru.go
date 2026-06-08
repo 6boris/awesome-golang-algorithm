@@ -56,7 +56,7 @@ func (c *Cache) Get(key string) (value Value, ok bool) {
 		kv := ele.Value.(*entry)
 		return kv.value, true
 	}
-	return
+	return value, ok
 }
 
 // RemoveOldest removes the oldest item

@@ -10,6 +10,7 @@ func (u *unionFind990) findFather(x int) int {
 	}
 	return u.father[x]
 }
+
 func (u *unionFind990) union(x, y int) {
 	fx := u.findFather(x)
 	fy := u.findFather(y)

@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(nums1 []int, nums2 []int) int {
+func Solution(nums1, nums2 []int) int {
 	n, m := len(nums1), len(nums2)
 	dp := make([]int, m+1)
 	res := 0

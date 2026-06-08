@@ -36,7 +36,7 @@ func Solution(moveTime [][]int) int {
 	m, n := len(moveTime), len(moveTime[0])
 	h := heap3341{{0, 0, 0}}
 	visited := map[[2]int]struct{}{
-		[2]int{0, 0}: {},
+		{0, 0}: {},
 	}
 	for h.Len() > 0 {
 		top := heap.Pop(&h).([3]int)

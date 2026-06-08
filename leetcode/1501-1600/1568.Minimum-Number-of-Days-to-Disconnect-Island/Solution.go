@@ -59,7 +59,7 @@ func Solution(grid [][]int) int {
 	for i := 0; i < rows; i++ {
 		for j := 0; j < cols; j++ {
 			if grid[i][j] == 1 {
-				//尝试更新
+				// 尝试更新
 				grid[i][j] = 0
 				if !connected1568(grid) {
 					return 1

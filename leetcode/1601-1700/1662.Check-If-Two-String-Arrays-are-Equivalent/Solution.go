@@ -2,7 +2,7 @@ package Solution
 
 import "strings"
 
-func Solution(word1 []string, word2 []string) bool {
+func Solution(word1, word2 []string) bool {
 	sb1, sb2 := strings.Builder{}, strings.Builder{}
 
 	for _, s := range word1 {

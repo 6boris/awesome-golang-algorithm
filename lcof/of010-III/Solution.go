@@ -1,6 +1,6 @@
 package Solution
 
-//	递归解法
+// 递归解法
 func jumpFloor(n int) int {
 	if n <= 1 {
 		return 1
@@ -8,9 +8,9 @@ func jumpFloor(n int) int {
 	return jumpFloor(n-1) + jumpFloor(n-2)
 }
 
-//	记忆化搜索
+// 记忆化搜索
 func jumpFloor2(n int) int {
-	m := make([]int, 45, 45)
+	m := make([]int, 45)
 	return jumpFloorRecursion(n, m)
 }
 
@@ -26,7 +26,7 @@ func jumpFloorRecursion(n int, m []int) int {
 	return m[n]
 }
 
-//	动态规划
+// 动态规划
 func jumpFloor3(n int) int {
 	dp := make([]int, n+1)
 	dp[0], dp[1] = 1, 1
@@ -36,7 +36,7 @@ func jumpFloor3(n int) int {
 	return dp[n]
 }
 
-//	动态规划 [优化空间]
+// 动态规划 [优化空间]
 func jumpFloor4(n int) int {
 	if n <= 1 {
 		return n

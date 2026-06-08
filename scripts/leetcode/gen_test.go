@@ -4,11 +4,12 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"github.com/imroc/req/v3"
-	"github.com/stretchr/testify/assert"
 	"log"
 	"os"
 	"testing"
+
+	"github.com/imroc/req/v3"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestLeekCode_Unite(t *testing.T) {
@@ -46,8 +47,8 @@ func TestLeekCode_Unite(t *testing.T) {
 			assert.Nil(t, err)
 			err = copyFile(sourceDir+"Solution_test.go", destinationDir+"/Solution_test.go", os.ModePerm)
 			assert.Nil(t, err)
-			//err = GenerateReadmeFromTpl(v)
-			//assert.Nil(t, err)
+			// err = GenerateReadmeFromTpl(v)
+			// assert.Nil(t, err)
 		}
 	})
 	t.Run("copyFile", func(t *testing.T) {
@@ -60,12 +61,12 @@ func TestLeekCode_Unite(t *testing.T) {
 			return
 		}
 		if _, err := os.Stat(path); errors.Is(err, os.ErrNotExist) {
-			err := os.Mkdir(path, os.ModePerm)
+			err := os.Mkdir(path, 0o750)
 			if err != nil {
 				log.Println(err)
 			}
 		}
-		err = os.WriteFile(destinationFile, data, 0755)
+		err = os.WriteFile(destinationFile, data, 0o600) //nolint:gosec // local code-gen test: destination path is trusted
 		if err != nil {
 			fmt.Println("Error writing file:", err)
 			return

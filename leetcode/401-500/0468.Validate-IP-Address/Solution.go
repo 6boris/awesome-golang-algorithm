@@ -25,7 +25,7 @@ func isIPv4(IP string) bool {
 	segments := strings.Split(IP, ".")
 	var num int
 	for _, segment := range segments {
-		fmt.Sscanf(segment, "%d", &num)
+		_, _ = fmt.Sscanf(segment, "%d", &num)
 		if num > 255 || (segment[0] == '0' && len(segment) > 1) {
 			return false
 		}

@@ -7,17 +7,20 @@ type item2336 []int
 func (r *item2336) Len() int {
 	return len(*r)
 }
+
 func (r *item2336) Less(i, j int) bool {
 	return (*r)[i] < (*r)[j]
 }
+
 func (r *item2336) Swap(i, j int) {
 	(*r)[i], (*r)[j] = (*r)[j], (*r)[i]
 }
 
-func (r *item2336) Push(x interface{}) {
+func (r *item2336) Push(x any) {
 	*r = append(*r, x.(int))
 }
-func (r *item2336) Pop() interface{} {
+
+func (r *item2336) Pop() any {
 	old := *r
 	l := len(old)
 	x := old[l-1]

@@ -5,7 +5,7 @@ type op struct {
 	v    int
 }
 type MyHashSet struct {
-	//m [1000][1001]uint8
+	// m [1000][1001]uint8
 	m [1000001]byte
 }
 

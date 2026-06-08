@@ -14,6 +14,7 @@ func (m *roomHeap) Len() int {
 func (m *roomHeap) Less(i, j int) bool {
 	return (*m)[i] < (*m)[j]
 }
+
 func (m *roomHeap) Swap(i, j int) {
 	(*m)[i], (*m)[j] = (*m)[j], (*m)[i]
 }
@@ -63,7 +64,6 @@ func (u *usedRoomHeap) Pop() any {
 	x := old[l-1]
 	*u = old[:l-1]
 	return x
-
 }
 
 func Solution(n int, meetings [][]int) int {

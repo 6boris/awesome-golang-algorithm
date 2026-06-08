@@ -7,9 +7,11 @@ type MountainArray struct {
 func (m *MountainArray) get(index int) int {
 	return m.data[index]
 }
+
 func (m *MountainArray) length() int {
 	return len(m.data)
 }
+
 func Solution(target int, mountainArr *MountainArray) int {
 	length := mountainArr.length()
 	l, r := 0, length-1
@@ -33,7 +35,7 @@ func Solution(target int, mountainArr *MountainArray) int {
 		}
 		l = mid + 1
 	}
-	//fmt.Printf("find top: %d\n", top)
+	// fmt.Printf("find top: %d\n", top)
 	// 二分搜索左侧
 
 	var (
@@ -67,7 +69,6 @@ func Solution(target int, mountainArr *MountainArray) int {
 			}
 		}
 		return -1
-
 	}
 	if r := sl(0, top+1, target); r != -1 {
 		return r

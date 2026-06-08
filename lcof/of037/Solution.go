@@ -17,13 +17,6 @@ func Constructor() Codec {
 	return Codec{}
 }
 
-func (this *Codec) serialize(root *TreeNode) string {
-	if root == nil {
-		return "#"
-	}
-	return strconv.Itoa(root.Val) + "," + this.serialize(root.Left) + "," + this.serialize(root.Right)
-}
-
 func dfs(valsPtr *[]string) *TreeNode {
 	val := (*valsPtr)[0]
 	*valsPtr = (*valsPtr)[1:]
@@ -37,7 +30,7 @@ func dfs(valsPtr *[]string) *TreeNode {
 	return node
 }
 
-func (this *Codec) deserialize(data string) *TreeNode {
+func (c *Codec) deserialize(data string) *TreeNode {
 	vals := strings.Split(data, ",")
 	return dfs(&vals)
 }

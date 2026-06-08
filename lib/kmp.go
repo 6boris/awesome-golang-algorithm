@@ -1,4 +1,1 @@
 package Solution
-
-func main() {
-}

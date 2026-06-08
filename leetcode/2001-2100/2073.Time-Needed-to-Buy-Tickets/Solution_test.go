@@ -23,7 +23,7 @@ func TestSolution(t *testing.T) {
 		t.Run(c.name+" "+strconv.Itoa(i), func(t *testing.T) {
 			got := Solution(c.inputs, c.k)
 			if !reflect.DeepEqual(got, c.expect) {
-				t.Fatalf("expected: %v, but got: %v, with inputs: %v 5v",
+				t.Fatalf("expected: %v, but got: %v, with inputs: %v %v",
 					c.expect, got, c.inputs, c.k)
 			}
 		})

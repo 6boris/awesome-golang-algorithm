@@ -46,6 +46,7 @@ func Solution1(root *TreeNode) *TreeNode {
 	reverseOddLevels12(root.Left, root.Right, true)
 	return root
 }
+
 func reverseOddLevels12(left, right *TreeNode, odd bool) {
 	if left == nil || right == nil {
 		return

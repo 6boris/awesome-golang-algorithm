@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(n int, m int) int {
+func Solution(n, m int) int {
 	sum := 0
 	for i := 1; i <= n; i++ {
 		if i%m != 0 {

@@ -43,7 +43,7 @@ func (this *UndergroundSystem) CheckOut(id int, stationName string, t int) {
 	this.out[from.station] = v
 }
 
-func (this *UndergroundSystem) GetAverageTime(startStation string, endStation string) float64 {
+func (this *UndergroundSystem) GetAverageTime(startStation, endStation string) float64 {
 	v := this.out[startStation][endStation]
 	return float64(v.distance) / float64(v.count)
 }

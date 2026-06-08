@@ -15,8 +15,10 @@ func TestSolution(t *testing.T) {
 	}{
 		{"TestCase1", "RR.L", "RR.L"},
 		{"TestCase2", ".L.R...LR..L..", "LL.RR.LLRRLL.."},
-		{"TestCase", "...RL....R.L.L........RR......L....R.L.....R.L..RL....R....R......R.......................LR.R..L.R.",
-			"...RL....R.LLL........RRRRRLLLL....R.L.....R.L..RL....RRRRRRRRRRRRRRRRRRRRRRRR.LLLLLLLLLLLLRRRRLL.RR"},
+		{
+			"TestCase", "...RL....R.L.L........RR......L....R.L.....R.L..RL....R....R......R.......................LR.R..L.R.",
+			"...RL....R.LLL........RRRRRLLLL....R.L.....R.L..RL....RRRRRRRRRRRRRRRRRRRRRRRR.LLLLLLLLLLLLRRRRLL.RR",
+		},
 	}
 
 	//	开始测试

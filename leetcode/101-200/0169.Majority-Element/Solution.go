@@ -20,7 +20,7 @@ func majorityElement_2(nums []int) int {
 	return nums[len(nums)/2]
 }
 
-//	解法5: 分治算法
+// 解法5: 分治算法
 func majorityElement_3(nums []int) int {
 	if len(nums) == 1 {
 		return nums[0]

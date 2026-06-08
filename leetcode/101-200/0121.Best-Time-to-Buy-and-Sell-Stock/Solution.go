@@ -21,12 +21,13 @@ func maxProfit_2(prices []int) int {
 
 /*
 当前有无股票
-    有
-        昨天有、今天不动
-        昨天无、今天买【第一次买】
-    无
-        昨天有、今天卖
-        昨天无、今天不动
+
+	有
+	    昨天有、今天不动
+	    昨天无、今天买【第一次买】
+	无
+	    昨天有、今天卖
+	    昨天无、今天不动
 */
 func maxProfit_3(prices []int) int {
 	dp, n := make([][2]int, len(prices)), len(prices)

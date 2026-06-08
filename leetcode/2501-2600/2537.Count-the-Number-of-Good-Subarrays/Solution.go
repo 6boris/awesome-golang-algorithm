@@ -5,9 +5,7 @@ func Solution(nums []int, k int) int64 {
 	count := make(map[int]int64)
 	start, end := 0, 0
 
-	var (
-		ans, pairs int64
-	)
+	var ans, pairs int64
 
 	i64k := int64(k)
 	for ; end < l; end++ {

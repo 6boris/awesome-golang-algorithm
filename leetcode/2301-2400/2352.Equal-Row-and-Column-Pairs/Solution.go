@@ -14,8 +14,8 @@ func Solution(grid [][]int) int {
 	var ssb strings.Builder
 	for row := 0; row < length; row++ {
 		for col := 0; col < length; col++ {
-			ssb.WriteString(fmt.Sprintf("%d-", grid[row][col]))
-			cols[col].WriteString(fmt.Sprintf("%d-", grid[row][col]))
+			_, _ = fmt.Fprintf(&ssb, "%d-", grid[row][col])
+			_, _ = fmt.Fprintf(&cols[col], "%d-", grid[row][col])
 		}
 		rowsMap[ssb.String()]++
 		ssb.Reset()

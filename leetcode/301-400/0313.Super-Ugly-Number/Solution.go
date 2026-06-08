@@ -1,7 +1,7 @@
 package Solution
 
 func Solution(n int, primes []int) int {
-	//2,3,5 Ugly Number Extensions
+	// 2,3,5 Ugly Number Extensions
 	indies := make([]int, len(primes))
 	ans := make([]int, n)
 	ans[0] = 1

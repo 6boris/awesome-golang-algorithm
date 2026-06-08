@@ -15,7 +15,7 @@ func parseTime1604(now string) (int, int) {
 	return hour, minute
 }
 
-func Solution(keyName []string, keyTime []string) []string {
+func Solution(keyName, keyTime []string) []string {
 	var ret []string
 	size := len(keyName)
 	indies := make([]int, size)

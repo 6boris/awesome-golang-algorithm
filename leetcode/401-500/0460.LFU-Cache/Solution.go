@@ -22,6 +22,7 @@ func (li *lfuItems) String() {
 		fmt.Printf("%+v\n", (*li)[i])
 	}
 }
+
 func (li *lfuItems) Len() int {
 	return len(*li)
 }
@@ -38,11 +39,11 @@ func (li *lfuItems) Less(i, j int) bool {
 	return (*li)[i].c < (*li)[j].c
 }
 
-func (li *lfuItems) Push(x interface{}) {
+func (li *lfuItems) Push(x any) {
 	*li = append(*li, x.(*lfuItem))
 }
 
-func (li *lfuItems) Pop() interface{} {
+func (li *lfuItems) Pop() any {
 	old := *li
 	l := len(old)
 	x := old[l-1]
@@ -79,7 +80,7 @@ func (this *LFUCache) Get(key int) int {
 	return v.v
 }
 
-func (this *LFUCache) Put(key int, value int) {
+func (this *LFUCache) Put(key, value int) {
 	if this.capSize == 0 {
 		return
 	}

@@ -6,12 +6,11 @@ func Solution(envelopes [][]int) int {
 	// 先根据宽度排序，然后根据高度排序
 	sort.Slice(envelopes, func(i, j int) bool {
 		if envelopes[i][0] == envelopes[j][0] {
-			//return envelopes[i][1] < envelopes[j][1]
+			// return envelopes[i][1] < envelopes[j][1]
 			// 2, 4
 			// 1  1
 			// 这情况，导致成两个，实际宽度相同，只能保留一个
 			return envelopes[i][1] > envelopes[j][1]
-
 		}
 		return envelopes[i][0] < envelopes[j][0]
 	})
@@ -26,7 +25,7 @@ func Solution(envelopes [][]int) int {
 			return lis[i] >= h[1]
 		})
 		if index == len(lis) {
-			//找不到
+			// 找不到
 			lis = append(lis, h[1])
 		} else {
 			lis[index] = h[1]

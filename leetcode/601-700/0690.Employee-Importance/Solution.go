@@ -17,9 +17,7 @@ func Solution(employees []*Employee, id int) int {
 		nq := make([]int, 0)
 		for _, item := range queue {
 			importance += id2employe[item].Importance
-			for _, sub := range id2employe[item].Subordinates {
-				nq = append(nq, sub)
-			}
+			nq = append(nq, id2employe[item].Subordinates...)
 		}
 		queue = nq
 	}

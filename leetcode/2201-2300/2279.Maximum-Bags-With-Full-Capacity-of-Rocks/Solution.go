@@ -2,7 +2,7 @@ package Solution
 
 import "sort"
 
-func Solution(capacity []int, rocks []int, additionalRocks int) int {
+func Solution(capacity, rocks []int, additionalRocks int) int {
 	diff := make([]int, len(capacity))
 	for i := 0; i < len(capacity); i++ {
 		diff[i] = capacity[i] - rocks[i]

@@ -2,7 +2,7 @@ package Solution
 
 import "strings"
 
-func Solution(s string, p string) bool {
+func Solution(s, p string) bool {
 	pos := -1
 	size := len(p)
 	for i := range size {
@@ -13,7 +13,7 @@ func Solution(s string, p string) bool {
 	}
 
 	if pos == -1 {
-		return strings.Index(s, p) != -1
+		return strings.Contains(s, p)
 	}
 	if pos == 0 {
 		p = p[1:]
@@ -22,7 +22,7 @@ func Solution(s string, p string) bool {
 		p = p[:pos]
 	}
 	if len(p) != size {
-		return strings.Index(s, p) != -1
+		return strings.Contains(s, p)
 	}
 
 	pre := p[:pos]

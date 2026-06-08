@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(n int, presses int) int {
+func Solution(n, presses int) int {
 	// 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 1, 2
 	// 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
 	// 0,    2,    2,    2,    2,    2,    2

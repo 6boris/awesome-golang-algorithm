@@ -1,6 +1,6 @@
 package Solution
 
-func Solution(s1 string, s2 string) int {
+func Solution(s1, s2 string) int {
 	// 寻找diff的情况
 	if len(s1) != len(s2) {
 		return -1
