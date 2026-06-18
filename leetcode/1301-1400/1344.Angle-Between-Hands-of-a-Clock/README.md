@@ -1,28 +1,36 @@
 # [1344.Angle Between Hands of a Clock][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given two numbers, `hour` and `minutes`, return the smaller angle (in degrees) formed between the `hour` and the `minute` hand.
 
-**Example 1:**
+Answers within `10^-5` of the actual value will be accepted as correct.
+
+**Example 1:**  
+
+![1](./1.png)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: hour = 12, minutes = 30
+Output: 165
 ```
 
-## 题意
-> ...
+**Example 2:**  
 
-## 题解
+![2](./2.png)
 
-### 思路1
-> ...
-Angle Between Hands of a Clock
-```go
+```
+Input: hour = 3, minutes = 30
+Output: 75
 ```
 
+**Example 3:**  
+
+![3](./3.png)
+
+```
+Input: hour = 3, minutes = 15
+Output: 7.5
+```
 
 ## 结语
 
