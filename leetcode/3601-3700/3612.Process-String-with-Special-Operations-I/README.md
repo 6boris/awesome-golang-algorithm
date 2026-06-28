@@ -1,28 +1,50 @@
 # [3612.Process String with Special Operations I][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given a string `s` consisting of lowercase English letters and the special characters: `*`, `#`, and `%`.
+
+Build a new string `result` by processing `s` according to the following rules from left to right:
+
+- If the letter is a **lowercase** English letter append it to `result`.
+- A `'*'` **removes** the last character from `result`, if it exists.
+- A `'#'` **duplicates** the current `result` and **appends** it to itself.
+- A `'%'` **reverses** the current `result`.
+
+Return the final string `result` after processing all characters in `s`.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: s = "a#b%*"
+
+Output: "ba"
+
+Explanation:
+
+i	s[i]	Operation	Current result
+0	'a'	Append 'a'	"a"
+1	'#'	Duplicate result	"aa"
+2	'b'	Append 'b'	"aab"
+3	'%'	Reverse result	"baa"
+4	'*'	Remove the last character	"ba"
+Thus, the final result is "ba".
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Process String with Special Operations I
-```go
 ```
+Input: s = "z*#"
 
+Output: ""
+
+Explanation:
+
+i	s[i]	Operation	Current result
+0	'z'	Append 'z'	"z"
+1	'*'	Remove the last character	""
+2	'#'	Duplicate the string	""
+Thus, the final result is "".
+```
 
 ## 结语
 
