@@ -1,28 +1,41 @@
 # [3754.Concatenate Non-Zero Digits and Multiply by Sum I][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given an integer `n`.
+
+Form a new integer `x` by concatenating all the **non-zero digits** of `n` in their original order. If there are no **non-zero digits**, `x = 0`.
+
+Let `sum` be the sum of digits in `x`.
+
+Return an integer representing the value of `x * sum`.
+
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: n = 10203004
+
+Output: 12340
+
+Explanation:
+
+The non-zero digits are 1, 2, 3, and 4. Thus, x = 1234.
+The sum of digits is sum = 1 + 2 + 3 + 4 = 10.
+Therefore, the answer is x * sum = 1234 * 10 = 12340.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Concatenate Non-Zero Digits and Multiply by Sum I
-```go
 ```
+Input: n = 1000
 
+Output: 1
+
+Explanation:
+
+The non-zero digit is 1, so x = 1 and sum = 1.
+Therefore, the answer is x * sum = 1 * 1 = 1.
+```
 
 ## 结语
 
