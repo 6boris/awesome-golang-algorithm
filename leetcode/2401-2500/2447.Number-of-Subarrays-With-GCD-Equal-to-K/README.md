@@ -1,28 +1,31 @@
 # [2447.Number of Subarrays With GCD Equal to K][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given an integer array `nums` and an integer `k`, return the number of **subarrays** of `nums` where the greatest common divisor of the subarray's elements is `k`.
+
+A **subarray** is a contiguous non-empty sequence of elements within an array.
+
+The **greatest common divisor of an array** is the largest integer that evenly divides all the array elements.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: nums = [9,3,1,2,6,3], k = 3
+Output: 4
+Explanation: The subarrays of nums where 3 is the greatest common divisor of all the subarray's elements are:
+- [9,3,1,2,6,3]
+- [9,3,1,2,6,3]
+- [9,3,1,2,6,3]
+- [9,3,1,2,6,3]
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Number of Subarrays With GCD Equal to K
-```go
 ```
-
+Input: nums = [4], k = 7
+Output: 0
+Explanation: There are no subarrays of nums where 7 is the greatest common divisor of all the subarray's elements.
+```
 
 ## 结语
 
