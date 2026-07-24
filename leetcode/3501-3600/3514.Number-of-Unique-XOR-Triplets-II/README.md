@@ -1,28 +1,41 @@
 # [3514.Number of Unique XOR Triplets II][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given an integer array `nums`.
+
+A **XOR triplet** is defined as the XOR of three elements `nums[i] XOR nums[j] XOR nums[k]` where `i <= j <= k`.
+
+Return the number of **unique** XOR triplet values from all possible triplets `(i, j, k)`.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: nums = [1,3]
+
+Output: 2
+
+Explanation:
+
+The possible XOR triplet values are:
+
+(0, 0, 0) → 1 XOR 1 XOR 1 = 1
+(0, 0, 1) → 1 XOR 1 XOR 3 = 3
+(0, 1, 1) → 1 XOR 3 XOR 3 = 1
+(1, 1, 1) → 3 XOR 3 XOR 3 = 3
+The unique XOR values are {1, 3}. Thus, the output is 2.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Number of Unique XOR Triplets II
-```go
 ```
+Input: nums = [6,7,8,9]
 
+Output: 4
+
+Explanation:
+
+The possible XOR triplet values are {6, 7, 8, 9}. Thus, the output is 4.
+```
 
 ## 结语
 
