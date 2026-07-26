@@ -1,28 +1,53 @@
 # [3536.Maximum Product of Two Digits][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given a positive integer `n`.
+
+Return the **maximum** product of any two digits in `n`.
+
+**Note**: You may use the **same** digit twice if it appears more than once in `n`.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: n = 31
+
+Output: 3
+
+Explanation:
+
+The digits of n are [3, 1].
+The possible products of any two digits are: 3 * 1 = 3.
+The maximum product is 3.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
+```
+Input: n = 22
 
-### 思路1
-> ...
-Maximum Product of Two Digits
-```go
+Output: 4
+
+Explanation:
+
+The digits of n are [2, 2].
+The possible products of any two digits are: 2 * 2 = 4.
+The maximum product is 4.
 ```
 
+**Example 3:**
+
+```
+Input: n = 124
+
+Output: 8
+
+Explanation:
+
+The digits of n are [1, 2, 4].
+The possible products of any two digits are: 1 * 2 = 2, 1 * 4 = 4, 2 * 4 = 8.
+The maximum product is 8.
+```
 
 ## 结语
 
