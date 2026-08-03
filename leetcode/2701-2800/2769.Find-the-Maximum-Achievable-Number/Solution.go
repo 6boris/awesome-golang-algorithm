@@ -1,5 +1,5 @@
 package Solution
 
-func Solution(x bool) bool {
-	return x
+func Solution(num int, t int) int {
+	return num + 2*t
 }
