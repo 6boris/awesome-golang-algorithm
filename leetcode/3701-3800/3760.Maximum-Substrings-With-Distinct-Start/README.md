@@ -1,28 +1,48 @@
 # [3760.Maximum Substrings With Distinct Start][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given a string `s` consisting of lowercase English letters.
+
+Return an integer denoting the **maximum** number of substrings you can split `s` into such that each **substring** starts with a **distinct** character (i.e., no two substrings start with the same character).
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: s = "abab"
+
+Output: 2
+
+Explanation:
+
+Split "abab" into "a" and "bab".
+Each substring starts with a distinct character i.e 'a' and 'b'. Thus, the answer is 2.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
+```
+Input: s = "abcd"
 
-### 思路1
-> ...
-Maximum Substrings With Distinct Start
-```go
+Output: 4
+
+Explanation:
+
+Split "abcd" into "a", "b", "c", and "d".
+Each substring starts with a distinct character. Thus, the answer is 4.
 ```
 
+**Example 3:**
+
+```
+Input: s = "aaaa"
+
+Output: 1
+
+Explanation:
+
+All characters in "aaaa" are 'a'.
+Only one substring can start with 'a'. Thus, the answer is 1.
+```
 
 ## 结语
 
