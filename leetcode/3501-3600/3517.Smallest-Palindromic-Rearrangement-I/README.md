@@ -1,28 +1,46 @@
 # [3517.Smallest Palindromic Rearrangement I][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given a palindromic string `s`.
+
+Return the lexicographically smallest palindromic permutation of `s`.
+
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: s = "z"
+
+Output: "z"
+
+Explanation:
+
+A string of only one character is already the lexicographically smallest palindrome.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
+```
+Input: s = "babab"
 
-### 思路1
-> ...
-Smallest Palindromic Rearrangement I
-```go
+Output: "abbba"
+
+Explanation:
+
+Rearranging "babab" → "abbba" gives the smallest lexicographic palindrome.
 ```
 
+**Example 3:**
+
+```
+Input: s = "daccad"
+
+Output: "acddca"
+
+Explanation:
+
+Rearranging "daccad" → "acddca" gives the smallest lexicographic palindrome.
+```
 
 ## 结语
 
