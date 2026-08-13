@@ -1,5 +1,9 @@
 package Solution
 
-func Solution(x bool) bool {
-	return x
+func Solution(s string) int {
+	e := make(map[byte]struct{})
+	for i := range s {
+		e[s[i]-'a'] = struct{}{}
+	}
+	return len(e)
 }
