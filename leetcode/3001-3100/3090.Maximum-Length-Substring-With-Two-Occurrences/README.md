@@ -1,28 +1,31 @@
 # [3090.Maximum Length Substring With Two Occurrences][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given a string `s`, return the **maximum** length of a substring such that it contains at most two occurrences of each character.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: s = "bcbbbcba"
+
+Output: 4
+
+Explanation:
+
+The following substring has a length of 4 and contains at most two occurrences of each character: "bcbbbcba".
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Maximum Length Substring With Two Occurrences
-```go
 ```
+Input: s = "aaaa"
 
+Output: 2
+
+Explanation:
+
+The following substring has a length of 2 and contains at most two occurrences of each character: "aaaa".
+```
 
 ## 结语
 
