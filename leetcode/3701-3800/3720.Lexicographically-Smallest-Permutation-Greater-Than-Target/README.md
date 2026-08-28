@@ -1,28 +1,50 @@
 # [3720.Lexicographically Smallest Permutation Greater Than Target][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given two strings `s` and `target`, both having length `n`, consisting of lowercase English letters.
+
+Return the **lexicographically smallest permutation** of `s` that is **strictly** greater than `target`. If no permutation of `s` is lexicographically strictly greater than `target`, return an empty string.
+
+A string `a` is **lexicographically strictly greater** than a string `b` (of the same length) if in the first position where `a` and `b` differ, string `a` has a letter that appears later in the alphabet than the corresponding letter in `b`.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: s = "abc", target = "bba"
+
+Output: "bca"
+
+Explanation:
+
+The permutations of s (in lexicographical order) are "abc", "acb", "bac", "bca", "cab", and "cba".
+The lexicographically smallest permutation that is strictly greater than target is "bca".
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
+```
+Input: s = "leet", target = "code"
 
-### 思路1
-> ...
-Lexicographically Smallest Permutation Greater Than Target
-```go
+Output: "eelt"
+
+Explanation:
+
+The permutations of s (in lexicographical order) are "eelt", "eetl", "elet", "elte", "etel", "etle", "leet", "lete", "ltee", "teel", "tele", and "tlee".
+The lexicographically smallest permutation that is strictly greater than target is "eelt".
 ```
 
+**Example 3:**
+
+```
+Input: s = "baba", target = "bbaa"
+
+Output: ""
+
+Explanation:
+
+The permutations of s (in lexicographical order) are "aabb", "abab", "abba", "baab", "baba", and "bbaa".
+None of them is lexicographically strictly greater than target. Therefore, the answer is "".
+```
 
 ## 结语
 
