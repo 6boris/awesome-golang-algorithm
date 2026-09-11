@@ -3,7 +3,17 @@ on:
   pull_request:
   push:
     branches:
-      - master
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  actions: write
+
 jobs:
 
   build:
@@ -11,13 +21,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Check out code into the Go module directory
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
     - name: Set up Go
       uses: actions/setup-go@v5
       with:
-        go-version: '^1.26'
-      id: go
-    - name: Get dependencies
-      run:  go mod download
+        go-version-file: go.mod
+        cache: true
     - name: Test Solutions
       run: make test
