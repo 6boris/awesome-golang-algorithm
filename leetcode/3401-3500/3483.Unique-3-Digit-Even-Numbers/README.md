@@ -1,28 +1,49 @@
 # [3483.Unique 3-Digit Even Numbers][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given an array of digits called `digits`. Your task is to determine the number of **distinct** three-digit even numbers that can be formed using these digits.
+
+**Note**: Each copy of a digit can only be used **once per number**, and there may **not** be leading zeros.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: digits = [1,2,3,4]
+
+Output: 12
+
+Explanation: The 12 distinct 3-digit even numbers that can be formed are 124, 132, 134, 142, 214, 234, 312, 314, 324, 342, 412, and 432. Note that 222 cannot be formed because there is only 1 copy of the digit 2.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
+```
+Input: digits = [0,2,2]
 
-### 思路1
-> ...
-Unique 3-Digit Even Numbers
-```go
+Output: 2
+
+Explanation: The only 3-digit even numbers that can be formed are 202 and 220. Note that the digit 2 can be used twice because it appears twice in the array.
 ```
 
+**Example 3:**
+
+```
+Input: digits = [6,6,6]
+
+Output: 1
+
+Explanation: Only 666 can be formed.
+```
+
+**Example 4:**
+
+```
+Input: digits = [1,3,5]
+
+Output: 0
+
+Explanation: No even 3-digit numbers can be formed.
+```
 
 ## 结语
 
