@@ -1,28 +1,33 @@
 # [2472.Maximum Number of Non-overlapping Palindrome Substrings][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given a string `s` and a **positive** integer `k`.
+
+Select a set of **non-overlapping** substrings from the string `s` that satisfy the following conditions:
+
+- The **length** of each substring is **at least** `k`.
+- Each substring is a **palindrome**.
+
+Return the **maximum** number of substrings in an optimal selection.
+
+A **substring** is a contiguous sequence of characters within a string.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: s = "abaccdbbd", k = 3
+Output: 2
+Explanation: We can select the substrings underlined in s = "abaccdbbd". Both "aba" and "dbbd" are palindromes and have a length of at least k = 3.
+It can be shown that we cannot find a selection with more than two valid substrings.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Maximum Number of Non-overlapping Palindrome Substrings
-```go
 ```
-
+Input: s = "adbcda", k = 2
+Output: 0
+Explanation: There is no palindrome substring of length at least 2 in the string.
+```
 
 ## 结语
 
