@@ -1,28 +1,32 @@
 # [836.Rectangle Overlap][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+An axis-aligned rectangle is represented as a list `[x1, y1, x2, y2]`, where (`x1, y1`) is the coordinate of its bottom-left corner, and (`x2, y2`) is the coordinate of its top-right corner. Its top and bottom edges are parallel to the X-axis, and its left and right edges are parallel to the Y-axis.
+
+Two rectangles overlap if the area of their intersection is **positive**. To be clear, two rectangles that only touch at the corner or edges do not overlap.
+
+Given two axis-aligned rectangles `rec1` and `rec2`, return `true` if they overlap, otherwise return `false`.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: rec1 = [0,0,2,2], rec2 = [1,1,3,3]
+Output: true
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Rectangle Overlap
-```go
+```
+Input: rec1 = [0,0,1,1], rec2 = [1,0,2,1]
+Output: false
 ```
 
+**Example 3:**
+
+```
+Input: rec1 = [0,0,1,1], rec2 = [2,2,3,3]
+Output: false
+```
 
 ## 结语
 
