@@ -1,28 +1,29 @@
 # [301.Remove Invalid Parentheses][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+Given a string `s` that contains parentheses and letters, remove the minimum number of invalid parentheses to make the input string valid.
 
+Return a list of **unique strings** that are valid with the minimum number of removals. You may return the answer in **any order**.
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: s = "()())()"
+Output: ["(())()","()()()"]
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Remove Invalid Parentheses
-```go
+```
+Input: s = "(a)())()"
+Output: ["(a())()","(a)()()"]
 ```
 
+**Example 3:**
+
+```
+Input: s = ")("
+Output: [""]
+```
 
 ## 结语
 
