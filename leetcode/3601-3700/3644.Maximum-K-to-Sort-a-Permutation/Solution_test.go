@@ -10,12 +10,12 @@ func TestSolution(t *testing.T) {
 	//	测试用例
 	cases := []struct {
 		name   string
-		inputs bool
-		expect bool
+		inputs []int
+		expect int
 	}{
-		{"TestCase", true, true},
-		{"TestCase", true, true},
-		{"TestCase", false, false},
+		{"TestCase1", []int{0, 3, 2, 1}, 1},
+		{"TestCase2", []int{0, 1, 3, 2}, 2},
+		{"TestCase3", []int{3, 2, 1, 0}, 0},
 	}
 
 	//	开始测试
