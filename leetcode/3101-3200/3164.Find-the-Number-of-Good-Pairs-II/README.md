@@ -1,28 +1,35 @@
 # [3164.Find the Number of Good Pairs II][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given 2 integer arrays `nums1` and `nums2` of lengths `n` and `m` respectively. You are also given a **positive** integer `k`.
+
+A pair `(i, j)` is called **good** if `nums1[i]` is divisible by `nums2[j] * k (0 <= i <= n - 1, 0 <= j <= m - 1)`.
+
+Return the total number of **good** pairs.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: nums1 = [1,3,4], nums2 = [1,3,4], k = 1
+
+Output: 5
+
+Explanation:
+
+The 5 good pairs are (0, 0), (1, 0), (1, 1), (2, 0), and (2, 2).
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Find the Number of Good Pairs II
-```go
 ```
+Input: nums1 = [1,2,4,12], nums2 = [2,4], k = 3
 
+Output: 2
+
+Explanation:
+
+The 2 good pairs are (3, 0) and (3, 1).
+```
 
 ## 结语
 

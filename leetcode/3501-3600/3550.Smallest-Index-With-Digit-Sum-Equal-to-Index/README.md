@@ -1,28 +1,49 @@
 # [3550.Smallest Index With Digit Sum Equal to Index][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given an integer array `nums`.
+
+Return the **smallest** index `i` such that the sum of the digits of `nums[i]` is equal to `i`.
+
+If no such index exists, return `-1`.
 
 **Example 1:**
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: nums = [1,3,2]
+
+Output: 2
+
+Explanation:
+
+For nums[2] = 2, the sum of digits is 2, which is equal to index i = 2. Thus, the output is 2.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
+```
+Input: nums = [1,10,11]
 
-### 思路1
-> ...
-Smallest Index With Digit Sum Equal to Index
-```go
+Output: 1
+
+Explanation:
+
+For nums[1] = 10, the sum of digits is 1 + 0 = 1, which is equal to index i = 1.
+For nums[2] = 11, the sum of digits is 1 + 1 = 2, which is equal to index i = 2.
+Since index 1 is the smallest, the output is 1.
 ```
 
+**Example 3:**
+
+```
+Input: nums = [1,2,3]
+
+Output: -1
+
+Explanation:
+
+Since no index satisfies the condition, the output is -1.
+```
 
 ## 结语
 

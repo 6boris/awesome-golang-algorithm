@@ -9,22 +9,22 @@ import (
 func TestSolution(t *testing.T) {
 	//	测试用例
 	cases := []struct {
-		name   string
-		inputs bool
-		expect bool
+		name         string
+		nums1, nums2 []int
+		k            int
+		expect       int
 	}{
-		{"TestCase", true, true},
-		{"TestCase", true, true},
-		{"TestCase", false, false},
+		{"TestCase1", []int{1, 3, 4}, []int{1, 3, 4}, 1, 5},
+		{"TestCase2", []int{1, 2, 4, 12}, []int{2, 4}, 3, 2},
 	}
 
 	//	开始测试
 	for i, c := range cases {
 		t.Run(c.name+" "+strconv.Itoa(i), func(t *testing.T) {
-			got := Solution(c.inputs)
+			got := Solution(c.nums1, c.nums2, c.k)
 			if !reflect.DeepEqual(got, c.expect) {
-				t.Fatalf("expected: %v, but got: %v, with inputs: %v",
-					c.expect, got, c.inputs)
+				t.Fatalf("expected: %v, but got: %v, with inputs: %v %v %v",
+					c.expect, got, c.nums1, c.nums2, c.k)
 			}
 		})
 	}
