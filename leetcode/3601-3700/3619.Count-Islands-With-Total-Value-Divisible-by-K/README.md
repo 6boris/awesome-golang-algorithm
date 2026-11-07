@@ -1,28 +1,39 @@
 # [3619.Count Islands With Total Value Divisible by K][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given an `m x n` matrix `grid` and a positive integer `k`. An **island** is a group of **positive** integers (representing land) that are **4-directionally** connected (horizontally or vertically).
 
-**Example 1:**
+The **total value** of an island is the sum of the values of all cells in the island.
+
+Return the number of islands with a total value **divisible by** `k`.
+
+**Example 1:**  
+
+![1](./1.png)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: grid = [[0,2,1,0,0],[0,5,0,0,5],[0,0,1,0,0],[0,1,4,7,0],[0,2,0,0,8]], k = 5
+
+Output: 2
+
+Explanation:
+
+The grid contains four islands. The islands highlighted in blue have a total value that is divisible by 5, while the islands highlighted in red do not.
 ```
 
-## 题意
-> ...
+**Example 2:**  
 
-## 题解
+![2](./2.png)
 
-### 思路1
-> ...
-Count Islands With Total Value Divisible by K
-```go
 ```
+Input: grid = [[3,0,3,0], [0,3,0,3], [3,0,3,0]], k = 3
 
+Output: 6
+
+Explanation:
+
+The grid contains six islands, each with a total value that is divisible by 3.
+```
 
 ## 结语
 
