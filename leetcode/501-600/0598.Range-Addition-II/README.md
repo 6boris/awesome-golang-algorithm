@@ -1,28 +1,33 @@
 # [598.Range Addition II][title]
 
-> [!WARNING|style:flat]
-> This question is temporarily unanswered if you have good ideas. Welcome to [Create Pull Request PR](https://github.com/kylesliu/awesome-golang-algorithm)
-
 ## Description
+You are given an `m x n` matrix `M` initialized with all `0`'s and an array of operations `ops`, where `ops[i] = [ai, bi]` means `M[x][y]` should be incremented by one for all `0 <= x < ai and 0 <= y < bi`.
 
-**Example 1:**
+Count and return the number of maximum integers in the matrix after performing all the operations.
+
+**Example 1:**  
+
+![1](./ex1.jpg)
 
 ```
-Input: a = "11", b = "1"
-Output: "100"
+Input: m = 3, n = 3, ops = [[2,2],[3,3]]
+Output: 4
+Explanation: The maximum integer in M is 2, and there are four of it in M. So return 4.
 ```
 
-## 题意
-> ...
+**Example 2:**
 
-## 题解
-
-### 思路1
-> ...
-Range Addition II
-```go
+```
+Input: m = 3, n = 3, ops = [[2,2],[3,3],[3,3],[3,3],[2,2],[3,3],[3,3],[3,3],[2,2],[3,3],[3,3],[3,3]]
+Output: 4
 ```
 
+**Example 3:**
+
+```
+Input: m = 3, n = 3, ops = []
+Output: 9
+```
 
 ## 结语
 
